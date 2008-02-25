@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Sekati Framework Core App Configuration - by jason m horwitz / sekati.com -->
+<config name="Sekati Framework" version="3.0.0.0">
+
+	<framerate>31</framerate>
+	<memory_alarm>20</memory_alarm>
+	<swLiveConnect>true</swLiveConnect>
+	<allowscale>false</allowscale>
+	<showmenu>false</showmenu>
+	<fullscreen>false</fullscreen>
+	<quality>HIGH</quality>
+	<align>TOP_LEFT</align>
+	<scaleMode>NO_SCALE</scaleMode>
+
+	<!-- crossdomain should live on same dom/subdom as SWF-->
+	<crossdomain_uri><![CDATA[/crossdomain.xml]]></crossdomain_uri>
+	
+	<!-- application data feed -->
+	<data_uri><![CDATA[xml/data.xml]]></data_uri>
+	
+	<!-- application stylesheet -->
+	<css_uri><![CDATA[css/app_style.css]]></css_uri>	
+	
+	<!-- instantiate Logger -->
+	<log>true</log>
+
+	<!-- allow flash to change address bar to deeplink playlist/video -->
+	<flink_enable>true</flink_enable>
+	
+	<!-- use Google Analytics tracking -->
+	<track>true</track>
+	
+	<!-- use key listeners -->
+	<key>true</key>
+
+</config>
