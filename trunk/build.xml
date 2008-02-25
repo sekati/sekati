@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- *************************************************************************************
+		FDTKit Buildfile v3.0.1
+		
+		Jan 20, 2008 - jason m horwitz | Sekati LLC | sekati.com
+		
+		Released under the MIT License: http://www.opensource.org/licenses/mit-license.php
+		
+		@see	http://fdtkit.googlecode.com/
+		@see	http://sasapi.googlecode.com/
+		@see	http://inde.googlecode.com/
+		
+		@note	While targeted for INDE & FDTKit this Buildfile and its dependencies may
+				be refactored for generic Eclipse & FDT3 use. If you would like to use it 
+				on Windows simply install Cygwin and adjust the necessary path properties.
+		
+		@info	You must run this Buildfile in the same JRE as the workspace. To configure
+		        this: Run -> External Tools -> JRE -> Run in the same JRE as the workspace
+		        
+     ************************************************************************************* -->
+<project name="Sekati API" basedir="." default="build">
+
+	
+	<!-- Define variables/paths used in this buildfile -->
+	<property file="build/build.properties"/>
+	
+
+	<!--
+		Have you edit the properties file to make sure the paths are right oo your system?
+	-->
+	<target name="properties">
+		<fail unless="asdoc.exe">The "asdoc.exe" property must be set in ${build.dir}/build.properties.</fail>
+		<fail unless="compc.exe">The "compc.exe" property must be set in ${build.dir}/build.properties.</fail>
+		<fail unless="mxmlc.exe">The "mxmlc.exe" property must be set in ${build.dir}/build.properties.</fail>
+	</target>
+	
+	<target name="as_name" description="get the current file">
+		<echo message="current asfile: ${java_type_name}"/>
+	</target>
+
+	
+    <target name="create_structure" description="create a new project structure">
+    	<echo message="Creating Project Structure ..."/>
+		<mkdir dir="${build.dir}"/>
+    	<echo message="Creating: ${build.dir}"/>    	
+		<mkdir dir="${deploy.dir}"/>
+    	<echo message="Creating: ${deploy.dir}"/>
+    	<mkdir dir="${deploy.admin.dir}"/>
+    	<echo message="Creating: ${deploy.admin.dir}"/>
+    	<mkdir dir="${deploy.assets.dir}"/>
+    	<echo message="Creating: ${deploy.assets.dir}"/>
+    	<mkdir dir="${deploy.css.dir}"/>
+    	<echo message="Creating: ${deploy.css.dir}"/>
+    	<mkdir dir="${deploy.js.dir}"/>
+    	<echo message="Creating: ${deploy.js.dir}"/>
+    	<mkdir dir="${deploy.php.dir}"/>
+    	<echo message="Creating: ${deploy.php.dir}"/>
+    	<mkdir dir="${deploy.xml.dir}"/>
+    	<echo message="Creating: ${deploy.xml.dir}"/>    	
+    	<mkdir dir="${docs.dir}"/>
+    	<echo message="Creating: ${docs.dir}"/>
+    	<mkdir dir="${lib.dir}"/>
+    	<echo message="Creating: ${lib.dir}"/>
+    	<mkdir dir="${lib.assets.dir}"/>
+    	<echo message="Creating: ${lib.assets.dir}"/>
+    	<mkdir dir="${lib.comps.dir}"/>
+    	<echo message="Creating: ${lib.comps.dir}"/>
+    	<mkdir dir="${lib.fonts.dir}"/>
+    	<echo message="Creating: ${lib.fonts.dir}"/>
+    	<mkdir dir="${lib.ia.dir}"/>
+    	<echo message="Creating: ${lib.ia.dir}"/>    	
+    	<mkdir dir="${tests.dir}"/>
+    	<echo message="Creating: ${tests.dir}"/>
+    	<mkdir dir="${src.dir}"/>
+    	<echo message="Creating: ${src.dir}"/>
+    	<echo message="Project Structure Created Successfully! Now refresh your project in Eclipse (right click on the project and select 'Refresh')"/>
+    </target>	
+	
+	
+	<target name="graphdoc" description="run asdoc to build xml for dot diagrams">
+		<exec executable="${asdoc.exe}" failonerror="false">
+			<arg line = "-source-path ${src.dir}" />
+			<arg line='-doc-sources ${src.dir}'/>
+			<arg line='-output ${docs.dir}/graph'/>
+			<arg line="-keep-xml"/>
+			<arg line="-skip-xsl"/>
+			<arg line="-show-actionscript-warnings=false"/>
+			<arg line="-templates-path '${flex2sdk}/asdoc/templates'"/>
+		</exec>
+	</target>	
+	
+	
+	<target name="doc" description="run asdoc to build documentation for AS3 classes">
+		<exec executable="${asdoc.exe}" failonerror="false">
+			<arg line ="-source-path ${src.dir}" />
+			<arg line='-source-path /Applications/inde/workspace/papervision3d/branches/GreatWhite/src'/>
+			<arg line='-doc-sources ${src.dir}/.'/>
+			<arg line="-templates-path '${flex2sdk}/asdoc/templates'"/>
+			<arg line="-main-title ${doc.maintitle}"/>
+			<arg line="-window-title ${doc.windowtitle}"/>
+		    <!--<arg line="-footer '${doc.footer}'"/>-->
+			<arg line='-output ${docs.dir}'/>
+		</exec>
+		<copy todir="${docs.dir}/images">
+		  <fileset dir="${flex2sdk}/asdoc/templates/images" excludes="**/.svn"/>
+		</copy>
+	</target>
+	
+	<target name="doc_clean" description="remove all old documentation files">
+		<defaultexcludes echo="true"/>
+		<delete includeemptydirs="true">
+			<fileset dir="${docs.dir}" includes="**/*" excludes="**/.svn"/>
+		</delete>	
+	</target>
+	
+	
+	<target name="doc_deploy" description="rsync+ssh documentation to target server">
+		<exec executable="${rsync.exe}">
+			<arg value="-ave ssh"/>
+			<arg value="--delete"/>
+			<arg value="--force"/>
+			<arg value="--progress"/>
+			<arg value="--exclude=${dep.remote.excludes}"/>
+			<arg value="${dep.local.docpath}"/>
+			<arg value="${dep.remote.user}@${dep.remote.host}:${dep.remote.docpath}"/>
+		</exec>
+	</target>		
+	
+
+	<target name="deploy_project" description="rsync+ssh project to target server">
+		<exec executable="${rsync.exe}">
+			<arg value="-ave ssh"/>
+			<arg value="--delete"/>
+			<arg value="--force"/>
+			<arg value="--progress"/>
+			<arg value="--exclude=${dep.remote.excludes}"/>
+			<arg value="${dep.local.path}"/>
+			<arg value="${dep.remote.user}@${dep.remote.host}:${dep.remote.path}"/>
+		</exec>
+	</target>
+	
+	
+	<target name="build" description="compile current opened fla in src dir with Flash IDE (clear's ASO cache and saves FLA)">
+		<echo message="|*|*|*| class cache clear | source save | compiler start |*|*|*|"/>
+		<exec executable="open"><arg line="${compile.jsfl}"/></exec>
+	</target>	
+		
+
+	<target name="build_target" description="build target fla with Flash IDE">
+		<fdt.flashCompile>
+	        <fileset dir="${src.dir}">
+	            <include name="${target.fla}"/>
+	        </fileset>
+	    </fdt.flashCompile>		
+	</target>
+	
+
+
+	<target name="build_all" description="compile all fla's in src dir with Flash IDE">
+	    <fdt.flashCompile>
+	        <fileset dir="${src.dir}">
+	        	 <include name="*.fla"/>
+	        </fileset>
+	    </fdt.flashCompile>
+	</target>
+
+
+	<target name="build_tests" description="compile all fla's in tests dir with Flash IDE">
+		 <fdt.flashCompile failonerror="false">
+		   <fileset dir="${tests.dir}">
+		    <include name="*.fla"/>
+		   </fileset>
+		  </fdt.flashCompile>
+	</target>
+	
+</project>

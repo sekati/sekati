@@ -1,0 +1,53 @@
+/* Sekati Framework Page Styles */
+
+body, html, td {
+	margin: 0px; 
+	padding: 0px;
+	height: 100%;
+	font-family: Verdana, Arial, Geneva, sans-serif; 
+	font-size: 7pt; 
+	color: #F7F7F7;
+	background: #000;
+}
+
+hr {
+	color: #660000;
+	border-style: dotted;
+	height: 1px;
+	text-align: left;
+}
+
+h1 {
+	font-size: 20px;
+	font-weight: lighter;
+	color: #CCC;
+}
+
+strong {
+	color: #FF0000; 
+	font-weight: normal;
+} 
+
+a, a:link, a:visited {
+	text-decoration: none;
+	color: #FFF;
+}
+
+a:hover { 
+	color: #CCC; 
+	border-bottom:1px dotted #FF3300; }
+}
+
+#flash_seo {
+	position: relative;
+	margin-left: 25px;
+	margin-top: 50px;
+	text-align: left;
+}
+
+#flash_update { 
+	position: relative;
+	margin-left: 25px;
+	margin-top: 25px;
+	text-align: center;
+}
