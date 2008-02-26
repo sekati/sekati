@@ -204,10 +204,12 @@ if (!isEclipse() || window.name != ECLIPSE_FRAME_NAME) {titleBar_setSubTitle("PÂ
    pause playback.</td>
 </tr>
 <tr>
-<td colspan="2" class="idxrow"><a onclick="javascript:loadClassListFrame('sekati/events/class-list.html');" href="sekati/events/MediaEvent.html#PAUSE">PAUSE</a> &mdash; Constant static property in class sekati.events.<a onclick="javascript:loadClassListFrame('sekati/events/class-list.html');" href="sekati/events/MediaEvent.html">MediaEvent</a></td>
+<td colspan="2" class="idxrow"><a onclick="javascript:loadClassListFrame('sekati/ui/class-list.html');" href="sekati/ui/FLVPlayer.html#pause()">pause</a>() &mdash; Method in class sekati.ui.<a onclick="javascript:loadClassListFrame('sekati/ui/class-list.html');" href="sekati/ui/FLVPlayer.html">FLVPlayer</a></td>
 </tr>
 <tr>
-<td width="20"></td><td></td>
+<td width="20"></td><td>
+   Pause video playback
+   </td>
 </tr>
 <tr>
 <td colspan="2" class="idxrow"><a onclick="javascript:loadClassListFrame('caurina/transitions/class-list.html');" href="caurina/transitions/Tweener.html#pauseAllTweens()">pauseAllTweens</a>() &mdash; Static method in class caurina.transitions.<a onclick="javascript:loadClassListFrame('caurina/transitions/class-list.html');" href="caurina/transitions/Tweener.html">Tweener</a></td>
@@ -221,6 +223,13 @@ if (!isEclipse() || window.name != ECLIPSE_FRAME_NAME) {titleBar_setSubTitle("PÂ
 </tr>
 <tr>
 <td width="20"></td><td></td>
+</tr>
+<tr>
+<td colspan="2" class="idxrow"><a onclick="javascript:loadClassListFrame('sekati/ui/class-list.html');" href="sekati/ui/FLVPlayer.html#pauseMemory()">pauseMemory</a>() &mdash; Method in class sekati.ui.<a onclick="javascript:loadClassListFrame('sekati/ui/class-list.html');" href="sekati/ui/FLVPlayer.html">FLVPlayer</a></td>
+</tr>
+<tr>
+<td width="20"></td><td>
+   Pause video in memory and track state.</td>
 </tr>
 <tr>
 <td colspan="2" class="idxrow"><a onclick="javascript:loadClassListFrame('sekati/media/class-list.html');" href="sekati/media/FLV.html#pauseResume()">pauseResume</a>() &mdash; Method in class sekati.media.<a onclick="javascript:loadClassListFrame('sekati/media/class-list.html');" href="sekati/media/FLV.html">FLV</a></td>
@@ -339,16 +348,29 @@ if (!isEclipse() || window.name != ECLIPSE_FRAME_NAME) {titleBar_setSubTitle("PÂ
    begin playback.</td>
 </tr>
 <tr>
-<td colspan="2" class="idxrow"><a onclick="javascript:loadClassListFrame('sekati/events/class-list.html');" href="sekati/events/MediaEvent.html#PLAY">PLAY</a> &mdash; Constant static property in class sekati.events.<a onclick="javascript:loadClassListFrame('sekati/events/class-list.html');" href="sekati/events/MediaEvent.html">MediaEvent</a></td>
+<td colspan="2" class="idxrow"><a onclick="javascript:loadClassListFrame('sekati/ui/class-list.html');" href="sekati/ui/FLVPlayer.html#_playBtn">_playBtn</a> &mdash; Property in class sekati.ui.<a onclick="javascript:loadClassListFrame('sekati/ui/class-list.html');" href="sekati/ui/FLVPlayer.html">FLVPlayer</a></td>
 </tr>
 <tr>
 <td width="20"></td><td></td>
 </tr>
 <tr>
-<td colspan="2" class="idxrow"><a onclick="javascript:loadClassListFrame('sekati/events/class-list.html');" href="sekati/events/MediaEvent.html#PLAYHEAD_CHANGED">PLAYHEAD_CHANGED</a> &mdash; Constant static property in class sekati.events.<a onclick="javascript:loadClassListFrame('sekati/events/class-list.html');" href="sekati/events/MediaEvent.html">MediaEvent</a></td>
+<td colspan="2" class="idxrow"><a onclick="javascript:loadClassListFrame('sekati/ui/class-list.html');" href="sekati/ui/FLVPlayer.html#playBtn_Press()">playBtn_Press</a>(e) &mdash; Method in class sekati.ui.<a onclick="javascript:loadClassListFrame('sekati/ui/class-list.html');" href="sekati/ui/FLVPlayer.html">FLVPlayer</a></td>
 </tr>
 <tr>
 <td width="20"></td><td></td>
+</tr>
+<tr>
+<td colspan="2" class="idxrow"><a onclick="javascript:loadClassListFrame('sekati/events/class-list.html');" href="sekati/events/MediaEvent.html#_played">_played</a> &mdash; Property in class sekati.events.<a onclick="javascript:loadClassListFrame('sekati/events/class-list.html');" href="sekati/events/MediaEvent.html">MediaEvent</a></td>
+</tr>
+<tr>
+<td width="20"></td><td></td>
+</tr>
+<tr>
+<td colspan="2" class="idxrow"><a onclick="javascript:loadClassListFrame('sekati/events/class-list.html');" href="sekati/events/MediaEvent.html#played">played</a> &mdash; Property in class sekati.events.<a onclick="javascript:loadClassListFrame('sekati/events/class-list.html');" href="sekati/events/MediaEvent.html">MediaEvent</a></td>
+</tr>
+<tr>
+<td width="20"></td><td>
+   The <code>MediaEvent</code>'s percent played.</td>
 </tr>
 <tr>
 <td colspan="2" class="idxrow"><a onclick="javascript:loadClassListFrame('org/papervision3d/core/animation/core/class-list.html');" href="org/papervision3d/core/animation/core/AbstractController.html#playing">playing</a> &mdash; Property in class org.papervision3d.core.animation.core.<a onclick="javascript:loadClassListFrame('org/papervision3d/core/animation/core/class-list.html');" href="org/papervision3d/core/animation/core/AbstractController.html">AbstractController</a></td>
@@ -495,6 +517,12 @@ if (!isEclipse() || window.name != ECLIPSE_FRAME_NAME) {titleBar_setSubTitle("PÂ
 </tr>
 <tr>
 <td colspan="2" class="idxrow"><a onclick="javascript:loadClassListFrame('sekati/pv/class-list.html');" href="sekati/pv/PvPrimativeMaterial.html#processFrame()">processFrame</a>() &mdash; Method in class sekati.pv.<a onclick="javascript:loadClassListFrame('sekati/pv/class-list.html');" href="sekati/pv/PvPrimativeMaterial.html">PvPrimativeMaterial</a></td>
+</tr>
+<tr>
+<td width="20"></td><td></td>
+</tr>
+<tr>
+<td colspan="2" class="idxrow"><a onclick="javascript:loadClassListFrame('sekati/ui/class-list.html');" href="sekati/ui/FLVPlayer.html#_progBar">_progBar</a> &mdash; Property in class sekati.ui.<a onclick="javascript:loadClassListFrame('sekati/ui/class-list.html');" href="sekati/ui/FLVPlayer.html">FLVPlayer</a></td>
 </tr>
 <tr>
 <td width="20"></td><td></td>
