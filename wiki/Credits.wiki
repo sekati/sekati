@@ -17,8 +17,8 @@ Upon contributing work to the project you may [http://fdt.powerflasher.com/index
 
   * [http://partlyhuman.com/ Roger Braunstein]
   * [http://www.mosessupposes.com/ Moses Gunesch]
-  * [http://nectere.ca/ Francis Turmel]
   * [http://lmnopj.com/ PJ Ahlberg]
+  * [http://nectere.ca/ Francis Turmel]
   * [http://tendercreative.com Cory Clarke]
 
 
