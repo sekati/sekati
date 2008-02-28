@@ -1,1 +1,41 @@
+#summary Who's responsible for this?
 #labels Featured
+
+= Credits =
+
+*SEKATI API* was built and is maintained by  [http://sekati.com Jason M Horwitz, Sekati LLC], thanks largely to the direct and indirect contributions via knowledge and code sharing of several friends, colleagues and other open source projects.
+
+I have tried to make mention in source comments whenever code was derived, adapted or adopted from others work. However, since I tend to keep wretched track of these things in the heat of the moment (or the middle of the night), I would like to use this space to direct your attention to this excellent, though not at all comprehensive list of individuals who's work deserves attention:
+
+
+== Notes to Project Members ==
+
+Upon contributing work to the project you may [http://fdt.powerflasher.com/index.php?page=os apply to PowerFlashers for an FDT3 OS License] as a project member.
+
+
+== People of mention ==
+
+  * [http://tendercreative.com Cory Clarke]
+  * [http://partlyhuman.com/ Roger Braunstein]
+  * [http://www.mosessupposes.com/ Moses Gunesch]
+  * [http://nectere.ca/ Francis Turmel]
+  * [http://lmnopj.com/PJ Ahlberg]
+
+
+== Places of mention ==
+
+  * [http://tendercreative.com TENDER] - who has dedicated billable hours to this Open Source project (whenever we can find them ;-).
+
+== Projects of mention ==
+
+  * [http://code.google.com/p/tweener/ Tweener]
+  * [http://code.google.com/p/papervision3d/ Papervision 3d]
+  * [http://go.mosessupposes.com/ GoASAP]
+  * [http://code.google.com/p/swfin/ swfIN]
+  * [http://www.badgers-in-foil.co.uk/projects/as2api/ as2api]
+  * [http://osflash.org/ OSFlash]
+
+
+=== Notes to Project Members ===
+
+Upon contributing work to the project you may [http://fdt.powerflasher.com/index.php?page=os apply to PowerFlashers for an FDT3 OS License] as a project member.
