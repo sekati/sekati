@@ -241,10 +241,8 @@ if (!isEclipse() || window.name != ECLIPSE_FRAME_NAME) {titleBar_setSubTitle("Al
 <td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a href="sekati/core/Bootstrap.html">Bootstrap</a>
 <br>
 </td><td class="summaryTableCol"><a onclick="javascript:loadClassListFrame('sekati/core/class-list.html');" href="sekati/core/package-detail.html">sekati.core</a></td><td class="summaryTableLastCol">
-  Bootstrap runs thru the _sequenceChain of methods to prepare the API framework
-  core: <code>sekati.core.App</code> by loading configuruations, data, stylesheets, 
-  as well as any other custom methods needed to bootstrap the application
-  and firing the <code>onAppConfigured</code> event.</td>
+  Bootstrap provides a common bootstrapping command & load
+  sequencer for all applications implementing the API.</td>
 </tr>
 <tr class="prow1">
 <td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a href="sekati/tests/Box.html">Box</a>
@@ -283,8 +281,9 @@ The Camera3D class creates a camera that views the area around a target object.<
 <td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a href="sekati/display/Canvas.html">Canvas</a>
 <br>
 </td><td class="summaryTableCol"><a onclick="javascript:loadClassListFrame('sekati/display/class-list.html');" href="sekati/display/package-detail.html">sekati.display</a></td><td class="summaryTableLastCol">
-  The <code>Main</code> Document class must extend Canvas to allow for the top-level, "global" access to 
-  stage, root and flashVar to all classes (including non-DisplayObject classes).</td>
+  The API <code>Document</code> class extends <code>Canvas</code> to allow top-level, <i>"global"</i>
+  access to <code>stage</code>, <code>root</code> and <code>flashVar</code> to all classes (including 
+  non-DisplayObject classes).</td>
 </tr>
 <tr class="prow1">
 <td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a href="sekati/reflect/ClassReflector.html">ClassReflector</a>
@@ -474,7 +473,7 @@ The Camera3D class creates a camera that views the area around a target object.<
 <td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a href="sekati/display/Document.html">Document</a>
 <br>
 </td><td class="summaryTableCol"><a onclick="javascript:loadClassListFrame('sekati/display/class-list.html');" href="sekati/display/package-detail.html">sekati.display</a></td><td class="summaryTableLastCol">
-  <p>This is the main <code>Document Class</code> for 
+  This is the main <code>Document Class</code> for 
   Sekati API.</td>
 </tr>
 <tr class="prow1">
@@ -545,7 +544,14 @@ The Camera3D class creates a camera that views the area around a target object.<
 <br>
 </td><td class="summaryTableCol"><a onclick="javascript:loadClassListFrame('sekati/events/class-list.html');" href="sekati/events/package-detail.html">sekati.events</a></td><td class="summaryTableLastCol">
   FramePulse proxies an <code>ENTER_FRAME</code> event to any non-
-  <code>DisplayObject</code> classes which need to execute code on each frame tick.</td>
+  <code>DisplayObject</code> classes which need to execute code on each frame tick.<br><br>
+  <code>Usage:<br>
+  FramePulse.$.addEventListener(FramePulse.FRAME_PULSE, _onEnterFrame);<br>
+  protected function _onEnterFrame(e:Event):void {<br>
+   trace( "pulse" );<br>
+  }<br></code>
+  
+  </td>
 </tr>
 <tr class="prow0">
 <td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a href="sekati/tests/FramePulseTest.html">FramePulseTest</a>

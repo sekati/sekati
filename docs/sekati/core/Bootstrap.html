@@ -42,10 +42,31 @@ if (!isEclipse() || window.name != ECLIPSE_FRAME_NAME) {titleBar_setSubTitle("Cl
 </tr>
 </table>
 <p></p>
-  Bootstrap runs thru the _sequenceChain of methods to prepare the API framework
-  core: <code>sekati.core.App</code> by loading configuruations, data, stylesheets, 
-  as well as any other custom methods needed to bootstrap the application
-  and firing the <code>onAppConfigured</code> event.
+  Bootstrap provides a common bootstrapping command & load
+  sequencer for all applications implementing the API. 
+  Bootstrap is one of the three main components comprising
+  the core API; along side <code>sekati.display.Document</code>
+  (which implements <code>Bootstrap</code>) and <code>sekati.core.App</code>
+  (which stores the data <code>Bootstrap</code> loads).
+  
+  <p>The <code>_sequenceChain</code> defines a set of method 
+  references which are executed in sequence to prepare the 
+  API framework core.</p>
+  
+  <p>By default core configuration & data XML's, CSS stylesheets 
+  & other customizable settings are loaded in to 
+  <code>sekati.core.App</code>. for storage & retrieval.</p>
+  
+  <p>Each step in the default <code>Bootstrap</code> fires
+  a <i>"staging"</i> <code>AppEvent</code> to notify the application
+  of its <i>"boot phase"</i>. If any boot phase in the 
+  <code>_sequenceChain</code> fails its execution will be retried until
+  the <code>RETRY_MAX</code> limit has been exceeded at which point a 
+  verbose <code>BootstrapException</code> will be thrown.</p>
+  
+  <p><b>Customizations</b> may be made by extending and 
+  overriding the <code>Bootstrap</code> methods and 
+  <code>_sequenceChain</code>.</p>
   <p></p>
 <br>
 <hr>

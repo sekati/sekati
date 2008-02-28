@@ -41,18 +41,18 @@ if (!isEclipse() || window.name != ECLIPSE_FRAME_NAME) {titleBar_setSubTitle("Cl
 <p></p>
   Google Analytics (Urchin) tracking of Flash events.
    
-  Add google analytics javascript to your swf's html document:
-  <code><script src="http://www.google-analytics.com/urchin.js" type="text/javascript"></script>
-  <script type="text/javascript">
-  _uacct = "UA-000000-0"; <!-- Insert your GA site account number -->
-  urchinTracker();
-  </script><code>
+  <p>Add google analytics javascript to your swf's html document:<br/><code>
+  <script src="http://www.google-analytics.com/urchin.js" type="text/javascript"></script><br/>
+  <script type="text/javascript"><br/>
+  _uacct = "UA-000000-0"; <!-- Insert your GA site account number --><br/>
+  urchinTracker();<br/>
+  </script><code></p>
   
-  Enable swLiveConnect:
-  <code>flash.system.fscommand( "swLiveConnect", "true" );</code>
+  <p>Enable swLiveConnect:<br/>
+  <code>flash.system.fscommand( "swLiveConnect", "true" );</code></p>
   
-  Make your initial tracking call:
-  <code>Urchin.track( "home" );</code>
+  <p>Make your initial tracking call:<br/>
+  <code>Urchin.track( "home" );</code></p>
   
   <p></p>
 <p>
@@ -99,8 +99,7 @@ if (!isEclipse() || window.name != ECLIPSE_FRAME_NAME) {titleBar_setSubTitle("Cl
 <div class="summarySignature">
 <a class="signatureLink" href="#track()">track</a>(pg:String):void</div>
 <div class="summaryTableDescription">[static]
-   track a page event
-   </div>
+   Track a page event.</div>
 </td><td class="summaryTableOwnerCol">Urchin</td>
 </tr>
 </table>
@@ -121,7 +120,8 @@ showHideInherited();
 <div class="detailBody">
 <code>base:String</code>&nbsp;&nbsp;[read-write]<p>
    Indicates the flash sites Urchin tracking base.
-   </p><p>The default value is <code>"flash" &lt;code&gt;Urchin.base = "homepage"; // set optional webroot&lt;/code&gt;</code>.</p>
+   <br/><code>Urchin.base = "homepage"; // set optional webroot</code>
+   </p><p>The default value is <code>"flash"</code>.</p>
 <span class="label">Implementation</span>
 <br>
 <code>&nbsp;&nbsp;&nbsp;&nbsp;public static function get base():String</code>
@@ -151,7 +151,11 @@ showHideInherited();
 </table>
 <div class="detailBody">
 <code>public static function track(pg:String):void</code><p>
-   track a page event
+   Track a page event.
+   <br/><code>Usage:<br>
+    Urchin.track("projects"); // register '/homepage/projects'<br/>
+    Urchin.track("projects/page1"); // register '/homepage/projects/page1'<br/>
+   </code>
    </p><span class="label">Parameters</span>
 <table border="0" cellspacing="0" cellpadding="0">
 <tr>
