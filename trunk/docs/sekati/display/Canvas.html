@@ -45,10 +45,22 @@ if (!isEclipse() || window.name != ECLIPSE_FRAME_NAME) {titleBar_setSubTitle("Cl
 </tr>
 </table>
 <p></p>
-  The <code>Main</code> Document class must extend Canvas to allow for the top-level, "global" access to 
-  stage, root and flashVar to all classes (including non-DisplayObject classes).
+  The API <code>Document</code> class extends <code>Canvas</code> to allow top-level, <i>"global"</i>
+  access to <code>stage</code>, <code>root</code> and <code>flashVar</code> to all classes (including 
+  non-DisplayObject classes).
+  
+  <p>Developers implementing the API may find it handy to reference these objects via their static references:<ul>
+  <li><code>Canvas.stage</code></li>
+  <li><code>Canvas.root</code></li>
+  <li><code>Canvas.flashVars</code></li></ul></p>
   
   <p></p>
+<p>
+<span class="classHeaderTableLabel">See also</span>
+</p>
+<div class="seeAlso">
+<a href="../display/Document.html" target="">sekati.display.Document</a>
+</div>
 <br>
 <hr>
 </div>

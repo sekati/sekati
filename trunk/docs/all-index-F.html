@@ -549,7 +549,14 @@ if (!isEclipse() || window.name != ECLIPSE_FRAME_NAME) {titleBar_setSubTitle("FÂ
 <tr>
 <td width="20"></td><td>
   FramePulse proxies an <code>ENTER_FRAME</code> event to any non-
-  <code>DisplayObject</code> classes which need to execute code on each frame tick.</td>
+  <code>DisplayObject</code> classes which need to execute code on each frame tick.<br><br>
+  <code>Usage:<br>
+  FramePulse.$.addEventListener(FramePulse.FRAME_PULSE, _onEnterFrame);<br>
+  protected function _onEnterFrame(e:Event):void {<br>
+   trace( "pulse" );<br>
+  }<br></code>
+  
+  </td>
 </tr>
 <tr>
 <td colspan="2" class="idxrow"><a onclick="javascript:loadClassListFrame('sekati/events/class-list.html');" href="sekati/events/FramePulse.html#FramePulse()">FramePulse</a>($) &mdash; Constructor in class sekati.events.<a onclick="javascript:loadClassListFrame('sekati/events/class-list.html');" href="sekati/events/FramePulse.html">FramePulse</a></td>
