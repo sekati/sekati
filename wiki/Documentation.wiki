@@ -1,0 +1,6 @@
+#summary How do I work this?
+#labels Phase-Deploy,Phase-Support,Phase-Implementation
+
+= Documentation =
+
+You may [http://docs.sekati.com/sekati/ view the SEKATI API Documentation online], which are also included in each [http://code.google.com/p/sekati/downloads/list Packaged Revision Download] and can be browsed and checked out via  [http://code.google.com/p/sekati/source/browse SVN].
