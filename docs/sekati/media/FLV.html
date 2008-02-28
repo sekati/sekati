@@ -165,7 +165,7 @@ if (!isEclipse() || window.name != ECLIPSE_FRAME_NAME) {titleBar_setSubTitle("Cl
 <div class="summarySignature">
 <a class="signatureLink" href="#getPercentBuffered()">getPercentBuffered</a>():Number</div>
 <div class="summaryTableDescription">
-   Return the percent buffered.</div>
+   Return the percent buffered (1 based %).</div>
 </td><td class="summaryTableOwnerCol">FLV</td>
 </tr>
 <tr class="">
@@ -173,7 +173,7 @@ if (!isEclipse() || window.name != ECLIPSE_FRAME_NAME) {titleBar_setSubTitle("Cl
 <div class="summarySignature">
 <a class="signatureLink" href="#getPercentLoaded()">getPercentLoaded</a>():Number</div>
 <div class="summaryTableDescription">
-   Return the percent loaded.</div>
+   Return the percent loaded (1 based %).</div>
 </td><td class="summaryTableOwnerCol">FLV</td>
 </tr>
 <tr class="">
@@ -181,7 +181,7 @@ if (!isEclipse() || window.name != ECLIPSE_FRAME_NAME) {titleBar_setSubTitle("Cl
 <div class="summarySignature">
 <a class="signatureLink" href="#getPercentPlayed()">getPercentPlayed</a>():Number</div>
 <div class="summaryTableDescription">
-   Return the percent played.</div>
+   Return the percent played (1 based %).</div>
 </td><td class="summaryTableOwnerCol">FLV</td>
 </tr>
 <tr class="">
@@ -277,7 +277,7 @@ if (!isEclipse() || window.name != ECLIPSE_FRAME_NAME) {titleBar_setSubTitle("Cl
 <div class="summarySignature">
 <a class="signatureLink" href="#seekToPercent()">seekToPercent</a>(percent:Number):void</div>
 <div class="summaryTableDescription">
-   seek to a playback percent.</div>
+   seek to a playback percent (1 based %).</div>
 </td><td class="summaryTableOwnerCol">FLV</td>
 </tr>
 <tr class="">
@@ -562,7 +562,7 @@ showHideInherited();
 </table>
 <div class="detailBody">
 <code>public function getPercentBuffered():Number</code><p>
-   Return the percent buffered.
+   Return the percent buffered (1 based %).
    </p><p></p>
 <span class="label">Returns</span>
 <table border="0" cellspacing="0" cellpadding="0">
@@ -579,7 +579,7 @@ showHideInherited();
 </table>
 <div class="detailBody">
 <code>public function getPercentLoaded():Number</code><p>
-   Return the percent loaded.
+   Return the percent loaded (1 based %).
    </p><p></p>
 <span class="label">Returns</span>
 <table border="0" cellspacing="0" cellpadding="0">
@@ -596,7 +596,7 @@ showHideInherited();
 </table>
 <div class="detailBody">
 <code>public function getPercentPlayed():Number</code><p>
-   Return the percent played.
+   Return the percent played (1 based %). 
    </p><p></p>
 <span class="label">Returns</span>
 <table border="0" cellspacing="0" cellpadding="0">
@@ -848,7 +848,7 @@ showHideInherited();
 </table>
 <div class="detailBody">
 <code>public function seekToPercent(percent:Number):void</code><p>
-   seek to a playback percent.
+   seek to a playback percent (1 based %).
    </p><span class="label">Parameters</span>
 <table border="0" cellspacing="0" cellpadding="0">
 <tr>
