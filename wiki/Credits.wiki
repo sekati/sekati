@@ -14,7 +14,7 @@ I have tried to make mention in source comments whenever code was derived, adapt
   * [http://www.mosessupposes.com/ Moses Gunesch]
   * [http://lmnopj.com/ PJ Ahlberg]
   * [http://nectere.ca/ Francis Turmel]
-  * [http://tendercreative.com Cory Clarke]
+  * [http://famouser.com Steven Baughman]
 
 
 == Places of mention ==
