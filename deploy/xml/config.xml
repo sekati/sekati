@@ -1,36 +1,40 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- Sekati Framework Core App Configuration - by jason m horwitz / sekati.com -->
-<config name="Sekati Framework" version="3.0.0.0">
-
-	<framerate>31</framerate>
-	<memory_alarm>20</memory_alarm>
-	<swLiveConnect>true</swLiveConnect>
-	<allowscale>false</allowscale>
-	<showmenu>false</showmenu>
-	<fullscreen>false</fullscreen>
-	<quality>HIGH</quality>
-	<align>TOP_LEFT</align>
-	<scaleMode>NO_SCALE</scaleMode>
-
-	<!-- crossdomain should live on same dom/subdom as SWF-->
-	<crossdomain_uri><![CDATA[/crossdomain.xml]]></crossdomain_uri>
-	
-	<!-- application data feed -->
-	<data_uri><![CDATA[xml/data.xml]]></data_uri>
-	
-	<!-- application stylesheet -->
-	<css_uri><![CDATA[css/app_style.css]]></css_uri>	
-	
-	<!-- instantiate Logger -->
-	<log>true</log>
-
-	<!-- allow flash to change address bar to deeplink playlist/video -->
-	<flink_enable>true</flink_enable>
-	
-	<!-- use Google Analytics tracking -->
-	<track>true</track>
-	
-	<!-- use key listeners -->
-	<key>true</key>
-
+<!-- 
+   ____    ____    __  __   ______  ______  ______      ______  ____    ______     
+  /\  _`\ /\  _`\ /\ \/\ \ /\  _  \/\__  _\/\__  _\    /\  _  \/\  _`\ /\__  _\    
+  \ \,\L\_\ \ \L\_\ \ \/'/'\ \ \L\ \/_/\ \/\/_/\ \/    \ \ \L\ \ \ \L\ \/_/\ \/    
+   \/_\__ \\ \  _\L\ \ , <  \ \  __ \ \ \ \   \ \ \     \ \  __ \ \ ,__/  \ \ \    
+     /\ \L\ \ \ \L\ \ \ \\`\ \ \ \/\ \ \ \ \   \_\ \__   \ \ \/\ \ \ \/    \_\ \__ 
+     \ `\____\ \____/\ \_\ \_\\ \_\ \_\ \ \_\  /\_____\   \ \_\ \_\ \_\    /\_____\
+      \/_____/\/___/  \/_/\/_/ \/_/\/_/  \/_/  \/_____/    \/_/\/_/\/_/    \/_____/
+                                                                                   
+                          ___                                     ___      
+                        /'___\ __                                /\_ \     
+    ___    ___     ___ /\ \__//\_\     __        __  _   ___ ___ \//\ \    
+   /'___\ / __`\ /' _ `\ \ ,__\/\ \  /'_ `\     /\ \/'\/' __` __`\ \ \ \   
+  /\ \__//\ \L\ \/\ \/\ \ \ \_/\ \ \/\ \L\ \  __\/>  <//\ \/\ \/\ \ \_\ \_ 
+  \ \____\ \____/\ \_\ \_\ \_\  \ \_\ \____ \/\_\/\_/\_\ \_\ \_\ \_\/\____\
+   \/____/\/___/  \/_/\/_/\/_/   \/_/\/___L\ \/_/\//\/_/\/_/\/_/\/_/\/____/
+                                      /\____/                             
+                                      \_/__/ 
+                                                                                                                                                                                                                     
+				jason m horwitz / Sekati LLC / sekati.com 
+-->
+<config>
+	<app>
+		<name><![CDATA[Sekati API]]></name>
+		<version><![CDATA[3.0.0.3]]></version>
+	</app>
+	<uri>
+		<crossdomain><![CDATA[/crossdomain.xml]]></crossdomain>
+		<data><![CDATA[xml/data.xml]]></data>
+		<css><![CDATA[css/app_style.css]]></css>
+	</uri>
+	<preferences>
+		<track>true</track>
+		<key>true</key>
+		<deeplink>false</deeplink>
+		<log>true</log>
+		<memory_alarm>20</memory_alarm>
+	</preferences>
 </config>

@@ -4,7 +4,7 @@
 <META http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <link rel="stylesheet" href="../../style.css" type="text/css" media="screen">
 <link rel="stylesheet" href="../../print.css" type="text/css" media="print">
-<meta content="App,sekati.core.App,APP_NAME,CONF_URI,CROSSDOMAIN_URI,CSS_URI,DATA_URI,DEBUG_ENABLE,FLINK_ENABLE,FLV_BUFFER_TIME,KEY_ENABLE,PATH,TRACK_ENABLE,css,db,log" name="keywords">
+<meta content="App,sekati.core.App,APP_NAME,APP_VERSION,CONF_URI,CROSSDOMAIN_URI,CSS_URI,DATA_URI,DEEPLINK_ENABLE,KEY_ENABLE,LOG_ENABLE,MEMORY_ALARM,PATH,TRACK_ENABLE,css,db,log" name="keywords">
 <title>sekati.core.App</title>
 </head>
 <body>
@@ -39,15 +39,17 @@ if (!isEclipse() || window.name != ECLIPSE_FRAME_NAME) {titleBar_setSubTitle("Cl
 </tr>
 </table>
 <p></p>
-  App is -the- static class for centralizing & storing core application instances, 
-  listeners, broadcasters, debuggers, objects, vars & constants.
-  
-  PLEASE NOTE: This class no longer requires any initialization:
+  App provides a common static storage area for API and application
+  instances, debuggers, data objects, vars & constants.
   <p></p>
 <p>
 <span class="classHeaderTableLabel">See also</span>
 </p>
-<div class="seeAlso">com.project.core.Bootstrap</div>
+<div class="seeAlso">
+<a href="../core/Bootstrap.html" target="">sekati.core.Bootstrap</a>
+<br>
+<a href="../display/Document.html" target="">sekati.display.Document</a>
+</div>
 <br>
 <hr>
 </div>
@@ -60,19 +62,22 @@ if (!isEclipse() || window.name != ECLIPSE_FRAME_NAME) {titleBar_setSubTitle("Cl
 </tr>
 <tr class="">
 <td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a class="signatureLink" href="#APP_NAME">APP_NAME</a> : String<div class="summaryTableDescription">[static]
-   Application name as defined in config.xml
-   </div>
+   Application name as defined in <code>config.xml</code>.</div>
+</td><td class="summaryTableOwnerCol">App</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a class="signatureLink" href="#APP_VERSION">APP_VERSION</a> : String<div class="summaryTableDescription">[static]
+   Application versions as defined in <code>config.xml</code>.</div>
 </td><td class="summaryTableOwnerCol">App</td>
 </tr>
 <tr class="">
 <td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a class="signatureLink" href="#CONF_URI">CONF_URI</a> : String<div class="summaryTableDescription">[static]
-   Location of the config.xml file.</div>
+   Location of the <code>config.xml</code> file.</div>
 </td><td class="summaryTableOwnerCol">App</td>
 </tr>
 <tr class="">
 <td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a class="signatureLink" href="#CROSSDOMAIN_URI">CROSSDOMAIN_URI</a> : String<div class="summaryTableDescription">[static]
-   Crossdomain location
-   </div>
+   Crossdomain location as defined in <code>config.xml</code>.</div>
 </td><td class="summaryTableOwnerCol">App</td>
 </tr>
 <tr class="">
@@ -82,14 +87,12 @@ if (!isEclipse() || window.name != ECLIPSE_FRAME_NAME) {titleBar_setSubTitle("Cl
 </tr>
 <tr class="">
 <td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a class="signatureLink" href="#CSS_URI">CSS_URI</a> : String<div class="summaryTableDescription">[static]
-   External CSS location
-   </div>
+   External application CSS location as defined in <code>config.xml</code>.</div>
 </td><td class="summaryTableOwnerCol">App</td>
 </tr>
 <tr class="">
 <td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a class="signatureLink" href="#DATA_URI">DATA_URI</a> : String<div class="summaryTableDescription">[static]
-   External data XML location
-   </div>
+   External data XML location as defined in <code>config.xml</code>.</div>
 </td><td class="summaryTableOwnerCol">App</td>
 </tr>
 <tr class="">
@@ -99,18 +102,8 @@ if (!isEclipse() || window.name != ECLIPSE_FRAME_NAME) {titleBar_setSubTitle("Cl
 </td><td class="summaryTableOwnerCol">App</td>
 </tr>
 <tr class="">
-<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a class="signatureLink" href="#DEBUG_ENABLE">DEBUG_ENABLE</a> : Boolean<div class="summaryTableDescription">[static]
-   Determines whether advanced <code>Logger</code> output is generated.</div>
-</td><td class="summaryTableOwnerCol">App</td>
-</tr>
-<tr class="">
-<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a class="signatureLink" href="#FLINK_ENABLE">FLINK_ENABLE</a> : Boolean<div class="summaryTableDescription">[static]
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a class="signatureLink" href="#DEEPLINK_ENABLE">DEEPLINK_ENABLE</a> : Boolean<div class="summaryTableDescription">[static]
    Determines whether address-bar deeplinking is enabled.</div>
-</td><td class="summaryTableOwnerCol">App</td>
-</tr>
-<tr class="">
-<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a class="signatureLink" href="#FLV_BUFFER_TIME">FLV_BUFFER_TIME</a> : Number<div class="summaryTableDescription">[static]
-   Stores the appropriate buffer time for flv media.</div>
 </td><td class="summaryTableOwnerCol">App</td>
 </tr>
 <tr class="">
@@ -121,7 +114,17 @@ if (!isEclipse() || window.name != ECLIPSE_FRAME_NAME) {titleBar_setSubTitle("Cl
 <tr class="">
 <td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a class="signatureLink" href="#log">log</a> : <a href="../log/Logger.html">Logger</a>
 <div class="summaryTableDescription">[static]
-   Stores a reference to the Logger singleton.</div>
+   Stores a "shortcut" reference to the </code>Logger</code>.</div>
+</td><td class="summaryTableOwnerCol">App</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a class="signatureLink" href="#LOG_ENABLE">LOG_ENABLE</a> : Boolean<div class="summaryTableDescription">[static]
+   Determines whether advanced <code>Logger</code> output is generated.</div>
+</td><td class="summaryTableOwnerCol">App</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a class="signatureLink" href="#MEMORY_ALARM">MEMORY_ALARM</a> : uint<div class="summaryTableDescription">[static]
+   The amount of system memory flash may utilize before an alarm <code>Logger</code> event fires.</div>
 </td><td class="summaryTableOwnerCol">App</td>
 </tr>
 <tr class="">
@@ -131,8 +134,7 @@ if (!isEclipse() || window.name != ECLIPSE_FRAME_NAME) {titleBar_setSubTitle("Cl
 </tr>
 <tr class="">
 <td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a class="signatureLink" href="#TRACK_ENABLE">TRACK_ENABLE</a> : Boolean<div class="summaryTableDescription">[static]
-   Determines whether GoogleAnalytics is utilized via <code>Urchin</code>
-   </div>
+   Determines whether Google Analytics is utilized via <code>sekati.external.Urchin</code>.</div>
 </td><td class="summaryTableOwnerCol">App</td>
 </tr>
 </table>
@@ -170,7 +172,17 @@ showHideInherited();
 </table>
 <div class="detailBody">
 <code>public static var APP_NAME:String</code><p>
-   Application name as defined in config.xml
+   Application name as defined in <code>config.xml</code>.
+   </p></div>
+<a name="APP_VERSION"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">APP_VERSION</td><td class="detailHeaderType">property</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public static var APP_VERSION:String</code><p>
+   Application versions as defined in <code>config.xml</code>.
    </p></div>
 <a name="CONF_URI"></a>
 <table cellspacing="0" cellpadding="0" class="detailHeader">
@@ -180,7 +192,7 @@ showHideInherited();
 </table>
 <div class="detailBody">
 <code>public static var CONF_URI:String</code><p>
-   Location of the config.xml file.
+   Location of the <code>config.xml</code> file.
    </p></div>
 <a name="CROSSDOMAIN_URI"></a>
 <table cellspacing="0" cellpadding="0" class="detailHeader">
@@ -190,7 +202,7 @@ showHideInherited();
 </table>
 <div class="detailBody">
 <code>public static var CROSSDOMAIN_URI:String</code><p>
-   Crossdomain location
+   Crossdomain location as defined in <code>config.xml</code>.
    </p></div>
 <a name="css"></a>
 <table cellspacing="0" cellpadding="0" class="detailHeader">
@@ -210,7 +222,7 @@ showHideInherited();
 </table>
 <div class="detailBody">
 <code>public static var CSS_URI:String</code><p>
-   External CSS location
+   External application CSS location as defined in <code>config.xml</code>.
    </p></div>
 <a name="DATA_URI"></a>
 <table cellspacing="0" cellpadding="0" class="detailHeader">
@@ -220,7 +232,7 @@ showHideInherited();
 </table>
 <div class="detailBody">
 <code>public static var DATA_URI:String</code><p>
-   External data XML location
+   External data XML location as defined in <code>config.xml</code>.
    </p></div>
 <a name="db"></a>
 <table cellspacing="0" cellpadding="0" class="detailHeader">
@@ -233,35 +245,15 @@ showHideInherited();
    Generic object which <code>Bootstrap</code> loads external data 
    in for runtime storage and application data centralization.
    </p></div>
-<a name="DEBUG_ENABLE"></a>
+<a name="DEEPLINK_ENABLE"></a>
 <table cellspacing="0" cellpadding="0" class="detailHeader">
 <tr>
-<td class="detailHeaderName">DEBUG_ENABLE</td><td class="detailHeaderType">property</td><td class="detailHeaderRule">&nbsp;</td>
+<td class="detailHeaderName">DEEPLINK_ENABLE</td><td class="detailHeaderType">property</td><td class="detailHeaderRule">&nbsp;</td>
 </tr>
 </table>
 <div class="detailBody">
-<code>public static var DEBUG_ENABLE:Boolean</code><p>
-   Determines whether advanced <code>Logger</code> output is generated.
-   </p></div>
-<a name="FLINK_ENABLE"></a>
-<table cellspacing="0" cellpadding="0" class="detailHeader">
-<tr>
-<td class="detailHeaderName">FLINK_ENABLE</td><td class="detailHeaderType">property</td><td class="detailHeaderRule">&nbsp;</td>
-</tr>
-</table>
-<div class="detailBody">
-<code>public static var FLINK_ENABLE:Boolean</code><p>
-   Determines whether address-bar deeplinking is enabled.
-   </p></div>
-<a name="FLV_BUFFER_TIME"></a>
-<table cellspacing="0" cellpadding="0" class="detailHeader">
-<tr>
-<td class="detailHeaderName">FLV_BUFFER_TIME</td><td class="detailHeaderType">property</td><td class="detailHeaderRule">&nbsp;</td>
-</tr>
-</table>
-<div class="detailBody">
-<code>public static var FLV_BUFFER_TIME:Number</code><p>
-   Stores the appropriate buffer time for flv media.
+<code>public static var DEEPLINK_ENABLE:Boolean</code><p>
+   Determines whether address-bar deeplinking is enabled. Defined in <code>config.xml</code>.
    </p></div>
 <a name="KEY_ENABLE"></a>
 <table cellspacing="0" cellpadding="0" class="detailHeader">
@@ -271,7 +263,7 @@ showHideInherited();
 </table>
 <div class="detailBody">
 <code>public static var KEY_ENABLE:Boolean</code><p>
-   Determines whether keyboard management is enabled.
+   Determines whether keyboard management is enabled. Defined in <code>config.xml</code>.
    </p></div>
 <a name="log"></a>
 <table cellspacing="0" cellpadding="0" class="detailHeader">
@@ -281,7 +273,27 @@ showHideInherited();
 </table>
 <div class="detailBody">
 <code>public static var log:<a href="../log/Logger.html">Logger</a></code><p>
-   Stores a reference to the Logger singleton.
+   Stores a "shortcut" reference to the </code>Logger</code>.
+   </p></div>
+<a name="LOG_ENABLE"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">LOG_ENABLE</td><td class="detailHeaderType">property</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public static var LOG_ENABLE:Boolean</code><p>
+   Determines whether advanced <code>Logger</code> output is generated. Defined in <code>config.xml</code>.
+   </p></div>
+<a name="MEMORY_ALARM"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">MEMORY_ALARM</td><td class="detailHeaderType">property</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public static var MEMORY_ALARM:uint</code><p>
+   The amount of system memory flash may utilize before an alarm <code>Logger</code> event fires. Defined in MegaBytes in <code>config.xml</code>.
    </p></div>
 <a name="PATH"></a>
 <table cellspacing="0" cellpadding="0" class="detailHeader">
@@ -301,7 +313,7 @@ showHideInherited();
 </table>
 <div class="detailBody">
 <code>public static var TRACK_ENABLE:Boolean</code><p>
-   Determines whether GoogleAnalytics is utilized via <code>Urchin</code>
+   Determines whether Google Analytics is utilized via <code>sekati.external.Urchin</code>. Defined in <code>config.xml</code>.
    </p></div>
 <a name="constructorDetail"></a>
 <div class="detailSectionHeader">Constructor detail</div>

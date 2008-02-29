@@ -4,7 +4,7 @@
 <META http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <link rel="stylesheet" href="../../style.css" type="text/css" media="screen">
 <link rel="stylesheet" href="../../print.css" type="text/css" media="print">
-<meta content="AppEvent,sekati.events.AppEvent,APP_CONFIG,APP_DATA,APP_INIT,APP_STYLE,clone" name="keywords">
+<meta content="AppEvent,sekati.events.AppEvent,APP_CONFIG,APP_DATA,APP_FAILURE,APP_INIT,APP_STYLE,clone" name="keywords">
 <title>sekati.events.AppEvent</title>
 </head>
 <body>
@@ -97,6 +97,11 @@ if (!isEclipse() || window.name != ECLIPSE_FRAME_NAME) {titleBar_setSubTitle("Cl
 </td><td class="summaryTableOwnerCol">AppEvent</td>
 </tr>
 <tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a class="signatureLink" href="#APP_FAILURE">APP_FAILURE</a> : String = "onAppFailure"<div class="summaryTableDescription">[static]
+   </div>
+</td><td class="summaryTableOwnerCol">AppEvent</td>
+</tr>
+<tr class="">
 <td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a class="signatureLink" href="#APP_INIT">APP_INIT</a> : String = "onAppInitialized"<div class="summaryTableDescription">[static]
    </div>
 </td><td class="summaryTableOwnerCol">AppEvent</td>
@@ -180,6 +185,15 @@ showHideInherited();
 </table>
 <div class="detailBody">
 <code>public static const APP_DATA:String = "onLoadAppData"</code><p>
+   </p></div>
+<a name="APP_FAILURE"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">APP_FAILURE</td><td class="detailHeaderType">constant</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public static const APP_FAILURE:String = "onAppFailure"</code><p>
    </p></div>
 <a name="APP_INIT"></a>
 <table cellspacing="0" cellpadding="0" class="detailHeader">
