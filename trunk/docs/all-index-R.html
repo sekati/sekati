@@ -489,8 +489,7 @@ if (!isEclipse() || window.name != ECLIPSE_FRAME_NAME) {titleBar_setSubTitle("RÂ
 </tr>
 <tr>
 <td width="20"></td><td>
-   A method in the sequence chain failed - make retry attempts 
-   at each phase or die with fatal exception.</td>
+   A method in the sequence chain failed - make retry attempts at each phase or dispatch the <code>AppEvent.APP_FAILURE</code> event.</td>
 </tr>
 <tr>
 <td colspan="2" class="idxrow"><a onclick="javascript:loadClassListFrame('sekati/core/class-list.html');" href="sekati/core/Bootstrap.html#RETRY_ATTEMPT">RETRY_ATTEMPT</a> &mdash; Static property in class sekati.core.<a onclick="javascript:loadClassListFrame('sekati/core/class-list.html');" href="sekati/core/Bootstrap.html">Bootstrap</a></td>
@@ -631,7 +630,7 @@ if (!isEclipse() || window.name != ECLIPSE_FRAME_NAME) {titleBar_setSubTitle("RÂ
 </tr>
 <tr>
 <td width="20"></td><td>
-   Iterate through <code>_sequenceChain</code> method array then fire the <code>"onAppConfigured"</code> events.</td>
+   Iterate through the <code>_sequenceChain</code> method & fire the <code>AppEvent.APP_INIT</code> event on completion.</td>
 </tr>
 <tr>
 <td style="padding-bottom:20px" colspan="2"></td>

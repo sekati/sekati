@@ -132,15 +132,15 @@ if (!isEclipse() || window.name != ECLIPSE_FRAME_NAME) {titleBar_setSubTitle("LÂ
 </tr>
 <tr>
 <td width="20"></td><td>
-   loads and parses config.xml then broadcasts "onConfig"
-   </td>
+   Loads & parse <code>config.xml</code> to <code>App.config</code>
+   & dispatch <code>AppEvent.APP_CONFIG</code>.</td>
 </tr>
 <tr>
 <td colspan="2" class="idxrow"><a onclick="javascript:loadClassListFrame('sekati/core/class-list.html');" href="sekati/core/Bootstrap.html#loadData()">loadData</a>() &mdash; Method in class sekati.core.<a onclick="javascript:loadClassListFrame('sekati/core/class-list.html');" href="sekati/core/Bootstrap.html">Bootstrap</a></td>
 </tr>
 <tr>
 <td width="20"></td><td>
-   load App data from {</td>
+   Loads & parse data from <code>App.DATA_URI</code> provided in <code>config.xml</code>.</td>
 </tr>
 <tr>
 <td colspan="2" class="idxrow"><a onclick="javascript:loadClassListFrame('sekati/events/class-list.html');" href="sekati/events/MediaEvent.html#_loaded">_loaded</a> &mdash; Property in class sekati.events.<a onclick="javascript:loadClassListFrame('sekati/events/class-list.html');" href="sekati/events/MediaEvent.html">MediaEvent</a></td>
@@ -160,7 +160,7 @@ if (!isEclipse() || window.name != ECLIPSE_FRAME_NAME) {titleBar_setSubTitle("LÂ
 </tr>
 <tr>
 <td width="20"></td><td>
-   load App stylesheet css from {</td>
+   Loads & parse the stylesheet from <code>App.CSS_URI</code> provided in <code>config.xml</code>.</td>
 </tr>
 <tr>
 <td colspan="2" class="idxrow"><a onclick="javascript:loadClassListFrame('sekati/utils/class-list.html');" href="sekati/utils/ArrayUtils.html#locatePropVal()">locatePropVal</a>(objArr, prop, val, isCaseInsensitive) &mdash; Static method in class sekati.utils.<a onclick="javascript:loadClassListFrame('sekati/utils/class-list.html');" href="sekati/utils/ArrayUtils.html">ArrayUtils</a></td>
@@ -182,7 +182,7 @@ if (!isEclipse() || window.name != ECLIPSE_FRAME_NAME) {titleBar_setSubTitle("LÂ
 </tr>
 <tr>
 <td width="20"></td><td>
-   Stores a reference to the Logger singleton.</td>
+   Stores a "shortcut" reference to the </code>Logger</code>.</td>
 </tr>
 <tr>
 <td colspan="2" class="idxrow"><a onclick="javascript:loadClassListFrame('sekati/log/class-list.html');" href="sekati/log/Logger.html#log()">log</a>(level, origin, message) &mdash; Method in class sekati.log.<a onclick="javascript:loadClassListFrame('sekati/log/class-list.html');" href="sekati/log/Logger.html">Logger</a></td>
@@ -190,6 +190,13 @@ if (!isEclipse() || window.name != ECLIPSE_FRAME_NAME) {titleBar_setSubTitle("LÂ
 <tr>
 <td width="20"></td><td>
    Output handler dispatcher the fully assembled <code>LogEvent</code>.</td>
+</tr>
+<tr>
+<td colspan="2" class="idxrow"><a onclick="javascript:loadClassListFrame('sekati/core/class-list.html');" href="sekati/core/App.html#LOG_ENABLE">LOG_ENABLE</a> &mdash; Static property in class sekati.core.<a onclick="javascript:loadClassListFrame('sekati/core/class-list.html');" href="sekati/core/App.html">App</a></td>
+</tr>
+<tr>
+<td width="20"></td><td>
+   Determines whether advanced <code>Logger</code> output is generated.</td>
 </tr>
 <tr>
 <td colspan="2" class="idxrow"><a onclick="javascript:loadClassListFrame('sekati/events/class-list.html');" href="sekati/events/LogEvent.html">LogEvent</a> &mdash; Class in package <a onclick="javascript:loadClassListFrame('sekati/events/class-list.html');" href="sekati/events/package-detail.html">sekati.events</a></td>
