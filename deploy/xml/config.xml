@@ -23,18 +23,18 @@
 <config>
 	<app>
 		<name><![CDATA[Sekati API]]></name>
-		<version><![CDATA[3.0.0.3]]></version>
+		<version>3.0.0.3</version>
 	</app>
 	<uri>
 		<crossdomain><![CDATA[/crossdomain.xml]]></crossdomain>
 		<data><![CDATA[xml/data.xml]]></data>
 		<css><![CDATA[css/app_style.css]]></css>
 	</uri>
-	<preferences>
+	<option>
 		<track>true</track>
 		<key>true</key>
 		<deeplink>false</deeplink>
 		<log>true</log>
 		<memory_alarm>20</memory_alarm>
-	</preferences>
+	</option>
 </config>
