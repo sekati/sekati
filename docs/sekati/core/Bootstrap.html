@@ -59,7 +59,7 @@ if (!isEclipse() || window.name != ECLIPSE_FRAME_NAME) {titleBar_setSubTitle("Cl
   of its <i>"boot phase"</i>. If any boot phase in the 
   <code>_sequenceChain</code> fails its execution it will be retried 
   until the <code>RETRY_MAX</code> limit has been exceeded at which 
-  point a the <code>AppEvent.APP_FAILURE</code> event will be dispatched
+  point a the <code>AppEvent.APP_FAIL</code> event will be dispatched
   to notify the application of boot failure.</p>
   
   <p><b>Customizations</b> may be made by extending and 
