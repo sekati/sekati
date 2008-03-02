@@ -44,11 +44,15 @@ if (!isEclipse() || window.name != ECLIPSE_FRAME_NAME) {titleBar_setSubTitle("Cl
 <p></p>
   FramePulse proxies an <code>ENTER_FRAME</code> event to any non-
   <code>DisplayObject</code> classes which need to execute code on each frame tick.<br><br>
-  <code>Usage:<br>
-  FramePulse.$.addEventListener(FramePulse.FRAME_PULSE, _onEnterFrame);<br>
-  protected function _onEnterFrame(e:Event):void {<br>
-   trace( "pulse" );<br>
-  }<br></code>
+  <p></p>
+<br>
+<span class="label">Example</span>
+<br><div class='listing'><pre>
+  FramePulse.$.addEventListener(FramePulse.FRAME_PULSE, _onEnterFrame);
+  protected function _onEnterFrame(e:Event):void {
+   trace( "pulse" );
+  }
+  </pre></div>
   
   <p></p>
 <p>
