@@ -407,12 +407,12 @@ if (!isEclipse() || window.name != ECLIPSE_FRAME_NAME) {titleBar_setSubTitle("BÂ
 <td width="20"></td><td></td>
 </tr>
 <tr>
-<td colspan="2" class="idxrow"><a onclick="javascript:loadClassListFrame('sekati/display/class-list.html');" href="sekati/display/Document.html#buildCompositions()">buildCompositions</a>() &mdash; Method in class sekati.display.<a onclick="javascript:loadClassListFrame('sekati/display/class-list.html');" href="sekati/display/Document.html">Document</a></td>
+<td colspan="2" class="idxrow"><a onclick="javascript:loadClassListFrame('sekati/managers/class-list.html');" href="sekati/managers/ContextMenuManager.html#build()">build</a>() &mdash; Method in class sekati.managers.<a onclick="javascript:loadClassListFrame('sekati/managers/class-list.html');" href="sekati/managers/ContextMenuManager.html">ContextMenuManager</a></td>
 </tr>
 <tr>
 <td width="20"></td><td>
-   Centralize class compositions for core functionalities (bootstraps, managers, etc)
-   </td>
+   Build (or rebuild) the <code>ContextualMenu</code> to display the App info, 
+   credits, controls, fullscreen & other customizations.</td>
 </tr>
 <tr>
 <td colspan="2" class="idxrow"><a onclick="javascript:loadClassListFrame('sekati/ui/class-list.html');" href="sekati/ui/ContextualMenu.html#buildMenu()">buildMenu</a>() &mdash; Method in class sekati.ui.<a onclick="javascript:loadClassListFrame('sekati/ui/class-list.html');" href="sekati/ui/ContextualMenu.html">ContextualMenu</a></td>
@@ -426,8 +426,7 @@ if (!isEclipse() || window.name != ECLIPSE_FRAME_NAME) {titleBar_setSubTitle("BÂ
 </tr>
 <tr>
 <td width="20"></td><td>
-   Menu builtInItems getter
-   </td>
+   Return the <code>ContextualMenu.builtInItems</code> state.</td>
 </tr>
 <tr>
 <td colspan="2" class="idxrow"><a onclick="javascript:loadClassListFrame('sekati/transitions/class-list.html');" href="sekati/transitions/Motion.html#burst()">burst</a>(o, c, cb) &mdash; Static method in class sekati.transitions.<a onclick="javascript:loadClassListFrame('sekati/transitions/class-list.html');" href="sekati/transitions/Motion.html">Motion</a></td>
