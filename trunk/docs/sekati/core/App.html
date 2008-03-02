@@ -4,7 +4,7 @@
 <META http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <link rel="stylesheet" href="../../style.css" type="text/css" media="screen">
 <link rel="stylesheet" href="../../print.css" type="text/css" media="print">
-<meta content="App,sekati.core.App,APP_NAME,APP_VERSION,CONF_URI,CROSSDOMAIN_URI,CSS_URI,DATA_URI,DEEPLINK_ENABLE,FULLSCREEN_ENABLE,KEY_ENABLE,LOG_ENABLE,MEMORY_ALARM,PATH,TRACK_ENABLE,css,db,log" name="keywords">
+<meta content="App,sekati.core.App,APP_NAME,APP_VERSION,CONF_URI,CROSSDOMAIN_URI,CSS_URI,DATA_URI,DEEPLINK_ENABLE,FULLSCREEN_ENABLE,KEY_ENABLE,LOG_ENABLE,MANAGED_MENU,MEMORY_ALARM,PATH,TRACK_ENABLE,css,db,log" name="keywords">
 <title>sekati.core.App</title>
 </head>
 <body>
@@ -108,7 +108,8 @@ if (!isEclipse() || window.name != ECLIPSE_FRAME_NAME) {titleBar_setSubTitle("Cl
 </tr>
 <tr class="">
 <td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a class="signatureLink" href="#FULLSCREEN_ENABLE">FULLSCREEN_ENABLE</a> : Boolean<div class="summaryTableDescription">[static]
-   Determines whether the application supports Fullscreen mode via <code>sekati.display.StageDisplay</code>.</div>
+   Determines whether the application supports Fullscreen mode via <code>sekati.display.StageDisplay</code> If <code>MANAGED_MENU</code>
+   is <code>true</code> a <code>ContextMenu</code> <i>'fullscreen'</i> item will be automatically added.</div>
 </td><td class="summaryTableOwnerCol">App</td>
 </tr>
 <tr class="">
@@ -125,6 +126,11 @@ if (!isEclipse() || window.name != ECLIPSE_FRAME_NAME) {titleBar_setSubTitle("Cl
 <tr class="">
 <td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a class="signatureLink" href="#LOG_ENABLE">LOG_ENABLE</a> : Boolean<div class="summaryTableDescription">[static]
    Determines whether advanced <code>Logger</code> output is generated.</div>
+</td><td class="summaryTableOwnerCol">App</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a class="signatureLink" href="#MANAGED_MENU">MANAGED_MENU</a> : Boolean<div class="summaryTableDescription">[static]
+   Determines whether the <code>ContextMenuManager</code> is instantiated during <code>Bootstrap</code>.</div>
 </td><td class="summaryTableOwnerCol">App</td>
 </tr>
 <tr class="">
@@ -268,7 +274,8 @@ showHideInherited();
 </table>
 <div class="detailBody">
 <code>public static var FULLSCREEN_ENABLE:Boolean</code><p>
-   Determines whether the application supports Fullscreen mode via <code>sekati.display.StageDisplay</code>. Defined in <code>config.xml</code>.
+   Determines whether the application supports Fullscreen mode via <code>sekati.display.StageDisplay</code> If <code>MANAGED_MENU</code>
+   is <code>true</code> a <code>ContextMenu</code> <i>'fullscreen'</i> item will be automatically added. Defined in <code>config.xml</code>.
    </p></div>
 <a name="KEY_ENABLE"></a>
 <table cellspacing="0" cellpadding="0" class="detailHeader">
@@ -299,6 +306,16 @@ showHideInherited();
 <div class="detailBody">
 <code>public static var LOG_ENABLE:Boolean</code><p>
    Determines whether advanced <code>Logger</code> output is generated. Defined in <code>config.xml</code>.
+   </p></div>
+<a name="MANAGED_MENU"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">MANAGED_MENU</td><td class="detailHeaderType">property</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public static var MANAGED_MENU:Boolean</code><p>
+   Determines whether the <code>ContextMenuManager</code> is instantiated during <code>Bootstrap</code>. Defined in <code>config.xml</code>.
    </p></div>
 <a name="MEMORY_ALARM"></a>
 <table cellspacing="0" cellpadding="0" class="detailHeader">
