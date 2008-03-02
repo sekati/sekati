@@ -622,91 +622,91 @@ showHideInherited();
    </p><span class="label">Parameters</span>
 <table border="0" cellspacing="0" cellpadding="0">
 <tr>
-<td width="20px"></td><td><code><span class="label">content</span>:DisplayObject</code> &mdash; The scrollable content <code>DisplayObject</code>.
+<td width="20px"></td><td><code><span class="label">content</span>:DisplayObject</code> &mdash;     The scrollable content <code>DisplayObject</code>.
    </td>
 </tr>
 <tr>
 <td class="paramSpacer">&nbsp;</td>
 </tr>
 <tr>
-<td width="20px"></td><td><code><span class="label">scrollArea</span>:DisplayObject</code> &mdash; The area within which the <code>content</code> is to be scrolled; usually a mask, background or overlay. Also the area within which <code>MouseWheel</code> support is active.
+<td width="20px"></td><td><code><span class="label">scrollArea</span>:DisplayObject</code> &mdash;    The area within which the <code>content</code> is to be scrolled; usually a mask, background or overlay. Also the area within which <code>MouseWheel</code> support is active.
    </td>
 </tr>
 <tr>
 <td class="paramSpacer">&nbsp;</td>
 </tr>
 <tr>
-<td width="20px"></td><td><code><span class="label">gutter</span>:Sprite</code> &mdash; The clickable, interactive "track" area for the scroll <code>bar</code>.
+<td width="20px"></td><td><code><span class="label">gutter</span>:Sprite</code> &mdash;     The clickable, interactive "track" area for the scroll <code>bar</code>.
    </td>
 </tr>
 <tr>
 <td class="paramSpacer">&nbsp;</td>
 </tr>
 <tr>
-<td width="20px"></td><td><code><span class="label">bar</span>:Sprite</code> &mdash; The object which is dragged or thrown to scroll <code>content</code> inside the <code>viewArea</code>.
+<td width="20px"></td><td><code><span class="label">bar</span>:Sprite</code> &mdash;      The object which is dragged or thrown to scroll <code>content</code> inside the <code>viewArea</code>.
    </td>
 </tr>
 <tr>
 <td class="paramSpacer">&nbsp;</td>
 </tr>
 <tr>
-<td width="20px"></td><td><code><span class="label">axis</span>:String</code> (default = "<code>y</code>")<code></code> &mdash; The axis (must be: <code>x || y</code>) upon which to scroll.
+<td width="20px"></td><td><code><span class="label">axis</span>:String</code> (default = "<code>y</code>")<code></code> &mdash;      The axis (must be: <code>x || y</code>) upon which to scroll.
    </td>
 </tr>
 <tr>
 <td class="paramSpacer">&nbsp;</td>
 </tr>
 <tr>
-<td width="20px"></td><td><code><span class="label">isInit</span>:Boolean</code> (default = <code>true</code>)<code></code> &mdash; The (optional) initialization <code>Scroll</code> upon instantiation, otherwise <code>init()</code> must be called manually.
+<td width="20px"></td><td><code><span class="label">isInit</span>:Boolean</code> (default = <code>true</code>)<code></code> &mdash;     The (optional) initialization <code>Scroll</code> upon instantiation, otherwise <code>init()</code> must be called manually.
    </td>
 </tr>
 <tr>
 <td class="paramSpacer">&nbsp;</td>
 </tr>
 <tr>
-<td width="20px"></td><td><code><span class="label">hasMouseWheel</span>:Boolean</code> (default = <code>true</code>)<code></code> &mdash; The (optional) enabling of <code>MouseWheel</code> support (both Mac & PC) of the <code>Scroll</code> instance.
+<td width="20px"></td><td><code><span class="label">hasMouseWheel</span>:Boolean</code> (default = <code>true</code>)<code></code> &mdash;   The (optional) enabling of <code>MouseWheel</code> support (both Mac & PC) of the <code>Scroll</code> instance.
    </td>
 </tr>
 <tr>
 <td class="paramSpacer">&nbsp;</td>
 </tr>
 <tr>
-<td width="20px"></td><td><code><span class="label">isProportionalGutter</span>:Boolean</code> (default = <code>true</code>)<code></code> &mdash; The (optional) resizing of the gutter to match the <code>viewArea</code>'s width or height depending on <code>axis</code>.
+<td width="20px"></td><td><code><span class="label">isProportionalGutter</span>:Boolean</code> (default = <code>true</code>)<code></code> &mdash;  The (optional) resizing of the gutter to match the <code>viewArea</code>'s width or height depending on <code>axis</code>.
    </td>
 </tr>
 <tr>
 <td class="paramSpacer">&nbsp;</td>
 </tr>
 <tr>
-<td width="20px"></td><td><code><span class="label">isProportionalBar</span>:Boolean</code> (default = <code>true</code>)<code></code> &mdash; The (optional) resizing of the scroll <code>bar</code> to reflect the <code>viewArea</code>'s scrollable <code>content</code>.
+<td width="20px"></td><td><code><span class="label">isProportionalBar</span>:Boolean</code> (default = <code>true</code>)<code></code> &mdash;  The (optional) resizing of the scroll <code>bar</code> to reflect the <code>viewArea</code>'s scrollable <code>content</code>.
    </td>
 </tr>
 <tr>
 <td class="paramSpacer">&nbsp;</td>
 </tr>
 <tr>
-<td width="20px"></td><td><code><span class="label">ease</span>:String</code> (default = "<code>easeOutExpo</code>")<code></code> &mdash; The <code>Tweener</code> easing equation applied to <code>slideContent, slideScroller or moveScroller</code> calls.
+<td width="20px"></td><td><code><span class="label">ease</span>:String</code> (default = "<code>easeOutExpo</code>")<code></code> &mdash;      The <code>Tweener</code> easing equation applied to <code>slideContent, slideScroller or moveScroller</code> calls.
    </td>
 </tr>
 <tr>
 <td class="paramSpacer">&nbsp;</td>
 </tr>
 <tr>
-<td width="20px"></td><td><code><span class="label">contentSizeTracker</span>:DisplayObject</code> (default = <code>null</code>)<code></code> &mdash; The (optional) content size tracking object; used to calculate the viewable scroll area. For use in accordian style content where child objects of <code>content</code> visible property is toggled throwing off the scroll calculations.
+<td width="20px"></td><td><code><span class="label">contentSizeTracker</span>:DisplayObject</code> (default = <code>null</code>)<code></code> &mdash;  The (optional) content size tracking object; used to calculate the viewable scroll area. For use in accordian style content where child objects of <code>content</code> visible property is toggled throwing off the scroll calculations.
    </td>
 </tr>
 <tr>
 <td class="paramSpacer">&nbsp;</td>
 </tr>
 <tr>
-<td width="20px"></td><td><code><span class="label">friction</span>:Number</code> (default = <code>0.8</code>)<code></code> &mdash; The motion friction of the <code>content</code> & <code>bar</code>. Note: this does not reflect the motion of <code>slideContent, slideScroller or moveScroller</code> calls. 
+<td width="20px"></td><td><code><span class="label">friction</span>:Number</code> (default = <code>0.8</code>)<code></code> &mdash;     The motion friction of the <code>content</code> & <code>bar</code>. Note: this does not reflect the motion of <code>slideContent, slideScroller or moveScroller</code> calls. 
    </td>
 </tr>
 <tr>
 <td class="paramSpacer">&nbsp;</td>
 </tr>
 <tr>
-<td width="20px"></td><td><code><span class="label">ratio</span>:Number</code> (default = <code>0.5</code>)<code></code> &mdash; The motion ratio of the <code>content</code> & <code>bar</code>. Note: this does not reflect the motion of <code>slideContent, slideScroller or moveScroller</code> calls.
+<td width="20px"></td><td><code><span class="label">ratio</span>:Number</code> (default = <code>0.5</code>)<code></code> &mdash;     The motion ratio of the <code>content</code> & <code>bar</code>. Note: this does not reflect the motion of <code>slideContent, slideScroller or moveScroller</code> calls.
    </td>
 </tr>
 </table>
@@ -715,13 +715,17 @@ showHideInherited();
 <table border="0" cellspacing="0" cellpadding="0">
 <tr>
 <td width="20"></td><td><code></code> &mdash; if axis is not "x" or "y" & returns without proper instantiation
-   <pre><code>Usage:
-   //         Scroll(content, scrollArea, gutter, bar, axis, isInit, hasMouseWheel, isProportionalGutter, isProportionalBar, easingEquation, contentSizeTracker, friction, ratio);
-    var scroll:Scroll = new Scroll( content, scrollArea, gutter, bar, "x", true, true, true, true, "easeOutQuint", null, 0.7, 0.4 );
-   </code></pre>
    </td>
 </tr>
 </table>
+<br>
+<span class="label">Example</span>
+<br>The following code creates a new Scroll instance: 
+   <div class='listing'><pre>
+   // Scroll(content, scrollArea, gutter, bar, axis, isInit, hasMouseWheel, isProportionalGutter, isProportionalBar, easingEquation, contentSizeTracker, friction, ratio); 
+   var scroll:Scroll = new Scroll( content, scrollArea, gutter, bar, "x", true, true, true, true, "easeOutQuint", null, 0.7, 0.4 );
+   </pre></div>
+   <p></p>
 </div>
 <a name="methodDetail"></a>
 <div class="detailSectionHeader">Method detail</div>
@@ -823,14 +827,17 @@ showHideInherited();
    </p><span class="label">Parameters</span>
 <table border="0" cellspacing="0" cellpadding="0">
 <tr>
-<td width="20px"></td><td><code><span class="label">amount</span>:Number</code> &mdash; (Number) pixels to move: positive or negative
+<td width="20px"></td><td><code><span class="label">amount</span>:Number</code> &mdash;  of pixels to move: positive or negative.
    </td>
 </tr>
 <tr>
 <td class="paramSpacer">&nbsp;</td>
 </tr>
 <tr>
-<td width="20px"></td><td><code><span class="label">sec</span>:Number</code> &mdash; (Number) optional tween duration in seconds
+<td width="20px"></td><td><code><span class="label">sec</span>:Number</code> &mdash;   tween duration in seconds.
+   <code>
+    _myScroll.moveAmount( -100 );
+   </code>
    </td>
 </tr>
 </table>
@@ -847,14 +854,14 @@ showHideInherited();
    </p><span class="label">Parameters</span>
 <table border="0" cellspacing="0" cellpadding="0">
 <tr>
-<td width="20px"></td><td><code><span class="label">pos</span>:Number</code> &mdash; (Number) position to slide scroller on axis
+<td width="20px"></td><td><code><span class="label">pos</span>:Number</code> &mdash;  the position to slide scroller on axis.
    </td>
 </tr>
 <tr>
 <td class="paramSpacer">&nbsp;</td>
 </tr>
 <tr>
-<td width="20px"></td><td><code><span class="label">sec</span>:Number</code> &mdash; (Number) optional tween duration in seconds
+<td width="20px"></td><td><code><span class="label">sec</span>:Number</code> &mdash;  the tween duration in seconds.
    </td>
 </tr>
 </table>
@@ -871,14 +878,14 @@ showHideInherited();
    </p><span class="label">Parameters</span>
 <table border="0" cellspacing="0" cellpadding="0">
 <tr>
-<td width="20px"></td><td><code><span class="label">pos</span>:Number</code> &mdash; (Number) position to slide content on axis
+<td width="20px"></td><td><code><span class="label">pos</span>:Number</code> &mdash;  the position to slide content on axis.
    </td>
 </tr>
 <tr>
 <td class="paramSpacer">&nbsp;</td>
 </tr>
 <tr>
-<td width="20px"></td><td><code><span class="label">sec</span>:Number</code> &mdash; (Number) optional tween duration in seconds
+<td width="20px"></td><td><code><span class="label">sec</span>:Number</code> &mdash;  the tween duration in seconds.
    </td>
 </tr>
 </table>

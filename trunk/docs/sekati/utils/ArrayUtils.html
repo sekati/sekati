@@ -82,8 +82,7 @@ if (!isEclipse() || window.name != ECLIPSE_FRAME_NAME) {titleBar_setSubTitle("Cl
 <div class="summarySignature">
 <a class="signatureLink" href="#compare()">compare</a>(aA:Array, aB:Array):Boolean</div>
 <div class="summaryTableDescription">[static]
-   compare two arrays to see if they are identical
-   </div>
+   Compare two arrays to see if they are identical.</div>
 </td><td class="summaryTableOwnerCol">ArrayUtils</td>
 </tr>
 <tr class="">
@@ -91,8 +90,7 @@ if (!isEclipse() || window.name != ECLIPSE_FRAME_NAME) {titleBar_setSubTitle("Cl
 <div class="summarySignature">
 <a class="signatureLink" href="#contains()">contains</a>(a:Array, val:Object):Boolean</div>
 <div class="summaryTableDescription">[static]
-    Determines if a value exists within the array
-    </div>
+    Determines if a value exists within the array.</div>
 </td><td class="summaryTableOwnerCol">ArrayUtils</td>
 </tr>
 <tr class="">
@@ -105,27 +103,25 @@ if (!isEclipse() || window.name != ECLIPSE_FRAME_NAME) {titleBar_setSubTitle("Cl
 <tr class="">
 <td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
 <div class="summarySignature">
-<a class="signatureLink" href="#insert()">insert</a>(a:Array, objElement:Object, nIndex:Number):Array</div>
+<a class="signatureLink" href="#insert()">insert</a>(a:Array, objElement:Object, nIndex:int):Array</div>
 <div class="summaryTableDescription">[static]
-   insert an element into array at a specific index
-   </div>
+   Insert an element into array at a specific index.</div>
 </td><td class="summaryTableOwnerCol">ArrayUtils</td>
 </tr>
 <tr class="">
 <td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
 <div class="summarySignature">
-<a class="signatureLink" href="#locatePropVal()">locatePropVal</a>(objArr:Array, prop:String, val:Object, isCaseInsensitive:Boolean):Object</div>
+<a class="signatureLink" href="#locatePropVal()">locatePropVal</a>(a:Array, prop:String, val:Object, isCaseInsensitive:Boolean = false):Object</div>
 <div class="summaryTableDescription">[static]
-   Search for a specific value of a property in an array of objects
-   </div>
+   Search for a unique property/value match in an array of complex objects.</div>
 </td><td class="summaryTableOwnerCol">ArrayUtils</td>
 </tr>
 <tr class="">
 <td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
 <div class="summarySignature">
-<a class="signatureLink" href="#locatePropValIndex()">locatePropValIndex</a>(a:Array, prop:String, val:Object):Number</div>
+<a class="signatureLink" href="#locatePropValIndex()">locatePropValIndex</a>(a:Array, prop:String, val:Object, isCaseInsensitive:Boolean = false):uint</div>
 <div class="summaryTableDescription">[static]
-   Search for a unique value property match and return its index in the array.</div>
+   Search for a unique property/value match in an array of complex objects and return its index in the array.</div>
 </td><td class="summaryTableOwnerCol">ArrayUtils</td>
 </tr>
 <tr class="">
@@ -133,17 +129,15 @@ if (!isEclipse() || window.name != ECLIPSE_FRAME_NAME) {titleBar_setSubTitle("Cl
 <div class="summarySignature">
 <a class="signatureLink" href="#matchValues()">matchValues</a>(aA:Array, aB:Array):Boolean</div>
 <div class="summaryTableDescription">[static]
-   compare two arrays for a matching value
-   </div>
+   Compare two arrays for a matching value.</div>
 </td><td class="summaryTableOwnerCol">ArrayUtils</td>
 </tr>
 <tr class="">
 <td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
 <div class="summarySignature">
-<a class="signatureLink" href="#max()">max</a>(a:Array):Number</div>
+<a class="signatureLink" href="#max()">max</a>(a:Array):int</div>
 <div class="summaryTableDescription">[static]
-   Return the index of the maximum value in a numeric array
-   </div>
+   Return the array index of the maximum value in a numeric array.</div>
 </td><td class="summaryTableOwnerCol">ArrayUtils</td>
 </tr>
 <tr class="">
@@ -151,8 +145,7 @@ if (!isEclipse() || window.name != ECLIPSE_FRAME_NAME) {titleBar_setSubTitle("Cl
 <div class="summarySignature">
 <a class="signatureLink" href="#maxVal()">maxVal</a>(a:Array):Number</div>
 <div class="summaryTableDescription">[static]
-   Return the maximum value in a numeric array
-   </div>
+   Return the maximum value in a numeric array.</div>
 </td><td class="summaryTableOwnerCol">ArrayUtils</td>
 </tr>
 <tr class="">
@@ -160,17 +153,15 @@ if (!isEclipse() || window.name != ECLIPSE_FRAME_NAME) {titleBar_setSubTitle("Cl
 <div class="summarySignature">
 <a class="signatureLink" href="#merge()">merge</a>(aA:Array, aB:Array):Array</div>
 <div class="summaryTableDescription">[static]
-   merge two arrays into one
-   </div>
+   Merge two arrays into one.</div>
 </td><td class="summaryTableOwnerCol">ArrayUtils</td>
 </tr>
 <tr class="">
 <td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
 <div class="summarySignature">
-<a class="signatureLink" href="#min()">min</a>(a:Array):Number</div>
+<a class="signatureLink" href="#min()">min</a>(a:Array):int</div>
 <div class="summaryTableDescription">[static]
-   Return the index of the minimum value in a numeric array
-   </div>
+   Return the array index of the minimum value in a numeric array.</div>
 </td><td class="summaryTableOwnerCol">ArrayUtils</td>
 </tr>
 <tr class="">
@@ -178,8 +169,7 @@ if (!isEclipse() || window.name != ECLIPSE_FRAME_NAME) {titleBar_setSubTitle("Cl
 <div class="summarySignature">
 <a class="signatureLink" href="#minVal()">minVal</a>(a:Array):Number</div>
 <div class="summaryTableDescription">[static]
-   Return the minimum value in a numeric array
-   </div>
+   Return the minimum value in a numeric array.</div>
 </td><td class="summaryTableOwnerCol">ArrayUtils</td>
 </tr>
 <tr class="">
@@ -187,8 +177,7 @@ if (!isEclipse() || window.name != ECLIPSE_FRAME_NAME) {titleBar_setSubTitle("Cl
 <div class="summarySignature">
 <a class="signatureLink" href="#remove()">remove</a>(a:Array, objElement:Object):Array</div>
 <div class="summaryTableDescription">[static]
-   remove all instances of an element from an array
-   </div>
+   Remove all instances of an element from an array.</div>
 </td><td class="summaryTableOwnerCol">ArrayUtils</td>
 </tr>
 <tr class="">
@@ -196,17 +185,15 @@ if (!isEclipse() || window.name != ECLIPSE_FRAME_NAME) {titleBar_setSubTitle("Cl
 <div class="summarySignature">
 <a class="signatureLink" href="#removeDuplicate()">removeDuplicate</a>(a:Array):Array</div>
 <div class="summaryTableDescription">[static]
-   return array with duplicate entries removed
-   </div>
+   Return array with duplicate entries removed.</div>
 </td><td class="summaryTableOwnerCol">ArrayUtils</td>
 </tr>
 <tr class="">
 <td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
 <div class="summarySignature">
-<a class="signatureLink" href="#search()">search</a>(a:Array, objElement:Object):Number</div>
+<a class="signatureLink" href="#search()">search</a>(a:Array, objElement:Object):int</div>
 <div class="summaryTableDescription">[static]
-   search an array for a given element and return its index or null
-   </div>
+   Search an array for a given element and return its index or <code>NaN</code>.</div>
 </td><td class="summaryTableOwnerCol">ArrayUtils</td>
 </tr>
 <tr class="">
@@ -214,23 +201,22 @@ if (!isEclipse() || window.name != ECLIPSE_FRAME_NAME) {titleBar_setSubTitle("Cl
 <div class="summarySignature">
 <a class="signatureLink" href="#shuffle()">shuffle</a>(a:Array):void</div>
 <div class="summaryTableDescription">[static]
-   shuffle array items
-   </div>
+   Shuffle array items.</div>
 </td><td class="summaryTableOwnerCol">ArrayUtils</td>
 </tr>
 <tr class="">
 <td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
 <div class="summarySignature">
-<a class="signatureLink" href="#sliceByPropVal()">sliceByPropVal</a>(objArr:Array, prop:String, val:Object, isCaseInsensitive:Boolean):Array</div>
+<a class="signatureLink" href="#sliceByPropVal()">sliceByPropVal</a>(a:Array, prop:String, val:Object, isCaseInsensitive:Boolean = false):Array</div>
 <div class="summaryTableDescription">[static]
-   Return a new array sliced from original array based on a value property match
+   Return a new array sliced from the original array ob complex objects based on a <code>prop</code>/<code>val</code> match
    </div>
 </td><td class="summaryTableOwnerCol">ArrayUtils</td>
 </tr>
 <tr class="">
 <td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
 <div class="summarySignature">
-<a class="signatureLink" href="#swap()">swap</a>(a:Array, nA:Number, nB:Number):Array</div>
+<a class="signatureLink" href="#swap()">swap</a>(a:Array, nA:int, nB:int):Array</div>
 <div class="summaryTableDescription">[static]
    Swap two elements positions in an array
    </div>
@@ -277,16 +263,14 @@ showHideInherited();
    </p><span class="label">Parameters</span>
 <table border="0" cellspacing="0" cellpadding="0">
 <tr>
-<td width="20px"></td><td><code><span class="label">a</span>:Array</code> &mdash; (Array)
-   </td>
+<td width="20px"></td><td><code><span class="label">a</span>:Array</code></td>
 </tr>
 </table>
 <p></p>
 <span class="label">Returns</span>
 <table border="0" cellspacing="0" cellpadding="0">
 <tr>
-<td width="20"></td><td><code>Array</code> &mdash; Array
-   </td>
+<td width="20"></td><td><code>Array</code></td>
 </tr>
 </table>
 </div>
@@ -302,14 +286,15 @@ showHideInherited();
    </p><span class="label">Parameters</span>
 <table border="0" cellspacing="0" cellpadding="0">
 <tr>
-<td width="20px"></td><td><code><span class="label">a</span>:Array</code></td>
+<td width="20px"></td><td><code><span class="label">a</span>:Array</code> &mdash;  array to clone.
+   </td>
 </tr>
 </table>
 <p></p>
 <span class="label">Returns</span>
 <table border="0" cellspacing="0" cellpadding="0">
 <tr>
-<td width="20"></td><td><code>Array</code> &mdash; Array - new array with items that are references to the original array.
+<td width="20"></td><td><code>Array</code> &mdash; Array  new array with items that are references to the original array.
    </td>
 </tr>
 </table>
@@ -322,27 +307,24 @@ showHideInherited();
 </table>
 <div class="detailBody">
 <code>public static function compare(aA:Array, aB:Array):Boolean</code><p>
-   compare two arrays to see if they are identical
+   Compare two arrays to see if they are identical.
    </p><span class="label">Parameters</span>
 <table border="0" cellspacing="0" cellpadding="0">
 <tr>
-<td width="20px"></td><td><code><span class="label">aA</span>:Array</code> &mdash; (Array)
-   </td>
+<td width="20px"></td><td><code><span class="label">aA</span>:Array</code></td>
 </tr>
 <tr>
 <td class="paramSpacer">&nbsp;</td>
 </tr>
 <tr>
-<td width="20px"></td><td><code><span class="label">aB</span>:Array</code> &mdash; (Array)
-   </td>
+<td width="20px"></td><td><code><span class="label">aB</span>:Array</code></td>
 </tr>
 </table>
 <p></p>
 <span class="label">Returns</span>
 <table border="0" cellspacing="0" cellpadding="0">
 <tr>
-<td width="20"></td><td><code>Boolean</code> &mdash; Boolean
-   </td>
+<td width="20"></td><td><code>Boolean</code></td>
 </tr>
 </table>
 </div>
@@ -354,8 +336,8 @@ showHideInherited();
 </table>
 <div class="detailBody">
 <code>public static function contains(a:Array, val:Object):Boolean</code><p>
-    Determines if a value exists within the array
-    </p><span class="label">Parameters</span>
+    Determines if a value exists within the array.
+   </p><span class="label">Parameters</span>
 <table border="0" cellspacing="0" cellpadding="0">
 <tr>
 <td width="20px"></td><td><code><span class="label">a</span>:Array</code></td>
@@ -371,8 +353,7 @@ showHideInherited();
 <span class="label">Returns</span>
 <table border="0" cellspacing="0" cellpadding="0">
 <tr>
-<td width="20"></td><td><code>Boolean</code> &mdash; Boolean
-   </td>
+<td width="20"></td><td><code>Boolean</code></td>
 </tr>
 </table>
 </div>
@@ -410,35 +391,31 @@ showHideInherited();
 </tr>
 </table>
 <div class="detailBody">
-<code>public static function insert(a:Array, objElement:Object, nIndex:Number):Array</code><p>
-   insert an element into array at a specific index
+<code>public static function insert(a:Array, objElement:Object, nIndex:int):Array</code><p>
+   Insert an element into array at a specific index.
    </p><span class="label">Parameters</span>
 <table border="0" cellspacing="0" cellpadding="0">
 <tr>
-<td width="20px"></td><td><code><span class="label">a</span>:Array</code> &mdash; (Array)
-   </td>
+<td width="20px"></td><td><code><span class="label">a</span>:Array</code></td>
 </tr>
 <tr>
 <td class="paramSpacer">&nbsp;</td>
 </tr>
 <tr>
-<td width="20px"></td><td><code><span class="label">objElement</span>:Object</code> &mdash; (Object)
-   </td>
+<td width="20px"></td><td><code><span class="label">objElement</span>:Object</code></td>
 </tr>
 <tr>
 <td class="paramSpacer">&nbsp;</td>
 </tr>
 <tr>
-<td width="20px"></td><td><code><span class="label">nIndex</span>:Number</code> &mdash; (Number)
-   </td>
+<td width="20px"></td><td><code><span class="label">nIndex</span>:int</code></td>
 </tr>
 </table>
 <p></p>
 <span class="label">Returns</span>
 <table border="0" cellspacing="0" cellpadding="0">
 <tr>
-<td width="20"></td><td><code>Array</code> &mdash; Array
-   </td>
+<td width="20"></td><td><code>Array</code></td>
 </tr>
 </table>
 </div>
@@ -449,33 +426,33 @@ showHideInherited();
 </tr>
 </table>
 <div class="detailBody">
-<code>public static function locatePropVal(objArr:Array, prop:String, val:Object, isCaseInsensitive:Boolean):Object</code><p>
-   Search for a specific value of a property in an array of objects
+<code>public static function locatePropVal(a:Array, prop:String, val:Object, isCaseInsensitive:Boolean = false):Object</code><p>
+   Search for a unique property/value match in an array of complex objects.
    </p><span class="label">Parameters</span>
 <table border="0" cellspacing="0" cellpadding="0">
 <tr>
-<td width="20px"></td><td><code><span class="label">objArr</span>:Array</code> &mdash; (Array) array of objects
+<td width="20px"></td><td><code><span class="label">a</span>:Array</code> &mdash;      array of objects.
    </td>
 </tr>
 <tr>
 <td class="paramSpacer">&nbsp;</td>
 </tr>
 <tr>
-<td width="20px"></td><td><code><span class="label">prop</span>:String</code> &mdash; (String) property to search
+<td width="20px"></td><td><code><span class="label">prop</span>:String</code> &mdash;      array object property to locate.
    </td>
 </tr>
 <tr>
 <td class="paramSpacer">&nbsp;</td>
 </tr>
 <tr>
-<td width="20px"></td><td><code><span class="label">val</span>:Object</code> &mdash; (Object) value to locate
+<td width="20px"></td><td><code><span class="label">val</span>:Object</code> &mdash;      array object property value to match.
    </td>
 </tr>
 <tr>
 <td class="paramSpacer">&nbsp;</td>
 </tr>
 <tr>
-<td width="20px"></td><td><code><span class="label">isCaseInsensitive</span>:Boolean</code> &mdash; (Boolean) - define whether prop and val should be case-insensitive [default: false]
+<td width="20px"></td><td><code><span class="label">isCaseInsensitive</span>:Boolean</code> (default = <code>false</code>)<code></code> &mdash;  define whether <code>prop</code>/<code>val</code> should be case-insensitive (use only if search <code>val</code> is <code>String</code>).
    </td>
 </tr>
 </table>
@@ -483,7 +460,7 @@ showHideInherited();
 <span class="label">Returns</span>
 <table border="0" cellspacing="0" cellpadding="0">
 <tr>
-<td width="20"></td><td><code>Object</code> &mdash; Object - that matches property value
+<td width="20"></td><td><code>Object</code> &mdash; Object     the first array object with the <code>prop</code>/<code>val</code> match.
    </td>
 </tr>
 </table>
@@ -495,26 +472,33 @@ showHideInherited();
 </tr>
 </table>
 <div class="detailBody">
-<code>public static function locatePropValIndex(a:Array, prop:String, val:Object):Number</code><p>
-   Search for a unique value property match and return its index in the array.
+<code>public static function locatePropValIndex(a:Array, prop:String, val:Object, isCaseInsensitive:Boolean = false):uint</code><p>
+   Search for a unique property/value match in an array of complex objects and return its index in the array.
    </p><span class="label">Parameters</span>
 <table border="0" cellspacing="0" cellpadding="0">
 <tr>
-<td width="20px"></td><td><code><span class="label">a</span>:Array</code> &mdash; (Array) array of objects
+<td width="20px"></td><td><code><span class="label">a</span>:Array</code> &mdash;      array of objects.
    </td>
 </tr>
 <tr>
 <td class="paramSpacer">&nbsp;</td>
 </tr>
 <tr>
-<td width="20px"></td><td><code><span class="label">prop</span>:String</code> &mdash; (String) property to search
+<td width="20px"></td><td><code><span class="label">prop</span>:String</code> &mdash;      array object property to locate.
    </td>
 </tr>
 <tr>
 <td class="paramSpacer">&nbsp;</td>
 </tr>
 <tr>
-<td width="20px"></td><td><code><span class="label">val</span>:Object</code> &mdash; (Object) value to locate
+<td width="20px"></td><td><code><span class="label">val</span>:Object</code> &mdash;      array object property value to match.
+   </td>
+</tr>
+<tr>
+<td class="paramSpacer">&nbsp;</td>
+</tr>
+<tr>
+<td width="20px"></td><td><code><span class="label">isCaseInsensitive</span>:Boolean</code> (default = <code>false</code>)<code></code> &mdash;  define whether <code>prop</code>/<code>val</code> should be case-insensitive (use only if search <code>val</code> is <code>String</code>).
    </td>
 </tr>
 </table>
@@ -522,7 +506,7 @@ showHideInherited();
 <span class="label">Returns</span>
 <table border="0" cellspacing="0" cellpadding="0">
 <tr>
-<td width="20"></td><td><code>Number</code> &mdash; Number - index of hit
+<td width="20"></td><td><code>uint</code> &mdash; uint     the index of the first array object with the <code>prop</code>/<code>val</code> match.
    </td>
 </tr>
 </table>
@@ -535,27 +519,24 @@ showHideInherited();
 </table>
 <div class="detailBody">
 <code>public static function matchValues(aA:Array, aB:Array):Boolean</code><p>
-   compare two arrays for a matching value
+   Compare two arrays for a matching value.
    </p><span class="label">Parameters</span>
 <table border="0" cellspacing="0" cellpadding="0">
 <tr>
-<td width="20px"></td><td><code><span class="label">aA</span>:Array</code> &mdash; (Array)
-   </td>
+<td width="20px"></td><td><code><span class="label">aA</span>:Array</code></td>
 </tr>
 <tr>
 <td class="paramSpacer">&nbsp;</td>
 </tr>
 <tr>
-<td width="20px"></td><td><code><span class="label">aB</span>:Array</code> &mdash; (Array) 
-   </td>
+<td width="20px"></td><td><code><span class="label">aB</span>:Array</code></td>
 </tr>
 </table>
 <p></p>
 <span class="label">Returns</span>
 <table border="0" cellspacing="0" cellpadding="0">
 <tr>
-<td width="20"></td><td><code>Boolean</code> &mdash; Boolean
-   </td>
+<td width="20"></td><td><code>Boolean</code></td>
 </tr>
 </table>
 </div>
@@ -566,21 +547,19 @@ showHideInherited();
 </tr>
 </table>
 <div class="detailBody">
-<code>public static function max(a:Array):Number</code><p>
-   Return the index of the maximum value in a numeric array
+<code>public static function max(a:Array):int</code><p>
+   Return the array index of the maximum value in a numeric array.
    </p><span class="label">Parameters</span>
 <table border="0" cellspacing="0" cellpadding="0">
 <tr>
-<td width="20px"></td><td><code><span class="label">a</span>:Array</code> &mdash; (Array)
-   </td>
+<td width="20px"></td><td><code><span class="label">a</span>:Array</code></td>
 </tr>
 </table>
 <p></p>
 <span class="label">Returns</span>
 <table border="0" cellspacing="0" cellpadding="0">
 <tr>
-<td width="20"></td><td><code>Number</code> &mdash; Number - maximum value
-   </td>
+<td width="20"></td><td><code>int</code></td>
 </tr>
 </table>
 </div>
@@ -592,19 +571,18 @@ showHideInherited();
 </table>
 <div class="detailBody">
 <code>public static function maxVal(a:Array):Number</code><p>
-   Return the maximum value in a numeric array
+   Return the maximum value in a numeric array.
    </p><span class="label">Parameters</span>
 <table border="0" cellspacing="0" cellpadding="0">
 <tr>
-<td width="20px"></td><td><code><span class="label">a</span>:Array</code> &mdash; (Array)
-   </td>
+<td width="20px"></td><td><code><span class="label">a</span>:Array</code></td>
 </tr>
 </table>
 <p></p>
 <span class="label">Returns</span>
 <table border="0" cellspacing="0" cellpadding="0">
 <tr>
-<td width="20"></td><td><code>Number</code> &mdash; Number - maximum value
+<td width="20"></td><td><code>Number</code> &mdash; Number  maximum value
    </td>
 </tr>
 </table>
@@ -617,27 +595,24 @@ showHideInherited();
 </table>
 <div class="detailBody">
 <code>public static function merge(aA:Array, aB:Array):Array</code><p>
-   merge two arrays into one
+   Merge two arrays into one.
    </p><span class="label">Parameters</span>
 <table border="0" cellspacing="0" cellpadding="0">
 <tr>
-<td width="20px"></td><td><code><span class="label">aA</span>:Array</code> &mdash; (Array)
-   </td>
+<td width="20px"></td><td><code><span class="label">aA</span>:Array</code></td>
 </tr>
 <tr>
 <td class="paramSpacer">&nbsp;</td>
 </tr>
 <tr>
-<td width="20px"></td><td><code><span class="label">aB</span>:Array</code> &mdash; (Array)
-   </td>
+<td width="20px"></td><td><code><span class="label">aB</span>:Array</code></td>
 </tr>
 </table>
 <p></p>
 <span class="label">Returns</span>
 <table border="0" cellspacing="0" cellpadding="0">
 <tr>
-<td width="20"></td><td><code>Array</code> &mdash; Array
-   </td>
+<td width="20"></td><td><code>Array</code></td>
 </tr>
 </table>
 </div>
@@ -648,21 +623,19 @@ showHideInherited();
 </tr>
 </table>
 <div class="detailBody">
-<code>public static function min(a:Array):Number</code><p>
-   Return the index of the minimum value in a numeric array
+<code>public static function min(a:Array):int</code><p>
+   Return the array index of the minimum value in a numeric array.
    </p><span class="label">Parameters</span>
 <table border="0" cellspacing="0" cellpadding="0">
 <tr>
-<td width="20px"></td><td><code><span class="label">a</span>:Array</code> &mdash; (Array)
-   </td>
+<td width="20px"></td><td><code><span class="label">a</span>:Array</code></td>
 </tr>
 </table>
 <p></p>
 <span class="label">Returns</span>
 <table border="0" cellspacing="0" cellpadding="0">
 <tr>
-<td width="20"></td><td><code>Number</code> &mdash; Number - minimum value
-   </td>
+<td width="20"></td><td><code>int</code></td>
 </tr>
 </table>
 </div>
@@ -674,19 +647,18 @@ showHideInherited();
 </table>
 <div class="detailBody">
 <code>public static function minVal(a:Array):Number</code><p>
-   Return the minimum value in a numeric array
+   Return the minimum value in a numeric array.
    </p><span class="label">Parameters</span>
 <table border="0" cellspacing="0" cellpadding="0">
 <tr>
-<td width="20px"></td><td><code><span class="label">a</span>:Array</code> &mdash; (Array)
-   </td>
+<td width="20px"></td><td><code><span class="label">a</span>:Array</code></td>
 </tr>
 </table>
 <p></p>
 <span class="label">Returns</span>
 <table border="0" cellspacing="0" cellpadding="0">
 <tr>
-<td width="20"></td><td><code>Number</code> &mdash; Number - minimum value (0 is returned with 0 length array)
+<td width="20"></td><td><code>Number</code> &mdash; Number  minimum value (0 is returned with 0 length arrays)
    </td>
 </tr>
 </table>
@@ -699,27 +671,24 @@ showHideInherited();
 </table>
 <div class="detailBody">
 <code>public static function remove(a:Array, objElement:Object):Array</code><p>
-   remove all instances of an element from an array
+   Remove all instances of an element from an array.
    </p><span class="label">Parameters</span>
 <table border="0" cellspacing="0" cellpadding="0">
 <tr>
-<td width="20px"></td><td><code><span class="label">a</span>:Array</code> &mdash; (Array)
-   </td>
+<td width="20px"></td><td><code><span class="label">a</span>:Array</code></td>
 </tr>
 <tr>
 <td class="paramSpacer">&nbsp;</td>
 </tr>
 <tr>
-<td width="20px"></td><td><code><span class="label">objElement</span>:Object</code> &mdash; (Object)
-   </td>
+<td width="20px"></td><td><code><span class="label">objElement</span>:Object</code></td>
 </tr>
 </table>
 <p></p>
 <span class="label">Returns</span>
 <table border="0" cellspacing="0" cellpadding="0">
 <tr>
-<td width="20"></td><td><code>Array</code> &mdash; Array
-   </td>
+<td width="20"></td><td><code>Array</code></td>
 </tr>
 </table>
 </div>
@@ -731,20 +700,18 @@ showHideInherited();
 </table>
 <div class="detailBody">
 <code>public static function removeDuplicate(a:Array):Array</code><p>
-   return array with duplicate entries removed
+   Return array with duplicate entries removed.
    </p><span class="label">Parameters</span>
 <table border="0" cellspacing="0" cellpadding="0">
 <tr>
-<td width="20px"></td><td><code><span class="label">a</span>:Array</code> &mdash; (Array)
-   </td>
+<td width="20px"></td><td><code><span class="label">a</span>:Array</code></td>
 </tr>
 </table>
 <p></p>
 <span class="label">Returns</span>
 <table border="0" cellspacing="0" cellpadding="0">
 <tr>
-<td width="20"></td><td><code>Array</code> &mdash; Array
-   </td>
+<td width="20"></td><td><code>Array</code></td>
 </tr>
 </table>
 </div>
@@ -755,28 +722,25 @@ showHideInherited();
 </tr>
 </table>
 <div class="detailBody">
-<code>public static function search(a:Array, objElement:Object):Number</code><p>
-   search an array for a given element and return its index or null
+<code>public static function search(a:Array, objElement:Object):int</code><p>
+   Search an array for a given element and return its index or <code>NaN</code>.
    </p><span class="label">Parameters</span>
 <table border="0" cellspacing="0" cellpadding="0">
 <tr>
-<td width="20px"></td><td><code><span class="label">a</span>:Array</code> &mdash; (Array)
-   </td>
+<td width="20px"></td><td><code><span class="label">a</span>:Array</code></td>
 </tr>
 <tr>
 <td class="paramSpacer">&nbsp;</td>
 </tr>
 <tr>
-<td width="20px"></td><td><code><span class="label">objElement</span>:Object</code> &mdash; (Object)
-   </td>
+<td width="20px"></td><td><code><span class="label">objElement</span>:Object</code></td>
 </tr>
 </table>
 <p></p>
 <span class="label">Returns</span>
 <table border="0" cellspacing="0" cellpadding="0">
 <tr>
-<td width="20"></td><td><code>Number</code> &mdash; Number
-   </td>
+<td width="20"></td><td><code>int</code></td>
 </tr>
 </table>
 </div>
@@ -788,12 +752,11 @@ showHideInherited();
 </table>
 <div class="detailBody">
 <code>public static function shuffle(a:Array):void</code><p>
-   shuffle array items
+   Shuffle array items.
    </p><span class="label">Parameters</span>
 <table border="0" cellspacing="0" cellpadding="0">
 <tr>
-<td width="20px"></td><td><code><span class="label">a</span>:Array</code> &mdash; (Array)
-   </td>
+<td width="20px"></td><td><code><span class="label">a</span>:Array</code></td>
 </tr>
 </table>
 </div>
@@ -804,33 +767,33 @@ showHideInherited();
 </tr>
 </table>
 <div class="detailBody">
-<code>public static function sliceByPropVal(objArr:Array, prop:String, val:Object, isCaseInsensitive:Boolean):Array</code><p>
-   Return a new array sliced from original array based on a value property match
+<code>public static function sliceByPropVal(a:Array, prop:String, val:Object, isCaseInsensitive:Boolean = false):Array</code><p>
+   Return a new array sliced from the original array ob complex objects based on a <code>prop</code>/<code>val</code> match
    </p><span class="label">Parameters</span>
 <table border="0" cellspacing="0" cellpadding="0">
 <tr>
-<td width="20px"></td><td><code><span class="label">objArr</span>:Array</code> &mdash; (Array) array of objects
+<td width="20px"></td><td><code><span class="label">a</span>:Array</code> &mdash;      array of objects.
    </td>
 </tr>
 <tr>
 <td class="paramSpacer">&nbsp;</td>
 </tr>
 <tr>
-<td width="20px"></td><td><code><span class="label">prop</span>:String</code> &mdash; (String) property to search
+<td width="20px"></td><td><code><span class="label">prop</span>:String</code> &mdash;      array object property to locate.
    </td>
 </tr>
 <tr>
 <td class="paramSpacer">&nbsp;</td>
 </tr>
 <tr>
-<td width="20px"></td><td><code><span class="label">val</span>:Object</code> &mdash; (Object) value to locate
+<td width="20px"></td><td><code><span class="label">val</span>:Object</code> &mdash;      array object property value to match.
    </td>
 </tr>
 <tr>
 <td class="paramSpacer">&nbsp;</td>
 </tr>
 <tr>
-<td width="20px"></td><td><code><span class="label">isCaseInsensitive</span>:Boolean</code> &mdash; (Boolean) - define whether prop and val should be case-insensitive [default: false]
+<td width="20px"></td><td><code><span class="label">isCaseInsensitive</span>:Boolean</code> (default = <code>false</code>)<code></code> &mdash;  define whether <code>prop</code>/<code>val</code> should be case-insensitive (use only if search <code>val</code> is <code>String</code>).
    </td>
 </tr>
 </table>
@@ -838,7 +801,7 @@ showHideInherited();
 <span class="label">Returns</span>
 <table border="0" cellspacing="0" cellpadding="0">
 <tr>
-<td width="20"></td><td><code>Array</code> &mdash; Array - array of objects that matches property value
+<td width="20"></td><td><code>Array</code> &mdash; Array     of objects that contain the <code>prop</code>/<code>val</code> match.
    </td>
 </tr>
 </table>
@@ -850,35 +813,31 @@ showHideInherited();
 </tr>
 </table>
 <div class="detailBody">
-<code>public static function swap(a:Array, nA:Number, nB:Number):Array</code><p>
+<code>public static function swap(a:Array, nA:int, nB:int):Array</code><p>
    Swap two elements positions in an array
    </p><span class="label">Parameters</span>
 <table border="0" cellspacing="0" cellpadding="0">
 <tr>
-<td width="20px"></td><td><code><span class="label">a</span>:Array</code> &mdash; (Array)
-   </td>
+<td width="20px"></td><td><code><span class="label">a</span>:Array</code></td>
 </tr>
 <tr>
 <td class="paramSpacer">&nbsp;</td>
 </tr>
 <tr>
-<td width="20px"></td><td><code><span class="label">nA</span>:Number</code> &mdash; (Number) element A's index
-   </td>
+<td width="20px"></td><td><code><span class="label">nA</span>:int</code></td>
 </tr>
 <tr>
 <td class="paramSpacer">&nbsp;</td>
 </tr>
 <tr>
-<td width="20px"></td><td><code><span class="label">nB</span>:Number</code> &mdash; (Number) element B's index
-   </td>
+<td width="20px"></td><td><code><span class="label">nB</span>:int</code></td>
 </tr>
 </table>
 <p></p>
 <span class="label">Returns</span>
 <table border="0" cellspacing="0" cellpadding="0">
 <tr>
-<td width="20"></td><td><code>Array</code> &mdash; Array
-   </td>
+<td width="20"></td><td><code>Array</code></td>
 </tr>
 </table>
 <br>
@@ -903,16 +862,14 @@ showHideInherited();
    </p><span class="label">Parameters</span>
 <table border="0" cellspacing="0" cellpadding="0">
 <tr>
-<td width="20px"></td><td><code><span class="label">a</span>:Array</code> &mdash; (Array)
-   </td>
+<td width="20px"></td><td><code><span class="label">a</span>:Array</code></td>
 </tr>
 </table>
 <p></p>
 <span class="label">Returns</span>
 <table border="0" cellspacing="0" cellpadding="0">
 <tr>
-<td width="20"></td><td><code>Array</code> &mdash; Array
-   </td>
+<td width="20"></td><td><code>Array</code></td>
 </tr>
 </table>
 </div>
