@@ -31,8 +31,9 @@
 		<css><![CDATA[css/app_style.css]]></css>
 	</uri>
 	<option>
-		<track>true</track>
+		<managed_menu>true</managed_menu>
 		<fullscreen>true</fullscreen>
+		<track>true</track>
 		<key>true</key>
 		<deeplink>false</deeplink>
 		<log>true</log>
