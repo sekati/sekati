@@ -4,7 +4,7 @@
 <META http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <link rel="stylesheet" href="../../style.css" type="text/css" media="screen">
 <link rel="stylesheet" href="../../print.css" type="text/css" media="print">
-<meta content="ContextualMenu,sekati.ui.ContextualMenu,_backup,_hasBuiltInItems,_isEnabled,_items,_target,builtInItems,enabled,addItem,buildMenu,disableItem,editItem,enableItem,getItemId,removeItem,voidClick" name="keywords">
+<meta content="ContextualMenu,sekati.ui.ContextualMenu,_backup,_hasBuiltInItems,_isEnabled,_items,_target,builtInItems,enabled,addItem,buildMenu,destroy,disableItem,editItem,enableItem,getItemId,removeItem,voidClick" name="keywords">
 <title>sekati.ui.ContextualMenu</title>
 </head>
 <body>
@@ -90,7 +90,7 @@ if (!isEclipse() || window.name != ECLIPSE_FRAME_NAME) {titleBar_setSubTitle("Cl
 </td><td class="summaryTableOwnerCol">ContextualMenu</td>
 </tr>
 <tr class="">
-<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a class="signatureLink" href="#_target">_target</a> : InteractiveObject<div class="summaryTableDescription"></div>
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a class="signatureLink" href="#_target">_target</a> : DisplayObject<div class="summaryTableDescription"></div>
 </td><td class="summaryTableOwnerCol">ContextualMenu</td>
 </tr>
 </table>
@@ -105,7 +105,7 @@ if (!isEclipse() || window.name != ECLIPSE_FRAME_NAME) {titleBar_setSubTitle("Cl
 <tr class="">
 <td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
 <div class="summarySignature">
-<a class="signatureLink" href="#ContextualMenu()">ContextualMenu</a>(target:InteractiveObject, hasBuiltInItems:Boolean = false, enable:Boolean = true)</div>
+<a class="signatureLink" href="#ContextualMenu()">ContextualMenu</a>(target:DisplayObject, hasBuiltInItems:Boolean = false, enable:Boolean = true)</div>
 <div class="summaryTableDescription">
    ContextualMenu Constructor
    </div>
@@ -117,6 +117,14 @@ if (!isEclipse() || window.name != ECLIPSE_FRAME_NAME) {titleBar_setSubTitle("Cl
 <a class="signatureLink" href="#addItem()">addItem</a>(caption:String, cb:Function = null, div:Boolean = true, enable:Boolean = true):uint</div>
 <div class="summaryTableDescription">
    Add a new item to the <code>ContextualMenu</code>.</div>
+</td><td class="summaryTableOwnerCol">ContextualMenu</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="#destroy()">destroy</a>():void</div>
+<div class="summaryTableDescription">
+   Cleanly destroy the <code>ContextMenu</code>.</div>
 </td><td class="summaryTableOwnerCol">ContextualMenu</td>
 </tr>
 <tr class="">
@@ -271,7 +279,7 @@ showHideInherited();
 </tr>
 </table>
 <div class="detailBody">
-<code>protected var _target:InteractiveObject</code>
+<code>protected var _target:DisplayObject</code>
 </div>
 <a name="constructorDetail"></a>
 <div class="detailSectionHeader">Constructor detail</div>
@@ -282,12 +290,12 @@ showHideInherited();
 </tr>
 </table>
 <div class="detailBody">
-<code>public function ContextualMenu(target:InteractiveObject, hasBuiltInItems:Boolean = false, enable:Boolean = true)</code><p>
+<code>public function ContextualMenu(target:DisplayObject, hasBuiltInItems:Boolean = false, enable:Boolean = true)</code><p>
    ContextualMenu Constructor
    </p><span class="label">Parameters</span>
 <table border="0" cellspacing="0" cellpadding="0">
 <tr>
-<td width="20px"></td><td><code><span class="label">target</span>:InteractiveObject</code></td>
+<td width="20px"></td><td><code><span class="label">target</span>:DisplayObject</code></td>
 </tr>
 <tr>
 <td class="paramSpacer">&nbsp;</td>
@@ -360,6 +368,16 @@ showHideInherited();
 <div class="detailBody">
 <code>protected function buildMenu():void</code><p>
    Build the custom <code>ContextualMenu</code>.
+   </p></div>
+<a name="destroy()"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">destroy</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public function destroy():void</code><p>
+   Cleanly destroy the <code>ContextMenu</code>.
    </p></div>
 <a name="disableItem()"></a>
 <table cellspacing="0" cellpadding="0" class="detailHeader">
