@@ -23,7 +23,7 @@
 <config>
 	<app>
 		<name><![CDATA[Sekati API]]></name>
-		<version>3.0.0.7</version>
+		<version>3.0.0.9</version>
 	</app>
 	<uri>
 		<crossdomain><![CDATA[/crossdomain.xml]]></crossdomain>
@@ -32,6 +32,7 @@
 	</uri>
 	<option>
 		<managed_menu>true</managed_menu>
+		<api_credit>true</api_credit>
 		<fullscreen>true</fullscreen>
 		<track>true</track>
 		<key>true</key>
