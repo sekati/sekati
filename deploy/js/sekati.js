@@ -1,6 +1,6 @@
 /**
  * sekati.js - Flash : Javascript Companion Library
- * @version 1.1.0
+ * @version 1.1.1
  * @author jason m horwitz | sekati.com
  * Copyright (C) 2007  jason m horwitz, Sekat LLC. All Rights Reserved.
  * Released under the MIT License: http://www.opensource.org/licenses/mit-license.php
@@ -114,45 +114,5 @@ sekati.util = {
 		if( val < min ) return min;
 		if( val > max ) return max;
 		return val;
-	}
-};
-
-/////////////////////////////////////////////////////////////////////////////////
-// swfIN mac mousewheel support - based on osxmousewheel & swfmacmousewheel.
-// Usage: var mousewheel = new MouseWheel( swfIN_instance );
-
-function MouseWheel ( swfIN ) {
- 	this.so = swfIN;
- 	var isMac = navigator.appVersion.toLowerCase().indexOf( "mac" ) != -1;
- 	if(isMac) this.init();
- } 
- 
-MouseWheel.prototype = {	
-	init: function() {
-		MouseWheel.instance = this;	
-		if (window.addEventListener) window.addEventListener( 'DOMMouseScroll', MouseWheel.instance.wheel, false );
-		window.onmousewheel = document.onmousewheel = MouseWheel.instance.wheel;
-	},
-	handle: function( delta ){
-		document[ this.so.getSWFID() ].externalMouseEvent( delta );
-	},
-	wheel: function( event ){
-		var delta = 0;
-		if (event.wheelDelta) {
-			// IE, Opera
-			delta = event.wheelDelta / 120;
-			if (window.opera) delta = -delta;
-		} else if (event.detail) {
-			// Mozilla
-			delta = -event.detail / 3;
-		}		
-		// safari
-       	if(/AppleWebKit/.test( navigator.userAgent )) delta /= 3;
-		// sanitize
-		delta = sekati.util.clamp( delta );
-		// handle
-		if (delta) MouseWheel.instance.handle( delta );
-		if (event.preventDefault) event.preventDefault();
-		event.returnValue = false;
 	}
 };
