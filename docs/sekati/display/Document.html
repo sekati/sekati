@@ -4,7 +4,7 @@
 <META http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <link rel="stylesheet" href="../../style.css" type="text/css" media="screen">
 <link rel="stylesheet" href="../../print.css" type="text/css" media="print">
-<meta content="Document,sekati.display.Document,bootstrap,initAPI,initEntryPoint,initTweenEngine,setMovieProps" name="keywords">
+<meta content="Document,sekati.display.Document,appLoader,bootstrap,initAPI,initDocument,initEntryPoint,initTweenEngine,setMovieProps" name="keywords">
 <title>sekati.display.Document</title>
 </head>
 <body>
@@ -101,6 +101,12 @@ if (!isEclipse() || window.name != ECLIPSE_FRAME_NAME) {titleBar_setSubTitle("Cl
 <th>&nbsp;</th><th colspan="2">Property</th><th class="summaryTableOwnerCol">Defined&nbsp;by</th>
 </tr>
 <tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a class="signatureLink" href="#appLoader">appLoader</a> : <a href="../load/AppLoader.html">AppLoader</a>
+<div class="summaryTableDescription">
+   Basic application preloader.</div>
+</td><td class="summaryTableOwnerCol">Document</td>
+</tr>
+<tr class="">
 <td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a class="signatureLink" href="#bootstrap">bootstrap</a> : <a href="../core/Bootstrap.html">Bootstrap</a>
 <div class="summaryTableDescription">
    Queued initialization routines.</div>
@@ -149,6 +155,15 @@ if (!isEclipse() || window.name != ECLIPSE_FRAME_NAME) {titleBar_setSubTitle("Cl
 <tr class="">
 <td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
 <div class="summarySignature">
+<a class="signatureLink" href="#initDocument()">initDocument</a>(e:<a href="../events/AppEvent.html">AppEvent</a>):void</div>
+<div class="summaryTableDescription">
+   Initialize the <code>Document</code> code now that
+   the file has been fully loaded.</div>
+</td><td class="summaryTableOwnerCol">Document</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
 <a class="signatureLink" href="#initEntryPoint()">initEntryPoint</a>():void</div>
 <div class="summaryTableDescription">
    Initialize Entry Point: this is where the custom (non-API) application layer core code enters.</div>
@@ -179,10 +194,20 @@ showHideInherited();
 <div class="MainContent">
 <a name="propertyDetail"></a>
 <div class="detailSectionHeader">Property detail</div>
+<a name="appLoader"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">appLoader</td><td class="detailHeaderType">property</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>protected var appLoader:<a href="../load/AppLoader.html">AppLoader</a></code><p>
+   Basic application preloader.
+   </p></div>
 <a name="bootstrap"></a>
 <table cellspacing="0" cellpadding="0" class="detailHeader">
 <tr>
-<td class="detailHeaderName">bootstrap</td><td class="detailHeaderType">property</td>
+<td class="detailHeaderName">bootstrap</td><td class="detailHeaderType">property</td><td class="detailHeaderRule">&nbsp;</td>
 </tr>
 </table>
 <div class="detailBody">
@@ -219,6 +244,23 @@ showHideInherited();
 <code>protected function initAPI():void</code><p>
    Initialize the API <code>Bootstrap</code> queued core initialization routines.
    </p></div>
+<a name="initDocument()"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">initDocument</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>protected function initDocument(e:<a href="../events/AppEvent.html">AppEvent</a>):void</code><p>
+   Initialize the <code>Document</code> code now that
+   the file has been fully loaded.
+   </p><span class="label">Parameters</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20px"></td><td><code><span class="label">e</span>:<a href="../events/AppEvent.html">AppEvent</a></code></td>
+</tr>
+</table>
+</div>
 <a name="initEntryPoint()"></a>
 <table cellspacing="0" cellpadding="0" class="detailHeader">
 <tr>

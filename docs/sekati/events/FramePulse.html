@@ -48,12 +48,11 @@ if (!isEclipse() || window.name != ECLIPSE_FRAME_NAME) {titleBar_setSubTitle("Cl
 <br>
 <span class="label">Example</span>
 <br><div class='listing'><pre>
-  FramePulse.$.addEventListener(FramePulse.FRAME_PULSE, _onEnterFrame);
+  FramePulse.$.addFrameListener(FramePulse.FRAME_PULSE, _onEnterFrame);
   protected function _onEnterFrame(e:Event):void {
    trace( "pulse" );
   }
   </pre></div>
-  
   <p></p>
 <p>
 <span class="classHeaderTableLabel">See also</span>
