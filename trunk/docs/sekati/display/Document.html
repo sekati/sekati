@@ -4,7 +4,7 @@
 <META http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <link rel="stylesheet" href="../../style.css" type="text/css" media="screen">
 <link rel="stylesheet" href="../../print.css" type="text/css" media="print">
-<meta content="Document,sekati.display.Document,appLoader,bootstrap,initAPI,initDocument,initEntryPoint,initTweenEngine,setMovieProps" name="keywords">
+<meta content="Document,sekati.display.Document,_appLoader,_bootstrap,appLoader,bootstrap,initAPI,initDocument,initEntryPoint,initTweenEngine,setMovieProps" name="keywords">
 <title>sekati.display.Document</title>
 </head>
 <body>
@@ -71,9 +71,21 @@ if (!isEclipse() || window.name != ECLIPSE_FRAME_NAME) {titleBar_setSubTitle("Cl
 <a onclick="javascript:setInheritedVisible(true,'Property');" href="#propertySummary" class="showHideLink"><img src="../../images/collapsed.gif" class="showHideLinkImage"> Show Inherited Public Properties</a>
 </div>
 </div>
-<table id="summaryTableProperty" class="summaryTable hideInheritedProperty" cellpadding="3" cellspacing="0">
+<table id="summaryTableProperty" class="summaryTable " cellpadding="3" cellspacing="0">
 <tr>
 <th>&nbsp;</th><th colspan="2">Property</th><th class="summaryTableOwnerCol">Defined&nbsp;by</th>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a class="signatureLink" href="#appLoader">appLoader</a> : <a href="../load/AppLoader.html">AppLoader</a>
+<div class="summaryTableDescription">[read-only]
+   Return the <code>AppLoader</code> instance if load progress checking is desired.</div>
+</td><td class="summaryTableOwnerCol">Document</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a class="signatureLink" href="#bootstrap">bootstrap</a> : <a href="../core/Bootstrap.html">Bootstrap</a>
+<div class="summaryTableDescription">[read-only]
+   Return the <code>Boostrap</code> instance for adding <code>AppEvent</code> listeners.</div>
+</td><td class="summaryTableOwnerCol">Document</td>
 </tr>
 <tr class="hideInheritedProperty">
 <td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img class="inheritedSummaryImage" title="Inherited" alt="Inherited" src="../../images/inheritedSummary.gif"></td><td class="summaryTableSignatureCol"><a class="signatureLink" href="Canvas.html#flashVars">flashVars</a> : Object<div class="summaryTableDescription">[static]</div>
@@ -101,13 +113,13 @@ if (!isEclipse() || window.name != ECLIPSE_FRAME_NAME) {titleBar_setSubTitle("Cl
 <th>&nbsp;</th><th colspan="2">Property</th><th class="summaryTableOwnerCol">Defined&nbsp;by</th>
 </tr>
 <tr class="">
-<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a class="signatureLink" href="#appLoader">appLoader</a> : <a href="../load/AppLoader.html">AppLoader</a>
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a class="signatureLink" href="#_appLoader">_appLoader</a> : <a href="../load/AppLoader.html">AppLoader</a>
 <div class="summaryTableDescription">
    Basic application preloader.</div>
 </td><td class="summaryTableOwnerCol">Document</td>
 </tr>
 <tr class="">
-<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a class="signatureLink" href="#bootstrap">bootstrap</a> : <a href="../core/Bootstrap.html">Bootstrap</a>
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a class="signatureLink" href="#_bootstrap">_bootstrap</a> : <a href="../core/Bootstrap.html">Bootstrap</a>
 <div class="summaryTableDescription">
    Queued initialization routines.</div>
 </td><td class="summaryTableOwnerCol">Document</td>
@@ -157,8 +169,7 @@ if (!isEclipse() || window.name != ECLIPSE_FRAME_NAME) {titleBar_setSubTitle("Cl
 <div class="summarySignature">
 <a class="signatureLink" href="#initDocument()">initDocument</a>(e:<a href="../events/AppEvent.html">AppEvent</a>):void</div>
 <div class="summaryTableDescription">
-   Initialize the <code>Document</code> code now that
-   the file has been fully loaded.</div>
+   Initialize the <code>Document</code> code now that the file has been fully loaded.</div>
 </td><td class="summaryTableOwnerCol">Document</td>
 </tr>
 <tr class="">
@@ -194,15 +205,39 @@ showHideInherited();
 <div class="MainContent">
 <a name="propertyDetail"></a>
 <div class="detailSectionHeader">Property detail</div>
-<a name="appLoader"></a>
+<a name="_appLoader"></a>
 <table cellspacing="0" cellpadding="0" class="detailHeader">
 <tr>
-<td class="detailHeaderName">appLoader</td><td class="detailHeaderType">property</td>
+<td class="detailHeaderName">_appLoader</td><td class="detailHeaderType">property</td>
 </tr>
 </table>
 <div class="detailBody">
-<code>protected var appLoader:<a href="../load/AppLoader.html">AppLoader</a></code><p>
+<code>protected var _appLoader:<a href="../load/AppLoader.html">AppLoader</a></code><p>
    Basic application preloader.
+   </p></div>
+<a name="appLoader"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">appLoader</td><td class="detailHeaderType">property</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>appLoader:<a href="../load/AppLoader.html">AppLoader</a></code>&nbsp;&nbsp;[read-only]<p>
+   Return the <code>AppLoader</code> instance if load progress checking is desired.
+   </p><span class="label">Implementation</span>
+<br>
+<code>&nbsp;&nbsp;&nbsp;&nbsp;public function get appLoader():<a href="../load/AppLoader.html">AppLoader</a></code>
+<br>
+</div>
+<a name="_bootstrap"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">_bootstrap</td><td class="detailHeaderType">property</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>protected var _bootstrap:<a href="../core/Bootstrap.html">Bootstrap</a></code><p>
+   Queued initialization routines.
    </p></div>
 <a name="bootstrap"></a>
 <table cellspacing="0" cellpadding="0" class="detailHeader">
@@ -211,9 +246,13 @@ showHideInherited();
 </tr>
 </table>
 <div class="detailBody">
-<code>protected var bootstrap:<a href="../core/Bootstrap.html">Bootstrap</a></code><p>
-   Queued initialization routines.
-   </p></div>
+<code>bootstrap:<a href="../core/Bootstrap.html">Bootstrap</a></code>&nbsp;&nbsp;[read-only]<p>
+   Return the <code>Boostrap</code> instance for adding <code>AppEvent</code> listeners.
+   </p><span class="label">Implementation</span>
+<br>
+<code>&nbsp;&nbsp;&nbsp;&nbsp;public function get bootstrap():<a href="../core/Bootstrap.html">Bootstrap</a></code>
+<br>
+</div>
 <a name="constructorDetail"></a>
 <div class="detailSectionHeader">Constructor detail</div>
 <a name="Document()"></a>
@@ -252,8 +291,7 @@ showHideInherited();
 </table>
 <div class="detailBody">
 <code>protected function initDocument(e:<a href="../events/AppEvent.html">AppEvent</a>):void</code><p>
-   Initialize the <code>Document</code> code now that
-   the file has been fully loaded.
+   Initialize the <code>Document</code> code now that the file has been fully loaded.
    </p><span class="label">Parameters</span>
 <table border="0" cellspacing="0" cellpadding="0">
 <tr>
