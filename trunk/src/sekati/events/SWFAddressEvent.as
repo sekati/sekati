@@ -24,6 +24,7 @@ package sekati.events {
 		 * @eventType change fires when SWFAddress value changes.
 		 */
 		public static const CHANGE : String = 'change';
+		
 		private var _value : String;
 		private var _path : String;
 		private var _parameters : Object;
