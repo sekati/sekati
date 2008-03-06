@@ -1,14 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!-- *************************************************************************************
-		FDTKit Buildfile v3.0.5
+		FDTKit Buildfile v3.1.0
 		
-		Jan 20, 2008 - jason m horwitz | Sekati LLC | sekati.com
+		Mar 6, 2008 - jason m horwitz | Sekati LLC | sekati.com
 		
 		Released under the MIT License: http://www.opensource.org/licenses/mit-license.php
 		
 		@see	http://fdtkit.googlecode.com/
-		@see	http://sasapi.googlecode.com/
 		@see	http://inde.googlecode.com/
+		@see	http://sekati.googlecode.com/		
+		@see	http://sasapi.googlecode.com/
 		
 		@note	While targeted for INDE & FDTKit this Buildfile and its dependencies may
 				be refactored for generic Eclipse & FDT3 use. If you would like to use it 
@@ -21,14 +22,17 @@
 <project name="Sekati API" basedir="." default="build">
 
 	
-	<!-- Define variables/paths used in this buildfile -->
+	<!-- Definitions -->
 	<property file="build/build.properties"/>
 	
+	
+	<!-- Resources -->
+    <taskdef resource="flexTasks.tasks" classpath="${FLEX_HOME}/ant/lib/flexTasks.jar" />
 
-	<!--
-		Have you edited the properties file to make sure the paths are right oo your system?
-	-->
+	
+	<!-- Sanity Check -->
 	<target name="properties">
+		<fail unless="FLEX_HOME">The "FLEX_HOME" property must be set in ${build.dir}/build.properties.</fail>
 		<fail unless="asdoc.exe">The "asdoc.exe" property must be set in ${build.dir}/build.properties.</fail>
 		<fail unless="compc.exe">The "compc.exe" property must be set in ${build.dir}/build.properties.</fail>
 		<fail unless="mxmlc.exe">The "mxmlc.exe" property must be set in ${build.dir}/build.properties.</fail>
@@ -179,22 +183,45 @@
 	    </fdt.flashCompile>
 	</target>
 	
+	<!--
 	<target name="compile_app" description="compile the actionscript application Document Class with mxmlc/comppc">
 		<exec executable="${mxmlc.exe}" failonerror="true">
 			<arg line ="${mxmlc.opts}" />
 		</exec>
 	</target>	
+
+	<target name="compile_basic" description="compile the actionscript application Document Class with mxmlc/comppc">
+		<exec executable="${mxmlc.exe}" failonerror="true">
+			<arg line ="-output ${app.swf}" />
+			<arg line ="${app.class}" />
+		</exec>
+	</target>
+	-->
 	
-	
-	<target name="compile" description="compiles the tasks">
-		<mxmlc
-			compiler= "${mxmlc.exe}"
-			mainclass= "${app.class}"
-			as3="true"
-			strict="true"
-			output="${app.swf}"
-			benchmark="false"
-		/>
+	<target name="mxmlc" description="compile the app">
+		<mxmlc 
+			file="${app.class}" 
+			output="${app.swf}" 
+			compiler.as3="true"
+			compiler.optimize="true"
+			compiler.strict="true"
+			actionscript-file-encoding="${app.encoding}"
+			keep-generated-actionscript="false"
+			incremental="true"
+			benchmark="true"
+			debug="false"
+			default-background-color="${app.bgcolor}">
+		    <default-size width="${app.width}" height="${app.height}" />
+			<metadata title="${app.meta.title}" description="${app.meta.desc}" date="${app.meta.date}">
+				<contributor name="${app.meta.contributor}" />
+				<creator name="${app.meta.creator}" />
+				<publisher name="${app.meta.publisher}" />
+			</metadata>
+			<compiler.external-library-path dir="${lib.dir}">
+			    <include name="**/*.swc" />
+			    <exclude name="not-this-one.swc" />
+			</compiler.external-library-path>			
+		</mxmlc>
 	</target>	
 	
 </project>
