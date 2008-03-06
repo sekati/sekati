@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!-- *************************************************************************************
-		FDTKit Buildfile v3.0.3
+		FDTKit Buildfile v3.0.5
 		
 		Jan 20, 2008 - jason m horwitz | Sekati LLC | sekati.com
 		
@@ -32,10 +32,6 @@
 		<fail unless="asdoc.exe">The "asdoc.exe" property must be set in ${build.dir}/build.properties.</fail>
 		<fail unless="compc.exe">The "compc.exe" property must be set in ${build.dir}/build.properties.</fail>
 		<fail unless="mxmlc.exe">The "mxmlc.exe" property must be set in ${build.dir}/build.properties.</fail>
-	</target>
-	
-	<target name="as_name" description="get the current file">
-		<echo message="current asfile: ${java_type_name}"/>
 	</target>
 
 	
@@ -77,7 +73,7 @@
     </target>	
 	
 	
-	<target name="graphdoc" description="run asdoc to build xml for dot diagrams">
+	<target name="graphdoc" description="run asdoc to build xml for graphviz dot diagrams">
 		<exec executable="${asdoc.exe}" failonerror="false">
 			<arg line = "-source-path ${src.dir}" />
 			<arg line='-doc-sources ${src.dir}'/>
@@ -173,5 +169,32 @@
 		   </fileset>
 		  </fdt.flashCompile>
 	</target>
+
+	
+	<target name="compile_lib" description="compile all application fla's in the lib directory with Flash IDE">
+	    <fdt.flashCompile>
+	        <fileset dir="${lib.dir}">
+	        	 <include name="*.fla"/>
+	        </fileset>
+	    </fdt.flashCompile>
+	</target>
+	
+	<target name="compile_app" description="compile the actionscript application Document Class with mxmlc/comppc">
+		<exec executable="${mxmlc.exe}" failonerror="true">
+			<arg line ="${mxmlc.opts}" />
+		</exec>
+	</target>	
+	
+	
+	<target name="compile" description="compiles the tasks">
+		<mxmlc
+			compiler= "${mxmlc.exe}"
+			mainclass= "${app.class}"
+			as3="true"
+			strict="true"
+			output="${app.swf}"
+			benchmark="false"
+		/>
+	</target>	
 	
 </project>
