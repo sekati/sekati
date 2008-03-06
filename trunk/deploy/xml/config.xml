@@ -30,6 +30,13 @@
 		<data><![CDATA[xml/data.xml]]></data>
 		<css><![CDATA[css/app_style.css]]></css>
 	</uri>
+	<!-- proposal begins -->
+	<bootstrap>
+		<item name="users"><![CDATA[xml/userlist.xml]]></item>
+		<item name="img0"><![CDATA[assets/img0.jpg]]></item>
+		<item name="img1"><![CDATA[assets/img1.jpg]]></item>
+	</bootstrap>
+	<!-- proposal ends -->
 	<option>
 		<managed_menu>true</managed_menu>
 		<api_credit>true</api_credit>

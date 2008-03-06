@@ -31,7 +31,7 @@
 
 	
 	<!-- Sanity Check -->
-	<target name="properties">
+	<target name="verify_properties">
 		<fail unless="FLEX_HOME">The "FLEX_HOME" property must be set in ${build.dir}/build.properties.</fail>
 		<fail unless="asdoc.exe">The "asdoc.exe" property must be set in ${build.dir}/build.properties.</fail>
 		<fail unless="compc.exe">The "compc.exe" property must be set in ${build.dir}/build.properties.</fail>
@@ -77,20 +77,7 @@
     </target>	
 	
 	
-	<target name="graphdoc" description="run asdoc to build xml for graphviz dot diagrams">
-		<exec executable="${asdoc.exe}" failonerror="false">
-			<arg line = "-source-path ${src.dir}" />
-			<arg line='-doc-sources ${src.dir}'/>
-			<arg line='-output ${docs.dir}/graph'/>
-			<arg line="-keep-xml"/>
-			<arg line="-skip-xsl"/>
-			<arg line="-show-actionscript-warnings=false"/>
-			<arg line="-templates-path '${flex2sdk}/asdoc/templates'"/>
-		</exec>
-	</target>	
-	
-	
-	<target name="doc" description="run asdoc to build documentation for AS3 classes">
+	<target name="doc" description="run asdoc to build documentation for AS3 classes" depends="verify_properties">
 		<exec executable="${asdoc.exe}" failonerror="false">
 			<arg line ="-source-path ${src.dir}" />
 			<arg line='-source-path /Applications/inde/workspace/papervision3d/branches/GreatWhite/src'/>
@@ -107,12 +94,14 @@
 		</copy>
 	</target>
 	
+	
 	<target name="doc_clean" description="remove all old documentation files">
 		<defaultexcludes echo="true"/>
 		<delete includeemptydirs="true">
 			<fileset dir="${docs.dir}" includes="**/*" excludes="**/.svn"/>
 		</delete>	
 	</target>
+	
 	
 	
 	<target name="doc_deploy" description="rsync+ssh documentation to target server">
@@ -124,6 +113,19 @@
 			<arg value="--exclude=${dep.remote.excludes}"/>
 			<arg value="${dep.local.docpath}"/>
 			<arg value="${dep.remote.user}@${dep.remote.host}:${dep.remote.docpath}"/>
+		</exec>
+	</target>		
+				
+				
+	<target name="doc_graph" description="run asdoc to build xml for graphviz dot diagrams" depends="verify_properties">
+		<exec executable="${asdoc.exe}" failonerror="false">
+			<arg line = "-source-path ${src.dir}" />
+			<arg line='-doc-sources ${src.dir}'/>
+			<arg line='-output ${docs.dir}/graph'/>
+			<arg line="-keep-xml"/>
+			<arg line="-skip-xsl"/>
+			<arg line="-show-actionscript-warnings=false"/>
+			<arg line="-templates-path '${flex2sdk}/asdoc/templates'"/>
 		</exec>
 	</target>		
 	
@@ -146,70 +148,21 @@
 		<exec executable="open"><arg line="${compile.jsfl}"/></exec>
 	</target>	
 		
-
-	<target name="build_target" description="build target fla with Flash IDE">
-		<fdt.flashCompile>
-	        <fileset dir="${src.dir}">
-	            <include name="${target.fla}"/>
-	        </fileset>
-	    </fdt.flashCompile>		
-	</target>
 	
-
-
-	<target name="build_all" description="compile all fla's in src dir with Flash IDE">
-	    <fdt.flashCompile>
-	        <fileset dir="${src.dir}">
-	        	 <include name="*.fla"/>
-	        </fileset>
-	    </fdt.flashCompile>
-	</target>
-
-
-	<target name="build_tests" description="compile all fla's in tests dir with Flash IDE">
-		 <fdt.flashCompile failonerror="false">
-		   <fileset dir="${tests.dir}">
-		    <include name="*.fla"/>
-		   </fileset>
-		  </fdt.flashCompile>
-	</target>
-
-	
-	<target name="compile_lib" description="compile all application fla's in the lib directory with Flash IDE">
-	    <fdt.flashCompile>
-	        <fileset dir="${lib.dir}">
-	        	 <include name="*.fla"/>
-	        </fileset>
-	    </fdt.flashCompile>
-	</target>
-	
-	<!--
-	<target name="compile_app" description="compile the actionscript application Document Class with mxmlc/comppc">
-		<exec executable="${mxmlc.exe}" failonerror="true">
-			<arg line ="${mxmlc.opts}" />
-		</exec>
-	</target>	
-
-	<target name="compile_basic" description="compile the actionscript application Document Class with mxmlc/comppc">
-		<exec executable="${mxmlc.exe}" failonerror="true">
-			<arg line ="-output ${app.swf}" />
-			<arg line ="${app.class}" />
-		</exec>
-	</target>
-	-->
-	
-	<target name="mxmlc" description="compile the app">
+	<target name="compile_as" description="compile actionscript application with mxmlc" depends="verify_properties">
 		<mxmlc 
 			file="${app.class}" 
 			output="${app.swf}" 
-			compiler.as3="true"
-			compiler.optimize="true"
-			compiler.strict="true"
-			actionscript-file-encoding="${app.encoding}"
-			keep-generated-actionscript="false"
-			incremental="true"
-			benchmark="true"
-			debug="false"
+			compiler.as3="${compiler.as3}"
+			compiler.optimize="${compiler.optimize}"
+			compiler.strict="${compiler.strict}"
+			actionscript-file-encoding="${compiler.encoding}"
+			keep-generated-actionscript="${compiler.keep-as}"
+			incremental="${compiler.incremental}"
+			benchmark="${compiler.benchmark}"
+			debug="${compiler.debug}"
+			use-network="${compiler.use-net}"
+			warnings="${compiler.warnings}"
 			default-background-color="${app.bgcolor}">
 		    <default-size width="${app.width}" height="${app.height}" />
 			<metadata title="${app.meta.title}" description="${app.meta.desc}" date="${app.meta.date}">
@@ -222,6 +175,69 @@
 			    <exclude name="not-this-one.swc" />
 			</compiler.external-library-path>			
 		</mxmlc>
+	</target>
+	
+
+	<target name="generate_wrapper">
+	        <html-wrapper 
+	              title="${ant.project.name}"
+	              height="${app.width}"
+	              width="${app.height}"
+	              bgcolor="${app.bgcolor}"
+	              application="app"
+	              swf="${app.swf}"
+	              version-major="9"
+	              version-minor="0"
+	              version-revision="0"
+	              history="false"              
+	              template="express-installation"
+	              output="${tests.dir}/preview/"/>
+	    </target>	
+	
+
+	<target name="compile_fla" description="compile fla application with Flash IDE">
+		<fdt.flashCompile>
+	        <fileset dir="${src.dir}">
+	            <include name="${target.fla}"/>
+	        </fileset>
+	    </fdt.flashCompile>		
+	</target>
+	
+	
+	<target name="compile_fla_lib" description="compile all fla's in lib dir with Flash IDE">
+	    <fdt.flashCompile>
+	        <fileset dir="${lib.dir}">
+	        	 <include name="*.fla"/>
+	        </fileset>
+	    </fdt.flashCompile>
+	</target>
+	
+	
+	<target name="compile_fla_src" description="compile all fla's in src dir with Flash IDE">
+	    <fdt.flashCompile>
+	        <fileset dir="${src.dir}">
+	        	 <include name="*.fla"/>
+	        </fileset>
+	    </fdt.flashCompile>
 	</target>	
+	
+	
+	<target name="compile_fla_tests" description="compile all fla's in tests dir with Flash IDE">
+		 <fdt.flashCompile failonerror="false">
+		   <fileset dir="${tests.dir}">
+		    <include name="*.fla"/>
+		   </fileset>
+		  </fdt.flashCompile>
+	</target>
+	
+	<!--
+
+	<target name="compile_basic" description="compile the actionscript application Document Class with mxmlc/comppc">
+		<exec executable="${mxmlc.exe}" failonerror="true">
+			<arg line ="-output ${app.swf}" />
+			<arg line ="${app.class}" />
+		</exec>
+	</target>
+	-->
 	
 </project>

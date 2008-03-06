@@ -4,7 +4,7 @@
 <META http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <link rel="stylesheet" href="../../style.css" type="text/css" media="screen">
 <link rel="stylesheet" href="../../print.css" type="text/css" media="print">
-<meta content="Document,sekati.display.Document,appLoader,bootstrap,initAPI,initEntryPoint,initMovieProperties,initTweenEngine,setupDocument,setupEntryPoint" name="keywords">
+<meta content="Document,sekati.display.Document,appLoader,bootstrap,documentHandler,entryPointHandler,initAPI,initEntryPoint,initMovieProperties,initTweenEngine" name="keywords">
 <title>sekati.display.Document</title>
 </head>
 <body>
@@ -45,7 +45,28 @@ if (!isEclipse() || window.name != ECLIPSE_FRAME_NAME) {titleBar_setSubTitle("Cl
 </tr>
 </table>
 <p></p>
-<p></p>
+  This is the API's main <code>Document Class</code>. Any application wishing to implement the core API 
+  should implement this class directly as the <code>Document Class</code> or extend & override with customizations.
+  
+  <p>API Initialization Routine:<br/>
+  <ol>
+  <li><code>initMovieProperties</code> - sets SWF movie properties & initializes <code>StageDisplay</code></li>
+  <li><code>AppLoader</code> - instantiates & waits for the SWF file to finish loading.</li>
+  <li><code>initTweenEngine</code> - sets up <code>Tweener</code> shortcut properties.</li>
+  <li><code>initAPI</code> - instantiates <code>Boostrap</code> & waits for the queued initialization routes to complete.</li>
+  <li><code>initEntryPoint</code> - the baseline API has been initialized; the custom code layer begins here.</li>
+  </ol>
+  </p> 
+  
+  <p></p>
+<p>
+<span class="classHeaderTableLabel">See also</span>
+</p>
+<div class="seeAlso">
+<a href="../core/Bootstrap.html" target="">sekati.core.Bootstrap</a>
+<br>
+<a href="../core/App.html" target="">sekati.core.App</a>
+</div>
 <br>
 <hr>
 </div>
@@ -122,6 +143,24 @@ if (!isEclipse() || window.name != ECLIPSE_FRAME_NAME) {titleBar_setSubTitle("Cl
 <tr class="">
 <td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
 <div class="summarySignature">
+<a class="signatureLink" href="#documentHandler()">documentHandler</a>(e:<a href="../events/AppEvent.html">AppEvent</a>):void</div>
+<div class="summaryTableDescription">
+   The SWF has been fully loaded: removed the <code>AppLoader</code> & execute
+   <code>Document</code> setup code: <code>initTweenEngine()</code> & <code>initAPI()</code>.</div>
+</td><td class="summaryTableOwnerCol">Document</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="#entryPointHandler()">entryPointHandler</a>(e:<a href="../events/AppEvent.html">AppEvent</a>):void</div>
+<div class="summaryTableDescription">
+   The Application API has been fully initialized; remove the <code>Bootstrap</code> & 
+   call <code>initEntryPoint</code>.</div>
+</td><td class="summaryTableOwnerCol">Document</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
 <a class="signatureLink" href="#initAPI()">initAPI</a>():void</div>
 <div class="summaryTableDescription">
    Initialize the API <code>Bootstrap</code> queued core initialization routines.</div>
@@ -149,24 +188,6 @@ if (!isEclipse() || window.name != ECLIPSE_FRAME_NAME) {titleBar_setSubTitle("Cl
 <a class="signatureLink" href="#initTweenEngine()">initTweenEngine</a>():void</div>
 <div class="summaryTableDescription">
    Initialize <code>Tweener</code> specialProperties shortcuts.</div>
-</td><td class="summaryTableOwnerCol">Document</td>
-</tr>
-<tr class="">
-<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
-<div class="summarySignature">
-<a class="signatureLink" href="#setupDocument()">setupDocument</a>(e:<a href="../events/AppEvent.html">AppEvent</a>):void</div>
-<div class="summaryTableDescription">
-   The SWF has been fully loaded: removed the <code>AppLoader</code> & execute
-   <code>Document</code> setup code: <code>initTweenEngine()</code> & <code>initAPI()</code>.</div>
-</td><td class="summaryTableOwnerCol">Document</td>
-</tr>
-<tr class="">
-<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
-<div class="summarySignature">
-<a class="signatureLink" href="#setupEntryPoint()">setupEntryPoint</a>(e:<a href="../events/AppEvent.html">AppEvent</a>):void</div>
-<div class="summaryTableDescription">
-   The Application API has been fully initialized; remove the <code>Bootstrap</code> & 
-   call <code>initEntryPoint</code>.</div>
 </td><td class="summaryTableOwnerCol">Document</td>
 </tr>
 </table>
@@ -221,10 +242,48 @@ showHideInherited();
    </p></div>
 <a name="methodDetail"></a>
 <div class="detailSectionHeader">Method detail</div>
+<a name="documentHandler()"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">documentHandler</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>protected function documentHandler(e:<a href="../events/AppEvent.html">AppEvent</a>):void</code><p>
+   The SWF has been fully loaded: removed the <code>AppLoader</code> & execute
+   <code>Document</code> setup code: <code>initTweenEngine()</code> & <code>initAPI()</code>.
+   
+   </p><p><b>Customization:</b> Should not be necessary.</p>
+   <span class="label">Parameters</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20px"></td><td><code><span class="label">e</span>:<a href="../events/AppEvent.html">AppEvent</a></code></td>
+</tr>
+</table>
+</div>
+<a name="entryPointHandler()"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">entryPointHandler</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>protected function entryPointHandler(e:<a href="../events/AppEvent.html">AppEvent</a>):void</code><p>
+   The Application API has been fully initialized; remove the <code>Bootstrap</code> & 
+   call <code>initEntryPoint</code>.
+   
+   </p><p><b>Customization:</b> Should not be necessary.</p>
+   <span class="label">Parameters</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20px"></td><td><code><span class="label">e</span>:<a href="../events/AppEvent.html">AppEvent</a></code></td>
+</tr>
+</table>
+</div>
 <a name="initAPI()"></a>
 <table cellspacing="0" cellpadding="0" class="detailHeader">
 <tr>
-<td class="detailHeaderName">initAPI</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td>
+<td class="detailHeaderName">initAPI</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td>
 </tr>
 </table>
 <div class="detailBody">
@@ -289,44 +348,6 @@ showHideInherited();
 <div class="seeAlso">
 <a href="http://hosted.zeh.com.br/tweener/docs/en-us/" target="mm_external">http://hosted.zeh.com.br/tweener/docs/en-us/</a>
 </div>
-</div>
-<a name="setupDocument()"></a>
-<table cellspacing="0" cellpadding="0" class="detailHeader">
-<tr>
-<td class="detailHeaderName">setupDocument</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td>
-</tr>
-</table>
-<div class="detailBody">
-<code>protected function setupDocument(e:<a href="../events/AppEvent.html">AppEvent</a>):void</code><p>
-   The SWF has been fully loaded: removed the <code>AppLoader</code> & execute
-   <code>Document</code> setup code: <code>initTweenEngine()</code> & <code>initAPI()</code>.
-   
-   </p><p><b>Customization:</b> Should not be necessary.</p>
-   <span class="label">Parameters</span>
-<table border="0" cellspacing="0" cellpadding="0">
-<tr>
-<td width="20px"></td><td><code><span class="label">e</span>:<a href="../events/AppEvent.html">AppEvent</a></code></td>
-</tr>
-</table>
-</div>
-<a name="setupEntryPoint()"></a>
-<table cellspacing="0" cellpadding="0" class="detailHeader">
-<tr>
-<td class="detailHeaderName">setupEntryPoint</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td>
-</tr>
-</table>
-<div class="detailBody">
-<code>protected function setupEntryPoint(e:<a href="../events/AppEvent.html">AppEvent</a>):void</code><p>
-   The Application API has been fully initialized; remove the <code>Bootstrap</code> & 
-   call <code>initEntryPoint</code>.
-   
-   </p><p><b>Customization:</b> Should not be necessary.</p>
-   <span class="label">Parameters</span>
-<table border="0" cellspacing="0" cellpadding="0">
-<tr>
-<td width="20px"></td><td><code><span class="label">e</span>:<a href="../events/AppEvent.html">AppEvent</a></code></td>
-</tr>
-</table>
 </div>
 <br>
 <br>
