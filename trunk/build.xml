@@ -188,7 +188,7 @@
 	              swf="${app.swf}"
 	              version-major="9"
 	              version-minor="0"
-	              version-revision="0"
+	              version-revision="28"
 	              history="false"              
 	              template="express-installation"
 	              output="${tests.dir}/preview/"/>
