@@ -1,7 +1,7 @@
 <?php
-/*
- * Unit Test Runner - Created on Sep 2, 2007
- * @version 1.1.1
+/**
+ * Unit Test Runner - Created on Sep 2, 2007, Last Updated on Mar 7, 2008
+ * @version 1.1.5
  * @author jason m horwitz | sekati.com
  * Copyright (C) 2007  jason m horwitz, Sekat LLC. All Rights Reserved.
  * Released under the MIT License: http://www.opensource.org/licenses/mit-license.php
@@ -26,7 +26,6 @@ $footer = '<br/><hr/></body></html>';
 $root = ".";
 $path = reverse_strrchr($_SERVER['SCRIPT_FILENAME'],'/',0)."/".$root;
 $self   = $_SERVER['SCRIPT_NAME'];
-//$qs		= urlencode( $_SERVER['QUERY_STRING'] );
 $swf	= $_GET['swf'];
 $html	= $_GET['html'];
 
@@ -49,18 +48,18 @@ function reverse_strrchr($haystack, $needle, $trail) {
  */
 function indexTests() {
 	global $path;
-	$str = "";
+	$str = "<ol>";
 	if ($dir = @opendir($path)) {
 		while (false !== ($item = readdir($dir))) {  
 			if (eregi(".html", $item)) {
-				$str .= "&bull; <a href=\"?html=$item\"><strong>$item</strong></a><br/>";
+				$str .= "<li><a href=\"?html=$item\"><strong>$item</strong></a></li>";
 			} else if (eregi(".swf", $item)) {
-				$str .= "&bull; <a href=\"?swf=$item\">$item</a><br/>";
+				$str .= "<li><a href=\"?swf=$item\">$item</a></li>";
 			}
 		}
 		closedir($dir);
 	}
-	return $str;
+	return $str."</ol>";
 }
 
 /**

@@ -11,7 +11,7 @@ body, html, td {
 }
 
 hr {
-	color: #660000;
+	color: #FF00FF;
 	border-style: dotted;
 	height: 1px;
 	text-align: left;
@@ -24,7 +24,7 @@ h1 {
 }
 
 strong {
-	color: #FF0000; 
+	color: #FF00FF; 
 	font-weight: normal;
 } 
 
@@ -34,8 +34,8 @@ a, a:link, a:visited {
 }
 
 a:hover { 
-	color: #CCC; 
-	border-bottom:1px dotted #FF3300; }
+	color: #FFF; 
+	border-bottom:1px dotted #FF00FF; }
 }
 
 #flash_seo {
