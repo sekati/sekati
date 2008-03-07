@@ -146,7 +146,7 @@
 	<target name="build" description="compile current opened fla in src dir with Flash IDE (clear's ASO cache and saves FLA)">
 		<echo message="|*|*|*| class cache clear | source save | compiler start |*|*|*|"/>
 		<exec executable="open"><arg line="${compile.jsfl}"/></exec>
-	</target>	
+	</target>
 		
 	
 	<target name="compile_as" description="compile actionscript application with mxmlc" depends="verify_properties">
