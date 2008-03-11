@@ -77,9 +77,9 @@ if (!isEclipse() || window.name != ECLIPSE_FRAME_NAME) {titleBar_setSubTitle("Cl
 <tr class="">
 <td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
 <div class="summarySignature">
-<a class="signatureLink" href="#ExternalMouseWheel()">ExternalMouseWheel</a>(s:SingletonEnforcer)</div>
+<a class="signatureLink" href="#ExternalMouseWheel()">ExternalMouseWheel</a>($:SingletonEnforcer = null)</div>
 <div class="summaryTableDescription">
-   ExternalMouseWheel Constructor
+   ExternalMouseWheel Singleton Constructor
    </div>
 </td><td class="summaryTableOwnerCol">ExternalMouseWheel</td>
 </tr>
@@ -98,8 +98,7 @@ if (!isEclipse() || window.name != ECLIPSE_FRAME_NAME) {titleBar_setSubTitle("Cl
 <div class="summarySignature">
 <a class="signatureLink" href="#init()">init</a>():void</div>
 <div class="summaryTableDescription">
-   initialize!
-   </div>
+   Initialize.</div>
 </td><td class="summaryTableOwnerCol">ExternalMouseWheel</td>
 </tr>
 </table>
@@ -134,12 +133,13 @@ showHideInherited();
 </tr>
 </table>
 <div class="detailBody">
-<code>public function ExternalMouseWheel(s:SingletonEnforcer)</code><p>
-   ExternalMouseWheel Constructor
+<code>public function ExternalMouseWheel($:SingletonEnforcer = null)</code><p>
+   ExternalMouseWheel Singleton Constructor
    </p><span class="label">Parameters</span>
 <table border="0" cellspacing="0" cellpadding="0">
 <tr>
-<td width="20px"></td><td><code><span class="label">s</span>:SingletonEnforcer</code></td>
+<td width="20px"></td><td><code><span class="label">$</span>:SingletonEnforcer</code> (default = <code>null</code>)<code></code> &mdash; SingletonEnforcer - internal to the AS file; the param prevents external instantiation without error.
+   </td>
 </tr>
 </table>
 </div>
@@ -174,7 +174,7 @@ showHideInherited();
 </table>
 <div class="detailBody">
 <code>public function init():void</code><p>
-   initialize!
+   Initialize.
    </p></div>
 <br>
 <br>
