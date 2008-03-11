@@ -51,7 +51,7 @@
 	<target name="build" description="Default Project Build" depends="verify-properties">
 		<!-- COMPILE OPTION -->
 		
-		<antcall target="compile-flex"/>
+		<antcall target="compile-flash"/>
 		
 		<!--
 		- SELECT A COMPILE OPTION FROM THE LIST BELOW -
@@ -64,7 +64,7 @@
 		
 		<!-- PREVIEW OPTION -->
 		
-		<antcall target="preview-player"/>
+		
 		
 		<!--
 		- SELECT A PREVIEW OPTION FROM THE LIST BELOW -
