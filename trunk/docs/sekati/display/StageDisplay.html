@@ -4,7 +4,7 @@
 <META http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <link rel="stylesheet" href="../../style.css" type="text/css" media="screen">
 <link rel="stylesheet" href="../../print.css" type="text/css" media="print">
-<meta content="StageDisplay,sekati.display.StageDisplay,RESIZE_COMPLETE_DELAY_MS,ROOT,STAGE,_instance,_resizeIntervalId,$,align,center,centerX,centerY,contentHeight,contentWidth,focusRect,frameRate,fullscreen,height,quality,root,scaleMode,showDefaultContextMenu,size,stage,width,clearResizeInterval,destroy,fullscreenHandler,getInstance,init,leaveHandler,resizeCompleteHandler,resizeHandler,toggleFullScreen" name="keywords">
+<meta content="StageDisplay,sekati.display.StageDisplay,RESIZE_COMPLETE_DELAY_MS,ROOT,STAGE,_instance,_resizeIntervalId,$,align,center,centerX,centerY,contentHeight,contentWidth,focusRect,frameRate,fullscreen,height,quality,root,scaleMode,showDefaultContextMenu,size,stage,width,activateHandler,clearResizeInterval,deactivateHandler,destroy,fullscreenHandler,getInstance,init,invalidate,leaveHandler,renderHandler,resizeCompleteHandler,resizeHandler,toggleFullScreen" name="keywords">
 <title>sekati.display.StageDisplay</title>
 </head>
 <body>
@@ -218,7 +218,15 @@ if (!isEclipse() || window.name != ECLIPSE_FRAME_NAME) {titleBar_setSubTitle("Cl
 <div class="summarySignature">
 <a class="signatureLink" href="#init()">init</a>(framerate:int = 31, align:String = "TL", scale:String = "noScale", quality:String = "HIGH", focusRect:Boolean = false):void</div>
 <div class="summaryTableDescription">
-   Simplified Stage parameter initialization.</div>
+   Parameterized Stage initialization.</div>
+</td><td class="summaryTableOwnerCol">StageDisplay</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="#invalidate()">invalidate</a>():void</div>
+<div class="summaryTableDescription">
+   Alert <code>DisplayObject</code>'s on the next opportunity to render the display list.</div>
 </td><td class="summaryTableOwnerCol">StageDisplay</td>
 </tr>
 <tr class="">
@@ -241,9 +249,25 @@ if (!isEclipse() || window.name != ECLIPSE_FRAME_NAME) {titleBar_setSubTitle("Cl
 <tr class="">
 <td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
 <div class="summarySignature">
+<a class="signatureLink" href="#activateHandler()">activateHandler</a>(e:Event):void</div>
+<div class="summaryTableDescription">
+   Dispatch a Activate <code>StageEvent</code> for non-displayObjects.</div>
+</td><td class="summaryTableOwnerCol">StageDisplay</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
 <a class="signatureLink" href="#clearResizeInterval()">clearResizeInterval</a>():void</div>
 <div class="summaryTableDescription">
    Reset the <code>_resizeIntervalId</code>.</div>
+</td><td class="summaryTableOwnerCol">StageDisplay</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="#deactivateHandler()">deactivateHandler</a>(e:Event):void</div>
+<div class="summaryTableDescription">
+   Dispatch a Deactivate <code>StageEvent</code> for non-displayObjects.</div>
 </td><td class="summaryTableOwnerCol">StageDisplay</td>
 </tr>
 <tr class="">
@@ -257,9 +281,17 @@ if (!isEclipse() || window.name != ECLIPSE_FRAME_NAME) {titleBar_setSubTitle("Cl
 <tr class="">
 <td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
 <div class="summarySignature">
-<a class="signatureLink" href="#leaveHandler()">leaveHandler</a>():void</div>
+<a class="signatureLink" href="#leaveHandler()">leaveHandler</a>(e:Event):void</div>
 <div class="summaryTableDescription">
    Dispatch a Leave <code>StageEvent</code> for non-displayObjects.</div>
+</td><td class="summaryTableOwnerCol">StageDisplay</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="#renderHandler()">renderHandler</a>(e:Event):void</div>
+<div class="summaryTableDescription">
+   Dispatch a Render <code>StageEvent</code> for non-displayObjects.</div>
 </td><td class="summaryTableOwnerCol">StageDisplay</td>
 </tr>
 <tr class="">
@@ -624,16 +656,48 @@ showHideInherited();
 </div>
 <a name="methodDetail"></a>
 <div class="detailSectionHeader">Method detail</div>
+<a name="activateHandler()"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">activateHandler</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>protected function activateHandler(e:Event):void</code><p>
+   Dispatch a Activate <code>StageEvent</code> for non-displayObjects.
+   </p><span class="label">Parameters</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20px"></td><td><code><span class="label">e</span>:Event</code></td>
+</tr>
+</table>
+</div>
 <a name="clearResizeInterval()"></a>
 <table cellspacing="0" cellpadding="0" class="detailHeader">
 <tr>
-<td class="detailHeaderName">clearResizeInterval</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td>
+<td class="detailHeaderName">clearResizeInterval</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td>
 </tr>
 </table>
 <div class="detailBody">
 <code>protected function clearResizeInterval():void</code><p>
    Reset the <code>_resizeIntervalId</code>.
    </p></div>
+<a name="deactivateHandler()"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">deactivateHandler</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>protected function deactivateHandler(e:Event):void</code><p>
+   Dispatch a Deactivate <code>StageEvent</code> for non-displayObjects.
+   </p><span class="label">Parameters</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20px"></td><td><code><span class="label">e</span>:Event</code></td>
+</tr>
+</table>
+</div>
 <a name="destroy()"></a>
 <table cellspacing="0" cellpadding="0" class="detailHeader">
 <tr>
@@ -688,7 +752,7 @@ showHideInherited();
 </table>
 <div class="detailBody">
 <code>public function init(framerate:int = 31, align:String = "TL", scale:String = "noScale", quality:String = "HIGH", focusRect:Boolean = false):void</code><p>
-   Simplified Stage parameter initialization.
+   Parameterized Stage initialization.
    </p><span class="label">Parameters</span>
 <table border="0" cellspacing="0" cellpadding="0">
 <tr>
@@ -725,6 +789,22 @@ showHideInherited();
 </tr>
 </table>
 </div>
+<a name="invalidate()"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">invalidate</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public function invalidate():void</code><p>
+   Alert <code>DisplayObject</code>'s on the next opportunity to render the display list.
+   </p><p>
+<span class="label">See also</span>
+</p>
+<div class="seeAlso">
+<a href="../events/StageEvent.html#RENDER" target="">sekati.events.StageEvent.RENDER</a>
+</div>
+</div>
 <a name="leaveHandler()"></a>
 <table cellspacing="0" cellpadding="0" class="detailHeader">
 <tr>
@@ -732,9 +812,31 @@ showHideInherited();
 </tr>
 </table>
 <div class="detailBody">
-<code>protected function leaveHandler():void</code><p>
+<code>protected function leaveHandler(e:Event):void</code><p>
    Dispatch a Leave <code>StageEvent</code> for non-displayObjects.
-   </p></div>
+   </p><span class="label">Parameters</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20px"></td><td><code><span class="label">e</span>:Event</code></td>
+</tr>
+</table>
+</div>
+<a name="renderHandler()"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">renderHandler</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>protected function renderHandler(e:Event):void</code><p>
+   Dispatch a Render <code>StageEvent</code> for non-displayObjects.
+   </p><span class="label">Parameters</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20px"></td><td><code><span class="label">e</span>:Event</code></td>
+</tr>
+</table>
+</div>
 <a name="resizeCompleteHandler()"></a>
 <table cellspacing="0" cellpadding="0" class="detailHeader">
 <tr>
