@@ -39,16 +39,28 @@ if (!isEclipse() || window.name != ECLIPSE_FRAME_NAME) {titleBar_setSubTitle("Cl
 </tr>
 </table>
 <p></p>
-  App provides a common static storage area for API and application
-  instances, debuggers, data objects, vars & constants.
+  App provides a common static dynamic storage area for API and application 
+  instances, loggers, data objects, properties & constants.
+  
+  <p><b>API Version Schema</b>: Sekati API implements a <i>major.minor[.build[.revision]]</i> 
+  versioning schema along with an easily recognizable <i>Code Name</i> to assist in identifying 
+  compatible releases.</p>
+  
+  <p>While it may be tempting to remove; please leave the <i>API metadata Constants</i> 
+  intact as the API does undergo regular development, & while new additions will
+  generally be backwards compatible to avoid breaking the API, from time to time
+  major API changes are necessary. This being the case the <i>API constants</i> can be 
+  very important in assisting the developer as to which SWC or SVN Revision is most
+  appropriate or compatible with an existing project.</p>
+  
   <p></p>
 <p>
 <span class="classHeaderTableLabel">See also</span>
 </p>
 <div class="seeAlso">
-<a href="../core/Bootstrap.html" target="">sekati.core.Bootstrap</a>
-<br>
 <a href="../display/Document.html" target="">sekati.display.Document</a>
+<br>
+<a href="../core/Bootstrap.html" target="">sekati.core.Bootstrap</a>
 </div>
 <br>
 <hr>
@@ -186,7 +198,7 @@ if (!isEclipse() || window.name != ECLIPSE_FRAME_NAME) {titleBar_setSubTitle("Cl
 </td><td class="summaryTableOwnerCol">App</td>
 </tr>
 <tr class="">
-<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a class="signatureLink" href="#API_DATE">API_DATE</a> : String = "03.10.08"<div class="summaryTableDescription">[static]
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a class="signatureLink" href="#API_DATE">API_DATE</a> : String = "03.11.08"<div class="summaryTableDescription">[static]
    Enables API version date to be retrieved at runtime or when reverse engineering.</div>
 </td><td class="summaryTableOwnerCol">App</td>
 </tr>
@@ -201,8 +213,8 @@ if (!isEclipse() || window.name != ECLIPSE_FRAME_NAME) {titleBar_setSubTitle("Cl
 </td><td class="summaryTableOwnerCol">App</td>
 </tr>
 <tr class="">
-<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a class="signatureLink" href="#API_VERSION">API_VERSION</a> : String = "Public Alpha 3.0.0.9 - "Brazil""<div class="summaryTableDescription">[static]
-   Enables API version to be retrieved at runtime or when reverse engineering.</div>
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a class="signatureLink" href="#API_VERSION">API_VERSION</a> : String = "Public Alpha 3.0.1.0 - "Ghidorah""<div class="summaryTableDescription">[static]
+   Enables API version, release state & code name to be retrieved at runtime or when reverse engineering.</div>
 </td><td class="summaryTableOwnerCol">App</td>
 </tr>
 </table>
@@ -431,7 +443,7 @@ showHideInherited();
 </tr>
 </table>
 <div class="detailBody">
-<code>public static const API_DATE:String = "03.10.08"</code><p>
+<code>public static const API_DATE:String = "03.11.08"</code><p>
    Enables API version date to be retrieved at runtime or when reverse engineering.
    
    </p><p><i>Please leave intact:</i> this metadata may be displayed in the <code>ContextMenu</code>
@@ -470,8 +482,8 @@ showHideInherited();
 </tr>
 </table>
 <div class="detailBody">
-<code>public static const API_VERSION:String = "Public Alpha 3.0.0.9 - "Brazil""</code><p>
-   Enables API version to be retrieved at runtime or when reverse engineering.
+<code>public static const API_VERSION:String = "Public Alpha 3.0.1.0 - "Ghidorah""</code><p>
+   Enables API version, release state & code name to be retrieved at runtime or when reverse engineering.
    
    </p><p><i>Please leave intact:</i> this metadata may be displayed in the <code>ContextMenu</code>
    if enabled and <code>api_credit</code> is <code>true</code> in <code>config.xml</code></p>.
