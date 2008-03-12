@@ -4,7 +4,7 @@
 <META http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <link rel="stylesheet" href="../../style.css" type="text/css" media="screen">
 <link rel="stylesheet" href="../../print.css" type="text/css" media="print">
-<meta content="LiquidClip,sekati.display.LiquidClip,_onResize,destroy,onAdd,onRemove" name="keywords">
+<meta content="LiquidClip,sekati.display.LiquidClip,_onFullscreen,_onResize,_onResizeComplete,destroy,onAdd,onRemove" name="keywords">
 <title>sekati.display.LiquidClip</title>
 </head>
 <body>
@@ -123,9 +123,25 @@ if (!isEclipse() || window.name != ECLIPSE_FRAME_NAME) {titleBar_setSubTitle("Cl
 <tr class="">
 <td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
 <div class="summarySignature">
+<a class="signatureLink" href="#_onFullscreen()">_onFullscreen</a>(event:<a href="../events/StageEvent.html">StageEvent</a>):void</div>
+<div class="summaryTableDescription">
+   Fires when <code>StageDisplay</code> dispatches a <code>FULLSCREEN</code> event.</div>
+</td><td class="summaryTableOwnerCol">LiquidClip</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
 <a class="signatureLink" href="#_onResize()">_onResize</a>(e:<a href="../events/StageEvent.html">StageEvent</a>):void</div>
 <div class="summaryTableDescription">
    Fires when <code>StageDisplay</code> dispatches a <code>RESIZE</code> event.</div>
+</td><td class="summaryTableOwnerCol">LiquidClip</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="#_onResizeComplete()">_onResizeComplete</a>(event:<a href="../events/StageEvent.html">StageEvent</a>):void</div>
+<div class="summaryTableDescription">
+   Fires when <code>StageDisplay</code> dispatches a <code>RESIZE_COMPLETE</code> event.</div>
 </td><td class="summaryTableOwnerCol">LiquidClip</td>
 </tr>
 <tr class="">
@@ -167,10 +183,26 @@ showHideInherited();
    </p></div>
 <a name="methodDetail"></a>
 <div class="detailSectionHeader">Method detail</div>
+<a name="_onFullscreen()"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">_onFullscreen</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>protected function _onFullscreen(event:<a href="../events/StageEvent.html">StageEvent</a>):void</code><p>
+   Fires when <code>StageDisplay</code> dispatches a <code>FULLSCREEN</code> event.
+   </p><span class="label">Parameters</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20px"></td><td><code><span class="label">event</span>:<a href="../events/StageEvent.html">StageEvent</a></code></td>
+</tr>
+</table>
+</div>
 <a name="_onResize()"></a>
 <table cellspacing="0" cellpadding="0" class="detailHeader">
 <tr>
-<td class="detailHeaderName">_onResize</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td>
+<td class="detailHeaderName">_onResize</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td>
 </tr>
 </table>
 <div class="detailBody">
@@ -180,6 +212,22 @@ showHideInherited();
 <table border="0" cellspacing="0" cellpadding="0">
 <tr>
 <td width="20px"></td><td><code><span class="label">e</span>:<a href="../events/StageEvent.html">StageEvent</a></code></td>
+</tr>
+</table>
+</div>
+<a name="_onResizeComplete()"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">_onResizeComplete</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>protected function _onResizeComplete(event:<a href="../events/StageEvent.html">StageEvent</a>):void</code><p>
+   Fires when <code>StageDisplay</code> dispatches a <code>RESIZE_COMPLETE</code> event.
+   </p><span class="label">Parameters</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20px"></td><td><code><span class="label">event</span>:<a href="../events/StageEvent.html">StageEvent</a></code></td>
 </tr>
 </table>
 </div>

@@ -48,9 +48,7 @@ if (!isEclipse() || window.name != ECLIPSE_FRAME_NAME) {titleBar_setSubTitle("Cl
 <a href="../math/MathBase.html" target="">for a generic random().</a>
 <br>
 <a href="../math/Range.html" target="">for more range based random methods.</a>
-<br>
-<a href="../math/RandomSeed.html" target="">for a seeded random API.</a>
-</div>
+<br>for a seeded random API.</div>
 <br>
 <hr>
 </div>
@@ -91,12 +89,7 @@ if (!isEclipse() || window.name != ECLIPSE_FRAME_NAME) {titleBar_setSubTitle("Cl
 <div class="summarySignature">
 <a class="signatureLink" href="#float()">float</a>(min:Number, max:Number):Number</div>
 <div class="summaryTableDescription">[static]
-   Returns a random float
-   <br>Usage:<br><code>
-   Random.float(50); // returns a number between 0-50 exclusive<br>
-   Random.float(20,50); // returns a number between 20-50 exclusive<br>
-   </code>
-   </div>
+   Returns a random float.</div>
 </td><td class="summaryTableOwnerCol">Random</td>
 </tr>
 <tr class="">
@@ -112,8 +105,7 @@ if (!isEclipse() || window.name != ECLIPSE_FRAME_NAME) {titleBar_setSubTitle("Cl
 <div class="summarySignature">
 <a class="signatureLink" href="#integer()">integer</a>(min:Number, max:Number):int</div>
 <div class="summaryTableDescription">[static]
-   Return a random integer
-   </div>
+   Return a random integer.</div>
 </td><td class="summaryTableOwnerCol">Random</td>
 </tr>
 <tr class="">
@@ -166,10 +158,6 @@ showHideInherited();
 <table border="0" cellspacing="0" cellpadding="0">
 <tr>
 <td width="20px"></td><td><code><span class="label">chance</span>:Number</code> (default = <code>0.5</code>)<code></code> &mdash; Percentage chance advantage of true.
-   <br>Usage:<br><code>
-   Random.bit(); // returns 50% chance of 1.
-   Random.bit(.75); // returns 75% chance of 1.
-   </code>
    </td>
 </tr>
 </table>
@@ -180,6 +168,13 @@ showHideInherited();
 <td width="20"></td><td><code>int</code></td>
 </tr>
 </table>
+<br>
+<span class="label">Example</span>
+<br><div class='listing'><pre>
+   Random.bit(); // returns 50% chance of 1.
+   Random.bit(.75); // returns 75% chance of 1.
+   </pre></div>
+   <p></p>
 </div>
 <a name="boolean()"></a>
 <table cellspacing="0" cellpadding="0" class="detailHeader">
@@ -194,10 +189,6 @@ showHideInherited();
 <table border="0" cellspacing="0" cellpadding="0">
 <tr>
 <td width="20px"></td><td><code><span class="label">chance</span>:Number</code> (default = <code>0.5</code>)<code></code> &mdash; Percentage chance advantage of true.
-   <br>Usage:<br><code>
-   Random.boolean(); // returns 50% chance of true.
-   Random.boolean(.75); // returns 75% chance of true.
-   </code>
    </td>
 </tr>
 </table>
@@ -208,6 +199,13 @@ showHideInherited();
 <td width="20"></td><td><code>Boolean</code></td>
 </tr>
 </table>
+<br>
+<span class="label">Example</span>
+<br><div class='listing'><pre>
+   Random.boolean(); // returns 50% chance of true.
+   Random.boolean(.75); // returns 75% chance of true.
+   </pre></div>
+   <p></p>
 </div>
 <a name="float()"></a>
 <table cellspacing="0" cellpadding="0" class="detailHeader">
@@ -217,11 +215,7 @@ showHideInherited();
 </table>
 <div class="detailBody">
 <code>public static function float(min:Number, max:Number):Number</code><p>
-   Returns a random float
-   <br>Usage:<br><code>
-   Random.float(50); // returns a number between 0-50 exclusive<br>
-   Random.float(20,50); // returns a number between 20-50 exclusive<br>
-   </code>
+   Returns a random float.
    </p><span class="label">Parameters</span>
 <table border="0" cellspacing="0" cellpadding="0">
 <tr>
@@ -241,6 +235,13 @@ showHideInherited();
 <td width="20"></td><td><code>Number</code></td>
 </tr>
 </table>
+<br>
+<span class="label">Example</span>
+<br><div class='listing'><pre>
+   Random.float(50); // returns a number between 0-50 exclusive
+   Random.float(20,50); // returns a number between 20-50 exclusive
+   </pre></div>
+   <p></p>
 </div>
 <a name="hexColor()"></a>
 <table cellspacing="0" cellpadding="0" class="detailHeader">
@@ -267,15 +268,11 @@ showHideInherited();
 </table>
 <div class="detailBody">
 <code>public static function integer(min:Number, max:Number):int</code><p>
-   Return a random integer
+   Return a random integer.
    </p><span class="label">Parameters</span>
 <table border="0" cellspacing="0" cellpadding="0">
 <tr>
 <td width="20px"></td><td><code><span class="label">min</span>:Number</code> &mdash; Percentage chance advantage of true.
-   <br>Usage:<br><code>
-   Random.integer(25); // returns an integer between 0-24 inclusive.
-   Random.integer(10,25); // returns an integer between 10-24 inclusive.
-   </code>
    </td>
 </tr>
 <tr>
@@ -292,6 +289,13 @@ showHideInherited();
 <td width="20"></td><td><code>int</code></td>
 </tr>
 </table>
+<br>
+<span class="label">Example</span>
+<br><div class='listing'><pre>
+   Random.integer(25); // returns an integer between 0-24 inclusive.
+   Random.integer(10,25); // returns an integer between 10-24 inclusive.
+   </pre></div>
+   <p></p>
 </div>
 <a name="randBit()"></a>
 <table cellspacing="0" cellpadding="0" class="detailHeader">
@@ -323,10 +327,6 @@ showHideInherited();
 <table border="0" cellspacing="0" cellpadding="0">
 <tr>
 <td width="20px"></td><td><code><span class="label">chance</span>:Number</code> (default = <code>0.5</code>)<code></code> &mdash; Percentage chance advantage of true.
-   <br>Usage:<br><code>
-   Random.sign(); // returns 50% chance of 1.
-   Random.sign(.75); // returns 75% chance of 1.
-   </code>
    </td>
 </tr>
 </table>
@@ -337,6 +337,13 @@ showHideInherited();
 <td width="20"></td><td><code>int</code></td>
 </tr>
 </table>
+<br>
+<span class="label">Example</span>
+<br><div class='listing'><pre>
+   Random.sign(); // returns 50% chance of 1.
+   Random.sign(.75); // returns 75% chance of 1.
+   </pre></div>
+   <p></p>
 </div>
 <br>
 <br>
