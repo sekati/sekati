@@ -65,11 +65,7 @@ if (!isEclipse() || window.name != ECLIPSE_FRAME_NAME) {titleBar_setSubTitle("Cl
 <div class="summarySignature">
 <a class="signatureLink" href="#clamp()">clamp</a>(val:Number, min:Number, max:Number):Number</div>
 <div class="summaryTableDescription">[static]
-   Clamp constrains a value to the defined numeric boundaries.<br>
-   Usage:<br><code>
-   val: 20, 2 to 5    this will give back 5 since 5 is the top boundary<br>
-   val: 3, 2 to 5     this will give back 3<br></code>
-   </div>
+   Clamp constrains a value to the defined numeric boundaries.</div>
 </td><td class="summaryTableOwnerCol">MathBase</td>
 </tr>
 <tr class="">
@@ -221,7 +217,7 @@ if (!isEclipse() || window.name != ECLIPSE_FRAME_NAME) {titleBar_setSubTitle("Cl
 <a class="signatureLink" href="#minArray()">minArray</a>(a:Array):Number</div>
 <div class="summaryTableDescription">[static]
    Returns the lowest value of all items in array
-   Like Math.min() but supports any number of items
+   Like Math.#min() but supports any number of items
    </div>
 </td><td class="summaryTableOwnerCol">MathBase</td>
 </tr>
@@ -288,10 +284,7 @@ showHideInherited();
 </table>
 <div class="detailBody">
 <code>public static function clamp(val:Number, min:Number, max:Number):Number</code><p>
-   Clamp constrains a value to the defined numeric boundaries.<br>
-   Usage:<br><code>
-   val: 20, 2 to 5    this will give back 5 since 5 is the top boundary<br>
-   val: 3, 2 to 5     this will give back 3<br></code>
+   Clamp constrains a value to the defined numeric boundaries.
    </p><span class="label">Parameters</span>
 <table border="0" cellspacing="0" cellpadding="0">
 <tr>
@@ -317,6 +310,13 @@ showHideInherited();
 <td width="20"></td><td><code>Number</code></td>
 </tr>
 </table>
+<br>
+<span class="label">Example</span>
+<br><div class='listing'><pre>
+   val: 20, 2 to 5    this will give back 5 since 5 is the top boundary
+   val: 3, 2 to 5     this will give back 3
+   </pre></div>
+   <p></p>
 </div>
 <a name="constrain()"></a>
 <table cellspacing="0" cellpadding="0" class="detailHeader">
@@ -326,7 +326,8 @@ showHideInherited();
 </table>
 <div class="detailBody">
 <code>public static function constrain(val:Number, min:Number, max:Number):Number</code><p>
-   Constrain a value to the defined numeric boundaries.
+   Constrain a value to the defined numeric boundaries. 
+   <i>Deprecated:</i> Use MathBase.#clamp() instead. 
    </p><span class="label">Parameters</span>
 <table border="0" cellspacing="0" cellpadding="0">
 <tr>
@@ -355,7 +356,9 @@ showHideInherited();
 <p>
 <span class="label">See also</span>
 </p>
-<div class="seeAlso">clamp()</div>
+<div class="seeAlso">
+<a href="../math/MathBase.html#clamp()" target="">clamp()</a>
+</div>
 </div>
 <a name="distance()"></a>
 <table cellspacing="0" cellpadding="0" class="detailHeader">
@@ -756,7 +759,7 @@ showHideInherited();
 <div class="detailBody">
 <code>public static function minArray(a:Array):Number</code><p>
    Returns the lowest value of all items in array
-   Like Math.min() but supports any number of items
+   Like Math.#min() but supports any number of items
    </p><span class="label">Parameters</span>
 <table border="0" cellspacing="0" cellpadding="0">
 <tr>
