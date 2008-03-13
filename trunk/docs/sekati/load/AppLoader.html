@@ -42,9 +42,9 @@ if (!isEclipse() || window.name != ECLIPSE_FRAME_NAME) {titleBar_setSubTitle("Cl
 </tr>
 </table>
 <p></p>
-  AppLoader provides a baseline (invisible) preloader facility for SWF files that implement the core API. 
+  AppLoader provides a baseline (invisible) preloader facility for Application SWF files that implement the core API. 
   The loader insures that the SWF has been fully loaded by the client browser before initialization.
-  Once loading is complete <code>AppEvent.APP_LOAD</code> is dispatched.
+  Once loading is complete <code>BootstrapEvent.APP_LOAD</code> is dispatched.
   
   <p><b>Note:</b> This is not a visual preloader and should not be treated as such as it would suffer 
   from the traditional visual preloader chicken-egg issue. Rather, it is a preventative code executation
@@ -137,7 +137,7 @@ if (!isEclipse() || window.name != ECLIPSE_FRAME_NAME) {titleBar_setSubTitle("Cl
 <div class="summarySignature">
 <a class="signatureLink" href="#_onEnterFrame()">_onEnterFrame</a>(e:Event):void</div>
 <div class="summaryTableDescription">
-   Frame-based load handler; dispatches <code>AppEvent.APP_LOAD</code> on completion.</div>
+   Frame-based load handler; dispatches <code>BootstrapEvent.APP_LOAD</code> on completion.</div>
 </td><td class="summaryTableOwnerCol">AppLoader</td>
 </tr>
 </table>
@@ -247,7 +247,7 @@ showHideInherited();
 </table>
 <div class="detailBody">
 <code>protected function _onEnterFrame(e:Event):void</code><p>
-   Frame-based load handler; dispatches <code>AppEvent.APP_LOAD</code> on completion.
+   Frame-based load handler; dispatches <code>BootstrapEvent.APP_LOAD</code> on completion.
    </p><span class="label">Parameters</span>
 <table border="0" cellspacing="0" cellpadding="0">
 <tr>

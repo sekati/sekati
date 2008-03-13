@@ -55,11 +55,11 @@ if (!isEclipse() || window.name != ECLIPSE_FRAME_NAME) {titleBar_setSubTitle("Cl
   <code>sekati.core.App</code>. for storage & retrieval.</p>
   
   <p>Each step in the <code>Bootstrap</code> sequence fires
-  a <i>"staging"</i> <code>AppEvent</code> to notify the application
+  a <i>"staging"</i> <code>BootstrapEvent</code> to notify the application
   of its <i>"boot phase"</i>. If any boot phase in the 
   <code>_sequenceChain</code> fails its execution it will be retried 
   until the <code>RETRY_MAX</code> limit has been exceeded at which 
-  point a the <code>AppEvent.APP_FAIL</code> event will be dispatched
+  point a the <code>BootstrapEvent.APP_FAIL</code> event will be dispatched
   to notify the application of boot failure.</p>
   
   <p><b>Customizations</b> may be made by extending and 
@@ -71,9 +71,11 @@ if (!isEclipse() || window.name != ECLIPSE_FRAME_NAME) {titleBar_setSubTitle("Cl
 <span class="classHeaderTableLabel">See also</span>
 </p>
 <div class="seeAlso">
+<a href="../core/App.html" target="">sekati.core.App</a>
+<br>
 <a href="../display/Document.html" target="">sekati.display.Document</a>
 <br>
-<a href="../core/App.html" target="">sekati.core.App</a>
+<a href="../events/BootstrapEvent.html" target="">sekati.events.BootstrapEvent</a>
 </div>
 <br>
 <hr>
@@ -138,7 +140,7 @@ if (!isEclipse() || window.name != ECLIPSE_FRAME_NAME) {titleBar_setSubTitle("Cl
 <a class="signatureLink" href="#loadConfig()">loadConfig</a>():void</div>
 <div class="summaryTableDescription">
    Loads & parse <code>config.xml</code> to <code>App.config</code>
-   & dispatch <code>AppEvent.APP_CONFIG</code>.</div>
+   & dispatch <code>BootstrapEvent.APP_CONFIG</code>.</div>
 </td><td class="summaryTableOwnerCol">Bootstrap</td>
 </tr>
 <tr class="">
@@ -162,7 +164,7 @@ if (!isEclipse() || window.name != ECLIPSE_FRAME_NAME) {titleBar_setSubTitle("Cl
 <div class="summarySignature">
 <a class="signatureLink" href="#retry()">retry</a>():void</div>
 <div class="summaryTableDescription">
-   A method in the sequence chain failed - make retry attempts at each phase or dispatch the <code>AppEvent.APP_FAILURE</code> event.</div>
+   A method in the sequence chain failed - make retry attempts at each phase or dispatch the <code>BootstrapEvent.APP_FAILURE</code> event.</div>
 </td><td class="summaryTableOwnerCol">Bootstrap</td>
 </tr>
 <tr class="">
@@ -170,7 +172,7 @@ if (!isEclipse() || window.name != ECLIPSE_FRAME_NAME) {titleBar_setSubTitle("Cl
 <div class="summarySignature">
 <a class="signatureLink" href="#run()">run</a>():void</div>
 <div class="summaryTableDescription">
-   Iterate through the <code>_sequenceChain</code> method & fire the <code>AppEvent.APP_INIT</code> event on completion.</div>
+   Iterate through the <code>_sequenceChain</code> method & fire the <code>BootstrapEvent.APP_INIT</code> event on completion.</div>
 </td><td class="summaryTableOwnerCol">Bootstrap</td>
 </tr>
 </table>
@@ -252,7 +254,7 @@ showHideInherited();
 <div class="detailBody">
 <code>protected function loadConfig():void</code><p>
    Loads & parse <code>config.xml</code> to <code>App.config</code>
-   & dispatch <code>AppEvent.APP_CONFIG</code>.
+   & dispatch <code>BootstrapEvent.APP_CONFIG</code>.
    </p></div>
 <a name="loadData()"></a>
 <table cellspacing="0" cellpadding="0" class="detailHeader">
@@ -263,7 +265,7 @@ showHideInherited();
 <div class="detailBody">
 <code>protected function loadData():void</code><p>
    Loads & parse data from <code>App.DATA_URI</code> provided in <code>config.xml</code>.
-   Store it in <code>App.data</code> & dispatch <code>AppEvent.APP_DATA</code>.
+   Store it in <code>App.data</code> & dispatch <code>BootstrapEvent.APP_DATA</code>.
    </p></div>
 <a name="loadStyle()"></a>
 <table cellspacing="0" cellpadding="0" class="detailHeader">
@@ -274,7 +276,7 @@ showHideInherited();
 <div class="detailBody">
 <code>protected function loadStyle():void</code><p>
    Loads & parse the stylesheet from <code>App.CSS_URI</code> provided in <code>config.xml</code>.
-   Store it in <code>App.css</code> & dispatch <code>AppEvent.APP_STYLE</code>.
+   Store it in <code>App.css</code> & dispatch <code>BootstrapEvent.APP_STYLE</code>.
    </p><br>
 <span class="label">Example</span>
 <br><div class='listing'><pre>
@@ -291,7 +293,7 @@ showHideInherited();
 </table>
 <div class="detailBody">
 <code>protected function retry():void</code><p>
-   A method in the sequence chain failed - make retry attempts at each phase or dispatch the <code>AppEvent.APP_FAILURE</code> event.
+   A method in the sequence chain failed - make retry attempts at each phase or dispatch the <code>BootstrapEvent.APP_FAILURE</code> event.
    </p></div>
 <a name="run()"></a>
 <table cellspacing="0" cellpadding="0" class="detailHeader">
@@ -301,12 +303,12 @@ showHideInherited();
 </table>
 <div class="detailBody">
 <code>protected function run():void</code><p>
-   Iterate through the <code>_sequenceChain</code> method & fire the <code>AppEvent.APP_INIT</code> event on completion.
+   Iterate through the <code>_sequenceChain</code> method & fire the <code>BootstrapEvent.APP_INIT</code> event on completion.
    </p><p>
 <span class="label">See also</span>
 </p>
 <div class="seeAlso">
-<a href="../events/AppEvent.html" target="">sekati.events.AppEvent</a>
+<a href="../events/BootstrapEvent.html" target="">sekati.events.BootstrapEvent</a>
 </div>
 </div>
 <br>

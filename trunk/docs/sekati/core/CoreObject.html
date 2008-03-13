@@ -71,6 +71,7 @@ if (!isEclipse() || window.name != ECLIPSE_FRAME_NAME) {titleBar_setSubTitle("Cl
 <div class="summarySignature">
 <a class="signatureLink" href="#destroy()">destroy</a>():void</div>
 <div class="summaryTableDescription">
+   
    Clean and destroy object instance contents/self for garbage collection.</div>
 </td><td class="summaryTableOwnerCol">CoreObject</td>
 </tr>
@@ -79,7 +80,9 @@ if (!isEclipse() || window.name != ECLIPSE_FRAME_NAME) {titleBar_setSubTitle("Cl
 <div class="summarySignature">
 <a class="signatureLink" href="#toString()">toString</a>():String</div>
 <div class="summaryTableDescription">
-   Return a String Representation of the object.</div>
+   
+   Return the Fully Qualified Class Name string representation of
+   the instance object via <code>sekati.reflect.Stringifier</code>.</div>
 </td><td class="summaryTableOwnerCol">CoreObject</td>
 </tr>
 </table>
@@ -112,6 +115,7 @@ showHideInherited();
 </table>
 <div class="detailBody">
 <code>public function destroy():void</code><p>
+   
    Clean and destroy object instance contents/self for garbage collection.
    Always call destroy() before deleting last object pointer.
    </p></div>
@@ -123,7 +127,9 @@ showHideInherited();
 </table>
 <div class="detailBody">
 <code>public function toString():String</code><p>
-   Return a String Representation of the object.
+   
+   Return the Fully Qualified Class Name string representation of
+   the instance object via <code>sekati.reflect.Stringifier</code>.
    </p><p></p>
 <span class="label">Returns</span>
 <table border="0" cellspacing="0" cellpadding="0">
