@@ -151,6 +151,13 @@ if (!isEclipse() || window.name != ECLIPSE_FRAME_NAME) {titleBar_setSubTitle("AÂ
    Add a new color filter.</td>
 </tr>
 <tr>
+<td colspan="2" class="idxrow"><a onclick="javascript:loadClassListFrame('sekati/events/class-list.html');" href="sekati/events/AppEventDispatcher.html#addEventListener()">addEventListener</a>(type, listener, useCapture, priority, useWeakReference) &mdash; Method in class sekati.events.<a onclick="javascript:loadClassListFrame('sekati/events/class-list.html');" href="sekati/events/AppEventDispatcher.html">AppEventDispatcher</a></td>
+</tr>
+<tr>
+<td width="20"></td><td>
+   </td>
+</tr>
+<tr>
 <td colspan="2" class="idxrow"><a onclick="javascript:loadClassListFrame('sekati/external/class-list.html');" href="sekati/external/SWFAddress.html#addEventListener()">addEventListener</a>(type, listener) &mdash; Static method in class sekati.external.<a onclick="javascript:loadClassListFrame('sekati/external/class-list.html');" href="sekati/external/SWFAddress.html">SWFAddress</a></td>
 </tr>
 <tr>
@@ -395,14 +402,14 @@ if (!isEclipse() || window.name != ECLIPSE_FRAME_NAME) {titleBar_setSubTitle("AÂ
    </td>
 </tr>
 <tr>
-<td colspan="2" class="idxrow"><a onclick="javascript:loadClassListFrame('sekati/events/class-list.html');" href="sekati/events/AppEvent.html#APP_CONFIG">APP_CONFIG</a> &mdash; Constant static property in class sekati.events.<a onclick="javascript:loadClassListFrame('sekati/events/class-list.html');" href="sekati/events/AppEvent.html">AppEvent</a></td>
+<td colspan="2" class="idxrow"><a onclick="javascript:loadClassListFrame('sekati/events/class-list.html');" href="sekati/events/BootstrapEvent.html#APP_CONFIG">APP_CONFIG</a> &mdash; Constant static property in class sekati.events.<a onclick="javascript:loadClassListFrame('sekati/events/class-list.html');" href="sekati/events/BootstrapEvent.html">BootstrapEvent</a></td>
 </tr>
 <tr>
 <td width="20"></td><td>
    </td>
 </tr>
 <tr>
-<td colspan="2" class="idxrow"><a onclick="javascript:loadClassListFrame('sekati/events/class-list.html');" href="sekati/events/AppEvent.html#APP_DATA">APP_DATA</a> &mdash; Constant static property in class sekati.events.<a onclick="javascript:loadClassListFrame('sekati/events/class-list.html');" href="sekati/events/AppEvent.html">AppEvent</a></td>
+<td colspan="2" class="idxrow"><a onclick="javascript:loadClassListFrame('sekati/events/class-list.html');" href="sekati/events/BootstrapEvent.html#APP_DATA">APP_DATA</a> &mdash; Constant static property in class sekati.events.<a onclick="javascript:loadClassListFrame('sekati/events/class-list.html');" href="sekati/events/BootstrapEvent.html">BootstrapEvent</a></td>
 </tr>
 <tr>
 <td width="20"></td><td>
@@ -413,10 +420,11 @@ if (!isEclipse() || window.name != ECLIPSE_FRAME_NAME) {titleBar_setSubTitle("AÂ
 </tr>
 <tr>
 <td width="20"></td><td>
-  Application Events fired during the bootstrap process of SASAPI.</td>
+  AppEvent provides a baseline application event object 
+  with optional data transport capabilities.</td>
 </tr>
 <tr>
-<td colspan="2" class="idxrow"><a onclick="javascript:loadClassListFrame('sekati/events/class-list.html');" href="sekati/events/AppEvent.html#AppEvent()">AppEvent</a>(type, bubbles, cancelable) &mdash; Constructor in class sekati.events.<a onclick="javascript:loadClassListFrame('sekati/events/class-list.html');" href="sekati/events/AppEvent.html">AppEvent</a></td>
+<td colspan="2" class="idxrow"><a onclick="javascript:loadClassListFrame('sekati/events/class-list.html');" href="sekati/events/AppEvent.html#AppEvent()">AppEvent</a>(type, data, bubbles, cancelable) &mdash; Constructor in class sekati.events.<a onclick="javascript:loadClassListFrame('sekati/events/class-list.html');" href="sekati/events/AppEvent.html">AppEvent</a></td>
 </tr>
 <tr>
 <td width="20"></td><td>
@@ -424,21 +432,37 @@ if (!isEclipse() || window.name != ECLIPSE_FRAME_NAME) {titleBar_setSubTitle("AÂ
    </td>
 </tr>
 <tr>
-<td colspan="2" class="idxrow"><a onclick="javascript:loadClassListFrame('sekati/events/class-list.html');" href="sekati/events/AppEvent.html#APP_FAIL">APP_FAIL</a> &mdash; Constant static property in class sekati.events.<a onclick="javascript:loadClassListFrame('sekati/events/class-list.html');" href="sekati/events/AppEvent.html">AppEvent</a></td>
+<td colspan="2" class="idxrow"><a onclick="javascript:loadClassListFrame('sekati/events/class-list.html');" href="sekati/events/AppEventDispatcher.html">AppEventDispatcher</a> &mdash; Class in package <a onclick="javascript:loadClassListFrame('sekati/events/class-list.html');" href="sekati/events/package-detail.html">sekati.events</a></td>
+</tr>
+<tr>
+<td width="20"></td><td>
+  AppEventDispatcher
+  </td>
+</tr>
+<tr>
+<td colspan="2" class="idxrow"><a onclick="javascript:loadClassListFrame('sekati/events/class-list.html');" href="sekati/events/AppEventDispatcher.html#AppEventDispatcher()">AppEventDispatcher</a>($) &mdash; Constructor in class sekati.events.<a onclick="javascript:loadClassListFrame('sekati/events/class-list.html');" href="sekati/events/AppEventDispatcher.html">AppEventDispatcher</a></td>
+</tr>
+<tr>
+<td width="20"></td><td>
+   AppEventDispatcher Singleton Constructor
+   </td>
+</tr>
+<tr>
+<td colspan="2" class="idxrow"><a onclick="javascript:loadClassListFrame('sekati/events/class-list.html');" href="sekati/events/BootstrapEvent.html#APP_FAIL">APP_FAIL</a> &mdash; Constant static property in class sekati.events.<a onclick="javascript:loadClassListFrame('sekati/events/class-list.html');" href="sekati/events/BootstrapEvent.html">BootstrapEvent</a></td>
 </tr>
 <tr>
 <td width="20"></td><td>
    </td>
 </tr>
 <tr>
-<td colspan="2" class="idxrow"><a onclick="javascript:loadClassListFrame('sekati/events/class-list.html');" href="sekati/events/AppEvent.html#APP_INIT">APP_INIT</a> &mdash; Constant static property in class sekati.events.<a onclick="javascript:loadClassListFrame('sekati/events/class-list.html');" href="sekati/events/AppEvent.html">AppEvent</a></td>
+<td colspan="2" class="idxrow"><a onclick="javascript:loadClassListFrame('sekati/events/class-list.html');" href="sekati/events/BootstrapEvent.html#APP_INIT">APP_INIT</a> &mdash; Constant static property in class sekati.events.<a onclick="javascript:loadClassListFrame('sekati/events/class-list.html');" href="sekati/events/BootstrapEvent.html">BootstrapEvent</a></td>
 </tr>
 <tr>
 <td width="20"></td><td>
    </td>
 </tr>
 <tr>
-<td colspan="2" class="idxrow"><a onclick="javascript:loadClassListFrame('sekati/events/class-list.html');" href="sekati/events/AppEvent.html#APP_LOAD">APP_LOAD</a> &mdash; Constant static property in class sekati.events.<a onclick="javascript:loadClassListFrame('sekati/events/class-list.html');" href="sekati/events/AppEvent.html">AppEvent</a></td>
+<td colspan="2" class="idxrow"><a onclick="javascript:loadClassListFrame('sekati/events/class-list.html');" href="sekati/events/BootstrapEvent.html#APP_LOAD">APP_LOAD</a> &mdash; Constant static property in class sekati.events.<a onclick="javascript:loadClassListFrame('sekati/events/class-list.html');" href="sekati/events/BootstrapEvent.html">BootstrapEvent</a></td>
 </tr>
 <tr>
 <td width="20"></td><td>
@@ -456,7 +480,7 @@ if (!isEclipse() || window.name != ECLIPSE_FRAME_NAME) {titleBar_setSubTitle("AÂ
 </tr>
 <tr>
 <td width="20"></td><td>
-  AppLoader provides a baseline (invisible) preloader facility for SWF files that implement the core API.</td>
+  AppLoader provides a baseline (invisible) preloader facility for Application SWF files that implement the core API.</td>
 </tr>
 <tr>
 <td colspan="2" class="idxrow"><a onclick="javascript:loadClassListFrame('sekati/load/class-list.html');" href="sekati/load/AppLoader.html#AppLoader()">AppLoader</a>(init) &mdash; Constructor in class sekati.load.<a onclick="javascript:loadClassListFrame('sekati/load/class-list.html');" href="sekati/load/AppLoader.html">AppLoader</a></td>
@@ -474,7 +498,7 @@ if (!isEclipse() || window.name != ECLIPSE_FRAME_NAME) {titleBar_setSubTitle("AÂ
    Application name as defined in <code>config.xml</code>.</td>
 </tr>
 <tr>
-<td colspan="2" class="idxrow"><a onclick="javascript:loadClassListFrame('sekati/events/class-list.html');" href="sekati/events/AppEvent.html#APP_STYLE">APP_STYLE</a> &mdash; Constant static property in class sekati.events.<a onclick="javascript:loadClassListFrame('sekati/events/class-list.html');" href="sekati/events/AppEvent.html">AppEvent</a></td>
+<td colspan="2" class="idxrow"><a onclick="javascript:loadClassListFrame('sekati/events/class-list.html');" href="sekati/events/BootstrapEvent.html#APP_STYLE">APP_STYLE</a> &mdash; Constant static property in class sekati.events.<a onclick="javascript:loadClassListFrame('sekati/events/class-list.html');" href="sekati/events/BootstrapEvent.html">BootstrapEvent</a></td>
 </tr>
 <tr>
 <td width="20"></td><td>
