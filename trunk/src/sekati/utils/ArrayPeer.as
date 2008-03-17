@@ -1,6 +1,6 @@
 /**
  * sekati.utils.ArrayPeer
- * @version 1.0.1
+ * @version 1.0.2
  * @author jason m horwitz | sekati.com
  * Copyright (C) 2008  jason m horwitz, Sekat LLC. All Rights Reserved.
  * Released under the MIT License: http://www.opensource.org/licenses/mit-license.php
@@ -8,14 +8,17 @@
  * Adopted from di-as3 as dependency only.
  */
 package sekati.utils {
-	/**
+
+	/**
 	 * Helper for shortcutting searching in arrays
 	 */
 	public class ArrayPeer {
-		public static const FIRST : String = 'first';
+
+		public static const FIRST : String = 'first';
 		public static const LAST : String = 'last';
 		public static const ALL : String = 'all';
-		/** 
+
+		/** 
 		 * Searches an array using simple or complex conditions.
 		 * <p>The conditons are evaluated and compared strictly equal and the item must match all conditions to be in the returned array.</p>
 		 * <p>Conditions with Class, Function or RegExp as the expected values are subject to some additional rules regarding matches. </p>
@@ -74,34 +77,34 @@ package sekati.utils {
 			}
 			
 			// otherwise, find all
-			return array.filter( function(index : int, array : Array ):Boolean {
+			return array.filter( function(item : Object, index : int, array : Array ):Boolean {
+				if (!item) return null;
 				return matches( array[ index ], conditions );
 			} );
-			/*			
-			return array.filter( function( item : Object, index : int, array : Array ):Boolean {
-				return matches( array[ index ], conditions );
-			} );
-			 */
 		}
-		/**
+
+		/**
 		 * Shortcut for retrieving the first matching item
 		 */
 		public static function findFirst( array : Array, conditions : Object ) : * {
 			return find( array, conditions, {find:FIRST} );			
 		}
-		/**
+
+		/**
 		 * Shortcut for retrieving the last matching item
 		 */
 		public static function findLast( array : Array, conditions : Object ) : * {
 			return find( array, conditions, {find:LAST} );			
 		}
-		/**
+
+		/**
 		 * Shortcut for searching by a single property
 		 */
 		public static function findAll( array : Array, conditions : Object ) : Array {
 			return find( array, conditions, {find:ALL} ) as Array;
 		}
-		/**
+
+		/**
 		 * Shortcut for searching by a single property
 		 */
 		public static function findBy( array : Array, property : String, value : *, options : Object = null ) : * {
@@ -109,7 +112,8 @@ package sekati.utils {
 			conditions[ property ] = value;
 			return find( array, conditions, options );
 		}
-		/**
+
+		/**
 		 * Checks it the item matches the conditions
 		 *
 		 * @private
@@ -184,7 +188,8 @@ package sekati.utils {
 			// yay, conditions match!
 			return true;
 		}
-		/** 
+
+		/** 
 		 * Checks if a value matches the expected value
 		 *
 		 * @private
@@ -218,7 +223,8 @@ package sekati.utils {
 			// literal matcher
 			return ( actual === expected );
 		}
-		/**
+
+		/**
 		 * ArrayPeer Static Constructor
 		 */
 		public function ArrayPeer() {
