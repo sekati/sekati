@@ -4,7 +4,7 @@
 <META http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <link rel="stylesheet" href="../../style.css" type="text/css" media="screen">
 <link rel="stylesheet" href="../../print.css" type="text/css" media="print">
-<meta content="Viewport,sekati.view.Viewport,PROPORTION_HEIGHT,PROPORTION_WIDTH,RATIO,_bb,_instance,_target,_tb,_vp,$,bottom,bottomBox,centerx,centery,height,top,topBox,viewport,width,x,y,destroy,getInstance,init,update" name="keywords">
+<meta content="Viewport,sekati.view.Viewport,BOTTOM_CONSTRAINT,PROPORTION_HEIGHT,PROPORTION_WIDTH,RATIO,_bb,_instance,_target,_tb,_vp,$,bottom,bottomBox,centerx,centery,height,proportionHeight,proportionWidth,ratio,top,topBox,viewport,width,x,y,destroy,getInstance,init,update" name="keywords">
 <title>sekati.view.Viewport</title>
 </head>
 <body>
@@ -46,7 +46,19 @@ if (!isEclipse() || window.name != ECLIPSE_FRAME_NAME) {titleBar_setSubTitle("Cl
   By default these are set at a 16:9 proportion and maintain the proportion to <code>Canvas.stage</code>. A
   <code>ViewportEvent.UPDATE</code> is dispatched when the Viewport is updated. This condenses <code>StageDisplay</code>
   events and assists in liquid layouts which require a proportional relationship within a Viewport.
+  <p></p>
+<br>
+<span class="label">Example</span>
+<br><div class='listing'><pre>
+  // Note: Document class extends sekati.display.Canvas
+  import sekati.view.
+  import sekati.display.
   
+  // create an application viewport
+  StageDisplay.$.init( );
+  Viewport.$.init( this, 25 );
+  Viewport.$.update( );
+  </pre></div>
   <p></p>
 <p>
 <span class="classHeaderTableLabel">See also</span>
@@ -99,6 +111,21 @@ if (!isEclipse() || window.name != ECLIPSE_FRAME_NAME) {titleBar_setSubTitle("Cl
 </td><td class="summaryTableOwnerCol">Viewport</td>
 </tr>
 <tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a class="signatureLink" href="#proportionHeight">proportionHeight</a> : uint<div class="summaryTableDescription">[read-only]
+   Return ratio proportional height.</div>
+</td><td class="summaryTableOwnerCol">Viewport</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a class="signatureLink" href="#proportionWidth">proportionWidth</a> : uint<div class="summaryTableDescription">[read-only]
+   Return ratio proportional width.</div>
+</td><td class="summaryTableOwnerCol">Viewport</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a class="signatureLink" href="#ratio">ratio</a> : Number<div class="summaryTableDescription">[read-only]
+   Return viewport ratio.</div>
+</td><td class="summaryTableOwnerCol">Viewport</td>
+</tr>
+<tr class="">
 <td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a class="signatureLink" href="#top">top</a> : int<div class="summaryTableDescription">[read-only]
    Return top of the visible viewport.</div>
 </td><td class="summaryTableOwnerCol">Viewport</td>
@@ -139,6 +166,10 @@ if (!isEclipse() || window.name != ECLIPSE_FRAME_NAME) {titleBar_setSubTitle("Cl
 </tr>
 <tr class="">
 <td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a class="signatureLink" href="#_bb">_bb</a> : Shape<div class="summaryTableDescription"></div>
+</td><td class="summaryTableOwnerCol">Viewport</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a class="signatureLink" href="#BOTTOM_CONSTRAINT">BOTTOM_CONSTRAINT</a> : uint<div class="summaryTableDescription"></div>
 </td><td class="summaryTableOwnerCol">Viewport</td>
 </tr>
 <tr class="">
@@ -210,19 +241,10 @@ if (!isEclipse() || window.name != ECLIPSE_FRAME_NAME) {titleBar_setSubTitle("Cl
 <tr class="">
 <td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
 <div class="summarySignature">
-<a class="signatureLink" href="#init()">init</a>(target:DisplayObjectContainer, propWidth:uint = 16, propHeight:uint = 9, lbColor:int = 0x000000, vpColor:uint = 0xFFFFFF, lbVisible:Boolean = true, vpVisible:Boolean = false):void</div>
+<a class="signatureLink" href="#init()">init</a>(target:DisplayObjectContainer, bottomConstraint:uint = 0, proportionWidth:uint = 16, proportionHeight:uint = 9, lbColor:int = 0x000000, vpColor:uint = 0xFFFFFF, lbVisible:Boolean = true, vpVisible:Boolean = false):void</div>
 <div class="summaryTableDescription">
    Parameterized Viewport initialization.</div>
 </td><td class="summaryTableOwnerCol">Viewport</td>
-</tr>
-</table>
-</div>
-<a name="protectedMethodSummary"></a>
-<div class="summarySection">
-<div class="summaryTableTitle">Protected Methods</div>
-<table id="summaryTableProtectedMethod" class="summaryTable " cellpadding="3" cellspacing="0">
-<tr>
-<th>&nbsp;</th><th colspan="2">Method</th><th class="summaryTableOwnerCol">Defined&nbsp;by</th>
 </tr>
 <tr class="">
 <td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
@@ -292,6 +314,15 @@ showHideInherited();
 <code>&nbsp;&nbsp;&nbsp;&nbsp;public function get bottomBox():Shape</code>
 <br>
 </div>
+<a name="BOTTOM_CONSTRAINT"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">BOTTOM_CONSTRAINT</td><td class="detailHeaderType">property</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>protected var BOTTOM_CONSTRAINT:uint</code>
+</div>
 <a name="centerx"></a>
 <table cellspacing="0" cellpadding="0" class="detailHeader">
 <tr>
@@ -343,6 +374,20 @@ showHideInherited();
 <div class="detailBody">
 <code>protected static var _instance:<a href="../view/Viewport.html">Viewport</a></code>
 </div>
+<a name="proportionHeight"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">proportionHeight</td><td class="detailHeaderType">property</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>proportionHeight:uint</code>&nbsp;&nbsp;[read-only]<p>
+   Return ratio proportional height.
+   </p><span class="label">Implementation</span>
+<br>
+<code>&nbsp;&nbsp;&nbsp;&nbsp;public function get proportionHeight():uint</code>
+<br>
+</div>
 <a name="PROPORTION_HEIGHT"></a>
 <table cellspacing="0" cellpadding="0" class="detailHeader">
 <tr>
@@ -352,6 +397,20 @@ showHideInherited();
 <div class="detailBody">
 <code>protected var PROPORTION_HEIGHT:uint</code>
 </div>
+<a name="proportionWidth"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">proportionWidth</td><td class="detailHeaderType">property</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>proportionWidth:uint</code>&nbsp;&nbsp;[read-only]<p>
+   Return ratio proportional width.
+   </p><span class="label">Implementation</span>
+<br>
+<code>&nbsp;&nbsp;&nbsp;&nbsp;public function get proportionWidth():uint</code>
+<br>
+</div>
 <a name="PROPORTION_WIDTH"></a>
 <table cellspacing="0" cellpadding="0" class="detailHeader">
 <tr>
@@ -360,6 +419,20 @@ showHideInherited();
 </table>
 <div class="detailBody">
 <code>protected var PROPORTION_WIDTH:uint</code>
+</div>
+<a name="ratio"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">ratio</td><td class="detailHeaderType">property</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>ratio:Number</code>&nbsp;&nbsp;[read-only]<p>
+   Return viewport ratio.
+   </p><span class="label">Implementation</span>
+<br>
+<code>&nbsp;&nbsp;&nbsp;&nbsp;public function get ratio():Number</code>
+<br>
 </div>
 <a name="RATIO"></a>
 <table cellspacing="0" cellpadding="0" class="detailHeader">
@@ -540,54 +613,61 @@ showHideInherited();
 </tr>
 </table>
 <div class="detailBody">
-<code>public function init(target:DisplayObjectContainer, propWidth:uint = 16, propHeight:uint = 9, lbColor:int = 0x000000, vpColor:uint = 0xFFFFFF, lbVisible:Boolean = true, vpVisible:Boolean = false):void</code><p>
+<code>public function init(target:DisplayObjectContainer, bottomConstraint:uint = 0, proportionWidth:uint = 16, proportionHeight:uint = 9, lbColor:int = 0x000000, vpColor:uint = 0xFFFFFF, lbVisible:Boolean = true, vpVisible:Boolean = false):void</code><p>
    Parameterized Viewport initialization.
    </p><span class="label">Parameters</span>
 <table border="0" cellspacing="0" cellpadding="0">
 <tr>
-<td width="20px"></td><td><code><span class="label">target</span>:DisplayObjectContainer</code> &mdash;   target viewport container object.
+<td width="20px"></td><td><code><span class="label">target</span>:DisplayObjectContainer</code> &mdash;    target viewport container object.
    </td>
 </tr>
 <tr>
 <td class="paramSpacer">&nbsp;</td>
 </tr>
 <tr>
-<td width="20px"></td><td><code><span class="label">propWidth</span>:uint</code> (default = <code>16</code>)<code></code> &mdash;  proportional width of the viewport.
+<td width="20px"></td><td><code><span class="label">bottomConstraint</span>:uint</code> (default = <code>0</code>)<code></code> &mdash;  defines the minimum bottom letter-box height.
    </td>
 </tr>
 <tr>
 <td class="paramSpacer">&nbsp;</td>
 </tr>
 <tr>
-<td width="20px"></td><td><code><span class="label">propHeight</span>:uint</code> (default = <code>9</code>)<code></code> &mdash;  proportional height of the viewport.
+<td width="20px"></td><td><code><span class="label">proportionWidth</span>:uint</code> (default = <code>16</code>)<code></code> &mdash;  proportional width of the viewport.
    </td>
 </tr>
 <tr>
 <td class="paramSpacer">&nbsp;</td>
 </tr>
 <tr>
-<td width="20px"></td><td><code><span class="label">lbColor</span>:int</code> (default = <code>0x000000</code>)<code></code> &mdash;   letter-box color.
+<td width="20px"></td><td><code><span class="label">proportionHeight</span>:uint</code> (default = <code>9</code>)<code></code> &mdash;  proportional height of the viewport.
    </td>
 </tr>
 <tr>
 <td class="paramSpacer">&nbsp;</td>
 </tr>
 <tr>
-<td width="20px"></td><td><code><span class="label">vpColor</span>:uint</code> (default = <code>0xFFFFFF</code>)<code></code> &mdash;   viewport color.
+<td width="20px"></td><td><code><span class="label">lbColor</span>:int</code> (default = <code>0x000000</code>)<code></code> &mdash;    letter-box color.
    </td>
 </tr>
 <tr>
 <td class="paramSpacer">&nbsp;</td>
 </tr>
 <tr>
-<td width="20px"></td><td><code><span class="label">lbVisible</span>:Boolean</code> (default = <code>true</code>)<code></code> &mdash;  display the letterbox DisplayObjects.
+<td width="20px"></td><td><code><span class="label">vpColor</span>:uint</code> (default = <code>0xFFFFFF</code>)<code></code> &mdash;    viewport color.
    </td>
 </tr>
 <tr>
 <td class="paramSpacer">&nbsp;</td>
 </tr>
 <tr>
-<td width="20px"></td><td><code><span class="label">vpVisible</span>:Boolean</code> (default = <code>false</code>)<code></code> &mdash;  display the viewport DisplayObject.
+<td width="20px"></td><td><code><span class="label">lbVisible</span>:Boolean</code> (default = <code>true</code>)<code></code> &mdash;   display the letterbox DisplayObjects.
+   </td>
+</tr>
+<tr>
+<td class="paramSpacer">&nbsp;</td>
+</tr>
+<tr>
+<td width="20px"></td><td><code><span class="label">vpVisible</span>:Boolean</code> (default = <code>false</code>)<code></code> &mdash;   display the viewport DisplayObject.
    </td>
 </tr>
 </table>
@@ -599,7 +679,7 @@ showHideInherited();
 </tr>
 </table>
 <div class="detailBody">
-<code>protected function update(e:<a href="../events/StageEvent.html">StageEvent</a> = null):void</code><p>
+<code>public function update(e:<a href="../events/StageEvent.html">StageEvent</a> = null):void</code><p>
    Update the Viewport confines.
    </p><span class="label">Parameters</span>
 <table border="0" cellspacing="0" cellpadding="0">
