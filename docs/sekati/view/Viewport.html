@@ -4,7 +4,7 @@
 <META http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <link rel="stylesheet" href="../../style.css" type="text/css" media="screen">
 <link rel="stylesheet" href="../../print.css" type="text/css" media="print">
-<meta content="Viewport,sekati.view.Viewport,BOTTOM_CONSTRAINT,PROPORTION_HEIGHT,PROPORTION_WIDTH,RATIO,_bb,_instance,_target,_tb,_vp,$,bottom,bottomBox,centerx,centery,height,proportionHeight,proportionWidth,ratio,top,topBox,viewport,width,x,y,destroy,getInstance,init,update" name="keywords">
+<meta content="Viewport,sekati.view.Viewport,BOTTOM_CONSTRAINT,PROPORTION_HEIGHT,PROPORTION_WIDTH,RATIO,_bb,_instance,_target,_tb,_vp,$,bottom,bottomBox,centerx,centery,height,proportionHeight,proportionWidth,ratio,top,topBox,viewport,width,x,y,destroy,getInstance,init,render" name="keywords">
 <title>sekati.view.Viewport</title>
 </head>
 <body>
@@ -44,7 +44,7 @@ if (!isEclipse() || window.name != ECLIPSE_FRAME_NAME) {titleBar_setSubTitle("Cl
 <p></p>
   Viewport provides a faux application viewport via a set of letterboxing DisplayObject's to confine content.
   By default these are set at a 16:9 proportion and maintain the proportion to <code>Canvas.stage</code>. A
-  <code>ViewportEvent.UPDATE</code> is dispatched when the Viewport is updated. This condenses <code>StageDisplay</code>
+  <code>ViewportEvent.RENDER</code> is dispatched when the Viewport is updated. This condenses <code>StageDisplay</code>
   events and assists in liquid layouts which require a proportional relationship within a Viewport.
   <p></p>
 <br>
@@ -57,7 +57,7 @@ if (!isEclipse() || window.name != ECLIPSE_FRAME_NAME) {titleBar_setSubTitle("Cl
   // create an application viewport
   StageDisplay.$.init( );
   Viewport.$.init( this, 25 );
-  Viewport.$.update( );
+  Viewport.$.render( );
   </pre></div>
   <p></p>
 <p>
@@ -249,7 +249,7 @@ if (!isEclipse() || window.name != ECLIPSE_FRAME_NAME) {titleBar_setSubTitle("Cl
 <tr class="">
 <td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
 <div class="summarySignature">
-<a class="signatureLink" href="#update()">update</a>(e:<a href="../events/StageEvent.html">StageEvent</a> = null):void</div>
+<a class="signatureLink" href="#render()">render</a>(e:<a href="../events/StageEvent.html">StageEvent</a> = null):void</div>
 <div class="summaryTableDescription">
    Update the Viewport confines.</div>
 </td><td class="summaryTableOwnerCol">Viewport</td>
@@ -672,14 +672,14 @@ showHideInherited();
 </tr>
 </table>
 </div>
-<a name="update()"></a>
+<a name="render()"></a>
 <table cellspacing="0" cellpadding="0" class="detailHeader">
 <tr>
-<td class="detailHeaderName">update</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td>
+<td class="detailHeaderName">render</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td>
 </tr>
 </table>
 <div class="detailBody">
-<code>public function update(e:<a href="../events/StageEvent.html">StageEvent</a> = null):void</code><p>
+<code>public function render(e:<a href="../events/StageEvent.html">StageEvent</a> = null):void</code><p>
    Update the Viewport confines.
    </p><span class="label">Parameters</span>
 <table border="0" cellspacing="0" cellpadding="0">
