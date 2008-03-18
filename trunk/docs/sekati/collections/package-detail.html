@@ -47,12 +47,23 @@ if (!isEclipse() || window.name != ECLIPSE_FRAME_NAME) {titleBar_setSubTitle("Pa
   ICollection defines an object which represents a collection of objects.</td>
 </tr>
 <tr class="prow1">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><i><a href="IDestructiveIterator.html">IDestructiveIterator</a></i></td><td class="summaryTableLastCol">
+  IDestructiveIterator is a marker interface marking Iterators which are "destructive"; 
+  meaning they act directly on the collection they are iterating removing elements along its way.</td>
+</tr>
+<tr class="prow0">
 <td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><i><a href="IIterator.html">IIterator</a></i></td><td class="summaryTableLastCol">
   IIterator defines how iterating collections of items is handled.</td>
 </tr>
-<tr class="prow0">
+<tr class="prow1">
 <td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><i><a href="ILoopableIterator.html">ILoopableIterator</a></i></td><td class="summaryTableLastCol">
   ILoopableIterator defines how loopable, nondestructive, bi-directional iterating of collections of items is handled.</td>
+</tr>
+<tr class="prow0">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><i><a href="IPointerIterator.html">IPointerIterator</a></i></td><td class="summaryTableLastCol">
+  IPointerIterator is a marker interface marking Iterators which are "non-destructive";
+  meaning they implement a "pointer" to track iteration and do <i>not</i> act directly 
+  on the collection they are iterating: the original collection is left intact.</td>
 </tr>
 <tr class="prow1">
 <td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><i><a href="IQueue.html">IQueue</a></i></td><td class="summaryTableLastCol">
@@ -74,30 +85,31 @@ if (!isEclipse() || window.name != ECLIPSE_FRAME_NAME) {titleBar_setSubTitle("Pa
   ArrayBidirectionalIterator provides a non-destructive, pointer-based, Bi-Directional Array Iterator.</td>
 </tr>
 <tr class="prow0">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a href="ArrayBounceIterator.html">ArrayBounceIterator</a></td><td class="summaryTableLastCol">
+  ArrayBounceIterator provides a non-destructive, pointer-based, bouncing Array Iterator 
+  which iterates to the end of the array then reverses direction backward & forward.</td>
+</tr>
+<tr class="prow1">
 <td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a href="ArrayCollection.html">ArrayCollection</a></td><td class="summaryTableLastCol">
   Array based Collection
   </td>
 </tr>
-<tr class="prow1">
+<tr class="prow0">
 <td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a href="ArrayIterator.html">ArrayIterator</a></td><td class="summaryTableLastCol">
   Array based Iterator
   </td>
 </tr>
-<tr class="prow0">
+<tr class="prow1">
 <td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a href="ArrayLoopableIterator.html">ArrayLoopableIterator</a></td><td class="summaryTableLastCol">
   ArrayLoopableIterator provides a non-destructive, pointer-based, Looping Bi-Directional Array Iterator.</td>
 </tr>
-<tr class="prow1">
+<tr class="prow0">
 <td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a href="ArrayQueue.html">ArrayQueue</a></td><td class="summaryTableLastCol">
   Array based Queue data structure.</td>
 </tr>
-<tr class="prow0">
+<tr class="prow1">
 <td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a href="ArrayStack.html">ArrayStack</a></td><td class="summaryTableLastCol">
   Array based Stack data structure.</td>
-</tr>
-<tr class="prow1">
-<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a href="ArrayYoyoIterator.html">ArrayYoyoIterator</a></td><td class="summaryTableLastCol">
-  ArrayYoyoIterator provides a non-destructive, pointer-based, Yo-yo'ing Array Iterator.</td>
 </tr>
 <tr class="prow0">
 <td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a href="DisplayListCollection.html">DisplayListCollection</a></td><td class="summaryTableLastCol">
