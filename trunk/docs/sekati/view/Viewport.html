@@ -51,11 +51,9 @@ if (!isEclipse() || window.name != ECLIPSE_FRAME_NAME) {titleBar_setSubTitle("Cl
 <span class="label">Example</span>
 <br><div class='listing'><pre>
   // Note: Document class extends sekati.display.Canvas
-  import sekati.view.
-  import sekati.display.
-  
-  // create an application viewport
+  // initialize the StageDisplay
   StageDisplay.$.init( );
+  // initialize a viewport with a 25 pixel minimum footer.
   Viewport.$.init( this, 25 );
   Viewport.$.render( );
   </pre></div>
