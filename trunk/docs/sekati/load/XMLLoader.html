@@ -42,15 +42,18 @@ if (!isEclipse() || window.name != ECLIPSE_FRAME_NAME) {titleBar_setSubTitle("Cl
 </tr>
 </table>
 <p></p>
-  XMLLoader (shockingly) handles the loading of XML documents.
-  <code>
-  var lo : XMLLoader = new XMLLoader( "my.xml" );
-  lo.addEventListener ( XMLEvent.ON_READY, xmlHandler );
+  XMLLoader handles the loading of XML documents.
+  <p></p>
+<br>
+<span class="label">Example</span>
+<br><div class='listing'><pre>
+  var loader : XMLLoader = new XMLLoader( "my.xml" );
+  loader.addEventListener ( XMLEvent.ON_READY, xmlHandler );
   var xmlHandler : Function = function(e:XMLEvent):void {
    trace( "w00t:\n\n" + e.data );
   };
-  lo.request( );
-  </code>
+  loader.request( );
+  </pre></div>
   <p></p>
 <br>
 <hr>
@@ -113,35 +116,35 @@ if (!isEclipse() || window.name != ECLIPSE_FRAME_NAME) {titleBar_setSubTitle("Cl
 <tr class="">
 <td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
 <div class="summarySignature">
-<a class="signatureLink" href="#httpStatusHandler()">httpStatusHandler</a>(event:HTTPStatusEvent):void</div>
+<a class="signatureLink" href="#httpStatusHandler()">httpStatusHandler</a>(e:HTTPStatusEvent):void</div>
 <div class="summaryTableDescription"></div>
 </td><td class="summaryTableOwnerCol">XMLLoader</td>
 </tr>
 <tr class="">
 <td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
 <div class="summarySignature">
-<a class="signatureLink" href="#ioErrorHandler()">ioErrorHandler</a>(event:IOErrorEvent):void</div>
+<a class="signatureLink" href="#ioErrorHandler()">ioErrorHandler</a>(e:IOErrorEvent):void</div>
 <div class="summaryTableDescription"></div>
 </td><td class="summaryTableOwnerCol">XMLLoader</td>
 </tr>
 <tr class="">
 <td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
 <div class="summarySignature">
-<a class="signatureLink" href="#openHandler()">openHandler</a>(event:Event):void</div>
+<a class="signatureLink" href="#openHandler()">openHandler</a>(e:Event):void</div>
 <div class="summaryTableDescription"></div>
 </td><td class="summaryTableOwnerCol">XMLLoader</td>
 </tr>
 <tr class="">
 <td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
 <div class="summarySignature">
-<a class="signatureLink" href="#progressHandler()">progressHandler</a>(event:ProgressEvent):void</div>
+<a class="signatureLink" href="#progressHandler()">progressHandler</a>(e:ProgressEvent):void</div>
 <div class="summaryTableDescription"></div>
 </td><td class="summaryTableOwnerCol">XMLLoader</td>
 </tr>
 <tr class="">
 <td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
 <div class="summarySignature">
-<a class="signatureLink" href="#securityErrorHandler()">securityErrorHandler</a>(event:SecurityErrorEvent):void</div>
+<a class="signatureLink" href="#securityErrorHandler()">securityErrorHandler</a>(e:SecurityErrorEvent):void</div>
 <div class="summaryTableDescription"></div>
 </td><td class="summaryTableOwnerCol">XMLLoader</td>
 </tr>
@@ -219,10 +222,10 @@ showHideInherited();
 </tr>
 </table>
 <div class="detailBody">
-<code>protected function httpStatusHandler(event:HTTPStatusEvent):void</code><span class="label">Parameters</span>
+<code>protected function httpStatusHandler(e:HTTPStatusEvent):void</code><span class="label">Parameters</span>
 <table border="0" cellspacing="0" cellpadding="0">
 <tr>
-<td width="20px"></td><td><code><span class="label">event</span>:HTTPStatusEvent</code></td>
+<td width="20px"></td><td><code><span class="label">e</span>:HTTPStatusEvent</code></td>
 </tr>
 </table>
 </div>
@@ -233,10 +236,10 @@ showHideInherited();
 </tr>
 </table>
 <div class="detailBody">
-<code>protected function ioErrorHandler(event:IOErrorEvent):void</code><span class="label">Parameters</span>
+<code>protected function ioErrorHandler(e:IOErrorEvent):void</code><span class="label">Parameters</span>
 <table border="0" cellspacing="0" cellpadding="0">
 <tr>
-<td width="20px"></td><td><code><span class="label">event</span>:IOErrorEvent</code></td>
+<td width="20px"></td><td><code><span class="label">e</span>:IOErrorEvent</code></td>
 </tr>
 </table>
 </div>
@@ -247,10 +250,10 @@ showHideInherited();
 </tr>
 </table>
 <div class="detailBody">
-<code>protected function openHandler(event:Event):void</code><span class="label">Parameters</span>
+<code>protected function openHandler(e:Event):void</code><span class="label">Parameters</span>
 <table border="0" cellspacing="0" cellpadding="0">
 <tr>
-<td width="20px"></td><td><code><span class="label">event</span>:Event</code></td>
+<td width="20px"></td><td><code><span class="label">e</span>:Event</code></td>
 </tr>
 </table>
 </div>
@@ -261,10 +264,10 @@ showHideInherited();
 </tr>
 </table>
 <div class="detailBody">
-<code>protected function progressHandler(event:ProgressEvent):void</code><span class="label">Parameters</span>
+<code>protected function progressHandler(e:ProgressEvent):void</code><span class="label">Parameters</span>
 <table border="0" cellspacing="0" cellpadding="0">
 <tr>
-<td width="20px"></td><td><code><span class="label">event</span>:ProgressEvent</code></td>
+<td width="20px"></td><td><code><span class="label">e</span>:ProgressEvent</code></td>
 </tr>
 </table>
 </div>
@@ -285,10 +288,10 @@ showHideInherited();
 </tr>
 </table>
 <div class="detailBody">
-<code>protected function securityErrorHandler(event:SecurityErrorEvent):void</code><span class="label">Parameters</span>
+<code>protected function securityErrorHandler(e:SecurityErrorEvent):void</code><span class="label">Parameters</span>
 <table border="0" cellspacing="0" cellpadding="0">
 <tr>
-<td width="20px"></td><td><code><span class="label">event</span>:SecurityErrorEvent</code></td>
+<td width="20px"></td><td><code><span class="label">e</span>:SecurityErrorEvent</code></td>
 </tr>
 </table>
 </div>
