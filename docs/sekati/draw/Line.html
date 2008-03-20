@@ -41,11 +41,11 @@ if (!isEclipse() || window.name != ECLIPSE_FRAME_NAME) {titleBar_setSubTitle("Cl
 <td class="classHeaderTableLabel">Inheritance</td><td class="inheritanceList">Line <img class="inheritArrow" alt="Inheritance" title="Inheritance" src="../../images/inherit-arrow.gif"> flash.display.Shape</td>
 </tr>
 <tr>
-<td class="classHeaderTableLabel">Implements</td><td><a href="IDrawable.html">IDrawable</a></td>
+<td class="classHeaderTableLabel">Implements</td><td><a href="ITweenableDrawing.html">ITweenableDrawing</a></td>
 </tr>
 </table>
 <p></p>
-  Line provides a Tweenable drawn line Shape.
+  Line provides a Tweenable line Shape.
   <p></p>
 <br>
 <hr>
@@ -168,7 +168,7 @@ if (!isEclipse() || window.name != ECLIPSE_FRAME_NAME) {titleBar_setSubTitle("Cl
 <a class="signatureLink" href="#clear()">clear</a>():void</div>
 <div class="summaryTableDescription">
    
-   Clear the graphics drawing.</div>
+   Clear the drawn graphics Shape.</div>
 </td><td class="summaryTableOwnerCol">Line</td>
 </tr>
 <tr class="">
@@ -177,7 +177,7 @@ if (!isEclipse() || window.name != ECLIPSE_FRAME_NAME) {titleBar_setSubTitle("Cl
 <a class="signatureLink" href="#draw()">draw</a>():void</div>
 <div class="summaryTableDescription">
    
-   Draw the graphic Shape without clearning.</div>
+   Draw in to the graphics Shape.</div>
 </td><td class="summaryTableOwnerCol">Line</td>
 </tr>
 <tr class="">
@@ -186,7 +186,7 @@ if (!isEclipse() || window.name != ECLIPSE_FRAME_NAME) {titleBar_setSubTitle("Cl
 <a class="signatureLink" href="#redraw()">redraw</a>():void</div>
 <div class="summaryTableDescription">
    
-   Clear the graphics Shape & redraw.</div>
+   Clear & draw in to the graphics Shape.</div>
 </td><td class="summaryTableOwnerCol">Line</td>
 </tr>
 </table>
@@ -488,9 +488,17 @@ showHideInherited();
 <br>
 <span class="label">Example</span>
 <br><div class='listing'><pre>
-   var line:Line = new Line( 0, 0, 100, 100, 1, 0xff00ff );
-   addChild( line );
-   Tweener.addTween( line, {sx:0, sy:0, ex:500, ey:250, color:0xffcc00, time:3, transition:"linear"} );
+   var line:Line = new Line(0, 0, 100, 100, 1, 0xff00ff);
+   
+   addChild(line);
+   
+   Tweener.addTween(line, {sx:50, sy:350, ex:700, ey:350, color:0xffff00, time:5, transition:"easeInOutQuart", onUpdate:renderLine});
+   Tweener.addTween(line, {sx:850, sy:50, ex:950, ey:0, color:0xffffff, time:5, delay:5, transition:"easeInQuart", onUpdate:renderLine});
+   
+   function renderLine():void {
+    line.draw();   // add to the existing drawing
+    //line.redraw();  // clear the drawing and redraw
+   }
    </pre></div>
    <p></p>
 </div>
@@ -505,7 +513,7 @@ showHideInherited();
 <div class="detailBody">
 <code>public function clear():void</code><p>
    
-   Clear the graphics drawing.
+   Clear the drawn graphics Shape.
    </p></div>
 <a name="draw()"></a>
 <table cellspacing="0" cellpadding="0" class="detailHeader">
@@ -516,7 +524,7 @@ showHideInherited();
 <div class="detailBody">
 <code>public function draw():void</code><p>
    
-   Draw the graphic Shape without clearning.
+   Draw in to the graphics Shape.
    </p></div>
 <a name="redraw()"></a>
 <table cellspacing="0" cellpadding="0" class="detailHeader">
@@ -527,7 +535,7 @@ showHideInherited();
 <div class="detailBody">
 <code>public function redraw():void</code><p>
    
-   Clear the graphics Shape & redraw.
+   Clear & draw in to the graphics Shape.
    </p></div>
 <br>
 <br>

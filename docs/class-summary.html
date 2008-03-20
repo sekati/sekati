@@ -183,7 +183,7 @@ if (!isEclipse() || window.name != ECLIPSE_FRAME_NAME) {titleBar_setSubTitle("Al
 <td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a href="sekati/draw/Bezier.html">Bezier</a>
 <br>
 </td><td class="summaryTableCol"><a onclick="javascript:loadClassListFrame('sekati/draw/class-list.html');" href="sekati/draw/package-detail.html">sekati.draw</a></td><td class="summaryTableLastCol">
-  Bezier provides a basic curve Shape.</td>
+  Bezier provides a Tweenable curve which, unlike <code>Curve</code> requires a Control Point.</td>
 </tr>
 <tr class="prow0">
 <td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a href="sekati/converters/BinaryConverter.html">BinaryConverter</a>
@@ -337,7 +337,7 @@ if (!isEclipse() || window.name != ECLIPSE_FRAME_NAME) {titleBar_setSubTitle("Al
 <td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a href="sekati/draw/Curve.html">Curve</a>
 <br>
 </td><td class="summaryTableCol"><a onclick="javascript:loadClassListFrame('sekati/draw/class-list.html');" href="sekati/draw/package-detail.html">sekati.draw</a></td><td class="summaryTableLastCol">
-  Curve provides a 3-point curved line Shape which, unline <code>Bezier</code> does not require a control point.</td>
+  Curve provides a Tweenable 3-point curved line which, unline <code>Bezier</code> does not require a control point.</td>
 </tr>
 <tr class="prow0">
 <td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a href="sekati/utils/DateUtil.html">DateUtil</a>
@@ -566,56 +566,50 @@ if (!isEclipse() || window.name != ECLIPSE_FRAME_NAME) {titleBar_setSubTitle("Al
   meaning they act directly on the collection they are iterating removing elements along its way.</td>
 </tr>
 <tr class="prow1">
-<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a href="sekati/draw/IDrawable.html"><i>IDrawable</i></a>
-<br>
-</td><td class="summaryTableCol"><a onclick="javascript:loadClassListFrame('sekati/draw/class-list.html');" href="sekati/draw/package-detail.html">sekati.draw</a></td><td class="summaryTableLastCol">
-  IDrawable defines the interface for drawable Shapes.</td>
-</tr>
-<tr class="prow0">
 <td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a href="sekati/crypt/IHash.html"><i>IHash</i></a>
 <br>
 </td><td class="summaryTableCol"><a onclick="javascript:loadClassListFrame('sekati/crypt/class-list.html');" href="sekati/crypt/package-detail.html">sekati.crypt</a></td><td class="summaryTableLastCol">
   Marker interface for all cryptographic hashing classes.</td>
 </tr>
-<tr class="prow1">
+<tr class="prow0">
 <td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a href="sekati/collections/IIterator.html"><i>IIterator</i></a>
 <br>
 </td><td class="summaryTableCol"><a onclick="javascript:loadClassListFrame('sekati/collections/class-list.html');" href="sekati/collections/package-detail.html">sekati.collections</a></td><td class="summaryTableLastCol">
   IIterator defines how iterating collections of items is handled.</td>
 </tr>
-<tr class="prow0">
+<tr class="prow1">
 <td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a href="sekati/log/ILogger.html"><i>ILogger</i></a>
 <br>
 </td><td class="summaryTableCol"><a onclick="javascript:loadClassListFrame('sekati/log/class-list.html');" href="sekati/log/package-detail.html">sekati.log</a></td><td class="summaryTableLastCol">
   ILogger provides the definitions for the Logger API.</td>
 </tr>
-<tr class="prow1">
+<tr class="prow0">
 <td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a href="sekati/collections/ILoopableIterator.html"><i>ILoopableIterator</i></a>
 <br>
 </td><td class="summaryTableCol"><a onclick="javascript:loadClassListFrame('sekati/collections/class-list.html');" href="sekati/collections/package-detail.html">sekati.collections</a></td><td class="summaryTableLastCol">
   ILoopableIterator defines how loopable, nondestructive, bi-directional iterating of collections of items is handled.</td>
 </tr>
-<tr class="prow0">
+<tr class="prow1">
 <td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a href="sekati/log/Inspector.html">Inspector</a>
 <br>
 </td><td class="summaryTableCol"><a onclick="javascript:loadClassListFrame('sekati/log/class-list.html');" href="sekati/log/package-detail.html">sekati.log</a></td><td class="summaryTableLastCol">
   Recursive Object Inspector
   </td>
 </tr>
-<tr class="prow1">
+<tr class="prow0">
 <td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a href="sekati/math/IntBase.html">IntBase</a>
 <br>
 </td><td class="summaryTableCol"><a onclick="javascript:loadClassListFrame('sekati/math/class-list.html');" href="sekati/math/package-detail.html">sekati.math</a></td><td class="summaryTableLastCol">
   IntBase provides a common Integer API.</td>
 </tr>
-<tr class="prow0">
+<tr class="prow1">
 <td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a href="sekati/geom/IPoint.html"><i>IPoint</i></a>
 <br>
 </td><td class="summaryTableCol"><a onclick="javascript:loadClassListFrame('sekati/geom/class-list.html');" href="sekati/geom/package-detail.html">sekati.geom</a></td><td class="summaryTableLastCol">
   Interface describing sekati.geom.Point
   </td>
 </tr>
-<tr class="prow1">
+<tr class="prow0">
 <td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a href="sekati/collections/IPointerIterator.html"><i>IPointerIterator</i></a>
 <br>
 </td><td class="summaryTableCol"><a onclick="javascript:loadClassListFrame('sekati/collections/class-list.html');" href="sekati/collections/package-detail.html">sekati.collections</a></td><td class="summaryTableLastCol">
@@ -623,31 +617,37 @@ if (!isEclipse() || window.name != ECLIPSE_FRAME_NAME) {titleBar_setSubTitle("Al
   meaning they implement a "pointer" to track iteration and do <i>not</i> act directly 
   on the collection they are iterating: the original collection is left intact.</td>
 </tr>
-<tr class="prow0">
+<tr class="prow1">
 <td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a href="sekati/collections/IQueue.html"><i>IQueue</i></a>
 <br>
 </td><td class="summaryTableCol"><a onclick="javascript:loadClassListFrame('sekati/collections/class-list.html');" href="sekati/collections/package-detail.html">sekati.collections</a></td><td class="summaryTableLastCol">
   IQueue defines the queue data structure.</td>
 </tr>
-<tr class="prow1">
+<tr class="prow0">
 <td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a href="sekati/types/ISelectable.html"><i>ISelectable</i></a>
 <br>
 </td><td class="summaryTableCol"><a onclick="javascript:loadClassListFrame('sekati/types/class-list.html');" href="sekati/types/package-detail.html">sekati.types</a></td><td class="summaryTableLastCol">
   ISelectable
   </td>
 </tr>
-<tr class="prow0">
+<tr class="prow1">
 <td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a href="sekati/collections/IStack.html"><i>IStack</i></a>
 <br>
 </td><td class="summaryTableCol"><a onclick="javascript:loadClassListFrame('sekati/collections/class-list.html');" href="sekati/collections/package-detail.html">sekati.collections</a></td><td class="summaryTableLastCol">
   IStack defines the stack data structure.</td>
 </tr>
-<tr class="prow1">
+<tr class="prow0">
 <td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a href="sekati/types/IStringifiable.html"><i>IStringifiable</i></a>
 <br>
 </td><td class="summaryTableCol"><a onclick="javascript:loadClassListFrame('sekati/types/class-list.html');" href="sekati/types/package-detail.html">sekati.types</a></td><td class="summaryTableLastCol">
   IStringifiable
   </td>
+</tr>
+<tr class="prow1">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a href="sekati/draw/ITweenableDrawing.html"><i>ITweenableDrawing</i></a>
+<br>
+</td><td class="summaryTableCol"><a onclick="javascript:loadClassListFrame('sekati/draw/class-list.html');" href="sekati/draw/package-detail.html">sekati.draw</a></td><td class="summaryTableLastCol">
+  ITweenableDrawing defines the method signatures of tweenable drawn Shapes.</td>
 </tr>
 <tr class="prow0">
 <td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a href="sekati/external/JsBase.html">JsBase</a>
@@ -680,7 +680,7 @@ if (!isEclipse() || window.name != ECLIPSE_FRAME_NAME) {titleBar_setSubTitle("Al
 <td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a href="sekati/draw/Line.html">Line</a>
 <br>
 </td><td class="summaryTableCol"><a onclick="javascript:loadClassListFrame('sekati/draw/class-list.html');" href="sekati/draw/package-detail.html">sekati.draw</a></td><td class="summaryTableLastCol">
-  Line provides a Tweenable drawn line Shape.</td>
+  Line provides a Tweenable line Shape.</td>
 </tr>
 <tr class="prow1">
 <td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a href="sekati/display/LiquidClip.html">LiquidClip</a>
@@ -894,7 +894,7 @@ if (!isEclipse() || window.name != ECLIPSE_FRAME_NAME) {titleBar_setSubTitle("Al
 <td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a href="sekati/draw/Rect.html">Rect</a>
 <br>
 </td><td class="summaryTableCol"><a onclick="javascript:loadClassListFrame('sekati/draw/class-list.html');" href="sekati/draw/package-detail.html">sekati.draw</a></td><td class="summaryTableLastCol">
-  Rect provides a basic rectangular Shape.</td>
+  Rect provides a Tweenable rectangle Shape.</td>
 </tr>
 <tr class="prow1">
 <td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a href="sekati/crypt/Rijndael.html">Rijndael</a>
