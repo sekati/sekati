@@ -46,8 +46,7 @@ if (!isEclipse() || window.name != ECLIPSE_FRAME_NAME) {titleBar_setSubTitle("Cl
 </table>
 <p></p>
   This is the API's main <code>Document Class</code>. Any application wishing to implement the core API 
-  should extend their projects <code>Document Class</code> with <code>sekati.display.Document</code> &
-  override with customizations as needed.
+  should implement this class directly as the <code>Document Class</code> or extend & override with customizations.
   
   <p><b>API Initialization Routine:</b><br/>
   <ol>
@@ -95,7 +94,7 @@ if (!isEclipse() || window.name != ECLIPSE_FRAME_NAME) {titleBar_setSubTitle("Cl
 <tr class="">
 <td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a class="signatureLink" href="#bootstrap">bootstrap</a> : <a href="../core/Bootstrap.html">Bootstrap</a>
 <div class="summaryTableDescription">[read-only]
-   Return the <code>Boostrap</code> (queued initialization) for adding <code>BootstrapEvent</code> listeners.</div>
+   Return the <code>Boostrap</code> (queued initialization) for adding <code>AppEvent</code> listeners.</div>
 </td><td class="summaryTableOwnerCol">Document</td>
 </tr>
 <tr class="hideInheritedProperty">
@@ -144,7 +143,7 @@ if (!isEclipse() || window.name != ECLIPSE_FRAME_NAME) {titleBar_setSubTitle("Cl
 <tr class="">
 <td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
 <div class="summarySignature">
-<a class="signatureLink" href="#documentHandler()">documentHandler</a>(e:<a href="../events/BootstrapEvent.html">BootstrapEvent</a>):void</div>
+<a class="signatureLink" href="#documentHandler()">documentHandler</a>(e:<a href="../events/AppEvent.html">AppEvent</a>):void</div>
 <div class="summaryTableDescription">
    The SWF has been fully loaded: removed the <code>AppLoader</code> & execute
    <code>Document</code> setup code: <code>initTweenEngine()</code> & <code>initAPI()</code>.</div>
@@ -153,7 +152,7 @@ if (!isEclipse() || window.name != ECLIPSE_FRAME_NAME) {titleBar_setSubTitle("Cl
 <tr class="">
 <td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
 <div class="summarySignature">
-<a class="signatureLink" href="#entryPointHandler()">entryPointHandler</a>(e:<a href="../events/BootstrapEvent.html">BootstrapEvent</a>):void</div>
+<a class="signatureLink" href="#entryPointHandler()">entryPointHandler</a>(e:<a href="../events/AppEvent.html">AppEvent</a>):void</div>
 <div class="summaryTableDescription">
    The Application API has been fully initialized; remove the <code>Bootstrap</code> & 
    call <code>initEntryPoint</code>.</div>
@@ -222,7 +221,7 @@ showHideInherited();
 </table>
 <div class="detailBody">
 <code>bootstrap:<a href="../core/Bootstrap.html">Bootstrap</a></code>&nbsp;&nbsp;[read-only]<p>
-   Return the <code>Boostrap</code> (queued initialization) for adding <code>BootstrapEvent</code> listeners.
+   Return the <code>Boostrap</code> (queued initialization) for adding <code>AppEvent</code> listeners.
    </p><span class="label">Implementation</span>
 <br>
 <code>&nbsp;&nbsp;&nbsp;&nbsp;public function get bootstrap():<a href="../core/Bootstrap.html">Bootstrap</a></code>
@@ -250,7 +249,7 @@ showHideInherited();
 </tr>
 </table>
 <div class="detailBody">
-<code>protected function documentHandler(e:<a href="../events/BootstrapEvent.html">BootstrapEvent</a>):void</code><p>
+<code>protected function documentHandler(e:<a href="../events/AppEvent.html">AppEvent</a>):void</code><p>
    The SWF has been fully loaded: removed the <code>AppLoader</code> & execute
    <code>Document</code> setup code: <code>initTweenEngine()</code> & <code>initAPI()</code>.
    
@@ -258,7 +257,7 @@ showHideInherited();
    <span class="label">Parameters</span>
 <table border="0" cellspacing="0" cellpadding="0">
 <tr>
-<td width="20px"></td><td><code><span class="label">e</span>:<a href="../events/BootstrapEvent.html">BootstrapEvent</a></code></td>
+<td width="20px"></td><td><code><span class="label">e</span>:<a href="../events/AppEvent.html">AppEvent</a></code></td>
 </tr>
 </table>
 </div>
@@ -269,7 +268,7 @@ showHideInherited();
 </tr>
 </table>
 <div class="detailBody">
-<code>protected function entryPointHandler(e:<a href="../events/BootstrapEvent.html">BootstrapEvent</a>):void</code><p>
+<code>protected function entryPointHandler(e:<a href="../events/AppEvent.html">AppEvent</a>):void</code><p>
    The Application API has been fully initialized; remove the <code>Bootstrap</code> & 
    call <code>initEntryPoint</code>.
    
@@ -277,7 +276,7 @@ showHideInherited();
    <span class="label">Parameters</span>
 <table border="0" cellspacing="0" cellpadding="0">
 <tr>
-<td width="20px"></td><td><code><span class="label">e</span>:<a href="../events/BootstrapEvent.html">BootstrapEvent</a></code></td>
+<td width="20px"></td><td><code><span class="label">e</span>:<a href="../events/AppEvent.html">AppEvent</a></code></td>
 </tr>
 </table>
 </div>

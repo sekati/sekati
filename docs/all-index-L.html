@@ -85,33 +85,6 @@ if (!isEclipse() || window.name != ECLIPSE_FRAME_NAME) {titleBar_setSubTitle("LÂ
    Dispatch a Leave <code>StageEvent</code> for non-displayObjects.</td>
 </tr>
 <tr>
-<td colspan="2" class="idxrow"><a onclick="javascript:loadClassListFrame('sekati/collections/class-list.html');" href="sekati/collections/ArrayBidirectionalIterator.html#length">length</a> &mdash; Property in class sekati.collections.<a onclick="javascript:loadClassListFrame('sekati/collections/class-list.html');" href="sekati/collections/ArrayBidirectionalIterator.html">ArrayBidirectionalIterator</a></td>
-</tr>
-<tr>
-<td width="20"></td><td>
-   Return the collection length.</td>
-</tr>
-<tr>
-<td colspan="2" class="idxrow"><a onclick="javascript:loadClassListFrame('sekati/collections/class-list.html');" href="sekati/collections/ArrayBounceIterator.html#length">length</a> &mdash; Property in class sekati.collections.<a onclick="javascript:loadClassListFrame('sekati/collections/class-list.html');" href="sekati/collections/ArrayBounceIterator.html">ArrayBounceIterator</a></td>
-</tr>
-<tr>
-<td width="20"></td><td>
-   Return the collection length.</td>
-</tr>
-<tr>
-<td colspan="2" class="idxrow"><a onclick="javascript:loadClassListFrame('sekati/collections/class-list.html');" href="sekati/collections/IBidirectionalIterator.html#length">length</a> &mdash; Property in interface sekati.collections.<a onclick="javascript:loadClassListFrame('sekati/collections/class-list.html');" href="sekati/collections/IBidirectionalIterator.html">IBidirectionalIterator</a></td>
-</tr>
-<tr>
-<td width="20"></td><td>
-   Return the collection length.</td>
-</tr>
-<tr>
-<td colspan="2" class="idxrow"><a onclick="javascript:loadClassListFrame('sekati/math/class-list.html');" href="sekati/math/IntBase.html#lessThan()">lessThan</a>(alpha, beta) &mdash; Static method in class sekati.math.<a onclick="javascript:loadClassListFrame('sekati/math/class-list.html');" href="sekati/math/IntBase.html">IntBase</a></td>
-</tr>
-<tr>
-<td width="20"></td><td></td>
-</tr>
-<tr>
 <td colspan="2" class="idxrow"><a onclick="javascript:loadClassListFrame('sekati/events/class-list.html');" href="sekati/events/LogEvent.html#_level">_level</a> &mdash; Property in class sekati.events.<a onclick="javascript:loadClassListFrame('sekati/events/class-list.html');" href="sekati/events/LogEvent.html">LogEvent</a></td>
 </tr>
 <tr>
@@ -144,10 +117,10 @@ if (!isEclipse() || window.name != ECLIPSE_FRAME_NAME) {titleBar_setSubTitle("LÂ
 </tr>
 <tr>
 <td width="20"></td><td>
-  Line provides a Tweenable line Shape.</td>
+  Line provides a basic line Shape.</td>
 </tr>
 <tr>
-<td colspan="2" class="idxrow"><a onclick="javascript:loadClassListFrame('sekati/draw/class-list.html');" href="sekati/draw/Line.html#Line()">Line</a>(startX, startY, endX, endY, thickness, color, alpha, pixelHinting, scaleMode, caps, joints, miterLimit) &mdash; Constructor in class sekati.draw.<a onclick="javascript:loadClassListFrame('sekati/draw/class-list.html');" href="sekati/draw/Line.html">Line</a></td>
+<td colspan="2" class="idxrow"><a onclick="javascript:loadClassListFrame('sekati/draw/class-list.html');" href="sekati/draw/Line.html#Line()">Line</a>(startPt, endPt, thickness, color, alpha, pixelHinting, scaleMode, caps, joints, miterLimit) &mdash; Constructor in class sekati.draw.<a onclick="javascript:loadClassListFrame('sekati/draw/class-list.html');" href="sekati/draw/Line.html">Line</a></td>
 </tr>
 <tr>
 <td width="20"></td><td>
@@ -168,22 +141,6 @@ if (!isEclipse() || window.name != ECLIPSE_FRAME_NAME) {titleBar_setSubTitle("LÂ
 <tr>
 <td width="20"></td><td>
    LiquidClip Constructor
-   </td>
-</tr>
-<tr>
-<td colspan="2" class="idxrow"><a onclick="javascript:loadClassListFrame('sekati/display/class-list.html');" href="sekati/display/LiquidSprite.html">LiquidSprite</a> &mdash; Class in package <a onclick="javascript:loadClassListFrame('sekati/display/class-list.html');" href="sekati/display/package-detail.html">sekati.display</a></td>
-</tr>
-<tr>
-<td width="20"></td><td>
-  LiquidSprite provides a visual building block which is ready to respond to
-  <code>StageEvent</code>'s such as <code>RESIZE, RESIZE_COMPLETE, & FULLSCREEN</code>.</td>
-</tr>
-<tr>
-<td colspan="2" class="idxrow"><a onclick="javascript:loadClassListFrame('sekati/display/class-list.html');" href="sekati/display/LiquidSprite.html#LiquidSprite()">LiquidSprite</a>() &mdash; Constructor in class sekati.display.<a onclick="javascript:loadClassListFrame('sekati/display/class-list.html');" href="sekati/display/LiquidSprite.html">LiquidSprite</a></td>
-</tr>
-<tr>
-<td width="20"></td><td>
-   LiquidSprite Constructor
    </td>
 </tr>
 <tr>
@@ -212,7 +169,7 @@ if (!isEclipse() || window.name != ECLIPSE_FRAME_NAME) {titleBar_setSubTitle("LÂ
 <tr>
 <td width="20"></td><td>
    Loads & parse <code>config.xml</code> to <code>App.config</code>
-   & dispatch <code>BootstrapEvent.APP_CONFIG</code>.</td>
+   & dispatch <code>AppEvent.APP_CONFIG</code>.</td>
 </tr>
 <tr>
 <td colspan="2" class="idxrow"><a onclick="javascript:loadClassListFrame('sekati/core/class-list.html');" href="sekati/core/Bootstrap.html#loadData()">loadData</a>() &mdash; Method in class sekati.core.<a onclick="javascript:loadClassListFrame('sekati/core/class-list.html');" href="sekati/core/Bootstrap.html">Bootstrap</a></td>
@@ -248,28 +205,6 @@ if (!isEclipse() || window.name != ECLIPSE_FRAME_NAME) {titleBar_setSubTitle("LÂ
    Return the bytes loaded.</td>
 </tr>
 <tr>
-<td colspan="2" class="idxrow"><a onclick="javascript:loadClassListFrame('sekati/events/class-list.html');" href="sekati/events/LoaderEvent.html#_loader">_loader</a> &mdash; Property in class sekati.events.<a onclick="javascript:loadClassListFrame('sekati/events/class-list.html');" href="sekati/events/LoaderEvent.html">LoaderEvent</a></td>
-</tr>
-<tr>
-<td width="20"></td><td></td>
-</tr>
-<tr>
-<td colspan="2" class="idxrow"><a onclick="javascript:loadClassListFrame('sekati/events/class-list.html');" href="sekati/events/LoaderEvent.html">LoaderEvent</a> &mdash; Class in package <a onclick="javascript:loadClassListFrame('sekati/events/class-list.html');" href="sekati/events/package-detail.html">sekati.events</a></td>
-</tr>
-<tr>
-<td width="20"></td><td>
-  LoaderEvent provides a core event for sekati.load
-  </td>
-</tr>
-<tr>
-<td colspan="2" class="idxrow"><a onclick="javascript:loadClassListFrame('sekati/events/class-list.html');" href="sekati/events/LoaderEvent.html#LoaderEvent()">LoaderEvent</a>(type, bubbles, cancelable) &mdash; Constructor in class sekati.events.<a onclick="javascript:loadClassListFrame('sekati/events/class-list.html');" href="sekati/events/LoaderEvent.html">LoaderEvent</a></td>
-</tr>
-<tr>
-<td width="20"></td><td>
-   LoaderEvent Constructor
-   </td>
-</tr>
-<tr>
 <td colspan="2" class="idxrow"><a onclick="javascript:loadClassListFrame('sekati/display/class-list.html');" href="sekati/display/Canvas.html#loaderInfo">loaderInfo</a> &mdash; Static property in class sekati.display.<a onclick="javascript:loadClassListFrame('sekati/display/class-list.html');" href="sekati/display/Canvas.html">Canvas</a></td>
 </tr>
 <tr>
@@ -281,13 +216,6 @@ if (!isEclipse() || window.name != ECLIPSE_FRAME_NAME) {titleBar_setSubTitle("LÂ
 <tr>
 <td width="20"></td><td>
    Loads & parse the stylesheet from <code>App.CSS_URI</code> provided in <code>config.xml</code>.</td>
-</tr>
-<tr>
-<td colspan="2" class="idxrow"><a onclick="javascript:loadClassListFrame('sekati/layout/class-list.html');" href="sekati/layout/CoordinateTool.html#localToLocal()">localToLocal</a>(from, to) &mdash; Static method in class sekati.layout.<a onclick="javascript:loadClassListFrame('sekati/layout/class-list.html');" href="sekati/layout/CoordinateTool.html">CoordinateTool</a></td>
-</tr>
-<tr>
-<td width="20"></td><td>
-   Translate <code>DisplayObject</code> container position in a new container.</td>
 </tr>
 <tr>
 <td colspan="2" class="idxrow"><a onclick="javascript:loadClassListFrame('sekati/utils/class-list.html');" href="sekati/utils/ArrayUtil.html#locatePropVal()">locatePropVal</a>(a, prop, val, isCaseInsensitive) &mdash; Static method in class sekati.utils.<a onclick="javascript:loadClassListFrame('sekati/utils/class-list.html');" href="sekati/utils/ArrayUtil.html">ArrayUtil</a></td>

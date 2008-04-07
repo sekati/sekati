@@ -1,6 +1,6 @@
 /**
  * sekati.utils.ArrayPeer
- * @version 1.0.3
+ * @version 1.0.1
  * @author jason m horwitz | sekati.com
  * Copyright (C) 2008  jason m horwitz, Sekat LLC. All Rights Reserved.
  * Released under the MIT License: http://www.opensource.org/licenses/mit-license.php
@@ -74,10 +74,14 @@ package sekati.utils {
 			}
 			
 			// otherwise, find all
-			return array.filter( function(item : Object, index : int, array : Array ):Boolean {
-				if (!item) throw new Error( "Missing item from array.filter" );
+			return array.filter( function(index : int, array : Array ):Boolean {
 				return matches( array[ index ], conditions );
 			} );
+			/*			
+			return array.filter( function( item : Object, index : int, array : Array ):Boolean {
+				return matches( array[ index ], conditions );
+			} );
+			 */
 		}
 		/**
 		 * Shortcut for retrieving the first matching item

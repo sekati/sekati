@@ -7,19 +7,36 @@
      /\ \L\ \ \ \L\ \ \ \\`\ \ \ \/\ \ \ \ \   \_\ \__   \ \ \/\ \ \ \/    \_\ \__ 
      \ `\____\ \____/\ \_\ \_\\ \_\ \_\ \ \_\  /\_____\   \ \_\ \_\ \_\    /\_____\
       \/_____/\/___/  \/_/\/_/ \/_/\/_/  \/_/  \/_____/    \/_/\/_/\/_/    \/_____/
-
- 	Copyright (c) 2008 jason m horwitz | Sekati LLC | sekati.com. All Rights Reserved.
+                                                                                   
+                          ___                                     ___      
+                        /'___\ __                                /\_ \     
+    ___    ___     ___ /\ \__//\_\     __        __  _   ___ ___ \//\ \    
+   /'___\ / __`\ /' _ `\ \ ,__\/\ \  /'_ `\     /\ \/'\/' __` __`\ \ \ \   
+  /\ \__//\ \L\ \/\ \/\ \ \ \_/\ \ \/\ \L\ \  __\/>  <//\ \/\ \/\ \ \_\ \_ 
+  \ \____\ \____/\ \_\ \_\ \_\  \ \_\ \____ \/\_\/\_/\_\ \_\ \_\ \_\/\____\
+   \/____/\/___/  \/_/\/_/\/_/   \/_/\/___L\ \/_/\//\/_/\/_/\/_/\/_/\/____/
+                                      /\____/                             
+                                      \_/__/ 
+                                                                                                                                                                                                                     
+				jason m horwitz / Sekati LLC / sekati.com 
 -->
-<config persist="false">
+<config>
 	<app>
 		<name><![CDATA[Sekati API]]></name>
-		<version>3.0.1.7</version>
+		<version>3.0.0.9</version>
 	</app>
 	<uri>
-		<crossdomain load="true">/crossdomain.xml</crossdomain>
-		<data load="true">xml/data.xml</data>
-		<css load="true">css/app_style.css</css>
+		<crossdomain><![CDATA[/crossdomain.xml]]></crossdomain>
+		<data><![CDATA[xml/data.xml]]></data>
+		<css><![CDATA[css/app_style.css]]></css>
 	</uri>
+	<!-- proposal begins -->
+	<bootstrap>
+		<item name="users"><![CDATA[xml/userlist.xml]]></item>
+		<item name="img0"><![CDATA[assets/img0.jpg]]></item>
+		<item name="img1"><![CDATA[assets/img1.jpg]]></item>
+	</bootstrap>
+	<!-- proposal ends -->
 	<option>
 		<managed_menu>true</managed_menu>
 		<api_credit>true</api_credit>
@@ -28,6 +45,6 @@
 		<key>true</key>
 		<deeplink>false</deeplink>
 		<log>true</log>
-		<memory_alarm>50</memory_alarm>
+		<memory_alarm>20</memory_alarm>
 	</option>
 </config>

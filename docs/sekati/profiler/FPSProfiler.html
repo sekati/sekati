@@ -4,7 +4,7 @@
 <META http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <link rel="stylesheet" href="../../style.css" type="text/css" media="screen">
 <link rel="stylesheet" href="../../print.css" type="text/css" media="print">
-<meta content="FPSProfiler,sekati.profiler.FPSProfiler,DOWNTREND,UPTREND,_averageFps,_averageTrend,_currentFps,_currentTrend,_frame,_now,_updateEveryFrame,averageFPS,averageTrend,currentFPS,currentTrend,snapshot,start,stop" name="keywords">
+<meta content="FPSProfiler,sekati.profiler.FPSProfiler,DOWNTREND,UPTREND,_averageFps,_averageTrend,_currentFps,_currentTrend,_frame,_now,_updateEveryFrame,averageFPS,averageTrend,currentFPS,currentTrend,start,stop" name="keywords">
 <title>sekati.profiler.FPSProfiler</title>
 </head>
 <body>
@@ -120,18 +120,10 @@ if (!isEclipse() || window.name != ECLIPSE_FRAME_NAME) {titleBar_setSubTitle("Cl
 <tr class="">
 <td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
 <div class="summarySignature">
-<a class="signatureLink" href="#FPSProfiler()">FPSProfiler</a>(updateEveryFrame:uint = 1, autostart:Boolean = true)</div>
+<a class="signatureLink" href="#FPSProfiler()">FPSProfiler</a>(autostart:Boolean = true, updateEveryFrame:uint = 1)</div>
 <div class="summaryTableDescription">
    FPSProfiler Constructor
    </div>
-</td><td class="summaryTableOwnerCol">FPSProfiler</td>
-</tr>
-<tr class="">
-<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
-<div class="summarySignature">
-<a class="signatureLink" href="#snapshot()">snapshot</a>():String</div>
-<div class="summaryTableDescription">
-   Return a snapshot of the application's current/average FPS with trending information.</div>
 </td><td class="summaryTableOwnerCol">FPSProfiler</td>
 </tr>
 <tr class="">
@@ -306,44 +298,27 @@ showHideInherited();
 </tr>
 </table>
 <div class="detailBody">
-<code>public function FPSProfiler(updateEveryFrame:uint = 1, autostart:Boolean = true)</code><p>
+<code>public function FPSProfiler(autostart:Boolean = true, updateEveryFrame:uint = 1)</code><p>
    FPSProfiler Constructor
    </p><span class="label">Parameters</span>
 <table border="0" cellspacing="0" cellpadding="0">
 <tr>
-<td width="20px"></td><td><code><span class="label">updateEveryFrame</span>:uint</code> (default = <code>1</code>)<code></code></td>
+<td width="20px"></td><td><code><span class="label">autostart</span>:Boolean</code> (default = <code>true</code>)<code></code></td>
 </tr>
 <tr>
 <td class="paramSpacer">&nbsp;</td>
 </tr>
 <tr>
-<td width="20px"></td><td><code><span class="label">autostart</span>:Boolean</code> (default = <code>true</code>)<code></code></td>
+<td width="20px"></td><td><code><span class="label">updateEveryFrame</span>:uint</code> (default = <code>1</code>)<code></code></td>
 </tr>
 </table>
 </div>
 <a name="methodDetail"></a>
 <div class="detailSectionHeader">Method detail</div>
-<a name="snapshot()"></a>
-<table cellspacing="0" cellpadding="0" class="detailHeader">
-<tr>
-<td class="detailHeaderName">snapshot</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td>
-</tr>
-</table>
-<div class="detailBody">
-<code>public function snapshot():String</code><p>
-   Return a snapshot of the application's current/average FPS with trending information.
-   </p><p></p>
-<span class="label">Returns</span>
-<table border="0" cellspacing="0" cellpadding="0">
-<tr>
-<td width="20"></td><td><code>String</code></td>
-</tr>
-</table>
-</div>
 <a name="start()"></a>
 <table cellspacing="0" cellpadding="0" class="detailHeader">
 <tr>
-<td class="detailHeaderName">start</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td>
+<td class="detailHeaderName">start</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td>
 </tr>
 </table>
 <div class="detailBody">

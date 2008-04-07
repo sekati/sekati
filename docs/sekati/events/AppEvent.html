@@ -4,7 +4,7 @@
 <META http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <link rel="stylesheet" href="../../style.css" type="text/css" media="screen">
 <link rel="stylesheet" href="../../print.css" type="text/css" media="print">
-<meta content="AppEvent,sekati.events.AppEvent,data,clone,dispatch" name="keywords">
+<meta content="AppEvent,sekati.events.AppEvent,APP_CONFIG,APP_DATA,APP_FAIL,APP_INIT,APP_LOAD,APP_STYLE,clone" name="keywords">
 <title>sekati.events.AppEvent</title>
 </head>
 <body>
@@ -19,7 +19,7 @@
 <td align="left" class="titleTableTitle">Sekati API Documentation</td><td align="right" class="titleTableTopNav"><a onclick="loadClassListFrame('../../all-classes.html')" href="../../package-summary.html">All&nbsp;Packages</a>&nbsp;|&nbsp;<a onclick="loadClassListFrame('../../all-classes.html')" href="../../class-summary.html">All&nbsp;Classes</a>&nbsp;|&nbsp;<a onclick="loadClassListFrame('../../index-list.html')" href="../../all-index-A.html">Index</a>&nbsp;|&nbsp;<a href="../../index.html?sekati/events/AppEvent.html&amp;sekati/events/class-list.html" id="framesLink1">Frames</a><a onclick="parent.location=document.location" href="" style="display:none" id="noFramesLink1">No&nbsp;Frames</a></td><td rowspan="3" align="right" class="titleTableLogo"><img alt="Adobe Logo" title="Adobe Logo" class="logoImage" src="../../images/logo.jpg"></td>
 </tr>
 <tr class="titleTableRow2">
-<td align="left" id="subTitle" class="titleTableSubTitle">Class&nbsp;AppEvent</td><td align="right" id="subNav" class="titleTableSubNav"><a href="#propertySummary">Properties</a>&nbsp;| <a href="#methodSummary">Methods</a></td>
+<td align="left" id="subTitle" class="titleTableSubTitle">Class&nbsp;AppEvent</td><td align="right" id="subNav" class="titleTableSubNav"><a href="#methodSummary">Methods</a>&nbsp;| <a href="#constantSummary">Constants</a></td>
 </tr>
 <tr class="titleTableRow3">
 <td colspan="2">&nbsp;</td>
@@ -27,7 +27,7 @@
 </table>
 <script type="text/javascript" language="javascript">
 <!--
-if (!isEclipse() || window.name != ECLIPSE_FRAME_NAME) {titleBar_setSubTitle("Class AppEvent"); titleBar_setSubNav(false,true,false,false,false,false,true,false,false,false,false,false,false,false);}
+if (!isEclipse() || window.name != ECLIPSE_FRAME_NAME) {titleBar_setSubTitle("Class AppEvent"); titleBar_setSubNav(true,false,false,false,false,false,true,false,false,false,false,false,false,false);}
 --></script>
 <div class="MainContent">
 <table cellspacing="0" cellpadding="0" class="classHeaderTable">
@@ -42,32 +42,16 @@ if (!isEclipse() || window.name != ECLIPSE_FRAME_NAME) {titleBar_setSubTitle("Cl
 </tr>
 </table>
 <p></p>
-  AppEvent provides a baseline application event object 
-  with optional data transport capabilities.
-  
+  Application Events fired during the bootstrap process of SASAPI.
   <p></p>
 <p>
 <span class="classHeaderTableLabel">See also</span>
 </p>
-<div class="seeAlso">
-<a href="../events/AppEventDispatcher.html" target="">sekati.events.AppEventDispatcher</a>
+<div class="seeAlso">com.project.core.Bootstrap<br>
+<a href="../core/App.html" target="">sekati.core.App</a>
 </div>
 <br>
 <hr>
-</div>
-<a name="propertySummary"></a>
-<div class="summarySection">
-<div class="summaryTableTitle">Public Properties</div>
-<table id="summaryTableProperty" class="summaryTable " cellpadding="3" cellspacing="0">
-<tr>
-<th>&nbsp;</th><th colspan="2">Property</th><th class="summaryTableOwnerCol">Defined&nbsp;by</th>
-</tr>
-<tr class="">
-<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a class="signatureLink" href="#data">data</a> : *<div class="summaryTableDescription">
-   The <code>data</code> property can be used to pass information with <code>AppEvent</code>'s.</div>
-</td><td class="summaryTableOwnerCol">AppEvent</td>
-</tr>
-</table>
 </div>
 <a name="methodSummary"></a>
 <div class="summarySection">
@@ -79,7 +63,7 @@ if (!isEclipse() || window.name != ECLIPSE_FRAME_NAME) {titleBar_setSubTitle("Cl
 <tr class="">
 <td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
 <div class="summarySignature">
-<a class="signatureLink" href="#AppEvent()">AppEvent</a>(type:String, eventData:Boolean = null, bubbles:Boolean = false, cancelable:* = false)</div>
+<a class="signatureLink" href="#AppEvent()">AppEvent</a>(type:String, bubbles:Boolean = true, cancelable:Boolean = false)</div>
 <div class="summaryTableDescription">
    AppEvent Constructor
    </div>
@@ -93,12 +77,43 @@ if (!isEclipse() || window.name != ECLIPSE_FRAME_NAME) {titleBar_setSubTitle("Cl
    </div>
 </td><td class="summaryTableOwnerCol">AppEvent</td>
 </tr>
+</table>
+</div>
+<a name="constantSummary"></a>
+<div class="summarySection">
+<div class="summaryTableTitle">Public Constants</div>
+<table id="summaryTableConstant" class="summaryTable " cellpadding="3" cellspacing="0">
+<tr>
+<th>&nbsp;</th><th colspan="2">Constant</th><th class="summaryTableOwnerCol">Defined&nbsp;by</th>
+</tr>
 <tr class="">
-<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
-<div class="summarySignature">
-<a class="signatureLink" href="#dispatch()">dispatch</a>():Boolean</div>
-<div class="summaryTableDescription">
-   Allows for easy dispatching of the <code>AppEvent</code> instance via the <code>AppEventDispatcher</code>.</div>
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a class="signatureLink" href="#APP_CONFIG">APP_CONFIG</a> : String = "onLoadAppConfiguration"<div class="summaryTableDescription">[static]
+   </div>
+</td><td class="summaryTableOwnerCol">AppEvent</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a class="signatureLink" href="#APP_DATA">APP_DATA</a> : String = "onLoadAppData"<div class="summaryTableDescription">[static]
+   </div>
+</td><td class="summaryTableOwnerCol">AppEvent</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a class="signatureLink" href="#APP_FAIL">APP_FAIL</a> : String = "onAppFailure"<div class="summaryTableDescription">[static]
+   </div>
+</td><td class="summaryTableOwnerCol">AppEvent</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a class="signatureLink" href="#APP_INIT">APP_INIT</a> : String = "onAppInit"<div class="summaryTableDescription">[static]
+   </div>
+</td><td class="summaryTableOwnerCol">AppEvent</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a class="signatureLink" href="#APP_LOAD">APP_LOAD</a> : String = "onAppLoad"<div class="summaryTableDescription">[static]
+   </div>
+</td><td class="summaryTableOwnerCol">AppEvent</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a class="signatureLink" href="#APP_STYLE">APP_STYLE</a> : String = "onLoadAppStyles"<div class="summaryTableDescription">[static]
+   </div>
 </td><td class="summaryTableOwnerCol">AppEvent</td>
 </tr>
 </table>
@@ -108,21 +123,6 @@ if (!isEclipse() || window.name != ECLIPSE_FRAME_NAME) {titleBar_setSubTitle("Cl
 showHideInherited();
 --></script>
 <div class="MainContent">
-<a name="propertyDetail"></a>
-<div class="detailSectionHeader">Property detail</div>
-<a name="data"></a>
-<table cellspacing="0" cellpadding="0" class="detailHeader">
-<tr>
-<td class="detailHeaderName">data</td><td class="detailHeaderType">property</td>
-</tr>
-</table>
-<div class="detailBody">
-<code>public var data:*</code><p>
-   The <code>data</code> property can be used to pass information with <code>AppEvent</code>'s.
-   This may be useful when the developer does not wish to extend <code>AppEvent</code> (though
-   it is recommended that event classes be written for each type of core <code>AppEvent</code> 
-   when appropriate).
-   </p></div>
 <a name="constructorDetail"></a>
 <div class="detailSectionHeader">Constructor detail</div>
 <a name="AppEvent()"></a>
@@ -132,7 +132,7 @@ showHideInherited();
 </tr>
 </table>
 <div class="detailBody">
-<code>public function AppEvent(type:String, eventData:Boolean = null, bubbles:Boolean = false, cancelable:* = false)</code><p>
+<code>public function AppEvent(type:String, bubbles:Boolean = true, cancelable:Boolean = false)</code><p>
    AppEvent Constructor
    </p><span class="label">Parameters</span>
 <table border="0" cellspacing="0" cellpadding="0">
@@ -143,19 +143,13 @@ showHideInherited();
 <td class="paramSpacer">&nbsp;</td>
 </tr>
 <tr>
-<td width="20px"></td><td><code><span class="label">eventData</span>:Boolean</code> (default = <code>null</code>)<code></code></td>
+<td width="20px"></td><td><code><span class="label">bubbles</span>:Boolean</code> (default = <code>true</code>)<code></code></td>
 </tr>
 <tr>
 <td class="paramSpacer">&nbsp;</td>
 </tr>
 <tr>
-<td width="20px"></td><td><code><span class="label">bubbles</span>:Boolean</code> (default = <code>false</code>)<code></code></td>
-</tr>
-<tr>
-<td class="paramSpacer">&nbsp;</td>
-</tr>
-<tr>
-<td width="20px"></td><td><code><span class="label">cancelable</span>:*</code> (default = <code>false</code>)<code></code></td>
+<td width="20px"></td><td><code><span class="label">cancelable</span>:Boolean</code> (default = <code>false</code>)<code></code></td>
 </tr>
 </table>
 </div>
@@ -177,29 +171,62 @@ showHideInherited();
 </tr>
 </table>
 </div>
-<a name="dispatch()"></a>
+<a name="constantDetail"></a>
+<div class="detailSectionHeader">Constant detail</div>
+<a name="APP_CONFIG"></a>
 <table cellspacing="0" cellpadding="0" class="detailHeader">
 <tr>
-<td class="detailHeaderName">dispatch</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td>
+<td class="detailHeaderName">APP_CONFIG</td><td class="detailHeaderType">constant</td>
 </tr>
 </table>
 <div class="detailBody">
-<code>public function dispatch():Boolean</code><p>
-   Allows for easy dispatching of the <code>AppEvent</code> instance via the <code>AppEventDispatcher</code>.
-   </p><p></p>
-<span class="label">Returns</span>
-<table border="0" cellspacing="0" cellpadding="0">
+<code>public static const APP_CONFIG:String = "onLoadAppConfiguration"</code><p>
+   </p></div>
+<a name="APP_DATA"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
 <tr>
-<td width="20"></td><td><code>Boolean</code></td>
+<td class="detailHeaderName">APP_DATA</td><td class="detailHeaderType">constant</td><td class="detailHeaderRule">&nbsp;</td>
 </tr>
 </table>
-<p>
-<span class="label">See also</span>
-</p>
-<div class="seeAlso">
-<a href="../events/AppEventDispatcher.html" target="">sekati.events.AppEventDispatcher</a>
-</div>
-</div>
+<div class="detailBody">
+<code>public static const APP_DATA:String = "onLoadAppData"</code><p>
+   </p></div>
+<a name="APP_FAIL"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">APP_FAIL</td><td class="detailHeaderType">constant</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public static const APP_FAIL:String = "onAppFailure"</code><p>
+   </p></div>
+<a name="APP_INIT"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">APP_INIT</td><td class="detailHeaderType">constant</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public static const APP_INIT:String = "onAppInit"</code><p>
+   </p></div>
+<a name="APP_LOAD"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">APP_LOAD</td><td class="detailHeaderType">constant</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public static const APP_LOAD:String = "onAppLoad"</code><p>
+   </p></div>
+<a name="APP_STYLE"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">APP_STYLE</td><td class="detailHeaderType">constant</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public static const APP_STYLE:String = "onLoadAppStyles"</code><p>
+   </p></div>
 <br>
 <br>
 <hr>
