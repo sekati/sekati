@@ -249,7 +249,7 @@ if (!isEclipse() || window.name != ECLIPSE_FRAME_NAME) {titleBar_setSubTitle("Cl
 <div class="summarySignature">
 <a class="signatureLink" href="#render()">render</a>(e:<a href="../events/StageEvent.html">StageEvent</a> = null):void</div>
 <div class="summaryTableDescription">
-   Update the Viewport confines.</div>
+   Update the Viewport confines and dispatch <code>ViewportEvent.RENDER</code>.</div>
 </td><td class="summaryTableOwnerCol">Viewport</td>
 </tr>
 </table>
@@ -678,8 +678,12 @@ showHideInherited();
 </table>
 <div class="detailBody">
 <code>public function render(e:<a href="../events/StageEvent.html">StageEvent</a> = null):void</code><p>
-   Update the Viewport confines.
-   </p><span class="label">Parameters</span>
+   Update the Viewport confines and dispatch <code>ViewportEvent.RENDER</code>.
+   
+   </p><p><b>Note:</b> This is not a true "render" but as it is generally
+   related to liquid-layout scenarios in which the layout is "re-rendered"
+   the name is semi-appropriate.</p>
+   <span class="label">Parameters</span>
 <table border="0" cellspacing="0" cellpadding="0">
 <tr>
 <td width="20px"></td><td><code><span class="label">e</span>:<a href="../events/StageEvent.html">StageEvent</a></code> (default = <code>null</code>)<code></code></td>
