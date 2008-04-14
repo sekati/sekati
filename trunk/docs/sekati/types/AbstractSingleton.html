@@ -39,7 +39,13 @@ if (!isEclipse() || window.name != ECLIPSE_FRAME_NAME) {titleBar_setSubTitle("Cl
 </tr>
 </table>
 <p></p>
-  AbstractSingleton
+  AbstractSingleton provides a common Singleton design pattern; pseudo-privitizing 
+  the constructor via an internal class used in the constructor argument thus throwing
+  an error if any external object attempts instantiation.
+  
+  <p>Further, a <code>getInstance</code> shortcut (<code>$</code>) is standardized here
+  to allow shorter syntax, simpler identification of Singleton references & making class
+  exposure through <code>ApplicationDomain</code> less error prone.</p> 
   <p></p>
 <br>
 <hr>

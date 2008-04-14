@@ -4,7 +4,7 @@
 <META http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <link rel="stylesheet" href="../../style.css" type="text/css" media="screen">
 <link rel="stylesheet" href="../../print.css" type="text/css" media="print">
-<meta content="FLV,sekati.media.FLV,_client,_duration,_lastSeekableTime,_metadata,_nc,_ns,_paused,_started,_this,_url,_video,ns,video,destroy,ff,getDuration,getPercentBuffered,getPercentLoaded,getPercentPlayed,getTime,isPaused,isPlaying,isStopped,load,ns_onMetaData,ns_onProgress,ns_onStatus,pause,pauseResume,play,resolveTime,resume,rew,seek,seekToPercent,setVolume,stop" name="keywords">
+<meta content="FLV,sekati.media.FLV,_bufferPause,_bufferTime,_client,_duration,_lastSeekableTime,_metadata,_nc,_ns,_paused,_started,_this,_url,_video,ns,video,checkBuffer,destroy,ff,getDuration,getPercentBuffered,getPercentLoaded,getPercentPlayed,getTime,isPaused,isPlaying,isStopped,load,ns_onCuePoint,ns_onMetaData,ns_onProgress,ns_onStatus,pause,pauseResume,play,resolveTime,resume,rew,seek,seekToPercent,setVolume,stop" name="keywords">
 <title>sekati.media.FLV</title>
 </head>
 <body>
@@ -72,6 +72,14 @@ if (!isEclipse() || window.name != ECLIPSE_FRAME_NAME) {titleBar_setSubTitle("Cl
 <table id="summaryTableProtectedProperty" class="summaryTable " cellpadding="3" cellspacing="0">
 <tr>
 <th>&nbsp;</th><th colspan="2">Property</th><th class="summaryTableOwnerCol">Defined&nbsp;by</th>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a class="signatureLink" href="#_bufferPause">_bufferPause</a> : Boolean<div class="summaryTableDescription"></div>
+</td><td class="summaryTableOwnerCol">FLV</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a class="signatureLink" href="#_bufferTime">_bufferTime</a> : Number<div class="summaryTableDescription"></div>
+</td><td class="summaryTableOwnerCol">FLV</td>
 </tr>
 <tr class="">
 <td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a class="signatureLink" href="#_client">_client</a> : Object<div class="summaryTableDescription"></div>
@@ -309,6 +317,22 @@ if (!isEclipse() || window.name != ECLIPSE_FRAME_NAME) {titleBar_setSubTitle("Cl
 <tr class="">
 <td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
 <div class="summarySignature">
+<a class="signatureLink" href="#checkBuffer()">checkBuffer</a>():void</div>
+<div class="summaryTableDescription">
+   Handle buffer externally to <code>ns.bufferTime</code> so we can achieve proper cuePoint timing.</div>
+</td><td class="summaryTableOwnerCol">FLV</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="#ns_onCuePoint()">ns_onCuePoint</a>(infoObject:Object):void</div>
+<div class="summaryTableDescription">
+   Net CuePoint handler.</div>
+</td><td class="summaryTableOwnerCol">FLV</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
 <a class="signatureLink" href="#ns_onMetaData()">ns_onMetaData</a>(metadata:Object):void</div>
 <div class="summaryTableDescription">
    Net MetaData handler.</div>
@@ -347,10 +371,28 @@ showHideInherited();
 <div class="MainContent">
 <a name="propertyDetail"></a>
 <div class="detailSectionHeader">Property detail</div>
+<a name="_bufferPause"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">_bufferPause</td><td class="detailHeaderType">property</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>protected var _bufferPause:Boolean</code>
+</div>
+<a name="_bufferTime"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">_bufferTime</td><td class="detailHeaderType">property</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>protected var _bufferTime:Number</code>
+</div>
 <a name="_client"></a>
 <table cellspacing="0" cellpadding="0" class="detailHeader">
 <tr>
-<td class="detailHeaderName">_client</td><td class="detailHeaderType">property</td>
+<td class="detailHeaderName">_client</td><td class="detailHeaderType">property</td><td class="detailHeaderRule">&nbsp;</td>
 </tr>
 </table>
 <div class="detailBody">
@@ -510,10 +552,20 @@ showHideInherited();
 </div>
 <a name="methodDetail"></a>
 <div class="detailSectionHeader">Method detail</div>
+<a name="checkBuffer()"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">checkBuffer</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>protected function checkBuffer():void</code><p>
+   Handle buffer externally to <code>ns.bufferTime</code> so we can achieve proper cuePoint timing.
+   </p></div>
 <a name="destroy()"></a>
 <table cellspacing="0" cellpadding="0" class="detailHeader">
 <tr>
-<td class="detailHeaderName">destroy</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td>
+<td class="detailHeaderName">destroy</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td>
 </tr>
 </table>
 <div class="detailBody">
@@ -692,6 +744,22 @@ showHideInherited();
 </tr>
 <tr>
 <td width="20px"></td><td><code><span class="label">buffer</span>:uint</code> (default = <code>4</code>)<code></code></td>
+</tr>
+</table>
+</div>
+<a name="ns_onCuePoint()"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">ns_onCuePoint</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>protected function ns_onCuePoint(infoObject:Object):void</code><p>
+   Net CuePoint handler.
+   </p><span class="label">Parameters</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20px"></td><td><code><span class="label">infoObject</span>:Object</code></td>
 </tr>
 </table>
 </div>
