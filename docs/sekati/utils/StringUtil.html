@@ -4,7 +4,7 @@
 <META http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <link rel="stylesheet" href="../../style.css" type="text/css" media="screen">
 <link rel="stylesheet" href="../../print.css" type="text/css" media="print">
-<meta content="StringUtil,sekati.utils.StringUtil,beginsWith,commaFormatNumber,detectBr,endsWith,equals,firstToUpper,floatToString,htmlDecode,htmlEncode,lrtrim,ltrim,padZeroOnFloat,randChar,randLowerChar,randNum,randSpecialChar,remove,removeSpaces,removeTabs,replace,rtrim,search,searchCaseInsensitive,stripTags,stripZeroAndRepairFloat,stripZeroOnFloat,toDoubleQuote,toNumeric,toSingleQuote,trim,trimCamel,xtrim" name="keywords">
+<meta content="StringUtil,sekati.utils.StringUtil,beginsWith,commaFormatNumber,detectBr,endsWith,equals,firstToUpper,floatToString,htmlDecode,htmlEncode,lrtrim,ltrim,padZeroOnFloat,randChar,randLowerChar,randNum,randSpecialChar,remove,removeSpaces,removeTabs,replace,rtrim,sanitizeNull,search,searchCaseInsensitive,stripTags,stripZeroAndRepairFloat,stripZeroOnFloat,toDoubleQuote,toNumeric,toSingleQuote,trim,trimCamel,xtrim" name="keywords">
 <title>sekati.utils.StringUtil</title>
 </head>
 <body>
@@ -237,6 +237,14 @@ if (!isEclipse() || window.name != ECLIPSE_FRAME_NAME) {titleBar_setSubTitle("Cl
 <a class="signatureLink" href="#rtrim()">rtrim</a>(input:String):String</div>
 <div class="summaryTableDescription">[static]
    Removes whitespace from the end of a string.</div>
+</td><td class="summaryTableOwnerCol">StringUtil</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="#sanitizeNull()">sanitizeNull</a>(str:String):String</div>
+<div class="summaryTableDescription">[static]
+   Sanitize <code>null</code> strings for display purposes.</div>
 </td><td class="summaryTableOwnerCol">StringUtil</td>
 </tr>
 <tr class="">
@@ -912,6 +920,29 @@ showHideInherited();
 <table border="0" cellspacing="0" cellpadding="0">
 <tr>
 <td width="20px"></td><td><code><span class="label">input</span>:String</code></td>
+</tr>
+</table>
+<p></p>
+<span class="label">Returns</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20"></td><td><code>String</code></td>
+</tr>
+</table>
+</div>
+<a name="sanitizeNull()"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">sanitizeNull</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public static function sanitizeNull(str:String):String</code><p>
+   Sanitize <code>null</code> strings for display purposes.
+   </p><span class="label">Parameters</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20px"></td><td><code><span class="label">str</span>:String</code></td>
 </tr>
 </table>
 <p></p>
