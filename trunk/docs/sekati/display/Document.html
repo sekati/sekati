@@ -41,7 +41,7 @@ if (!isEclipse() || window.name != ECLIPSE_FRAME_NAME) {titleBar_setSubTitle("Cl
 <td class="classHeaderTableLabel">Inheritance</td><td class="inheritanceList">Document <img class="inheritArrow" alt="Inheritance" title="Inheritance" src="../../images/inherit-arrow.gif"> <a href="Canvas.html">Canvas</a> <img class="inheritArrow" alt="Inheritance" title="Inheritance" src="../../images/inherit-arrow.gif"> flash.display.Sprite</td>
 </tr>
 <tr>
-<td class="classHeaderTableLabel">Subclasses</td><td><a href="../../Main.html">Main</a></td>
+<td class="classHeaderTableLabel">Subclasses</td><td><a href="../../Main.html">Main</a>, <a href="../tests/TestApplication.html">TestApplication</a></td>
 </tr>
 </table>
 <p></p>
@@ -162,7 +162,7 @@ if (!isEclipse() || window.name != ECLIPSE_FRAME_NAME) {titleBar_setSubTitle("Cl
 <tr class="">
 <td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
 <div class="summarySignature">
-<a class="signatureLink" href="#initAPI()">initAPI</a>():void</div>
+<a class="signatureLink" href="#initAPI()">initAPI</a>(hasBootstrap:Boolean = true):void</div>
 <div class="summaryTableDescription">
    Initialize the API <code>Bootstrap</code> queued core initialization routines.</div>
 </td><td class="summaryTableOwnerCol">Document</td>
@@ -288,19 +288,37 @@ showHideInherited();
 </tr>
 </table>
 <div class="detailBody">
-<code>protected function initAPI():void</code><p>
+<code>protected function initAPI(hasBootstrap:Boolean = true):void</code><p>
    Initialize the API <code>Bootstrap</code> queued core initialization routines.
+   </p><span class="label">Parameters</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20px"></td><td><code><span class="label">hasBootstrap</span>:Boolean</code> (default = <code>true</code>)<code></code> &mdash; defines whether the Document initializes the API <code>Bootstrap</code> sequence or runs the API <i>"dumb"</i>.
    
-   </p><p><b>Customization:</b> Override this method & adjust to point to your <i>custom</i>
+   <p><b>Customization:</b> Override this method & adjust to point to your <i>custom</i>
    <code>Bootstrap</code> (extended from <code>sekati.core.Bootstrap</code>) if custom initialization
-   is necessary.</p>
+   is required or override and alter the default <code>hasBootstrap = true</code> to <code>false</code> if no bootstrapping is needed.</p>
    
-   <p>
+   </td>
+</tr>
+</table>
+<p>
 <span class="label">See also</span>
 </p>
 <div class="seeAlso">
 <a href="../core/Bootstrap.html" target="">sekati.core.Bootstrap</a>
 </div>
+<br>
+<span class="label">Example</span>
+<br>If you would like to skip the API Bootstrapping sequence & run the API <i>"dumb"</i>; in your Main
+   Document class (which extends </code>sekati.display.Document</code>):
+   <div class='listing'><pre>
+    override protected function initAPI(hasBootstrap : Boolean = false) : void {
+     super.initAPI( hasBootstrap );
+    }
+   </pre></div>
+   
+   <p></p>
 </div>
 <a name="initEntryPoint()"></a>
 <table cellspacing="0" cellpadding="0" class="detailHeader">

@@ -45,8 +45,8 @@ if (!isEclipse() || window.name != ECLIPSE_FRAME_NAME) {titleBar_setSubTitle("Cl
 </tr>
 </table>
 <p></p>
-  The API <code>Document</code> class extends <code>Canvas</code> to allow top-level, <i>"global"</i>
-  access to <code>stage</code>, <code>root</code>, <code>loaderInfo</code> & <code>flashVar</code> to 
+  The API <code>Canvas</code> (<code>sekati.display.Document</code>'s superclass): exposes top-level, <i>"global"</i>
+  access to the <code>stage</code>, <code>root</code>, <code>loaderInfo</code> & <code>flashVar</code> for 
   all classes (including non-DisplayObject classes).
   
   <p>Developers implementing the API may find it handy to reference these objects via their static references:<ul>
@@ -54,6 +54,11 @@ if (!isEclipse() || window.name != ECLIPSE_FRAME_NAME) {titleBar_setSubTitle("Cl
   <li><code>Canvas.root</code></li>
   <li><code>Canvas.loaderInfo</code></li>
   <li><code>Canvas.flashVars</code></li></ul></p>
+  
+  <p><b>Note:</b> <code>Canvas</code> checks if the API implemented application has been loaded in to another
+  SWF application or is running <i>"standalone"</i>. If loaded then <code>Canvas</code> remaps its own 
+  <code>stage</code>, <code>root</code>, <code>loaderInfo</code> & <code>flashVar</code> properties to
+  that of the parent SWF, otherwise it uses its own <code>DisplayList</code> property references.</p>
   
   <p></p>
 <p>
