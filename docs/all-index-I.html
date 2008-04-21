@@ -303,11 +303,19 @@ if (!isEclipse() || window.name != ECLIPSE_FRAME_NAME) {titleBar_setSubTitle("IÂ
 <td width="20"></td><td></td>
 </tr>
 <tr>
-<td colspan="2" class="idxrow"><a onclick="javascript:loadClassListFrame('sekati/display/class-list.html');" href="sekati/display/Document.html#initAPI()">initAPI</a>() &mdash; Method in class sekati.display.<a onclick="javascript:loadClassListFrame('sekati/display/class-list.html');" href="sekati/display/Document.html">Document</a></td>
+<td colspan="2" class="idxrow"><a onclick="javascript:loadClassListFrame('sekati/display/class-list.html');" href="sekati/display/Document.html#initAPI()">initAPI</a>(hasBootstrap) &mdash; Method in class sekati.display.<a onclick="javascript:loadClassListFrame('sekati/display/class-list.html');" href="sekati/display/Document.html">Document</a></td>
 </tr>
 <tr>
 <td width="20"></td><td>
    Initialize the API <code>Bootstrap</code> queued core initialization routines.</td>
+</tr>
+<tr>
+<td colspan="2" class="idxrow"><a onclick="javascript:loadClassListFrame('sekati/tests/class-list.html');" href="sekati/tests/TestApplication.html#initAPI()">initAPI</a>(hasBootstrap) &mdash; Method in class sekati.tests.<a onclick="javascript:loadClassListFrame('sekati/tests/class-list.html');" href="sekati/tests/TestApplication.html">TestApplication</a></td>
+</tr>
+<tr>
+<td width="20"></td><td>
+   <code>initAPI</code> is overriden to skip the <code>Bootstrap</code> 
+   sequence in this test application to run the API "dumb".</td>
 </tr>
 <tr>
 <td colspan="2" class="idxrow"><a onclick="javascript:loadClassListFrame('./class-list.html');" href="./Main.html#initEntryPoint()">initEntryPoint</a>() &mdash; Method in class <a onclick="javascript:loadClassListFrame('class-list.html');" href="Main.html">Main</a></td>

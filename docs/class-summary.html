@@ -276,8 +276,8 @@ if (!isEclipse() || window.name != ECLIPSE_FRAME_NAME) {titleBar_setSubTitle("Al
 <td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a href="sekati/display/Canvas.html">Canvas</a>
 <br>
 </td><td class="summaryTableCol"><a onclick="javascript:loadClassListFrame('sekati/display/class-list.html');" href="sekati/display/package-detail.html">sekati.display</a></td><td class="summaryTableLastCol">
-  The API <code>Document</code> class extends <code>Canvas</code> to allow top-level, <i>"global"</i>
-  access to <code>stage</code>, <code>root</code>, <code>loaderInfo</code> & <code>flashVar</code> to 
+  The API <code>Canvas</code> (<code>sekati.display.Document</code>'s superclass): exposes top-level, <i>"global"</i>
+  access to the <code>stage</code>, <code>root</code>, <code>loaderInfo</code> & <code>flashVar</code> for 
   all classes (including non-DisplayObject classes).</td>
 </tr>
 <tr class="prow0">
@@ -1103,101 +1103,107 @@ if (!isEclipse() || window.name != ECLIPSE_FRAME_NAME) {titleBar_setSubTitle("Al
   </td>
 </tr>
 <tr class="prow0">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a href="sekati/tests/TestApplication.html">TestApplication</a>
+<br>
+</td><td class="summaryTableCol"><a onclick="javascript:loadClassListFrame('sekati/tests/class-list.html');" href="sekati/tests/package-detail.html">sekati.tests</a></td><td class="summaryTableLastCol">
+  TestApplication provides a baseline implementation of the API.</td>
+</tr>
+<tr class="prow1">
 <td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a href="sekati/tests/TestDocument.html">TestDocument</a>
 <br>
 </td><td class="summaryTableCol"><a onclick="javascript:loadClassListFrame('sekati/tests/class-list.html');" href="sekati/tests/package-detail.html">sekati.tests</a></td><td class="summaryTableLastCol">
   TestDocument provides base initialization of the API Canvas.</td>
 </tr>
-<tr class="prow1">
+<tr class="prow0">
 <td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a href="sekati/display/TextDisplay.html">TextDisplay</a>
 <br>
 </td><td class="summaryTableCol"><a onclick="javascript:loadClassListFrame('sekati/display/class-list.html');" href="sekati/display/package-detail.html">sekati.display</a></td><td class="summaryTableLastCol">
   TextDisplay provides an interface to uniformly style, set & clear <code>TextField</code> text.</td>
 </tr>
-<tr class="prow0">
+<tr class="prow1">
 <td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a href="sekati/ui/TextLabel.html">TextLabel</a>
 <br>
 </td><td class="summaryTableCol"><a onclick="javascript:loadClassListFrame('sekati/ui/class-list.html');" href="sekati/ui/package-detail.html">sekati.ui</a></td><td class="summaryTableLastCol">
   Generic Text Label
   </td>
 </tr>
-<tr class="prow1">
+<tr class="prow0">
 <td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a href="sekati/utils/TextUtil.html">TextUtil</a>
 <br>
 </td><td class="summaryTableCol"><a onclick="javascript:loadClassListFrame('sekati/utils/class-list.html');" href="sekati/utils/package-detail.html">sekati.utils</a></td><td class="summaryTableLastCol">
   Static class wrapping various Text utilities.</td>
 </tr>
-<tr class="prow0">
+<tr class="prow1">
 <td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a href="sekati/converters/TimeConverter.html">TimeConverter</a>
 <br>
 </td><td class="summaryTableCol"><a onclick="javascript:loadClassListFrame('sekati/converters/class-list.html');" href="sekati/converters/package-detail.html">sekati.converters</a></td><td class="summaryTableLastCol">
   Time Conversion Utilities
   </td>
 </tr>
-<tr class="prow1">
+<tr class="prow0">
 <td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a href="sekati/geom/TrigBase.html">TrigBase</a>
 <br>
 </td><td class="summaryTableCol"><a onclick="javascript:loadClassListFrame('sekati/geom/class-list.html');" href="sekati/geom/package-detail.html">sekati.geom</a></td><td class="summaryTableLastCol">
   TrigBase provides common trigonometry utilities.</td>
 </tr>
-<tr class="prow0">
+<tr class="prow1">
 <td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a href="sekati/validators/TypeValidator.html">TypeValidator</a>
 <br>
 </td><td class="summaryTableCol"><a onclick="javascript:loadClassListFrame('sekati/validators/class-list.html');" href="sekati/validators/package-detail.html">sekati.validators</a></td><td class="summaryTableLastCol">
   Basic Type Validation
   </td>
 </tr>
-<tr class="prow1">
+<tr class="prow0">
 <td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a href="sekati/external/Urchin.html">Urchin</a>
 <br>
 </td><td class="summaryTableCol"><a onclick="javascript:loadClassListFrame('sekati/external/class-list.html');" href="sekati/external/package-detail.html">sekati.external</a></td><td class="summaryTableLastCol">
   Google Analytics (Urchin) tracking of Flash events.</td>
 </tr>
-<tr class="prow0">
+<tr class="prow1">
 <td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a href="sekati/view/Viewport.html">Viewport</a>
 <br>
 </td><td class="summaryTableCol"><a onclick="javascript:loadClassListFrame('sekati/view/class-list.html');" href="sekati/view/package-detail.html">sekati.view</a></td><td class="summaryTableLastCol">
   Viewport provides a faux application viewport via a set of letterboxing DisplayObject's to confine content.</td>
 </tr>
-<tr class="prow1">
+<tr class="prow0">
 <td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a href="sekati/events/ViewportEvent.html">ViewportEvent</a>
 <br>
 </td><td class="summaryTableCol"><a onclick="javascript:loadClassListFrame('sekati/events/class-list.html');" href="sekati/events/package-detail.html">sekati.events</a></td><td class="summaryTableLastCol">
   ViewportEvent provides update notification for the Viewport.</td>
 </tr>
-<tr class="prow0">
+<tr class="prow1">
 <td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a href="sekati/utils/WeakRef.html">WeakRef</a>
 <br>
 </td><td class="summaryTableCol"><a onclick="javascript:loadClassListFrame('sekati/utils/class-list.html');" href="sekati/utils/package-detail.html">sekati.utils</a></td><td class="summaryTableLastCol">
   Create a weak reference for easier garbage colleciton of difficult to track Objects.</td>
 </tr>
-<tr class="prow1">
+<tr class="prow0">
 <td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a href="sekati/data/XML.html">XML</a>
 <br>
 </td><td class="summaryTableCol"><a onclick="javascript:loadClassListFrame('sekati/data/class-list.html');" href="sekati/data/package-detail.html">sekati.data</a></td><td class="summaryTableLastCol">
   XML E4X Native Type helper utilitie.</td>
 </tr>
-<tr class="prow0">
+<tr class="prow1">
 <td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a href="sekati/events/XMLEvent.html">XMLEvent</a>
 <br>
 </td><td class="summaryTableCol"><a onclick="javascript:loadClassListFrame('sekati/events/class-list.html');" href="sekati/events/package-detail.html">sekati.events</a></td><td class="summaryTableLastCol">
   XMLEvent
   </td>
 </tr>
-<tr class="prow1">
+<tr class="prow0">
 <td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a href="sekati/collections/XMLListIterator.html">XMLListIterator</a>
 <br>
 </td><td class="summaryTableCol"><a onclick="javascript:loadClassListFrame('sekati/collections/class-list.html');" href="sekati/collections/package-detail.html">sekati.collections</a></td><td class="summaryTableLastCol">
   XMLList based Iterator
   </td>
 </tr>
-<tr class="prow0">
+<tr class="prow1">
 <td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a href="sekati/load/XMLLoader.html">XMLLoader</a>
 <br>
 </td><td class="summaryTableCol"><a onclick="javascript:loadClassListFrame('sekati/load/class-list.html');" href="sekati/load/package-detail.html">sekati.load</a></td><td class="summaryTableLastCol">
   XMLLoader handles the loading of XML documents.</td>
 </tr>
-<tr class="prow1">
+<tr class="prow0">
 <td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a href="sekati/crypt/XOR.html">XOR</a>
 <br>
 </td><td class="summaryTableCol"><a onclick="javascript:loadClassListFrame('sekati/crypt/class-list.html');" href="sekati/crypt/package-detail.html">sekati.crypt</a></td><td class="summaryTableLastCol">
