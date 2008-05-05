@@ -163,19 +163,11 @@ if (!isEclipse() || window.name != ECLIPSE_FRAME_NAME) {titleBar_setSubTitle("SÂ
    Search an array for a given element and return its index or <code>NaN</code>.</td>
 </tr>
 <tr>
-<td colspan="2" class="idxrow"><a onclick="javascript:loadClassListFrame('sekati/utils/class-list.html');" href="sekati/utils/StringUtil.html#search()">search</a>(str, key) &mdash; Static method in class sekati.utils.<a onclick="javascript:loadClassListFrame('sekati/utils/class-list.html');" href="sekati/utils/StringUtil.html">StringUtil</a></td>
+<td colspan="2" class="idxrow"><a onclick="javascript:loadClassListFrame('sekati/utils/class-list.html');" href="sekati/utils/StringUtil.html#search()">search</a>(str, key, caseSensitive) &mdash; Static method in class sekati.utils.<a onclick="javascript:loadClassListFrame('sekati/utils/class-list.html');" href="sekati/utils/StringUtil.html">StringUtil</a></td>
 </tr>
 <tr>
 <td width="20"></td><td>
-   search for key in string
-   </td>
-</tr>
-<tr>
-<td colspan="2" class="idxrow"><a onclick="javascript:loadClassListFrame('sekati/utils/class-list.html');" href="sekati/utils/StringUtil.html#searchCaseInsensitive()">searchCaseInsensitive</a>(str, key) &mdash; Static method in class sekati.utils.<a onclick="javascript:loadClassListFrame('sekati/utils/class-list.html');" href="sekati/utils/StringUtil.html">StringUtil</a></td>
-</tr>
-<tr>
-<td width="20"></td><td>
-   search for key in string - case insensitive.</td>
+   Search for key in string.</td>
 </tr>
 <tr>
 <td colspan="2" class="idxrow"><a onclick="javascript:loadClassListFrame('sekati/converters/class-list.html');" href="sekati/converters/TimeConverter.html#seconds2ms()">seconds2ms</a>(n) &mdash; Static method in class sekati.converters.<a onclick="javascript:loadClassListFrame('sekati/converters/class-list.html');" href="sekati/converters/TimeConverter.html">TimeConverter</a></td>
@@ -476,12 +468,11 @@ if (!isEclipse() || window.name != ECLIPSE_FRAME_NAME) {titleBar_setSubTitle("SÂ
    Set a blur filter.</td>
 </tr>
 <tr>
-<td colspan="2" class="idxrow"><a onclick="javascript:loadClassListFrame('sekati/utils/class-list.html');" href="sekati/utils/ColorUtil.html#setColor()">setColor</a>(o, hex) &mdash; Static method in class sekati.utils.<a onclick="javascript:loadClassListFrame('sekati/utils/class-list.html');" href="sekati/utils/ColorUtil.html">ColorUtil</a></td>
+<td colspan="2" class="idxrow"><a onclick="javascript:loadClassListFrame('sekati/utils/class-list.html');" href="sekati/utils/ColorUtil.html#setColor()">setColor</a>(src, hex) &mdash; Static method in class sekati.utils.<a onclick="javascript:loadClassListFrame('sekati/utils/class-list.html');" href="sekati/utils/ColorUtil.html">ColorUtil</a></td>
 </tr>
 <tr>
 <td width="20"></td><td>
-   Set color of a movieclip or textfield
-   </td>
+   Set the (A)RGB <i>hexadecimal</i> color value of a DisplayObject using ColorTransform.</td>
 </tr>
 <tr>
 <td colspan="2" class="idxrow"><a onclick="javascript:loadClassListFrame('sekati/filters/class-list.html');" href="sekati/filters/FilterBase.html#setColorMatrix()">setColorMatrix</a>(target, filter) &mdash; Static method in class sekati.filters.<a onclick="javascript:loadClassListFrame('sekati/filters/class-list.html');" href="sekati/filters/FilterBase.html">FilterBase</a></td>
@@ -540,6 +531,20 @@ if (!isEclipse() || window.name != ECLIPSE_FRAME_NAME) {titleBar_setSubTitle("SÂ
    Enables or disables the creation of history entries.</td>
 </tr>
 <tr>
+<td colspan="2" class="idxrow"><a onclick="javascript:loadClassListFrame('sekati/utils/class-list.html');" href="sekati/utils/ColorUtil.html#setHSLComponent()">setHSLComponent</a>(src, h, l, s) &mdash; Static method in class sekati.utils.<a onclick="javascript:loadClassListFrame('sekati/utils/class-list.html');" href="sekati/utils/ColorUtil.html">ColorUtil</a></td>
+</tr>
+<tr>
+<td width="20"></td><td>
+   Set the color of a DisplayObject from HSL components.</td>
+</tr>
+<tr>
+<td colspan="2" class="idxrow"><a onclick="javascript:loadClassListFrame('sekati/utils/class-list.html');" href="sekati/utils/ColorUtil.html#setHSVComponent()">setHSVComponent</a>(src, h, s, v) &mdash; Static method in class sekati.utils.<a onclick="javascript:loadClassListFrame('sekati/utils/class-list.html');" href="sekati/utils/ColorUtil.html">ColorUtil</a></td>
+</tr>
+<tr>
+<td width="20"></td><td>
+   Set the color of a DisplayObject from HSV components.</td>
+</tr>
+<tr>
 <td colspan="2" class="idxrow"><a onclick="javascript:loadClassListFrame('sekati/log/class-list.html');" href="sekati/log/Logger.html#setLevel()">setLevel</a>(level, isEnabled) &mdash; Method in class sekati.log.<a onclick="javascript:loadClassListFrame('sekati/log/class-list.html');" href="sekati/log/Logger.html">Logger</a></td>
 </tr>
 <tr>
@@ -559,6 +564,13 @@ if (!isEclipse() || window.name != ECLIPSE_FRAME_NAME) {titleBar_setSubTitle("SÂ
 <tr>
 <td width="20"></td><td>
    Specifies an RGB color for a Color object.</td>
+</tr>
+<tr>
+<td colspan="2" class="idxrow"><a onclick="javascript:loadClassListFrame('sekati/utils/class-list.html');" href="sekati/utils/ColorUtil.html#setRGBComponent()">setRGBComponent</a>(src, r, g, b) &mdash; Static method in class sekati.utils.<a onclick="javascript:loadClassListFrame('sekati/utils/class-list.html');" href="sekati/utils/ColorUtil.html">ColorUtil</a></td>
+</tr>
+<tr>
+<td width="20"></td><td>
+   Set the color of a DisplayObject from RGB components.</td>
 </tr>
 <tr>
 <td colspan="2" class="idxrow"><a onclick="javascript:loadClassListFrame('sekati/filters/class-list.html');" href="sekati/filters/FilterBase.html#setShadow()">setShadow</a>(target, filter) &mdash; Static method in class sekati.filters.<a onclick="javascript:loadClassListFrame('sekati/filters/class-list.html');" href="sekati/filters/FilterBase.html">FilterBase</a></td>
@@ -616,6 +628,13 @@ if (!isEclipse() || window.name != ECLIPSE_FRAME_NAME) {titleBar_setSubTitle("SÂ
 <tr>
 <td width="20"></td><td>
    Sets color transform information for a Color object.</td>
+</tr>
+<tr>
+<td colspan="2" class="idxrow"><a onclick="javascript:loadClassListFrame('sekati/utils/class-list.html');" href="sekati/utils/ColorUtil.html#setTransform()">setTransform</a>(src, transformObject) &mdash; Static method in class sekati.utils.<a onclick="javascript:loadClassListFrame('sekati/utils/class-list.html');" href="sekati/utils/ColorUtil.html">ColorUtil</a></td>
+</tr>
+<tr>
+<td width="20"></td><td>
+   Set ColorTransform information for a DisplayObject.</td>
 </tr>
 <tr>
 <td colspan="2" class="idxrow"><a onclick="javascript:loadClassListFrame('sekati/external/class-list.html');" href="sekati/external/SWFAddress.html#_setValue()">_setValue</a>(value) &mdash; Static method in class sekati.external.<a onclick="javascript:loadClassListFrame('sekati/external/class-list.html');" href="sekati/external/SWFAddress.html">SWFAddress</a></td>
@@ -1212,24 +1231,21 @@ if (!isEclipse() || window.name != ECLIPSE_FRAME_NAME) {titleBar_setSubTitle("SÂ
 </tr>
 <tr>
 <td width="20"></td><td>
-   strip html markup tags
-   </td>
+   Strip HTML markup tags.</td>
 </tr>
 <tr>
 <td colspan="2" class="idxrow"><a onclick="javascript:loadClassListFrame('sekati/utils/class-list.html');" href="sekati/utils/StringUtil.html#stripZeroAndRepairFloat()">stripZeroAndRepairFloat</a>(n) &mdash; Static method in class sekati.utils.<a onclick="javascript:loadClassListFrame('sekati/utils/class-list.html');" href="sekati/utils/StringUtil.html">StringUtil</a></td>
 </tr>
 <tr>
 <td width="20"></td><td>
-   strip the zero off floated numbers and remove Scientific Notation
-   </td>
+   Strip the zero off floated numbers and remove Scientific Notation.</td>
 </tr>
 <tr>
 <td colspan="2" class="idxrow"><a onclick="javascript:loadClassListFrame('sekati/utils/class-list.html');" href="sekati/utils/StringUtil.html#stripZeroOnFloat()">stripZeroOnFloat</a>(n) &mdash; Static method in class sekati.utils.<a onclick="javascript:loadClassListFrame('sekati/utils/class-list.html');" href="sekati/utils/StringUtil.html">StringUtil</a></td>
 </tr>
 <tr>
 <td width="20"></td><td>
-   strip the zero off floated numbers
-   </td>
+   Strip the zero off floated numbers.</td>
 </tr>
 <tr>
 <td colspan="2" class="idxrow"><a onclick="javascript:loadClassListFrame('sekati/display/class-list.html');" href="sekati/display/TextDisplay.html#style()">style</a>(o) &mdash; Static method in class sekati.display.<a onclick="javascript:loadClassListFrame('sekati/display/class-list.html');" href="sekati/display/TextDisplay.html">TextDisplay</a></td>
