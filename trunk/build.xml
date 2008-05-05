@@ -237,20 +237,6 @@
 	</target>
 	
 	
-	<!-- MTASC AS2 COMPILATION -->	
-	
-	
-    <target name="compile-mtasc" description="Compile project.class with the mtasc compiler">
-    	<echo>FDTKit MTASC Compiler -> ${project.class}: ${project.swf}</echo>
-        <exec executable="${mtasc.exe}" dir="." failonerror="true">
-            <arg line="-cp ${mtasc.corelib}"/>
-            <arg line="-cp ${mtasc.classpath}"/>
-            <arg line="-v -version ${mtasc.target_player} -mx -swf"/>
-            <arg line="${project.swf} ${project.class}"/>
-        </exec>
-    </target>
-	
-	
 	<!-- PREVIEW -->
 	
 	
@@ -325,26 +311,6 @@
 			<arg line="-templates-path '${flex3sdk}/asdoc/templates'"/>
 		</exec>
 	</target>
-	
-	
-	<target name="doc-as2api" description="Generate AS2 Documentation from src.dir using AS2API">
-		<echo>FDTKit Generating AS2API Documentation -> ${src.dir}</echo>
-		<exec dir="${as2api.dir}" executable="${ruby.exe}" failonerror="true">
-			<arg line='${as2api.rb}'/>
-			<arg line='package-spec ${doc.as2api.package}'/>
-			<arg line='--classpath ${src.dir}'/>
-			<arg line='--output-dir ${docs.dir}'/>
-			<arg line='--title ${doc.asdoc.maintitle}'/>
-			<arg line='--sources'/>
-			<arg line='--progress'/>
-        	<arg line='--draw-diagram'/>
-        	<arg line='--dot-exe ${dot.exe}'/>
-		</exec>
-		<copy file="${fdtkit.template}/as2api/doc_sekati_index.html" tofile="${docs.dir}/index.html" overwrite="true"  failonerror="true"/>
-		<copy file="${fdtkit.template}/as2api/doc_sekati_style.css" tofile="${docs.dir}/style.css" overwrite="true"  failonerror="true"/>
-		<copy file="${fdtkit.template}/as2api/doc_sekati_unnatural.css" tofile="${docs.dir}/unnatural.css" overwrite="true"  failonerror="true"/>
-	</target>	
-	
 	
 	<target name="doc-clean" description="Remove any existing Documentation from docs.dir">
 		<echo>FDTKit Cleaning Documentation -> ${docs.dir}</echo>
