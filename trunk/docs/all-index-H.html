@@ -48,6 +48,12 @@ if (!isEclipse() || window.name != ECLIPSE_FRAME_NAME) {titleBar_setSubTitle("HÂ
 <td width="20"></td><td></td>
 </tr>
 <tr>
+<td colspan="2" class="idxrow"><a onclick="javascript:loadClassListFrame('sekati/load/class-list.html');" href="sekati/load/AbstractLoader.html#_hasCacheBuster">_hasCacheBuster</a> &mdash; Property in class sekati.load.<a onclick="javascript:loadClassListFrame('sekati/load/class-list.html');" href="sekati/load/AbstractLoader.html">AbstractLoader</a></td>
+</tr>
+<tr>
+<td width="20"></td><td></td>
+</tr>
+<tr>
 <td colspan="2" class="idxrow"><a onclick="javascript:loadClassListFrame('sekati/events/class-list.html');" href="sekati/events/AppEventDispatcher.html#hasEventListener()">hasEventListener</a>(type) &mdash; Method in class sekati.events.<a onclick="javascript:loadClassListFrame('sekati/events/class-list.html');" href="sekati/events/AppEventDispatcher.html">AppEventDispatcher</a></td>
 </tr>
 <tr>
@@ -279,11 +285,18 @@ if (!isEclipse() || window.name != ECLIPSE_FRAME_NAME) {titleBar_setSubTitle("HÂ
    Returns a random hexidecimal color.</td>
 </tr>
 <tr>
-<td colspan="2" class="idxrow"><a onclick="javascript:loadClassListFrame('sekati/utils/class-list.html');" href="sekati/utils/ColorUtil.html#hexToHtml()">hexToHtml</a>(hex) &mdash; Static method in class sekati.utils.<a onclick="javascript:loadClassListFrame('sekati/utils/class-list.html');" href="sekati/utils/ColorUtil.html">ColorUtil</a></td>
+<td colspan="2" class="idxrow"><a onclick="javascript:loadClassListFrame('sekati/utils/class-list.html');" href="sekati/utils/ColorUtil.html#hexFromComponents()">hexFromComponents</a>(a, b, c) &mdash; Static method in class sekati.utils.<a onclick="javascript:loadClassListFrame('sekati/utils/class-list.html');" href="sekati/utils/ColorUtil.html">ColorUtil</a></td>
 </tr>
 <tr>
 <td width="20"></td><td>
-   Converts the number passed in argument (the html color in hex with ECMAScript notation <code>0xrrggbb</code>) in a HTML string representation.</td>
+   Convert individual R,G,B values to a hexidecimal value.</td>
+</tr>
+<tr>
+<td colspan="2" class="idxrow"><a onclick="javascript:loadClassListFrame('sekati/utils/class-list.html');" href="sekati/utils/ColorUtil.html#hexFromPercentages()">hexFromPercentages</a>(rgbObj) &mdash; Static method in class sekati.utils.<a onclick="javascript:loadClassListFrame('sekati/utils/class-list.html');" href="sekati/utils/ColorUtil.html">ColorUtil</a></td>
+</tr>
+<tr>
+<td width="20"></td><td>
+   Convert an RGB Object to a hexidecimal color value.</td>
 </tr>
 <tr>
 <td colspan="2" class="idxrow"><a onclick="javascript:loadClassListFrame('sekati/display/class-list.html');" href="sekati/display/TextDisplay.html#hide()">hide</a>(... rest) &mdash; Static method in class sekati.display.<a onclick="javascript:loadClassListFrame('sekati/display/class-list.html');" href="sekati/display/TextDisplay.html">TextDisplay</a></td>
@@ -318,6 +331,34 @@ if (!isEclipse() || window.name != ECLIPSE_FRAME_NAME) {titleBar_setSubTitle("HÂ
 <tr>
 <td width="20"></td><td>
    Opens a new URL in the browser.</td>
+</tr>
+<tr>
+<td colspan="2" class="idxrow"><a onclick="javascript:loadClassListFrame('sekati/utils/class-list.html');" href="sekati/utils/ColorUtil.html#HSLtoHSV()">HSLtoHSV</a>(hue, luminance, saturation) &mdash; Static method in class sekati.utils.<a onclick="javascript:loadClassListFrame('sekati/utils/class-list.html');" href="sekati/utils/ColorUtil.html">ColorUtil</a></td>
+</tr>
+<tr>
+<td width="20"></td><td>
+   Convert HSL to HSV using RGB conversions: color preservation may be dubious.</td>
+</tr>
+<tr>
+<td colspan="2" class="idxrow"><a onclick="javascript:loadClassListFrame('sekati/utils/class-list.html');" href="sekati/utils/ColorUtil.html#HSLtoRGB()">HSLtoRGB</a>(hue, luminance, saturation) &mdash; Static method in class sekati.utils.<a onclick="javascript:loadClassListFrame('sekati/utils/class-list.html');" href="sekati/utils/ColorUtil.html">ColorUtil</a></td>
+</tr>
+<tr>
+<td width="20"></td><td>
+   Convert HSL values to RGB values.</td>
+</tr>
+<tr>
+<td colspan="2" class="idxrow"><a onclick="javascript:loadClassListFrame('sekati/utils/class-list.html');" href="sekati/utils/ColorUtil.html#HSVtoHSL()">HSVtoHSL</a>(hue, saturation, value) &mdash; Static method in class sekati.utils.<a onclick="javascript:loadClassListFrame('sekati/utils/class-list.html');" href="sekati/utils/ColorUtil.html">ColorUtil</a></td>
+</tr>
+<tr>
+<td width="20"></td><td>
+   Convert HSV to HLS using RGB conversions: color preservation may be dubious.</td>
+</tr>
+<tr>
+<td colspan="2" class="idxrow"><a onclick="javascript:loadClassListFrame('sekati/utils/class-list.html');" href="sekati/utils/ColorUtil.html#HSVtoRGB()">HSVtoRGB</a>(hue, saturation, value) &mdash; Static method in class sekati.utils.<a onclick="javascript:loadClassListFrame('sekati/utils/class-list.html');" href="sekati/utils/ColorUtil.html">ColorUtil</a></td>
+</tr>
+<tr>
+<td width="20"></td><td>
+   Convert HSV values to RGB values.</td>
 </tr>
 <tr>
 <td colspan="2" class="idxrow"><a onclick="javascript:loadClassListFrame('sekati/data/class-list.html');" href="sekati/data/HTMLCode.html">HTMLCode</a> &mdash; Class in package <a onclick="javascript:loadClassListFrame('sekati/data/class-list.html');" href="sekati/data/package-detail.html">sekati.data</a></td>
@@ -356,29 +397,33 @@ if (!isEclipse() || window.name != ECLIPSE_FRAME_NAME) {titleBar_setSubTitle("HÂ
 </tr>
 <tr>
 <td width="20"></td><td>
-   decode html
-   </td>
+   Decode HTML.</td>
 </tr>
 <tr>
 <td colspan="2" class="idxrow"><a onclick="javascript:loadClassListFrame('sekati/utils/class-list.html');" href="sekati/utils/StringUtil.html#htmlEncode()">htmlEncode</a>(s) &mdash; Static method in class sekati.utils.<a onclick="javascript:loadClassListFrame('sekati/utils/class-list.html');" href="sekati/utils/StringUtil.html">StringUtil</a></td>
 </tr>
 <tr>
 <td width="20"></td><td>
-   encode html
-   </td>
-</tr>
-<tr>
-<td colspan="2" class="idxrow"><a onclick="javascript:loadClassListFrame('sekati/utils/class-list.html');" href="sekati/utils/ColorUtil.html#htmlToNumber()">htmlToNumber</a>(sHTML) &mdash; Static method in class sekati.utils.<a onclick="javascript:loadClassListFrame('sekati/utils/class-list.html');" href="sekati/utils/ColorUtil.html">ColorUtil</a></td>
-</tr>
-<tr>
-<td width="20"></td><td>
-   Converts the string passed in argument (the html color) in a number representation.</td>
+   Encode HTML.</td>
 </tr>
 <tr>
 <td colspan="2" class="idxrow"><a onclick="javascript:loadClassListFrame('sekati/load/class-list.html');" href="sekati/load/XMLLoader.html#httpStatusHandler()">httpStatusHandler</a>(e) &mdash; Method in class sekati.load.<a onclick="javascript:loadClassListFrame('sekati/load/class-list.html');" href="sekati/load/XMLLoader.html">XMLLoader</a></td>
 </tr>
 <tr>
 <td width="20"></td><td></td>
+</tr>
+<tr>
+<td colspan="2" class="idxrow"><a onclick="javascript:loadClassListFrame('sekati/utils/class-list.html');" href="sekati/utils/ColorUtil.html#HUE_MAX">HUE_MAX</a> &mdash; Constant static property in class sekati.utils.<a onclick="javascript:loadClassListFrame('sekati/utils/class-list.html');" href="sekati/utils/ColorUtil.html">ColorUtil</a></td>
+</tr>
+<tr>
+<td width="20"></td><td></td>
+</tr>
+<tr>
+<td colspan="2" class="idxrow"><a onclick="javascript:loadClassListFrame('sekati/utils/class-list.html');" href="sekati/utils/ColorUtil.html#HueToRGB()">HueToRGB</a>(min, max, hue) &mdash; Static method in class sekati.utils.<a onclick="javascript:loadClassListFrame('sekati/utils/class-list.html');" href="sekati/utils/ColorUtil.html">ColorUtil</a></td>
+</tr>
+<tr>
+<td width="20"></td><td>
+   Convert hue to RGB values using a linear transformation.</td>
 </tr>
 <tr>
 <td style="padding-bottom:20px" colspan="2"></td>
