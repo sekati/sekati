@@ -202,7 +202,7 @@ showHideInherited();
    // todo: add example
    // find with Function condition
    var moviesWithAverageRatings:Array = ArrayPeer.find( movies, { rating: function(item:Movie, actual:Number):Boolean { return actual > 2.4 && actual < 3.7; } })
-   // find wtih RegExp
+   // find with RegExp
    var moviesTheBeginWithTr:Array = ArrayPeer.find( movies, { name: new RegExp('^Tr.) });
    // find with sub-array query (assuming the 'cast' property returns an Array of Actors with the property 'name')
    var moviesWithMeganFox:Array = ArrayPeer.find( movies, { 'cast.name': 'Megan Fox' })
