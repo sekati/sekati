@@ -4,7 +4,7 @@
 <META http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <link rel="stylesheet" href="../../style.css" type="text/css" media="screen">
 <link rel="stylesheet" href="../../print.css" type="text/css" media="print">
-<meta content="TextUtil,sekati.utils.TextUtil,setFormattedText" name="keywords">
+<meta content="TextUtil,sekati.utils.TextUtil,ellipseLine,setFormattedText" name="keywords">
 <title>sekati.utils.TextUtil</title>
 </head>
 <body>
@@ -63,6 +63,14 @@ if (!isEclipse() || window.name != ECLIPSE_FRAME_NAME) {titleBar_setSubTitle("Cl
 <tr class="">
 <td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
 <div class="summarySignature">
+<a class="signatureLink" href="#ellipseLine()">ellipseLine</a>(tf:TextField, width:Number, param:String = "..."):void</div>
+<div class="summaryTableDescription">[static]
+   Ellipse a single-line TextField to a specific width.</div>
+</td><td class="summaryTableOwnerCol">TextUtil</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
 <a class="signatureLink" href="#setFormattedText()">setFormattedText</a>(tf:TextField, s:String):void</div>
 <div class="summaryTableDescription">[static]
    Set the text of a <code>TextField</code> while preserving the formatting (leading, kerning, etc).</div>
@@ -89,10 +97,38 @@ showHideInherited();
    </p></div>
 <a name="methodDetail"></a>
 <div class="detailSectionHeader">Method detail</div>
+<a name="ellipseLine()"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">ellipseLine</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public static function ellipseLine(tf:TextField, width:Number, param:String = "..."):void</code><p>
+   Ellipse a single-line TextField to a specific width.
+   </p><span class="label">Parameters</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20px"></td><td><code><span class="label">tf</span>:TextField</code></td>
+</tr>
+<tr>
+<td class="paramSpacer">&nbsp;</td>
+</tr>
+<tr>
+<td width="20px"></td><td><code><span class="label">width</span>:Number</code></td>
+</tr>
+<tr>
+<td class="paramSpacer">&nbsp;</td>
+</tr>
+<tr>
+<td width="20px"></td><td><code><span class="label">param</span>:String</code> (default = "<code>...</code>")<code></code></td>
+</tr>
+</table>
+</div>
 <a name="setFormattedText()"></a>
 <table cellspacing="0" cellpadding="0" class="detailHeader">
 <tr>
-<td class="detailHeaderName">setFormattedText</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td>
+<td class="detailHeaderName">setFormattedText</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td>
 </tr>
 </table>
 <div class="detailBody">
