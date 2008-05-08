@@ -4,7 +4,7 @@
 <META http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <link rel="stylesheet" href="../../style.css" type="text/css" media="screen">
 <link rel="stylesheet" href="../../print.css" type="text/css" media="print">
-<meta content="ArrayUtil,sekati.utils.ArrayUtil,asort,compare,contains,copy,equals,insert,locatePropVal,locatePropValIndex,matchValues,max,maxVal,merge,min,minVal,remove,removeDuplicate,search,shuffle,sliceByPropVal,swap,uniqueCopy" name="keywords">
+<meta content="ArrayUtil,sekati.utils.ArrayUtil,asort,compare,contains,copy,equals,insert,locatePropVal,locatePropValIndex,matchValues,max,maxVal,merge,min,minVal,nearestNeighbor,remove,removeDuplicate,search,shuffle,sliceByPropVal,swap,uniqueCopy" name="keywords">
 <title>sekati.utils.ArrayUtil</title>
 </head>
 <body>
@@ -174,6 +174,14 @@ if (!isEclipse() || window.name != ECLIPSE_FRAME_NAME) {titleBar_setSubTitle("Cl
 <tr class="">
 <td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
 <div class="summarySignature">
+<a class="signatureLink" href="#nearestNeighbor()">nearestNeighbor</a>(val:Number, range:Array, returnIndex:Boolean = false):Number</div>
+<div class="summaryTableDescription">[static]
+   Locate and return the (lowest) nearest neighbor or matching value in a <code>NUMERIC</code> sorted array of Numbers.</div>
+</td><td class="summaryTableOwnerCol">ArrayUtil</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
 <a class="signatureLink" href="#remove()">remove</a>(a:Array, objElement:Object):Array</div>
 <div class="summaryTableDescription">[static]
    Remove all instances of an element from an array.</div>
@@ -208,7 +216,7 @@ if (!isEclipse() || window.name != ECLIPSE_FRAME_NAME) {titleBar_setSubTitle("Cl
 <div class="summarySignature">
 <a class="signatureLink" href="#sliceByPropVal()">sliceByPropVal</a>(a:Array, prop:String, val:Object, isCaseInsensitive:Boolean = false):Array</div>
 <div class="summaryTableDescription">[static]
-   Return a new array sliced from the original array ob complex objects based on a <code>prop</code>/<code>val</code> match
+   Return a new array sliced from the original array of complex objects based on a <code>prop</code>/<code>val</code> match
    </div>
 </td><td class="summaryTableOwnerCol">ArrayUtil</td>
 </tr>
@@ -662,6 +670,52 @@ showHideInherited();
 </tr>
 </table>
 </div>
+<a name="nearestNeighbor()"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">nearestNeighbor</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public static function nearestNeighbor(val:Number, range:Array, returnIndex:Boolean = false):Number</code><p>
+   Locate and return the (lowest) nearest neighbor or matching value in a <code>NUMERIC</code> sorted array of Numbers.
+   </p><span class="label">Parameters</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20px"></td><td><code><span class="label">val</span>:Number</code> &mdash;     the value to find match or find nearst match of.
+   </td>
+</tr>
+<tr>
+<td class="paramSpacer">&nbsp;</td>
+</tr>
+<tr>
+<td width="20px"></td><td><code><span class="label">range</span>:Array</code> &mdash;    of values in array.
+   </td>
+</tr>
+<tr>
+<td class="paramSpacer">&nbsp;</td>
+</tr>
+<tr>
+<td width="20px"></td><td><code><span class="label">returnIndex</span>:Boolean</code> (default = <code>false</code>)<code></code> &mdash;   if <code>true</code> return the array index of the neighbor, if <code>false</code> return the value of the neighbor.
+   </td>
+</tr>
+</table>
+<p></p>
+<span class="label">Returns</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20"></td><td><code>Number</code></td>
+</tr>
+</table>
+<br>
+<span class="label">Example</span>
+<br><div class='listing'><pre>
+   var a : Array = [1, 3, 5, 7, 9, 11];
+   var nearestLow : Number = ArrayUtil.nearestNeighbor(4, a);    // returns 3 (value)
+   var nearestHigh : Number = ArrayUtil.nearestNeighbor(4, a, true);  // returns 1 (index) 
+   </pre></div>
+   <p></p>
+</div>
 <a name="remove()"></a>
 <table cellspacing="0" cellpadding="0" class="detailHeader">
 <tr>
@@ -767,7 +821,7 @@ showHideInherited();
 </table>
 <div class="detailBody">
 <code>public static function sliceByPropVal(a:Array, prop:String, val:Object, isCaseInsensitive:Boolean = false):Array</code><p>
-   Return a new array sliced from the original array ob complex objects based on a <code>prop</code>/<code>val</code> match
+   Return a new array sliced from the original array of complex objects based on a <code>prop</code>/<code>val</code> match
    </p><span class="label">Parameters</span>
 <table border="0" cellspacing="0" cellpadding="0">
 <tr>
