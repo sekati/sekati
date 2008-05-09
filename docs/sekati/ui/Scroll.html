@@ -4,7 +4,7 @@
 <META http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <link rel="stylesheet" href="../../style.css" type="text/css" media="screen">
 <link rel="stylesheet" href="../../print.css" type="text/css" media="print">
-<meta content="Scroll,sekati.ui.Scroll,MOVE_PERCENT,MOVE_TIME,_axis,_bar,_content,_contentBegin,_contentEnd,_contentSizeTracker,_ease,_friction,_gutter,_gutterBegin,_gutterEnd,_hasMouseWheel,_isDrag,_isProportionalBar,_isProportionalGutter,_newPos,_oldPos,_prop,_ratio,_scrollArea,_speed,_this,isDragging,isMouseInArea,isScrollable,bar_onPress,bar_onRelease,destroy,externalMouseWheel,gutter_onPress,init,moveAmount,moveBar,moveContent,movePercent,onEnterFrame,onMouseWheel,resolveScrollerPos,setConfines,setMouseWheel,stopScroll,updateConfines" name="keywords">
+<meta content="Scroll,sekati.ui.Scroll,MOVE_PERCENT,MOVE_TIME,_axis,_bar,_content,_contentBegin,_contentEnd,_contentSizeTracker,_ease,_friction,_gutter,_gutterBegin,_gutterEnd,_hasMouseWheel,_isDrag,_isProportionalBar,_isProportionalGutter,_newPos,_oldPos,_prop,_ratio,_scrollArea,_speed,_this,isDragging,isMouseInArea,isScrollable,barDownHandler,barUpHandler,destroy,enterFrame,gutterClickHandler,init,mouseWheelHandler,moveAmount,moveBar,moveContent,movePercent,resolvePosition,setConfines,setMouseWheel,stopScroll,updateConfines" name="keywords">
 <title>sekati.ui.Scroll</title>
 </head>
 <body>
@@ -39,8 +39,8 @@ if (!isEclipse() || window.name != ECLIPSE_FRAME_NAME) {titleBar_setSubTitle("Cl
 </tr>
 </table>
 <p></p>
-  Scroll handles mouseWheel (PC & Mac), dynamic resizing of content, external size tracking for accordian 
-  style content scrolling, slideContent method, modal ui states, proportional bar, gutter and more.
+  Scroll provides a flexible scrollbar controller class: handling mouseWheel (PC & Mac), dynamic resizing content, external size 
+  tracking for accordian style content scrolling, slideContent method, modal ui states, proportional bar, gutter and more.
   
   <p></p>
 <p>
@@ -263,7 +263,7 @@ if (!isEclipse() || window.name != ECLIPSE_FRAME_NAME) {titleBar_setSubTitle("Cl
 <tr class="">
 <td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
 <div class="summarySignature">
-<a class="signatureLink" href="#bar_onPress()">bar_onPress</a>(e:MouseEvent):void</div>
+<a class="signatureLink" href="#barDownHandler()">barDownHandler</a>(e:MouseEvent):void</div>
 <div class="summaryTableDescription">
    Bar Press - start bar drag: register a pseudo
    onReleaseOutside event listener on stage.</div>
@@ -272,7 +272,7 @@ if (!isEclipse() || window.name != ECLIPSE_FRAME_NAME) {titleBar_setSubTitle("Cl
 <tr class="">
 <td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
 <div class="summarySignature">
-<a class="signatureLink" href="#bar_onRelease()">bar_onRelease</a>(e:MouseEvent):void</div>
+<a class="signatureLink" href="#barUpHandler()">barUpHandler</a>(e:MouseEvent):void</div>
 <div class="summaryTableDescription">
    Bar Release - stop bar drag: unregister a pseudo
    onReleaseOutside event listener from stage.</div>
@@ -281,23 +281,7 @@ if (!isEclipse() || window.name != ECLIPSE_FRAME_NAME) {titleBar_setSubTitle("Cl
 <tr class="">
 <td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
 <div class="summarySignature">
-<a class="signatureLink" href="#externalMouseWheel()">externalMouseWheel</a>(e:<a href="../events/ExternalMouseEvent.html">ExternalMouseEvent</a>):void</div>
-<div class="summaryTableDescription">
-   Mac MouseWheel handler.</div>
-</td><td class="summaryTableOwnerCol">Scroll</td>
-</tr>
-<tr class="">
-<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
-<div class="summarySignature">
-<a class="signatureLink" href="#gutter_onPress()">gutter_onPress</a>(e:MouseEvent):void</div>
-<div class="summaryTableDescription">
-   Gutter clicks.</div>
-</td><td class="summaryTableOwnerCol">Scroll</td>
-</tr>
-<tr class="">
-<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
-<div class="summarySignature">
-<a class="signatureLink" href="#onEnterFrame()">onEnterFrame</a>(e:Event):void</div>
+<a class="signatureLink" href="#enterFrame()">enterFrame</a>(e:Event):void</div>
 <div class="summaryTableDescription">
    EnterFrame runs the core scroll logic.</div>
 </td><td class="summaryTableOwnerCol">Scroll</td>
@@ -305,17 +289,25 @@ if (!isEclipse() || window.name != ECLIPSE_FRAME_NAME) {titleBar_setSubTitle("Cl
 <tr class="">
 <td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
 <div class="summarySignature">
-<a class="signatureLink" href="#onMouseWheel()">onMouseWheel</a>(e:MouseEvent):void</div>
+<a class="signatureLink" href="#gutterClickHandler()">gutterClickHandler</a>(e:MouseEvent):void</div>
 <div class="summaryTableDescription">
-   MouseWheel handler.</div>
+   Gutter clicks.</div>
 </td><td class="summaryTableOwnerCol">Scroll</td>
 </tr>
 <tr class="">
 <td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
 <div class="summarySignature">
-<a class="signatureLink" href="#resolveScrollerPos()">resolveScrollerPos</a>(pos:Number):Number</div>
+<a class="signatureLink" href="#mouseWheelHandler()">mouseWheelHandler</a>(e:MouseEvent):void</div>
 <div class="summaryTableDescription">
-   Insure scroller moves within boundaries.</div>
+   MouseWheel handler for <code>MouseEvent.MOUSE_WHEEL</code> or mac <code>ExternalMouseEvent.MOUSE_WHEEL</code>.</div>
+</td><td class="summaryTableOwnerCol">Scroll</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="#resolvePosition()">resolvePosition</a>(pos:Number):Number</div>
+<div class="summaryTableDescription">
+   ResolvePosition insure that the scroller moves within its gutter boundaries.</div>
 </td><td class="summaryTableOwnerCol">Scroll</td>
 </tr>
 <tr class="">
@@ -731,14 +723,14 @@ showHideInherited();
 </div>
 <a name="methodDetail"></a>
 <div class="detailSectionHeader">Method detail</div>
-<a name="bar_onPress()"></a>
+<a name="barDownHandler()"></a>
 <table cellspacing="0" cellpadding="0" class="detailHeader">
 <tr>
-<td class="detailHeaderName">bar_onPress</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td>
+<td class="detailHeaderName">barDownHandler</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td>
 </tr>
 </table>
 <div class="detailBody">
-<code>protected function bar_onPress(e:MouseEvent):void</code><p>
+<code>protected function barDownHandler(e:MouseEvent):void</code><p>
    Bar Press - start bar drag: register a pseudo
    onReleaseOutside event listener on stage.
    </p><span class="label">Parameters</span>
@@ -748,14 +740,14 @@ showHideInherited();
 </tr>
 </table>
 </div>
-<a name="bar_onRelease()"></a>
+<a name="barUpHandler()"></a>
 <table cellspacing="0" cellpadding="0" class="detailHeader">
 <tr>
-<td class="detailHeaderName">bar_onRelease</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td>
+<td class="detailHeaderName">barUpHandler</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td>
 </tr>
 </table>
 <div class="detailBody">
-<code>protected function bar_onRelease(e:MouseEvent):void</code><p>
+<code>protected function barUpHandler(e:MouseEvent):void</code><p>
    Bar Release - stop bar drag: unregister a pseudo
    onReleaseOutside event listener from stage.
    </p><span class="label">Parameters</span>
@@ -775,30 +767,30 @@ showHideInherited();
 <code>public function destroy():void</code><p>
    Cleanly destroy Scroll instances.
    </p></div>
-<a name="externalMouseWheel()"></a>
+<a name="enterFrame()"></a>
 <table cellspacing="0" cellpadding="0" class="detailHeader">
 <tr>
-<td class="detailHeaderName">externalMouseWheel</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td>
+<td class="detailHeaderName">enterFrame</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td>
 </tr>
 </table>
 <div class="detailBody">
-<code>protected function externalMouseWheel(e:<a href="../events/ExternalMouseEvent.html">ExternalMouseEvent</a>):void</code><p>
-   Mac MouseWheel handler.
+<code>protected function enterFrame(e:Event):void</code><p>
+   EnterFrame runs the core scroll logic.
    </p><span class="label">Parameters</span>
 <table border="0" cellspacing="0" cellpadding="0">
 <tr>
-<td width="20px"></td><td><code><span class="label">e</span>:<a href="../events/ExternalMouseEvent.html">ExternalMouseEvent</a></code></td>
+<td width="20px"></td><td><code><span class="label">e</span>:Event</code></td>
 </tr>
 </table>
 </div>
-<a name="gutter_onPress()"></a>
+<a name="gutterClickHandler()"></a>
 <table cellspacing="0" cellpadding="0" class="detailHeader">
 <tr>
-<td class="detailHeaderName">gutter_onPress</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td>
+<td class="detailHeaderName">gutterClickHandler</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td>
 </tr>
 </table>
 <div class="detailBody">
-<code>protected function gutter_onPress(e:MouseEvent):void</code><p>
+<code>protected function gutterClickHandler(e:MouseEvent):void</code><p>
    Gutter clicks.
    </p><span class="label">Parameters</span>
 <table border="0" cellspacing="0" cellpadding="0">
@@ -817,6 +809,22 @@ showHideInherited();
 <code>public function init():void</code><p>
    Initialize scroll behavior: define confines, mouseWheel, and set scroller to rollout color state.
    </p></div>
+<a name="mouseWheelHandler()"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">mouseWheelHandler</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>protected function mouseWheelHandler(e:MouseEvent):void</code><p>
+   MouseWheel handler for <code>MouseEvent.MOUSE_WHEEL</code> or mac <code>ExternalMouseEvent.MOUSE_WHEEL</code>.
+   </p><span class="label">Parameters</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20px"></td><td><code><span class="label">e</span>:MouseEvent</code></td>
+</tr>
+</table>
+</div>
 <a name="moveAmount()"></a>
 <table cellspacing="0" cellpadding="0" class="detailHeader">
 <tr>
@@ -916,47 +924,15 @@ showHideInherited();
 </tr>
 </table>
 </div>
-<a name="onEnterFrame()"></a>
+<a name="resolvePosition()"></a>
 <table cellspacing="0" cellpadding="0" class="detailHeader">
 <tr>
-<td class="detailHeaderName">onEnterFrame</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td>
+<td class="detailHeaderName">resolvePosition</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td>
 </tr>
 </table>
 <div class="detailBody">
-<code>protected function onEnterFrame(e:Event):void</code><p>
-   EnterFrame runs the core scroll logic.
-   </p><span class="label">Parameters</span>
-<table border="0" cellspacing="0" cellpadding="0">
-<tr>
-<td width="20px"></td><td><code><span class="label">e</span>:Event</code></td>
-</tr>
-</table>
-</div>
-<a name="onMouseWheel()"></a>
-<table cellspacing="0" cellpadding="0" class="detailHeader">
-<tr>
-<td class="detailHeaderName">onMouseWheel</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td>
-</tr>
-</table>
-<div class="detailBody">
-<code>protected function onMouseWheel(e:MouseEvent):void</code><p>
-   MouseWheel handler.
-   </p><span class="label">Parameters</span>
-<table border="0" cellspacing="0" cellpadding="0">
-<tr>
-<td width="20px"></td><td><code><span class="label">e</span>:MouseEvent</code></td>
-</tr>
-</table>
-</div>
-<a name="resolveScrollerPos()"></a>
-<table cellspacing="0" cellpadding="0" class="detailHeader">
-<tr>
-<td class="detailHeaderName">resolveScrollerPos</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td>
-</tr>
-</table>
-<div class="detailBody">
-<code>protected function resolveScrollerPos(pos:Number):Number</code><p>
-   Insure scroller moves within boundaries.
+<code>protected function resolvePosition(pos:Number):Number</code><p>
+   ResolvePosition insure that the scroller moves within its gutter boundaries.
    </p><span class="label">Parameters</span>
 <table border="0" cellspacing="0" cellpadding="0">
 <tr>
