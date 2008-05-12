@@ -4,7 +4,7 @@
 <META http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <link rel="stylesheet" href="../../style.css" type="text/css" media="screen">
 <link rel="stylesheet" href="../../print.css" type="text/css" media="print">
-<meta content="FocusToggle,sekati.text.FocusToggle,_defaultValue,_tf,destroy,focusHandler,inputHandler" name="keywords">
+<meta content="FocusToggle,sekati.text.FocusToggle,_defaultValue,_tf,focus,destroy,focusHandler,inputHandler" name="keywords">
 <title>sekati.text.FocusToggle</title>
 </head>
 <body>
@@ -43,11 +43,44 @@ if (!isEclipse() || window.name != ECLIPSE_FRAME_NAME) {titleBar_setSubTitle("Cl
 </table>
 <p></p>
   FocusToggle provides a togglable action to the passed-in input TextField.
+  
+  <p><b>Warning</b>: Your TextField or DisplayObject containing the TextField must
+  be added to stage before the FocusToggle is instantiated for proper functionality.</p>
+  
   <p></p>
+<br>
+<span class="label">Example</span>
+<br><div class='listing'><pre>
+   // inside a Sprite-based class with a textfield instance
+   tf.text = "Your E-Mail Address";
+   var toggle : FocusToggle = new FocusToggle( tf );
+  </pre></div>
+  
+  <p></p>
+<p>
+<span class="classHeaderTableLabel">See also</span>
+</p>
+<div class="seeAlso">
+<a href="../text/FocusToggleField.html" target="">sekati.text.FocusToggleField</a>
+</div>
 <br>
 <hr>
 </div>
-<a name="propertySummary"></a><a name="protectedPropertySummary"></a>
+<a name="propertySummary"></a>
+<div class="summarySection">
+<div class="summaryTableTitle">Public Properties</div>
+<table id="summaryTableProperty" class="summaryTable " cellpadding="3" cellspacing="0">
+<tr>
+<th>&nbsp;</th><th colspan="2">Property</th><th class="summaryTableOwnerCol">Defined&nbsp;by</th>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a class="signatureLink" href="#focus">focus</a> : Boolean<div class="summaryTableDescription">[read-only]
+   Boolean value which determines whether the TextField is focused or not.</div>
+</td><td class="summaryTableOwnerCol">FocusToggle</td>
+</tr>
+</table>
+</div>
+<a name="protectedPropertySummary"></a>
 <div class="summarySection">
 <div class="summaryTableTitle">Protected Properties</div>
 <table id="summaryTableProtectedProperty" class="summaryTable " cellpadding="3" cellspacing="0">
@@ -131,6 +164,20 @@ showHideInherited();
 </table>
 <div class="detailBody">
 <code>protected var _defaultValue:String</code>
+</div>
+<a name="focus"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">focus</td><td class="detailHeaderType">property</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>focus:Boolean</code>&nbsp;&nbsp;[read-only]<p>
+   Boolean value which determines whether the TextField is focused or not.
+   </p><span class="label">Implementation</span>
+<br>
+<code>&nbsp;&nbsp;&nbsp;&nbsp;public function get focus():Boolean</code>
+<br>
 </div>
 <a name="_tf"></a>
 <table cellspacing="0" cellpadding="0" class="detailHeader">
