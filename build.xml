@@ -85,7 +85,7 @@
 	<target name="api-production-prep" description="Put the current build of the API into production (compile swc, asdocs, deploy via rsync and ready for svn commit)">
 	 	<echo>SEKATI API :: [ Package + Deploy ] >>></echo>
 	    <antcall target="compile-swc"/>
-	    <antcall target="docs-asdoc"/>
+	    <antcall target="doc-asdoc"/>
 	    <antcall target="deploy-project"/>	
 	</target>
 	
