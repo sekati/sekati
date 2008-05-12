@@ -4,7 +4,7 @@
 <META http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <link rel="stylesheet" href="../../style.css" type="text/css" media="screen">
 <link rel="stylesheet" href="../../print.css" type="text/css" media="print">
-<meta content="FLVPlayer,sekati.ui.FLVPlayer,_buffBar,_guttBar,_isDrag,_isKeyEnabled,_isSeeking,_keyListener,_movie,_playBtn,_progBar,_video,_volBtn,_wasPlaying,buffBar_onMove,buffBar_onPress,buffBar_onRelease,destroy,init,movie_onProgress,movie_onStatus,pause,pauseMemory,playBtn_Press,remove,reset,resume,resumeMemory,seek_ui,setVolumeControl,volBtn_onMove,volBtn_onPress,volBtn_onRelease" name="keywords">
+<meta content="FLVPlayer,sekati.ui.FLVPlayer,_buffBar,_currentCuePoint,_guttBar,_isDrag,_isKeyEnabled,_isSeeking,_keyListener,_movie,_playBtn,_progBar,_video,_volBtn,_wasPlaying,buffBar_onMove,buffBar_onPress,buffBar_onRelease,destroy,init,movie_onProgress,movie_onStatus,pause,pauseMemory,playBtn_Press,remove,reset,resume,resumeMemory,seek_ui,setVolumeControl,volBtn_onMove,volBtn_onPress,volBtn_onRelease" name="keywords">
 <title>sekati.ui.FLVPlayer</title>
 </head>
 <body>
@@ -42,7 +42,18 @@ if (!isEclipse() || window.name != ECLIPSE_FRAME_NAME) {titleBar_setSubTitle("Cl
 </tr>
 </table>
 <p></p>
-  FLVPlayer provides playback control interface code to be used with {<p></p>
+  FLVPlayer provides playback control interface code to be used with sekati.media.FLV.
+  
+  <p>Simply create a library asset with the necessary assets, link it to the <code>FLVPlayer</code>
+  class and attach instances as needed.</p>
+  
+  <p></p>
+<p>
+<span class="classHeaderTableLabel">See also</span>
+</p>
+<div class="seeAlso">
+<a href="../media/FLV.html" target="">sekati.media.FLV</a>
+<br>sekati.events.MediaEvents</div>
 <br>
 <hr>
 </div>
@@ -63,6 +74,10 @@ if (!isEclipse() || window.name != ECLIPSE_FRAME_NAME) {titleBar_setSubTitle("Cl
 </tr>
 <tr class="">
 <td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a class="signatureLink" href="#_buffBar">_buffBar</a> : MovieClip<div class="summaryTableDescription"></div>
+</td><td class="summaryTableOwnerCol">FLVPlayer</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a class="signatureLink" href="#_currentCuePoint">_currentCuePoint</a> : Object<div class="summaryTableDescription"></div>
 </td><td class="summaryTableOwnerCol">FLVPlayer</td>
 </tr>
 <tr class="">
@@ -357,6 +372,15 @@ showHideInherited();
 <div class="detailBody">
 <code>protected var _buffBar:MovieClip</code>
 </div>
+<a name="_currentCuePoint"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">_currentCuePoint</td><td class="detailHeaderType">property</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>protected var _currentCuePoint:Object</code>
+</div>
 <a name="_guttBar"></a>
 <table cellspacing="0" cellpadding="0" class="detailHeader">
 <tr>
@@ -592,7 +616,9 @@ showHideInherited();
 <div class="detailBody">
 <code>protected function movie_onStatus(e:<a href="../events/MediaEvent.html">MediaEvent</a>):void</code><p>
    Handle <code>FLV</code> movie status events.
-   </p><span class="label">Parameters</span>
+   
+   </p><p>It is best to extend and override this class method to implement your own switch/case code.</p>
+   <span class="label">Parameters</span>
 <table border="0" cellspacing="0" cellpadding="0">
 <tr>
 <td width="20px"></td><td><code><span class="label">e</span>:<a href="../events/MediaEvent.html">MediaEvent</a></code></td>
