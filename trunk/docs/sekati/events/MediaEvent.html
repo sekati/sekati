@@ -43,7 +43,16 @@ if (!isEclipse() || window.name != ECLIPSE_FRAME_NAME) {titleBar_setSubTitle("Cl
 </table>
 <p></p>
   MediaEvent provides a base MediaEvent class for FLV and MP3 loading, streaming & playback.
+  
   <p></p>
+<p>
+<span class="classHeaderTableLabel">See also</span>
+</p>
+<div class="seeAlso">
+<a href="../media/FLV.html" target="">sekati.media.FLV</a>
+<br>
+<a href="../ui/FLVPlayer.html" target="">sekati.ui.FLVPlayer</a>
+</div>
 <br>
 <hr>
 </div>
@@ -55,38 +64,38 @@ if (!isEclipse() || window.name != ECLIPSE_FRAME_NAME) {titleBar_setSubTitle("Cl
 <th>&nbsp;</th><th colspan="2">Property</th><th class="summaryTableOwnerCol">Defined&nbsp;by</th>
 </tr>
 <tr class="">
-<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a class="signatureLink" href="#code">code</a> : String<div class="summaryTableDescription">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a class="signatureLink" href="#code">code</a> : String<div class="summaryTableDescription">[read-only]
    The <code>MediaEvent</code>'s status code string.</div>
 </td><td class="summaryTableOwnerCol">MediaEvent</td>
 </tr>
 <tr class="">
-<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a class="signatureLink" href="#CUE_POINT">CUE_POINT</a> : String = "onCuePoint"<div class="summaryTableDescription">[static] 
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a class="signatureLink" href="#CUE_POINT">CUE_POINT</a> : String = "cuePoint"<div class="summaryTableDescription">[static] 
    </div>
 </td><td class="summaryTableOwnerCol">MediaEvent</td>
 </tr>
 <tr class="">
-<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a class="signatureLink" href="#cuePointData">cuePointData</a> : Object<div class="summaryTableDescription">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a class="signatureLink" href="#cuePointData">cuePointData</a> : Object<div class="summaryTableDescription">[read-only]
    The <code>MediaEvent</code>'s cue point data object from the FLV <code>cuePointData.parameters['parameterName']</code>
    Where <code>parameterName</code> is the variable name specified when cue point was created.</div>
 </td><td class="summaryTableOwnerCol">MediaEvent</td>
 </tr>
 <tr class="">
-<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a class="signatureLink" href="#CUE_POINT_DISPLAY">CUE_POINT_DISPLAY</a> : String = "onCuePointDisplay"<div class="summaryTableDescription">[static]
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a class="signatureLink" href="#CUE_POINT_DISPLAY">CUE_POINT_DISPLAY</a> : String = "cuePointDisplay"<div class="summaryTableDescription">[static]
    </div>
 </td><td class="summaryTableOwnerCol">MediaEvent</td>
 </tr>
 <tr class="">
-<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a class="signatureLink" href="#loaded">loaded</a> : Number<div class="summaryTableDescription">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a class="signatureLink" href="#loaded">loaded</a> : Number<div class="summaryTableDescription">[read-only]
    The <code>MediaEvent</code>'s percent loaded.</div>
 </td><td class="summaryTableOwnerCol">MediaEvent</td>
 </tr>
 <tr class="">
-<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a class="signatureLink" href="#metadata">metadata</a> : Object<div class="summaryTableDescription">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a class="signatureLink" href="#metadata">metadata</a> : Object<div class="summaryTableDescription">[read-only]
    The <code>MediaEvent</code>'s metadata object.</div>
 </td><td class="summaryTableOwnerCol">MediaEvent</td>
 </tr>
 <tr class="">
-<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a class="signatureLink" href="#played">played</a> : Number<div class="summaryTableDescription">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a class="signatureLink" href="#played">played</a> : Number<div class="summaryTableDescription">[read-only]
    The <code>MediaEvent</code>'s percent played.</div>
 </td><td class="summaryTableOwnerCol">MediaEvent</td>
 </tr>
@@ -233,13 +242,11 @@ showHideInherited();
 </tr>
 </table>
 <div class="detailBody">
-<code>code:String</code>&nbsp;&nbsp;[read-write]<p>
+<code>code:String</code>&nbsp;&nbsp;[read-only]<p>
    The <code>MediaEvent</code>'s status code string.
    </p><span class="label">Implementation</span>
 <br>
 <code>&nbsp;&nbsp;&nbsp;&nbsp;public function get code():String</code>
-<br>
-<code>&nbsp;&nbsp;&nbsp;&nbsp;public function set code(value:String):void</code>
 <br>
 </div>
 <a name="CUE_POINT"></a>
@@ -249,7 +256,7 @@ showHideInherited();
 </tr>
 </table>
 <div class="detailBody">
-<code>public static var CUE_POINT:String = "onCuePoint"</code><p> 
+<code>public static var CUE_POINT:String = "cuePoint"</code><p> 
    </p></div>
 <a name="_cuePointData"></a>
 <table cellspacing="0" cellpadding="0" class="detailHeader">
@@ -267,14 +274,12 @@ showHideInherited();
 </tr>
 </table>
 <div class="detailBody">
-<code>cuePointData:Object</code>&nbsp;&nbsp;[read-write]<p>
+<code>cuePointData:Object</code>&nbsp;&nbsp;[read-only]<p>
    The <code>MediaEvent</code>'s cue point data object from the FLV <code>cuePointData.parameters['parameterName']</code>
    Where <code>parameterName</code> is the variable name specified when cue point was created.
    </p><span class="label">Implementation</span>
 <br>
 <code>&nbsp;&nbsp;&nbsp;&nbsp;public function get cuePointData():Object</code>
-<br>
-<code>&nbsp;&nbsp;&nbsp;&nbsp;public function set cuePointData(value:Object):void</code>
 <br>
 </div>
 <a name="CUE_POINT_DISPLAY"></a>
@@ -284,7 +289,7 @@ showHideInherited();
 </tr>
 </table>
 <div class="detailBody">
-<code>public static var CUE_POINT_DISPLAY:String = "onCuePointDisplay"</code><p>
+<code>public static var CUE_POINT_DISPLAY:String = "cuePointDisplay"</code><p>
    </p></div>
 <a name="_loaded"></a>
 <table cellspacing="0" cellpadding="0" class="detailHeader">
@@ -302,13 +307,11 @@ showHideInherited();
 </tr>
 </table>
 <div class="detailBody">
-<code>loaded:Number</code>&nbsp;&nbsp;[read-write]<p>
+<code>loaded:Number</code>&nbsp;&nbsp;[read-only]<p>
    The <code>MediaEvent</code>'s percent loaded.
    </p><span class="label">Implementation</span>
 <br>
 <code>&nbsp;&nbsp;&nbsp;&nbsp;public function get loaded():Number</code>
-<br>
-<code>&nbsp;&nbsp;&nbsp;&nbsp;public function set loaded(value:Number):void</code>
 <br>
 </div>
 <a name="_metadata"></a>
@@ -327,13 +330,11 @@ showHideInherited();
 </tr>
 </table>
 <div class="detailBody">
-<code>metadata:Object</code>&nbsp;&nbsp;[read-write]<p>
+<code>metadata:Object</code>&nbsp;&nbsp;[read-only]<p>
    The <code>MediaEvent</code>'s metadata object.
    </p><span class="label">Implementation</span>
 <br>
 <code>&nbsp;&nbsp;&nbsp;&nbsp;public function get metadata():Object</code>
-<br>
-<code>&nbsp;&nbsp;&nbsp;&nbsp;public function set metadata(value:Object):void</code>
 <br>
 </div>
 <a name="_played"></a>
@@ -352,13 +353,11 @@ showHideInherited();
 </tr>
 </table>
 <div class="detailBody">
-<code>played:Number</code>&nbsp;&nbsp;[read-write]<p>
+<code>played:Number</code>&nbsp;&nbsp;[read-only]<p>
    The <code>MediaEvent</code>'s percent played.
    </p><span class="label">Implementation</span>
 <br>
 <code>&nbsp;&nbsp;&nbsp;&nbsp;public function get played():Number</code>
-<br>
-<code>&nbsp;&nbsp;&nbsp;&nbsp;public function set played(value:Number):void</code>
 <br>
 </div>
 <a name="REBUFFER"></a>
