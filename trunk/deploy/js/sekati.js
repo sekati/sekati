@@ -1,6 +1,6 @@
 /**
  * sekati.js - Flash : Javascript Companion Library
- * @version 1.1.1
+ * @version 1.1.2
  * @author jason m horwitz | sekati.com
  * Copyright (C) 2007  jason m horwitz, Sekat LLC. All Rights Reserved.
  * Released under the MIT License: http://www.opensource.org/licenses/mit-license.php
@@ -26,7 +26,33 @@ sekati.external = {
 	// call actionscript function: document.movieID.myFlashFunction( [argumentArray] );
 	asCall: function ( id, fn, argArr ) {
 		document[ id ][ fn ]( argArr );
+	},
+	
+	setWidth: function ( id, width ) {
+		if( window.innerWidth > width ) width = window.innerWidth;
+		document.getElementById( id ).style.width = width + "px";
+	},
+	
+	setHeight: function ( id, height ) {
+		if( window.innerHeight > height ) height = window.innerHeight;
+		document.getElementById( id ).style.height = height + "px";		
+	},
+	
+	resize: function ( id, width, height ) {
+		setFlashWidth( id, width );
+		setFlashHeight( id, height );
+	}, 
+	
+	isResizable: function ( ) {
+		var ua = navigator.userAgent.toLowerCase( );
+		var opera = ua.indexOf( "opera" );
+		if( document.getElementById ) {
+			if ( opera == -1 ) return true;
+			else if( parseInt( ua.substr( opera+6, 1 ) ) >= 7 ) return true;
+		}
+		return false;
 	}
+	
 };
 
 /////////////////////////////////////////////////////////////////////////////////
