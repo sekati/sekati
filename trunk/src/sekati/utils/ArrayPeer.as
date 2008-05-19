@@ -1,6 +1,6 @@
 /**
  * sekati.utils.ArrayPeer
- * @version 1.0.3
+ * @version 1.0.5
  * @author jason m horwitz | sekati.com
  * Copyright (C) 2008  jason m horwitz, Sekat LLC. All Rights Reserved.
  * Released under the MIT License: http://www.opensource.org/licenses/mit-license.php
@@ -49,7 +49,7 @@ package sekati.utils {
 			}
 			
 			// todo: allow settings of default options
-			if( !options ) options = { find:FIRST };
+			if( !options ) options = { find:ALL };
 			
 			var i : int, n : int, item : *;
 			
