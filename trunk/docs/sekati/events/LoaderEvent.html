@@ -4,7 +4,7 @@
 <META http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <link rel="stylesheet" href="../../style.css" type="text/css" media="screen">
 <link rel="stylesheet" href="../../print.css" type="text/css" media="print">
-<meta content="LoaderEvent,sekati.events.LoaderEvent,COMPLETE,ERROR,INIT,PROGRESS,RETRY,START,STOPPED,_info,_loader,_type,clone" name="keywords">
+<meta content="LoaderEvent,sekati.events.LoaderEvent,ABORT,COMPLETE,ERROR,INIT,PROGRESS,RETRY,START,STOPPED,TIMEOUT,_info,_loader,_type,clone" name="keywords">
 <title>sekati.events.LoaderEvent</title>
 </head>
 <body>
@@ -102,6 +102,10 @@ if (!isEclipse() || window.name != ECLIPSE_FRAME_NAME) {titleBar_setSubTitle("Cl
 <th>&nbsp;</th><th colspan="2">Constant</th><th class="summaryTableOwnerCol">Defined&nbsp;by</th>
 </tr>
 <tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a class="signatureLink" href="#ABORT">ABORT</a> : String = "abort"<div class="summaryTableDescription">[static]</div>
+</td><td class="summaryTableOwnerCol">LoaderEvent</td>
+</tr>
+<tr class="">
 <td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a class="signatureLink" href="#COMPLETE">COMPLETE</a> : String = "complete"<div class="summaryTableDescription">[static]</div>
 </td><td class="summaryTableOwnerCol">LoaderEvent</td>
 </tr>
@@ -127,6 +131,10 @@ if (!isEclipse() || window.name != ECLIPSE_FRAME_NAME) {titleBar_setSubTitle("Cl
 </tr>
 <tr class="">
 <td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a class="signatureLink" href="#STOPPED">STOPPED</a> : String = "stopped"<div class="summaryTableDescription">[static]</div>
+</td><td class="summaryTableOwnerCol">LoaderEvent</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a class="signatureLink" href="#TIMEOUT">TIMEOUT</a> : String = "timeout"<div class="summaryTableDescription">[static]</div>
 </td><td class="summaryTableOwnerCol">LoaderEvent</td>
 </tr>
 </table>
@@ -215,10 +223,19 @@ showHideInherited();
 </div>
 <a name="constantDetail"></a>
 <div class="detailSectionHeader">Constant detail</div>
+<a name="ABORT"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">ABORT</td><td class="detailHeaderType">constant</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public static const ABORT:String = "abort"</code>
+</div>
 <a name="COMPLETE"></a>
 <table cellspacing="0" cellpadding="0" class="detailHeader">
 <tr>
-<td class="detailHeaderName">COMPLETE</td><td class="detailHeaderType">constant</td>
+<td class="detailHeaderName">COMPLETE</td><td class="detailHeaderType">constant</td><td class="detailHeaderRule">&nbsp;</td>
 </tr>
 </table>
 <div class="detailBody">
@@ -277,6 +294,15 @@ showHideInherited();
 </table>
 <div class="detailBody">
 <code>public static const STOPPED:String = "stopped"</code>
+</div>
+<a name="TIMEOUT"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">TIMEOUT</td><td class="detailHeaderType">constant</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public static const TIMEOUT:String = "timeout"</code>
 </div>
 <br>
 <br>

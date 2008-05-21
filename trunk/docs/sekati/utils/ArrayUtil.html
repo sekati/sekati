@@ -71,9 +71,9 @@ if (!isEclipse() || window.name != ECLIPSE_FRAME_NAME) {titleBar_setSubTitle("Cl
 <tr class="">
 <td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
 <div class="summarySignature">
-<a class="signatureLink" href="#compare()">compare</a>(aA:Array, aB:Array):Boolean</div>
+<a class="signatureLink" href="#compare()">compare</a>(aA:Array, aB:Array, hasSameOrder:Boolean = false):Boolean</div>
 <div class="summaryTableDescription">[static]
-   Compare two arrays to see if they are identical.</div>
+   Compare two arrays to see if their values (and optionally order) are identical.</div>
 </td><td class="summaryTableOwnerCol">ArrayUtil</td>
 </tr>
 <tr class="">
@@ -288,18 +288,25 @@ showHideInherited();
 </tr>
 </table>
 <div class="detailBody">
-<code>public static function compare(aA:Array, aB:Array):Boolean</code><p>
-   Compare two arrays to see if they are identical.
+<code>public static function compare(aA:Array, aB:Array, hasSameOrder:Boolean = false):Boolean</code><p>
+   Compare two arrays to see if their values (and optionally order) are identical.
    </p><span class="label">Parameters</span>
 <table border="0" cellspacing="0" cellpadding="0">
 <tr>
-<td width="20px"></td><td><code><span class="label">aA</span>:Array</code></td>
+<td width="20px"></td><td><code><span class="label">aA</span>:Array</code> &mdash;  When <code>false</code> the arrays must only contain identical values, when <code>true</code> value & order must be identical.
+   </td>
 </tr>
 <tr>
 <td class="paramSpacer">&nbsp;</td>
 </tr>
 <tr>
 <td width="20px"></td><td><code><span class="label">aB</span>:Array</code></td>
+</tr>
+<tr>
+<td class="paramSpacer">&nbsp;</td>
+</tr>
+<tr>
+<td width="20px"></td><td><code><span class="label">hasSameOrder</span>:Boolean</code> (default = <code>false</code>)<code></code></td>
 </tr>
 </table>
 <p></p>
@@ -309,6 +316,15 @@ showHideInherited();
 <td width="20"></td><td><code>Boolean</code></td>
 </tr>
 </table>
+<br>
+<span class="label">Example</span>
+<br><div class='listing'><pre>
+    var a : Array = [ 5,4,3,2,1,'C','B','A' ];
+    var b : Array = [ 'A','B','C',1,2,3,4,5 ];
+    trace( "arrays (unordered) compare: " + ArrayUtil.compare( a, b ) );   // returns true
+    trace( "arrays (ordered) compare: " + ArrayUtil.compare( a, b, true ) ); // returns false
+   </pre></div>
+   <p></p>
 </div>
 <a name="contains()"></a>
 <table cellspacing="0" cellpadding="0" class="detailHeader">
