@@ -56,11 +56,11 @@ if (!isEclipse() || window.name != ECLIPSE_FRAME_NAME) {titleBar_setSubTitle("Al
   AbstractLoader provides a common abstraction layer for Loader & URLLoader based API loader classes.</td>
 </tr>
 <tr class="prow0">
-<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a href="sekati/tests/AbstractTest.html">AbstractTest</a>
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a href="sekati/tests/AbstractTestApplication.html">AbstractTestApplication</a>
 <br>
 </td><td class="summaryTableCol"><a onclick="javascript:loadClassListFrame('sekati/tests/class-list.html');" href="sekati/tests/package-detail.html">sekati.tests</a></td><td class="summaryTableLastCol">
-  AbstractTest
-  </td>
+  AbstractTestApplication provides a baseline implementation of the API for tests
+  which require basic API bootstrapped support (such as Canvas).</td>
 </tr>
 <tr class="prow1">
 <td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a href="sekati/text/AbstractTextField.html">AbstractTextField</a>
@@ -751,16 +751,30 @@ if (!isEclipse() || window.name != ECLIPSE_FRAME_NAME) {titleBar_setSubTitle("Al
   </td>
 </tr>
 <tr class="prow0">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a href="sekati/data/KeyCode.html">KeyCode</a>
+<br>
+</td><td class="summaryTableCol"><a onclick="javascript:loadClassListFrame('sekati/data/class-list.html');" href="sekati/data/package-detail.html">sekati.data</a></td><td class="summaryTableLastCol">
+  KeyCode provides some basic alpha keyCodes which are otherwise only provided in the Flex3 AIR implementation 
+  of the Keyboard class (the <code>flash.ui.Keyboard</code> class ommits them for some strange reason).</td>
+</tr>
+<tr class="prow1">
 <td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a href="sekati/core/KeyFactory.html">KeyFactory</a>
 <br>
 </td><td class="summaryTableCol"><a onclick="javascript:loadClassListFrame('sekati/core/class-list.html');" href="sekati/core/package-detail.html">sekati.core</a></td><td class="summaryTableLastCol">
   KeyFactory provides a <code>RUID</code> hash table of runtime application objects & instances.</td>
 </tr>
-<tr class="prow1">
+<tr class="prow0">
 <td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a href="sekati/managers/KeyManager.html">KeyManager</a>
 <br>
 </td><td class="summaryTableCol"><a onclick="javascript:loadClassListFrame('sekati/managers/class-list.html');" href="sekati/managers/package-detail.html">sekati.managers</a></td><td class="summaryTableLastCol">
-  KeyManager
+  KeyManager provides an interface for the centralized registering and handling of 
+  KeyboardEvents via the direct coupling of Keyboard events to actions.</td>
+</tr>
+<tr class="prow1">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a href="sekati/tests/KeyManagerTest.html">KeyManagerTest</a>
+<br>
+</td><td class="summaryTableCol"><a onclick="javascript:loadClassListFrame('sekati/tests/class-list.html');" href="sekati/tests/package-detail.html">sekati.tests</a></td><td class="summaryTableLastCol">
+  KeyManagerTest
   </td>
 </tr>
 <tr class="prow0">
@@ -1147,121 +1161,115 @@ if (!isEclipse() || window.name != ECLIPSE_FRAME_NAME) {titleBar_setSubTitle("Al
   </td>
 </tr>
 <tr class="prow0">
-<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a href="sekati/tests/TestApplication.html">TestApplication</a>
-<br>
-</td><td class="summaryTableCol"><a onclick="javascript:loadClassListFrame('sekati/tests/class-list.html');" href="sekati/tests/package-detail.html">sekati.tests</a></td><td class="summaryTableLastCol">
-  TestApplication provides a baseline implementation of the API.</td>
-</tr>
-<tr class="prow1">
 <td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a href="sekati/tests/TestDocument.html">TestDocument</a>
 <br>
 </td><td class="summaryTableCol"><a onclick="javascript:loadClassListFrame('sekati/tests/class-list.html');" href="sekati/tests/package-detail.html">sekati.tests</a></td><td class="summaryTableLastCol">
   TestDocument provides base initialization of the API Canvas.</td>
 </tr>
-<tr class="prow0">
+<tr class="prow1">
 <td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a href="sekati/display/TextDisplay.html">TextDisplay</a>
 <br>
 </td><td class="summaryTableCol"><a onclick="javascript:loadClassListFrame('sekati/display/class-list.html');" href="sekati/display/package-detail.html">sekati.display</a></td><td class="summaryTableLastCol">
   TextDisplay provides an interface to uniformly style, set & clear <code>TextField</code> text.</td>
 </tr>
-<tr class="prow1">
+<tr class="prow0">
 <td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a href="sekati/ui/TextLabel.html">TextLabel</a>
 <br>
 </td><td class="summaryTableCol"><a onclick="javascript:loadClassListFrame('sekati/ui/class-list.html');" href="sekati/ui/package-detail.html">sekati.ui</a></td><td class="summaryTableLastCol">
   Generic Text Label
   </td>
 </tr>
-<tr class="prow0">
+<tr class="prow1">
 <td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a href="sekati/tests/TextTest.html">TextTest</a>
 <br>
 </td><td class="summaryTableCol"><a onclick="javascript:loadClassListFrame('sekati/tests/class-list.html');" href="sekati/tests/package-detail.html">sekati.tests</a></td><td class="summaryTableLastCol">
   TextTest
   </td>
 </tr>
-<tr class="prow1">
+<tr class="prow0">
 <td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a href="sekati/utils/TextUtil.html">TextUtil</a>
 <br>
 </td><td class="summaryTableCol"><a onclick="javascript:loadClassListFrame('sekati/utils/class-list.html');" href="sekati/utils/package-detail.html">sekati.utils</a></td><td class="summaryTableLastCol">
   Static class wrapping various Text utilities.</td>
 </tr>
-<tr class="prow0">
+<tr class="prow1">
 <td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a href="sekati/converters/TimeConverter.html">TimeConverter</a>
 <br>
 </td><td class="summaryTableCol"><a onclick="javascript:loadClassListFrame('sekati/converters/class-list.html');" href="sekati/converters/package-detail.html">sekati.converters</a></td><td class="summaryTableLastCol">
   Time Conversion Utilities
   </td>
 </tr>
-<tr class="prow1">
+<tr class="prow0">
 <td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a href="sekati/geom/TrigBase.html">TrigBase</a>
 <br>
 </td><td class="summaryTableCol"><a onclick="javascript:loadClassListFrame('sekati/geom/class-list.html');" href="sekati/geom/package-detail.html">sekati.geom</a></td><td class="summaryTableLastCol">
   TrigBase provides common trigonometry utilities.</td>
 </tr>
-<tr class="prow0">
+<tr class="prow1">
 <td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a href="sekati/validators/TypeValidator.html">TypeValidator</a>
 <br>
 </td><td class="summaryTableCol"><a onclick="javascript:loadClassListFrame('sekati/validators/class-list.html');" href="sekati/validators/package-detail.html">sekati.validators</a></td><td class="summaryTableLastCol">
   Basic Type Validation
   </td>
 </tr>
-<tr class="prow1">
+<tr class="prow0">
 <td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a href="sekati/external/Urchin.html">Urchin</a>
 <br>
 </td><td class="summaryTableCol"><a onclick="javascript:loadClassListFrame('sekati/external/class-list.html');" href="sekati/external/package-detail.html">sekati.external</a></td><td class="summaryTableLastCol">
   Google Analytics (Urchin) tracking of Flash events.</td>
 </tr>
-<tr class="prow0">
+<tr class="prow1">
 <td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a href="sekati/view/Viewport.html">Viewport</a>
 <br>
 </td><td class="summaryTableCol"><a onclick="javascript:loadClassListFrame('sekati/view/class-list.html');" href="sekati/view/package-detail.html">sekati.view</a></td><td class="summaryTableLastCol">
   Viewport provides a faux application viewport via a set of letterboxing DisplayObject's to confine content.</td>
 </tr>
-<tr class="prow1">
+<tr class="prow0">
 <td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a href="sekati/events/ViewportEvent.html">ViewportEvent</a>
 <br>
 </td><td class="summaryTableCol"><a onclick="javascript:loadClassListFrame('sekati/events/class-list.html');" href="sekati/events/package-detail.html">sekati.events</a></td><td class="summaryTableLastCol">
   ViewportEvent provides update notification for the Viewport.</td>
 </tr>
-<tr class="prow0">
+<tr class="prow1">
 <td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a href="sekati/utils/WeakRef.html">WeakRef</a>
 <br>
 </td><td class="summaryTableCol"><a onclick="javascript:loadClassListFrame('sekati/utils/class-list.html');" href="sekati/utils/package-detail.html">sekati.utils</a></td><td class="summaryTableLastCol">
   Create a weak reference for easier garbage colleciton of difficult to track Objects.</td>
 </tr>
-<tr class="prow1">
-<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a href="sekati/data/XML.html">XML</a>
-<br>
-</td><td class="summaryTableCol"><a onclick="javascript:loadClassListFrame('sekati/data/class-list.html');" href="sekati/data/package-detail.html">sekati.data</a></td><td class="summaryTableLastCol">
-  XML E4X Native Type helper utilitie.</td>
-</tr>
 <tr class="prow0">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a href="sekati/converters/XMLConverter.html">XMLConverter</a>
+<br>
+</td><td class="summaryTableCol"><a onclick="javascript:loadClassListFrame('sekati/converters/class-list.html');" href="sekati/converters/package-detail.html">sekati.converters</a></td><td class="summaryTableLastCol">
+  XMLConverter provides a simple XML E4X Native Typing utilitie.</td>
+</tr>
+<tr class="prow1">
 <td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a href="sekati/events/XMLEvent.html">XMLEvent</a>
 <br>
 </td><td class="summaryTableCol"><a onclick="javascript:loadClassListFrame('sekati/events/class-list.html');" href="sekati/events/package-detail.html">sekati.events</a></td><td class="summaryTableLastCol">
   XMLEvent
   </td>
 </tr>
-<tr class="prow1">
+<tr class="prow0">
 <td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a href="sekati/collections/XMLListIterator.html">XMLListIterator</a>
 <br>
 </td><td class="summaryTableCol"><a onclick="javascript:loadClassListFrame('sekati/collections/class-list.html');" href="sekati/collections/package-detail.html">sekati.collections</a></td><td class="summaryTableLastCol">
   XMLList based Iterator
   </td>
 </tr>
-<tr class="prow0">
+<tr class="prow1">
 <td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a href="sekati/load/XMLLoader.html">XMLLoader</a>
 <br>
 </td><td class="summaryTableCol"><a onclick="javascript:loadClassListFrame('sekati/load/class-list.html');" href="sekati/load/package-detail.html">sekati.load</a></td><td class="summaryTableLastCol">
   XMLLoader handles the loading of XML documents.</td>
 </tr>
-<tr class="prow1">
+<tr class="prow0">
 <td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a href="sekati/crypt/XOR.html">XOR</a>
 <br>
 </td><td class="summaryTableCol"><a onclick="javascript:loadClassListFrame('sekati/crypt/class-list.html');" href="sekati/crypt/package-detail.html">sekati.crypt</a></td><td class="summaryTableLastCol">
   Encrypt and Decrypt a string with XORCRYPT Version 1.2 algorithm
   </td>
 </tr>
-<tr class="prow0">
+<tr class="prow1">
 <td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a href="sekati/math/XORShiftPRNG.html">XORShiftPRNG</a>
 <br>
 </td><td class="summaryTableCol"><a onclick="javascript:loadClassListFrame('sekati/math/class-list.html');" href="sekati/math/package-detail.html">sekati.math</a></td><td class="summaryTableLastCol">
