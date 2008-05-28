@@ -4,7 +4,7 @@
 <META http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <link rel="stylesheet" href="../../style.css" type="text/css" media="screen">
 <link rel="stylesheet" href="../../print.css" type="text/css" media="print">
-<meta content="NetBase,sekati.net.NetBase,getHtmlUrl,getPath,getURL,isOnline,noCacheUrl" name="keywords">
+<meta content="NetBase,sekati.net.NetBase,getLocation,getPath,getURL,isOnline,noCacheUrl" name="keywords">
 <title>sekati.net.NetBase</title>
 </head>
 <body>
@@ -63,8 +63,9 @@ if (!isEclipse() || window.name != ECLIPSE_FRAME_NAME) {titleBar_setSubTitle("Cl
 <tr class="">
 <td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
 <div class="summarySignature">
-<a class="signatureLink" href="#getHtmlUrl()">getHtmlUrl</a>():String</div>
-<div class="summaryTableDescription">[static]</div>
+<a class="signatureLink" href="#getLocation()">getLocation</a>():String</div>
+<div class="summaryTableDescription">[static]
+   Get the browser href location.</div>
 </td><td class="summaryTableOwnerCol">NetBase</td>
 </tr>
 <tr class="">
@@ -97,7 +98,7 @@ if (!isEclipse() || window.name != ECLIPSE_FRAME_NAME) {titleBar_setSubTitle("Cl
 <div class="summarySignature">
 <a class="signatureLink" href="#noCacheUrl()">noCacheUrl</a>(url:String):String</div>
 <div class="summaryTableDescription">[static]
-   add a cache killing querystring to url
+   Add a cache killing querystring to url
    </div>
 </td><td class="summaryTableOwnerCol">NetBase</td>
 </tr>
@@ -122,15 +123,16 @@ showHideInherited();
    </p></div>
 <a name="methodDetail"></a>
 <div class="detailSectionHeader">Method detail</div>
-<a name="getHtmlUrl()"></a>
+<a name="getLocation()"></a>
 <table cellspacing="0" cellpadding="0" class="detailHeader">
 <tr>
-<td class="detailHeaderName">getHtmlUrl</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td>
+<td class="detailHeaderName">getLocation</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td>
 </tr>
 </table>
 <div class="detailBody">
-<code>public static function getHtmlUrl():String</code>
-<p></p>
+<code>public static function getLocation():String</code><p>
+   Get the browser href location.
+   </p><p></p>
 <span class="label">Returns</span>
 <table border="0" cellspacing="0" cellpadding="0">
 <tr>
@@ -152,12 +154,16 @@ showHideInherited();
 <table border="0" cellspacing="0" cellpadding="0">
 <tr>
 <td width="20"></td><td><code>String</code> &mdash; String
-   <code>Usage:<br/>
-    // run from http://localhost/myProject/site.swf<br>
-    trace(NetBase.getPath()); // returns "http://localhost/myProject/"<br/></code>
    </td>
 </tr>
 </table>
+<br>
+<span class="label">Example</span>
+<br><div class='listing'><pre>
+    // run from http://localhost/myProject/site.swf
+    trace(NetBase.getPath()); // returns "http://localhost/myProject/"
+    </pre></div>
+   <p></p>
 </div>
 <a name="getURL()"></a>
 <table cellspacing="0" cellpadding="0" class="detailHeader">
@@ -209,7 +215,7 @@ showHideInherited();
 </table>
 <div class="detailBody">
 <code>public static function noCacheUrl(url:String):String</code><p>
-   add a cache killing querystring to url
+   Add a cache killing querystring to url
    </p><span class="label">Parameters</span>
 <table border="0" cellspacing="0" cellpadding="0">
 <tr>
@@ -222,11 +228,15 @@ showHideInherited();
 <table border="0" cellspacing="0" cellpadding="0">
 <tr>
 <td width="20"></td><td><code>String</code> &mdash; String
-   <code>Usage:<br/>
-    var ckUrl = NetBase.noCacheUrl("http://localhost/page.html"); // returns: http://localhost/page.html?030533<br/></code>
    </td>
 </tr>
 </table>
+<br>
+<span class="label">Example</span>
+<br><div class='listing'><pre>
+   var ckUrl = NetBase.noCacheUrl( "http://localhost/page.html" ); // returns: http://localhost/page.html?030533
+    </pre></div>
+   <p></p>
 </div>
 <br>
 <br>
