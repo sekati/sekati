@@ -4,7 +4,7 @@
 <META http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <link rel="stylesheet" href="../../style.css" type="text/css" media="screen">
 <link rel="stylesheet" href="../../print.css" type="text/css" media="print">
-<meta content="AbstractURLLoader,sekati.load.AbstractURLLoader,RETRY_ATTEMPT,RETRY_MAX,_this,_urlRequest,completeHandler,configureListeners,httpStatusHandler,ioErrorHandler,openHandler,progressHandler,securityErrorHandler" name="keywords">
+<meta content="AbstractURLLoader,sekati.load.AbstractURLLoader,RETRY_ATTEMPT,RETRY_MAX,request,completeHandler,configureListeners,httpStatusHandler,ioErrorHandler,openHandler,progressHandler,securityErrorHandler" name="keywords">
 <title>sekati.load.AbstractURLLoader</title>
 </head>
 <body>
@@ -54,7 +54,20 @@ if (!isEclipse() || window.name != ECLIPSE_FRAME_NAME) {titleBar_setSubTitle("Cl
 <br>
 <hr>
 </div>
-<a name="propertySummary"></a><a name="protectedPropertySummary"></a>
+<a name="propertySummary"></a>
+<div class="summarySection">
+<div class="summaryTableTitle">Public Properties</div>
+<table id="summaryTableProperty" class="summaryTable " cellpadding="3" cellspacing="0">
+<tr>
+<th>&nbsp;</th><th colspan="2">Property</th><th class="summaryTableOwnerCol">Defined&nbsp;by</th>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a class="signatureLink" href="#request">request</a> : URLRequest<div class="summaryTableDescription"></div>
+</td><td class="summaryTableOwnerCol">AbstractURLLoader</td>
+</tr>
+</table>
+</div>
+<a name="protectedPropertySummary"></a>
 <div class="summarySection">
 <div class="summaryTableTitle">Protected Properties</div>
 <table id="summaryTableProtectedProperty" class="summaryTable " cellpadding="3" cellspacing="0">
@@ -69,15 +82,6 @@ if (!isEclipse() || window.name != ECLIPSE_FRAME_NAME) {titleBar_setSubTitle("Cl
 <td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a class="signatureLink" href="#RETRY_MAX">RETRY_MAX</a> : uint<div class="summaryTableDescription"></div>
 </td><td class="summaryTableOwnerCol">AbstractURLLoader</td>
 </tr>
-<tr class="">
-<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a class="signatureLink" href="#_this">_this</a> : <a href="../load/AbstractURLLoader.html">AbstractURLLoader</a>
-<div class="summaryTableDescription"></div>
-</td><td class="summaryTableOwnerCol">AbstractURLLoader</td>
-</tr>
-<tr class="">
-<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a class="signatureLink" href="#_urlRequest">_urlRequest</a> : URLRequest<div class="summaryTableDescription"></div>
-</td><td class="summaryTableOwnerCol">AbstractURLLoader</td>
-</tr>
 </table>
 </div>
 <a name="methodSummary"></a>
@@ -90,7 +94,7 @@ if (!isEclipse() || window.name != ECLIPSE_FRAME_NAME) {titleBar_setSubTitle("Cl
 <tr class="">
 <td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
 <div class="summarySignature">
-<a class="signatureLink" href="#AbstractURLLoader()">AbstractURLLoader</a>(urlRequest:URLRequest = null, init:Boolean = true, maxRetryAttempts:uint = 5)</div>
+<a class="signatureLink" href="#AbstractURLLoader()">AbstractURLLoader</a>(request:URLRequest = null, init:Boolean = true, retries:uint = 5)</div>
 <div class="summaryTableDescription">
    AbstractURLLoader Constructor
    </div>
@@ -165,10 +169,19 @@ showHideInherited();
 <div class="MainContent">
 <a name="propertyDetail"></a>
 <div class="detailSectionHeader">Property detail</div>
+<a name="request"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">request</td><td class="detailHeaderType">property</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public var request:URLRequest</code>
+</div>
 <a name="RETRY_ATTEMPT"></a>
 <table cellspacing="0" cellpadding="0" class="detailHeader">
 <tr>
-<td class="detailHeaderName">RETRY_ATTEMPT</td><td class="detailHeaderType">property</td>
+<td class="detailHeaderName">RETRY_ATTEMPT</td><td class="detailHeaderType">property</td><td class="detailHeaderRule">&nbsp;</td>
 </tr>
 </table>
 <div class="detailBody">
@@ -183,24 +196,6 @@ showHideInherited();
 <div class="detailBody">
 <code>protected var RETRY_MAX:uint</code>
 </div>
-<a name="_this"></a>
-<table cellspacing="0" cellpadding="0" class="detailHeader">
-<tr>
-<td class="detailHeaderName">_this</td><td class="detailHeaderType">property</td><td class="detailHeaderRule">&nbsp;</td>
-</tr>
-</table>
-<div class="detailBody">
-<code>protected var _this:<a href="../load/AbstractURLLoader.html">AbstractURLLoader</a></code>
-</div>
-<a name="_urlRequest"></a>
-<table cellspacing="0" cellpadding="0" class="detailHeader">
-<tr>
-<td class="detailHeaderName">_urlRequest</td><td class="detailHeaderType">property</td><td class="detailHeaderRule">&nbsp;</td>
-</tr>
-</table>
-<div class="detailBody">
-<code>protected var _urlRequest:URLRequest</code>
-</div>
 <a name="constructorDetail"></a>
 <div class="detailSectionHeader">Constructor detail</div>
 <a name="AbstractURLLoader()"></a>
@@ -210,12 +205,12 @@ showHideInherited();
 </tr>
 </table>
 <div class="detailBody">
-<code>public function AbstractURLLoader(urlRequest:URLRequest = null, init:Boolean = true, maxRetryAttempts:uint = 5)</code><p>
+<code>public function AbstractURLLoader(request:URLRequest = null, init:Boolean = true, retries:uint = 5)</code><p>
    AbstractURLLoader Constructor
    </p><span class="label">Parameters</span>
 <table border="0" cellspacing="0" cellpadding="0">
 <tr>
-<td width="20px"></td><td><code><span class="label">urlRequest</span>:URLRequest</code> (default = <code>null</code>)<code></code> &mdash;  Number of times to retry each method in bootstrap before fatal error.
+<td width="20px"></td><td><code><span class="label">request</span>:URLRequest</code> (default = <code>null</code>)<code></code> &mdash;  Number of times to retry each method in bootstrap before fatal error.
    </td>
 </tr>
 <tr>
@@ -228,7 +223,7 @@ showHideInherited();
 <td class="paramSpacer">&nbsp;</td>
 </tr>
 <tr>
-<td width="20px"></td><td><code><span class="label">maxRetryAttempts</span>:uint</code> (default = <code>5</code>)<code></code></td>
+<td width="20px"></td><td><code><span class="label">retries</span>:uint</code> (default = <code>5</code>)<code></code></td>
 </tr>
 </table>
 </div>
