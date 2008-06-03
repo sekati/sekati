@@ -48,7 +48,7 @@ if (!isEclipse() || window.name != ECLIPSE_FRAME_NAME) {titleBar_setSubTitle("Cl
 <br>
 <span class="label">Example</span>
 <br><div class='listing'><pre>
-  FramePulse.$.addFrameListener( FramePulse.FRAME_PULSE, _enterFrame );
+  FramePulse.$.addFrameListener( _enterFrame );
   protected function _enterFrame( e:Event ):void {
    trace( "pulse" );
   }
