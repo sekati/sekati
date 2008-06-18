@@ -55,10 +55,10 @@ if (!isEclipse() || window.name != ECLIPSE_FRAME_NAME) {titleBar_setSubTitle("Cl
 <span class="label">Example</span>
 <br><div class='listing'><pre>
   // create a response relationship between a key and method (non-repeatable):
-  KeyManager.$.addKeyListener( [KeyManager.$.UP], handler );
+  KeyManager.$.addKeyListener( [KeyManager.$['UP']], handler );
   
   // create a response between a key combo and a method (repeatable):
-  KeyManager.$.addKeyListener( [KeyManager.$.CONTROL, KeyManager.$.LEFT], handler, true );
+  KeyManager.$.addKeyListener( [KeyManager.$['CONTROL'], KeyManager.$['LEFT']], handler, true );
   </pre></div>
   
   <p></p>

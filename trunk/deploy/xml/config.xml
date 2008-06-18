@@ -13,12 +13,12 @@
 <config persist="false">
 	<app>
 		<name><![CDATA[Sekati API]]></name>
-		<version>3.0.2.7</version>
+		<version>3.0.2.8</version>
 	</app>
 	<uri>
 		<crossdomain load="true">/crossdomain.xml</crossdomain>
-		<data load="true">xml/data.xml</data>
-		<css load="true">css/app_style.css</css>
+		<data load="false">xml/data.xml</data>
+		<css load="false">css/app_style.css</css>
 	</uri>
 	<option>
 		<managed_menu>true</managed_menu>
