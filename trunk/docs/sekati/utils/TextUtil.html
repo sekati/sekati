@@ -87,7 +87,7 @@ if (!isEclipse() || window.name != ECLIPSE_FRAME_NAME) {titleBar_setSubTitle("Cl
 <tr class="">
 <td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
 <div class="summarySignature">
-<a class="signatureLink" href="#setFormattedText()">setFormattedText</a>(tf:TextField, s:String):void</div>
+<a class="signatureLink" href="#setFormattedText()">setFormattedText</a>(tf:TextField, s:String, autoSize:Boolean = true):void</div>
 <div class="summaryTableDescription">[static]
    Set the text of a <code>TextField</code> while preserving the formatting (leading, kerning, etc).</div>
 </td><td class="summaryTableOwnerCol">TextUtil</td>
@@ -256,7 +256,7 @@ showHideInherited();
 </tr>
 </table>
 <div class="detailBody">
-<code>public static function setFormattedText(tf:TextField, s:String):void</code><p>
+<code>public static function setFormattedText(tf:TextField, s:String, autoSize:Boolean = true):void</code><p>
    Set the text of a <code>TextField</code> while preserving the formatting (leading, kerning, etc).
    </p><span class="label">Parameters</span>
 <table border="0" cellspacing="0" cellpadding="0">
@@ -268,6 +268,12 @@ showHideInherited();
 </tr>
 <tr>
 <td width="20px"></td><td><code><span class="label">s</span>:String</code></td>
+</tr>
+<tr>
+<td class="paramSpacer">&nbsp;</td>
+</tr>
+<tr>
+<td width="20px"></td><td><code><span class="label">autoSize</span>:Boolean</code> (default = <code>true</code>)<code></code></td>
 </tr>
 </table>
 </div>
