@@ -13,7 +13,7 @@
 <config persist="false">
 	<app>
 		<name><![CDATA[Sekati API]]></name>
-		<version>3.0.2.9</version>
+		<version>3.0.3.0</version>
 	</app>
 	<uri>
 		<crossdomain load="true">/crossdomain.xml</crossdomain>
@@ -28,7 +28,7 @@
 		<key>true</key>
 		<deeplink>false</deeplink>
 		<log>true</log>
-		<memory_alarm>50</memory_alarm>
+		<performance_monitor>false</performance_monitor>
 	</option>
 	<custom>
 		<!-- 

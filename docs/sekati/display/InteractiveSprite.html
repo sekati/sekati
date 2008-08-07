@@ -129,7 +129,7 @@ if (!isEclipse() || window.name != ECLIPSE_FRAME_NAME) {titleBar_setSubTitle("Cl
 <tr class="">
 <td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
 <div class="summarySignature">
-<a class="signatureLink" href="#offStage()">offStage</a>(e:Event):void</div>
+<a class="signatureLink" href="#offStage()">offStage</a>(e:Event = null):void</div>
 <div class="summaryTableDescription">
    Remove the listeners when removed from the stage.</div>
 </td><td class="summaryTableOwnerCol">InteractiveSprite</td>
@@ -137,7 +137,7 @@ if (!isEclipse() || window.name != ECLIPSE_FRAME_NAME) {titleBar_setSubTitle("Cl
 <tr class="">
 <td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
 <div class="summarySignature">
-<a class="signatureLink" href="#onStage()">onStage</a>(e:Event):void</div>
+<a class="signatureLink" href="#onStage()">onStage</a>(e:Event = null):void</div>
 <div class="summaryTableDescription">
    Add listeners when added to stage.</div>
 </td><td class="summaryTableOwnerCol">InteractiveSprite</td>
@@ -218,12 +218,12 @@ showHideInherited();
 </tr>
 </table>
 <div class="detailBody">
-<code>protected override function offStage(e:Event):void</code><p>
+<code>protected override function offStage(e:Event = null):void</code><p>
    Remove the listeners when removed from the stage.
    </p><span class="label">Parameters</span>
 <table border="0" cellspacing="0" cellpadding="0">
 <tr>
-<td width="20px"></td><td><code><span class="label">e</span>:Event</code></td>
+<td width="20px"></td><td><code><span class="label">e</span>:Event</code> (default = <code>null</code>)<code></code></td>
 </tr>
 </table>
 </div>
@@ -234,12 +234,12 @@ showHideInherited();
 </tr>
 </table>
 <div class="detailBody">
-<code>protected override function onStage(e:Event):void</code><p>
+<code>protected override function onStage(e:Event = null):void</code><p>
    Add listeners when added to stage.
    </p><span class="label">Parameters</span>
 <table border="0" cellspacing="0" cellpadding="0">
 <tr>
-<td width="20px"></td><td><code><span class="label">e</span>:Event</code></td>
+<td width="20px"></td><td><code><span class="label">e</span>:Event</code> (default = <code>null</code>)<code></code></td>
 </tr>
 </table>
 </div>
