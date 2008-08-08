@@ -43,6 +43,12 @@ if (!isEclipse() || window.name != ECLIPSE_FRAME_NAME) {titleBar_setSubTitle("Cl
 </table>
 <p></p>
   SOAPService provides a SOAP WebService client interface.
+  
+  <p><b>WARNING</b>: SOAPService cannot be compiled with the flash IDE as of Flash CS3 due to its dependency
+  on the Flex3 SDK core which is required to be initialized to access <code>mx.rpc.WebService</code>. This 
+  means that compilation must take place either within a Flex Project or (thanks to the <code>initFlexCore</code>
+  work-around in a pure actionscript project with mxmlc (e.g. FlexBuilder or FDT).</p>
+  
   <p></p>
 <br>
 <span class="label">Example</span>
@@ -69,6 +75,7 @@ if (!isEclipse() || window.name != ECLIPSE_FRAME_NAME) {titleBar_setSubTitle("Cl
     trace( "FAULT.HANDLER:###:::::%%%%=> [" + e.fault + "]" );
    }   
   </pre></div>
+  
   <p></p>
 <p>
 <span class="classHeaderTableLabel">See also</span>
@@ -242,19 +249,22 @@ showHideInherited();
    </p><span class="label">Parameters</span>
 <table border="0" cellspacing="0" cellpadding="0">
 <tr>
-<td width="20px"></td><td><code><span class="label">wsdl</span>:String</code></td>
+<td width="20px"></td><td><code><span class="label">wsdl</span>:String</code> &mdash;   webservice url
+   </td>
 </tr>
 <tr>
 <td class="paramSpacer">&nbsp;</td>
 </tr>
 <tr>
-<td width="20px"></td><td><code><span class="label">service</span>:String</code> (default = <code>null</code>)<code></code></td>
+<td width="20px"></td><td><code><span class="label">service</span>:String</code> (default = <code>null</code>)<code></code> &mdash;  webservice name
+   </td>
 </tr>
 <tr>
 <td class="paramSpacer">&nbsp;</td>
 </tr>
 <tr>
-<td width="20px"></td><td><code><span class="label">port</span>:String</code> (default = <code>null</code>)<code></code></td>
+<td width="20px"></td><td><code><span class="label">port</span>:String</code> (default = <code>null</code>)<code></code> &mdash;   webservice port
+   </td>
 </tr>
 </table>
 </div>
