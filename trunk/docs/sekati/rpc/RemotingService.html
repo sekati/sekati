@@ -4,7 +4,7 @@
 <META http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <link rel="stylesheet" href="../../style.css" type="text/css" media="screen">
 <link rel="stylesheet" href="../../print.css" type="text/css" media="print">
-<meta content="RemotingService,sekati.rpc.RemotingService" name="keywords">
+<meta content="RemotingService,sekati.rpc.RemotingService,responder,callHandler,execute,faultHandler,resultHandler" name="keywords">
 <title>sekati.rpc.RemotingService</title>
 </head>
 <body>
@@ -19,7 +19,7 @@
 <td align="left" class="titleTableTitle">Sekati API Documentation</td><td align="right" class="titleTableTopNav"><a onclick="loadClassListFrame('../../all-classes.html')" href="../../package-summary.html">All&nbsp;Packages</a>&nbsp;|&nbsp;<a onclick="loadClassListFrame('../../all-classes.html')" href="../../class-summary.html">All&nbsp;Classes</a>&nbsp;|&nbsp;<a onclick="loadClassListFrame('../../index-list.html')" href="../../all-index-A.html">Index</a>&nbsp;|&nbsp;<a href="../../index.html?sekati/rpc/RemotingService.html&amp;sekati/rpc/class-list.html" id="framesLink1">Frames</a><a onclick="parent.location=document.location" href="" style="display:none" id="noFramesLink1">No&nbsp;Frames</a></td><td rowspan="3" align="right" class="titleTableLogo"><img alt="Adobe Logo" title="Adobe Logo" class="logoImage" src="../../images/logo.jpg"></td>
 </tr>
 <tr class="titleTableRow2">
-<td align="left" id="subTitle" class="titleTableSubTitle">Class&nbsp;RemotingService</td><td align="right" id="subNav" class="titleTableSubNav"><a href="#methodSummary">Methods</a></td>
+<td align="left" id="subTitle" class="titleTableSubTitle">Class&nbsp;RemotingService</td><td align="right" id="subNav" class="titleTableSubNav"><a href="#propertySummary">Properties</a>&nbsp;| <a href="#methodSummary">Methods</a></td>
 </tr>
 <tr class="titleTableRow3">
 <td colspan="2">&nbsp;</td>
@@ -27,7 +27,7 @@
 </table>
 <script type="text/javascript" language="javascript">
 <!--
-if (!isEclipse() || window.name != ECLIPSE_FRAME_NAME) {titleBar_setSubTitle("Class RemotingService"); titleBar_setSubNav(false,false,false,false,false,false,true,false,false,false,false,false,false,false);}
+if (!isEclipse() || window.name != ECLIPSE_FRAME_NAME) {titleBar_setSubTitle("Class RemotingService"); titleBar_setSubNav(false,true,false,false,false,false,true,false,false,false,false,false,false,false);}
 --></script>
 <div class="MainContent">
 <table cellspacing="0" cellpadding="0" class="classHeaderTable">
@@ -42,8 +42,30 @@ if (!isEclipse() || window.name != ECLIPSE_FRAME_NAME) {titleBar_setSubTitle("Cl
 </tr>
 </table>
 <p></p>
-  RemotingService provides a basic remoting service wrapper for <b>AMF 
-  Remoting</b> (usually to <a href="http://www.amfphp.org/">AMFPHP</a>).
+  RemotingService provides a basic remoting service wrapper for <b>AMF Remoting</b> (usually to 
+  <a href="http://www.amfphp.org/">AMFPHP</a>).
+  
+  TODO - REQUIRES FIXING.
+  
+  <p></p>
+<br>
+<span class="label">Example</span>
+<br><div class='listing'><pre>
+   var rs : RemotingService = new RemotingService( "http://www.5etdemi.com/amfphp/gateway.php" );
+   
+   rs.addEventListener( ServiceEvent.FAULT, faultHandler );
+   rs.addEventListener( ServiceEvent.RESULT, resultHandler );
+   
+   rs.execute( 'Class.method', {arg1:"foo", arg2:"13"} );
+   
+   protected function resultHandler(e : ServiceEvent) : void {
+    trace( "RESULT.HANDLER:###:::::%%%%=> [" + e.result + "]" );
+   } 
+   
+   protected function faultHandler(e : ServiceEvent) : void {
+    trace( "FAULT.HANDLER:###:::::%%%%=> [" + e.fault + "]" );
+   }  
+  </pre></div>
   
   <p></p>
 <p>
@@ -51,9 +73,24 @@ if (!isEclipse() || window.name != ECLIPSE_FRAME_NAME) {titleBar_setSubTitle("Cl
 </p>
 <div class="seeAlso">
 <a href="http://osflash.org/documentation/amf/recordset" target="mm_external">http://osflash.org/documentation/amf/recordset</a>
+<br>
+<a href="http://livedocs.adobe.com/flash/9.0/ActionScriptLangRefV3/flash/net/Responder.html" target="mm_external">http://livedocs.adobe.com/flash/9.0/ActionScriptLangRefV3/flash/net/Responder.html</a>
 </div>
 <br>
 <hr>
+</div>
+<a name="propertySummary"></a><a name="protectedPropertySummary"></a>
+<div class="summarySection">
+<div class="summaryTableTitle">Protected Properties</div>
+<table id="summaryTableProtectedProperty" class="summaryTable " cellpadding="3" cellspacing="0">
+<tr>
+<th>&nbsp;</th><th colspan="2">Property</th><th class="summaryTableOwnerCol">Defined&nbsp;by</th>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a class="signatureLink" href="#responder">responder</a> : Responder<div class="summaryTableDescription"></div>
+</td><td class="summaryTableOwnerCol">RemotingService</td>
+</tr>
+</table>
 </div>
 <a name="methodSummary"></a>
 <div class="summarySection">
@@ -71,6 +108,48 @@ if (!isEclipse() || window.name != ECLIPSE_FRAME_NAME) {titleBar_setSubTitle("Cl
    </div>
 </td><td class="summaryTableOwnerCol">RemotingService</td>
 </tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="#execute()">execute</a>(command:String, ... args):void</div>
+<div class="summaryTableDescription">
+   Execute a remote call.</div>
+</td><td class="summaryTableOwnerCol">RemotingService</td>
+</tr>
+</table>
+</div>
+<a name="protectedMethodSummary"></a>
+<div class="summarySection">
+<div class="summaryTableTitle">Protected Methods</div>
+<table id="summaryTableProtectedMethod" class="summaryTable " cellpadding="3" cellspacing="0">
+<tr>
+<th>&nbsp;</th><th colspan="2">Method</th><th class="summaryTableOwnerCol">Defined&nbsp;by</th>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="#callHandler()">callHandler</a>(o:Object):void</div>
+<div class="summaryTableDescription">
+   Handle the call return; determine whether it is a result or a 
+   fault and dispatch the appropriate event.</div>
+</td><td class="summaryTableOwnerCol">RemotingService</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="#faultHandler()">faultHandler</a>(fault:*):void</div>
+<div class="summaryTableDescription">
+   Dispatch information about failures.</div>
+</td><td class="summaryTableOwnerCol">RemotingService</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="#resultHandler()">resultHandler</a>(result:*):void</div>
+<div class="summaryTableDescription">
+   Dispatch the results of a remoting method call.</div>
+</td><td class="summaryTableOwnerCol">RemotingService</td>
+</tr>
 </table>
 </div>
 <script type="text/javascript" language="javascript">
@@ -78,6 +157,17 @@ if (!isEclipse() || window.name != ECLIPSE_FRAME_NAME) {titleBar_setSubTitle("Cl
 showHideInherited();
 --></script>
 <div class="MainContent">
+<a name="propertyDetail"></a>
+<div class="detailSectionHeader">Property detail</div>
+<a name="responder"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">responder</td><td class="detailHeaderType">property</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>protected var responder:Responder</code>
+</div>
 <a name="constructorDetail"></a>
 <div class="detailSectionHeader">Constructor detail</div>
 <a name="RemotingService()"></a>
@@ -93,27 +183,84 @@ showHideInherited();
 <table border="0" cellspacing="0" cellpadding="0">
 <tr>
 <td width="20px"></td><td><code><span class="label">gatewayURL</span>:String</code> &mdash; the AMFPHP service gateway URL.
-   
    </td>
 </tr>
 </table>
-<br>
-<span class="label">Example</span>
-<br><div class='listing'><pre>
-    var rs : RemotingService = new RemotingService( "http://your.domain.com/amfphp/gateway.php" );
-    var responder : Responder = new Responder( resultHandler, faultHandler );
-    
-    rs.call( "Class.method", responder, { arg1:"foo", arg2:"13" } );
-    
-    private function resultHandler( result : Object ) : void {
-     trace( "remoting call result: " + result );
-    }
-    
-    private function faultHandler( fault : Object ) : void  { 
-     trace( "remoting call fault: " + fault );
-    }
-   </pre></div>
-   <p></p>
+</div>
+<a name="methodDetail"></a>
+<div class="detailSectionHeader">Method detail</div>
+<a name="callHandler()"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">callHandler</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>protected function callHandler(o:Object):void</code><p>
+   Handle the call return; determine whether it is a result or a 
+   fault and dispatch the appropriate event.
+   </p><span class="label">Parameters</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20px"></td><td><code><span class="label">o</span>:Object</code></td>
+</tr>
+</table>
+</div>
+<a name="execute()"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">execute</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public function execute(command:String, ... args):void</code><p>
+   Execute a remote call.
+   </p><span class="label">Parameters</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20px"></td><td><code><span class="label">command</span>:String</code> &mdash; of the remote method
+   </td>
+</tr>
+<tr>
+<td class="paramSpacer">&nbsp;</td>
+</tr>
+<tr>
+<td width="20px"></td><td><code>... <span class="label">args</span></code> &mdash; to pass to remote method call.
+   </td>
+</tr>
+</table>
+</div>
+<a name="faultHandler()"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">faultHandler</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>protected function faultHandler(fault:*):void</code><p>
+   Dispatch information about failures.
+   </p><span class="label">Parameters</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20px"></td><td><code><span class="label">fault</span>:*</code></td>
+</tr>
+</table>
+</div>
+<a name="resultHandler()"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">resultHandler</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>protected function resultHandler(result:*):void</code><p>
+   Dispatch the results of a remoting method call.
+   </p><span class="label">Parameters</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20px"></td><td><code><span class="label">result</span>:*</code></td>
+</tr>
+</table>
 </div>
 <br>
 <br>
