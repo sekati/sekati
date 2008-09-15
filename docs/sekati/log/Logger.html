@@ -4,7 +4,7 @@
 <META http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <link rel="stylesheet" href="../../style.css" type="text/css" media="screen">
 <link rel="stylesheet" href="../../print.css" type="text/css" media="print">
-<meta content="Logger,sekati.log.Logger,_filters,_instance,_isEnabled,_levels,_logId,_outputMode,_watch,$,settings,enabled,outputMode,debug,destroy,error,fatal,filter,getFilters,getInstance,getLevels,info,isFiltered,log,notice,object,reset,resetFilters,resetLevels,setAllLevels,setFilter,setLevel,status,trace,unfilter,warn" name="keywords">
+<meta content="Logger,sekati.log.Logger,_instance,$,settings,enabled,outputMode,debug,destroy,error,fatal,getFilters,getInstance,getLevels,info,isFiltered,notice,object,reset,resetFilters,resetLevels,setAllLevels,setFilter,setLevel,status,trace,warn" name="keywords">
 <title>sekati.log.Logger</title>
 </head>
 <body>
@@ -76,47 +76,12 @@ if (!isEclipse() || window.name != ECLIPSE_FRAME_NAME) {titleBar_setSubTitle("Cl
 </tr>
 <tr class="">
 <td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a class="signatureLink" href="#outputMode">outputMode</a> : uint<div class="summaryTableDescription">
-   Handles which output mode(s) the <code>Logger</code>
-   should act upon.</div>
+   Handles which output mode(s) the <code>Logger</code> should act upon.</div>
 </td><td class="summaryTableOwnerCol">Logger</td>
 </tr>
 <tr class="">
 <td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a class="signatureLink" href="#settings">settings</a> : String<div class="summaryTableDescription">[read-only]
    Returns level and filter settings.</div>
-</td><td class="summaryTableOwnerCol">Logger</td>
-</tr>
-</table>
-</div>
-<a name="protectedPropertySummary"></a>
-<div class="summarySection">
-<div class="summaryTableTitle">Protected Properties</div>
-<table id="summaryTableProtectedProperty" class="summaryTable " cellpadding="3" cellspacing="0">
-<tr>
-<th>&nbsp;</th><th colspan="2">Property</th><th class="summaryTableOwnerCol">Defined&nbsp;by</th>
-</tr>
-<tr class="">
-<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a class="signatureLink" href="#_filters">_filters</a> : Array<div class="summaryTableDescription"></div>
-</td><td class="summaryTableOwnerCol">Logger</td>
-</tr>
-<tr class="">
-<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a class="signatureLink" href="#_isEnabled">_isEnabled</a> : Boolean = true<div class="summaryTableDescription">[static]</div>
-</td><td class="summaryTableOwnerCol">Logger</td>
-</tr>
-<tr class="">
-<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a class="signatureLink" href="#_levels">_levels</a> : Object<div class="summaryTableDescription"></div>
-</td><td class="summaryTableOwnerCol">Logger</td>
-</tr>
-<tr class="">
-<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a class="signatureLink" href="#_logId">_logId</a> : uint = 1<div class="summaryTableDescription">[static]</div>
-</td><td class="summaryTableOwnerCol">Logger</td>
-</tr>
-<tr class="">
-<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a class="signatureLink" href="#_outputMode">_outputMode</a> : uint<div class="summaryTableDescription"></div>
-</td><td class="summaryTableOwnerCol">Logger</td>
-</tr>
-<tr class="">
-<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a class="signatureLink" href="#_watch">_watch</a> : <a href="../utils/StopWatch.html">StopWatch</a>
-<div class="summaryTableDescription"></div>
 </td><td class="summaryTableOwnerCol">Logger</td>
 </tr>
 </table>
@@ -304,39 +269,6 @@ if (!isEclipse() || window.name != ECLIPSE_FRAME_NAME) {titleBar_setSubTitle("Cl
 </tr>
 </table>
 </div>
-<a name="protectedMethodSummary"></a>
-<div class="summarySection">
-<div class="summaryTableTitle">Protected Methods</div>
-<table id="summaryTableProtectedMethod" class="summaryTable " cellpadding="3" cellspacing="0">
-<tr>
-<th>&nbsp;</th><th colspan="2">Method</th><th class="summaryTableOwnerCol">Defined&nbsp;by</th>
-</tr>
-<tr class="">
-<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
-<div class="summarySignature">
-<a class="signatureLink" href="#filter()">filter</a>(origin:Object):void</div>
-<div class="summaryTableDescription">
-   Add an origin to the filters array.</div>
-</td><td class="summaryTableOwnerCol">Logger</td>
-</tr>
-<tr class="">
-<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
-<div class="summarySignature">
-<a class="signatureLink" href="#log()">log</a>(level:uint, origin:Object, message:String):void</div>
-<div class="summaryTableDescription">
-   Output handler dispatcher the fully assembled <code>LogEvent</code>.</div>
-</td><td class="summaryTableOwnerCol">Logger</td>
-</tr>
-<tr class="">
-<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
-<div class="summarySignature">
-<a class="signatureLink" href="#unfilter()">unfilter</a>(origin:Object):void</div>
-<div class="summaryTableDescription">
-   Remove an origin from the filters array.</div>
-</td><td class="summaryTableOwnerCol">Logger</td>
-</tr>
-</table>
-</div>
 <script type="text/javascript" language="javascript">
 <!--
 showHideInherited();
@@ -374,15 +306,6 @@ showHideInherited();
 <code>&nbsp;&nbsp;&nbsp;&nbsp;public function set enabled(value:Boolean):void</code>
 <br>
 </div>
-<a name="_filters"></a>
-<table cellspacing="0" cellpadding="0" class="detailHeader">
-<tr>
-<td class="detailHeaderName">_filters</td><td class="detailHeaderType">property</td><td class="detailHeaderRule">&nbsp;</td>
-</tr>
-</table>
-<div class="detailBody">
-<code>protected var _filters:Array</code>
-</div>
 <a name="_instance"></a>
 <table cellspacing="0" cellpadding="0" class="detailHeader">
 <tr>
@@ -392,42 +315,6 @@ showHideInherited();
 <div class="detailBody">
 <code>public static var _instance:<a href="../log/Logger.html">Logger</a></code>
 </div>
-<a name="_isEnabled"></a>
-<table cellspacing="0" cellpadding="0" class="detailHeader">
-<tr>
-<td class="detailHeaderName">_isEnabled</td><td class="detailHeaderType">property</td><td class="detailHeaderRule">&nbsp;</td>
-</tr>
-</table>
-<div class="detailBody">
-<code>protected static var _isEnabled:Boolean = true</code>
-</div>
-<a name="_levels"></a>
-<table cellspacing="0" cellpadding="0" class="detailHeader">
-<tr>
-<td class="detailHeaderName">_levels</td><td class="detailHeaderType">property</td><td class="detailHeaderRule">&nbsp;</td>
-</tr>
-</table>
-<div class="detailBody">
-<code>protected var _levels:Object</code>
-</div>
-<a name="_logId"></a>
-<table cellspacing="0" cellpadding="0" class="detailHeader">
-<tr>
-<td class="detailHeaderName">_logId</td><td class="detailHeaderType">property</td><td class="detailHeaderRule">&nbsp;</td>
-</tr>
-</table>
-<div class="detailBody">
-<code>protected static var _logId:uint = 1</code>
-</div>
-<a name="_outputMode"></a>
-<table cellspacing="0" cellpadding="0" class="detailHeader">
-<tr>
-<td class="detailHeaderName">_outputMode</td><td class="detailHeaderType">property</td><td class="detailHeaderRule">&nbsp;</td>
-</tr>
-</table>
-<div class="detailBody">
-<code>protected var _outputMode:uint</code>
-</div>
 <a name="outputMode"></a>
 <table cellspacing="0" cellpadding="0" class="detailHeader">
 <tr>
@@ -436,18 +323,19 @@ showHideInherited();
 </table>
 <div class="detailBody">
 <code>outputMode:uint</code>&nbsp;&nbsp;[read-write]<p>
-   Handles which output mode(s) the <code>Logger</code>
-   should act upon. Possible options are:<br><code>
-   Logger.OUTPUT_NONE   // 0 - no output. Effectively the same as Logger.$.enabled = false;
-   Logger.OUTPUT_IDE   // 1 - output to IDE output panel.
-   Logger.OUTPUT_CONSOLE  // 2 - output to sekati.log.Console SWF via LocalConnection.
-   Logger.OUTPUT_ALL   // 3 - output to both IDE and Console.
+   Handles which output mode(s) the <code>Logger</code> should act upon.
    </p><span class="label">Implementation</span>
 <br>
 <code>&nbsp;&nbsp;&nbsp;&nbsp;public function get outputMode():uint</code>
 <br>
 <code>&nbsp;&nbsp;&nbsp;&nbsp;public function set outputMode(value:uint):void</code>
 <br>
+<p>
+<span class="label">See also</span>
+</p>
+<div class="seeAlso">
+<a href="../log/LogTarget.html" target="">sekati.log.LogTarget</a>
+</div>
 </div>
 <a name="settings"></a>
 <table cellspacing="0" cellpadding="0" class="detailHeader">
@@ -462,15 +350,6 @@ showHideInherited();
 <br>
 <code>&nbsp;&nbsp;&nbsp;&nbsp;public function get settings():String</code>
 <br>
-</div>
-<a name="_watch"></a>
-<table cellspacing="0" cellpadding="0" class="detailHeader">
-<tr>
-<td class="detailHeaderName">_watch</td><td class="detailHeaderType">property</td><td class="detailHeaderRule">&nbsp;</td>
-</tr>
-</table>
-<div class="detailBody">
-<code>protected var _watch:<a href="../utils/StopWatch.html">StopWatch</a></code>
 </div>
 <a name="constructorDetail"></a>
 <div class="detailSectionHeader">Constructor detail</div>
@@ -566,23 +445,6 @@ showHideInherited();
 </tr>
 <tr>
 <td width="20px"></td><td><code><span class="label">message</span>:String</code></td>
-</tr>
-</table>
-</div>
-<a name="filter()"></a>
-<table cellspacing="0" cellpadding="0" class="detailHeader">
-<tr>
-<td class="detailHeaderName">filter</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td>
-</tr>
-</table>
-<div class="detailBody">
-<code>protected function filter(origin:Object):void</code><p>
-   Add an origin to the filters array.
-   </p><span class="label">Parameters</span>
-<table border="0" cellspacing="0" cellpadding="0">
-<tr>
-<td width="20px"></td><td><code><span class="label">origin</span>:Object</code> &mdash;  to be added.
-   </td>
 </tr>
 </table>
 </div>
@@ -684,34 +546,6 @@ showHideInherited();
 <table border="0" cellspacing="0" cellpadding="0">
 <tr>
 <td width="20"></td><td><code>Boolean</code></td>
-</tr>
-</table>
-</div>
-<a name="log()"></a>
-<table cellspacing="0" cellpadding="0" class="detailHeader">
-<tr>
-<td class="detailHeaderName">log</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td>
-</tr>
-</table>
-<div class="detailBody">
-<code>protected function log(level:uint, origin:Object, message:String):void</code><p>
-   Output handler dispatcher the fully assembled <code>LogEvent</code>.
-   </p><span class="label">Parameters</span>
-<table border="0" cellspacing="0" cellpadding="0">
-<tr>
-<td width="20px"></td><td><code><span class="label">level</span>:uint</code></td>
-</tr>
-<tr>
-<td class="paramSpacer">&nbsp;</td>
-</tr>
-<tr>
-<td width="20px"></td><td><code><span class="label">origin</span>:Object</code></td>
-</tr>
-<tr>
-<td class="paramSpacer">&nbsp;</td>
-</tr>
-<tr>
-<td width="20px"></td><td><code><span class="label">message</span>:String</code></td>
 </tr>
 </table>
 </div>
@@ -894,23 +728,6 @@ showHideInherited();
 </tr>
 <tr>
 <td width="20px"></td><td><code><span class="label">message</span>:String</code></td>
-</tr>
-</table>
-</div>
-<a name="unfilter()"></a>
-<table cellspacing="0" cellpadding="0" class="detailHeader">
-<tr>
-<td class="detailHeaderName">unfilter</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td>
-</tr>
-</table>
-<div class="detailBody">
-<code>protected function unfilter(origin:Object):void</code><p>
-   Remove an origin from the filters array.
-   </p><span class="label">Parameters</span>
-<table border="0" cellspacing="0" cellpadding="0">
-<tr>
-<td width="20px"></td><td><code><span class="label">origin</span>:Object</code> &mdash;  to be removed.
-   </td>
 </tr>
 </table>
 </div>
