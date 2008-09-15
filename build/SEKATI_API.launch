@@ -2,7 +2,7 @@
 <launchConfiguration type="com.powerflasher.fdt.ui.MxmlcGroup">
 <stringAttribute key="ARGUMENTS" value="-default-size 550 400 -default-frame-rate 31 -default-background-color 0xFFFFFF -source-path {flexSDK}/frameworks/locale/en_US -verbose-stacktraces"/>
 <stringAttribute key="FLASH_VARS" value=""/>
-<stringAttribute key="FLEX_SDK_NAME" value="FLEX3_SDK"/>
+<stringAttribute key="FLEX_SDK_NAME" value="Flex3_SDK"/>
 <stringAttribute key="MAIN_CLASS" value="src/Main.as"/>
 <stringAttribute key="OUTPUT" value="deploy/framework.swf"/>
 <booleanAttribute key="PASS_CP" value="true"/>
