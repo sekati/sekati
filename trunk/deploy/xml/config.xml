@@ -12,7 +12,7 @@
 -->
 <config persist="false">
 	<app>
-		<name><![CDATA[Sekati API]]></name>
+		<name>Sekati API</name>
 		<version>3.0.3.3</version>
 	</app>
 	<uri>
