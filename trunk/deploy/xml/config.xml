@@ -21,10 +21,9 @@
 		<css load="true">css/app_style.css</css>
 	</uri>
 	<option>
-		<!-- Log Modes: ALL (true || 3), FIREBUG (2), IDE (1), NONE (false || 0 || ???) -->
-		<log>ALL</log>
-		<managed_menu>true</managed_menu>
-		<api_credit>true</api_credit>
+		<!-- Targets: ide, firebug, all, none -->
+		<log target="all">true</log>
+		<menu verbose="true">true</menu>
 		<fullscreen>true</fullscreen>
 		<key>true</key>
 		<track>true</track>
