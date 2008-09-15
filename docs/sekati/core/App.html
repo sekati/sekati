@@ -4,7 +4,7 @@
 <META http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <link rel="stylesheet" href="../../style.css" type="text/css" media="screen">
 <link rel="stylesheet" href="../../print.css" type="text/css" media="print">
-<meta content="App,sekati.core.App,API_AUTHOR,API_DATE,API_INFO,API_NAME,API_URL,API_VERSION,APP_NAME,APP_VERSION,CONF_URI,CROSSDOMAIN_BOOTLOAD,CROSSDOMAIN_URI,CSS_BOOTLOAD,CSS_URI,DATA_BOOTLOAD,DATA_URI,DEEPLINK_ENABLE,FULLSCREEN_ENABLE,KEY_ENABLE,LOG_ENABLE,LOG_TARGET,MANAGED_MENU,PATH,PERFORMANCE_MONITOR_ENABLE,TRACK_ENABLE,css,db" name="keywords">
+<meta content="App,sekati.core.App,API_AUTHOR,API_CREDIT,API_DATE,API_NAME,API_URL,API_VERSION,APP_NAME,APP_VERSION,CONF_URI,CROSSDOMAIN_BOOTLOAD,CROSSDOMAIN_URI,CSS_BOOTLOAD,CSS_URI,DATA_BOOTLOAD,DATA_URI,DEEPLINK_ENABLE,FULLSCREEN_ENABLE,KEY_ENABLE,LOG_ENABLE,MANAGED_MENU,PATH,PERFORMANCE_MONITOR_ENABLE,TRACK_ENABLE,css,db,log" name="keywords">
 <title>sekati.core.App</title>
 </head>
 <body>
@@ -73,9 +73,8 @@ if (!isEclipse() || window.name != ECLIPSE_FRAME_NAME) {titleBar_setSubTitle("Cl
 <th>&nbsp;</th><th colspan="2">Property</th><th class="summaryTableOwnerCol">Defined&nbsp;by</th>
 </tr>
 <tr class="">
-<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a class="signatureLink" href="#API_INFO">API_INFO</a> : Boolean<div class="summaryTableDescription">[static]
-   Determines whether to display the API version, player & platform information via the <code>ContextMenuManager</code> 
-   when "menu" value & "verbose" attribute are set <code>true</code> in <code>config.xml</code>.</div>
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a class="signatureLink" href="#API_CREDIT">API_CREDIT</a> : Boolean<div class="summaryTableDescription">[static]
+   Determines whether to display the API credit information in the <code>ContextMenu</code> when <code>MANAGED_MENU</code> is enabled.</div>
 </td><td class="summaryTableOwnerCol">App</td>
 </tr>
 <tr class="">
@@ -151,13 +150,14 @@ if (!isEclipse() || window.name != ECLIPSE_FRAME_NAME) {titleBar_setSubTitle("Cl
 </td><td class="summaryTableOwnerCol">App</td>
 </tr>
 <tr class="">
-<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a class="signatureLink" href="#LOG_ENABLE">LOG_ENABLE</a> : Boolean<div class="summaryTableDescription">[static]
-   Determines whether advanced <code>Logger</code> output is generated.</div>
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a class="signatureLink" href="#log">log</a> : <a href="../log/Logger.html">Logger</a>
+<div class="summaryTableDescription">[static]
+   Stores a "shortcut" reference to the </code>Logger</code>.</div>
 </td><td class="summaryTableOwnerCol">App</td>
 </tr>
 <tr class="">
-<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a class="signatureLink" href="#LOG_TARGET">LOG_TARGET</a> : String<div class="summaryTableDescription">[static]
-   Determines <code>Logger</code> output is generated.</div>
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a class="signatureLink" href="#LOG_ENABLE">LOG_ENABLE</a> : Boolean<div class="summaryTableDescription">[static]
+   Determines whether advanced <code>Logger</code> output is generated.</div>
 </td><td class="summaryTableOwnerCol">App</td>
 </tr>
 <tr class="">
@@ -213,7 +213,7 @@ if (!isEclipse() || window.name != ECLIPSE_FRAME_NAME) {titleBar_setSubTitle("Cl
 </td><td class="summaryTableOwnerCol">App</td>
 </tr>
 <tr class="">
-<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a class="signatureLink" href="#API_DATE">API_DATE</a> : String = "09.15.08"<div class="summaryTableDescription">[static]
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a class="signatureLink" href="#API_DATE">API_DATE</a> : String = "09.11.08"<div class="summaryTableDescription">[static]
    Enables API version date to be retrieved at runtime or when reverse engineering.</div>
 </td><td class="summaryTableOwnerCol">App</td>
 </tr>
@@ -228,7 +228,7 @@ if (!isEclipse() || window.name != ECLIPSE_FRAME_NAME) {titleBar_setSubTitle("Cl
 </td><td class="summaryTableOwnerCol">App</td>
 </tr>
 <tr class="">
-<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a class="signatureLink" href="#API_VERSION">API_VERSION</a> : String = "Public Alpha 3.0.3.3 - "Mothra""<div class="summaryTableDescription">[static]
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a class="signatureLink" href="#API_VERSION">API_VERSION</a> : String = "Public Alpha 3.0.3.1 - "Mothra""<div class="summaryTableDescription">[static]
    Enables API version, release state & code name to be retrieved at runtime or when reverse engineering.</div>
 </td><td class="summaryTableOwnerCol">App</td>
 </tr>
@@ -241,21 +241,17 @@ showHideInherited();
 <div class="MainContent">
 <a name="propertyDetail"></a>
 <div class="detailSectionHeader">Property detail</div>
-<a name="API_INFO"></a>
+<a name="API_CREDIT"></a>
 <table cellspacing="0" cellpadding="0" class="detailHeader">
 <tr>
-<td class="detailHeaderName">API_INFO</td><td class="detailHeaderType">property</td>
+<td class="detailHeaderName">API_CREDIT</td><td class="detailHeaderType">property</td>
 </tr>
 </table>
 <div class="detailBody">
-<code>public static var API_INFO:Boolean</code><p>
-   Determines whether to display the API version, player & platform information via the <code>ContextMenuManager</code> 
-   when "menu" value & "verbose" attribute are set <code>true</code> in <code>config.xml</code>.
-   </p><p>
-<span class="label">See also</span>
-</p>
-<div class="seeAlso">MANAGED_MENU</div>
-</div>
+<code>public static var API_CREDIT:Boolean</code><p>
+   Determines whether to display the API credit information in the <code>ContextMenu</code> when <code>MANAGED_MENU</code> is enabled. 
+   Defined in <code>config.xml</code>.
+   </p></div>
 <a name="APP_NAME"></a>
 <table cellspacing="0" cellpadding="0" class="detailHeader">
 <tr>
@@ -387,13 +383,7 @@ showHideInherited();
 <code>public static var FULLSCREEN_ENABLE:Boolean</code><p>
    Determines whether the application supports Fullscreen mode via <code>sekati.display.StageDisplay</code> If <code>MANAGED_MENU</code>
    is <code>true</code> a <code>ContextMenu</code> <i>'fullscreen'</i> item will be automatically added. Defined in <code>config.xml</code>.
-   </p><p>
-<span class="label">See also</span>
-</p>
-<div class="seeAlso">
-<a href="../display/StageDisplay.html" target="">sekati.display.StageDisplay</a>
-</div>
-</div>
+   </p></div>
 <a name="KEY_ENABLE"></a>
 <table cellspacing="0" cellpadding="0" class="detailHeader">
 <tr>
@@ -403,13 +393,17 @@ showHideInherited();
 <div class="detailBody">
 <code>public static var KEY_ENABLE:Boolean</code><p>
    Determines whether keyboard management is enabled. Defined in <code>config.xml</code>.
-   </p><p>
-<span class="label">See also</span>
-</p>
-<div class="seeAlso">
-<a href="../managers/KeyManager.html" target="">sekati.managers.KeyManager</a>
-</div>
-</div>
+   </p></div>
+<a name="log"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">log</td><td class="detailHeaderType">property</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public static var log:<a href="../log/Logger.html">Logger</a></code><p>
+   Stores a "shortcut" reference to the </code>Logger</code>.
+   </p></div>
 <a name="LOG_ENABLE"></a>
 <table cellspacing="0" cellpadding="0" class="detailHeader">
 <tr>
@@ -419,29 +413,7 @@ showHideInherited();
 <div class="detailBody">
 <code>public static var LOG_ENABLE:Boolean</code><p>
    Determines whether advanced <code>Logger</code> output is generated. Defined in <code>config.xml</code>.
-   </p><p>
-<span class="label">See also</span>
-</p>
-<div class="seeAlso">
-<a href="../log/Logger.html" target="">sekati.log.Logger</a>
-</div>
-</div>
-<a name="LOG_TARGET"></a>
-<table cellspacing="0" cellpadding="0" class="detailHeader">
-<tr>
-<td class="detailHeaderName">LOG_TARGET</td><td class="detailHeaderType">property</td><td class="detailHeaderRule">&nbsp;</td>
-</tr>
-</table>
-<div class="detailBody">
-<code>public static var LOG_TARGET:String</code><p>
-   Determines <code>Logger</code> output is generated. Defined in <code>config.xml</code>.
-   </p><p>
-<span class="label">See also</span>
-</p>
-<div class="seeAlso">
-<a href="../log/LogTarget.html" target="">sekati.log.LogTarget</a>
-</div>
-</div>
+   </p></div>
 <a name="MANAGED_MENU"></a>
 <table cellspacing="0" cellpadding="0" class="detailHeader">
 <tr>
@@ -451,13 +423,7 @@ showHideInherited();
 <div class="detailBody">
 <code>public static var MANAGED_MENU:Boolean</code><p>
    Determines whether the <code>ContextMenuManager</code> is instantiated during <code>Bootstrap</code>. Defined in <code>config.xml</code>.
-   </p><p>
-<span class="label">See also</span>
-</p>
-<div class="seeAlso">
-<a href="../managers/ContextMenuManager.html" target="">sekati.managers.ContextMenuManager</a>
-</div>
-</div>
+   </p></div>
 <a name="PATH"></a>
 <table cellspacing="0" cellpadding="0" class="detailHeader">
 <tr>
@@ -477,13 +443,7 @@ showHideInherited();
 <div class="detailBody">
 <code>public static var PERFORMANCE_MONITOR_ENABLE:Boolean</code><p>
    Determines whether to display the <code>Performance</code> UI feedback graph. Defined in <code>config.xml</code>.
-   </p><p>
-<span class="label">See also</span>
-</p>
-<div class="seeAlso">
-<a href="../profiler/PerformanceMonitor.html" target="">sekati.profiler.PerformanceMonitor</a>
-</div>
-</div>
+   </p></div>
 <a name="TRACK_ENABLE"></a>
 <table cellspacing="0" cellpadding="0" class="detailHeader">
 <tr>
@@ -493,13 +453,7 @@ showHideInherited();
 <div class="detailBody">
 <code>public static var TRACK_ENABLE:Boolean</code><p>
    Determines whether Google Analytics is utilized via <code>sekati.external.Urchin</code>. Defined in <code>config.xml</code>.
-   </p><p>
-<span class="label">See also</span>
-</p>
-<div class="seeAlso">
-<a href="../external/Urchin.html" target="">sekati.external.Urchin</a>
-</div>
-</div>
+   </p></div>
 <a name="constructorDetail"></a>
 <div class="detailSectionHeader">Constructor detail</div>
 <a name="App()"></a>
@@ -534,7 +488,7 @@ showHideInherited();
 </tr>
 </table>
 <div class="detailBody">
-<code>public static const API_DATE:String = "09.15.08"</code><p>
+<code>public static const API_DATE:String = "09.11.08"</code><p>
    Enables API version date to be retrieved at runtime or when reverse engineering.
    
    </p><p><i>Please leave intact:</i> this metadata may be displayed in the <code>ContextMenu</code>
@@ -573,7 +527,7 @@ showHideInherited();
 </tr>
 </table>
 <div class="detailBody">
-<code>public static const API_VERSION:String = "Public Alpha 3.0.3.3 - "Mothra""</code><p>
+<code>public static const API_VERSION:String = "Public Alpha 3.0.3.1 - "Mothra""</code><p>
    Enables API version, release state & code name to be retrieved at runtime or when reverse engineering.
    
    </p><p><i>Please leave intact:</i> this metadata may be displayed in the <code>ContextMenu</code>

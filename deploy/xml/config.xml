@@ -12,31 +12,32 @@
 -->
 <config persist="false">
 	<app>
-		<name>Sekati API</name>
-		<version>3.0.3.3</version>
+		<name><![CDATA[Sekati API]]></name>
+		<version>3.0.3.2</version>
 	</app>
 	<uri>
-		<crossdomain load="true">crossdomain.xml</crossdomain>
-		<data load="true">xml/data.xml</data>
-		<css load="true">css/app_style.css</css>
+		<crossdomain load="true">/crossdomain.xml</crossdomain>
+		<data load="false">xml/data.xml</data>
+		<css load="false">css/app_style.css</css>
 	</uri>
 	<option>
-		<!-- Targets: ide, firebug, all, none -->
-		<log target="all">true</log>
-		<menu verbose="true">true</menu>
+		<managed_menu>true</managed_menu>
+		<api_credit>true</api_credit>
 		<fullscreen>true</fullscreen>
-		<key>true</key>
 		<track>true</track>
+		<key>true</key>
 		<deeplink>false</deeplink>
-		<performance_monitor>true</performance_monitor>
+		<log>true</log>
+		<performance_monitor>false</performance_monitor>
 	</option>
 	<custom>
 		<!-- 
-		If you have a small amount of application data you wish to persist but do not 
-		want to load a 2nd (data) XML you may use the "custom" node for your data.
+		If you have a small amount of configuration data you wish to persist 
+		but do not want to bother with a second (data) XML file you may use
+		this "custom" node to populate your data.
 		
-		In order to access custom node data via the API you must set: 
-		<config persist="true"> to make App.db.config.custom available.
-		-->	
+		In order to access custom node data via the API you must set <config 
+		persist="true">; custom will be available via App.db.config.custom.
+		-->
 	</custom>
 </config>
