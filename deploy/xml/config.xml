@@ -29,10 +29,10 @@
 		<deeplink>false</deeplink>
 		<performance_monitor>true</performance_monitor>
 		<!-- 
-			0 || NONE || false || ???	== disable all log targets
-			1 || CONSOLE 				== developer IDE console
-			2 || FIREBUG 				== firebug console  
-			3 ||  ALL || true 			== all available log targets + event
+			0 || NONE || false || ???	== disable all
+			1 || IDE 					== IDE console
+			2 || FIREBUG 				== firebug console
+			3 ||  ALL || true 			== enable all targets + event
 		 -->
 		<log>ALL</log>		
 	</option>
