@@ -4,7 +4,7 @@
 <META http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <link rel="stylesheet" href="../../style.css" type="text/css" media="screen">
 <link rel="stylesheet" href="../../print.css" type="text/css" media="print">
-<meta content="LogTarget,sekati.log.LogTarget,ALL,CONSOLE,FIREBUG,NONE,resolveTarget,updateConsole,updateFirebug" name="keywords">
+<meta content="LogTarget,sekati.log.LogTarget,ALL,FIREBUG,IDE,NONE,resolveTarget,updateFirebug,updateIDE" name="keywords">
 <title>sekati.log.LogTarget</title>
 </head>
 <body>
@@ -63,18 +63,9 @@ if (!isEclipse() || window.name != ECLIPSE_FRAME_NAME) {titleBar_setSubTitle("Cl
 <tr class="">
 <td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
 <div class="summarySignature">
-<a class="signatureLink" href="#resolveTarget()">resolveTarget</a>(logTarget:String):uint</div>
+<a class="signatureLink" href="#resolveTarget()">resolveTarget</a>(logTarget:String, verboseWarn:Boolean = false):uint</div>
 <div class="summaryTableDescription">[static]
    Resolve the <code>Logger</code> target string.</div>
-</td><td class="summaryTableOwnerCol">LogTarget</td>
-</tr>
-<tr class="">
-<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
-<div class="summarySignature">
-<a class="signatureLink" href="#updateConsole()">updateConsole</a>(msg:String):void</div>
-<div class="summaryTableDescription">[static]
-   A simple trace wrapper to facilitate <code>Logger</code> output to <code>IDE</code>
-   since the <code>trace</code> method is occupied as a <code>LogLevel</code>.</div>
 </td><td class="summaryTableOwnerCol">LogTarget</td>
 </tr>
 <tr class="">
@@ -83,6 +74,15 @@ if (!isEclipse() || window.name != ECLIPSE_FRAME_NAME) {titleBar_setSubTitle("Cl
 <a class="signatureLink" href="#updateFirebug()">updateFirebug</a>(level:String, msg:String):void</div>
 <div class="summaryTableDescription">[static]
    A wrapper to facilitate output to <a href="http://getfirebug.com/">Firebug</a> if it is available.</div>
+</td><td class="summaryTableOwnerCol">LogTarget</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="#updateIDE()">updateIDE</a>(msg:String):void</div>
+<div class="summaryTableDescription">[static]
+   A simple trace wrapper to facilitate <code>Logger</code> output to <code>IDE</code>
+   since the <code>trace</code> method is occupied as a <code>LogLevel</code>.</div>
 </td><td class="summaryTableOwnerCol">LogTarget</td>
 </tr>
 </table>
@@ -100,13 +100,13 @@ if (!isEclipse() || window.name != ECLIPSE_FRAME_NAME) {titleBar_setSubTitle("Cl
 </td><td class="summaryTableOwnerCol">LogTarget</td>
 </tr>
 <tr class="">
-<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a class="signatureLink" href="#CONSOLE">CONSOLE</a> : uint = 1<div class="summaryTableDescription">[static]
-   <code>Logger</code> output is sent to the developers IDE output console (Flash output window or FDT/FlexBuilder console).</div>
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a class="signatureLink" href="#FIREBUG">FIREBUG</a> : uint = 2<div class="summaryTableDescription">[static]
+   <code>Logger</code> output is sent to the Firebug console via <code>ExternalInterface</code>.</div>
 </td><td class="summaryTableOwnerCol">LogTarget</td>
 </tr>
 <tr class="">
-<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a class="signatureLink" href="#FIREBUG">FIREBUG</a> : uint = 2<div class="summaryTableDescription">[static]
-   <code>Logger</code> output is sent to the Firebug console via <code>ExternalInterface</code>.</div>
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a class="signatureLink" href="#IDE">IDE</a> : uint = 1<div class="summaryTableDescription">[static]
+   <code>Logger</code> output is sent to the developers IDE output console (Flash/FDT/FlexBuilder console).</div>
 </td><td class="summaryTableOwnerCol">LogTarget</td>
 </tr>
 <tr class="">
@@ -143,12 +143,18 @@ showHideInherited();
 </tr>
 </table>
 <div class="detailBody">
-<code>public static function resolveTarget(logTarget:String):uint</code><p>
+<code>public static function resolveTarget(logTarget:String, verboseWarn:Boolean = false):uint</code><p>
    Resolve the <code>Logger</code> target string.
    </p><span class="label">Parameters</span>
 <table border="0" cellspacing="0" cellpadding="0">
 <tr>
 <td width="20px"></td><td><code><span class="label">logTarget</span>:String</code></td>
+</tr>
+<tr>
+<td class="paramSpacer">&nbsp;</td>
+</tr>
+<tr>
+<td width="20px"></td><td><code><span class="label">verboseWarn</span>:Boolean</code> (default = <code>false</code>)<code></code></td>
 </tr>
 </table>
 <p></p>
@@ -156,23 +162,6 @@ showHideInherited();
 <table border="0" cellspacing="0" cellpadding="0">
 <tr>
 <td width="20"></td><td><code>uint</code></td>
-</tr>
-</table>
-</div>
-<a name="updateConsole()"></a>
-<table cellspacing="0" cellpadding="0" class="detailHeader">
-<tr>
-<td class="detailHeaderName">updateConsole</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td>
-</tr>
-</table>
-<div class="detailBody">
-<code>public static function updateConsole(msg:String):void</code><p>
-   A simple trace wrapper to facilitate <code>Logger</code> output to <code>IDE</code>
-   since the <code>trace</code> method is occupied as a <code>LogLevel</code>. 
-   </p><span class="label">Parameters</span>
-<table border="0" cellspacing="0" cellpadding="0">
-<tr>
-<td width="20px"></td><td><code><span class="label">msg</span>:String</code></td>
 </tr>
 </table>
 </div>
@@ -198,6 +187,23 @@ showHideInherited();
 </tr>
 </table>
 </div>
+<a name="updateIDE()"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">updateIDE</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public static function updateIDE(msg:String):void</code><p>
+   A simple trace wrapper to facilitate <code>Logger</code> output to <code>IDE</code>
+   since the <code>trace</code> method is occupied as a <code>LogLevel</code>. 
+   </p><span class="label">Parameters</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20px"></td><td><code><span class="label">msg</span>:String</code></td>
+</tr>
+</table>
+</div>
 <a name="constantDetail"></a>
 <div class="detailSectionHeader">Constant detail</div>
 <a name="ALL"></a>
@@ -216,16 +222,6 @@ showHideInherited();
 <a href="../events/LogEvent.html" target="">sekati.events.LogEvent</a>
 </div>
 </div>
-<a name="CONSOLE"></a>
-<table cellspacing="0" cellpadding="0" class="detailHeader">
-<tr>
-<td class="detailHeaderName">CONSOLE</td><td class="detailHeaderType">constant</td><td class="detailHeaderRule">&nbsp;</td>
-</tr>
-</table>
-<div class="detailBody">
-<code>public static const CONSOLE:uint = 1</code><p>
-   <code>Logger</code> output is sent to the developers IDE output console (Flash output window or FDT/FlexBuilder console).
-   </p></div>
 <a name="FIREBUG"></a>
 <table cellspacing="0" cellpadding="0" class="detailHeader">
 <tr>
@@ -242,6 +238,16 @@ showHideInherited();
 <a href="http://getfirebug.com/" target="mm_external">http://getfirebug.com/</a>
 </div>
 </div>
+<a name="IDE"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">IDE</td><td class="detailHeaderType">constant</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public static const IDE:uint = 1</code><p>
+   <code>Logger</code> output is sent to the developers IDE output console (Flash/FDT/FlexBuilder console).
+   </p></div>
 <a name="NONE"></a>
 <table cellspacing="0" cellpadding="0" class="detailHeader">
 <tr>
