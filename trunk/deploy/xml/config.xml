@@ -21,6 +21,8 @@
 		<css load="true">css/app_style.css</css>
 	</uri>
 	<option>
+		<!-- Log Modes: ALL (true || 3), FIREBUG (2), IDE (1), NONE (false || 0 || ???) -->
+		<log>ALL</log>
 		<managed_menu>true</managed_menu>
 		<api_credit>true</api_credit>
 		<fullscreen>true</fullscreen>
@@ -28,13 +30,6 @@
 		<track>true</track>
 		<deeplink>false</deeplink>
 		<performance_monitor>true</performance_monitor>
-		<!-- 
-			0 || NONE || false || ???	== disable all
-			1 || IDE 					== IDE console
-			2 || FIREBUG 				== firebug console
-			3 ||  ALL || true 			== enable all targets + event
-		 -->
-		<log>ALL</log>		
 	</option>
 	<custom>
 		<!-- 
