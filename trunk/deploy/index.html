@@ -48,12 +48,10 @@
 	s.useExpressInstall( "playerProductInstall.swf", 300, 300 );
 	s.scrollbarAt( 800, 600 );
 	//-------------------------------------------------------------------------------------
-	// FlashVars [optional]: define config.xml and crossdomain.xml locations.
-	// Note: query string will override the default flashvar which overrides config.xml values
+	// FlashVars: defines the location of the "config.xml" [default: "xml/config.xml"]
+	// WARNING: query string will override the default flashvar which overrides the default location.
 	//s.addVar( "conf_uri", "xml/config.xml" );
-	//s.addVar( "crossdomain_uri", "crossdomain.xml" );
-	s.addVar( "conf_uri", (swfIN.utils.getQueryParam("conf_uri") || 'xml/config.xml' ));	
-	s.addVar( "crossdomain_uri", (swfIN.utils.getQueryParam("crossdomain_uri") || 'crossdomain.xml' ));	
+	s.addVar( "conf_uri", (swfIN.utils.getQueryParam("conf_uri") || 'xml/config.xml' ));
 	//-------------------------------------------------------------------------------------
 	// Movie Params
 	s.addParam( "bgcolor", "#000000" );
