@@ -114,7 +114,7 @@ if (!isEclipse() || window.name != ECLIPSE_FRAME_NAME) {titleBar_setSubTitle("Cl
 <tr class="">
 <td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
 <div class="summarySignature">
-<a class="signatureLink" href="#addItem()">addItem</a>(caption:String, cb:Function = null, div:Boolean = true, enable:Boolean = true, index:Number):uint</div>
+<a class="signatureLink" href="#addItem()">addItem</a>(caption:String, cb:Function = null, div:Boolean = true, enable:Boolean = true):uint</div>
 <div class="summaryTableDescription">
    Add a new item to the <code>ContextualMenu</code>.</div>
 </td><td class="summaryTableOwnerCol">ContextualMenu</td>
@@ -320,7 +320,7 @@ showHideInherited();
 </tr>
 </table>
 <div class="detailBody">
-<code>public function addItem(caption:String, cb:Function = null, div:Boolean = true, enable:Boolean = true, index:Number):uint</code><p>
+<code>public function addItem(caption:String, cb:Function = null, div:Boolean = true, enable:Boolean = true):uint</code><p>
    Add a new item to the <code>ContextualMenu</code>.
    </p><span class="label">Parameters</span>
 <table border="0" cellspacing="0" cellpadding="0">
@@ -349,23 +349,12 @@ showHideInherited();
 <td width="20px"></td><td><code><span class="label">enable</span>:Boolean</code> (default = <code>true</code>)<code></code> &mdash; item interactivity enabled.
    </td>
 </tr>
-<tr>
-<td class="paramSpacer">&nbsp;</td>
-</tr>
-<tr>
-<td width="20px"></td><td><code><span class="label">index</span>:Number</code> &mdash;  item index in the menu [default's to last item]. 
-   </td>
-</tr>
 </table>
 <p></p>
 <span class="label">Returns</span>
 <table border="0" cellspacing="0" cellpadding="0">
 <tr>
 <td width="20"></td><td><code>uint</code> &mdash; uint  <code>ContextualMenu</code> item id.
-   
-   <p><b>WARNING:</b> Injecting items in an established menu will change <i>all</i> item ID's. 
-   As a matter of best practice you should utilize <code>getItemId</code> whenever possible to 
-   insure correct item targeting.</p>
    </td>
 </tr>
 </table>
