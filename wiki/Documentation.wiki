@@ -3,4 +3,4 @@
 
 = Documentation =
 
-You may view the [http://docs.sekati.com/sekati/ SEKATI API Documentation] online. It is also included in each [http://code.google.com/p/sekati/downloads/list Packaged Download Revision] and can be browsed and checked out via  [http://code.google.com/p/sekati/source/browse SVN].
+You may view the [http://docs.sekati.com/sekati/ SEKATI API Documentation] online. It can also be browsed and checked out from the [http://code.google.com/p/sekati/source/browse SVN Repository].
