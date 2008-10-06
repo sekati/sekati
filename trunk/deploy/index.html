@@ -38,7 +38,7 @@
 <div id="flash_update"><h1>Flash Player Upgrade Required</h1><br/><a href="adobe.com/go/flashplayer" target="_blank">&raquo; Download Flash plugin to view this site</a>&nbsp; &nbsp; &nbsp; &nbsp;<a href="javascript:location.reload(true)">&raquo; Enter Site</a></div>
 <div id="flash_seo">Content displayed to googlebot & browsers without javascript.</div>
 <script type="text/javascript">
-	var s = new swfIN( "framework.swf", "framework", "100%", "100%" );
+	var s = new swfIN( "sekati_test.swf", "sekati_test", "100%", "100%" );
 	//-------------------------------------------------------------------------------------	
 	// Detect the client flashplayer version: display an update div if not capable.
 	// Use expressInstall if client supported & set automatic scrollbars below defined size.
@@ -61,12 +61,11 @@
 	s.addParam( "swLiveConnect", "true" );
 	s.addParam( "allowFullScreen", "true" );	
 	//-------------------------------------------------------------------------------------
-	// Hide the SEO div, include SWFAddress support and write the embed the swf.
+	// Hide the SEO div & write the embed the swf.
 	s.hideSEO( "flash_seo" );
-	//s.useSWFAddress();
 	s.write();
 	//-------------------------------------------------------------------------------------	
-	// Include mac mouse wheel support.
+	// Include sekati mac mouse wheel support.
 	var mousewheel = new SWFMouse( s );
 	//-------------------------------------------------------------------------------------	
 </script>
