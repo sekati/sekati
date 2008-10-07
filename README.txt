@@ -17,10 +17,11 @@
 
 I. Introduction
 
-	SEKATI API is a multipurpose Actionscript 3.0 framework designed to bootstrap the 
-	development process of flash/flex sites and applications. It is the successor of 
-	the SASAPI (AS2) framework, and boasts a flexible structure, large collection of 
-	useful classes, utilities, test files and application skeleton.
+	SEKATI API s a high-level multipurpose pure Actionscript 3.0 framework designed 
+	to bootstrap the development of flash/flex projects and applications. It is the 
+	successor of the SASAPI (AS2) framework, and boasts a flexible configuration 
+	structure, large collection of useful groundwork classes, utilities, test files 
+	and xml configurable application skeleton.
 
 	A Buildfile is included with Ant tasks for generating project structures, 
 	compilation, generating asdoc documentation and automating deployment via 
