@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- 
+   ____    ____    __  __   ______  ______  ______      ______  ____    ______     
+  /\  _`\ /\  _`\ /\ \/\ \ /\  _  \/\__  _\/\__  _\    /\  _  \/\  _`\ /\__  _\    
+  \ \,\L\_\ \ \L\_\ \ \/'/'\ \ \L\ \/_/\ \/\/_/\ \/    \ \ \L\ \ \ \L\ \/_/\ \/    
+   \/_\__ \\ \  _\L\ \ , <  \ \  __ \ \ \ \   \ \ \     \ \  __ \ \ ,__/  \ \ \    
+     /\ \L\ \ \ \L\ \ \ \\`\ \ \ \/\ \ \ \ \   \_\ \__   \ \ \/\ \ \ \/    \_\ \__ 
+     \ `\____\ \____/\ \_\ \_\\ \_\ \_\ \ \_\  /\_____\   \ \_\ \_\ \_\    /\_____\
+      \/_____/\/___/  \/_/\/_/ \/_/\/_/  \/_/  \/_____/    \/_/\/_/\/_/    \/_____/	
+	
+	Public Alpha 3.0.3.9 - "Gigan" | http://sekati.googlecode.com | Please leave this notice intact.
+	Copyright (c) 2008 Jason M Horwitz | Sekati LLC | sekati.com. All Rights Reserved.
+-->
+<config persist="false">
+	<application>
+		<name>Sekati API</name>
+		<version>3.1.x.x</version>
+		<boot>
+			<crossdomain type="xml">
+				<load>true</load>
+				<type>xml</type>
+				<uri>crossdomain.xml</uri>
+			</crossdomain>
+			<data type="xml">
+				<load>true</load>
+				<uri>xml/data.xml</uri>
+			</data>
+			<stylesheet type="css">
+				<load>true</load>
+				<uri>css/app_styles.css</uri>
+			</stylesheet>
+			<!-- custom examples -->
+			<background type="img">
+				<load>true</load>
+				<uri>assets/background.jpg</uri>
+			</background>
+			<asset type="swf">
+				<load>true</load>
+				<uri>assets/my.swf</uri>
+			</asset>
+		</boot>
+		<preferences>
+			<logging>
+				<enabled>true</enabled>
+				<target>all</target>
+				<!-- 
+				<target>firebug</target>
+				<target>ide</target>
+				<target>none</target>				
+				 -->
+			</logging>
+			<context_menu>
+				<enabled>true</enabled>
+				<fullscreen>true</fullscreen>
+				<app_info>true</app_info>
+				<api_info>true</api_info>
+				<player_info>true</player_info>
+			</context_menu>
+			<key_management>
+				<enabled>true</enabled>
+			</key_management>
+			<urchin_tracking>
+				<enabled>true</enabled>
+			</urchin_tracking>
+			<deeplink_support>
+				<enabled>true</enabled>
+			</deeplink_support>
+			<performance_monitor>
+				<enabled>true</enabled>
+			</performance_monitor>
+		</preferences>
+		<settings>
+			<!-- 
+				If you have a small amount of application data you wish to persist but do not 
+				want to load a 2nd (data) XML you may use the "settings" node for your data.
+				
+				In order to access custom node data via the API you must set: 
+				<config persist="true"> to make the config available.
+			-->
+		</settings>		
+	</application>
+</config>
