@@ -13,7 +13,7 @@
 <config persist="false">
 	<app>
 		<name>Sekati API</name>
-		<version>3.0.3.8</version>
+		<version>3.0.3.9</version>
 	</app>
 	<uri>
 		<crossdomain load="true">crossdomain.xml</crossdomain>
