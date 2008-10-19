@@ -26,15 +26,14 @@
 				player you will need to add your workspace as an allowed location in the flash
 				security preference panel (which will pop up) and make sure compiler.use-network
 				is set false. 		
-		        
+		        	
      ************************************************************************************* -->
 
-<project name="SEKATI API Buildfile" default="build" basedir=".">
+<project name="SEKATI API Buildfile BETA" default="build" basedir="../">
 
 
 	<!-- DEFINITIONS -->
-	<property file="/Applications/inde/workspace/fdtkit/build/default.properties"/>	
-	<property file="build/build.properties"/>
+	<property file="${basedir}/build/buildfile.properties"/>
 	
 	
 	<!-- RESOURCE -->

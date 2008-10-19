@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!-- *************************************************************************************
-		FDTKit Buildfile v3.2.7
+		FDTKit Buildfile v3.2.9
 		
 		Mar 13, 2008 - jason m horwitz | Sekati LLC | sekati.com
 		
@@ -174,7 +174,7 @@
 	
 	<target name="compile-swc" description="Compile project.swc.source in to an SWC library file">
 		<echo>FDTKit SWC Compiler -> ${project.swc.source}: ${project.swc}</echo>
-		<compc output="${project.swc}">
+		<compc output="${project.swc}" locale="${flex3sdk.locale}" debug="${project.swc.debug}"> 
 			<source-path path-element="${src.dir}" />
 			<include-sources dir="${project.swc.source}">
 				<include name="*"/>
@@ -183,6 +183,15 @@
 				<exclude name="${project.swc.exclude1}"/>
 				<exclude name="${project.swc.exclude2}"/>
 			</include-sources>
+			<external-library-path dir="${lib.dir}" append="true">
+				<include name="tweener.swc" />
+			</external-library-path>
+			<external-library-path dir="${flex3sdk.lib.dir}" append="true">
+				<include name="flex.swc" />
+				<include name="framework.swc" />
+				<include name="rpc.swc" />
+				<include name="utilities.swc" />
+			</external-library-path>
 			<metadata title="${project.meta.title}" description="${project.meta.description}" date="${project.meta.date}">
 				<contributor name="${project.meta.contributor}" />
 				<creator name="${project.meta.creator}" />
@@ -291,6 +300,7 @@
 			<arg line='-source-path ${project.lib.linked0}'/>
 			<arg line='-source-path ${project.lib.linked1}'/>
 			<arg line='-source-path ${project.lib.linked2}'/>
+			<arg line='-external-library-path "${lib.dir}/tweener.swc"' />
 			<arg line='-doc-sources ${src.dir}/.'/>
 			<arg line='-warnings=${doc.asdoc.warnings}'/>
 			<arg line="-templates-path '${flex3sdk}/asdoc/templates'"/>

@@ -4,7 +4,7 @@
 <META http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <link rel="stylesheet" href="../../style.css" type="text/css" media="screen">
 <link rel="stylesheet" href="../../print.css" type="text/css" media="print">
-<meta content="ExternalBase,sekati.external.ExternalBase,alert,centerPop,isExternal,resizeWindow,shakeWindow,status" name="keywords">
+<meta content="ExternalBase,sekati.external.ExternalBase,alert,centerPop,isExternalAsset,isReady,resizeWindow,shakeWindow,status" name="keywords">
 <title>sekati.external.ExternalBase</title>
 </head>
 <body>
@@ -79,9 +79,22 @@ if (!isEclipse() || window.name != ECLIPSE_FRAME_NAME) {titleBar_setSubTitle("Cl
 <tr class="">
 <td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
 <div class="summarySignature">
-<a class="signatureLink" href="#isExternal()">isExternal</a>(jsObj:String):Boolean</div>
+<a class="signatureLink" href="#isExternalAsset()">isExternalAsset</a>(jsObj:String):Boolean</div>
 <div class="summaryTableDescription">[static]
    Check if a javascript external asset is installed (and that <code>ExternalInterface</code> is available & the swf is running in browser)
+   </div>
+</td><td class="summaryTableOwnerCol">ExternalBase</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="#isReady()">isReady</a>():Boolean</div>
+<div class="summaryTableDescription">[static]
+   Evaluate all cases to insure an external call can be place successfully:<ul>
+   <li><code>ExternalInterface.isAvailable</code></li>
+   <li><code>FlashValidator.isBrowser</code></li>
+   <li><code>body.onLoad</code></li>
+   </ul> 
    </div>
 </td><td class="summaryTableOwnerCol">ExternalBase</td>
 </tr>
@@ -186,14 +199,14 @@ showHideInherited();
 </tr>
 </table>
 </div>
-<a name="isExternal()"></a>
+<a name="isExternalAsset()"></a>
 <table cellspacing="0" cellpadding="0" class="detailHeader">
 <tr>
-<td class="detailHeaderName">isExternal</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td>
+<td class="detailHeaderName">isExternalAsset</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td>
 </tr>
 </table>
 <div class="detailBody">
-<code>public static function isExternal(jsObj:String):Boolean</code><p>
+<code>public static function isExternalAsset(jsObj:String):Boolean</code><p>
    Check if a javascript external asset is installed (and that <code>ExternalInterface</code> is available & the swf is running in browser)
    </p><span class="label">Parameters</span>
 <table border="0" cellspacing="0" cellpadding="0">
@@ -208,6 +221,27 @@ showHideInherited();
 <tr>
 <td width="20"></td><td><code>Boolean</code> &mdash;    <code>true</code> if asset is available for use, <code>false</code> if not.
    </td>
+</tr>
+</table>
+</div>
+<a name="isReady()"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">isReady</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public static function isReady():Boolean</code><p>
+   Evaluate all cases to insure an external call can be place successfully:<ul>
+   <li><code>ExternalInterface.isAvailable</code></li>
+   <li><code>FlashValidator.isBrowser</code></li>
+   <li><code>body.onLoad</code></li>
+   </ul> 
+   </p><p></p>
+<span class="label">Returns</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20"></td><td><code>Boolean</code></td>
 </tr>
 </table>
 </div>
