@@ -55,15 +55,10 @@ if (!isEclipse() || window.name != ECLIPSE_FRAME_NAME) {titleBar_setSubTitle("Cl
   <li><code>Canvas.loaderInfo</code></li>
   <li><code>Canvas.flashVars</code></li></ul></p>
   
-  <p><b>Note:</b> <code>Canvas</code> checks if the API implemented application has been loaded in to another
-  SWF application or is running <i>"standalone"</i>. If loaded then <code>Canvas</code> remaps its own 
-  <code>stage</code>, <code>root</code>, <code>loaderInfo</code> & <code>flashVar</code> properties to
-  that of the parent SWF, otherwise it uses its own <code>DisplayList</code> property references.</p>
-  
-  XXX <p><b>Note:</b> <code>Canvas</code> supports the loading of API implemented application in to other
-  SWF application or running <i>"standalone"</i>. If loaded then <code>Document</code> remaps its own 
-  <code>stage</code>, <code>root</code>, <code>loaderInfo</code> & <code>flashVar</code> properties to
-  that of the parent SWF, otherwise it uses its own <code>DisplayList</code> property references.</p>
+  <p><b>Note:</b> <code>Canvas</code> supports the loading of API implemented application in to other
+  SWF application or running <i>"standalone"</i>. This is accomplished by calling <code>setReferences()</code>
+  in the constructor & when the <i>Application <code>Document</code> Class</i> <code>ADDED_TO_STAGE</code>
+  event fires which prevents failure when being loaded into another SWF's <code>DisplayList</code>.</p>
   
   <p></p>
 <p>
