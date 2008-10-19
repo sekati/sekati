@@ -6,10 +6,9 @@
 		<aka>sekati</aka>
 		<bio><![CDATA[<a href='http://sekati.com'>Sekati</a>!]]></bio>
 	</person>
-	<person name="Therese M Bienek" suffix="DVM">
-		<age>27</age>
-		<aka>T-bird</aka>
-		<aka>Dr.T</aka>
-		<bio><![CDATA[Likes ponies.]]></bio>
+	<person name="Doogey Houser" suffix="MD">
+		<age>17</age>
+		<aka>Doogster</aka>
+		<bio><![CDATA[Prodigial Doctor.]]></bio>
 	</person>
 </people>
