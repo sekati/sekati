@@ -87,11 +87,7 @@ function template ($swf) {
 	return $str;
 }
 
-if($swf) {
-	//die($header.template($swf).$footer);
-	$swfURL = split(".swf", $swf);	
-	die($header.template($swfURL[0].'.swf').$footer);
-}
+if($swf) die($header.template($swf).$footer);
 if($html) die ($header."Loading Test: $html ...<meta HTTP-EQUIV='Refresh' CONTENT='1;URL=$html'>.$footer");
 echo ($header.indexTests().$footer);
 ?>

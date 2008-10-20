@@ -4,7 +4,7 @@
 <META http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <link rel="stylesheet" href="../../style.css" type="text/css" media="screen">
 <link rel="stylesheet" href="../../print.css" type="text/css" media="print">
-<meta content="InteractiveSprite,sekati.display.InteractiveSprite,click,offStage,onStage,out,over,press,release,releaseOutside" name="keywords">
+<meta content="InteractiveSprite,sekati.display.InteractiveSprite,click,offStage,onStage,press,release,rollOut,rollOver" name="keywords">
 <title>sekati.display.InteractiveSprite</title>
 </head>
 <body>
@@ -47,30 +47,23 @@ if (!isEclipse() || window.name != ECLIPSE_FRAME_NAME) {titleBar_setSubTitle("Cl
 <br>
 <hr>
 </div>
-<a name="propertySummary"></a>
+<a name="propertySummary"></a><a name="protectedPropertySummary"></a>
 <div class="summarySection">
-<div class="summaryTableTitle">Public Properties</div>
+<div class="summaryTableTitle">Protected Properties</div>
 <div class="showHideLinks">
-<div class="hideInheritedProperty" id="hideInheritedProperty">
-<a onclick="javascript:setInheritedVisible(false,'Property');" href="#propertySummary" class="showHideLink"><img src="../../images/expanded.gif" class="showHideLinkImage"> Hide Inherited Public Properties</a>
+<div class="hideInheritedProtectedProperty" id="hideInheritedProtectedProperty">
+<a onclick="javascript:setInheritedVisible(false,'ProtectedProperty');" href="#protectedPropertySummary" class="showHideLink"><img src="../../images/expanded.gif" class="showHideLinkImage"> Hide Inherited Protected Properties</a>
 </div>
-<div class="showInheritedProperty" id="showInheritedProperty">
-<a onclick="javascript:setInheritedVisible(true,'Property');" href="#propertySummary" class="showHideLink"><img src="../../images/collapsed.gif" class="showHideLinkImage"> Show Inherited Public Properties</a>
+<div class="showInheritedProtectedProperty" id="showInheritedProtectedProperty">
+<a onclick="javascript:setInheritedVisible(true,'ProtectedProperty');" href="#protectedPropertySummary" class="showHideLink"><img src="../../images/collapsed.gif" class="showHideLinkImage"> Show Inherited Protected Properties</a>
 </div>
 </div>
-<table id="summaryTableProperty" class="summaryTable hideInheritedProperty" cellpadding="3" cellspacing="0">
+<table id="summaryTableProtectedProperty" class="summaryTable hideInheritedProtectedProperty" cellpadding="3" cellspacing="0">
 <tr>
 <th>&nbsp;</th><th colspan="2">Property</th><th class="summaryTableOwnerCol">Defined&nbsp;by</th>
 </tr>
-<tr class="hideInheritedProperty">
-<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img class="inheritedSummaryImage" title="Inherited" alt="Inherited" src="../../images/inheritedSummary.gif"></td><td class="summaryTableSignatureCol"><a class="signatureLink" href="CoreSprite.html#interactiveMode">interactiveMode</a> : Boolean<div class="summaryTableDescription">
-   Specifies the state of the object as an interactive target 
-   via: <code>buttonMode, mouseChildren & tabChildren</code>.</div>
-</td><td class="summaryTableOwnerCol"><a href="CoreSprite.html">CoreSprite</a></td>
-</tr>
-<tr class="hideInheritedProperty">
-<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img class="inheritedSummaryImage" title="Inherited" alt="Inherited" src="../../images/inheritedSummary.gif"></td><td class="summaryTableSignatureCol"><a class="signatureLink" href="CoreSprite.html#scale">scale</a> : Number<div class="summaryTableDescription">
-   The <code>scale</code> value.</div>
+<tr class="hideInheritedProtectedProperty">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img class="inheritedSummaryImage" title="Inherited" alt="Inherited" src="../../images/inheritedSummary.gif"></td><td class="summaryTableSignatureCol"><a class="signatureLink" href="CoreSprite.html#_this">_this</a> : Sprite<div class="summaryTableDescription"></div>
 </td><td class="summaryTableOwnerCol"><a href="CoreSprite.html">CoreSprite</a></td>
 </tr>
 </table>
@@ -160,22 +153,6 @@ if (!isEclipse() || window.name != ECLIPSE_FRAME_NAME) {titleBar_setSubTitle("Cl
 <tr class="">
 <td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
 <div class="summarySignature">
-<a class="signatureLink" href="#out()">out</a>(e:MouseEvent = null):void</div>
-<div class="summaryTableDescription">
-   Stub: mouse out event handler.</div>
-</td><td class="summaryTableOwnerCol">InteractiveSprite</td>
-</tr>
-<tr class="">
-<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
-<div class="summarySignature">
-<a class="signatureLink" href="#over()">over</a>(e:MouseEvent = null):void</div>
-<div class="summaryTableDescription">
-   Stub: mouse over event handler.</div>
-</td><td class="summaryTableOwnerCol">InteractiveSprite</td>
-</tr>
-<tr class="">
-<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
-<div class="summarySignature">
 <a class="signatureLink" href="#press()">press</a>(e:MouseEvent = null):void</div>
 <div class="summaryTableDescription">
    Stub: press event handler.</div>
@@ -192,9 +169,17 @@ if (!isEclipse() || window.name != ECLIPSE_FRAME_NAME) {titleBar_setSubTitle("Cl
 <tr class="">
 <td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
 <div class="summarySignature">
-<a class="signatureLink" href="#releaseOutside()">releaseOutside</a>(e:MouseEvent = null):void</div>
+<a class="signatureLink" href="#rollOut()">rollOut</a>(e:MouseEvent = null):void</div>
 <div class="summaryTableDescription">
-   Stub: release outside event handler.</div>
+   Stub: rollOut event handler.</div>
+</td><td class="summaryTableOwnerCol">InteractiveSprite</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="#rollOver()">rollOver</a>(e:MouseEvent = null):void</div>
+<div class="summaryTableDescription">
+   Stub: rollOver event handler.</div>
 </td><td class="summaryTableOwnerCol">InteractiveSprite</td>
 </tr>
 </table>
@@ -266,38 +251,6 @@ showHideInherited();
 </tr>
 </table>
 </div>
-<a name="out()"></a>
-<table cellspacing="0" cellpadding="0" class="detailHeader">
-<tr>
-<td class="detailHeaderName">out</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td>
-</tr>
-</table>
-<div class="detailBody">
-<code>protected function out(e:MouseEvent = null):void</code><p>
-   Stub: mouse out event handler.
-   </p><span class="label">Parameters</span>
-<table border="0" cellspacing="0" cellpadding="0">
-<tr>
-<td width="20px"></td><td><code><span class="label">e</span>:MouseEvent</code> (default = <code>null</code>)<code></code></td>
-</tr>
-</table>
-</div>
-<a name="over()"></a>
-<table cellspacing="0" cellpadding="0" class="detailHeader">
-<tr>
-<td class="detailHeaderName">over</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td>
-</tr>
-</table>
-<div class="detailBody">
-<code>protected function over(e:MouseEvent = null):void</code><p>
-   Stub: mouse over event handler.
-   </p><span class="label">Parameters</span>
-<table border="0" cellspacing="0" cellpadding="0">
-<tr>
-<td width="20px"></td><td><code><span class="label">e</span>:MouseEvent</code> (default = <code>null</code>)<code></code></td>
-</tr>
-</table>
-</div>
 <a name="press()"></a>
 <table cellspacing="0" cellpadding="0" class="detailHeader">
 <tr>
@@ -330,15 +283,31 @@ showHideInherited();
 </tr>
 </table>
 </div>
-<a name="releaseOutside()"></a>
+<a name="rollOut()"></a>
 <table cellspacing="0" cellpadding="0" class="detailHeader">
 <tr>
-<td class="detailHeaderName">releaseOutside</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td>
+<td class="detailHeaderName">rollOut</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td>
 </tr>
 </table>
 <div class="detailBody">
-<code>protected function releaseOutside(e:MouseEvent = null):void</code><p>
-   Stub: release outside event handler.
+<code>protected function rollOut(e:MouseEvent = null):void</code><p>
+   Stub: rollOut event handler.
+   </p><span class="label">Parameters</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20px"></td><td><code><span class="label">e</span>:MouseEvent</code> (default = <code>null</code>)<code></code></td>
+</tr>
+</table>
+</div>
+<a name="rollOver()"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">rollOver</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>protected function rollOver(e:MouseEvent = null):void</code><p>
+   Stub: rollOver event handler.
    </p><span class="label">Parameters</span>
 <table border="0" cellspacing="0" cellpadding="0">
 <tr>
