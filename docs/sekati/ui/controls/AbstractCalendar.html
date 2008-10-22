@@ -4,7 +4,7 @@
 <META http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <link rel="stylesheet" href="../../../style.css" type="text/css" media="screen">
 <link rel="stylesheet" href="../../../print.css" type="text/css" media="print">
-<meta content="AbstractCalendar,sekati.ui.controls.AbstractCalendar,day,daysOfWeek,millisecondsPerDay,millisecondsPerHour,millisecondsPerMinute,month,monthsOfYear,shortDaysOfWeek,today,year,advanceMonth,getDayName,getDaysInMonth,getFirstDayInMonth,getMonthName,getSurroundingMonth" name="keywords">
+<meta content="AbstractCalendar,sekati.ui.controls.AbstractCalendar,day,month,today,year,advanceMonth,getDayName,getDaysInMonth,getFirstDayInMonth,getMonthName,getSurroundingMonth" name="keywords">
 <title>sekati.ui.controls.AbstractCalendar</title>
 </head>
 <body>
@@ -19,7 +19,7 @@
 <td align="left" class="titleTableTitle">Sekati API Documentation</td><td align="right" class="titleTableTopNav"><a onclick="loadClassListFrame('../../../all-classes.html')" href="../../../package-summary.html">All&nbsp;Packages</a>&nbsp;|&nbsp;<a onclick="loadClassListFrame('../../../all-classes.html')" href="../../../class-summary.html">All&nbsp;Classes</a>&nbsp;|&nbsp;<a onclick="loadClassListFrame('../../../index-list.html')" href="../../../all-index-A.html">Index</a>&nbsp;|&nbsp;<a href="../../../index.html?sekati/ui/controls/AbstractCalendar.html&amp;sekati/ui/controls/class-list.html" id="framesLink1">Frames</a><a onclick="parent.location=document.location" href="" style="display:none" id="noFramesLink1">No&nbsp;Frames</a></td><td rowspan="3" align="right" class="titleTableLogo"><img alt="Adobe Logo" title="Adobe Logo" class="logoImage" src="../../../images/logo.jpg"></td>
 </tr>
 <tr class="titleTableRow2">
-<td align="left" id="subTitle" class="titleTableSubTitle">Class&nbsp;AbstractCalendar</td><td align="right" id="subNav" class="titleTableSubNav"><a href="#propertySummary">Properties</a>&nbsp;| <a href="#methodSummary">Methods</a>&nbsp;| <a href="#constantSummary">Constants</a></td>
+<td align="left" id="subTitle" class="titleTableSubTitle">Class&nbsp;AbstractCalendar</td><td align="right" id="subNav" class="titleTableSubNav"><a href="#propertySummary">Properties</a>&nbsp;| <a href="#methodSummary">Methods</a></td>
 </tr>
 <tr class="titleTableRow3">
 <td colspan="2">&nbsp;</td>
@@ -27,7 +27,7 @@
 </table>
 <script type="text/javascript" language="javascript">
 <!--
-if (!isEclipse() || window.name != ECLIPSE_FRAME_NAME) {titleBar_setSubTitle("Class AbstractCalendar"); titleBar_setSubNav(true,true,false,false,false,false,true,false,false,false,false,false,false,false);}
+if (!isEclipse() || window.name != ECLIPSE_FRAME_NAME) {titleBar_setSubTitle("Class AbstractCalendar"); titleBar_setSubNav(false,true,false,false,false,false,true,false,false,false,false,false,false,false);}
 --></script>
 <div class="MainContent">
 <table cellspacing="0" cellpadding="0" class="classHeaderTable">
@@ -42,7 +42,6 @@ if (!isEclipse() || window.name != ECLIPSE_FRAME_NAME) {titleBar_setSubTitle("Cl
 </tr>
 </table>
 <p></p>
-  XXX - WARNING: EXPERIMENTAL: DO NOT IMPLEMENT
   AbstractCalendar provides some basic abstracted calendar logic for UI classes such as 
   days of each month (factoring leap years), first day of week in month, surrounding months, etc. 
   <p></p>
@@ -68,10 +67,6 @@ if (!isEclipse() || window.name != ECLIPSE_FRAME_NAME) {titleBar_setSubTitle("Cl
 <td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a class="signatureLink" href="#day">day</a> : int<div class="summaryTableDescription"></div>
 </td><td class="summaryTableOwnerCol">AbstractCalendar</td>
 </tr>
-<tr class="">
-<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a class="signatureLink" href="#daysOfWeek">daysOfWeek</a> : Array<div class="summaryTableDescription">[static]</div>
-</td><td class="summaryTableOwnerCol">AbstractCalendar</td>
-</tr>
 <tr class="hideInheritedProperty">
 <td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img class="inheritedSummaryImage" title="Inherited" alt="Inherited" src="../../../images/inheritedSummary.gif"></td><td class="summaryTableSignatureCol"><a class="signatureLink" href="../../display/CoreSprite.html#interactiveMode">interactiveMode</a> : Boolean<div class="summaryTableDescription">
    Specifies the state of the object as an interactive target 
@@ -82,18 +77,10 @@ if (!isEclipse() || window.name != ECLIPSE_FRAME_NAME) {titleBar_setSubTitle("Cl
 <td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a class="signatureLink" href="#month">month</a> : int<div class="summaryTableDescription"></div>
 </td><td class="summaryTableOwnerCol">AbstractCalendar</td>
 </tr>
-<tr class="">
-<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a class="signatureLink" href="#monthsOfYear">monthsOfYear</a> : Array<div class="summaryTableDescription">[static]</div>
-</td><td class="summaryTableOwnerCol">AbstractCalendar</td>
-</tr>
 <tr class="hideInheritedProperty">
 <td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img class="inheritedSummaryImage" title="Inherited" alt="Inherited" src="../../../images/inheritedSummary.gif"></td><td class="summaryTableSignatureCol"><a class="signatureLink" href="../../display/CoreSprite.html#scale">scale</a> : Number<div class="summaryTableDescription">
    The <code>scale</code> value.</div>
 </td><td class="summaryTableOwnerCol"><a href="../../display/CoreSprite.html">CoreSprite</a></td>
-</tr>
-<tr class="">
-<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a class="signatureLink" href="#shortDaysOfWeek">shortDaysOfWeek</a> : Array<div class="summaryTableDescription">[static]</div>
-</td><td class="summaryTableOwnerCol">AbstractCalendar</td>
 </tr>
 <tr class="">
 <td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a class="signatureLink" href="#today">today</a> : Date<div class="summaryTableDescription"></div>
@@ -237,27 +224,6 @@ if (!isEclipse() || window.name != ECLIPSE_FRAME_NAME) {titleBar_setSubTitle("Cl
 </tr>
 </table>
 </div>
-<a name="constantSummary"></a>
-<div class="summarySection">
-<div class="summaryTableTitle">Public Constants</div>
-<table id="summaryTableConstant" class="summaryTable " cellpadding="3" cellspacing="0">
-<tr>
-<th>&nbsp;</th><th colspan="2">Constant</th><th class="summaryTableOwnerCol">Defined&nbsp;by</th>
-</tr>
-<tr class="">
-<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a class="signatureLink" href="#millisecondsPerDay">millisecondsPerDay</a> : int = 8.64E7<div class="summaryTableDescription">[static]</div>
-</td><td class="summaryTableOwnerCol">AbstractCalendar</td>
-</tr>
-<tr class="">
-<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a class="signatureLink" href="#millisecondsPerHour">millisecondsPerHour</a> : int = 3600000.0<div class="summaryTableDescription">[static]</div>
-</td><td class="summaryTableOwnerCol">AbstractCalendar</td>
-</tr>
-<tr class="">
-<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a class="signatureLink" href="#millisecondsPerMinute">millisecondsPerMinute</a> : int = 60000.0<div class="summaryTableDescription">[static]</div>
-</td><td class="summaryTableOwnerCol">AbstractCalendar</td>
-</tr>
-</table>
-</div>
 <script type="text/javascript" language="javascript">
 <!--
 showHideInherited();
@@ -274,15 +240,6 @@ showHideInherited();
 <div class="detailBody">
 <code>public var day:int</code>
 </div>
-<a name="daysOfWeek"></a>
-<table cellspacing="0" cellpadding="0" class="detailHeader">
-<tr>
-<td class="detailHeaderName">daysOfWeek</td><td class="detailHeaderType">property</td><td class="detailHeaderRule">&nbsp;</td>
-</tr>
-</table>
-<div class="detailBody">
-<code>public static var daysOfWeek:Array</code>
-</div>
 <a name="month"></a>
 <table cellspacing="0" cellpadding="0" class="detailHeader">
 <tr>
@@ -291,24 +248,6 @@ showHideInherited();
 </table>
 <div class="detailBody">
 <code>public var month:int</code>
-</div>
-<a name="monthsOfYear"></a>
-<table cellspacing="0" cellpadding="0" class="detailHeader">
-<tr>
-<td class="detailHeaderName">monthsOfYear</td><td class="detailHeaderType">property</td><td class="detailHeaderRule">&nbsp;</td>
-</tr>
-</table>
-<div class="detailBody">
-<code>public static var monthsOfYear:Array</code>
-</div>
-<a name="shortDaysOfWeek"></a>
-<table cellspacing="0" cellpadding="0" class="detailHeader">
-<tr>
-<td class="detailHeaderName">shortDaysOfWeek</td><td class="detailHeaderType">property</td><td class="detailHeaderRule">&nbsp;</td>
-</tr>
-</table>
-<div class="detailBody">
-<code>public static var shortDaysOfWeek:Array</code>
 </div>
 <a name="today"></a>
 <table cellspacing="0" cellpadding="0" class="detailHeader">
@@ -502,35 +441,6 @@ showHideInherited();
 <td width="20"></td><td><code>Date</code></td>
 </tr>
 </table>
-</div>
-<a name="constantDetail"></a>
-<div class="detailSectionHeader">Constant detail</div>
-<a name="millisecondsPerDay"></a>
-<table cellspacing="0" cellpadding="0" class="detailHeader">
-<tr>
-<td class="detailHeaderName">millisecondsPerDay</td><td class="detailHeaderType">constant</td>
-</tr>
-</table>
-<div class="detailBody">
-<code>public static const millisecondsPerDay:int = 8.64E7</code>
-</div>
-<a name="millisecondsPerHour"></a>
-<table cellspacing="0" cellpadding="0" class="detailHeader">
-<tr>
-<td class="detailHeaderName">millisecondsPerHour</td><td class="detailHeaderType">constant</td><td class="detailHeaderRule">&nbsp;</td>
-</tr>
-</table>
-<div class="detailBody">
-<code>public static const millisecondsPerHour:int = 3600000.0</code>
-</div>
-<a name="millisecondsPerMinute"></a>
-<table cellspacing="0" cellpadding="0" class="detailHeader">
-<tr>
-<td class="detailHeaderName">millisecondsPerMinute</td><td class="detailHeaderType">constant</td><td class="detailHeaderRule">&nbsp;</td>
-</tr>
-</table>
-<div class="detailBody">
-<code>public static const millisecondsPerMinute:int = 60000.0</code>
 </div>
 <br>
 <br>
