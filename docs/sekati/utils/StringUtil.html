@@ -135,7 +135,7 @@ if (!isEclipse() || window.name != ECLIPSE_FRAME_NAME) {titleBar_setSubTitle("Cl
 <tr class="">
 <td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
 <div class="summarySignature">
-<a class="signatureLink" href="#ltrim()">ltrim</a>(str:String):String</div>
+<a class="signatureLink" href="#ltrim()">ltrim</a>(str:String = null):String</div>
 <div class="summaryTableDescription">[static]
    Removes whitespace from the front of the specified string.</div>
 </td><td class="summaryTableOwnerCol">StringUtil</td>
@@ -216,7 +216,7 @@ if (!isEclipse() || window.name != ECLIPSE_FRAME_NAME) {titleBar_setSubTitle("Cl
 <tr class="">
 <td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
 <div class="summarySignature">
-<a class="signatureLink" href="#rtrim()">rtrim</a>(str:String):String</div>
+<a class="signatureLink" href="#rtrim()">rtrim</a>(str:String = null):String</div>
 <div class="summaryTableDescription">[static]
    Removes whitespace from the end of a string.</div>
 </td><td class="summaryTableOwnerCol">StringUtil</td>
@@ -296,7 +296,7 @@ if (!isEclipse() || window.name != ECLIPSE_FRAME_NAME) {titleBar_setSubTitle("Cl
 <tr class="">
 <td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
 <div class="summarySignature">
-<a class="signatureLink" href="#trim()">trim</a>(str:String):String</div>
+<a class="signatureLink" href="#trim()">trim</a>(str:String = null):String</div>
 <div class="summaryTableDescription">[static]
    Remove leading & trailing white space.</div>
 </td><td class="summaryTableOwnerCol">StringUtil</td>
@@ -304,7 +304,7 @@ if (!isEclipse() || window.name != ECLIPSE_FRAME_NAME) {titleBar_setSubTitle("Cl
 <tr class="">
 <td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
 <div class="summarySignature">
-<a class="signatureLink" href="#trimCamel()">trimCamel</a>(str:String):String</div>
+<a class="signatureLink" href="#trimCamel()">trimCamel</a>(str:String = null):String</div>
 <div class="summaryTableDescription">[static]
    Trim spaces and camel notate String.</div>
 </td><td class="summaryTableOwnerCol">StringUtil</td>
@@ -312,7 +312,7 @@ if (!isEclipse() || window.name != ECLIPSE_FRAME_NAME) {titleBar_setSubTitle("Cl
 <tr class="">
 <td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
 <div class="summarySignature">
-<a class="signatureLink" href="#xtrim()">xtrim</a>(str:String):String</div>
+<a class="signatureLink" href="#xtrim()">xtrim</a>(str:String = null):String</div>
 <div class="summaryTableDescription">[static]
    Extreme Trim: remove whitespace, line feeds, carrige returns from string
    </div>
@@ -608,12 +608,12 @@ showHideInherited();
 </tr>
 </table>
 <div class="detailBody">
-<code>public static function ltrim(str:String):String</code><p>
+<code>public static function ltrim(str:String = null):String</code><p>
    Removes whitespace from the front of the specified string.
    </p><span class="label">Parameters</span>
 <table border="0" cellspacing="0" cellpadding="0">
 <tr>
-<td width="20px"></td><td><code><span class="label">str</span>:String</code></td>
+<td width="20px"></td><td><code><span class="label">str</span>:String</code> (default = <code>null</code>)<code></code></td>
 </tr>
 </table>
 <p></p>
@@ -858,12 +858,12 @@ showHideInherited();
 </tr>
 </table>
 <div class="detailBody">
-<code>public static function rtrim(str:String):String</code><p>
+<code>public static function rtrim(str:String = null):String</code><p>
    Removes whitespace from the end of a string.
    </p><span class="label">Parameters</span>
 <table border="0" cellspacing="0" cellpadding="0">
 <tr>
-<td width="20px"></td><td><code><span class="label">str</span>:String</code></td>
+<td width="20px"></td><td><code><span class="label">str</span>:String</code> (default = <code>null</code>)<code></code></td>
 </tr>
 </table>
 <p></p>
@@ -1106,12 +1106,12 @@ showHideInherited();
 </tr>
 </table>
 <div class="detailBody">
-<code>public static function trim(str:String):String</code><p>
+<code>public static function trim(str:String = null):String</code><p>
    Remove leading & trailing white space.
    </p><span class="label">Parameters</span>
 <table border="0" cellspacing="0" cellpadding="0">
 <tr>
-<td width="20px"></td><td><code><span class="label">str</span>:String</code></td>
+<td width="20px"></td><td><code><span class="label">str</span>:String</code> (default = <code>null</code>)<code></code></td>
 </tr>
 </table>
 <p></p>
@@ -1129,12 +1129,12 @@ showHideInherited();
 </tr>
 </table>
 <div class="detailBody">
-<code>public static function trimCamel(str:String):String</code><p>
+<code>public static function trimCamel(str:String = null):String</code><p>
    Trim spaces and camel notate String.
    </p><span class="label">Parameters</span>
 <table border="0" cellspacing="0" cellpadding="0">
 <tr>
-<td width="20px"></td><td><code><span class="label">str</span>:String</code></td>
+<td width="20px"></td><td><code><span class="label">str</span>:String</code> (default = <code>null</code>)<code></code></td>
 </tr>
 </table>
 <p></p>
@@ -1152,12 +1152,12 @@ showHideInherited();
 </tr>
 </table>
 <div class="detailBody">
-<code>public static function xtrim(str:String):String</code><p>
+<code>public static function xtrim(str:String = null):String</code><p>
    Extreme Trim: remove whitespace, line feeds, carrige returns from string
    </p><span class="label">Parameters</span>
 <table border="0" cellspacing="0" cellpadding="0">
 <tr>
-<td width="20px"></td><td><code><span class="label">str</span>:String</code></td>
+<td width="20px"></td><td><code><span class="label">str</span>:String</code> (default = <code>null</code>)<code></code></td>
 </tr>
 </table>
 <p></p>
