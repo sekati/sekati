@@ -118,14 +118,14 @@ showHideInherited();
    </p><span class="label">Parameters</span>
 <table border="0" cellspacing="0" cellpadding="0">
 <tr>
-<td width="20px"></td><td><code><span class="label">input</span>:String</code> &mdash; (String) string to decrypt
+<td width="20px"></td><td><code><span class="label">input</span>:String</code> &mdash; string to decrypt
    </td>
 </tr>
 <tr>
 <td class="paramSpacer">&nbsp;</td>
 </tr>
 <tr>
-<td width="20px"></td><td><code><span class="label">password</span>:String</code> &mdash; (String) decryption key
+<td width="20px"></td><td><code><span class="label">password</span>:String</code> &mdash; decryption key
    </td>
 </tr>
 </table>
@@ -133,13 +133,14 @@ showHideInherited();
 <span class="label">Returns</span>
 <table border="0" cellspacing="0" cellpadding="0">
 <tr>
-<td width="20"></td><td><code>String</code> &mdash; String
-   </td>
+<td width="20"></td><td><code>String</code></td>
 </tr>
 </table>
 <br>
 <span class="label">Example</span>
-<br>var dec:String = XOR.decrypt (enc,"tooManySecrets");
+<br><div class='listing'><pre>
+   var dec:String = XOR.decrypt (enc,"tooManySecrets");
+   </pre></div>
    <p></p>
 </div>
 <a name="encrypt()"></a>
@@ -154,14 +155,14 @@ showHideInherited();
    </p><span class="label">Parameters</span>
 <table border="0" cellspacing="0" cellpadding="0">
 <tr>
-<td width="20px"></td><td><code><span class="label">input</span>:String</code> &mdash; (String) string to encrypt
+<td width="20px"></td><td><code><span class="label">input</span>:String</code> &mdash; string to encrypt
    </td>
 </tr>
 <tr>
 <td class="paramSpacer">&nbsp;</td>
 </tr>
 <tr>
-<td width="20px"></td><td><code><span class="label">password</span>:String</code> &mdash; (String) encryption key
+<td width="20px"></td><td><code><span class="label">password</span>:String</code> &mdash; encryption key
    </td>
 </tr>
 </table>
@@ -169,13 +170,14 @@ showHideInherited();
 <span class="label">Returns</span>
 <table border="0" cellspacing="0" cellpadding="0">
 <tr>
-<td width="20"></td><td><code>String</code> &mdash; String 
-   </td>
+<td width="20"></td><td><code>String</code></td>
 </tr>
 </table>
 <br>
 <span class="label">Example</span>
-<br>var enc:String = XOR.encrypt ("hello world","tooManySecrets");
+<br><div class='listing'><pre>
+   var enc:String = XOR.encrypt ("hello world","tooManySecrets");
+   </pre></div>
    <p></p>
 </div>
 <br>
