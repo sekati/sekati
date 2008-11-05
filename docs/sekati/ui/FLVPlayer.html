@@ -4,7 +4,7 @@
 <META http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <link rel="stylesheet" href="../../style.css" type="text/css" media="screen">
 <link rel="stylesheet" href="../../print.css" type="text/css" media="print">
-<meta content="FLVPlayer,sekati.ui.FLVPlayer,_buffBar,_currentCuePoint,_guttBar,_isDrag,_isKeyEnabled,_isSeeking,_keyListener,_movie,_playBtn,_progBar,_video,_volBtn,_wasPlaying,buffBar_onMove,buffBar_onPress,buffBar_onRelease,destroy,init,movie_onProgress,movie_onStatus,pause,pauseMemory,playBtn_Press,remove,reset,resume,resumeMemory,seek_ui,setVolumeControl,volBtn_onMove,volBtn_onPress,volBtn_onRelease" name="keywords">
+<meta content="FLVPlayer,sekati.ui.FLVPlayer,_buffBar,_currentCuePoint,_guttBar,_isDrag,_isKeyEnabled,_isSeeking,_keyListener,_movie,_playBtn,_progBar,_video,_volBtn,_wasPlaying,bufferPaused,currentCuePoint,buffBar_onMove,buffBar_onPress,buffBar_onRelease,destroy,init,movie_onProgress,movie_onStatus,pause,pauseMemory,playBtn_Press,remove,reset,resume,resumeMemory,seek_ui,setVolumeControl,volBtn_onMove,volBtn_onPress,volBtn_onRelease" name="keywords">
 <title>sekati.ui.FLVPlayer</title>
 </head>
 <body>
@@ -68,9 +68,15 @@ if (!isEclipse() || window.name != ECLIPSE_FRAME_NAME) {titleBar_setSubTitle("Cl
 <a onclick="javascript:setInheritedVisible(true,'Property');" href="#propertySummary" class="showHideLink"><img src="../../images/collapsed.gif" class="showHideLinkImage"> Show Inherited Public Properties</a>
 </div>
 </div>
-<table id="summaryTableProperty" class="summaryTable hideInheritedProperty" cellpadding="3" cellspacing="0">
+<table id="summaryTableProperty" class="summaryTable " cellpadding="3" cellspacing="0">
 <tr>
 <th>&nbsp;</th><th colspan="2">Property</th><th class="summaryTableOwnerCol">Defined&nbsp;by</th>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a class="signatureLink" href="#currentCuePoint">currentCuePoint</a> : Object<div class="summaryTableDescription">
+   Returns reference to current cue point data object
+   </div>
+</td><td class="summaryTableOwnerCol">FLVPlayer</td>
 </tr>
 <tr class="hideInheritedProperty">
 <td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img class="inheritedSummaryImage" title="Inherited" alt="Inherited" src="../../images/inheritedSummary.gif"></td><td class="summaryTableSignatureCol"><a class="signatureLink" href="../display/CoreSprite.html#interactiveMode">interactiveMode</a> : Boolean<div class="summaryTableDescription">
@@ -94,6 +100,10 @@ if (!isEclipse() || window.name != ECLIPSE_FRAME_NAME) {titleBar_setSubTitle("Cl
 </tr>
 <tr class="">
 <td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a class="signatureLink" href="#_buffBar">_buffBar</a> : MovieClip<div class="summaryTableDescription"></div>
+</td><td class="summaryTableOwnerCol">FLVPlayer</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a class="signatureLink" href="#bufferPaused">bufferPaused</a> : Boolean<div class="summaryTableDescription"></div>
 </td><td class="summaryTableOwnerCol">FLVPlayer</td>
 </tr>
 <tr class="">
@@ -324,7 +334,7 @@ if (!isEclipse() || window.name != ECLIPSE_FRAME_NAME) {titleBar_setSubTitle("Cl
 <tr class="">
 <td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
 <div class="summarySignature">
-<a class="signatureLink" href="#playBtn_Press()">playBtn_Press</a>(e:MouseEvent):void</div>
+<a class="signatureLink" href="#playBtn_Press()">playBtn_Press</a>(e:MouseEvent = null):void</div>
 <div class="summaryTableDescription">
    Toggle the framed <code>_playBtn</code> icon and pause/resume playback.</div>
 </td><td class="summaryTableOwnerCol">FLVPlayer</td>
@@ -396,6 +406,15 @@ showHideInherited();
 <div class="detailBody">
 <code>protected var _buffBar:MovieClip</code>
 </div>
+<a name="bufferPaused"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">bufferPaused</td><td class="detailHeaderType">property</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>protected var bufferPaused:Boolean</code>
+</div>
 <a name="_currentCuePoint"></a>
 <table cellspacing="0" cellpadding="0" class="detailHeader">
 <tr>
@@ -404,6 +423,22 @@ showHideInherited();
 </table>
 <div class="detailBody">
 <code>protected var _currentCuePoint:Object</code>
+</div>
+<a name="currentCuePoint"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">currentCuePoint</td><td class="detailHeaderType">property</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>currentCuePoint:Object</code>&nbsp;&nbsp;[read-write]<p>
+   Returns reference to current cue point data object
+   </p><span class="label">Implementation</span>
+<br>
+<code>&nbsp;&nbsp;&nbsp;&nbsp;public function get currentCuePoint():Object</code>
+<br>
+<code>&nbsp;&nbsp;&nbsp;&nbsp;public function set currentCuePoint(value:Object):void</code>
+<br>
 </div>
 <a name="_guttBar"></a>
 <table cellspacing="0" cellpadding="0" class="detailHeader">
@@ -676,12 +711,12 @@ showHideInherited();
 </tr>
 </table>
 <div class="detailBody">
-<code>protected function playBtn_Press(e:MouseEvent):void</code><p>
+<code>protected function playBtn_Press(e:MouseEvent = null):void</code><p>
    Toggle the framed <code>_playBtn</code> icon and pause/resume playback.
    </p><span class="label">Parameters</span>
 <table border="0" cellspacing="0" cellpadding="0">
 <tr>
-<td width="20px"></td><td><code><span class="label">e</span>:MouseEvent</code></td>
+<td width="20px"></td><td><code><span class="label">e</span>:MouseEvent</code> (default = <code>null</code>)<code></code></td>
 </tr>
 </table>
 </div>
