@@ -87,32 +87,32 @@ if (!isEclipse() || window.name != ECLIPSE_FRAME_NAME) {titleBar_setSubTitle("Cl
 <th>&nbsp;</th><th colspan="2">Constant</th><th class="summaryTableOwnerCol">Defined&nbsp;by</th>
 </tr>
 <tr class="">
-<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a class="signatureLink" href="#APP_CONFIG">APP_CONFIG</a> : String = "onLoadAppConfiguration"<div class="summaryTableDescription">[static]
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a class="signatureLink" href="#APP_CONFIG">APP_CONFIG</a> : String = "appConfigLoad"<div class="summaryTableDescription">[static]
    </div>
 </td><td class="summaryTableOwnerCol">BootstrapEvent</td>
 </tr>
 <tr class="">
-<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a class="signatureLink" href="#APP_DATA">APP_DATA</a> : String = "onLoadAppData"<div class="summaryTableDescription">[static]
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a class="signatureLink" href="#APP_DATA">APP_DATA</a> : String = "appDataLoad"<div class="summaryTableDescription">[static]
    </div>
 </td><td class="summaryTableOwnerCol">BootstrapEvent</td>
 </tr>
 <tr class="">
-<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a class="signatureLink" href="#APP_FAIL">APP_FAIL</a> : String = "onAppFailure"<div class="summaryTableDescription">[static]
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a class="signatureLink" href="#APP_FAIL">APP_FAIL</a> : String = "appFailure"<div class="summaryTableDescription">[static]
    </div>
 </td><td class="summaryTableOwnerCol">BootstrapEvent</td>
 </tr>
 <tr class="">
-<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a class="signatureLink" href="#APP_INIT">APP_INIT</a> : String = "onAppInit"<div class="summaryTableDescription">[static]
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a class="signatureLink" href="#APP_INIT">APP_INIT</a> : String = "appInit"<div class="summaryTableDescription">[static]
    </div>
 </td><td class="summaryTableOwnerCol">BootstrapEvent</td>
 </tr>
 <tr class="">
-<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a class="signatureLink" href="#APP_LOAD">APP_LOAD</a> : String = "onAppLoad"<div class="summaryTableDescription">[static]
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a class="signatureLink" href="#APP_LOAD">APP_LOAD</a> : String = "appLoad"<div class="summaryTableDescription">[static]
    </div>
 </td><td class="summaryTableOwnerCol">BootstrapEvent</td>
 </tr>
 <tr class="">
-<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a class="signatureLink" href="#APP_STYLE">APP_STYLE</a> : String = "onLoadAppStyles"<div class="summaryTableDescription">[static]
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a class="signatureLink" href="#APP_STYLE">APP_STYLE</a> : String = "appStyleLoad"<div class="summaryTableDescription">[static]
    </div>
 </td><td class="summaryTableOwnerCol">BootstrapEvent</td>
 </tr>
@@ -180,7 +180,7 @@ showHideInherited();
 </tr>
 </table>
 <div class="detailBody">
-<code>public static const APP_CONFIG:String = "onLoadAppConfiguration"</code><p>
+<code>public static const APP_CONFIG:String = "appConfigLoad"</code><p>
    </p></div>
 <a name="APP_DATA"></a>
 <table cellspacing="0" cellpadding="0" class="detailHeader">
@@ -189,7 +189,7 @@ showHideInherited();
 </tr>
 </table>
 <div class="detailBody">
-<code>public static const APP_DATA:String = "onLoadAppData"</code><p>
+<code>public static const APP_DATA:String = "appDataLoad"</code><p>
    </p></div>
 <a name="APP_FAIL"></a>
 <table cellspacing="0" cellpadding="0" class="detailHeader">
@@ -198,7 +198,7 @@ showHideInherited();
 </tr>
 </table>
 <div class="detailBody">
-<code>public static const APP_FAIL:String = "onAppFailure"</code><p>
+<code>public static const APP_FAIL:String = "appFailure"</code><p>
    </p></div>
 <a name="APP_INIT"></a>
 <table cellspacing="0" cellpadding="0" class="detailHeader">
@@ -207,7 +207,7 @@ showHideInherited();
 </tr>
 </table>
 <div class="detailBody">
-<code>public static const APP_INIT:String = "onAppInit"</code><p>
+<code>public static const APP_INIT:String = "appInit"</code><p>
    </p></div>
 <a name="APP_LOAD"></a>
 <table cellspacing="0" cellpadding="0" class="detailHeader">
@@ -216,7 +216,7 @@ showHideInherited();
 </tr>
 </table>
 <div class="detailBody">
-<code>public static const APP_LOAD:String = "onAppLoad"</code><p>
+<code>public static const APP_LOAD:String = "appLoad"</code><p>
    </p></div>
 <a name="APP_STYLE"></a>
 <table cellspacing="0" cellpadding="0" class="detailHeader">
@@ -225,7 +225,7 @@ showHideInherited();
 </tr>
 </table>
 <div class="detailBody">
-<code>public static const APP_STYLE:String = "onLoadAppStyles"</code><p>
+<code>public static const APP_STYLE:String = "appStyleLoad"</code><p>
    </p></div>
 <br>
 <br>

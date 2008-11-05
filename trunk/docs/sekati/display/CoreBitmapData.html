@@ -4,22 +4,22 @@
 <META http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <link rel="stylesheet" href="../../style.css" type="text/css" media="screen">
 <link rel="stylesheet" href="../../print.css" type="text/css" media="print">
-<meta content="BitmapDataCapture,sekati.display.BitmapDataCapture,MAX_SIZE" name="keywords">
-<title>sekati.display.BitmapDataCapture</title>
+<meta content="CoreBitmapData,sekati.display.CoreBitmapData,MAX_SIZE" name="keywords">
+<title>sekati.display.CoreBitmapData</title>
 </head>
 <body>
 <script type="text/javascript" language="javascript" src="../../asdoc.js"></script><script type="text/javascript" language="javascript" src="../../cookies.js"></script><script type="text/javascript" language="javascript">
 <!--
-				asdocTitle = 'BitmapDataCapture - Sekati API Documentation';
+				asdocTitle = 'CoreBitmapData - Sekati API Documentation';
 				var baseRef = '../../';
 				window.onload = configPage;
 			--></script>
 <table style="display:none" id="titleTable" cellspacing="0" cellpadding="0" class="titleTable">
 <tr>
-<td align="left" class="titleTableTitle">Sekati API Documentation</td><td align="right" class="titleTableTopNav"><a onclick="loadClassListFrame('../../all-classes.html')" href="../../package-summary.html">All&nbsp;Packages</a>&nbsp;|&nbsp;<a onclick="loadClassListFrame('../../all-classes.html')" href="../../class-summary.html">All&nbsp;Classes</a>&nbsp;|&nbsp;<a onclick="loadClassListFrame('../../index-list.html')" href="../../all-index-A.html">Index</a>&nbsp;|&nbsp;<a href="../../index.html?sekati/display/BitmapDataCapture.html&amp;sekati/display/class-list.html" id="framesLink1">Frames</a><a onclick="parent.location=document.location" href="" style="display:none" id="noFramesLink1">No&nbsp;Frames</a></td><td rowspan="3" align="right" class="titleTableLogo"><img alt="Adobe Logo" title="Adobe Logo" class="logoImage" src="../../images/logo.jpg"></td>
+<td align="left" class="titleTableTitle">Sekati API Documentation</td><td align="right" class="titleTableTopNav"><a onclick="loadClassListFrame('../../all-classes.html')" href="../../package-summary.html">All&nbsp;Packages</a>&nbsp;|&nbsp;<a onclick="loadClassListFrame('../../all-classes.html')" href="../../class-summary.html">All&nbsp;Classes</a>&nbsp;|&nbsp;<a onclick="loadClassListFrame('../../index-list.html')" href="../../all-index-A.html">Index</a>&nbsp;|&nbsp;<a href="../../index.html?sekati/display/CoreBitmapData.html&amp;sekati/display/class-list.html" id="framesLink1">Frames</a><a onclick="parent.location=document.location" href="" style="display:none" id="noFramesLink1">No&nbsp;Frames</a></td><td rowspan="3" align="right" class="titleTableLogo"><img alt="Adobe Logo" title="Adobe Logo" class="logoImage" src="../../images/logo.jpg"></td>
 </tr>
 <tr class="titleTableRow2">
-<td align="left" id="subTitle" class="titleTableSubTitle">Class&nbsp;BitmapDataCapture</td><td align="right" id="subNav" class="titleTableSubNav"><a href="#methodSummary">Methods</a>&nbsp;| <a href="#constantSummary">Constants</a></td>
+<td align="left" id="subTitle" class="titleTableSubTitle">Class&nbsp;CoreBitmapData</td><td align="right" id="subNav" class="titleTableSubNav"><a href="#methodSummary">Methods</a>&nbsp;| <a href="#constantSummary">Constants</a></td>
 </tr>
 <tr class="titleTableRow3">
 <td colspan="2">&nbsp;</td>
@@ -27,7 +27,7 @@
 </table>
 <script type="text/javascript" language="javascript">
 <!--
-if (!isEclipse() || window.name != ECLIPSE_FRAME_NAME) {titleBar_setSubTitle("Class BitmapDataCapture"); titleBar_setSubNav(true,false,false,false,false,false,true,false,false,false,false,false,false,false);}
+if (!isEclipse() || window.name != ECLIPSE_FRAME_NAME) {titleBar_setSubTitle("Class CoreBitmapData"); titleBar_setSubNav(true,false,false,false,false,false,true,false,false,false,false,false,false,false);}
 --></script>
 <div class="MainContent">
 <table cellspacing="0" cellpadding="0" class="classHeaderTable">
@@ -35,14 +35,15 @@ if (!isEclipse() || window.name != ECLIPSE_FRAME_NAME) {titleBar_setSubTitle("Cl
 <td class="classHeaderTableLabel">Package</td><td><a onclick="javascript:loadClassListFrame('class-list.html')" href="package-detail.html">sekati.display</a></td>
 </tr>
 <tr>
-<td class="classHeaderTableLabel">Class</td><td class="classSignature">public class BitmapDataCapture</td>
+<td class="classHeaderTableLabel">Class</td><td class="classSignature">public class CoreBitmapData</td>
 </tr>
 <tr>
-<td class="classHeaderTableLabel">Inheritance</td><td class="inheritanceList">BitmapDataCapture <img class="inheritArrow" alt="Inheritance" title="Inheritance" src="../../images/inherit-arrow.gif"> flash.display.BitmapData</td>
+<td class="classHeaderTableLabel">Inheritance</td><td class="inheritanceList">CoreBitmapData <img class="inheritArrow" alt="Inheritance" title="Inheritance" src="../../images/inherit-arrow.gif"> flash.display.BitmapData</td>
 </tr>
 </table>
 <p></p>
-  BitmapDataCapture provides a common interface for the capturing and BitmapData'ing of a DisplayObject.
+  <code>CoreBitmapData</code> provides a common interface for capturing, 
+  scaling & cropping <code>BitmapData</code> from a <code>DisplayObject</code>.
   <p></p>
 <br>
 <hr>
@@ -57,11 +58,11 @@ if (!isEclipse() || window.name != ECLIPSE_FRAME_NAME) {titleBar_setSubTitle("Cl
 <tr class="">
 <td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
 <div class="summarySignature">
-<a class="signatureLink" href="#BitmapDataCapture()">BitmapDataCapture</a>(src:DisplayObject, scale:Number = 1, transparent:Boolean = false, fillColor:uint = 0xFFFFFFFF)</div>
+<a class="signatureLink" href="#CoreBitmapData()">CoreBitmapData</a>(src:DisplayObject, x:Number = 0, y:Number = 0, width:Number, height:Number, scale:Number = 1, transparent:Boolean = false, fillColor:uint = 0xFFFFFFFF)</div>
 <div class="summaryTableDescription">
-   BitmapDataCapture Constructor
+   CoreBitmapData Constructor
    </div>
-</td><td class="summaryTableOwnerCol">BitmapDataCapture</td>
+</td><td class="summaryTableOwnerCol">CoreBitmapData</td>
 </tr>
 </table>
 </div>
@@ -74,8 +75,9 @@ if (!isEclipse() || window.name != ECLIPSE_FRAME_NAME) {titleBar_setSubTitle("Cl
 </tr>
 <tr class="">
 <td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a class="signatureLink" href="#MAX_SIZE">MAX_SIZE</a> : int = 2880<div class="summaryTableDescription">[static]
-   Defines the maximum dimension of a BitmapData object in the Flash Player.</div>
-</td><td class="summaryTableOwnerCol">BitmapDataCapture</td>
+   Defines the maximum dimension of a BitmapData object in the Flash Player.<ul>
+   </div>
+</td><td class="summaryTableOwnerCol">CoreBitmapData</td>
 </tr>
 </table>
 </div>
@@ -86,15 +88,15 @@ showHideInherited();
 <div class="MainContent">
 <a name="constructorDetail"></a>
 <div class="detailSectionHeader">Constructor detail</div>
-<a name="BitmapDataCapture()"></a>
+<a name="CoreBitmapData()"></a>
 <table cellspacing="0" cellpadding="0" class="detailHeader">
 <tr>
-<td class="detailHeaderName">BitmapDataCapture</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">constructor</td>
+<td class="detailHeaderName">CoreBitmapData</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">constructor</td>
 </tr>
 </table>
 <div class="detailBody">
-<code>public function BitmapDataCapture(src:DisplayObject, scale:Number = 1, transparent:Boolean = false, fillColor:uint = 0xFFFFFFFF)</code><p>
-   BitmapDataCapture Constructor
+<code>public function CoreBitmapData(src:DisplayObject, x:Number = 0, y:Number = 0, width:Number, height:Number, scale:Number = 1, transparent:Boolean = false, fillColor:uint = 0xFFFFFFFF)</code><p>
+   CoreBitmapData Constructor
    </p><span class="label">Parameters</span>
 <table border="0" cellspacing="0" cellpadding="0">
 <tr>
@@ -105,7 +107,35 @@ showHideInherited();
 <td class="paramSpacer">&nbsp;</td>
 </tr>
 <tr>
-<td width="20px"></td><td><code><span class="label">scale</span>:Number</code> (default = <code>1</code>)<code></code> &mdash;   to apply to the captured BitmapData.
+<td width="20px"></td><td><code><span class="label">x</span>:Number</code> (default = <code>0</code>)<code></code> &mdash;    optional crop start position.
+   </td>
+</tr>
+<tr>
+<td class="paramSpacer">&nbsp;</td>
+</tr>
+<tr>
+<td width="20px"></td><td><code><span class="label">y</span>:Number</code> (default = <code>0</code>)<code></code> &mdash;    optional crop start position.
+   </td>
+</tr>
+<tr>
+<td class="paramSpacer">&nbsp;</td>
+</tr>
+<tr>
+<td width="20px"></td><td><code><span class="label">width</span>:Number</code> &mdash;   optional crop width.
+   </td>
+</tr>
+<tr>
+<td class="paramSpacer">&nbsp;</td>
+</tr>
+<tr>
+<td width="20px"></td><td><code><span class="label">height</span>:Number</code> &mdash;   optional crop height.
+   </td>
+</tr>
+<tr>
+<td class="paramSpacer">&nbsp;</td>
+</tr>
+<tr>
+<td width="20px"></td><td><code><span class="label">scale</span>:Number</code> (default = <code>1</code>)<code></code> &mdash;   optional scale (effects actual width & height).
    </td>
 </tr>
 <tr>
@@ -136,7 +166,7 @@ showHideInherited();
 </table>
 <div class="detailBody">
 <code>public static const MAX_SIZE:int = 2880</code><p>
-   Defines the maximum dimension of a BitmapData object in the Flash Player.
+   Defines the maximum dimension of a BitmapData object in the Flash Player.<ul>
    </p></div>
 <br>
 <br>
