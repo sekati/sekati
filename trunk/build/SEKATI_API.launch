@@ -14,7 +14,7 @@
 <stringAttribute key="PRE_COMPILE_ANT" value=""/>
 <stringAttribute key="PROJECT_NAME" value="sekati"/>
 <booleanAttribute key="START_SWF_ENABLED" value="true"/>
-<stringAttribute key="START_SWF_LOCATION" value="http://localhost/sekati/deploy/index.html"/>
+<stringAttribute key="START_SWF_LOCATION" value="http://localhost/sekati/deploy/"/>
 <stringAttribute key="START_SWF_WITH" value="Browser"/>
 <booleanAttribute key="USE_GLOBAL_FCSH_LOCATION" value="true"/>
 <stringAttribute key="bad_container_name" value="build/SEKATI_API"/>
