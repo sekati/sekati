@@ -4,7 +4,7 @@
 <META http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <link rel="stylesheet" href="../../style.css" type="text/css" media="screen">
 <link rel="stylesheet" href="../../print.css" type="text/css" media="print">
-<meta content="Bootstrap,sekati.core.Bootstrap,RETRY_ATTEMPT,RETRY_MAX,_sequenceChain,_sequenceCount,loadConfig,loadData,loadStyle,retry,run" name="keywords">
+<meta content="Bootstrap,sekati.core.Bootstrap,RETRY_ATTEMPT,RETRY_MAX,sequenceChain,sequenceCount,loadConfig,loadData,loadStyle,retry,run" name="keywords">
 <title>sekati.core.Bootstrap</title>
 </head>
 <body>
@@ -54,12 +54,12 @@ if (!isEclipse() || window.name != ECLIPSE_FRAME_NAME) {titleBar_setSubTitle("Cl
   defined in the core configuration XML file.</p>
   
   <p>Each step in the <code>Bootstrap</code> sequence fires a <i>"staging"</i> <code>BootstrapEvent</code> to notify 
-  the application of its <i>"boot phase"</i>. If any boot phase in the <code>_sequenceChain</code> fails its execution 
+  the application of its <i>"boot phase"</i>. If any boot phase in the <code>sequenceChain</code> fails its execution 
   it will be retried until the <code>RETRY_MAX</code> limit has been exceeded at which point a the 
   <code>BootstrapEvent.APP_FAIL</code> event will be dispatched to notify the application of boot failure.</p>
   
   <p><b>Customizations</b> may be made by extending and  overriding the <code>Bootstrap</code> methods and 
-  <code>_sequenceChain</code>.</p>
+  <code>sequenceChain</code>.</p>
   
   <p></p>
 <p>
@@ -93,13 +93,13 @@ if (!isEclipse() || window.name != ECLIPSE_FRAME_NAME) {titleBar_setSubTitle("Cl
 </td><td class="summaryTableOwnerCol">Bootstrap</td>
 </tr>
 <tr class="">
-<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a class="signatureLink" href="#_sequenceChain">_sequenceChain</a> : Array<div class="summaryTableDescription">[static]
-   The <code>_sequenceChain</code> defines a set of method references which are executed in sequence to prepare the API framework core.</div>
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a class="signatureLink" href="#sequenceChain">sequenceChain</a> : Array<div class="summaryTableDescription">[static]
+   The <code>sequenceChain</code> defines a set of method references which are executed in sequence to prepare the API framework core.</div>
 </td><td class="summaryTableOwnerCol">Bootstrap</td>
 </tr>
 <tr class="">
-<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a class="signatureLink" href="#_sequenceCount">_sequenceCount</a> : uint = 0<div class="summaryTableDescription">[static]
-   The <code>_sequenceCount</code> bootstrap stage counter.</div>
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a class="signatureLink" href="#sequenceCount">sequenceCount</a> : uint = 0<div class="summaryTableDescription">[static]
+   The <code>sequenceCount</code> bootstrap stage counter.</div>
 </td><td class="summaryTableOwnerCol">Bootstrap</td>
 </tr>
 </table>
@@ -167,7 +167,7 @@ if (!isEclipse() || window.name != ECLIPSE_FRAME_NAME) {titleBar_setSubTitle("Cl
 <div class="summarySignature">
 <a class="signatureLink" href="#run()">run</a>():void</div>
 <div class="summaryTableDescription">
-   Iterate through the <code>_sequenceChain</code> method & fire the <code>BootstrapEvent.APP_INIT</code> event on completion.</div>
+   Iterate through the <code>sequenceChain</code> method & fire the <code>BootstrapEvent.APP_INIT</code> event on completion.</div>
 </td><td class="summaryTableOwnerCol">Bootstrap</td>
 </tr>
 </table>
@@ -199,25 +199,25 @@ showHideInherited();
 <code>protected static var RETRY_MAX:uint</code><p>
    code>RETRY_MAX</code>  maximum retries before Bootstrap errors out.
    </p></div>
-<a name="_sequenceChain"></a>
+<a name="sequenceChain"></a>
 <table cellspacing="0" cellpadding="0" class="detailHeader">
 <tr>
-<td class="detailHeaderName">_sequenceChain</td><td class="detailHeaderType">property</td><td class="detailHeaderRule">&nbsp;</td>
+<td class="detailHeaderName">sequenceChain</td><td class="detailHeaderType">property</td><td class="detailHeaderRule">&nbsp;</td>
 </tr>
 </table>
 <div class="detailBody">
-<code>protected static var _sequenceChain:Array</code><p>
-   The <code>_sequenceChain</code> defines a set of method references which are executed in sequence to prepare the API framework core.
+<code>protected static var sequenceChain:Array</code><p>
+   The <code>sequenceChain</code> defines a set of method references which are executed in sequence to prepare the API framework core.
    </p></div>
-<a name="_sequenceCount"></a>
+<a name="sequenceCount"></a>
 <table cellspacing="0" cellpadding="0" class="detailHeader">
 <tr>
-<td class="detailHeaderName">_sequenceCount</td><td class="detailHeaderType">property</td><td class="detailHeaderRule">&nbsp;</td>
+<td class="detailHeaderName">sequenceCount</td><td class="detailHeaderType">property</td><td class="detailHeaderRule">&nbsp;</td>
 </tr>
 </table>
 <div class="detailBody">
-<code>protected static var _sequenceCount:uint = 0</code><p>
-   The <code>_sequenceCount</code> bootstrap stage counter.
+<code>protected static var sequenceCount:uint = 0</code><p>
+   The <code>sequenceCount</code> bootstrap stage counter.
    </p></div>
 <a name="constructorDetail"></a>
 <div class="detailSectionHeader">Constructor detail</div>
@@ -306,7 +306,7 @@ showHideInherited();
 </table>
 <div class="detailBody">
 <code>protected function run():void</code><p>
-   Iterate through the <code>_sequenceChain</code> method & fire the <code>BootstrapEvent.APP_INIT</code> event on completion.
+   Iterate through the <code>sequenceChain</code> method & fire the <code>BootstrapEvent.APP_INIT</code> event on completion.
    </p><p>
 <span class="label">See also</span>
 </p>
