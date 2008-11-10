@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- 
+	Built with:
+   ____    ____    __  __   ______  ______  ______      ______  ____    ______     
+  /\  _`\ /\  _`\ /\ \/\ \ /\  _  \/\__  _\/\__  _\    /\  _  \/\  _`\ /\__  _\    
+  \ \,\L\_\ \ \L\_\ \ \/'/'\ \ \L\ \/_/\ \/\/_/\ \/    \ \ \L\ \ \ \L\ \/_/\ \/    
+   \/_\__ \\ \  _\L\ \ , <  \ \  __ \ \ \ \   \ \ \     \ \  __ \ \ ,__/  \ \ \    
+     /\ \L\ \ \ \L\ \ \ \\`\ \ \ \/\ \ \ \ \   \_\ \__   \ \ \/\ \ \ \/    \_\ \__ 
+     \ `\____\ \____/\ \_\ \_\\ \_\ \_\ \ \_\  /\_____\   \ \_\ \_\ \_\    /\_____\
+      \/_____/\/___/  \/_/\/_/ \/_/\/_/  \/_/  \/_____/    \/_/\/_/\/_/    \/_____/
+      
+    http://sekati.googlecode.com | Please leave this notice intact.
+ 	Copyright (c) 2008 Jason M Horwitz | Sekati LLC | sekati.com. All Rights Reserved.
+-->
+<config persist="false">
+	<app>
+		<name>Sekati API</name>
+		<version>3.0.4.0</version>
+	</app>
+	<uri>
+		<crossdomain load="true">crossdomain.xml</crossdomain>
+		<data load="true">xml/data.xml</data>
+		<css load="true">css/app_style.css</css>
+	</uri>
+	<option>
+		<!-- Targets: ide, firebug, all, none -->
+		<log target="all">true</log>
+		<menu verbose="true">true</menu>
+		<fullscreen>true</fullscreen>
+		<track>true</track>
+		<deeplink>true</deeplink>
+		<performance_monitor>true</performance_monitor>
+	</option>
+	<custom>
+		<!-- 
+			If you have a small amount of application data you wish to persist but do not 
+			want to load a 2nd (data) XML you may use the "custom" node for your data.
+			
+			In order to access custom node data via the API you must set: 
+			<config persist="true"> to make App.db.config.custom available.
+		-->
+	</custom>
+</config>
