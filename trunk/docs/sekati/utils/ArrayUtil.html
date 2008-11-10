@@ -118,7 +118,7 @@ if (!isEclipse() || window.name != ECLIPSE_FRAME_NAME) {titleBar_setSubTitle("Cl
 <tr class="">
 <td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
 <div class="summarySignature">
-<a class="signatureLink" href="#locatePropValIndex()">locatePropValIndex</a>(a:Array, prop:String, val:Object, isCaseInsensitive:Boolean = false):uint</div>
+<a class="signatureLink" href="#locatePropValIndex()">locatePropValIndex</a>(a:Array, prop:String, val:Object, isCaseInsensitive:Boolean = false):Number</div>
 <div class="summaryTableDescription">[static]
    Search for a unique property/value match in an array of complex objects and return its index in the array.</div>
 </td><td class="summaryTableOwnerCol">ArrayUtil</td>
@@ -198,7 +198,7 @@ if (!isEclipse() || window.name != ECLIPSE_FRAME_NAME) {titleBar_setSubTitle("Cl
 <tr class="">
 <td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
 <div class="summarySignature">
-<a class="signatureLink" href="#search()">search</a>(a:Array, objElement:Object):int</div>
+<a class="signatureLink" href="#search()">search</a>(a:Array, objElement:Object):Number</div>
 <div class="summaryTableDescription">[static]
    Search an array for a given element and return its index or <code>NaN</code>.</div>
 </td><td class="summaryTableOwnerCol">ArrayUtil</td>
@@ -495,7 +495,7 @@ showHideInherited();
 </tr>
 </table>
 <div class="detailBody">
-<code>public static function locatePropValIndex(a:Array, prop:String, val:Object, isCaseInsensitive:Boolean = false):uint</code><p>
+<code>public static function locatePropValIndex(a:Array, prop:String, val:Object, isCaseInsensitive:Boolean = false):Number</code><p>
    Search for a unique property/value match in an array of complex objects and return its index in the array.
    </p><span class="label">Parameters</span>
 <table border="0" cellspacing="0" cellpadding="0">
@@ -529,7 +529,7 @@ showHideInherited();
 <span class="label">Returns</span>
 <table border="0" cellspacing="0" cellpadding="0">
 <tr>
-<td width="20"></td><td><code>uint</code> &mdash; uint     the index of the first array object with the <code>prop</code>/<code>val</code> match.
+<td width="20"></td><td><code>Number</code> &mdash; Number     the index of the first array object with the <code>prop</code>/<code>val</code> match.
    </td>
 </tr>
 </table>
@@ -791,7 +791,7 @@ showHideInherited();
 </tr>
 </table>
 <div class="detailBody">
-<code>public static function search(a:Array, objElement:Object):int</code><p>
+<code>public static function search(a:Array, objElement:Object):Number</code><p>
    Search an array for a given element and return its index or <code>NaN</code>.
    </p><span class="label">Parameters</span>
 <table border="0" cellspacing="0" cellpadding="0">
@@ -809,7 +809,7 @@ showHideInherited();
 <span class="label">Returns</span>
 <table border="0" cellspacing="0" cellpadding="0">
 <tr>
-<td width="20"></td><td><code>int</code></td>
+<td width="20"></td><td><code>Number</code></td>
 </tr>
 </table>
 </div>
