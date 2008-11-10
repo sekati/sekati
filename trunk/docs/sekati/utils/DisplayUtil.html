@@ -4,7 +4,7 @@
 <META http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <link rel="stylesheet" href="../../style.css" type="text/css" media="screen">
 <link rel="stylesheet" href="../../print.css" type="text/css" media="print">
-<meta content="DisplayUtil,sekati.utils.DisplayUtil,addChildren,color,getClassFromInstance,getMovieFromLibrary,getNextHighestDepth,makeButton,rmChildren,sizeContent,unparentDisplayObjects" name="keywords">
+<meta content="DisplayUtil,sekati.utils.DisplayUtil,addChildren,color,getClassFromInstance,getMovieFromLibrary,getNextHighestDepth,makeButton,removeChildren,sizeContent,unparentDisplayObjects" name="keywords">
 <title>sekati.utils.DisplayUtil</title>
 </head>
 <body>
@@ -113,7 +113,7 @@ if (!isEclipse() || window.name != ECLIPSE_FRAME_NAME) {titleBar_setSubTitle("Cl
 <tr class="">
 <td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
 <div class="summarySignature">
-<a class="signatureLink" href="#rmChildren()">rmChildren</a>(o:DisplayObjectContainer):void</div>
+<a class="signatureLink" href="#removeChildren()">removeChildren</a>(o:DisplayObjectContainer):void</div>
 <div class="summaryTableDescription">[static]
    Removes all display children from a container.</div>
 </td><td class="summaryTableOwnerCol">DisplayUtil</td>
@@ -314,14 +314,14 @@ showHideInherited();
 </tr>
 </table>
 </div>
-<a name="rmChildren()"></a>
+<a name="removeChildren()"></a>
 <table cellspacing="0" cellpadding="0" class="detailHeader">
 <tr>
-<td class="detailHeaderName">rmChildren</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td>
+<td class="detailHeaderName">removeChildren</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td>
 </tr>
 </table>
 <div class="detailBody">
-<code>public static function rmChildren(o:DisplayObjectContainer):void</code><p>
+<code>public static function removeChildren(o:DisplayObjectContainer):void</code><p>
    Removes all display children from a container.
    </p><span class="label">Parameters</span>
 <table border="0" cellspacing="0" cellpadding="0">
@@ -343,14 +343,14 @@ showHideInherited();
    </p><span class="label">Parameters</span>
 <table border="0" cellspacing="0" cellpadding="0">
 <tr>
-<td width="20px"></td><td><code><span class="label">o</span>:DisplayObject</code> &mdash;  The stretched movie.
+<td width="20px"></td><td><code><span class="label">o</span>:DisplayObject</code> &mdash;   the stretched DisplayObject.
    </td>
 </tr>
 <tr>
 <td class="paramSpacer">&nbsp;</td>
 </tr>
 <tr>
-<td width="20px"></td><td><code><span class="label">child</span>:DisplayObject</code> (default = <code>null</code>)<code></code> &mdash;  If there are children of the movie, they are also stretched.
+<td width="20px"></td><td><code><span class="label">child</span>:DisplayObject</code> (default = <code>null</code>)<code></code> &mdash;  if there are children of the movie, they are also stretched.
    </td>
 </tr>
 </table>
