@@ -15,7 +15,7 @@
 <config persist="false">
 	<app>
 		<name>Sekati API</name>
-		<version>3.0.3.10</version>
+		<version>3.0.4.0</version>
 	</app>
 	<uri>
 		<crossdomain load="true">crossdomain.xml</crossdomain>
@@ -27,18 +27,17 @@
 		<log target="all">true</log>
 		<menu verbose="true">true</menu>
 		<fullscreen>true</fullscreen>
-		<key>true</key>
 		<track>true</track>
 		<deeplink>true</deeplink>
 		<performance_monitor>true</performance_monitor>
 	</option>
 	<custom>
 		<!-- 
-		If you have a small amount of application data you wish to persist but do not 
-		want to load a 2nd (data) XML you may use the "custom" node for your data.
-		
-		In order to access custom node data via the API you must set: 
-		<config persist="true"> to make App.db.config.custom available.
-		-->	
+			If you have a small amount of application data you wish to persist but do not 
+			want to load a 2nd (data) XML you may use the "custom" node for your data.
+			
+			In order to access custom node data via the API you must set: 
+			<config persist="true"> to make App.db.config.custom available.
+		-->
 	</custom>
 </config>

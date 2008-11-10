@@ -143,7 +143,7 @@ if (!isEclipse() || window.name != ECLIPSE_FRAME_NAME) {titleBar_setSubTitle("Cl
 </tr>
 <tr class="">
 <td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a class="signatureLink" href="#size">size</a> : Rectangle<div class="summaryTableDescription">[read-only]
-   Returns an reference to the application <code>Canvas.stage</code>.</div>
+   The current size of the stage.</div>
 </td><td class="summaryTableOwnerCol">StageDisplay</td>
 </tr>
 </table>
@@ -624,10 +624,7 @@ showHideInherited();
 </table>
 <div class="detailBody">
 <code>size:Rectangle</code>&nbsp;&nbsp;[read-only]<p>
-   Returns an reference to the application <code>Canvas.stage</code>.
-  public function get stage() : Stage {
-  return STAGE; 
-  }
+   The current size of the stage.
    </p><span class="label">Implementation</span>
 <br>
 <code>&nbsp;&nbsp;&nbsp;&nbsp;public function get size():Rectangle</code>

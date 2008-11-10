@@ -4,7 +4,7 @@
 <META http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <link rel="stylesheet" href="../../style.css" type="text/css" media="screen">
 <link rel="stylesheet" href="../../print.css" type="text/css" media="print">
-<meta content="InteractiveSprite,sekati.display.InteractiveSprite,enabled,click,offStage,onStage,out,over,press,release,releaseOutside" name="keywords">
+<meta content="InteractiveSprite,sekati.display.InteractiveSprite,enabled,click,configListeners,destroy,offStage,onStage,out,over,press,release,releaseOutside" name="keywords">
 <title>sekati.display.InteractiveSprite</title>
 </head>
 <body>
@@ -66,14 +66,14 @@ if (!isEclipse() || window.name != ECLIPSE_FRAME_NAME) {titleBar_setSubTitle("Cl
 <th>&nbsp;</th><th colspan="2">Property</th><th class="summaryTableOwnerCol">Defined&nbsp;by</th>
 </tr>
 <tr class="">
-<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a class="signatureLink" href="#enabled">enabled</a> : Boolean<div class="summaryTableDescription">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a class="signatureLink" href="#enabled">enabled</a> : Boolean<div class="summaryTableDescription">[write-only]
    Enabled property defines whether interactive eventing is available or not.</div>
 </td><td class="summaryTableOwnerCol">InteractiveSprite</td>
 </tr>
 <tr class="hideInheritedProperty">
 <td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img class="inheritedSummaryImage" title="Inherited" alt="Inherited" src="../../images/inheritedSummary.gif"></td><td class="summaryTableSignatureCol"><a class="signatureLink" href="CoreSprite.html#interactiveMode">interactiveMode</a> : Boolean<div class="summaryTableDescription">
-   Specifies the state of the object as an interactive target 
-   via: <code>buttonMode, mouseChildren & tabChildren</code>.</div>
+   Specifies the <i>mouse cursors modal state</i> in the object as an interactive 
+   target via: <code>buttonMode, mouseChildren & tabChildren</code>.</div>
 </td><td class="summaryTableOwnerCol"><a href="CoreSprite.html">CoreSprite</a></td>
 </tr>
 <tr class="hideInheritedProperty">
@@ -112,15 +112,24 @@ if (!isEclipse() || window.name != ECLIPSE_FRAME_NAME) {titleBar_setSubTitle("Cl
 <div class="summarySignature">
 <a class="signatureLink" href="CoreSprite.html#addChildren()">addChildren</a>(... args):void</div>
 <div class="summaryTableDescription">
-   Add multiple child DisplayObject's in one call.</div>
+   Add multiple child <code>DisplayObject</code>'s.</div>
 </td><td class="summaryTableOwnerCol"><a href="CoreSprite.html">CoreSprite</a></td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="#destroy()">destroy</a>():void</div>
+<div class="summaryTableDescription">
+   
+   Clean up after thy self.</div>
+</td><td class="summaryTableOwnerCol">InteractiveSprite</td>
 </tr>
 <tr class="hideInheritedMethod">
 <td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img class="inheritedSummaryImage" title="Inherited" alt="Inherited" src="../../images/inheritedSummary.gif"></td><td class="summaryTableSignatureCol">
 <div class="summarySignature">
-<a class="signatureLink" href="CoreSprite.html#destroy()">destroy</a>():void</div>
+<a class="signatureLink" href="CoreSprite.html#removeChildren()">removeChildren</a>(... args):void</div>
 <div class="summaryTableDescription">
-   Clean up after thy self.</div>
+   Remove multiple child <code>DisplayObject</code>'s.</div>
 </td><td class="summaryTableOwnerCol"><a href="CoreSprite.html">CoreSprite</a></td>
 </tr>
 <tr class="hideInheritedMethod">
@@ -128,8 +137,7 @@ if (!isEclipse() || window.name != ECLIPSE_FRAME_NAME) {titleBar_setSubTitle("Cl
 <div class="summarySignature">
 <a class="signatureLink" href="CoreSprite.html#toString()">toString</a>():String</div>
 <div class="summaryTableDescription">
-   Return reflective output
-   </div>
+   Return reflective output.</div>
 </td><td class="summaryTableOwnerCol"><a href="CoreSprite.html">CoreSprite</a></td>
 </tr>
 </table>
@@ -147,6 +155,14 @@ if (!isEclipse() || window.name != ECLIPSE_FRAME_NAME) {titleBar_setSubTitle("Cl
 <a class="signatureLink" href="#click()">click</a>(e:MouseEvent = null):void</div>
 <div class="summaryTableDescription">
    Stub: click event handler.</div>
+</td><td class="summaryTableOwnerCol">InteractiveSprite</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="#configListeners()">configListeners</a>(isAdd:Boolean = false):void</div>
+<div class="summaryTableDescription">
+   Event listener management.</div>
 </td><td class="summaryTableOwnerCol">InteractiveSprite</td>
 </tr>
 <tr class="">
@@ -221,11 +237,9 @@ showHideInherited();
 </tr>
 </table>
 <div class="detailBody">
-<code>enabled:Boolean</code>&nbsp;&nbsp;[read-write]<p>
+<code>enabled:Boolean</code>&nbsp;&nbsp;[write-only]<p>
    Enabled property defines whether interactive eventing is available or not.
    </p><span class="label">Implementation</span>
-<br>
-<code>&nbsp;&nbsp;&nbsp;&nbsp;public function get enabled():Boolean</code>
 <br>
 <code>&nbsp;&nbsp;&nbsp;&nbsp;public function set enabled(value:Boolean):void</code>
 <br>
@@ -260,6 +274,34 @@ showHideInherited();
 </tr>
 </table>
 </div>
+<a name="configListeners()"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">configListeners</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>protected function configListeners(isAdd:Boolean = false):void</code><p>
+   Event listener management.
+   </p><span class="label">Parameters</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20px"></td><td><code><span class="label">isAdd</span>:Boolean</code> (default = <code>false</code>)<code></code> &mdash;  if <code>true</code> add the listeners, if <code>false</code> remove them.
+   </td>
+</tr>
+</table>
+</div>
+<a name="destroy()"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">destroy</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public override function destroy():void</code><p>
+   
+   Clean up after thy self.
+   </p></div>
 <a name="offStage()"></a>
 <table cellspacing="0" cellpadding="0" class="detailHeader">
 <tr>

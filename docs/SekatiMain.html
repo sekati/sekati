@@ -38,7 +38,7 @@ if (!isEclipse() || window.name != ECLIPSE_FRAME_NAME) {titleBar_setSubTitle("Cl
 <td class="classHeaderTableLabel">Class</td><td class="classSignature">public class SekatiMain</td>
 </tr>
 <tr>
-<td class="classHeaderTableLabel">Inheritance</td><td class="inheritanceList">SekatiMain <img class="inheritArrow" alt="Inheritance" title="Inheritance" src="images/inherit-arrow.gif"> <a href="../sekati/display/Document.html">Document</a> <img class="inheritArrow" alt="Inheritance" title="Inheritance" src="images/inherit-arrow.gif"> <a href="../sekati/display/Canvas.html">Canvas</a> <img class="inheritArrow" alt="Inheritance" title="Inheritance" src="images/inherit-arrow.gif"> flash.display.Sprite</td>
+<td class="classHeaderTableLabel">Inheritance</td><td class="inheritanceList">SekatiMain <img class="inheritArrow" alt="Inheritance" title="Inheritance" src="images/inherit-arrow.gif"> <a href="../sekati/display/Document.html">Document</a> <img class="inheritArrow" alt="Inheritance" title="Inheritance" src="images/inherit-arrow.gif"> <a href="../sekati/display/Canvas.html">Canvas</a> <img class="inheritArrow" alt="Inheritance" title="Inheritance" src="images/inherit-arrow.gif"> <a href="../sekati/display/CoreSprite.html">CoreSprite</a> <img class="inheritArrow" alt="Inheritance" title="Inheritance" src="images/inherit-arrow.gif"> flash.display.Sprite</td>
 </tr>
 </table>
 <p></p>
@@ -69,8 +69,20 @@ if (!isEclipse() || window.name != ECLIPSE_FRAME_NAME) {titleBar_setSubTitle("Cl
 </td><td class="summaryTableOwnerCol"><a href="../sekati/display/Document.html">Document</a></td>
 </tr>
 <tr class="hideInheritedProperty">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img class="inheritedSummaryImage" title="Inherited" alt="Inherited" src="images/inheritedSummary.gif"></td><td class="summaryTableSignatureCol"><a class="signatureLink" href="../sekati/display/CoreSprite.html#enabled">enabled</a> : Boolean<div class="summaryTableDescription">
+   <code>Boolean</code> stub property which subclasses implement to control core 
+   behavor availability such as interactivity, liquidity, drag-drop functionality.</div>
+</td><td class="summaryTableOwnerCol"><a href="../sekati/display/CoreSprite.html">CoreSprite</a></td>
+</tr>
+<tr class="hideInheritedProperty">
 <td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img class="inheritedSummaryImage" title="Inherited" alt="Inherited" src="images/inheritedSummary.gif"></td><td class="summaryTableSignatureCol"><a class="signatureLink" href="../sekati/display/Canvas.html#flashVars">flashVars</a> : Object<div class="summaryTableDescription">[static]</div>
 </td><td class="summaryTableOwnerCol"><a href="../sekati/display/Canvas.html">Canvas</a></td>
+</tr>
+<tr class="hideInheritedProperty">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img class="inheritedSummaryImage" title="Inherited" alt="Inherited" src="images/inheritedSummary.gif"></td><td class="summaryTableSignatureCol"><a class="signatureLink" href="../sekati/display/CoreSprite.html#interactiveMode">interactiveMode</a> : Boolean<div class="summaryTableDescription">
+   Specifies the <i>mouse cursors modal state</i> in the object as an interactive 
+   target via: <code>buttonMode, mouseChildren & tabChildren</code>.</div>
+</td><td class="summaryTableOwnerCol"><a href="../sekati/display/CoreSprite.html">CoreSprite</a></td>
 </tr>
 <tr class="hideInheritedProperty">
 <td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img class="inheritedSummaryImage" title="Inherited" alt="Inherited" src="images/inheritedSummary.gif"></td><td class="summaryTableSignatureCol"><a class="signatureLink" href="../sekati/display/Canvas.html#loaderInfo">loaderInfo</a> : LoaderInfo<div class="summaryTableDescription">[static]</div>
@@ -87,6 +99,11 @@ if (!isEclipse() || window.name != ECLIPSE_FRAME_NAME) {titleBar_setSubTitle("Cl
 </td><td class="summaryTableOwnerCol"><a href="../sekati/display/Canvas.html">Canvas</a></td>
 </tr>
 <tr class="hideInheritedProperty">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img class="inheritedSummaryImage" title="Inherited" alt="Inherited" src="images/inheritedSummary.gif"></td><td class="summaryTableSignatureCol"><a class="signatureLink" href="../sekati/display/CoreSprite.html#scale">scale</a> : Number<div class="summaryTableDescription">
+   The <code>scale</code> value.</div>
+</td><td class="summaryTableOwnerCol"><a href="../sekati/display/CoreSprite.html">CoreSprite</a></td>
+</tr>
+<tr class="hideInheritedProperty">
 <td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img class="inheritedSummaryImage" title="Inherited" alt="Inherited" src="images/inheritedSummary.gif"></td><td class="summaryTableSignatureCol"><a class="signatureLink" href="../sekati/display/Canvas.html#stage">stage</a> : Stage<div class="summaryTableDescription">[static]</div>
 </td><td class="summaryTableOwnerCol"><a href="../sekati/display/Canvas.html">Canvas</a></td>
 </tr>
@@ -95,6 +112,14 @@ if (!isEclipse() || window.name != ECLIPSE_FRAME_NAME) {titleBar_setSubTitle("Cl
 <a name="methodSummary"></a>
 <div class="summarySection">
 <div class="summaryTableTitle">Public Methods</div>
+<div class="showHideLinks">
+<div class="hideInheritedMethod" id="hideInheritedMethod">
+<a onclick="javascript:setInheritedVisible(false,'Method');" href="#methodSummary" class="showHideLink"><img src="images/expanded.gif" class="showHideLinkImage"> Hide Inherited Public Methods</a>
+</div>
+<div class="showInheritedMethod" id="showInheritedMethod">
+<a onclick="javascript:setInheritedVisible(true,'Method');" href="#methodSummary" class="showHideLink"><img src="images/collapsed.gif" class="showHideLinkImage"> Show Inherited Public Methods</a>
+</div>
+</div>
 <table id="summaryTableMethod" class="summaryTable " cellpadding="3" cellspacing="0">
 <tr>
 <th>&nbsp;</th><th colspan="2">Method</th><th class="summaryTableOwnerCol">Defined&nbsp;by</th>
@@ -108,9 +133,41 @@ if (!isEclipse() || window.name != ECLIPSE_FRAME_NAME) {titleBar_setSubTitle("Cl
    </div>
 </td><td class="summaryTableOwnerCol">SekatiMain</td>
 </tr>
+<tr class="hideInheritedMethod">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img class="inheritedSummaryImage" title="Inherited" alt="Inherited" src="images/inheritedSummary.gif"></td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="../sekati/display/CoreSprite.html#addChildren()">addChildren</a>(... args):void</div>
+<div class="summaryTableDescription">
+   Add multiple child <code>DisplayObject</code>'s.</div>
+</td><td class="summaryTableOwnerCol"><a href="../sekati/display/CoreSprite.html">CoreSprite</a></td>
+</tr>
+<tr class="hideInheritedMethod">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img class="inheritedSummaryImage" title="Inherited" alt="Inherited" src="images/inheritedSummary.gif"></td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="../sekati/display/CoreSprite.html#destroy()">destroy</a>():void</div>
+<div class="summaryTableDescription">
+   Clean up after thy self.</div>
+</td><td class="summaryTableOwnerCol"><a href="../sekati/display/CoreSprite.html">CoreSprite</a></td>
+</tr>
+<tr class="hideInheritedMethod">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img class="inheritedSummaryImage" title="Inherited" alt="Inherited" src="images/inheritedSummary.gif"></td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="../sekati/display/CoreSprite.html#removeChildren()">removeChildren</a>(... args):void</div>
+<div class="summaryTableDescription">
+   Remove multiple child <code>DisplayObject</code>'s.</div>
+</td><td class="summaryTableOwnerCol"><a href="../sekati/display/CoreSprite.html">CoreSprite</a></td>
+</tr>
+<tr class="hideInheritedMethod">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img class="inheritedSummaryImage" title="Inherited" alt="Inherited" src="images/inheritedSummary.gif"></td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="../sekati/display/CoreSprite.html#toString()">toString</a>():String</div>
+<div class="summaryTableDescription">
+   Return reflective output.</div>
+</td><td class="summaryTableOwnerCol"><a href="../sekati/display/CoreSprite.html">CoreSprite</a></td>
+</tr>
 </table>
 </div>
-<a name="methodSummary"></a><a name="protectedMethodSummary"></a>
+<a name="protectedMethodSummary"></a>
 <div class="summarySection">
 <div class="summaryTableTitle">Protected Methods</div>
 <div class="showHideLinks">
@@ -186,6 +243,22 @@ if (!isEclipse() || window.name != ECLIPSE_FRAME_NAME) {titleBar_setSubTitle("Cl
    
    Initialize <code>Tweener</code> specialProperties shortcuts.</div>
 </td><td class="summaryTableOwnerCol">SekatiMain</td>
+</tr>
+<tr class="hideInheritedProtectedMethod">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img class="inheritedSummaryImage" title="Inherited" alt="Inherited" src="images/inheritedSummary.gif"></td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="../sekati/display/CoreSprite.html#offStage()">offStage</a>(e:Event = null):void</div>
+<div class="summaryTableDescription">
+   Stub: Sprite has been removed from stage.</div>
+</td><td class="summaryTableOwnerCol"><a href="../sekati/display/CoreSprite.html">CoreSprite</a></td>
+</tr>
+<tr class="hideInheritedProtectedMethod">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img class="inheritedSummaryImage" title="Inherited" alt="Inherited" src="images/inheritedSummary.gif"></td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="../sekati/display/CoreSprite.html#onStage()">onStage</a>(e:Event = null):void</div>
+<div class="summaryTableDescription">
+   Stub: Sprite has been added to stage.</div>
+</td><td class="summaryTableOwnerCol"><a href="../sekati/display/CoreSprite.html">CoreSprite</a></td>
 </tr>
 <tr class="hideInheritedProtectedMethod">
 <td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img class="inheritedSummaryImage" title="Inherited" alt="Inherited" src="images/inheritedSummary.gif"></td><td class="summaryTableSignatureCol">
