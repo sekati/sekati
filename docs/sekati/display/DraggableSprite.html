@@ -4,7 +4,7 @@
 <META http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <link rel="stylesheet" href="../../style.css" type="text/css" media="screen">
 <link rel="stylesheet" href="../../print.css" type="text/css" media="print">
-<meta content="DraggableSprite,sekati.display.DraggableSprite,BOUNDS,FRICTION,RATIO,boundBottom,boundLeft,boundRight,boundTop,cx,cy,isDrag,tx,ty,xSpeed,ySpeed,frameHandler,offStage,onStage,press,release,releaseOutside,setBounds" name="keywords">
+<meta content="DraggableSprite,sekati.display.DraggableSprite,boundBottom,boundLeft,boundRight,boundTop,bounds,cx,cy,friction,isDrag,isThrowable,ratio,tx,ty,xSpeed,ySpeed,enabled,frameHandler,offStage,onStage,press,release,releaseOutside,setBounds" name="keywords">
 <title>sekati.display.DraggableSprite</title>
 </head>
 <body>
@@ -81,11 +81,16 @@ if (!isEclipse() || window.name != ECLIPSE_FRAME_NAME) {titleBar_setSubTitle("Cl
 </td><td class="summaryTableOwnerCol">DraggableSprite</td>
 </tr>
 <tr class="">
-<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a class="signatureLink" href="#BOUNDS">BOUNDS</a> : Rectangle<div class="summaryTableDescription"></div>
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a class="signatureLink" href="#bounds">bounds</a> : Rectangle<div class="summaryTableDescription"></div>
 </td><td class="summaryTableOwnerCol">DraggableSprite</td>
 </tr>
 <tr class="">
 <td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a class="signatureLink" href="#boundTop">boundTop</a> : Number<div class="summaryTableDescription"></div>
+</td><td class="summaryTableOwnerCol">DraggableSprite</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a class="signatureLink" href="#enabled">enabled</a> : Boolean<div class="summaryTableDescription">[write-only]
+   </div>
 </td><td class="summaryTableOwnerCol">DraggableSprite</td>
 </tr>
 <tr class="hideInheritedProperty">
@@ -117,7 +122,7 @@ if (!isEclipse() || window.name != ECLIPSE_FRAME_NAME) {titleBar_setSubTitle("Cl
 </td><td class="summaryTableOwnerCol">DraggableSprite</td>
 </tr>
 <tr class="">
-<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a class="signatureLink" href="#FRICTION">FRICTION</a> : Number<div class="summaryTableDescription"></div>
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a class="signatureLink" href="#friction">friction</a> : Number<div class="summaryTableDescription"></div>
 </td><td class="summaryTableOwnerCol">DraggableSprite</td>
 </tr>
 <tr class="">
@@ -125,7 +130,11 @@ if (!isEclipse() || window.name != ECLIPSE_FRAME_NAME) {titleBar_setSubTitle("Cl
 </td><td class="summaryTableOwnerCol">DraggableSprite</td>
 </tr>
 <tr class="">
-<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a class="signatureLink" href="#RATIO">RATIO</a> : Number<div class="summaryTableDescription"></div>
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a class="signatureLink" href="#isThrowable">isThrowable</a> : Boolean<div class="summaryTableDescription"></div>
+</td><td class="summaryTableOwnerCol">DraggableSprite</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a class="signatureLink" href="#ratio">ratio</a> : Number<div class="summaryTableDescription"></div>
 </td><td class="summaryTableOwnerCol">DraggableSprite</td>
 </tr>
 <tr class="">
@@ -164,7 +173,7 @@ if (!isEclipse() || window.name != ECLIPSE_FRAME_NAME) {titleBar_setSubTitle("Cl
 <tr class="">
 <td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
 <div class="summarySignature">
-<a class="signatureLink" href="#DraggableSprite()">DraggableSprite</a>(bounds:Rectangle = null, friction:Number = 0.7, ratio:Number = 1.5)</div>
+<a class="signatureLink" href="#DraggableSprite()">DraggableSprite</a>(bounds:Rectangle = null, throwable:Boolean = true, friction:Number = 0.7, ratio:Number = 1.5)</div>
 <div class="summaryTableDescription">
    DraggableSprite Constructor
    </div>
@@ -225,8 +234,7 @@ if (!isEclipse() || window.name != ECLIPSE_FRAME_NAME) {titleBar_setSubTitle("Cl
 <div class="summarySignature">
 <a class="signatureLink" href="#frameHandler()">frameHandler</a>(e:Event = null):void</div>
 <div class="summaryTableDescription">
-   Handle throw logic
-   </div>
+   Handle throw logic.</div>
 </td><td class="summaryTableOwnerCol">DraggableSprite</td>
 </tr>
 <tr class="">
@@ -284,7 +292,7 @@ if (!isEclipse() || window.name != ECLIPSE_FRAME_NAME) {titleBar_setSubTitle("Cl
 <tr class="">
 <td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
 <div class="summarySignature">
-<a class="signatureLink" href="#releaseOutside()">releaseOutside</a>(e:MouseEvent = null):void</div>
+<a class="signatureLink" href="#releaseOutside()">releaseOutside</a>(e:Event = null):void</div>
 <div class="summaryTableDescription">
    
    Stub: release outside event handler.</div>
@@ -334,14 +342,14 @@ showHideInherited();
 <div class="detailBody">
 <code>public var boundRight:Number</code>
 </div>
-<a name="BOUNDS"></a>
+<a name="bounds"></a>
 <table cellspacing="0" cellpadding="0" class="detailHeader">
 <tr>
-<td class="detailHeaderName">BOUNDS</td><td class="detailHeaderType">property</td><td class="detailHeaderRule">&nbsp;</td>
+<td class="detailHeaderName">bounds</td><td class="detailHeaderType">property</td><td class="detailHeaderRule">&nbsp;</td>
 </tr>
 </table>
 <div class="detailBody">
-<code>public var BOUNDS:Rectangle</code>
+<code>public var bounds:Rectangle</code>
 </div>
 <a name="boundTop"></a>
 <table cellspacing="0" cellpadding="0" class="detailHeader">
@@ -370,14 +378,27 @@ showHideInherited();
 <div class="detailBody">
 <code>protected var cy:Number</code>
 </div>
-<a name="FRICTION"></a>
+<a name="enabled"></a>
 <table cellspacing="0" cellpadding="0" class="detailHeader">
 <tr>
-<td class="detailHeaderName">FRICTION</td><td class="detailHeaderType">property</td><td class="detailHeaderRule">&nbsp;</td>
+<td class="detailHeaderName">enabled</td><td class="detailHeaderType">property</td><td class="detailHeaderRule">&nbsp;</td>
 </tr>
 </table>
 <div class="detailBody">
-<code>protected var FRICTION:Number</code>
+<code>enabled:Boolean</code>&nbsp;&nbsp;[write-only]<p>
+   </p><span class="label">Implementation</span>
+<br>
+<code>&nbsp;&nbsp;&nbsp;&nbsp;public function set enabled(value:Boolean):void</code>
+<br>
+</div>
+<a name="friction"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">friction</td><td class="detailHeaderType">property</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>protected var friction:Number</code>
 </div>
 <a name="isDrag"></a>
 <table cellspacing="0" cellpadding="0" class="detailHeader">
@@ -388,14 +409,23 @@ showHideInherited();
 <div class="detailBody">
 <code>protected var isDrag:Boolean</code>
 </div>
-<a name="RATIO"></a>
+<a name="isThrowable"></a>
 <table cellspacing="0" cellpadding="0" class="detailHeader">
 <tr>
-<td class="detailHeaderName">RATIO</td><td class="detailHeaderType">property</td><td class="detailHeaderRule">&nbsp;</td>
+<td class="detailHeaderName">isThrowable</td><td class="detailHeaderType">property</td><td class="detailHeaderRule">&nbsp;</td>
 </tr>
 </table>
 <div class="detailBody">
-<code>protected var RATIO:Number</code>
+<code>protected var isThrowable:Boolean</code>
+</div>
+<a name="ratio"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">ratio</td><td class="detailHeaderType">property</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>protected var ratio:Number</code>
 </div>
 <a name="tx"></a>
 <table cellspacing="0" cellpadding="0" class="detailHeader">
@@ -442,24 +472,34 @@ showHideInherited();
 </tr>
 </table>
 <div class="detailBody">
-<code>public function DraggableSprite(bounds:Rectangle = null, friction:Number = 0.7, ratio:Number = 1.5)</code><p>
+<code>public function DraggableSprite(bounds:Rectangle = null, throwable:Boolean = true, friction:Number = 0.7, ratio:Number = 1.5)</code><p>
    DraggableSprite Constructor
    </p><span class="label">Parameters</span>
 <table border="0" cellspacing="0" cellpadding="0">
 <tr>
-<td width="20px"></td><td><code><span class="label">bounds</span>:Rectangle</code> (default = <code>null</code>)<code></code></td>
+<td width="20px"></td><td><code><span class="label">bounds</span>:Rectangle</code> (default = <code>null</code>)<code></code> &mdash;   which the object is draggable.
+   </td>
 </tr>
 <tr>
 <td class="paramSpacer">&nbsp;</td>
 </tr>
 <tr>
-<td width="20px"></td><td><code><span class="label">friction</span>:Number</code> (default = <code>0.7</code>)<code></code></td>
+<td width="20px"></td><td><code><span class="label">throwable</span>:Boolean</code> (default = <code>true</code>)<code></code> &mdash;  determines whether the clip has throwable physics.
+   </td>
 </tr>
 <tr>
 <td class="paramSpacer">&nbsp;</td>
 </tr>
 <tr>
-<td width="20px"></td><td><code><span class="label">ratio</span>:Number</code> (default = <code>1.5</code>)<code></code></td>
+<td width="20px"></td><td><code><span class="label">friction</span>:Number</code> (default = <code>0.7</code>)<code></code> &mdash;   of the throwable physics.
+   </td>
+</tr>
+<tr>
+<td class="paramSpacer">&nbsp;</td>
+</tr>
+<tr>
+<td width="20px"></td><td><code><span class="label">ratio</span>:Number</code> (default = <code>1.5</code>)<code></code> &mdash;   of the throwable physics.
+   </td>
 </tr>
 </table>
 </div>
@@ -473,7 +513,7 @@ showHideInherited();
 </table>
 <div class="detailBody">
 <code>protected function frameHandler(e:Event = null):void</code><p>
-   Handle throw logic
+   Handle throw logic.
    </p><span class="label">Parameters</span>
 <table border="0" cellspacing="0" cellpadding="0">
 <tr>
@@ -524,7 +564,8 @@ showHideInherited();
 <div class="detailBody">
 <code>protected override function press(e:MouseEvent = null):void</code><p>
    
-   Stub: press event handler.
+   Stub: press event handler. Starts release-outside simulation via 
+   <code>stage.MOUSE_UP</code> & <code>StageEvent.LEAVE</code>.
    </p><span class="label">Parameters</span>
 <table border="0" cellspacing="0" cellpadding="0">
 <tr>
@@ -556,13 +597,13 @@ showHideInherited();
 </tr>
 </table>
 <div class="detailBody">
-<code>protected override function releaseOutside(e:MouseEvent = null):void</code><p>
+<code>protected override function releaseOutside(e:Event = null):void</code><p>
    
    Stub: release outside event handler.
    </p><span class="label">Parameters</span>
 <table border="0" cellspacing="0" cellpadding="0">
 <tr>
-<td width="20px"></td><td><code><span class="label">e</span>:MouseEvent</code> (default = <code>null</code>)<code></code></td>
+<td width="20px"></td><td><code><span class="label">e</span>:Event</code> (default = <code>null</code>)<code></code></td>
 </tr>
 </table>
 </div>

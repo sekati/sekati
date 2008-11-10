@@ -114,7 +114,7 @@ if (!isEclipse() || window.name != ECLIPSE_FRAME_NAME) {titleBar_setSubTitle("Cl
 <tr class="">
 <td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
 <div class="summarySignature">
-<a class="signatureLink" href="#addItem()">addItem</a>(caption:String, cb:Function = null, div:Boolean = true, enable:Boolean = true):uint</div>
+<a class="signatureLink" href="#addItem()">addItem</a>(caption:String, cb:Function = null, div:Boolean = true, enable:Boolean = true):Number</div>
 <div class="summaryTableDescription">
    Add a new item to the <code>ContextualMenu</code>.</div>
 </td><td class="summaryTableOwnerCol">ContextualMenu</td>
@@ -130,7 +130,7 @@ if (!isEclipse() || window.name != ECLIPSE_FRAME_NAME) {titleBar_setSubTitle("Cl
 <tr class="">
 <td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
 <div class="summarySignature">
-<a class="signatureLink" href="#disableItem()">disableItem</a>(id:uint):void</div>
+<a class="signatureLink" href="#disableItem()">disableItem</a>(id:Number):void</div>
 <div class="summaryTableDescription">
    Disable an existing item in the <code>ContextualMenu</code>
    </div>
@@ -139,7 +139,7 @@ if (!isEclipse() || window.name != ECLIPSE_FRAME_NAME) {titleBar_setSubTitle("Cl
 <tr class="">
 <td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
 <div class="summarySignature">
-<a class="signatureLink" href="#editItem()">editItem</a>(id:uint, caption:String, cb:Function = null, div:Boolean = true, enable:Boolean = true):void</div>
+<a class="signatureLink" href="#editItem()">editItem</a>(id:Number, caption:String, cb:Function = null, div:Boolean = true, enable:Boolean = true):void</div>
 <div class="summaryTableDescription">
    Edit an existing <code>ContextualMenu</code> item.</div>
 </td><td class="summaryTableOwnerCol">ContextualMenu</td>
@@ -147,7 +147,7 @@ if (!isEclipse() || window.name != ECLIPSE_FRAME_NAME) {titleBar_setSubTitle("Cl
 <tr class="">
 <td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
 <div class="summarySignature">
-<a class="signatureLink" href="#enableItem()">enableItem</a>(id:uint):void</div>
+<a class="signatureLink" href="#enableItem()">enableItem</a>(id:Number):void</div>
 <div class="summaryTableDescription">
    Enable an existing item in the <code>ContextualMenu</code>
    </div>
@@ -156,7 +156,7 @@ if (!isEclipse() || window.name != ECLIPSE_FRAME_NAME) {titleBar_setSubTitle("Cl
 <tr class="">
 <td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
 <div class="summarySignature">
-<a class="signatureLink" href="#getItemId()">getItemId</a>(caption:String):uint</div>
+<a class="signatureLink" href="#getItemId()">getItemId</a>(caption:String):Number</div>
 <div class="summaryTableDescription">
    Returns the <code>ContextualMenu</code> item id that matches the <code>caption</code> arguments caption.</div>
 </td><td class="summaryTableOwnerCol">ContextualMenu</td>
@@ -164,7 +164,7 @@ if (!isEclipse() || window.name != ECLIPSE_FRAME_NAME) {titleBar_setSubTitle("Cl
 <tr class="">
 <td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
 <div class="summarySignature">
-<a class="signatureLink" href="#removeItem()">removeItem</a>(id:uint):void</div>
+<a class="signatureLink" href="#removeItem()">removeItem</a>(id:Number):void</div>
 <div class="summaryTableDescription">
    Remove an item from the Context Menu
    </div>
@@ -320,7 +320,7 @@ showHideInherited();
 </tr>
 </table>
 <div class="detailBody">
-<code>public function addItem(caption:String, cb:Function = null, div:Boolean = true, enable:Boolean = true):uint</code><p>
+<code>public function addItem(caption:String, cb:Function = null, div:Boolean = true, enable:Boolean = true):Number</code><p>
    Add a new item to the <code>ContextualMenu</code>.
    </p><span class="label">Parameters</span>
 <table border="0" cellspacing="0" cellpadding="0">
@@ -354,7 +354,7 @@ showHideInherited();
 <span class="label">Returns</span>
 <table border="0" cellspacing="0" cellpadding="0">
 <tr>
-<td width="20"></td><td><code>uint</code> &mdash; uint  <code>ContextualMenu</code> item id.
+<td width="20"></td><td><code>Number</code> &mdash; Number  <code>ContextualMenu</code> item id.
    </td>
 </tr>
 </table>
@@ -386,12 +386,12 @@ showHideInherited();
 </tr>
 </table>
 <div class="detailBody">
-<code>public function disableItem(id:uint):void</code><p>
+<code>public function disableItem(id:Number):void</code><p>
    Disable an existing item in the <code>ContextualMenu</code>
    </p><span class="label">Parameters</span>
 <table border="0" cellspacing="0" cellpadding="0">
 <tr>
-<td width="20px"></td><td><code><span class="label">id</span>:uint</code> &mdash;  of the item to be disabled.
+<td width="20px"></td><td><code><span class="label">id</span>:Number</code> &mdash;  of the item to be disabled.
    </td>
 </tr>
 </table>
@@ -411,12 +411,12 @@ showHideInherited();
 </tr>
 </table>
 <div class="detailBody">
-<code>public function editItem(id:uint, caption:String, cb:Function = null, div:Boolean = true, enable:Boolean = true):void</code><p>
+<code>public function editItem(id:Number, caption:String, cb:Function = null, div:Boolean = true, enable:Boolean = true):void</code><p>
    Edit an existing <code>ContextualMenu</code> item.
    </p><span class="label">Parameters</span>
 <table border="0" cellspacing="0" cellpadding="0">
 <tr>
-<td width="20px"></td><td><code><span class="label">id</span>:uint</code> &mdash;  of the existing item to be edited.
+<td width="20px"></td><td><code><span class="label">id</span>:Number</code> &mdash;  of the existing item to be edited.
    </td>
 </tr>
 <tr>
@@ -464,12 +464,12 @@ showHideInherited();
 </tr>
 </table>
 <div class="detailBody">
-<code>public function enableItem(id:uint):void</code><p>
+<code>public function enableItem(id:Number):void</code><p>
    Enable an existing item in the <code>ContextualMenu</code>
    </p><span class="label">Parameters</span>
 <table border="0" cellspacing="0" cellpadding="0">
 <tr>
-<td width="20px"></td><td><code><span class="label">id</span>:uint</code> &mdash;  of the item to be enabled.
+<td width="20px"></td><td><code><span class="label">id</span>:Number</code> &mdash;  of the item to be enabled.
    </td>
 </tr>
 </table>
@@ -489,7 +489,7 @@ showHideInherited();
 </tr>
 </table>
 <div class="detailBody">
-<code>public function getItemId(caption:String):uint</code><p>
+<code>public function getItemId(caption:String):Number</code><p>
    Returns the <code>ContextualMenu</code> item id that matches the <code>caption</code> arguments caption.
    </p><span class="label">Parameters</span>
 <table border="0" cellspacing="0" cellpadding="0">
@@ -502,7 +502,7 @@ showHideInherited();
 <span class="label">Returns</span>
 <table border="0" cellspacing="0" cellpadding="0">
 <tr>
-<td width="20"></td><td><code>uint</code> &mdash; uint  the <code>ContextualMenu</code> item id or <code>NaN</code> if no match was found.
+<td width="20"></td><td><code>Number</code> &mdash; Number the <code>ContextualMenu</code> item id or <code>NaN</code> if no match was found.
    </td>
 </tr>
 </table>
@@ -514,12 +514,12 @@ showHideInherited();
 </tr>
 </table>
 <div class="detailBody">
-<code>public function removeItem(id:uint):void</code><p>
+<code>public function removeItem(id:Number):void</code><p>
    Remove an item from the Context Menu
    </p><span class="label">Parameters</span>
 <table border="0" cellspacing="0" cellpadding="0">
 <tr>
-<td width="20px"></td><td><code><span class="label">id</span>:uint</code> &mdash;   the caption name of the item to be removed
+<td width="20px"></td><td><code><span class="label">id</span>:Number</code> &mdash;   the caption name of the item to be removed
    </td>
 </tr>
 </table>
