@@ -51,12 +51,12 @@ if (!isEclipse() || window.name != ECLIPSE_FRAME_NAME) {titleBar_setSubTitle("Cl
   
   <p><b>API Initialization Routine:</b><br/>
   <ol>
-  <li><code>initDocument</code> - initializes the Application <code>Document</code>'s <code>Canvas</code> once it has been added to stage (to support loadable API applications)</li>
-  <li><code>initMovieProperties</code> - sets SWF movie properties & initializes <code>StageDisplay</code></li>
+  <li><code>initDocument</code> - initializes the Application <code>Document</code>'s <code>Canvas</code> on <code>ADDED_TO_STAGE</code> (to support the option of loadable API applications), or effectively on SWF initialization as the <code>Document</code> subclass <i>is</i> the <code>Stage</code> itself.</li>
+  <li><code>initMovieProperties</code> - sets SWF movie properties & initializes <code>StageDisplay</code>.</li>
   <li><code>AppLoader</code> - instantiates & waits for the SWF file to finish loading.</li>
   <li><code>initTweenEngine</code> - sets up <code>Tweener</code> shortcut properties.</li>
-  <li><code>initAPI</code> - instantiates <code>Boostrap</code> & waits for the queued initialization routes to complete.</li>
-  <li><code>initEntryPoint</code> - the baseline API has been initialized; the custom code layer begins here.</li>
+  <li><code>initAPI</code> - instantiates <code>Boostrap</code> & waits for the queued initialization routines to complete.</li>
+  <li><code>initEntryPoint</code> - the baseline API has been initialized; the developers custom code layer enters here.</li>
   </ol>
   </p> 
   
@@ -92,7 +92,7 @@ if (!isEclipse() || window.name != ECLIPSE_FRAME_NAME) {titleBar_setSubTitle("Cl
 <tr class="">
 <td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a class="signatureLink" href="#bootstrap">bootstrap</a> : <a href="../core/Bootstrap.html">Bootstrap</a>
 <div class="summaryTableDescription">[read-only]
-   Return the <code>Boostrap</code> (queued initialization) for adding <code>BootstrapEvent</code> listeners.</div>
+   The <code>Boostrap</code> (queued initialization) for adding <code>BootstrapEvent</code> listeners.</div>
 </td><td class="summaryTableOwnerCol">Document</td>
 </tr>
 <tr class="hideInheritedProperty">
@@ -102,7 +102,8 @@ if (!isEclipse() || window.name != ECLIPSE_FRAME_NAME) {titleBar_setSubTitle("Cl
 </td><td class="summaryTableOwnerCol"><a href="CoreSprite.html">CoreSprite</a></td>
 </tr>
 <tr class="hideInheritedProperty">
-<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img class="inheritedSummaryImage" title="Inherited" alt="Inherited" src="../../images/inheritedSummary.gif"></td><td class="summaryTableSignatureCol"><a class="signatureLink" href="Canvas.html#flashVars">flashVars</a> : Object<div class="summaryTableDescription">[static]</div>
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img class="inheritedSummaryImage" title="Inherited" alt="Inherited" src="../../images/inheritedSummary.gif"></td><td class="summaryTableSignatureCol"><a class="signatureLink" href="Canvas.html#flashVars">flashVars</a> : Object<div class="summaryTableDescription">[static]
+   Reference to the An object that contains name-value pairs that represent the parameters provided to the loaded SWF file through the <code>Object Embed</code> tags.</div>
 </td><td class="summaryTableOwnerCol"><a href="Canvas.html">Canvas</a></td>
 </tr>
 <tr class="hideInheritedProperty">
@@ -112,17 +113,20 @@ if (!isEclipse() || window.name != ECLIPSE_FRAME_NAME) {titleBar_setSubTitle("Cl
 </td><td class="summaryTableOwnerCol"><a href="CoreSprite.html">CoreSprite</a></td>
 </tr>
 <tr class="hideInheritedProperty">
-<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img class="inheritedSummaryImage" title="Inherited" alt="Inherited" src="../../images/inheritedSummary.gif"></td><td class="summaryTableSignatureCol"><a class="signatureLink" href="Canvas.html#loaderInfo">loaderInfo</a> : LoaderInfo<div class="summaryTableDescription">[static]</div>
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img class="inheritedSummaryImage" title="Inherited" alt="Inherited" src="../../images/inheritedSummary.gif"></td><td class="summaryTableSignatureCol"><a class="signatureLink" href="Canvas.html#loaderInfo">loaderInfo</a> : LoaderInfo<div class="summaryTableDescription">[static]
+   Reference to the <code>LoaderInfo</code> object associated with the SWF file containing information about loading the file to which this display object belongs.</div>
 </td><td class="summaryTableOwnerCol"><a href="Canvas.html">Canvas</a></td>
 </tr>
 <tr class="">
 <td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a class="signatureLink" href="#preloader">preloader</a> : <a href="../load/AppLoader.html">AppLoader</a>
 <div class="summaryTableDescription">[read-only]
-   Return the <code>AppLoader</code> instance if load progress checking is desired.</div>
+   The <code>AppLoader</code> instance if load progress checking is desired via <code>AppEvent</code> listeners.</div>
 </td><td class="summaryTableOwnerCol">Document</td>
 </tr>
 <tr class="hideInheritedProperty">
-<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img class="inheritedSummaryImage" title="Inherited" alt="Inherited" src="../../images/inheritedSummary.gif"></td><td class="summaryTableSignatureCol"><a class="signatureLink" href="Canvas.html#root">root</a> : DisplayObject<div class="summaryTableDescription">[static]</div>
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img class="inheritedSummaryImage" title="Inherited" alt="Inherited" src="../../images/inheritedSummary.gif"></td><td class="summaryTableSignatureCol"><a class="signatureLink" href="Canvas.html#root">root</a> : DisplayObject<div class="summaryTableDescription">[static]
+   Reference to the Application <code>root</code> which represents the top-most display object, if this is the first 
+   SWF file loaded (<i>e.g.</div>
 </td><td class="summaryTableOwnerCol"><a href="Canvas.html">Canvas</a></td>
 </tr>
 <tr class="hideInheritedProperty">
@@ -131,7 +135,8 @@ if (!isEclipse() || window.name != ECLIPSE_FRAME_NAME) {titleBar_setSubTitle("Cl
 </td><td class="summaryTableOwnerCol"><a href="CoreSprite.html">CoreSprite</a></td>
 </tr>
 <tr class="hideInheritedProperty">
-<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img class="inheritedSummaryImage" title="Inherited" alt="Inherited" src="../../images/inheritedSummary.gif"></td><td class="summaryTableSignatureCol"><a class="signatureLink" href="Canvas.html#stage">stage</a> : Stage<div class="summaryTableDescription">[static]</div>
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img class="inheritedSummaryImage" title="Inherited" alt="Inherited" src="../../images/inheritedSummary.gif"></td><td class="summaryTableSignatureCol"><a class="signatureLink" href="Canvas.html#stage">stage</a> : Stage<div class="summaryTableDescription">[static]
+   Reference to the Application <code>stage</code> instance which represents the main drawing area.</div>
 </td><td class="summaryTableOwnerCol"><a href="Canvas.html">Canvas</a></td>
 </tr>
 </table>
@@ -264,7 +269,7 @@ if (!isEclipse() || window.name != ECLIPSE_FRAME_NAME) {titleBar_setSubTitle("Cl
 <div class="summarySignature">
 <a class="signatureLink" href="#initTweenEngine()">initTweenEngine</a>():void</div>
 <div class="summaryTableDescription">
-   Initialize <code>Tweener</code> specialProperties shortcuts.</div>
+   Initialize <code>Tweener specialProperties</code> shortcuts.</div>
 </td><td class="summaryTableOwnerCol">Document</td>
 </tr>
 <tr class="hideInheritedProtectedMethod">
@@ -308,7 +313,7 @@ showHideInherited();
 </table>
 <div class="detailBody">
 <code>bootstrap:<a href="../core/Bootstrap.html">Bootstrap</a></code>&nbsp;&nbsp;[read-only]<p>
-   Return the <code>Boostrap</code> (queued initialization) for adding <code>BootstrapEvent</code> listeners.
+   The <code>Boostrap</code> (queued initialization) for adding <code>BootstrapEvent</code> listeners.
    </p><span class="label">Implementation</span>
 <br>
 <code>&nbsp;&nbsp;&nbsp;&nbsp;public function get bootstrap():<a href="../core/Bootstrap.html">Bootstrap</a></code>
@@ -322,7 +327,7 @@ showHideInherited();
 </table>
 <div class="detailBody">
 <code>preloader:<a href="../load/AppLoader.html">AppLoader</a></code>&nbsp;&nbsp;[read-only]<p>
-   Return the <code>AppLoader</code> instance if load progress checking is desired.
+   The <code>AppLoader</code> instance if load progress checking is desired via <code>AppEvent</code> listeners.
    </p><span class="label">Implementation</span>
 <br>
 <code>&nbsp;&nbsp;&nbsp;&nbsp;public function get preloader():<a href="../load/AppLoader.html">AppLoader</a></code>
@@ -472,7 +477,7 @@ showHideInherited();
 </table>
 <div class="detailBody">
 <code>protected function initTweenEngine():void</code><p>
-   Initialize <code>Tweener</code> specialProperties shortcuts.
+   Initialize <code>Tweener specialProperties</code> shortcuts.
    
    </p><p><b>Customization:</b> When overriding this method only init the shortcuts 
    needed by your application to minimize memory usage.</p>
