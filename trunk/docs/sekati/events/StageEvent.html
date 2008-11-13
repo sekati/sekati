@@ -4,7 +4,7 @@
 <META http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <link rel="stylesheet" href="../../style.css" type="text/css" media="screen">
 <link rel="stylesheet" href="../../print.css" type="text/css" media="print">
-<meta content="StageEvent,sekati.events.StageEvent,ACTIVATE,DEACTIVATE,FULLSCREEN,LEAVE,LEAVE_COMPLETE,RENDER,RESIZE,RESIZE_COMPLETE,clone" name="keywords">
+<meta content="StageEvent,sekati.events.StageEvent,ACTIVATE,DEACTIVATE,FULLSCREEN,LEAVE,LEAVE_COMPLETE,MOUSE_IDLE,MOUSE_RESUME,RENDER,RESIZE,RESIZE_COMPLETE,clone" name="keywords">
 <title>sekati.events.StageEvent</title>
 </head>
 <body>
@@ -81,42 +81,52 @@ if (!isEclipse() || window.name != ECLIPSE_FRAME_NAME) {titleBar_setSubTitle("Cl
 <th>&nbsp;</th><th colspan="2">Constant</th><th class="summaryTableOwnerCol">Defined&nbsp;by</th>
 </tr>
 <tr class="">
-<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a class="signatureLink" href="#ACTIVATE">ACTIVATE</a> : String = "onStageActivate"<div class="summaryTableDescription">[static]
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a class="signatureLink" href="#ACTIVATE">ACTIVATE</a> : String = "stageActivate"<div class="summaryTableDescription">[static]
    </div>
 </td><td class="summaryTableOwnerCol">StageEvent</td>
 </tr>
 <tr class="">
-<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a class="signatureLink" href="#DEACTIVATE">DEACTIVATE</a> : String = "onStageDeactivate"<div class="summaryTableDescription">[static]
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a class="signatureLink" href="#DEACTIVATE">DEACTIVATE</a> : String = "stageDeactivate"<div class="summaryTableDescription">[static]
    </div>
 </td><td class="summaryTableOwnerCol">StageEvent</td>
 </tr>
 <tr class="">
-<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a class="signatureLink" href="#FULLSCREEN">FULLSCREEN</a> : String = "onStageFullscreen"<div class="summaryTableDescription">[static]
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a class="signatureLink" href="#FULLSCREEN">FULLSCREEN</a> : String = "stageFullscreen"<div class="summaryTableDescription">[static]
    </div>
 </td><td class="summaryTableOwnerCol">StageEvent</td>
 </tr>
 <tr class="">
-<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a class="signatureLink" href="#LEAVE">LEAVE</a> : String = "onStageLeave"<div class="summaryTableDescription">[static]
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a class="signatureLink" href="#LEAVE">LEAVE</a> : String = "stageLeave"<div class="summaryTableDescription">[static]
    </div>
 </td><td class="summaryTableOwnerCol">StageEvent</td>
 </tr>
 <tr class="">
-<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a class="signatureLink" href="#LEAVE_COMPLETE">LEAVE_COMPLETE</a> : String = "onStageLeaveComplete"<div class="summaryTableDescription">[static]
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a class="signatureLink" href="#LEAVE_COMPLETE">LEAVE_COMPLETE</a> : String = "stageLeaveComplete"<div class="summaryTableDescription">[static]
    </div>
 </td><td class="summaryTableOwnerCol">StageEvent</td>
 </tr>
 <tr class="">
-<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a class="signatureLink" href="#RENDER">RENDER</a> : String = "onStageRender"<div class="summaryTableDescription">[static]
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a class="signatureLink" href="#MOUSE_IDLE">MOUSE_IDLE</a> : String = "stageMouseIdle"<div class="summaryTableDescription">[static]
    </div>
 </td><td class="summaryTableOwnerCol">StageEvent</td>
 </tr>
 <tr class="">
-<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a class="signatureLink" href="#RESIZE">RESIZE</a> : String = "onStageResize"<div class="summaryTableDescription">[static]
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a class="signatureLink" href="#MOUSE_RESUME">MOUSE_RESUME</a> : String = "stageMouseResume"<div class="summaryTableDescription">[static]
    </div>
 </td><td class="summaryTableOwnerCol">StageEvent</td>
 </tr>
 <tr class="">
-<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a class="signatureLink" href="#RESIZE_COMPLETE">RESIZE_COMPLETE</a> : String = "onStageResizeComplete"<div class="summaryTableDescription">[static]
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a class="signatureLink" href="#RENDER">RENDER</a> : String = "stageRender"<div class="summaryTableDescription">[static]
+   </div>
+</td><td class="summaryTableOwnerCol">StageEvent</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a class="signatureLink" href="#RESIZE">RESIZE</a> : String = "stageResize"<div class="summaryTableDescription">[static]
+   </div>
+</td><td class="summaryTableOwnerCol">StageEvent</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a class="signatureLink" href="#RESIZE_COMPLETE">RESIZE_COMPLETE</a> : String = "stageResizeComplete"<div class="summaryTableDescription">[static]
    </div>
 </td><td class="summaryTableOwnerCol">StageEvent</td>
 </tr>
@@ -184,7 +194,7 @@ showHideInherited();
 </tr>
 </table>
 <div class="detailBody">
-<code>public static const ACTIVATE:String = "onStageActivate"</code><p>
+<code>public static const ACTIVATE:String = "stageActivate"</code><p>
    </p></div>
 <a name="DEACTIVATE"></a>
 <table cellspacing="0" cellpadding="0" class="detailHeader">
@@ -193,7 +203,7 @@ showHideInherited();
 </tr>
 </table>
 <div class="detailBody">
-<code>public static const DEACTIVATE:String = "onStageDeactivate"</code><p>
+<code>public static const DEACTIVATE:String = "stageDeactivate"</code><p>
    </p></div>
 <a name="FULLSCREEN"></a>
 <table cellspacing="0" cellpadding="0" class="detailHeader">
@@ -202,7 +212,7 @@ showHideInherited();
 </tr>
 </table>
 <div class="detailBody">
-<code>public static const FULLSCREEN:String = "onStageFullscreen"</code><p>
+<code>public static const FULLSCREEN:String = "stageFullscreen"</code><p>
    </p></div>
 <a name="LEAVE"></a>
 <table cellspacing="0" cellpadding="0" class="detailHeader">
@@ -211,7 +221,7 @@ showHideInherited();
 </tr>
 </table>
 <div class="detailBody">
-<code>public static const LEAVE:String = "onStageLeave"</code><p>
+<code>public static const LEAVE:String = "stageLeave"</code><p>
    </p></div>
 <a name="LEAVE_COMPLETE"></a>
 <table cellspacing="0" cellpadding="0" class="detailHeader">
@@ -220,7 +230,25 @@ showHideInherited();
 </tr>
 </table>
 <div class="detailBody">
-<code>public static const LEAVE_COMPLETE:String = "onStageLeaveComplete"</code><p>
+<code>public static const LEAVE_COMPLETE:String = "stageLeaveComplete"</code><p>
+   </p></div>
+<a name="MOUSE_IDLE"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">MOUSE_IDLE</td><td class="detailHeaderType">constant</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public static const MOUSE_IDLE:String = "stageMouseIdle"</code><p>
+   </p></div>
+<a name="MOUSE_RESUME"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">MOUSE_RESUME</td><td class="detailHeaderType">constant</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public static const MOUSE_RESUME:String = "stageMouseResume"</code><p>
    </p></div>
 <a name="RENDER"></a>
 <table cellspacing="0" cellpadding="0" class="detailHeader">
@@ -229,7 +257,7 @@ showHideInherited();
 </tr>
 </table>
 <div class="detailBody">
-<code>public static const RENDER:String = "onStageRender"</code><p>
+<code>public static const RENDER:String = "stageRender"</code><p>
    </p></div>
 <a name="RESIZE"></a>
 <table cellspacing="0" cellpadding="0" class="detailHeader">
@@ -238,7 +266,7 @@ showHideInherited();
 </tr>
 </table>
 <div class="detailBody">
-<code>public static const RESIZE:String = "onStageResize"</code><p>
+<code>public static const RESIZE:String = "stageResize"</code><p>
    </p></div>
 <a name="RESIZE_COMPLETE"></a>
 <table cellspacing="0" cellpadding="0" class="detailHeader">
@@ -247,7 +275,7 @@ showHideInherited();
 </tr>
 </table>
 <div class="detailBody">
-<code>public static const RESIZE_COMPLETE:String = "onStageResizeComplete"</code><p>
+<code>public static const RESIZE_COMPLETE:String = "stageResizeComplete"</code><p>
    </p></div>
 <br>
 <br>
