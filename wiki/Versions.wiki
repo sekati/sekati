@@ -1,5 +1,5 @@
 #labels Featured,Phase-Design,Phase-Implementation
-# What's with all the monster names?
+#What's with all the monster names?
 
 = Versions =
 
