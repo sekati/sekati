@@ -4,7 +4,7 @@
 <META http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <link rel="stylesheet" href="../../style.css" type="text/css" media="screen">
 <link rel="stylesheet" href="../../print.css" type="text/css" media="print">
-<meta content="PerformanceMonitor,sekati.profiler.PerformanceMonitor,BAR_ALPHA,BAR_HEIGHT,BAR_MULTIPLIER,FPS_COLOR,MAX_MEM_COLOR,MEM_COLOR,maxFps,maxMem,performanceUI,stage,tf,time,init,update" name="keywords">
+<meta content="PerformanceMonitor,sekati.profiler.PerformanceMonitor,BAR_ALPHA,BAR_HEIGHT,BAR_MULTIPLIER,FPS_COLOR,MAX_MEM_COLOR,MEM_COLOR,maxFps,maxMem,performanceUI,stage,tf,time,destroy" name="keywords">
 <title>sekati.profiler.PerformanceMonitor</title>
 </head>
 <body>
@@ -35,7 +35,7 @@ if (!isEclipse() || window.name != ECLIPSE_FRAME_NAME) {titleBar_setSubTitle("Cl
 <td class="classHeaderTableLabel">Package</td><td><a onclick="javascript:loadClassListFrame('class-list.html')" href="package-detail.html">sekati.profiler</a></td>
 </tr>
 <tr>
-<td class="classHeaderTableLabel">Class</td><td class="classSignature">public class PerformanceMonitor</td>
+<td class="classHeaderTableLabel">Class</td><td class="classSignature">public final  class PerformanceMonitor</td>
 </tr>
 </table>
 <p></p>
@@ -87,36 +87,19 @@ if (!isEclipse() || window.name != ECLIPSE_FRAME_NAME) {titleBar_setSubTitle("Cl
 <tr class="">
 <td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
 <div class="summarySignature">
-<a class="signatureLink" href="#PerformanceMonitor()">PerformanceMonitor</a>(s:Stage)</div>
+<a class="signatureLink" href="#PerformanceMonitor()">PerformanceMonitor</a>(stage:Stage)</div>
 <div class="summaryTableDescription">
    PerformanceMonitor Constructor
    </div>
 </td><td class="summaryTableOwnerCol">PerformanceMonitor</td>
 </tr>
-</table>
-</div>
-<a name="methodSummary"></a><a name="protectedMethodSummary"></a>
-<div class="summarySection">
-<div class="summaryTableTitle">Protected Methods</div>
-<table id="summaryTableProtectedMethod" class="summaryTable " cellpadding="3" cellspacing="0">
-<tr>
-<th>&nbsp;</th><th colspan="2">Method</th><th class="summaryTableOwnerCol">Defined&nbsp;by</th>
-</tr>
 <tr class="">
 <td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
 <div class="summarySignature">
-<a class="signatureLink" href="#init()">init</a>():void</div>
+<a class="signatureLink" href="#destroy()">destroy</a>():void</div>
 <div class="summaryTableDescription">
-   Initialize the UI
+   Destroy the PerformanceMonitor
    </div>
-</td><td class="summaryTableOwnerCol">PerformanceMonitor</td>
-</tr>
-<tr class="">
-<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
-<div class="summarySignature">
-<a class="signatureLink" href="#update()">update</a>(e:Event = null):void</div>
-<div class="summaryTableDescription">
-   Update performance info.</div>
 </td><td class="summaryTableOwnerCol">PerformanceMonitor</td>
 </tr>
 </table>
@@ -224,43 +207,27 @@ showHideInherited();
 </tr>
 </table>
 <div class="detailBody">
-<code>public function PerformanceMonitor(s:Stage)</code><p>
+<code>public function PerformanceMonitor(stage:Stage)</code><p>
    PerformanceMonitor Constructor
    </p><span class="label">Parameters</span>
 <table border="0" cellspacing="0" cellpadding="0">
 <tr>
-<td width="20px"></td><td><code><span class="label">s</span>:Stage</code></td>
+<td width="20px"></td><td><code><span class="label">stage</span>:Stage</code></td>
 </tr>
 </table>
 </div>
 <a name="methodDetail"></a>
 <div class="detailSectionHeader">Method detail</div>
-<a name="init()"></a>
+<a name="destroy()"></a>
 <table cellspacing="0" cellpadding="0" class="detailHeader">
 <tr>
-<td class="detailHeaderName">init</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td>
+<td class="detailHeaderName">destroy</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td>
 </tr>
 </table>
 <div class="detailBody">
-<code>protected function init():void</code><p>
-   Initialize the UI
+<code>public function destroy():void</code><p>
+   Destroy the PerformanceMonitor
    </p></div>
-<a name="update()"></a>
-<table cellspacing="0" cellpadding="0" class="detailHeader">
-<tr>
-<td class="detailHeaderName">update</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td>
-</tr>
-</table>
-<div class="detailBody">
-<code>protected function update(e:Event = null):void</code><p>
-   Update performance info.
-   </p><span class="label">Parameters</span>
-<table border="0" cellspacing="0" cellpadding="0">
-<tr>
-<td width="20px"></td><td><code><span class="label">e</span>:Event</code> (default = <code>null</code>)<code></code></td>
-</tr>
-</table>
-</div>
 <a name="constantDetail"></a>
 <div class="detailSectionHeader">Constant detail</div>
 <a name="BAR_ALPHA"></a>

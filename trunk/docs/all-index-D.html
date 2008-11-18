@@ -180,7 +180,7 @@ if (!isEclipse() || window.name != ECLIPSE_FRAME_NAME) {titleBar_setSubTitle("DÂ
 </tr>
 <tr>
 <td width="20"></td><td>
-   Dispatch a Deactivate <code>StageEvent</code> for non-displayObjects.</td>
+   Dispatches <code>StageEvent.DEACTIVATE</code> when application loses focus.</td>
 </tr>
 <tr>
 <td colspan="2" class="idxrow"><a onclick="javascript:loadClassListFrame('sekati/log/class-list.html');" href="sekati/log/ILogger.html#debug()">debug</a>(origin, message) &mdash; Method in interface sekati.log.<a onclick="javascript:loadClassListFrame('sekati/log/class-list.html');" href="sekati/log/ILogger.html">ILogger</a></td>
@@ -394,7 +394,8 @@ if (!isEclipse() || window.name != ECLIPSE_FRAME_NAME) {titleBar_setSubTitle("DÂ
 <td colspan="2" class="idxrow"><a onclick="javascript:loadClassListFrame('sekati/display/class-list.html');" href="sekati/display/StageDisplay.html#destroy()">destroy</a>() &mdash; Method in class sekati.display.<a onclick="javascript:loadClassListFrame('sekati/display/class-list.html');" href="sekati/display/StageDisplay.html">StageDisplay</a></td>
 </tr>
 <tr>
-<td width="20"></td><td></td>
+<td width="20"></td><td>
+   Cleanup the StageDisplay singleton instance.</td>
 </tr>
 <tr>
 <td colspan="2" class="idxrow"><a onclick="javascript:loadClassListFrame('sekati/events/class-list.html');" href="sekati/events/FramePulse.html#destroy()">destroy</a>() &mdash; Method in class sekati.events.<a onclick="javascript:loadClassListFrame('sekati/events/class-list.html');" href="sekati/events/FramePulse.html">FramePulse</a></td>
@@ -430,6 +431,14 @@ if (!isEclipse() || window.name != ECLIPSE_FRAME_NAME) {titleBar_setSubTitle("DÂ
 <tr>
 <td width="20"></td><td>
    Destroy sharedObject data and instance
+   </td>
+</tr>
+<tr>
+<td colspan="2" class="idxrow"><a onclick="javascript:loadClassListFrame('sekati/profiler/class-list.html');" href="sekati/profiler/PerformanceMonitor.html#destroy()">destroy</a>() &mdash; Method in class sekati.profiler.<a onclick="javascript:loadClassListFrame('sekati/profiler/class-list.html');" href="sekati/profiler/PerformanceMonitor.html">PerformanceMonitor</a></td>
+</tr>
+<tr>
+<td width="20"></td><td>
+   Destroy the PerformanceMonitor
    </td>
 </tr>
 <tr>
