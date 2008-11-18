@@ -114,6 +114,27 @@ if (!isEclipse() || window.name != ECLIPSE_FRAME_NAME) {titleBar_setSubTitle("IÂ
   meaning they act directly on the collection they are iterating removing elements along its way.</td>
 </tr>
 <tr>
+<td colspan="2" class="idxrow"><a onclick="javascript:loadClassListFrame('sekati/display/class-list.html');" href="sekati/display/StageDisplay.html#idle">idle</a> &mdash; Property in class sekati.display.<a onclick="javascript:loadClassListFrame('sekati/display/class-list.html');" href="sekati/display/StageDisplay.html">StageDisplay</a></td>
+</tr>
+<tr>
+<td width="20"></td><td>
+   Boolean status of stage idle.</td>
+</tr>
+<tr>
+<td colspan="2" class="idxrow"><a onclick="javascript:loadClassListFrame('sekati/display/class-list.html');" href="sekati/display/StageDisplay.html#idleHandler()">idleHandler</a>() &mdash; Method in class sekati.display.<a onclick="javascript:loadClassListFrame('sekati/display/class-list.html');" href="sekati/display/StageDisplay.html">StageDisplay</a></td>
+</tr>
+<tr>
+<td width="20"></td><td>
+   Dispatches <code>StageEvent.MOUSE_IDLE</code> after <code>MOUSE_IDLE_MS</code> expires.</td>
+</tr>
+<tr>
+<td colspan="2" class="idxrow"><a onclick="javascript:loadClassListFrame('sekati/display/class-list.html');" href="sekati/display/StageDisplay.html#idleTime">idleTime</a> &mdash; Property in class sekati.display.<a onclick="javascript:loadClassListFrame('sekati/display/class-list.html');" href="sekati/display/StageDisplay.html">StageDisplay</a></td>
+</tr>
+<tr>
+<td width="20"></td><td>
+   Amount of mouse idle time (in milliseconds) before the <code>StageEvent.IDLE</code> event fires [Default: 10000].</td>
+</tr>
+<tr>
 <td colspan="2" class="idxrow"><a onclick="javascript:loadClassListFrame('sekati/filters/class-list.html');" href="sekati/filters/FilterMode.html#IGNORE">IGNORE</a> &mdash; Constant static property in class sekati.filters.<a onclick="javascript:loadClassListFrame('sekati/filters/class-list.html');" href="sekati/filters/FilterMode.html">FilterMode</a></td>
 </tr>
 <tr>
@@ -229,14 +250,6 @@ if (!isEclipse() || window.name != ECLIPSE_FRAME_NAME) {titleBar_setSubTitle("IÂ
 <tr>
 <td width="20"></td><td>
    Initialize.</td>
-</tr>
-<tr>
-<td colspan="2" class="idxrow"><a onclick="javascript:loadClassListFrame('sekati/profiler/class-list.html');" href="sekati/profiler/PerformanceMonitor.html#init()">init</a>() &mdash; Method in class sekati.profiler.<a onclick="javascript:loadClassListFrame('sekati/profiler/class-list.html');" href="sekati/profiler/PerformanceMonitor.html">PerformanceMonitor</a></td>
-</tr>
-<tr>
-<td width="20"></td><td>
-   Initialize the UI
-   </td>
 </tr>
 <tr>
 <td colspan="2" class="idxrow"><a onclick="javascript:loadClassListFrame('sekati/ui/class-list.html');" href="sekati/ui/FLVPlayer.html#init()">init</a>(url, width, height, smoothing) &mdash; Method in class sekati.ui.<a onclick="javascript:loadClassListFrame('sekati/ui/class-list.html');" href="sekati/ui/FLVPlayer.html">FLVPlayer</a></td>
@@ -408,12 +421,6 @@ if (!isEclipse() || window.name != ECLIPSE_FRAME_NAME) {titleBar_setSubTitle("IÂ
    </td>
 </tr>
 <tr>
-<td colspan="2" class="idxrow"><a onclick="javascript:loadClassListFrame('sekati/display/class-list.html');" href="sekati/display/StageDisplay.html#_instance">_instance</a> &mdash; Static property in class sekati.display.<a onclick="javascript:loadClassListFrame('sekati/display/class-list.html');" href="sekati/display/StageDisplay.html">StageDisplay</a></td>
-</tr>
-<tr>
-<td width="20"></td><td></td>
-</tr>
-<tr>
 <td colspan="2" class="idxrow"><a onclick="javascript:loadClassListFrame('sekati/events/class-list.html');" href="sekati/events/FramePulse.html#_instance">_instance</a> &mdash; Static property in class sekati.events.<a onclick="javascript:loadClassListFrame('sekati/events/class-list.html');" href="sekati/events/FramePulse.html">FramePulse</a></td>
 </tr>
 <tr>
@@ -527,6 +534,13 @@ if (!isEclipse() || window.name != ECLIPSE_FRAME_NAME) {titleBar_setSubTitle("IÂ
 <tr>
 <td width="20"></td><td>
    This Dimension is intersected with the one specified.</td>
+</tr>
+<tr>
+<td colspan="2" class="idxrow"><a onclick="javascript:loadClassListFrame('sekati/display/class-list.html');" href="sekati/display/CoreSprite.html#invalidate()">invalidate</a>() &mdash; Method in class sekati.display.<a onclick="javascript:loadClassListFrame('sekati/display/class-list.html');" href="sekati/display/CoreSprite.html">CoreSprite</a></td>
+</tr>
+<tr>
+<td width="20"></td><td>
+   Request a redraw, use for deferred rendering.</td>
 </tr>
 <tr>
 <td colspan="2" class="idxrow"><a onclick="javascript:loadClassListFrame('sekati/display/class-list.html');" href="sekati/display/StageDisplay.html#invalidate()">invalidate</a>() &mdash; Method in class sekati.display.<a onclick="javascript:loadClassListFrame('sekati/display/class-list.html');" href="sekati/display/StageDisplay.html">StageDisplay</a></td>

@@ -550,25 +550,11 @@ if (!isEclipse() || window.name != ECLIPSE_FRAME_NAME) {titleBar_setSubTitle("RÂ
    Update the Viewport confines and dispatch <code>ViewportEvent.RENDER</code>.</td>
 </tr>
 <tr>
-<td colspan="2" class="idxrow"><a onclick="javascript:loadClassListFrame('sekati/events/class-list.html');" href="sekati/events/StageEvent.html#RENDER">RENDER</a> &mdash; Constant static property in class sekati.events.<a onclick="javascript:loadClassListFrame('sekati/events/class-list.html');" href="sekati/events/StageEvent.html">StageEvent</a></td>
-</tr>
-<tr>
-<td width="20"></td><td>
-   </td>
-</tr>
-<tr>
 <td colspan="2" class="idxrow"><a onclick="javascript:loadClassListFrame('sekati/events/class-list.html');" href="sekati/events/ViewportEvent.html#RENDER">RENDER</a> &mdash; Constant static property in class sekati.events.<a onclick="javascript:loadClassListFrame('sekati/events/class-list.html');" href="sekati/events/ViewportEvent.html">ViewportEvent</a></td>
 </tr>
 <tr>
 <td width="20"></td><td>
    </td>
-</tr>
-<tr>
-<td colspan="2" class="idxrow"><a onclick="javascript:loadClassListFrame('sekati/display/class-list.html');" href="sekati/display/StageDisplay.html#renderHandler()">renderHandler</a>(e) &mdash; Method in class sekati.display.<a onclick="javascript:loadClassListFrame('sekati/display/class-list.html');" href="sekati/display/StageDisplay.html">StageDisplay</a></td>
-</tr>
-<tr>
-<td width="20"></td><td>
-   Dispatch a Render <code>StageEvent</code> for non-displayObjects.</td>
 </tr>
 <tr>
 <td colspan="2" class="idxrow"><a onclick="javascript:loadClassListFrame('sekati/utils/class-list.html');" href="sekati/utils/StringUtil.html#replace()">replace</a>(str, oldChar, newChar) &mdash; Static method in class sekati.utils.<a onclick="javascript:loadClassListFrame('sekati/utils/class-list.html');" href="sekati/utils/StringUtil.html">StringUtil</a></td>
@@ -747,31 +733,32 @@ if (!isEclipse() || window.name != ECLIPSE_FRAME_NAME) {titleBar_setSubTitle("RÂ
    </td>
 </tr>
 <tr>
-<td colspan="2" class="idxrow"><a onclick="javascript:loadClassListFrame('sekati/display/class-list.html');" href="sekati/display/StageDisplay.html#RESIZE_COMPLETE_DELAY_MS">RESIZE_COMPLETE_DELAY_MS</a> &mdash; Constant static property in class sekati.display.<a onclick="javascript:loadClassListFrame('sekati/display/class-list.html');" href="sekati/display/StageDisplay.html">StageDisplay</a></td>
-</tr>
-<tr>
-<td width="20"></td><td>
-   Milisecond delay after <code>RESIZE</code> event to fire <code>RESIZE_COMPLETE</code>.</td>
-</tr>
-<tr>
 <td colspan="2" class="idxrow"><a onclick="javascript:loadClassListFrame('sekati/display/class-list.html');" href="sekati/display/StageDisplay.html#resizeCompleteHandler()">resizeCompleteHandler</a>() &mdash; Method in class sekati.display.<a onclick="javascript:loadClassListFrame('sekati/display/class-list.html');" href="sekati/display/StageDisplay.html">StageDisplay</a></td>
 </tr>
 <tr>
 <td width="20"></td><td>
-   Dispatch a ResizeComplete <code>StageEvent</code> for non-displayObjects.</td>
+   Dispatches <code>StageEvent.RESIZE_COMPLETE</code> when <code>RESIZE_COMPLETE_MS</code> expires.</td>
+</tr>
+<tr>
+<td colspan="2" class="idxrow"><a onclick="javascript:loadClassListFrame('sekati/display/class-list.html');" href="sekati/display/StageDisplay.html#RESIZE_COMPLETE_MS">RESIZE_COMPLETE_MS</a> &mdash; Static property in class sekati.display.<a onclick="javascript:loadClassListFrame('sekati/display/class-list.html');" href="sekati/display/StageDisplay.html">StageDisplay</a></td>
+</tr>
+<tr>
+<td width="20"></td><td>
+   Millisecond delay after <code>RESIZE</code> event to fire <code>RESIZE_COMPLETE</code>.</td>
+</tr>
+<tr>
+<td colspan="2" class="idxrow"><a onclick="javascript:loadClassListFrame('sekati/display/class-list.html');" href="sekati/display/StageDisplay.html#resizeCompleteTime">resizeCompleteTime</a> &mdash; Property in class sekati.display.<a onclick="javascript:loadClassListFrame('sekati/display/class-list.html');" href="sekati/display/StageDisplay.html">StageDisplay</a></td>
+</tr>
+<tr>
+<td width="20"></td><td>
+   Amount of post stage resize time (in milliseconds) before the <code>StageEvent.RESIZE_COMPLETE</code> event fires [Default: 500].</td>
 </tr>
 <tr>
 <td colspan="2" class="idxrow"><a onclick="javascript:loadClassListFrame('sekati/display/class-list.html');" href="sekati/display/StageDisplay.html#resizeHandler()">resizeHandler</a>(e) &mdash; Method in class sekati.display.<a onclick="javascript:loadClassListFrame('sekati/display/class-list.html');" href="sekati/display/StageDisplay.html">StageDisplay</a></td>
 </tr>
 <tr>
 <td width="20"></td><td>
-   Dispatch a Resize <code>StageEvent<code> for non-displayObjects.</td>
-</tr>
-<tr>
-<td colspan="2" class="idxrow"><a onclick="javascript:loadClassListFrame('sekati/display/class-list.html');" href="sekati/display/StageDisplay.html#resizeIntervalId">resizeIntervalId</a> &mdash; Static property in class sekati.display.<a onclick="javascript:loadClassListFrame('sekati/display/class-list.html');" href="sekati/display/StageDisplay.html">StageDisplay</a></td>
-</tr>
-<tr>
-<td width="20"></td><td></td>
+   Dispatches <code>StageEvent.RESIZE</code> when the application stage is resized.</td>
 </tr>
 <tr>
 <td colspan="2" class="idxrow"><a onclick="javascript:loadClassListFrame('sekati/external/class-list.html');" href="sekati/external/ExternalBase.html#resizeWindow()">resizeWindow</a>(w, h) &mdash; Static method in class sekati.external.<a onclick="javascript:loadClassListFrame('sekati/external/class-list.html');" href="sekati/external/ExternalBase.html">ExternalBase</a></td>
