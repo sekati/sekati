@@ -41,8 +41,14 @@
 	//-------------------------------------------------------------------------------------	
 	// Detect the client flashplayer version: display an update div if not capable.
 	// Use expressInstall if client supported & set automatic scrollbars below defined size.
+	//
 	// @note flashplayer v9.0.28 supports fullscreen, added/removed from stage events.
-	s.detectShowDiv( [9,0,28], "flash_update" );
+	// @see  http://www.adobe.com/support/documentation/en/flashplayer/9/releasenotes.html#fixes_9028
+	//s.detectShowDiv( [9,0,28], "flash_update" );
+	// 
+	// @note flashplayer v9.0.115 fixes Event.RENDER invalidate() bugs for wmode's other than 'default'
+	// @see  http://www.adobe.com/support/documentation/en/flashplayer/9/releasenotes.html#fixes_90115
+	s.detectShowDiv( [9,0,115], "flash_update" );
 	s.useExpressInstall( "playerProductInstall.swf", 300, 300 );
 	s.scrollbarAt( 800, 600 );
 	//-------------------------------------------------------------------------------------
