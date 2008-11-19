@@ -1,6 +1,7 @@
 #labels Featured,Phase-Design,Phase-Implementation
 #whats with all the monster names?
 
+
 = Versions =
 
 *SEKATI API* adheres to a loose version model: *Release.Major.Minor.Revision* accompanied by a _Code Name_ (usually specific to the minor version) which is more memorable & useful in recalling which version a specific project should be compiled against. 
