@@ -30,7 +30,7 @@ I have tried to make mention in source comments whenever code was derived, adapt
   * [http://go.mosessupposes.com/ GoASAP]
   * [http://code.google.com/p/swfin/ swfIN]
   * [http://www.badgers-in-foil.co.uk/projects/as2api/ as2api]
-  * [http://osflash.org/ OSFlash]
+
 
 
 === Notes to Project Members ===
