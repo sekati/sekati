@@ -14,8 +14,8 @@ I have tried to make mention in source comments whenever code was derived, adapt
   * [http://code.google.com/u/@WRZRSlBRAhNHWgJ0/ Cory Clarke]
   * [http://lmnopj.com/ PJ Ahlberg]
   * [http://partlyhuman.com/ Roger Braunstein]
-  * [http://www.mosessupposes.com/ Moses Gunesch]
   * [http://nectere.ca/ Francis Turmel]
+  * [http://www.mosessupposes.com/ Moses Gunesch]
 
 
 
