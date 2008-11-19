@@ -3,7 +3,7 @@
 
 = Versions =
 
-*SEKATI API* adheres to a loose version model: [Release].[Major].[Minor].[Build] accompanied by a _Code Name_ (usually specific to the minor version) which is more memorable & useful in recalling which version a specific project should be compiled against. 
+*SEKATI API* adheres to a loose version model: *Release.Major.Minor.Revision* accompanied by a _Code Name_ (usually specific to the minor version) which is more memorable & useful in recalling which version a specific project should be compiled against. 
 
 Version Release constants may be located in the core release class [http://code.google.com/p/sekati/source/browse/trunk/src/sekati/core/App.as sekati.core.App] and will be display in the context menu of API application (if configured via `<menu verbose="true">true</menu>`) to assist you in locating the proper version.
 
