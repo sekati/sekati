@@ -3,20 +3,22 @@
 	<mx:Script>
 		<![CDATA[
 			import flexunit.framework.TestSuite;
+			import sekati.tests.unit.*;
 			
 			// Create the test suite and run the tests
-			private function onCreationComplete():void
+			private function onCreationComplete() : void
 			{
   				testRunner.test = createSuite();
   				testRunner.startTest();
   			}
 			
 			// Creates the test suite to run
-			private function createSuite():TestSuite {
+			private function createSuite() : TestSuite {
+			
   				//var testSuite:TestSuite = new TestSuite();
-  				//testSuite.addTestSuite( StringUtilTest );
+  				//testSuite.addTestSuite( AssertTest );
   				
-  				var testSuite:TestSuite = new APITestSuite();
+  				var testSuite : TestSuite = new APITestSuite();
   				return testSuite;
   			}	
 		]]>
