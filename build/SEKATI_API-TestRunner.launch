@@ -2,7 +2,7 @@
 <launchConfiguration type="com.powerflasher.fdt.ui.MxmlcGroup">
 <stringAttribute key="APP_ARGUMENTS" value=""/>
 <stringAttribute key="ARGUMENTS" value="-default-size 550 400 -default-frame-rate 31 -default-background-color 0xFFFFFF -library-path {flexSDK}/frameworks/locale/en_US"/>
-<stringAttribute key="FLEX_SDK_NAME" value="FLEX3_SDK"/>
+<stringAttribute key="FLEX_SDK_NAME" value="Flex3_SDK"/>
 <stringAttribute key="MAIN_CLASS" value="tests/src/TestRunner.mxml"/>
 <stringAttribute key="OUTPUT" value="tests/TestRunner.swf"/>
 <booleanAttribute key="PASS_CP" value="true"/>
