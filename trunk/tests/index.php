@@ -14,8 +14,7 @@ error_reporting(E_ALL ^ E_NOTICE);
 
 $nl = "\n";
 $appName = 'Sekati Unit Test Runner | jason m horwitz | sekati.com';
-$header = '<!-- saved from url=(0013)about:internet -->'.$nl;
-$header .= '<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />'.$nl;
+$header = '<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />'.$nl;
 $header .= '<script language="javascript" src="../deploy/js/swfIN.js" type="text/javascript"></script>'.$nl;
 $header .= '<script language="javascript" src="../deploy/js/sekati.js" type="text/javascript"></script>'.$nl;
 $header .= '<script language="javascript" src="../deploy/js/swfmouse.js" type="text/javascript"></script>'.$nl;
@@ -72,8 +71,8 @@ function template ($swf) {
 	$str = '<div id="flash_update"><h1>Flash Player Upgrade Required</h1><br/><a href="adobe.com/go/flashplayer" target="_blank">&raquo; Download Flash plugin to view this site</a>&nbsp; &nbsp; &nbsp; &nbsp;<a href="javascript:location.reload(true)">&raquo; Enter Site</a></div>'.$nl;
 	$str .= '<script type="text/javascript">'.$nl;
 	$str .= '	var s = new swfIN("'.$swf.'", "unitTest", "950", "650");'.$nl;
-	$str .= '	s.detectShowDiv( [9,0,28], "flash_update" );'.$nl;
-	$str .= '	s.useExpressInstall("../deploy/js/xi.swf", 300, 300);'.$nl;
+	$str .= '	s.detectShowDiv( [9,0,115], "flash_update" );'.$nl;
+	$str .= '	s.useExpressInstall("../deploy/playerProductInstall.swf", 300, 300);'.$nl;
 	$str .= '	s.addParam("bgcolor", "#292929");'.$nl;
 	$str .= '	s.addParam("menu", "true");'.$nl;
 	$str .= '	s.addParam("quality", "high");'.$nl;
