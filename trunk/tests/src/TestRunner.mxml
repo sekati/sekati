@@ -5,19 +5,22 @@
 			import flexunit.framework.TestSuite;
 			import sekati.tests.unit.*;
 			
-			// Create the test suite and run the tests
-			private function onCreationComplete() : void
-			{
+			/**
+			 * Create the test suite and run the tests
+			 */
+			private function onCreationComplete() : void {
   				testRunner.test = createSuite();
   				testRunner.startTest();
   			}
 			
-			// Creates the test suite to run
+			/**
+			 * Creates the test suite to run ...
+			 * @example <listing version="3.0">
+			 * var testSuite:TestSuite = new TestSuite();
+			 * testSuite.addTestSuite( AssertTest );
+			 * </listing>
+			 */
 			private function createSuite() : TestSuite {
-			
-  				//var testSuite:TestSuite = new TestSuite();
-  				//testSuite.addTestSuite( AssertTest );
-  				
   				var testSuite : TestSuite = new APITestSuite();
   				return testSuite;
   			}	
