@@ -74,32 +74,41 @@ if (!isEclipse() || window.name != ECLIPSE_FRAME_NAME) {titleBar_setSubTitle("WÂ
 <td width="20"></td><td></td>
 </tr>
 <tr>
-<td colspan="2" class="idxrow"><a onclick="javascript:loadClassListFrame('sekati/utils/class-list.html');" href="sekati/utils/WeakRef.html">WeakRef</a> &mdash; Class in package <a onclick="javascript:loadClassListFrame('sekati/utils/class-list.html');" href="sekati/utils/package-detail.html">sekati.utils</a></td>
+<td colspan="2" class="idxrow"><a onclick="javascript:loadClassListFrame('sekati/utils/class-list.html');" href="sekati/utils/WeakReference.html">WeakReference</a> &mdash; Class in package <a onclick="javascript:loadClassListFrame('sekati/utils/class-list.html');" href="sekati/utils/package-detail.html">sekati.utils</a></td>
 </tr>
 <tr>
 <td width="20"></td><td>
-  Create a weak reference for easier garbage colleciton of difficult to track Objects.</td>
+  Create a weak reference of an object instance for easier garbage colleciton of 
+  difficult to track Objects: if this is the only reference left the instance is
+  elidgible for garbage collection.</td>
 </tr>
 <tr>
-<td colspan="2" class="idxrow"><a onclick="javascript:loadClassListFrame('sekati/utils/class-list.html');" href="sekati/utils/WeakRef.html#WeakRef()">WeakRef</a>(obj) &mdash; Constructor in class sekati.utils.<a onclick="javascript:loadClassListFrame('sekati/utils/class-list.html');" href="sekati/utils/WeakRef.html">WeakRef</a></td>
+<td colspan="2" class="idxrow"><a onclick="javascript:loadClassListFrame('sekati/utils/class-list.html');" href="sekati/utils/WeakReference.html#WeakReference()">WeakReference</a>(reference) &mdash; Constructor in class sekati.utils.<a onclick="javascript:loadClassListFrame('sekati/utils/class-list.html');" href="sekati/utils/WeakReference.html">WeakReference</a></td>
 </tr>
 <tr>
 <td width="20"></td><td>
-   Constructor
-   
-   <code>
-   // Create a weak reference
-   var weak:Weakref = new WeakRef( obj );
-   
-   // Use the referenced object
-   var strong = weak.get();
-   if( strong != null ) {
-    // use strong here
-   } else {
-    // garbage collector has disposed of the object
-   }
-   </code>
+   WeakReference Constructor
    </td>
+</tr>
+<tr>
+<td colspan="2" class="idxrow"><a onclick="javascript:loadClassListFrame('sekati/utils/class-list.html');" href="sekati/utils/DateUtil.html#WEEKDAYS">WEEKDAYS</a> &mdash; Constant static property in class sekati.utils.<a onclick="javascript:loadClassListFrame('sekati/utils/class-list.html');" href="sekati/utils/DateUtil.html">DateUtil</a></td>
+</tr>
+<tr>
+<td width="20"></td><td></td>
+</tr>
+<tr>
+<td colspan="2" class="idxrow"><a onclick="javascript:loadClassListFrame('sekati/utils/class-list.html');" href="sekati/utils/DateUtil.html#WEEKDAYS_INITIALS">WEEKDAYS_INITIALS</a> &mdash; Static property in class sekati.utils.<a onclick="javascript:loadClassListFrame('sekati/utils/class-list.html');" href="sekati/utils/DateUtil.html">DateUtil</a></td>
+</tr>
+<tr>
+<td width="20"></td><td>
+   An array of initials for the days of the week.</td>
+</tr>
+<tr>
+<td colspan="2" class="idxrow"><a onclick="javascript:loadClassListFrame('sekati/utils/class-list.html');" href="sekati/utils/DateUtil.html#WEEKDAYS_SHORT">WEEKDAYS_SHORT</a> &mdash; Static property in class sekati.utils.<a onclick="javascript:loadClassListFrame('sekati/utils/class-list.html');" href="sekati/utils/DateUtil.html">DateUtil</a></td>
+</tr>
+<tr>
+<td width="20"></td><td>
+   An array of abbreviated days of the week.</td>
 </tr>
 <tr>
 <td colspan="2" class="idxrow"><a onclick="javascript:loadClassListFrame('sekati/converters/class-list.html');" href="sekati/converters/TimeConverter.html#weeks2ms()">weeks2ms</a>(n) &mdash; Static method in class sekati.converters.<a onclick="javascript:loadClassListFrame('sekati/converters/class-list.html');" href="sekati/converters/TimeConverter.html">TimeConverter</a></td>
@@ -133,11 +142,11 @@ if (!isEclipse() || window.name != ECLIPSE_FRAME_NAME) {titleBar_setSubTitle("WÂ
 <td width="20"></td><td></td>
 </tr>
 <tr>
-<td colspan="2" class="idxrow"><a onclick="javascript:loadClassListFrame('sekati/events/class-list.html');" href="sekati/events/AppEventDispatcher.html#willTrigger()">willTrigger</a>(type) &mdash; Method in class sekati.events.<a onclick="javascript:loadClassListFrame('sekati/events/class-list.html');" href="sekati/events/AppEventDispatcher.html">AppEventDispatcher</a></td>
+<td colspan="2" class="idxrow"><a onclick="javascript:loadClassListFrame('sekati/events/class-list.html');" href="sekati/events/ApplicationEventDispatcher.html#willTrigger()">willTrigger</a>(type) &mdash; Method in class sekati.events.<a onclick="javascript:loadClassListFrame('sekati/events/class-list.html');" href="sekati/events/ApplicationEventDispatcher.html">ApplicationEventDispatcher</a></td>
 </tr>
 <tr>
 <td width="20"></td><td>
-   Checks whether an event listener is registered with this <code>AppEventDispatcher</code> for the specified event type.</td>
+   Checks whether an event listener is registered with this <code>ApplicationEventDispatcher</code> for the specified event type.</td>
 </tr>
 <tr>
 <td colspan="2" class="idxrow"><a onclick="javascript:loadClassListFrame('sekati/filters/class-list.html');" href="sekati/filters/FilterMode.html#WRAP">WRAP</a> &mdash; Constant static property in class sekati.filters.<a onclick="javascript:loadClassListFrame('sekati/filters/class-list.html');" href="sekati/filters/FilterMode.html">FilterMode</a></td>

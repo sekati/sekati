@@ -4,7 +4,7 @@
 <META http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <link rel="stylesheet" href="../../style.css" type="text/css" media="screen">
 <link rel="stylesheet" href="../../print.css" type="text/css" media="print">
-<meta content="KeyManager,sekati.managers.KeyManager,_enabled,_instance,_keyCombo,_keyPress,$,enabled,addKeyListener,callProperty,clearKeys,destroy,getInstance,getProperty,isDown,keyCheck,keyPress,keyRelease,removeKeyListener,reset" name="keywords">
+<meta content="KeyManager,sekati.managers.KeyManager,$,enabled,addKeyListener,callProperty,clearKeys,destroy,getInstance,getProperty,isDown,keyCheck,keyPressHandler,keyReleaseHandler,removeKeyListener,reset" name="keywords">
 <title>sekati.managers.KeyManager</title>
 </head>
 <body>
@@ -35,7 +35,7 @@ if (!isEclipse() || window.name != ECLIPSE_FRAME_NAME) {titleBar_setSubTitle("Cl
 <td class="classHeaderTableLabel">Package</td><td><a onclick="javascript:loadClassListFrame('class-list.html')" href="package-detail.html">sekati.managers</a></td>
 </tr>
 <tr>
-<td class="classHeaderTableLabel">Class</td><td class="classSignature">public class KeyManager</td>
+<td class="classHeaderTableLabel">Class</td><td class="classSignature">public final  class KeyManager</td>
 </tr>
 <tr>
 <td class="classHeaderTableLabel">Inheritance</td><td class="inheritanceList">KeyManager <img class="inheritArrow" alt="Inheritance" title="Inheritance" src="../../images/inherit-arrow.gif"> flash.utils.Proxy</td>
@@ -55,10 +55,10 @@ if (!isEclipse() || window.name != ECLIPSE_FRAME_NAME) {titleBar_setSubTitle("Cl
 <span class="label">Example</span>
 <br><div class='listing'><pre>
   // create a response relationship between a key and method (non-repeatable):
-  KeyManager.$.addKeyListener( [KeyManager.$['UP']], handler );
+  KeyManager.$.addKeyListener( handler, false, KeyManager.$['UP'] );
   
   // create a response between a key combo and a method (repeatable):
-  KeyManager.$.addKeyListener( [KeyManager.$['CONTROL'], KeyManager.$['LEFT']], handler, true );
+  KeyManager.$.addKeyListener( handler, true, KeyManager.$['CONTROL'], KeyManager.$['LEFT'] );
   </pre></div>
   
   <p></p>
@@ -92,32 +92,6 @@ if (!isEclipse() || window.name != ECLIPSE_FRAME_NAME) {titleBar_setSubTitle("Cl
 </tr>
 </table>
 </div>
-<a name="protectedPropertySummary"></a>
-<div class="summarySection">
-<div class="summaryTableTitle">Protected Properties</div>
-<table id="summaryTableProtectedProperty" class="summaryTable " cellpadding="3" cellspacing="0">
-<tr>
-<th>&nbsp;</th><th colspan="2">Property</th><th class="summaryTableOwnerCol">Defined&nbsp;by</th>
-</tr>
-<tr class="">
-<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a class="signatureLink" href="#_enabled">_enabled</a> : Boolean<div class="summaryTableDescription"></div>
-</td><td class="summaryTableOwnerCol">KeyManager</td>
-</tr>
-<tr class="">
-<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a class="signatureLink" href="#_instance">_instance</a> : <a href="../managers/KeyManager.html">KeyManager</a>
-<div class="summaryTableDescription">[static]</div>
-</td><td class="summaryTableOwnerCol">KeyManager</td>
-</tr>
-<tr class="">
-<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a class="signatureLink" href="#_keyCombo">_keyCombo</a> : Array<div class="summaryTableDescription"></div>
-</td><td class="summaryTableOwnerCol">KeyManager</td>
-</tr>
-<tr class="">
-<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a class="signatureLink" href="#_keyPress">_keyPress</a> : Array<div class="summaryTableDescription"></div>
-</td><td class="summaryTableOwnerCol">KeyManager</td>
-</tr>
-</table>
-</div>
 <a name="methodSummary"></a>
 <div class="summarySection">
 <div class="summaryTableTitle">Public Methods</div>
@@ -137,7 +111,7 @@ if (!isEclipse() || window.name != ECLIPSE_FRAME_NAME) {titleBar_setSubTitle("Cl
 <tr class="">
 <td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
 <div class="summarySignature">
-<a class="signatureLink" href="#addKeyListener()">addKeyListener</a>(keys:Array, handler:Function, repeat:Boolean = false):void</div>
+<a class="signatureLink" href="#addKeyListener()">addKeyListener</a>(handler:Function, repeat:Boolean = false, ... keys):void</div>
 <div class="summaryTableDescription">
    Add a key or key combo.</div>
 </td><td class="summaryTableOwnerCol">KeyManager</td>
@@ -230,7 +204,7 @@ if (!isEclipse() || window.name != ECLIPSE_FRAME_NAME) {titleBar_setSubTitle("Cl
 <tr class="">
 <td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
 <div class="summarySignature">
-<a class="signatureLink" href="#keyPress()">keyPress</a>(e:KeyboardEvent = null):void</div>
+<a class="signatureLink" href="#keyPressHandler()">keyPressHandler</a>(e:KeyboardEvent = null):void</div>
 <div class="summaryTableDescription">
    Add the key to the <code>keyMap</code>.</div>
 </td><td class="summaryTableOwnerCol">KeyManager</td>
@@ -238,7 +212,7 @@ if (!isEclipse() || window.name != ECLIPSE_FRAME_NAME) {titleBar_setSubTitle("Cl
 <tr class="">
 <td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
 <div class="summarySignature">
-<a class="signatureLink" href="#keyRelease()">keyRelease</a>(e:KeyboardEvent = null):void</div>
+<a class="signatureLink" href="#keyReleaseHandler()">keyReleaseHandler</a>(e:KeyboardEvent = null):void</div>
 <div class="summaryTableDescription">
    Remove the key from the <code>keyMap</code>.</div>
 </td><td class="summaryTableOwnerCol">KeyManager</td>
@@ -266,15 +240,6 @@ showHideInherited();
 <code>&nbsp;&nbsp;&nbsp;&nbsp;public static function get $():<a href="../managers/KeyManager.html">KeyManager</a></code>
 <br>
 </div>
-<a name="_enabled"></a>
-<table cellspacing="0" cellpadding="0" class="detailHeader">
-<tr>
-<td class="detailHeaderName">_enabled</td><td class="detailHeaderType">property</td><td class="detailHeaderRule">&nbsp;</td>
-</tr>
-</table>
-<div class="detailBody">
-<code>protected var _enabled:Boolean</code>
-</div>
 <a name="enabled"></a>
 <table cellspacing="0" cellpadding="0" class="detailHeader">
 <tr>
@@ -290,33 +255,6 @@ showHideInherited();
 <br>
 <code>&nbsp;&nbsp;&nbsp;&nbsp;public function set enabled(value:Boolean):void</code>
 <br>
-</div>
-<a name="_instance"></a>
-<table cellspacing="0" cellpadding="0" class="detailHeader">
-<tr>
-<td class="detailHeaderName">_instance</td><td class="detailHeaderType">property</td><td class="detailHeaderRule">&nbsp;</td>
-</tr>
-</table>
-<div class="detailBody">
-<code>protected static var _instance:<a href="../managers/KeyManager.html">KeyManager</a></code>
-</div>
-<a name="_keyCombo"></a>
-<table cellspacing="0" cellpadding="0" class="detailHeader">
-<tr>
-<td class="detailHeaderName">_keyCombo</td><td class="detailHeaderType">property</td><td class="detailHeaderRule">&nbsp;</td>
-</tr>
-</table>
-<div class="detailBody">
-<code>protected var _keyCombo:Array</code>
-</div>
-<a name="_keyPress"></a>
-<table cellspacing="0" cellpadding="0" class="detailHeader">
-<tr>
-<td class="detailHeaderName">_keyPress</td><td class="detailHeaderType">property</td><td class="detailHeaderRule">&nbsp;</td>
-</tr>
-</table>
-<div class="detailBody">
-<code>protected var _keyPress:Array</code>
 </div>
 <a name="constructorDetail"></a>
 <div class="detailSectionHeader">Constructor detail</div>
@@ -346,34 +284,34 @@ showHideInherited();
 </tr>
 </table>
 <div class="detailBody">
-<code>public function addKeyListener(keys:Array, handler:Function, repeat:Boolean = false):void</code><p>
+<code>public function addKeyListener(handler:Function, repeat:Boolean = false, ... keys):void</code><p>
    Add a key or key combo.
    </p><span class="label">Parameters</span>
 <table border="0" cellspacing="0" cellpadding="0">
 <tr>
-<td width="20px"></td><td><code><span class="label">keys</span>:Array</code> &mdash;   array of <code>keyCodes</code> (uint's) which will trigger the handler.
+<td width="20px"></td><td><code><span class="label">handler</span>:Function</code> &mdash;   the function to be fired upon a complete key match.
    </td>
 </tr>
 <tr>
 <td class="paramSpacer">&nbsp;</td>
 </tr>
 <tr>
-<td width="20px"></td><td><code><span class="label">handler</span>:Function</code> &mdash;  the function to be fired upon a complete key match.
+<td width="20px"></td><td><code><span class="label">repeat</span>:Boolean</code> (default = <code>false</code>)<code></code> &mdash;   if <code>true</code> depressed key handler will fire repeatedly, if <code>false</code> key handler will fire only once per press.
    </td>
 </tr>
 <tr>
 <td class="paramSpacer">&nbsp;</td>
 </tr>
 <tr>
-<td width="20px"></td><td><code><span class="label">repeat</span>:Boolean</code> (default = <code>false</code>)<code></code> &mdash;  if <code>true</code> depressed key handler will fire repeatedly, if <code>false</code> key handler will fire only once per press.
+<td width="20px"></td><td><code>... <span class="label">keys</span></code> &mdash;   array of <code>keyCodes</code> (uint's) which will trigger the handler.
    </td>
 </tr>
 </table>
 <br>
 <span class="label">Example</span>
 <br><div class='listing'><pre>
-   KeyManager.$.addKeyListener( [Keyboard.CONTROL, Keyboard.ENTER], runProgram );
-   KeyManager.$.addKeyListener( [Keyboard.CONTROL, Keyboard.C], copyText, true ); 
+   KeyManager.$.addKeyListener( runProgram, false, KeyManager.$.CONTROL, KeyManager.$.ENTER );
+   KeyManager.$.addKeyListener( copyText, true, KeyManager.$.CONTROL, KeyManager.$.C ); 
    </pre></div>
    <p></p>
 </div>
@@ -509,14 +447,14 @@ showHideInherited();
 <code>protected function keyCheck():void</code><p>
    Check the key press to see if it matches our handlers.
    </p></div>
-<a name="keyPress()"></a>
+<a name="keyPressHandler()"></a>
 <table cellspacing="0" cellpadding="0" class="detailHeader">
 <tr>
-<td class="detailHeaderName">keyPress</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td>
+<td class="detailHeaderName">keyPressHandler</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td>
 </tr>
 </table>
 <div class="detailBody">
-<code>protected function keyPress(e:KeyboardEvent = null):void</code><p>
+<code>protected function keyPressHandler(e:KeyboardEvent = null):void</code><p>
    Add the key to the <code>keyMap</code>.
    </p><span class="label">Parameters</span>
 <table border="0" cellspacing="0" cellpadding="0">
@@ -525,14 +463,14 @@ showHideInherited();
 </tr>
 </table>
 </div>
-<a name="keyRelease()"></a>
+<a name="keyReleaseHandler()"></a>
 <table cellspacing="0" cellpadding="0" class="detailHeader">
 <tr>
-<td class="detailHeaderName">keyRelease</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td>
+<td class="detailHeaderName">keyReleaseHandler</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td>
 </tr>
 </table>
 <div class="detailBody">
-<code>protected function keyRelease(e:KeyboardEvent = null):void</code><p>
+<code>protected function keyReleaseHandler(e:KeyboardEvent = null):void</code><p>
    Remove the key from the <code>keyMap</code>.
    </p><span class="label">Parameters</span>
 <table border="0" cellspacing="0" cellpadding="0">
