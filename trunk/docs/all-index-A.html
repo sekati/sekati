@@ -229,12 +229,12 @@ if (!isEclipse() || window.name != ECLIPSE_FRAME_NAME) {titleBar_setSubTitle("AÂ
    Add a new color filter.</td>
 </tr>
 <tr>
-<td colspan="2" class="idxrow"><a onclick="javascript:loadClassListFrame('sekati/events/class-list.html');" href="sekati/events/AppEventDispatcher.html#addEventListener()">addEventListener</a>(type, listener, useCapture, priority, useWeakReference) &mdash; Method in class sekati.events.<a onclick="javascript:loadClassListFrame('sekati/events/class-list.html');" href="sekati/events/AppEventDispatcher.html">AppEventDispatcher</a></td>
+<td colspan="2" class="idxrow"><a onclick="javascript:loadClassListFrame('sekati/events/class-list.html');" href="sekati/events/ApplicationEventDispatcher.html#addEventListener()">addEventListener</a>(type, listener, useCapture, priority, useWeakReference) &mdash; Method in class sekati.events.<a onclick="javascript:loadClassListFrame('sekati/events/class-list.html');" href="sekati/events/ApplicationEventDispatcher.html">ApplicationEventDispatcher</a></td>
 </tr>
 <tr>
 <td width="20"></td><td>
-   Registers an <code>AppEvent</code> listener with the <code>AppEventDispatcher</code> singleton so that the listener receives notification of that 
-   <code>AppEvent</code> (or <code>AppEvent</code> descendent).</td>
+   Registers an <code>ApplicationEvent</code> listener with the <code>ApplicationEventDispatcher</code> singleton so that the listener receives notification of that 
+   <code>ApplicationEvent</code> (or <code>ApplicationEvent</code> descendent).</td>
 </tr>
 <tr>
 <td colspan="2" class="idxrow"><a onclick="javascript:loadClassListFrame('sekati/display/class-list.html');" href="sekati/display/CoreBitmapData.html#addFilter()">addFilter</a>(filter, cx, cy, width, height) &mdash; Method in class sekati.display.<a onclick="javascript:loadClassListFrame('sekati/display/class-list.html');" href="sekati/display/CoreBitmapData.html">CoreBitmapData</a></td>
@@ -285,7 +285,7 @@ if (!isEclipse() || window.name != ECLIPSE_FRAME_NAME) {titleBar_setSubTitle("AÂ
    Add a new item to the <code>ContextualMenu</code>.</td>
 </tr>
 <tr>
-<td colspan="2" class="idxrow"><a onclick="javascript:loadClassListFrame('sekati/managers/class-list.html');" href="sekati/managers/KeyManager.html#addKeyListener()">addKeyListener</a>(keys, handler, repeat) &mdash; Method in class sekati.managers.<a onclick="javascript:loadClassListFrame('sekati/managers/class-list.html');" href="sekati/managers/KeyManager.html">KeyManager</a></td>
+<td colspan="2" class="idxrow"><a onclick="javascript:loadClassListFrame('sekati/managers/class-list.html');" href="sekati/managers/KeyManager.html#addKeyListener()">addKeyListener</a>(handler, repeat, ... rest) &mdash; Method in class sekati.managers.<a onclick="javascript:loadClassListFrame('sekati/managers/class-list.html');" href="sekati/managers/KeyManager.html">KeyManager</a></td>
 </tr>
 <tr>
 <td width="20"></td><td>
@@ -594,37 +594,6 @@ if (!isEclipse() || window.name != ECLIPSE_FRAME_NAME) {titleBar_setSubTitle("AÂ
    </td>
 </tr>
 <tr>
-<td colspan="2" class="idxrow"><a onclick="javascript:loadClassListFrame('sekati/events/class-list.html');" href="sekati/events/AppEvent.html">AppEvent</a> &mdash; Class in package <a onclick="javascript:loadClassListFrame('sekati/events/class-list.html');" href="sekati/events/package-detail.html">sekati.events</a></td>
-</tr>
-<tr>
-<td width="20"></td><td>
-  AppEvent provides a baseline application event object 
-  with optional data transport capabilities.</td>
-</tr>
-<tr>
-<td colspan="2" class="idxrow"><a onclick="javascript:loadClassListFrame('sekati/events/class-list.html');" href="sekati/events/AppEvent.html#AppEvent()">AppEvent</a>(type, eventData, bubbles, cancelable) &mdash; Constructor in class sekati.events.<a onclick="javascript:loadClassListFrame('sekati/events/class-list.html');" href="sekati/events/AppEvent.html">AppEvent</a></td>
-</tr>
-<tr>
-<td width="20"></td><td>
-   AppEvent Constructor
-   </td>
-</tr>
-<tr>
-<td colspan="2" class="idxrow"><a onclick="javascript:loadClassListFrame('sekati/events/class-list.html');" href="sekati/events/AppEventDispatcher.html">AppEventDispatcher</a> &mdash; Final class in package <a onclick="javascript:loadClassListFrame('sekati/events/class-list.html');" href="sekati/events/package-detail.html">sekati.events</a></td>
-</tr>
-<tr>
-<td width="20"></td><td>
-  AppEventDispatcher provides a central dispatching & eventing singleton target for API based applications.</td>
-</tr>
-<tr>
-<td colspan="2" class="idxrow"><a onclick="javascript:loadClassListFrame('sekati/events/class-list.html');" href="sekati/events/AppEventDispatcher.html#AppEventDispatcher()">AppEventDispatcher</a>($, target) &mdash; Constructor in class sekati.events.<a onclick="javascript:loadClassListFrame('sekati/events/class-list.html');" href="sekati/events/AppEventDispatcher.html">AppEventDispatcher</a></td>
-</tr>
-<tr>
-<td width="20"></td><td>
-   AppEventDispatcher Singleton Constructor
-   </td>
-</tr>
-<tr>
 <td colspan="2" class="idxrow"><a onclick="javascript:loadClassListFrame('sekati/events/class-list.html');" href="sekati/events/BootstrapEvent.html#APP_FAIL">APP_FAIL</a> &mdash; Constant static property in class sekati.events.<a onclick="javascript:loadClassListFrame('sekati/events/class-list.html');" href="sekati/events/BootstrapEvent.html">BootstrapEvent</a></td>
 </tr>
 <tr>
@@ -636,6 +605,37 @@ if (!isEclipse() || window.name != ECLIPSE_FRAME_NAME) {titleBar_setSubTitle("AÂ
 </tr>
 <tr>
 <td width="20"></td><td>
+   </td>
+</tr>
+<tr>
+<td colspan="2" class="idxrow"><a onclick="javascript:loadClassListFrame('sekati/events/class-list.html');" href="sekati/events/ApplicationEvent.html">ApplicationEvent</a> &mdash; Class in package <a onclick="javascript:loadClassListFrame('sekati/events/class-list.html');" href="sekati/events/package-detail.html">sekati.events</a></td>
+</tr>
+<tr>
+<td width="20"></td><td>
+  ApplicationEvent provides a baseline application event object 
+  with optional data transport capabilities.</td>
+</tr>
+<tr>
+<td colspan="2" class="idxrow"><a onclick="javascript:loadClassListFrame('sekati/events/class-list.html');" href="sekati/events/ApplicationEvent.html#ApplicationEvent()">ApplicationEvent</a>(type, eventData, bubbles, cancelable) &mdash; Constructor in class sekati.events.<a onclick="javascript:loadClassListFrame('sekati/events/class-list.html');" href="sekati/events/ApplicationEvent.html">ApplicationEvent</a></td>
+</tr>
+<tr>
+<td width="20"></td><td>
+   ApplicationEvent Constructor
+   </td>
+</tr>
+<tr>
+<td colspan="2" class="idxrow"><a onclick="javascript:loadClassListFrame('sekati/events/class-list.html');" href="sekati/events/ApplicationEventDispatcher.html">ApplicationEventDispatcher</a> &mdash; Final class in package <a onclick="javascript:loadClassListFrame('sekati/events/class-list.html');" href="sekati/events/package-detail.html">sekati.events</a></td>
+</tr>
+<tr>
+<td width="20"></td><td>
+  ApplicationEventDispatcher provides a central dispatching & eventing singleton target for API based applications.</td>
+</tr>
+<tr>
+<td colspan="2" class="idxrow"><a onclick="javascript:loadClassListFrame('sekati/events/class-list.html');" href="sekati/events/ApplicationEventDispatcher.html#ApplicationEventDispatcher()">ApplicationEventDispatcher</a>($, target) &mdash; Constructor in class sekati.events.<a onclick="javascript:loadClassListFrame('sekati/events/class-list.html');" href="sekati/events/ApplicationEventDispatcher.html">ApplicationEventDispatcher</a></td>
+</tr>
+<tr>
+<td width="20"></td><td>
+   ApplicationEventDispatcher Singleton Constructor
    </td>
 </tr>
 <tr>
@@ -884,29 +884,6 @@ if (!isEclipse() || window.name != ECLIPSE_FRAME_NAME) {titleBar_setSubTitle("AÂ
 <tr>
 <td width="20"></td><td>
    Return alphabetically sorted array.</td>
-</tr>
-<tr>
-<td colspan="2" class="idxrow"><a onclick="javascript:loadClassListFrame('sekati/utils/class-list.html');" href="sekati/utils/Assert.html#assert()">assert</a>(exp) &mdash; Static method in class sekati.utils.<a onclick="javascript:loadClassListFrame('sekati/utils/class-list.html');" href="sekati/utils/Assert.html">Assert</a></td>
-</tr>
-<tr>
-<td width="20"></td><td>
-   Evaluate the asserted expression and throw a <code>AssertException</code> if false.</td>
-</tr>
-<tr>
-<td colspan="2" class="idxrow"><a onclick="javascript:loadClassListFrame('sekati/utils/class-list.html');" href="sekati/utils/Assert.html">Assert</a> &mdash; Class in package <a onclick="javascript:loadClassListFrame('sekati/utils/class-list.html');" href="sekati/utils/package-detail.html">sekati.utils</a></td>
-</tr>
-<tr>
-<td width="20"></td><td>
-  Assert
-  </td>
-</tr>
-<tr>
-<td colspan="2" class="idxrow"><a onclick="javascript:loadClassListFrame('sekati/utils/class-list.html');" href="sekati/utils/Assert.html#Assert()">Assert</a>() &mdash; Constructor in class sekati.utils.<a onclick="javascript:loadClassListFrame('sekati/utils/class-list.html');" href="sekati/utils/Assert.html">Assert</a></td>
-</tr>
-<tr>
-<td width="20"></td><td>
-   Assert Static Constructor
-   </td>
 </tr>
 <tr>
 <td colspan="2" class="idxrow"><a onclick="javascript:loadClassListFrame('sekati/utils/class-list.html');" href="sekati/utils/AbstractEmbeddedAsset.html#asset">asset</a> &mdash; Property in class sekati.utils.<a onclick="javascript:loadClassListFrame('sekati/utils/class-list.html');" href="sekati/utils/AbstractEmbeddedAsset.html">AbstractEmbeddedAsset</a></td>
