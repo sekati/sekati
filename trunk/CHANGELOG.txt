@@ -1,6 +1,8 @@
 ------ SEKATI API CHANGELOG ------
 
 
+API BUG FIX: v3.0.4.3 - "Varan" (see: http://code.google.com/p/sekati/issues/detail?id=44)
+- A major bug existed in the new StringValidator.isBlank RegExp which was not caught in the unit test. Reverted and pushed new build: Any project using 3.0.4.2 should update: it is buggy as deprecated.
 
 API UPDATE/BREAK: v3.0.4.2 - "Varan" (API CHANGES: Please read log carefully to support project porting)
 - Restructured KeyManager and repaired bugs. This is an API BREAK: keys are now added at the end of the method signature in a ...rest:
