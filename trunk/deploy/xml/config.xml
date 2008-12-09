@@ -15,7 +15,7 @@
 <config persist="false">
 	<app>
 		<name>Sekati API</name>
-		<version>3.0.4.3</version>
+		<version>3.0.4.4</version>
 	</app>
 	<uri>
 		<crossdomain load="true">crossdomain.xml</crossdomain>
@@ -28,7 +28,7 @@
 		<menu verbose="true">true</menu>
 		<fullscreen>true</fullscreen>
 		<track>true</track>
-		<deeplink>true</deeplink>
+		<deeplink>false</deeplink>
 		<performance_monitor>true</performance_monitor>
 	</option>
 	<custom>

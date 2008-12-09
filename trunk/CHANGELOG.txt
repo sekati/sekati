@@ -1,6 +1,14 @@
 ------ SEKATI API CHANGELOG ------
 
 
+API BUG FIX: v3.0.4.4 - "Varan" (see http://code.google.com/p/sekati/issues/detail?id=45)
+- API_NAME => APP_NAME bug fixed in sekati.core.Bootstrap
+- <deeplink>false</deeplink> now default in config.xml
+- sekati.core.Bootstrap + <deeplink>true</deeplink> now sets "#/home/" (to match google analytics track) but no longer alters the page title.
+- BrowserManager implementation deferred to a later release/branch (re-evaluating SWFAddress vs custom polling solution).
+- Added ExternalBase.getBrowserView() which returns the browser viewport yscroll & height.
+
+
 API BUG FIX: v3.0.4.3 - "Varan" (see: http://code.google.com/p/sekati/issues/detail?id=44)
 - A major bug existed in the new StringValidator.isBlank RegExp which was not caught in the unit test. Reverted and pushed new build: Any project using 3.0.4.2 should update: it is buggy as deprecated.
 
