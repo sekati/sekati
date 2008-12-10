@@ -1,6 +1,9 @@
 ------ SEKATI API CHANGELOG ------
 
 
+- updated swfIN.js to v2.2.6
+
+
 API BUG FIX: v3.0.4.4 - "Varan" (see http://code.google.com/p/sekati/issues/detail?id=45)
 - API_NAME => APP_NAME bug fixed in sekati.core.Bootstrap
 - <deeplink>false</deeplink> now default in config.xml
