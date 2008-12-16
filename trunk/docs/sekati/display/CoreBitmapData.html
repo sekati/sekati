@@ -58,7 +58,7 @@ if (!isEclipse() || window.name != ECLIPSE_FRAME_NAME) {titleBar_setSubTitle("Cl
 <tr class="">
 <td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
 <div class="summarySignature">
-<a class="signatureLink" href="#CoreBitmapData()">CoreBitmapData</a>(src:DisplayObject, x:Number = 0, y:Number = 0, width:Number, height:Number, scale:Number = 1, transparent:Boolean = false, fillColor:uint = 0xFFFFFFFF)</div>
+<a class="signatureLink" href="#CoreBitmapData()">CoreBitmapData</a>(src:DisplayObject, x:int = 0, y:int = 0, width:Number, height:Number, scale:Number = 1, transparent:Boolean = false, fillColor:uint = 0xFFFFFFFF)</div>
 <div class="summaryTableDescription">
    CoreBitmapData Constructor
    </div>
@@ -83,7 +83,7 @@ if (!isEclipse() || window.name != ECLIPSE_FRAME_NAME) {titleBar_setSubTitle("Cl
 </tr>
 <tr class="">
 <td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a class="signatureLink" href="#MAX_SIZE">MAX_SIZE</a> : int = 2880<div class="summaryTableDescription">[static]
-   Defines the maximum dimension of a BitmapData object in the Flash Player.<ul>
+   Defines the (<= FP9) maximum dimension of a BitmapData object in the Flash Player.<ul>
    </div>
 </td><td class="summaryTableOwnerCol">CoreBitmapData</td>
 </tr>
@@ -103,7 +103,7 @@ showHideInherited();
 </tr>
 </table>
 <div class="detailBody">
-<code>public function CoreBitmapData(src:DisplayObject, x:Number = 0, y:Number = 0, width:Number, height:Number, scale:Number = 1, transparent:Boolean = false, fillColor:uint = 0xFFFFFFFF)</code><p>
+<code>public function CoreBitmapData(src:DisplayObject, x:int = 0, y:int = 0, width:Number, height:Number, scale:Number = 1, transparent:Boolean = false, fillColor:uint = 0xFFFFFFFF)</code><p>
    CoreBitmapData Constructor
    </p><span class="label">Parameters</span>
 <table border="0" cellspacing="0" cellpadding="0">
@@ -115,14 +115,14 @@ showHideInherited();
 <td class="paramSpacer">&nbsp;</td>
 </tr>
 <tr>
-<td width="20px"></td><td><code><span class="label">x</span>:Number</code> (default = <code>0</code>)<code></code> &mdash;    optional crop start position.
+<td width="20px"></td><td><code><span class="label">x</span>:int</code> (default = <code>0</code>)<code></code> &mdash;    optional crop start position.
    </td>
 </tr>
 <tr>
 <td class="paramSpacer">&nbsp;</td>
 </tr>
 <tr>
-<td width="20px"></td><td><code><span class="label">y</span>:Number</code> (default = <code>0</code>)<code></code> &mdash;    optional crop start position.
+<td width="20px"></td><td><code><span class="label">y</span>:int</code> (default = <code>0</code>)<code></code> &mdash;    optional crop start position.
    </td>
 </tr>
 <tr>
@@ -220,7 +220,7 @@ showHideInherited();
 </table>
 <div class="detailBody">
 <code>public static const MAX_SIZE:int = 2880</code><p>
-   Defines the maximum dimension of a BitmapData object in the Flash Player.<ul>
+   Defines the (<= FP9) maximum dimension of a BitmapData object in the Flash Player.<ul>
    </p></div>
 <br>
 <br>

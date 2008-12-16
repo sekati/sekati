@@ -1,6 +1,8 @@
 ------ SEKATI API CHANGELOG ------
 
-
+- added ColorUtil.averageLightness
+- added BitmapValidator (fixed/moved constants from CoreBitmapData)
+- fixed minor bug in CoreBitmapData
 - updated swfIN.js to v2.2.6
 
 
