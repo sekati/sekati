@@ -1,6 +1,13 @@
 ------ SEKATI API CHANGELOG ------
 
+
+- added ColorUtil.averageHue
+- added ColorUtil.averageSaturation
 - added ColorUtil.averageLightness
+- added ColorUtil.averageValue
+- added ColorUtil.averageRed
+- added ColorUtil.averageGreen
+- added ColorUtil.averagBlue
 - added BitmapValidator (fixed/moved constants from CoreBitmapData)
 - fixed minor bug in CoreBitmapData
 - updated swfIN.js to v2.2.6
