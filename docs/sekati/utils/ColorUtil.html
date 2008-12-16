@@ -4,7 +4,7 @@
 <META http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <link rel="stylesheet" href="../../style.css" type="text/css" media="screen">
 <link rel="stylesheet" href="../../print.css" type="text/css" media="print">
-<meta content="ColorUtil,sekati.utils.ColorUtil,HUE_MAX,PCT_MAX,RGB_MAX,HSLtoHSV,HSLtoRGB,HSVtoHSL,HSVtoRGB,HueToRGB,RGBToHue,RGBtoHSL,RGBtoHSV,averageLightness,changeContrast,componentsFromHex,getColor,getHSLComponent,getHSVComponent,getRGBComponent,getTransform,hexFromComponents,hexFromPercentages,invertColor,randomColor,resetColor,setColor,setHSLComponent,setHSVComponent,setRGBComponent,setTransform,toColor,toHTML,toHexString" name="keywords">
+<meta content="ColorUtil,sekati.utils.ColorUtil,HUE_MAX,PCT_MAX,RGB_MAX,HSLtoHSV,HSLtoRGB,HSVtoHSL,HSVtoRGB,HueToRGB,RGBToHue,RGBtoHSL,RGBtoHSV,averageBlue,averageGreen,averageHue,averageLightness,averageRed,averageSaturation,averageValue,changeContrast,componentsFromHex,getColor,getHSLComponent,getHSVComponent,getRGBComponent,getTransform,hexFromComponents,hexFromPercentages,invertColor,randomColor,resetColor,setColor,setHSLComponent,setHSVComponent,setRGBComponent,setTransform,toColor,toHTML,toHexString" name="keywords">
 <title>sekati.utils.ColorUtil</title>
 </head>
 <body>
@@ -69,9 +69,57 @@ if (!isEclipse() || window.name != ECLIPSE_FRAME_NAME) {titleBar_setSubTitle("Cl
 <tr class="">
 <td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
 <div class="summarySignature">
-<a class="signatureLink" href="#averageLightness()">averageLightness</a>(src:DisplayObject, region:Rectangle = null, accuracy:Number = 0.25):int</div>
+<a class="signatureLink" href="#averageBlue()">averageBlue</a>(src:DisplayObject, accuracy:Number = 0.5, region:Rectangle = null):int</div>
 <div class="summaryTableDescription">[static]
-   Sample & average the <i>lightness</i> (HSL) value from a display object or one of its region.</div>
+   Sample & average the <i>Blue</i> (RGB) value from a display object or one of its region.</div>
+</td><td class="summaryTableOwnerCol">ColorUtil</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="#averageGreen()">averageGreen</a>(src:DisplayObject, accuracy:Number = 0.5, region:Rectangle = null):int</div>
+<div class="summaryTableDescription">[static]
+   Sample & average the <i>Green</i> (RGB) value from a display object or one of its region.</div>
+</td><td class="summaryTableOwnerCol">ColorUtil</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="#averageHue()">averageHue</a>(src:DisplayObject, accuracy:Number = 0.5, region:Rectangle = null):int</div>
+<div class="summaryTableDescription">[static]
+   Sample & average the <i>Hue</i> (HSL) value from a display object or one of its region.</div>
+</td><td class="summaryTableOwnerCol">ColorUtil</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="#averageLightness()">averageLightness</a>(src:DisplayObject, accuracy:Number = 0.5, region:Rectangle = null):int</div>
+<div class="summaryTableDescription">[static]
+   Sample & average the <i>Lightness</i> (HSL) value from a display object or one of its region.</div>
+</td><td class="summaryTableOwnerCol">ColorUtil</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="#averageRed()">averageRed</a>(src:DisplayObject, accuracy:Number = 0.5, region:Rectangle = null):int</div>
+<div class="summaryTableDescription">[static]
+   Sample & average the <i>Red</i> (RGB) value from a display object or one of its region.</div>
+</td><td class="summaryTableOwnerCol">ColorUtil</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="#averageSaturation()">averageSaturation</a>(src:DisplayObject, accuracy:Number = 0.5, region:Rectangle = null):Number</div>
+<div class="summaryTableDescription">[static]
+   Sample & average the <i>Saturation</i> (HSL) value from a display object or one of its region.</div>
+</td><td class="summaryTableOwnerCol">ColorUtil</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="#averageValue()">averageValue</a>(src:DisplayObject, accuracy:Number = 0.5, region:Rectangle = null):Number</div>
+<div class="summaryTableDescription">[static]
+   Sample & average the <i>Value</i> (HSV) value from a display object or one of its region.</div>
 </td><td class="summaryTableOwnerCol">ColorUtil</td>
 </tr>
 <tr class="">
@@ -342,15 +390,15 @@ showHideInherited();
    </p></div>
 <a name="methodDetail"></a>
 <div class="detailSectionHeader">Method detail</div>
-<a name="averageLightness()"></a>
+<a name="averageBlue()"></a>
 <table cellspacing="0" cellpadding="0" class="detailHeader">
 <tr>
-<td class="detailHeaderName">averageLightness</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td>
+<td class="detailHeaderName">averageBlue</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td>
 </tr>
 </table>
 <div class="detailBody">
-<code>public static function averageLightness(src:DisplayObject, region:Rectangle = null, accuracy:Number = 0.25):int</code><p>
-   Sample & average the <i>lightness</i> (HSL) value from a display object or one of its region.
+<code>public static function averageBlue(src:DisplayObject, accuracy:Number = 0.5, region:Rectangle = null):int</code><p>
+   Sample & average the <i>Blue</i> (RGB) value from a display object or one of its region.
    </p><span class="label">Parameters</span>
 <table border="0" cellspacing="0" cellpadding="0">
 <tr>
@@ -361,14 +409,14 @@ showHideInherited();
 <td class="paramSpacer">&nbsp;</td>
 </tr>
 <tr>
-<td width="20px"></td><td><code><span class="label">region</span>:Rectangle</code> (default = <code>null</code>)<code></code> &mdash;   to sample from [Default: null = entire src object].
+<td width="20px"></td><td><code><span class="label">accuracy</span>:Number</code> (default = <code>0.5</code>)<code></code> &mdash;   percentage of pixels to sample when averaging.
    </td>
 </tr>
 <tr>
 <td class="paramSpacer">&nbsp;</td>
 </tr>
 <tr>
-<td width="20px"></td><td><code><span class="label">accuracy</span>:Number</code> (default = <code>0.25</code>)<code></code> &mdash;   percentage of pixels to sample when averaging.
+<td width="20px"></td><td><code><span class="label">region</span>:Rectangle</code> (default = <code>null</code>)<code></code> &mdash;   to sample from [Default: null = entire src object].
    </td>
 </tr>
 </table>
@@ -376,7 +424,241 @@ showHideInherited();
 <span class="label">Returns</span>
 <table border="0" cellspacing="0" cellpadding="0">
 <tr>
-<td width="20"></td><td><code>int</code> &mdash;     the sampled <i>lightness</i> value on a scale of 0-256. 
+<td width="20"></td><td><code>int</code> &mdash;     the sampled average <i>blue</i> value on a scale of 0-255. 
+   </td>
+</tr>
+</table>
+</div>
+<a name="averageGreen()"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">averageGreen</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public static function averageGreen(src:DisplayObject, accuracy:Number = 0.5, region:Rectangle = null):int</code><p>
+   Sample & average the <i>Green</i> (RGB) value from a display object or one of its region.
+   </p><span class="label">Parameters</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20px"></td><td><code><span class="label">src</span>:DisplayObject</code> &mdash;    of the display object.
+   </td>
+</tr>
+<tr>
+<td class="paramSpacer">&nbsp;</td>
+</tr>
+<tr>
+<td width="20px"></td><td><code><span class="label">accuracy</span>:Number</code> (default = <code>0.5</code>)<code></code> &mdash;   percentage of pixels to sample when averaging.
+   </td>
+</tr>
+<tr>
+<td class="paramSpacer">&nbsp;</td>
+</tr>
+<tr>
+<td width="20px"></td><td><code><span class="label">region</span>:Rectangle</code> (default = <code>null</code>)<code></code> &mdash;   to sample from [Default: null = entire src object].
+   </td>
+</tr>
+</table>
+<p></p>
+<span class="label">Returns</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20"></td><td><code>int</code> &mdash;     the sampled average <i>green</i> value on a scale of 0-255. 
+   </td>
+</tr>
+</table>
+</div>
+<a name="averageHue()"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">averageHue</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public static function averageHue(src:DisplayObject, accuracy:Number = 0.5, region:Rectangle = null):int</code><p>
+   Sample & average the <i>Hue</i> (HSL) value from a display object or one of its region.
+   </p><span class="label">Parameters</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20px"></td><td><code><span class="label">src</span>:DisplayObject</code> &mdash;    of the display object.
+   </td>
+</tr>
+<tr>
+<td class="paramSpacer">&nbsp;</td>
+</tr>
+<tr>
+<td width="20px"></td><td><code><span class="label">accuracy</span>:Number</code> (default = <code>0.5</code>)<code></code> &mdash;   percentage of pixels to sample when averaging.
+   </td>
+</tr>
+<tr>
+<td class="paramSpacer">&nbsp;</td>
+</tr>
+<tr>
+<td width="20px"></td><td><code><span class="label">region</span>:Rectangle</code> (default = <code>null</code>)<code></code> &mdash;   to sample from [Default: null = entire src object].
+   </td>
+</tr>
+</table>
+<p></p>
+<span class="label">Returns</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20"></td><td><code>int</code> &mdash;     the sampled average <i>hue</i> value on a scale of 0-360. 
+   </td>
+</tr>
+</table>
+</div>
+<a name="averageLightness()"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">averageLightness</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public static function averageLightness(src:DisplayObject, accuracy:Number = 0.5, region:Rectangle = null):int</code><p>
+   Sample & average the <i>Lightness</i> (HSL) value from a display object or one of its region.
+   </p><span class="label">Parameters</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20px"></td><td><code><span class="label">src</span>:DisplayObject</code> &mdash;    of the display object.
+   </td>
+</tr>
+<tr>
+<td class="paramSpacer">&nbsp;</td>
+</tr>
+<tr>
+<td width="20px"></td><td><code><span class="label">accuracy</span>:Number</code> (default = <code>0.5</code>)<code></code> &mdash;   percentage of pixels to sample when averaging.
+   </td>
+</tr>
+<tr>
+<td class="paramSpacer">&nbsp;</td>
+</tr>
+<tr>
+<td width="20px"></td><td><code><span class="label">region</span>:Rectangle</code> (default = <code>null</code>)<code></code> &mdash;   to sample from [Default: null = entire src object].
+   </td>
+</tr>
+</table>
+<p></p>
+<span class="label">Returns</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20"></td><td><code>int</code> &mdash;     the sampled average <i>lightness</i> value on a scale of 0-255. 
+   </td>
+</tr>
+</table>
+</div>
+<a name="averageRed()"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">averageRed</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public static function averageRed(src:DisplayObject, accuracy:Number = 0.5, region:Rectangle = null):int</code><p>
+   Sample & average the <i>Red</i> (RGB) value from a display object or one of its region.
+   </p><span class="label">Parameters</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20px"></td><td><code><span class="label">src</span>:DisplayObject</code> &mdash;    of the display object.
+   </td>
+</tr>
+<tr>
+<td class="paramSpacer">&nbsp;</td>
+</tr>
+<tr>
+<td width="20px"></td><td><code><span class="label">accuracy</span>:Number</code> (default = <code>0.5</code>)<code></code> &mdash;   percentage of pixels to sample when averaging.
+   </td>
+</tr>
+<tr>
+<td class="paramSpacer">&nbsp;</td>
+</tr>
+<tr>
+<td width="20px"></td><td><code><span class="label">region</span>:Rectangle</code> (default = <code>null</code>)<code></code> &mdash;   to sample from [Default: null = entire src object].
+   </td>
+</tr>
+</table>
+<p></p>
+<span class="label">Returns</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20"></td><td><code>int</code> &mdash;     the sampled average <i>red</i> value on a scale of 0-255. 
+   </td>
+</tr>
+</table>
+</div>
+<a name="averageSaturation()"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">averageSaturation</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public static function averageSaturation(src:DisplayObject, accuracy:Number = 0.5, region:Rectangle = null):Number</code><p>
+   Sample & average the <i>Saturation</i> (HSL) value from a display object or one of its region.
+   </p><span class="label">Parameters</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20px"></td><td><code><span class="label">src</span>:DisplayObject</code> &mdash;    of the display object.
+   </td>
+</tr>
+<tr>
+<td class="paramSpacer">&nbsp;</td>
+</tr>
+<tr>
+<td width="20px"></td><td><code><span class="label">accuracy</span>:Number</code> (default = <code>0.5</code>)<code></code> &mdash;   percentage of pixels to sample when averaging.
+   </td>
+</tr>
+<tr>
+<td class="paramSpacer">&nbsp;</td>
+</tr>
+<tr>
+<td width="20px"></td><td><code><span class="label">region</span>:Rectangle</code> (default = <code>null</code>)<code></code> &mdash;   to sample from [Default: null = entire src object].
+   </td>
+</tr>
+</table>
+<p></p>
+<span class="label">Returns</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20"></td><td><code>Number</code> &mdash;     the sampled average <i>saturation</i> value on a scale of 0-1. 
+   </td>
+</tr>
+</table>
+</div>
+<a name="averageValue()"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">averageValue</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public static function averageValue(src:DisplayObject, accuracy:Number = 0.5, region:Rectangle = null):Number</code><p>
+   Sample & average the <i>Value</i> (HSV) value from a display object or one of its region.
+   </p><span class="label">Parameters</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20px"></td><td><code><span class="label">src</span>:DisplayObject</code> &mdash;    of the display object.
+   </td>
+</tr>
+<tr>
+<td class="paramSpacer">&nbsp;</td>
+</tr>
+<tr>
+<td width="20px"></td><td><code><span class="label">accuracy</span>:Number</code> (default = <code>0.5</code>)<code></code> &mdash;   percentage of pixels to sample when averaging.
+   </td>
+</tr>
+<tr>
+<td class="paramSpacer">&nbsp;</td>
+</tr>
+<tr>
+<td width="20px"></td><td><code><span class="label">region</span>:Rectangle</code> (default = <code>null</code>)<code></code> &mdash;   to sample from [Default: null = entire src object].
+   </td>
+</tr>
+</table>
+<p></p>
+<span class="label">Returns</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20"></td><td><code>Number</code> &mdash;     the sampled average <i>lightness</i> value on a scale of 0-1. 
    </td>
 </tr>
 </table>
