@@ -1,5 +1,7 @@
 ------ SEKATI API CHANGELOG ------
 
+- Updated UIAssets.fla
+- load package progress with AbstractLoader, AssetLocator, GraphicLoader
 - optimized/bugfixes on ColorUtil averages
 - added ColorUtil.averageHue
 - added ColorUtil.averageSaturation
