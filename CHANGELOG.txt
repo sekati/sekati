@@ -1,6 +1,6 @@
 ------ SEKATI API CHANGELOG ------
 
-
+- optimized/bugfixes on ColorUtil averages
 - added ColorUtil.averageHue
 - added ColorUtil.averageSaturation
 - added ColorUtil.averageLightness
