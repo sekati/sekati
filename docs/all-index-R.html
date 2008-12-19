@@ -199,6 +199,13 @@ if (!isEclipse() || window.name != ECLIPSE_FRAME_NAME) {titleBar_setSubTitle("RÂ
 <td width="20"></td><td></td>
 </tr>
 <tr>
+<td colspan="2" class="idxrow"><a onclick="javascript:loadClassListFrame('sekati/load/class-list.html');" href="sekati/load/AbstractLoader.html#rawContent">rawContent</a> &mdash; Property in class sekati.load.<a onclick="javascript:loadClassListFrame('sekati/load/class-list.html');" href="sekati/load/AbstractLoader.html">AbstractLoader</a></td>
+</tr>
+<tr>
+<td width="20"></td><td>
+   The <i>loosely-typed</i> <code>AbstractLoader</code> content.</td>
+</tr>
+<tr>
 <td colspan="2" class="idxrow"><a onclick="javascript:loadClassListFrame('sekati/crypt/class-list.html');" href="sekati/crypt/RC4.html">RC4</a> &mdash; Final class in package <a onclick="javascript:loadClassListFrame('sekati/crypt/class-list.html');" href="sekati/crypt/package-detail.html">sekati.crypt</a></td>
 </tr>
 <tr>
@@ -236,6 +243,20 @@ if (!isEclipse() || window.name != ECLIPSE_FRAME_NAME) {titleBar_setSubTitle("RÂ
 <td width="20"></td><td>
    Indicates if the MethodInfo describes a property or variable and is it readable
    </td>
+</tr>
+<tr>
+<td colspan="2" class="idxrow"><a onclick="javascript:loadClassListFrame('sekati/load/class-list.html');" href="sekati/load/AbstractLoader.html#ready">ready</a> &mdash; Property in class sekati.load.<a onclick="javascript:loadClassListFrame('sekati/load/class-list.html');" href="sekati/load/AbstractLoader.html">AbstractLoader</a></td>
+</tr>
+<tr>
+<td width="20"></td><td>
+   The ready status of the loader content; if <code>true</code> the content is loaded, if <code>false</code> the content is not loaded.</td>
+</tr>
+<tr>
+<td colspan="2" class="idxrow"><a onclick="javascript:loadClassListFrame('sekati/load/class-list.html');" href="sekati/load/ILoader.html#ready">ready</a> &mdash; Property in interface sekati.load.<a onclick="javascript:loadClassListFrame('sekati/load/class-list.html');" href="sekati/load/ILoader.html">ILoader</a></td>
+</tr>
+<tr>
+<td width="20"></td><td>
+   The ready status of the loader content; if <code>true</code> the content is loaded, if <code>false</code> the content is not loaded.</td>
 </tr>
 <tr>
 <td colspan="2" class="idxrow"><a onclick="javascript:loadClassListFrame('sekati/events/class-list.html');" href="sekati/events/MediaEvent.html#REBUFFER">REBUFFER</a> &mdash; Static property in class sekati.events.<a onclick="javascript:loadClassListFrame('sekati/events/class-list.html');" href="sekati/events/MediaEvent.html">MediaEvent</a></td>
@@ -361,6 +382,13 @@ if (!isEclipse() || window.name != ECLIPSE_FRAME_NAME) {titleBar_setSubTitle("RÂ
 </tr>
 <tr>
 <td width="20"></td><td></td>
+</tr>
+<tr>
+<td colspan="2" class="idxrow"><a onclick="javascript:loadClassListFrame('sekati/load/class-list.html');" href="sekati/load/AssetLocator.html#register()">register</a>(l:<a href="sekati/load/AbstractLoader.html" onclick="javascript:loadClassListFrame('sekati/load./class-list.html');">sekati.load:AbstractLoader</a>) &mdash; Static method in class sekati.load.<a onclick="javascript:loadClassListFrame('sekati/load/class-list.html');" href="sekati/load/AssetLocator.html">AssetLocator</a></td>
+</tr>
+<tr>
+<td width="20"></td><td>
+   Register an asset for weak referencing by <code>AbstractLoader.url</code> property.</td>
 </tr>
 <tr>
 <td colspan="2" class="idxrow"><a onclick="javascript:loadClassListFrame('sekati/collections/class-list.html');" href="sekati/collections/Allocator.html#release()">release</a>() &mdash; Method in class sekati.collections.<a onclick="javascript:loadClassListFrame('sekati/collections/class-list.html');" href="sekati/collections/Allocator.html">Allocator</a></td>
@@ -569,26 +597,14 @@ if (!isEclipse() || window.name != ECLIPSE_FRAME_NAME) {titleBar_setSubTitle("RÂ
 </tr>
 <tr>
 <td width="20"></td><td>
-   Return the URLRequest object.</td>
-</tr>
-<tr>
-<td colspan="2" class="idxrow"><a onclick="javascript:loadClassListFrame('sekati/load/class-list.html');" href="sekati/load/AbstractURLLoader.html#request">request</a> &mdash; Property in class sekati.load.<a onclick="javascript:loadClassListFrame('sekati/load/class-list.html');" href="sekati/load/AbstractURLLoader.html">AbstractURLLoader</a></td>
-</tr>
-<tr>
-<td width="20"></td><td></td>
+   The loader <code>URLRequest</code>.</td>
 </tr>
 <tr>
 <td colspan="2" class="idxrow"><a onclick="javascript:loadClassListFrame('sekati/load/class-list.html');" href="sekati/load/ILoader.html#request">request</a> &mdash; Property in interface sekati.load.<a onclick="javascript:loadClassListFrame('sekati/load/class-list.html');" href="sekati/load/ILoader.html">ILoader</a></td>
 </tr>
 <tr>
-<td width="20"></td><td></td>
-</tr>
-<tr>
-<td colspan="2" class="idxrow"><a onclick="javascript:loadClassListFrame('sekati/load/class-list.html');" href="sekati/load/XMLLoader.html#request()">request</a>() &mdash; Method in class sekati.load.<a onclick="javascript:loadClassListFrame('sekati/load/class-list.html');" href="sekati/load/XMLLoader.html">XMLLoader</a></td>
-</tr>
-<tr>
 <td width="20"></td><td>
-   Load the xml document defined in the constructor.</td>
+   The loader <code>URLRequest</code>.</td>
 </tr>
 <tr>
 <td colspan="2" class="idxrow"><a onclick="javascript:loadClassListFrame('sekati/ui/class-list.html');" href="sekati/ui/Image.html#_request">_request</a> &mdash; Property in class sekati.ui.<a onclick="javascript:loadClassListFrame('sekati/ui/class-list.html');" href="sekati/ui/Image.html">Image</a></td>
@@ -872,12 +888,6 @@ if (!isEclipse() || window.name != ECLIPSE_FRAME_NAME) {titleBar_setSubTitle("RÂ
    A method in the sequence chain failed - make retry attempts at each phase or dispatch the <code>BootstrapEvent.APP_FAILURE</code> event.</td>
 </tr>
 <tr>
-<td colspan="2" class="idxrow"><a onclick="javascript:loadClassListFrame('sekati/events/class-list.html');" href="sekati/events/LoaderEvent.html#RETRY">RETRY</a> &mdash; Constant static property in class sekati.events.<a onclick="javascript:loadClassListFrame('sekati/events/class-list.html');" href="sekati/events/LoaderEvent.html">LoaderEvent</a></td>
-</tr>
-<tr>
-<td width="20"></td><td></td>
-</tr>
-<tr>
 <td colspan="2" class="idxrow"><a onclick="javascript:loadClassListFrame('sekati/core/class-list.html');" href="sekati/core/Bootstrap.html#RETRY_ATTEMPT">RETRY_ATTEMPT</a> &mdash; Static property in class sekati.core.<a onclick="javascript:loadClassListFrame('sekati/core/class-list.html');" href="sekati/core/Bootstrap.html">Bootstrap</a></td>
 </tr>
 <tr>
@@ -885,23 +895,11 @@ if (!isEclipse() || window.name != ECLIPSE_FRAME_NAME) {titleBar_setSubTitle("RÂ
    The <code>RETRY_ATTEMPT</code> tracks bootstrap rety attempts.</td>
 </tr>
 <tr>
-<td colspan="2" class="idxrow"><a onclick="javascript:loadClassListFrame('sekati/load/class-list.html');" href="sekati/load/AbstractURLLoader.html#RETRY_ATTEMPT">RETRY_ATTEMPT</a> &mdash; Property in class sekati.load.<a onclick="javascript:loadClassListFrame('sekati/load/class-list.html');" href="sekati/load/AbstractURLLoader.html">AbstractURLLoader</a></td>
-</tr>
-<tr>
-<td width="20"></td><td></td>
-</tr>
-<tr>
 <td colspan="2" class="idxrow"><a onclick="javascript:loadClassListFrame('sekati/core/class-list.html');" href="sekati/core/Bootstrap.html#RETRY_MAX">RETRY_MAX</a> &mdash; Static property in class sekati.core.<a onclick="javascript:loadClassListFrame('sekati/core/class-list.html');" href="sekati/core/Bootstrap.html">Bootstrap</a></td>
 </tr>
 <tr>
 <td width="20"></td><td>
    <code>RETRY_MAX</code> maximum retries before Bootstrap errors out.</td>
-</tr>
-<tr>
-<td colspan="2" class="idxrow"><a onclick="javascript:loadClassListFrame('sekati/load/class-list.html');" href="sekati/load/AbstractURLLoader.html#RETRY_MAX">RETRY_MAX</a> &mdash; Property in class sekati.load.<a onclick="javascript:loadClassListFrame('sekati/load/class-list.html');" href="sekati/load/AbstractURLLoader.html">AbstractURLLoader</a></td>
-</tr>
-<tr>
-<td width="20"></td><td></td>
 </tr>
 <tr>
 <td colspan="2" class="idxrow"><a onclick="javascript:loadClassListFrame('sekati/reflect/class-list.html');" href="sekati/reflect/MethodReflector.html#returnType">returnType</a> &mdash; Property in class sekati.reflect.<a onclick="javascript:loadClassListFrame('sekati/reflect/class-list.html');" href="sekati/reflect/MethodReflector.html">MethodReflector</a></td>
@@ -1064,25 +1062,6 @@ if (!isEclipse() || window.name != ECLIPSE_FRAME_NAME) {titleBar_setSubTitle("RÂ
 <tr>
 <td width="20"></td><td>
    Force the Garbage Collector to run a full Mark-Sweep: avoid using in production.</td>
-</tr>
-<tr>
-<td colspan="2" class="idxrow"><a onclick="javascript:loadClassListFrame('sekati/load/class-list.html');" href="sekati/load/AbstractLoader.html#_running">_running</a> &mdash; Property in class sekati.load.<a onclick="javascript:loadClassListFrame('sekati/load/class-list.html');" href="sekati/load/AbstractLoader.html">AbstractLoader</a></td>
-</tr>
-<tr>
-<td width="20"></td><td></td>
-</tr>
-<tr>
-<td colspan="2" class="idxrow"><a onclick="javascript:loadClassListFrame('sekati/load/class-list.html');" href="sekati/load/AbstractLoader.html#running">running</a> &mdash; Property in class sekati.load.<a onclick="javascript:loadClassListFrame('sekati/load/class-list.html');" href="sekati/load/AbstractLoader.html">AbstractLoader</a></td>
-</tr>
-<tr>
-<td width="20"></td><td>
-   Return the loaders running status.</td>
-</tr>
-<tr>
-<td colspan="2" class="idxrow"><a onclick="javascript:loadClassListFrame('sekati/load/class-list.html');" href="sekati/load/ILoader.html#running">running</a> &mdash; Property in interface sekati.load.<a onclick="javascript:loadClassListFrame('sekati/load/class-list.html');" href="sekati/load/ILoader.html">ILoader</a></td>
-</tr>
-<tr>
-<td width="20"></td><td></td>
 </tr>
 <tr>
 <td colspan="2" class="idxrow"><a onclick="javascript:loadClassListFrame('sekati/ui/class-list.html');" href="sekati/ui/Image.html#running">running</a> &mdash; Property in class sekati.ui.<a onclick="javascript:loadClassListFrame('sekati/ui/class-list.html');" href="sekati/ui/Image.html">Image</a></td>

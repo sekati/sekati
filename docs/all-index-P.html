@@ -213,17 +213,31 @@ if (!isEclipse() || window.name != ECLIPSE_FRAME_NAME) {titleBar_setSubTitle("PÂ
    Returns the next item in the collection without moving to it.</td>
 </tr>
 <tr>
-<td colspan="2" class="idxrow"><a onclick="javascript:loadClassListFrame('sekati/load/class-list.html');" href="sekati/load/AppLoader.html#_percent">_percent</a> &mdash; Property in class sekati.load.<a onclick="javascript:loadClassListFrame('sekati/load/class-list.html');" href="sekati/load/AppLoader.html">AppLoader</a></td>
+<td colspan="2" class="idxrow"><a onclick="javascript:loadClassListFrame('sekati/load/class-list.html');" href="sekati/load/AbstractLoader.html#percent">percent</a> &mdash; Property in class sekati.load.<a onclick="javascript:loadClassListFrame('sekati/load/class-list.html');" href="sekati/load/AbstractLoader.html">AbstractLoader</a></td>
+</tr>
+<tr>
+<td width="20"></td><td>
+   The loader percentile.</td>
+</tr>
+<tr>
+<td colspan="2" class="idxrow"><a onclick="javascript:loadClassListFrame('sekati/load/class-list.html');" href="sekati/load/ApplicationLoader.html#_percent">_percent</a> &mdash; Property in class sekati.load.<a onclick="javascript:loadClassListFrame('sekati/load/class-list.html');" href="sekati/load/ApplicationLoader.html">ApplicationLoader</a></td>
 </tr>
 <tr>
 <td width="20"></td><td></td>
 </tr>
 <tr>
-<td colspan="2" class="idxrow"><a onclick="javascript:loadClassListFrame('sekati/load/class-list.html');" href="sekati/load/AppLoader.html#percent">percent</a> &mdash; Property in class sekati.load.<a onclick="javascript:loadClassListFrame('sekati/load/class-list.html');" href="sekati/load/AppLoader.html">AppLoader</a></td>
+<td colspan="2" class="idxrow"><a onclick="javascript:loadClassListFrame('sekati/load/class-list.html');" href="sekati/load/ApplicationLoader.html#percent">percent</a> &mdash; Property in class sekati.load.<a onclick="javascript:loadClassListFrame('sekati/load/class-list.html');" href="sekati/load/ApplicationLoader.html">ApplicationLoader</a></td>
 </tr>
 <tr>
 <td width="20"></td><td>
    Return the percent loaded.</td>
+</tr>
+<tr>
+<td colspan="2" class="idxrow"><a onclick="javascript:loadClassListFrame('sekati/load/class-list.html');" href="sekati/load/ILoader.html#percent">percent</a> &mdash; Property in interface sekati.load.<a onclick="javascript:loadClassListFrame('sekati/load/class-list.html');" href="sekati/load/ILoader.html">ILoader</a></td>
+</tr>
+<tr>
+<td width="20"></td><td>
+   The loader percentile.</td>
 </tr>
 <tr>
 <td colspan="2" class="idxrow"><a onclick="javascript:loadClassListFrame('sekati/math/class-list.html');" href="sekati/math/MathBase.html#percent()">percent</a>(amount, total) &mdash; Static method in class sekati.math.<a onclick="javascript:loadClassListFrame('sekati/math/class-list.html');" href="sekati/math/MathBase.html">MathBase</a></td>
@@ -460,7 +474,7 @@ if (!isEclipse() || window.name != ECLIPSE_FRAME_NAME) {titleBar_setSubTitle("PÂ
 </tr>
 <tr>
 <td width="20"></td><td>
-   The <code>AppLoader</code> instance if load progress checking is desired via <code>AppEvent</code> listeners.</td>
+   The <code>ApplicationLoader</code> instance if load progress checking is desired via <code>BootstrapEvent.APP_LOAD</code> listeners.</td>
 </tr>
 <tr>
 <td colspan="2" class="idxrow"><a onclick="javascript:loadClassListFrame('sekati/display/class-list.html');" href="sekati/display/DraggableSprite.html#press()">press</a>(e) &mdash; Method in class sekati.display.<a onclick="javascript:loadClassListFrame('sekati/display/class-list.html');" href="sekati/display/DraggableSprite.html">DraggableSprite</a></td>
@@ -522,13 +536,14 @@ if (!isEclipse() || window.name != ECLIPSE_FRAME_NAME) {titleBar_setSubTitle("PÂ
    </td>
 </tr>
 <tr>
+<td colspan="2" class="idxrow"><a onclick="javascript:loadClassListFrame('sekati/utils/class-list.html');" href="sekati/utils/XMLUtil.html#PROCESSING_INSTRUCTION">PROCESSING_INSTRUCTION</a> &mdash; Constant static property in class sekati.utils.<a onclick="javascript:loadClassListFrame('sekati/utils/class-list.html');" href="sekati/utils/XMLUtil.html">XMLUtil</a></td>
+</tr>
+<tr>
+<td width="20"></td><td>
+   Constant representing a processing instruction type returned from XML.nodeKind.</td>
+</tr>
+<tr>
 <td colspan="2" class="idxrow"><a onclick="javascript:loadClassListFrame('sekati/ui/class-list.html');" href="sekati/ui/FLVPlayer.html#_progBar">_progBar</a> &mdash; Property in class sekati.ui.<a onclick="javascript:loadClassListFrame('sekati/ui/class-list.html');" href="sekati/ui/FLVPlayer.html">FLVPlayer</a></td>
-</tr>
-<tr>
-<td width="20"></td><td></td>
-</tr>
-<tr>
-<td colspan="2" class="idxrow"><a onclick="javascript:loadClassListFrame('sekati/events/class-list.html');" href="sekati/events/LoaderEvent.html#PROGRESS">PROGRESS</a> &mdash; Constant static property in class sekati.events.<a onclick="javascript:loadClassListFrame('sekati/events/class-list.html');" href="sekati/events/LoaderEvent.html">LoaderEvent</a></td>
 </tr>
 <tr>
 <td width="20"></td><td></td>
@@ -540,23 +555,11 @@ if (!isEclipse() || window.name != ECLIPSE_FRAME_NAME) {titleBar_setSubTitle("PÂ
 <td width="20"></td><td></td>
 </tr>
 <tr>
-<td colspan="2" class="idxrow"><a onclick="javascript:loadClassListFrame('sekati/load/class-list.html');" href="sekati/load/AbstractCoreLoader.html#progressHandler()">progressHandler</a>(e) &mdash; Method in class sekati.load.<a onclick="javascript:loadClassListFrame('sekati/load/class-list.html');" href="sekati/load/AbstractCoreLoader.html">AbstractCoreLoader</a></td>
+<td colspan="2" class="idxrow"><a onclick="javascript:loadClassListFrame('sekati/load/class-list.html');" href="sekati/load/AbstractLoader.html#progressHandler()">progressHandler</a>(e) &mdash; Method in class sekati.load.<a onclick="javascript:loadClassListFrame('sekati/load/class-list.html');" href="sekati/load/AbstractLoader.html">AbstractLoader</a></td>
 </tr>
 <tr>
 <td width="20"></td><td>
    <code>ProgressEvent.PROGRESS</code> handler.</td>
-</tr>
-<tr>
-<td colspan="2" class="idxrow"><a onclick="javascript:loadClassListFrame('sekati/load/class-list.html');" href="sekati/load/AbstractURLLoader.html#progressHandler()">progressHandler</a>(e) &mdash; Method in class sekati.load.<a onclick="javascript:loadClassListFrame('sekati/load/class-list.html');" href="sekati/load/AbstractURLLoader.html">AbstractURLLoader</a></td>
-</tr>
-<tr>
-<td width="20"></td><td></td>
-</tr>
-<tr>
-<td colspan="2" class="idxrow"><a onclick="javascript:loadClassListFrame('sekati/load/class-list.html');" href="sekati/load/XMLLoader.html#progressHandler()">progressHandler</a>(e) &mdash; Method in class sekati.load.<a onclick="javascript:loadClassListFrame('sekati/load/class-list.html');" href="sekati/load/XMLLoader.html">XMLLoader</a></td>
-</tr>
-<tr>
-<td width="20"></td><td></td>
 </tr>
 <tr>
 <td colspan="2" class="idxrow"><a onclick="javascript:loadClassListFrame('sekati/ui/class-list.html');" href="sekati/ui/Image.html#progressHandler()">progressHandler</a>(e) &mdash; Method in class sekati.ui.<a onclick="javascript:loadClassListFrame('sekati/ui/class-list.html');" href="sekati/ui/Image.html">Image</a></td>

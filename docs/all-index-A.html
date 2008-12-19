@@ -65,12 +65,6 @@ if (!isEclipse() || window.name != ECLIPSE_FRAME_NAME) {titleBar_setSubTitle("AÂ
    </td>
 </tr>
 <tr>
-<td colspan="2" class="idxrow"><a onclick="javascript:loadClassListFrame('sekati/events/class-list.html');" href="sekati/events/LoaderEvent.html#ABORT">ABORT</a> &mdash; Constant static property in class sekati.events.<a onclick="javascript:loadClassListFrame('sekati/events/class-list.html');" href="sekati/events/LoaderEvent.html">LoaderEvent</a></td>
-</tr>
-<tr>
-<td width="20"></td><td></td>
-</tr>
-<tr>
 <td colspan="2" class="idxrow"><a onclick="javascript:loadClassListFrame('sekati/ui/controls/class-list.html');" href="sekati/ui/controls/AbstractCalendar.html">AbstractCalendar</a> &mdash; Class in package <a onclick="javascript:loadClassListFrame('sekati/ui/controls/class-list.html');" href="sekati/ui/controls/package-detail.html">sekati.ui.controls</a></td>
 </tr>
 <tr>
@@ -84,21 +78,6 @@ if (!isEclipse() || window.name != ECLIPSE_FRAME_NAME) {titleBar_setSubTitle("AÂ
 <tr>
 <td width="20"></td><td>
    AbstractCalendar Constructor
-   </td>
-</tr>
-<tr>
-<td colspan="2" class="idxrow"><a onclick="javascript:loadClassListFrame('sekati/load/class-list.html');" href="sekati/load/AbstractCoreLoader.html">AbstractCoreLoader</a> &mdash; Class in package <a onclick="javascript:loadClassListFrame('sekati/load/class-list.html');" href="sekati/load/package-detail.html">sekati.load</a></td>
-</tr>
-<tr>
-<td width="20"></td><td>
-  AbstractCoreLoader provides the core <code>Loader</code> & <code>URLLoader</code> logic for <i>API Abstract Loaders</i>.</td>
-</tr>
-<tr>
-<td colspan="2" class="idxrow"><a onclick="javascript:loadClassListFrame('sekati/load/class-list.html');" href="sekati/load/AbstractCoreLoader.html#AbstractCoreLoader()">AbstractCoreLoader</a>(loaderType) &mdash; Constructor in class sekati.load.<a onclick="javascript:loadClassListFrame('sekati/load/class-list.html');" href="sekati/load/AbstractCoreLoader.html">AbstractCoreLoader</a></td>
-</tr>
-<tr>
-<td width="20"></td><td>
-   AbstractCoreLoader Constructor
    </td>
 </tr>
 <tr>
@@ -123,10 +102,10 @@ if (!isEclipse() || window.name != ECLIPSE_FRAME_NAME) {titleBar_setSubTitle("AÂ
 </tr>
 <tr>
 <td width="20"></td><td>
-  AbstractLoader provides a common abstraction layer for Loader & URLLoader based API loader classes.</td>
+  AbstractLoader provides the core <code>Loader</code> & <code>URLLoader</code> logic for <i>API Loaders</i>.</td>
 </tr>
 <tr>
-<td colspan="2" class="idxrow"><a onclick="javascript:loadClassListFrame('sekati/load/class-list.html');" href="sekati/load/AbstractLoader.html#AbstractLoader()">AbstractLoader</a>(urlRequest, hasCacheBuster) &mdash; Constructor in class sekati.load.<a onclick="javascript:loadClassListFrame('sekati/load/class-list.html');" href="sekati/load/AbstractLoader.html">AbstractLoader</a></td>
+<td colspan="2" class="idxrow"><a onclick="javascript:loadClassListFrame('sekati/load/class-list.html');" href="sekati/load/AbstractLoader.html#AbstractLoader()">AbstractLoader</a>(loaderType, url) &mdash; Constructor in class sekati.load.<a onclick="javascript:loadClassListFrame('sekati/load/class-list.html');" href="sekati/load/AbstractLoader.html">AbstractLoader</a></td>
 </tr>
 <tr>
 <td width="20"></td><td>
@@ -163,21 +142,6 @@ if (!isEclipse() || window.name != ECLIPSE_FRAME_NAME) {titleBar_setSubTitle("AÂ
 <td width="20"></td><td>
    AbstractTextField is a foundational TextField class and should be thought 
    of as one of the main textual building block of the API.</td>
-</tr>
-<tr>
-<td colspan="2" class="idxrow"><a onclick="javascript:loadClassListFrame('sekati/load/class-list.html');" href="sekati/load/AbstractURLLoader.html">AbstractURLLoader</a> &mdash; Class in package <a onclick="javascript:loadClassListFrame('sekati/load/class-list.html');" href="sekati/load/package-detail.html">sekati.load</a></td>
-</tr>
-<tr>
-<td width="20"></td><td>
-  AbstractURLLoader provides a common URLLoader API for textual data transports.</td>
-</tr>
-<tr>
-<td colspan="2" class="idxrow"><a onclick="javascript:loadClassListFrame('sekati/load/class-list.html');" href="sekati/load/AbstractURLLoader.html#AbstractURLLoader()">AbstractURLLoader</a>(request, init, retries) &mdash; Constructor in class sekati.load.<a onclick="javascript:loadClassListFrame('sekati/load/class-list.html');" href="sekati/load/AbstractURLLoader.html">AbstractURLLoader</a></td>
-</tr>
-<tr>
-<td width="20"></td><td>
-   AbstractURLLoader Constructor
-   </td>
 </tr>
 <tr>
 <td colspan="2" class="idxrow"><a onclick="javascript:loadClassListFrame('sekati/events/class-list.html');" href="sekati/events/StageEvent.html#ACTIVATE">ACTIVATE</a> &mdash; Constant static property in class sekati.events.<a onclick="javascript:loadClassListFrame('sekati/events/class-list.html');" href="sekati/events/StageEvent.html">StageEvent</a></td>
@@ -654,25 +618,25 @@ if (!isEclipse() || window.name != ECLIPSE_FRAME_NAME) {titleBar_setSubTitle("AÂ
    </td>
 </tr>
 <tr>
+<td colspan="2" class="idxrow"><a onclick="javascript:loadClassListFrame('sekati/load/class-list.html');" href="sekati/load/ApplicationLoader.html">ApplicationLoader</a> &mdash; Class in package <a onclick="javascript:loadClassListFrame('sekati/load/class-list.html');" href="sekati/load/package-detail.html">sekati.load</a></td>
+</tr>
+<tr>
+<td width="20"></td><td>
+  ApplicationLoader provides a baseline (invisible) preloader facility for Application SWF files that implement the core API.</td>
+</tr>
+<tr>
+<td colspan="2" class="idxrow"><a onclick="javascript:loadClassListFrame('sekati/load/class-list.html');" href="sekati/load/ApplicationLoader.html#ApplicationLoader()">ApplicationLoader</a>(init) &mdash; Constructor in class sekati.load.<a onclick="javascript:loadClassListFrame('sekati/load/class-list.html');" href="sekati/load/ApplicationLoader.html">ApplicationLoader</a></td>
+</tr>
+<tr>
+<td width="20"></td><td>
+   ApplicationLoader Constructor
+   </td>
+</tr>
+<tr>
 <td colspan="2" class="idxrow"><a onclick="javascript:loadClassListFrame('sekati/events/class-list.html');" href="sekati/events/BootstrapEvent.html#APP_LOAD">APP_LOAD</a> &mdash; Constant static property in class sekati.events.<a onclick="javascript:loadClassListFrame('sekati/events/class-list.html');" href="sekati/events/BootstrapEvent.html">BootstrapEvent</a></td>
 </tr>
 <tr>
 <td width="20"></td><td>
-   </td>
-</tr>
-<tr>
-<td colspan="2" class="idxrow"><a onclick="javascript:loadClassListFrame('sekati/load/class-list.html');" href="sekati/load/AppLoader.html">AppLoader</a> &mdash; Class in package <a onclick="javascript:loadClassListFrame('sekati/load/class-list.html');" href="sekati/load/package-detail.html">sekati.load</a></td>
-</tr>
-<tr>
-<td width="20"></td><td>
-  AppLoader provides a baseline (invisible) preloader facility for Application SWF files that implement the core API.</td>
-</tr>
-<tr>
-<td colspan="2" class="idxrow"><a onclick="javascript:loadClassListFrame('sekati/load/class-list.html');" href="sekati/load/AppLoader.html#AppLoader()">AppLoader</a>(init) &mdash; Constructor in class sekati.load.<a onclick="javascript:loadClassListFrame('sekati/load/class-list.html');" href="sekati/load/AppLoader.html">AppLoader</a></td>
-</tr>
-<tr>
-<td width="20"></td><td>
-   AppLoader Constructor
    </td>
 </tr>
 <tr>
@@ -907,10 +871,33 @@ if (!isEclipse() || window.name != ECLIPSE_FRAME_NAME) {titleBar_setSubTitle("AÂ
 <td width="20"></td><td></td>
 </tr>
 <tr>
+<td colspan="2" class="idxrow"><a onclick="javascript:loadClassListFrame('sekati/load/class-list.html');" href="sekati/load/AssetLocator.html">AssetLocator</a> &mdash; Class in package <a onclick="javascript:loadClassListFrame('sekati/load/class-list.html');" href="sekati/load/package-detail.html">sekati.load</a></td>
+</tr>
+<tr>
+<td width="20"></td><td>
+  AssetLocator provides a weak-referenced
+  </td>
+</tr>
+<tr>
+<td colspan="2" class="idxrow"><a onclick="javascript:loadClassListFrame('sekati/load/class-list.html');" href="sekati/load/AssetLocator.html#AssetLocator()">AssetLocator</a>() &mdash; Constructor in class sekati.load.<a onclick="javascript:loadClassListFrame('sekati/load/class-list.html');" href="sekati/load/AssetLocator.html">AssetLocator</a></td>
+</tr>
+<tr>
+<td width="20"></td><td>
+   AssetLocator Static Constructor
+   </td>
+</tr>
+<tr>
 <td colspan="2" class="idxrow"><a onclick="javascript:loadClassListFrame('sekati/utils/class-list.html');" href="sekati/utils/AbstractEmbeddedAsset.html#AssetType">AssetType</a> &mdash; Property in class sekati.utils.<a onclick="javascript:loadClassListFrame('sekati/utils/class-list.html');" href="sekati/utils/AbstractEmbeddedAsset.html">AbstractEmbeddedAsset</a></td>
 </tr>
 <tr>
 <td width="20"></td><td></td>
+</tr>
+<tr>
+<td colspan="2" class="idxrow"><a onclick="javascript:loadClassListFrame('sekati/utils/class-list.html');" href="sekati/utils/XMLUtil.html#ATTRIBUTE">ATTRIBUTE</a> &mdash; Constant static property in class sekati.utils.<a onclick="javascript:loadClassListFrame('sekati/utils/class-list.html');" href="sekati/utils/XMLUtil.html">XMLUtil</a></td>
+</tr>
+<tr>
+<td width="20"></td><td>
+   Constant representing an attribute type returned from XML.nodeKind.</td>
 </tr>
 <tr>
 <td colspan="2" class="idxrow"><a onclick="javascript:loadClassListFrame('sekati/rpc/class-list.html');" href="sekati/rpc/SOAPService.html#available">available</a> &mdash; Property in class sekati.rpc.<a onclick="javascript:loadClassListFrame('sekati/rpc/class-list.html');" href="sekati/rpc/SOAPService.html">SOAPService</a></td>

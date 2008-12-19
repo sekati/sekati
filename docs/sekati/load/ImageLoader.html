@@ -4,22 +4,22 @@
 <META http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <link rel="stylesheet" href="../../style.css" type="text/css" media="screen">
 <link rel="stylesheet" href="../../print.css" type="text/css" media="print">
-<meta content="XMLLoader,sekati.load.XMLLoader,content" name="keywords">
-<title>sekati.load.XMLLoader</title>
+<meta content="ImageLoader,sekati.load.ImageLoader,content,initHandler" name="keywords">
+<title>sekati.load.ImageLoader</title>
 </head>
 <body>
 <script type="text/javascript" language="javascript" src="../../asdoc.js"></script><script type="text/javascript" language="javascript" src="../../cookies.js"></script><script type="text/javascript" language="javascript">
 <!--
-				asdocTitle = 'XMLLoader - Sekati API Documentation';
+				asdocTitle = 'ImageLoader - Sekati API Documentation';
 				var baseRef = '../../';
 				window.onload = configPage;
 			--></script>
 <table style="display:none" id="titleTable" cellspacing="0" cellpadding="0" class="titleTable">
 <tr>
-<td align="left" class="titleTableTitle">Sekati API Documentation</td><td align="right" class="titleTableTopNav"><a onclick="loadClassListFrame('../../all-classes.html')" href="../../package-summary.html">All&nbsp;Packages</a>&nbsp;|&nbsp;<a onclick="loadClassListFrame('../../all-classes.html')" href="../../class-summary.html">All&nbsp;Classes</a>&nbsp;|&nbsp;<a onclick="loadClassListFrame('../../index-list.html')" href="../../all-index-A.html">Index</a>&nbsp;|&nbsp;<a href="../../index.html?sekati/load/XMLLoader.html&amp;sekati/load/class-list.html" id="framesLink1">Frames</a><a onclick="parent.location=document.location" href="" style="display:none" id="noFramesLink1">No&nbsp;Frames</a></td><td rowspan="3" align="right" class="titleTableLogo"><img alt="Adobe Logo" title="Adobe Logo" class="logoImage" src="../../images/logo.jpg"></td>
+<td align="left" class="titleTableTitle">Sekati API Documentation</td><td align="right" class="titleTableTopNav"><a onclick="loadClassListFrame('../../all-classes.html')" href="../../package-summary.html">All&nbsp;Packages</a>&nbsp;|&nbsp;<a onclick="loadClassListFrame('../../all-classes.html')" href="../../class-summary.html">All&nbsp;Classes</a>&nbsp;|&nbsp;<a onclick="loadClassListFrame('../../index-list.html')" href="../../all-index-A.html">Index</a>&nbsp;|&nbsp;<a href="../../index.html?sekati/load/ImageLoader.html&amp;sekati/load/class-list.html" id="framesLink1">Frames</a><a onclick="parent.location=document.location" href="" style="display:none" id="noFramesLink1">No&nbsp;Frames</a></td><td rowspan="3" align="right" class="titleTableLogo"><img alt="Adobe Logo" title="Adobe Logo" class="logoImage" src="../../images/logo.jpg"></td>
 </tr>
 <tr class="titleTableRow2">
-<td align="left" id="subTitle" class="titleTableSubTitle">Class&nbsp;XMLLoader</td><td align="right" id="subNav" class="titleTableSubNav"><a href="#propertySummary">Properties</a>&nbsp;| <a href="#methodSummary">Methods</a></td>
+<td align="left" id="subTitle" class="titleTableSubTitle">Class&nbsp;ImageLoader</td><td align="right" id="subNav" class="titleTableSubNav"><a href="#propertySummary">Properties</a>&nbsp;| <a href="#methodSummary">Methods</a></td>
 </tr>
 <tr class="titleTableRow3">
 <td colspan="2">&nbsp;</td>
@@ -27,7 +27,7 @@
 </table>
 <script type="text/javascript" language="javascript">
 <!--
-if (!isEclipse() || window.name != ECLIPSE_FRAME_NAME) {titleBar_setSubTitle("Class XMLLoader"); titleBar_setSubNav(false,true,false,false,false,false,true,false,false,false,false,false,false,false);}
+if (!isEclipse() || window.name != ECLIPSE_FRAME_NAME) {titleBar_setSubTitle("Class ImageLoader"); titleBar_setSubNav(false,true,false,false,false,false,true,false,false,false,false,false,false,false);}
 --></script>
 <div class="MainContent">
 <table cellspacing="0" cellpadding="0" class="classHeaderTable">
@@ -35,28 +35,28 @@ if (!isEclipse() || window.name != ECLIPSE_FRAME_NAME) {titleBar_setSubTitle("Cl
 <td class="classHeaderTableLabel">Package</td><td><a onclick="javascript:loadClassListFrame('class-list.html')" href="package-detail.html">sekati.load</a></td>
 </tr>
 <tr>
-<td class="classHeaderTableLabel">Class</td><td class="classSignature">public class XMLLoader</td>
+<td class="classHeaderTableLabel">Class</td><td class="classSignature">public class ImageLoader</td>
 </tr>
 <tr>
-<td class="classHeaderTableLabel">Inheritance</td><td class="inheritanceList">XMLLoader <img class="inheritArrow" alt="Inheritance" title="Inheritance" src="../../images/inherit-arrow.gif"> <a href="AbstractLoader.html">AbstractLoader</a> <img class="inheritArrow" alt="Inheritance" title="Inheritance" src="../../images/inherit-arrow.gif"> flash.events.EventDispatcher</td>
+<td class="classHeaderTableLabel">Inheritance</td><td class="inheritanceList">ImageLoader <img class="inheritArrow" alt="Inheritance" title="Inheritance" src="../../images/inherit-arrow.gif"> <a href="AbstractLoader.html">AbstractLoader</a> <img class="inheritArrow" alt="Inheritance" title="Inheritance" src="../../images/inherit-arrow.gif"> flash.events.EventDispatcher</td>
 </tr>
 <tr>
 <td class="classHeaderTableLabel">Implements</td><td><a href="ILoader.html">ILoader</a></td>
 </tr>
 </table>
 <p></p>
-  XMLLoader provides a standard API loader for XML content.
+  ImageLoader provides a standard API loader for graphical assets.
   
   <p></p>
 <br>
 <span class="label">Example</span>
 <br><div class='listing'><pre>
-  var loader : XMLLoader = new XMLLoader( "http://localhost/path/to/my.xml" );
-  loader.addEventListener( Event.INIT, addContent );
+  var loader : ImageLoader = new ImageLoader( "http://localhost/path/to/image.png" );
+  loader.addEventListener( Event.INIT, addGraphic );
   loader.load( );
   
-  private function addContent(e : Event) : void {
-    loader.removeEventListener( Event.INIT, addContent );
+  private function addGraphic(e : Event) : void {
+    loader.removeEventListener( Event.INIT, addGraphic );
     addChild( loader.content );
   }
   </pre></div>
@@ -90,9 +90,9 @@ if (!isEclipse() || window.name != ECLIPSE_FRAME_NAME) {titleBar_setSubTitle("Cl
 </td><td class="summaryTableOwnerCol"><a href="AbstractLoader.html">AbstractLoader</a></td>
 </tr>
 <tr class="">
-<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a class="signatureLink" href="#content">content</a> : XML<div class="summaryTableDescription">[read-only]
-   The <i>strictly-typed</i> <code>XML</code> loader content.</div>
-</td><td class="summaryTableOwnerCol">XMLLoader</td>
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a class="signatureLink" href="#content">content</a> : Bitmap<div class="summaryTableDescription">[read-only]
+   The <i>strictly-typed</i> <code>Bitmap</code> loader content.</div>
+</td><td class="summaryTableOwnerCol">ImageLoader</td>
 </tr>
 <tr class="hideInheritedProperty">
 <td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img class="inheritedSummaryImage" title="Inherited" alt="Inherited" src="../../images/inheritedSummary.gif"></td><td class="summaryTableSignatureCol"><a class="signatureLink" href="AbstractLoader.html#context">context</a> : LoaderContext<div class="summaryTableDescription">
@@ -170,11 +170,11 @@ if (!isEclipse() || window.name != ECLIPSE_FRAME_NAME) {titleBar_setSubTitle("Cl
 <tr class="">
 <td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
 <div class="summarySignature">
-<a class="signatureLink" href="#XMLLoader()">XMLLoader</a>(url:String)</div>
+<a class="signatureLink" href="#ImageLoader()">ImageLoader</a>(url:String)</div>
 <div class="summaryTableDescription">
-   XMLLoader Constructor
+   ImageLoader Constructor
    </div>
-</td><td class="summaryTableOwnerCol">XMLLoader</td>
+</td><td class="summaryTableOwnerCol">ImageLoader</td>
 </tr>
 <tr class="hideInheritedMethod">
 <td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img class="inheritedSummaryImage" title="Inherited" alt="Inherited" src="../../images/inheritedSummary.gif"></td><td class="summaryTableSignatureCol">
@@ -221,7 +221,7 @@ if (!isEclipse() || window.name != ECLIPSE_FRAME_NAME) {titleBar_setSubTitle("Cl
 <a onclick="javascript:setInheritedVisible(true,'ProtectedMethod');" href="#protectedMethodSummary" class="showHideLink"><img src="../../images/collapsed.gif" class="showHideLinkImage"> Show Inherited Protected Methods</a>
 </div>
 </div>
-<table id="summaryTableProtectedMethod" class="summaryTable hideInheritedProtectedMethod" cellpadding="3" cellspacing="0">
+<table id="summaryTableProtectedMethod" class="summaryTable " cellpadding="3" cellspacing="0">
 <tr>
 <th>&nbsp;</th><th colspan="2">Method</th><th class="summaryTableOwnerCol">Defined&nbsp;by</th>
 </tr>
@@ -249,13 +249,14 @@ if (!isEclipse() || window.name != ECLIPSE_FRAME_NAME) {titleBar_setSubTitle("Cl
    Generic processor for <code>ErrorEvent</code>'s.</div>
 </td><td class="summaryTableOwnerCol"><a href="AbstractLoader.html">AbstractLoader</a></td>
 </tr>
-<tr class="hideInheritedProtectedMethod">
-<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img class="inheritedSummaryImage" title="Inherited" alt="Inherited" src="../../images/inheritedSummary.gif"></td><td class="summaryTableSignatureCol">
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
 <div class="summarySignature">
-<a class="signatureLink" href="AbstractLoader.html#initHandler()">initHandler</a>(e:Event):void</div>
+<a class="signatureLink" href="#initHandler()">initHandler</a>(e:Event):void</div>
 <div class="summaryTableDescription">
+   
    <code>Event.INIT</code> handler.</div>
-</td><td class="summaryTableOwnerCol"><a href="AbstractLoader.html">AbstractLoader</a></td>
+</td><td class="summaryTableOwnerCol">ImageLoader</td>
 </tr>
 <tr class="hideInheritedProtectedMethod">
 <td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img class="inheritedSummaryImage" title="Inherited" alt="Inherited" src="../../images/inheritedSummary.gif"></td><td class="summaryTableSignatureCol">
@@ -305,28 +306,47 @@ showHideInherited();
 </tr>
 </table>
 <div class="detailBody">
-<code>content:XML</code>&nbsp;&nbsp;[read-only]<p>
-   The <i>strictly-typed</i> <code>XML</code> loader content.
+<code>content:Bitmap</code>&nbsp;&nbsp;[read-only]<p>
+   The <i>strictly-typed</i> <code>Bitmap</code> loader content.
    </p><span class="label">Implementation</span>
 <br>
-<code>&nbsp;&nbsp;&nbsp;&nbsp;public function get content():XML</code>
+<code>&nbsp;&nbsp;&nbsp;&nbsp;public function get content():Bitmap</code>
 <br>
 </div>
 <a name="constructorDetail"></a>
 <div class="detailSectionHeader">Constructor detail</div>
-<a name="XMLLoader()"></a>
+<a name="ImageLoader()"></a>
 <table cellspacing="0" cellpadding="0" class="detailHeader">
 <tr>
-<td class="detailHeaderName">XMLLoader</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">constructor</td>
+<td class="detailHeaderName">ImageLoader</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">constructor</td>
 </tr>
 </table>
 <div class="detailBody">
-<code>public function XMLLoader(url:String)</code><p>
-   XMLLoader Constructor
+<code>public function ImageLoader(url:String)</code><p>
+   ImageLoader Constructor
    </p><span class="label">Parameters</span>
 <table border="0" cellspacing="0" cellpadding="0">
 <tr>
 <td width="20px"></td><td><code><span class="label">url</span>:String</code></td>
+</tr>
+</table>
+</div>
+<a name="methodDetail"></a>
+<div class="detailSectionHeader">Method detail</div>
+<a name="initHandler()"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">initHandler</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>protected override function initHandler(e:Event):void</code><p>
+   
+   <code>Event.INIT</code> handler.
+   </p><span class="label">Parameters</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20px"></td><td><code><span class="label">e</span>:Event</code></td>
 </tr>
 </table>
 </div>
