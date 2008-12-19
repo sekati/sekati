@@ -4,7 +4,7 @@
 <META http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <link rel="stylesheet" href="../../style.css" type="text/css" media="screen">
 <link rel="stylesheet" href="../../print.css" type="text/css" media="print">
-<meta content="XMLUtil,sekati.utils.XMLUtil,byAttribute" name="keywords">
+<meta content="XMLUtil,sekati.utils.XMLUtil,ATTRIBUTE,COMMENT,ELEMENT,PROCESSING_INSTRUCTION,TEXT,byAttribute,isValidXML" name="keywords">
 <title>sekati.utils.XMLUtil</title>
 </head>
 <body>
@@ -19,7 +19,7 @@
 <td align="left" class="titleTableTitle">Sekati API Documentation</td><td align="right" class="titleTableTopNav"><a onclick="loadClassListFrame('../../all-classes.html')" href="../../package-summary.html">All&nbsp;Packages</a>&nbsp;|&nbsp;<a onclick="loadClassListFrame('../../all-classes.html')" href="../../class-summary.html">All&nbsp;Classes</a>&nbsp;|&nbsp;<a onclick="loadClassListFrame('../../index-list.html')" href="../../all-index-A.html">Index</a>&nbsp;|&nbsp;<a href="../../index.html?sekati/utils/XMLUtil.html&amp;sekati/utils/class-list.html" id="framesLink1">Frames</a><a onclick="parent.location=document.location" href="" style="display:none" id="noFramesLink1">No&nbsp;Frames</a></td><td rowspan="3" align="right" class="titleTableLogo"><img alt="Adobe Logo" title="Adobe Logo" class="logoImage" src="../../images/logo.jpg"></td>
 </tr>
 <tr class="titleTableRow2">
-<td align="left" id="subTitle" class="titleTableSubTitle">Class&nbsp;XMLUtil</td><td align="right" id="subNav" class="titleTableSubNav"><a href="#methodSummary">Methods</a></td>
+<td align="left" id="subTitle" class="titleTableSubTitle">Class&nbsp;XMLUtil</td><td align="right" id="subNav" class="titleTableSubNav"><a href="#methodSummary">Methods</a>&nbsp;| <a href="#constantSummary">Constants</a></td>
 </tr>
 <tr class="titleTableRow3">
 <td colspan="2">&nbsp;</td>
@@ -27,7 +27,7 @@
 </table>
 <script type="text/javascript" language="javascript">
 <!--
-if (!isEclipse() || window.name != ECLIPSE_FRAME_NAME) {titleBar_setSubTitle("Class XMLUtil"); titleBar_setSubNav(false,false,false,false,false,false,true,false,false,false,false,false,false,false);}
+if (!isEclipse() || window.name != ECLIPSE_FRAME_NAME) {titleBar_setSubTitle("Class XMLUtil"); titleBar_setSubNav(true,false,false,false,false,false,true,false,false,false,false,false,false,false);}
 --></script>
 <div class="MainContent">
 <table cellspacing="0" cellpadding="0" class="classHeaderTable">
@@ -72,6 +72,48 @@ if (!isEclipse() || window.name != ECLIPSE_FRAME_NAME) {titleBar_setSubTitle("Cl
 <a class="signatureLink" href="#byAttribute()">byAttribute</a>(x:XMLList, attr:String, value:String):XML</div>
 <div class="summaryTableDescription">[static]
    Get the first attribute/value pair match from the XMLList.</div>
+</td><td class="summaryTableOwnerCol">XMLUtil</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="#isValidXML()">isValidXML</a>(data:String):Boolean</div>
+<div class="summaryTableDescription">[static]
+   Checks whether the specified string is valid and well formed XML.</div>
+</td><td class="summaryTableOwnerCol">XMLUtil</td>
+</tr>
+</table>
+</div>
+<a name="constantSummary"></a>
+<div class="summarySection">
+<div class="summaryTableTitle">Public Constants</div>
+<table id="summaryTableConstant" class="summaryTable " cellpadding="3" cellspacing="0">
+<tr>
+<th>&nbsp;</th><th colspan="2">Constant</th><th class="summaryTableOwnerCol">Defined&nbsp;by</th>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a class="signatureLink" href="#ATTRIBUTE">ATTRIBUTE</a> : String = "attribute"<div class="summaryTableDescription">[static]
+   Constant representing an attribute type returned from XML.nodeKind.</div>
+</td><td class="summaryTableOwnerCol">XMLUtil</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a class="signatureLink" href="#COMMENT">COMMENT</a> : String = "comment"<div class="summaryTableDescription">[static]
+   Constant representing a comment node type returned from XML.nodeKind.</div>
+</td><td class="summaryTableOwnerCol">XMLUtil</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a class="signatureLink" href="#ELEMENT">ELEMENT</a> : String = "element"<div class="summaryTableDescription">[static]
+   Constant representing a element type returned from XML.nodeKind.</div>
+</td><td class="summaryTableOwnerCol">XMLUtil</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a class="signatureLink" href="#PROCESSING_INSTRUCTION">PROCESSING_INSTRUCTION</a> : String = "processing-instruction"<div class="summaryTableDescription">[static]
+   Constant representing a processing instruction type returned from XML.nodeKind.</div>
+</td><td class="summaryTableOwnerCol">XMLUtil</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a class="signatureLink" href="#TEXT">TEXT</a> : String = "text"<div class="summaryTableDescription">[static]
+   Constant representing a text node type returned from XML.nodeKind.</div>
 </td><td class="summaryTableOwnerCol">XMLUtil</td>
 </tr>
 </table>
@@ -136,6 +178,104 @@ showHideInherited();
     trace( XMLUtil.byAttribute( data.stuff. 'id', '1' ) );
    </pre></div>
    <p></p>
+</div>
+<a name="isValidXML()"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">isValidXML</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public static function isValidXML(data:String):Boolean</code><p>
+   Checks whether the specified string is valid and well formed XML.
+   </p><span class="label">Parameters</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20px"></td><td><code><span class="label">data</span>:String</code> &mdash; The string that is being checked to see if it is valid XML.
+   </td>
+</tr>
+</table>
+<p></p>
+<span class="label">Returns</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20"></td><td><code>Boolean</code> &mdash; A Boolean value indicating whether the specified string is
+   valid XML.
+   </td>
+</tr>
+</table>
+</div>
+<a name="constantDetail"></a>
+<div class="detailSectionHeader">Constant detail</div>
+<a name="ATTRIBUTE"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">ATTRIBUTE</td><td class="detailHeaderType">constant</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public static const ATTRIBUTE:String = "attribute"</code><p>
+   Constant representing an attribute type returned from XML.nodeKind.
+   </p><p>
+<span class="label">See also</span>
+</p>
+<div class="seeAlso">XML.nodeKind()</div>
+</div>
+<a name="COMMENT"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">COMMENT</td><td class="detailHeaderType">constant</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public static const COMMENT:String = "comment"</code><p>
+   Constant representing a comment node type returned from XML.nodeKind.
+   </p><p>
+<span class="label">See also</span>
+</p>
+<div class="seeAlso">XML.nodeKind()</div>
+</div>
+<a name="ELEMENT"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">ELEMENT</td><td class="detailHeaderType">constant</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public static const ELEMENT:String = "element"</code><p>
+   Constant representing a element type returned from XML.nodeKind.
+   </p><p>
+<span class="label">See also</span>
+</p>
+<div class="seeAlso">XML.nodeKind()</div>
+</div>
+<a name="PROCESSING_INSTRUCTION"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">PROCESSING_INSTRUCTION</td><td class="detailHeaderType">constant</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public static const PROCESSING_INSTRUCTION:String = "processing-instruction"</code><p>
+   Constant representing a processing instruction type returned from XML.nodeKind.
+   </p><p>
+<span class="label">See also</span>
+</p>
+<div class="seeAlso">XML.nodeKind()</div>
+</div>
+<a name="TEXT"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">TEXT</td><td class="detailHeaderType">constant</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public static const TEXT:String = "text"</code><p>
+   Constant representing a text node type returned from XML.nodeKind.
+   </p><p>
+<span class="label">See also</span>
+</p>
+<div class="seeAlso">XML.nodeKind()</div>
 </div>
 <br>
 <br>

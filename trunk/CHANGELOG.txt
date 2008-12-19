@@ -1,5 +1,20 @@
 ------ SEKATI API CHANGELOG ------
 
+
+API UPDATE/BREAK: v3.0.4.5 - "Varan" (Load package stabilized: please see docs)
+- Added StyleSheetLoader
+- Removed CSSLoader
+- Added AssetLocator
+- Refactored XMLLoader
+- Refactored ILoader interface
+- Refactored AbstractCoreLoader to AbstractLoader
+- Adjusted Document class to fit new ApplicationLoader
+- Refactored AppLoader to ApplicationLoader
+- Removed LoaderEvent
+- Removed XMLEvent
+- Removed AbstractLoader
+- Removed AbstractURLLoader
+- XMLUtil additions
 - Updated UIAssets.fla
 - load package progress with AbstractLoader, AssetLocator, GraphicLoader
 - optimized/bugfixes on ColorUtil averages
