@@ -4,7 +4,7 @@
 <META http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <link rel="stylesheet" href="../../style.css" type="text/css" media="screen">
 <link rel="stylesheet" href="../../print.css" type="text/css" media="print">
-<meta content="AbstractLoader,sekati.load.AbstractLoader,loader,bytesLoaded,bytesTotal,context,loading,percent,rawContent,ready,request,url,close,closeHandler,configListeners,destroy,dispatchEvent,genericErrorHandler,initHandler,ioErrorHandler,load,openHandler,progressHandler,securityErrorHandler" name="keywords">
+<meta content="AbstractLoader,sekati.load.AbstractLoader,loader,bytesLoaded,bytesTotal,context,dataFormat,loading,percent,rawContent,ready,request,soundContext,url,close,closeHandler,configureListeners,destroy,dispatchEvent,genericErrorHandler,initHandler,ioErrorHandler,load,openHandler,progressHandler,securityErrorHandler" name="keywords">
 <title>sekati.load.AbstractLoader</title>
 </head>
 <body>
@@ -44,7 +44,7 @@ if (!isEclipse() || window.name != ECLIPSE_FRAME_NAME) {titleBar_setSubTitle("Cl
 <td class="classHeaderTableLabel">Implements</td><td><a href="ILoader.html">ILoader</a></td>
 </tr>
 <tr>
-<td class="classHeaderTableLabel">Subclasses</td><td><a href="../load/ImageLoader.html">ImageLoader</a>, <a href="../load/StyleSheetLoader.html">StyleSheetLoader</a>, <a href="../load/SWFLoader.html">SWFLoader</a>, <a href="../load/XMLLoader.html">XMLLoader</a></td>
+<td class="classHeaderTableLabel">Subclasses</td><td><a href="../load/ByteArrayLoader.html">ByteArrayLoader</a>, <a href="../load/ImageLoader.html">ImageLoader</a>, <a href="../load/SoundLoader.html">SoundLoader</a>, <a href="../load/StyleSheetLoader.html">StyleSheetLoader</a>, <a href="../load/SWFLoader.html">SWFLoader</a>, <a href="../load/TextLoader.html">TextLoader</a>, <a href="../load/VariableLoader.html">VariableLoader</a>, <a href="../load/XMLLoader.html">XMLLoader</a></td>
 </tr>
 </table>
 <p></p>
@@ -72,7 +72,12 @@ if (!isEclipse() || window.name != ECLIPSE_FRAME_NAME) {titleBar_setSubTitle("Cl
 </tr>
 <tr class="">
 <td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a class="signatureLink" href="#context">context</a> : LoaderContext<div class="summaryTableDescription">
-   Returns loader context.</div>
+   Returns <code>LoaderContext</code>  <i>(for <code>Loader</code> types only)</i>.</div>
+</td><td class="summaryTableOwnerCol">AbstractLoader</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a class="signatureLink" href="#dataFormat">dataFormat</a> : String<div class="summaryTableDescription">
+   Returns <code>URLLoaderDataFormat</code>  <i>(for <code>URLLoader</code> types only)</i>.</div>
 </td><td class="summaryTableOwnerCol">AbstractLoader</td>
 </tr>
 <tr class="">
@@ -86,6 +91,11 @@ if (!isEclipse() || window.name != ECLIPSE_FRAME_NAME) {titleBar_setSubTitle("Cl
 </td><td class="summaryTableOwnerCol">AbstractLoader</td>
 </tr>
 <tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a class="signatureLink" href="#rawContent">rawContent</a> : *<div class="summaryTableDescription">[read-only]
+   The <i>loosely-typed</i> <code>AbstractLoader</code> content.</div>
+</td><td class="summaryTableOwnerCol">AbstractLoader</td>
+</tr>
+<tr class="">
 <td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a class="signatureLink" href="#ready">ready</a> : Boolean<div class="summaryTableDescription">[read-only]
    The ready status of the loader content; if <code>true</code> the content is loaded, if <code>false</code> the content is not loaded.</div>
 </td><td class="summaryTableOwnerCol">AbstractLoader</td>
@@ -93,6 +103,11 @@ if (!isEclipse() || window.name != ECLIPSE_FRAME_NAME) {titleBar_setSubTitle("Cl
 <tr class="">
 <td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a class="signatureLink" href="#request">request</a> : URLRequest<div class="summaryTableDescription">
    The loader <code>URLRequest</code>.</div>
+</td><td class="summaryTableOwnerCol">AbstractLoader</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a class="signatureLink" href="#soundContext">soundContext</a> : SoundLoaderContext<div class="summaryTableDescription">
+   Returns <code>SoundLoaderContext</code>  <i>(for <code>Sound</code> types only)</i>.</div>
 </td><td class="summaryTableOwnerCol">AbstractLoader</td>
 </tr>
 <tr class="">
@@ -111,11 +126,6 @@ if (!isEclipse() || window.name != ECLIPSE_FRAME_NAME) {titleBar_setSubTitle("Cl
 </tr>
 <tr class="">
 <td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a class="signatureLink" href="#loader">loader</a> : *<div class="summaryTableDescription"></div>
-</td><td class="summaryTableOwnerCol">AbstractLoader</td>
-</tr>
-<tr class="">
-<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a class="signatureLink" href="#rawContent">rawContent</a> : *<div class="summaryTableDescription">[read-only]
-   The <i>loosely-typed</i> <code>AbstractLoader</code> content.</div>
 </td><td class="summaryTableOwnerCol">AbstractLoader</td>
 </tr>
 </table>
@@ -188,7 +198,7 @@ if (!isEclipse() || window.name != ECLIPSE_FRAME_NAME) {titleBar_setSubTitle("Cl
 <tr class="">
 <td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
 <div class="summarySignature">
-<a class="signatureLink" href="#configListeners()">configListeners</a>(isAdd:Boolean = true):void</div>
+<a class="signatureLink" href="#configureListeners()">configureListeners</a>(isAdd:Boolean = true):void</div>
 <div class="summaryTableDescription">
    Configure the adding & removing of loader listeners.</div>
 </td><td class="summaryTableOwnerCol">AbstractLoader</td>
@@ -286,12 +296,28 @@ showHideInherited();
 </table>
 <div class="detailBody">
 <code>context:LoaderContext</code>&nbsp;&nbsp;[read-write]<p>
-   Returns loader context.
+   Returns <code>LoaderContext</code>  <i>(for <code>Loader</code> types only)</i>.
    </p><span class="label">Implementation</span>
 <br>
 <code>&nbsp;&nbsp;&nbsp;&nbsp;public function get context():LoaderContext</code>
 <br>
 <code>&nbsp;&nbsp;&nbsp;&nbsp;public function set context(value:LoaderContext):void</code>
+<br>
+</div>
+<a name="dataFormat"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">dataFormat</td><td class="detailHeaderType">property</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>dataFormat:String</code>&nbsp;&nbsp;[read-write]<p>
+   Returns <code>URLLoaderDataFormat</code>  <i>(for <code>URLLoader</code> types only)</i>.
+   </p><span class="label">Implementation</span>
+<br>
+<code>&nbsp;&nbsp;&nbsp;&nbsp;public function get dataFormat():String</code>
+<br>
+<code>&nbsp;&nbsp;&nbsp;&nbsp;public function set dataFormat(value:String):void</code>
 <br>
 </div>
 <a name="loader"></a>
@@ -342,7 +368,7 @@ showHideInherited();
    The <i>loosely-typed</i> <code>AbstractLoader</code> content.
    </p><span class="label">Implementation</span>
 <br>
-<code>&nbsp;&nbsp;&nbsp;&nbsp;protected function get rawContent():*</code>
+<code>&nbsp;&nbsp;&nbsp;&nbsp;public function get rawContent():*</code>
 <br>
 </div>
 <a name="ready"></a>
@@ -375,6 +401,22 @@ showHideInherited();
 <code>&nbsp;&nbsp;&nbsp;&nbsp;public function set request(value:URLRequest):void</code>
 <br>
 </div>
+<a name="soundContext"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">soundContext</td><td class="detailHeaderType">property</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>soundContext:SoundLoaderContext</code>&nbsp;&nbsp;[read-write]<p>
+   Returns <code>SoundLoaderContext</code>  <i>(for <code>Sound</code> types only)</i>.
+   </p><span class="label">Implementation</span>
+<br>
+<code>&nbsp;&nbsp;&nbsp;&nbsp;public function get soundContext():SoundLoaderContext</code>
+<br>
+<code>&nbsp;&nbsp;&nbsp;&nbsp;public function set soundContext(value:SoundLoaderContext):void</code>
+<br>
+</div>
 <a name="url"></a>
 <table cellspacing="0" cellpadding="0" class="detailHeader">
 <tr>
@@ -405,13 +447,15 @@ showHideInherited();
    </p><span class="label">Parameters</span>
 <table border="0" cellspacing="0" cellpadding="0">
 <tr>
-<td width="20px"></td><td><code><span class="label">loaderType</span>:Class</code></td>
+<td width="20px"></td><td><code><span class="label">loaderType</span>:Class</code> &mdash;  Class definition to use for the file type.
+   </td>
 </tr>
 <tr>
 <td class="paramSpacer">&nbsp;</td>
 </tr>
 <tr>
-<td width="20px"></td><td><code><span class="label">url</span>:String</code></td>
+<td width="20px"></td><td><code><span class="label">url</span>:String</code> &mdash;    of the file to be loaded.
+   </td>
 </tr>
 </table>
 </div>
@@ -443,14 +487,14 @@ showHideInherited();
 </tr>
 </table>
 </div>
-<a name="configListeners()"></a>
+<a name="configureListeners()"></a>
 <table cellspacing="0" cellpadding="0" class="detailHeader">
 <tr>
-<td class="detailHeaderName">configListeners</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td>
+<td class="detailHeaderName">configureListeners</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td>
 </tr>
 </table>
 <div class="detailBody">
-<code>protected function configListeners(isAdd:Boolean = true):void</code><p>
+<code>protected function configureListeners(isAdd:Boolean = true):void</code><p>
    Configure the adding & removing of loader listeners.
    </p><span class="label">Parameters</span>
 <table border="0" cellspacing="0" cellpadding="0">

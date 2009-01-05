@@ -40,7 +40,7 @@ if (!isEclipse() || window.name != ECLIPSE_FRAME_NAME) {titleBar_setSubTitle("Pa
 </tr>
 <tr class="prow1">
 <td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><i><a href="ILoader.html">ILoader</a></i></td><td class="summaryTableLastCol">
-  ILoader provides a common API Loader Interface mapped to the <code>AbstractLoader</code>.</td>
+  ILoader provides an implementation for API <code>AbstractLoader</code> sub-classes.</td>
 </tr>
 </table>
 <a name="classSummary"></a>
@@ -59,24 +59,47 @@ if (!isEclipse() || window.name != ECLIPSE_FRAME_NAME) {titleBar_setSubTitle("Pa
 </tr>
 <tr class="prow1">
 <td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a href="AssetLocator.html">AssetLocator</a></td><td class="summaryTableLastCol">
-  AssetLocator provides a weak-referenced
-  </td>
+  AssetLocator provides a weak-referenced <code>Dictionary</code> of <i>all</i> <code>ILoader</code> instances.</td>
+</tr>
+<tr class="prow0">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a href="ByteArrayLoader.html">ByteArrayLoader</a></td><td class="summaryTableLastCol">
+  ByteArrayLoader provides a standard API loader for loading a files binary <code>ByteArray</code> content.</td>
+</tr>
+<tr class="prow1">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a href="FileType.html">FileType</a></td><td class="summaryTableLastCol">
+  FileType provides <code>Class</code> references to the appropriate <code>ILoader</code> for various file types.</td>
 </tr>
 <tr class="prow0">
 <td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a href="ImageLoader.html">ImageLoader</a></td><td class="summaryTableLastCol">
-  ImageLoader provides a standard API loader for graphical assets.</td>
+  ImageLoader provides a standard API loader for graphical <code>Bitmap</code> content.</td>
+</tr>
+<tr class="prow1">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a href="LoaderQueue.html">LoaderQueue</a></td><td class="summaryTableLastCol">
+  QueueLoader provides the core <code>ILoader</code> group loading logic for the API.</td>
+</tr>
+<tr class="prow0">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a href="SoundLoader.html">SoundLoader</a></td><td class="summaryTableLastCol">
+  SoundLoader provides a standard API loader for <code>Sound</code> media content.</td>
 </tr>
 <tr class="prow1">
 <td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a href="StyleSheetLoader.html">StyleSheetLoader</a></td><td class="summaryTableLastCol">
-  StyleSheetLoader provides a standard API loader for Cascading Style Sheet content.</td>
+  StyleSheetLoader provides a standard API loader for Cascading <code>StyleSheet</code> content.</td>
 </tr>
 <tr class="prow0">
 <td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a href="SWFLoader.html">SWFLoader</a></td><td class="summaryTableLastCol">
-  SWFLoader provides a standard API loader for SWF assets.</td>
+  SWFLoader provides a standard API loader for SWF asset content.</td>
+</tr>
+<tr class="prow1">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a href="TextLoader.html">TextLoader</a></td><td class="summaryTableLastCol">
+  TextLoader provides a standard API loader for text file <code>String</code> content.</td>
+</tr>
+<tr class="prow0">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a href="VariableLoader.html">VariableLoader</a></td><td class="summaryTableLastCol">
+  VariableLoader provides a standard API loader for <code>URLVariables</code> content.</td>
 </tr>
 <tr class="prow1">
 <td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a href="XMLLoader.html">XMLLoader</a></td><td class="summaryTableLastCol">
-  XMLLoader provides a standard API loader for XML content.</td>
+  XMLLoader provides a standard API loader for <code>XML</code> content.</td>
 </tr>
 </table>
 <p></p>
