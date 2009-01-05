@@ -1,6 +1,31 @@
 ------ SEKATI API CHANGELOG ------
 
 
+API UPDATE v3.0.4.6 - "Varan"
+- WARNING: LoaderQueue not yet complete / functional (will be completed during the v3.0.4.6 trunk life-span).
+- Added FileType
+- Added FileTypeValidator & FileTypeValidatorTest
+- Added LoaderQueueEvent
+- Added LoaderQueue
+- Added ILoaderQueue
+- Added sekati.load.ByteArrayLoader
+- Added sekati.load.TextLoader
+- Added sekati.load.VariableLoader
+- Added sekati.load.SoundLoader
+- Added sekati.load.SWFLoader
+- Added sekati.load.XMLLoader
+- Added sekati.media.MP3
+- Added various loader tests (SoundLoader, VariableLoader, SWFLoader, XMLLoader, ByteArrayLoader, TextLoader, et. al)
+- Made URLLoaderDataFormat, LoaderContext & SoundLoaderContext's accessible via subclasses of AbstractLoader.
+- Fixed bugs in AbstractLoader, refactored methods in AbstractLoader
+- Added soundContext getter/setter properties to AbstractLoader 
+- Implemented ILoader on AbstractLoader subclasses for clarity.
+- Updated AssetLocator Docs.
+- Updated ApplicationLoader Docs.
+- Refined TypeEnforcer Docs.
+- AbstractLoader ArgumentError update.
+- ApplicationLoader loaded/total refactored to bytesLoaded/bytesTotal.
+
 API UPDATE/BREAK: v3.0.4.5 - "Varan" (Load package stabilized: please see docs)
 - Added StyleSheetLoader
 - Removed CSSLoader

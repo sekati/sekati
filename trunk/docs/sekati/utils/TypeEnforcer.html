@@ -73,8 +73,7 @@ if (!isEclipse() || window.name != ECLIPSE_FRAME_NAME) {titleBar_setSubTitle("Cl
 <div class="summarySignature">
 <a class="signatureLink" href="#enforceStatic()">enforceStatic</a>(classInstance:*):void</div>
 <div class="summaryTableDescription">[static]
-   Notify upon instantiation of class
-   </div>
+   Notify upon attempted instantiation of a static class (e.g.</div>
 </td><td class="summaryTableOwnerCol">TypeEnforcer</td>
 </tr>
 </table>
@@ -110,13 +109,15 @@ showHideInherited();
    </p><span class="label">Parameters</span>
 <table border="0" cellspacing="0" cellpadding="0">
 <tr>
-<td width="20px"></td><td><code><span class="label">classInstance</span>:*</code></td>
+<td width="20px"></td><td><code><span class="label">classInstance</span>:*</code> &mdash;  instance of the <code>Class</code>.
+   </td>
 </tr>
 <tr>
 <td class="paramSpacer">&nbsp;</td>
 </tr>
 <tr>
-<td width="20px"></td><td><code><span class="label">classAbstract</span>:Class</code></td>
+<td width="20px"></td><td><code><span class="label">classAbstract</span>:Class</code> &mdash;  the abstract <code>Class</code> reference.
+   </td>
 </tr>
 </table>
 <br>
@@ -130,7 +131,6 @@ showHideInherited();
 <br>
 <span class="label">Example</span>
 <br><div class='listing'><pre>
-    TypeEnforcer.enforceAbstract(this, AbstractCalendar);
     package {
      public class AbstractExample {
       public function AbstractExample( ) {
@@ -149,13 +149,34 @@ showHideInherited();
 </table>
 <div class="detailBody">
 <code>public static function enforceStatic(classInstance:*):void</code><p>
-   Notify upon instantiation of class
+   Notify upon attempted instantiation of a static class (e.g. a class with <i>only static methods</i> which does not require instantiation).
    </p><span class="label">Parameters</span>
 <table border="0" cellspacing="0" cellpadding="0">
 <tr>
-<td width="20px"></td><td><code><span class="label">classInstance</span>:*</code></td>
+<td width="20px"></td><td><code><span class="label">classInstance</span>:*</code> &mdash;  instance of the <code>Class</code>.
+   </td>
 </tr>
 </table>
+<br>
+<span class="label">Throws</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20"></td><td><code></code> &mdash; which describes the static nature of the class when called.
+   </td>
+</tr>
+</table>
+<br>
+<span class="label">Example</span>
+<br><div class='listing'><pre>
+   package {
+     public class StaticExample {
+      public function StaticExample() {
+       TypeEnforcer.enforceStatic( this );
+      }
+     }
+   }
+   </pre></div>
+   <p></p>
 </div>
 <br>
 <br>

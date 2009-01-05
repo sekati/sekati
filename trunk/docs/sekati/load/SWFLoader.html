@@ -40,9 +40,12 @@ if (!isEclipse() || window.name != ECLIPSE_FRAME_NAME) {titleBar_setSubTitle("Cl
 <tr>
 <td class="classHeaderTableLabel">Inheritance</td><td class="inheritanceList">SWFLoader <img class="inheritArrow" alt="Inheritance" title="Inheritance" src="../../images/inherit-arrow.gif"> <a href="AbstractLoader.html">AbstractLoader</a> <img class="inheritArrow" alt="Inheritance" title="Inheritance" src="../../images/inherit-arrow.gif"> flash.events.EventDispatcher</td>
 </tr>
+<tr>
+<td class="classHeaderTableLabel">Implements</td><td><a href="ILoader.html">ILoader</a></td>
+</tr>
 </table>
 <p></p>
-  SWFLoader provides a standard API loader for SWF assets.
+  SWFLoader provides a standard API loader for SWF asset content.
   
   <p></p>
 <br>
@@ -93,7 +96,12 @@ if (!isEclipse() || window.name != ECLIPSE_FRAME_NAME) {titleBar_setSubTitle("Cl
 </tr>
 <tr class="hideInheritedProperty">
 <td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img class="inheritedSummaryImage" title="Inherited" alt="Inherited" src="../../images/inheritedSummary.gif"></td><td class="summaryTableSignatureCol"><a class="signatureLink" href="AbstractLoader.html#context">context</a> : LoaderContext<div class="summaryTableDescription">
-   Returns loader context.</div>
+   Returns <code>LoaderContext</code>  <i>(for <code>Loader</code> types only)</i>.</div>
+</td><td class="summaryTableOwnerCol"><a href="AbstractLoader.html">AbstractLoader</a></td>
+</tr>
+<tr class="hideInheritedProperty">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img class="inheritedSummaryImage" title="Inherited" alt="Inherited" src="../../images/inheritedSummary.gif"></td><td class="summaryTableSignatureCol"><a class="signatureLink" href="AbstractLoader.html#dataFormat">dataFormat</a> : String<div class="summaryTableDescription">
+   Returns <code>URLLoaderDataFormat</code>  <i>(for <code>URLLoader</code> types only)</i>.</div>
 </td><td class="summaryTableOwnerCol"><a href="AbstractLoader.html">AbstractLoader</a></td>
 </tr>
 <tr class="hideInheritedProperty">
@@ -107,6 +115,11 @@ if (!isEclipse() || window.name != ECLIPSE_FRAME_NAME) {titleBar_setSubTitle("Cl
 </td><td class="summaryTableOwnerCol"><a href="AbstractLoader.html">AbstractLoader</a></td>
 </tr>
 <tr class="hideInheritedProperty">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img class="inheritedSummaryImage" title="Inherited" alt="Inherited" src="../../images/inheritedSummary.gif"></td><td class="summaryTableSignatureCol"><a class="signatureLink" href="AbstractLoader.html#rawContent">rawContent</a> : *<div class="summaryTableDescription">
+   The <i>loosely-typed</i> <code>AbstractLoader</code> content.</div>
+</td><td class="summaryTableOwnerCol"><a href="AbstractLoader.html">AbstractLoader</a></td>
+</tr>
+<tr class="hideInheritedProperty">
 <td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img class="inheritedSummaryImage" title="Inherited" alt="Inherited" src="../../images/inheritedSummary.gif"></td><td class="summaryTableSignatureCol"><a class="signatureLink" href="AbstractLoader.html#ready">ready</a> : Boolean<div class="summaryTableDescription">
    The ready status of the loader content; if <code>true</code> the content is loaded, if <code>false</code> the content is not loaded.</div>
 </td><td class="summaryTableOwnerCol"><a href="AbstractLoader.html">AbstractLoader</a></td>
@@ -114,6 +127,11 @@ if (!isEclipse() || window.name != ECLIPSE_FRAME_NAME) {titleBar_setSubTitle("Cl
 <tr class="hideInheritedProperty">
 <td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img class="inheritedSummaryImage" title="Inherited" alt="Inherited" src="../../images/inheritedSummary.gif"></td><td class="summaryTableSignatureCol"><a class="signatureLink" href="AbstractLoader.html#request">request</a> : URLRequest<div class="summaryTableDescription">
    The loader <code>URLRequest</code>.</div>
+</td><td class="summaryTableOwnerCol"><a href="AbstractLoader.html">AbstractLoader</a></td>
+</tr>
+<tr class="hideInheritedProperty">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img class="inheritedSummaryImage" title="Inherited" alt="Inherited" src="../../images/inheritedSummary.gif"></td><td class="summaryTableSignatureCol"><a class="signatureLink" href="AbstractLoader.html#soundContext">soundContext</a> : SoundLoaderContext<div class="summaryTableDescription">
+   Returns <code>SoundLoaderContext</code>  <i>(for <code>Sound</code> types only)</i>.</div>
 </td><td class="summaryTableOwnerCol"><a href="AbstractLoader.html">AbstractLoader</a></td>
 </tr>
 <tr class="hideInheritedProperty">
@@ -140,11 +158,6 @@ if (!isEclipse() || window.name != ECLIPSE_FRAME_NAME) {titleBar_setSubTitle("Cl
 </tr>
 <tr class="hideInheritedProtectedProperty">
 <td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img class="inheritedSummaryImage" title="Inherited" alt="Inherited" src="../../images/inheritedSummary.gif"></td><td class="summaryTableSignatureCol"><a class="signatureLink" href="AbstractLoader.html#loader">loader</a> : *<div class="summaryTableDescription"></div>
-</td><td class="summaryTableOwnerCol"><a href="AbstractLoader.html">AbstractLoader</a></td>
-</tr>
-<tr class="hideInheritedProtectedProperty">
-<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img class="inheritedSummaryImage" title="Inherited" alt="Inherited" src="../../images/inheritedSummary.gif"></td><td class="summaryTableSignatureCol"><a class="signatureLink" href="AbstractLoader.html#rawContent">rawContent</a> : *<div class="summaryTableDescription">
-   The <i>loosely-typed</i> <code>AbstractLoader</code> content.</div>
 </td><td class="summaryTableOwnerCol"><a href="AbstractLoader.html">AbstractLoader</a></td>
 </tr>
 </table>
@@ -233,7 +246,7 @@ if (!isEclipse() || window.name != ECLIPSE_FRAME_NAME) {titleBar_setSubTitle("Cl
 <tr class="hideInheritedProtectedMethod">
 <td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img class="inheritedSummaryImage" title="Inherited" alt="Inherited" src="../../images/inheritedSummary.gif"></td><td class="summaryTableSignatureCol">
 <div class="summarySignature">
-<a class="signatureLink" href="AbstractLoader.html#configListeners()">configListeners</a>(isAdd:Boolean = true):void</div>
+<a class="signatureLink" href="AbstractLoader.html#configureListeners()">configureListeners</a>(isAdd:Boolean = true):void</div>
 <div class="summaryTableDescription">
    Configure the adding & removing of loader listeners.</div>
 </td><td class="summaryTableOwnerCol"><a href="AbstractLoader.html">AbstractLoader</a></td>
@@ -323,7 +336,8 @@ showHideInherited();
    </p><span class="label">Parameters</span>
 <table border="0" cellspacing="0" cellpadding="0">
 <tr>
-<td width="20px"></td><td><code><span class="label">url</span>:String</code></td>
+<td width="20px"></td><td><code><span class="label">url</span>:String</code> &mdash;  of the SWF file.
+   </td>
 </tr>
 </table>
 </div>
