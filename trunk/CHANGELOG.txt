@@ -2,7 +2,10 @@
 
 
 API UPDATE v3.0.4.7 - "Varan"
+- Added ExternalBase.scrollWindow()
+- Refactored ExternalBase resizeWindow, shakeWindow, status, centerPop
 - Added sekati.text.TextFlow
+
 
 API UPDATE v3.0.4.6 - "Varan"
 - WARNING: LoaderQueue not yet complete / functional (will be completed during the v3.0.4.6 trunk life-span).
@@ -28,6 +31,7 @@ API UPDATE v3.0.4.6 - "Varan"
 - Refined TypeEnforcer Docs.
 - AbstractLoader ArgumentError update.
 - ApplicationLoader loaded/total refactored to bytesLoaded/bytesTotal.
+
 
 API UPDATE/BREAK: v3.0.4.5 - "Varan" (Load package stabilized: please see docs)
 - Added StyleSheetLoader
