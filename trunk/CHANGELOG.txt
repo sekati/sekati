@@ -2,6 +2,9 @@
 
 
 API UPDATE v3.0.4.7 - "Varan"
+- Updated Copyright year in App/config.xml/build.properties
+- LoaderQueue progress delayed - .7 becomes intermediary build.
+- Bootstrap now checks for existing anchor in BrowserAddress @see http://code.google.com/p/sekati/issues/detail?id=52
 - Added ExternalBase.scrollWindow()
 - Refactored ExternalBase resizeWindow, shakeWindow, status, centerPop
 - Added sekati.text.TextFlow
