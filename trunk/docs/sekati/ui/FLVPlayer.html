@@ -4,7 +4,7 @@
 <META http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <link rel="stylesheet" href="../../style.css" type="text/css" media="screen">
 <link rel="stylesheet" href="../../print.css" type="text/css" media="print">
-<meta content="FLVPlayer,sekati.ui.FLVPlayer,_buffBar,_currentCuePoint,_guttBar,_isDrag,_isKeyEnabled,_isSeeking,_keyListener,_movie,_playBtn,_progBar,_video,_volBtn,_wasPlaying,bufferPaused,currentCuePoint,buffBar_onMove,buffBar_onPress,buffBar_onRelease,destroy,init,movie_onProgress,movie_onStatus,pause,pauseMemory,playBtn_Press,remove,reset,resume,resumeMemory,seek_ui,setVolumeControl,volBtn_onMove,volBtn_onPress,volBtn_onRelease" name="keywords">
+<meta content="FLVPlayer,sekati.ui.FLVPlayer,_bufferBar,_currentCuePoint,_gutterBar,_isDrag,_isKeyEnabled,_isSeeking,_keyListener,_movie,_playBtn,_progressBar,_video,_volumeBtn,_wasPlaying,bufferPaused,currentCuePoint,buffBar_onMove,buffBar_onPress,buffBar_onRelease,destroy,init,movie_onProgress,movie_onStatus,pause,pauseMemory,playBtn_Press,remove,reset,resume,resumeMemory,seek_ui,setVolumeControl,volBtn_onMove,volBtn_onPress,volBtn_onRelease" name="keywords">
 <title>sekati.ui.FLVPlayer</title>
 </head>
 <body>
@@ -46,6 +46,16 @@ if (!isEclipse() || window.name != ECLIPSE_FRAME_NAME) {titleBar_setSubTitle("Cl
   
   <p>Simply create a library asset with the necessary assets, link it to the <code>FLVPlayer</code>
   class and attach instances as needed.</p>
+  
+  <p></p>
+<br>
+<span class="label">Example</span>
+<br><div class='listing'><pre>
+  var player : FLVPlayer = new FLVPlayer( playBtn, progressBar, bufferBar, gutterBar, volumeBtn );
+  player.x = player.y = 10;
+  addChild( player );
+  player.init( 'path/to/my.flv' );
+  </pre></div>
   
   <p></p>
 <p>
@@ -105,7 +115,7 @@ if (!isEclipse() || window.name != ECLIPSE_FRAME_NAME) {titleBar_setSubTitle("Cl
 <th>&nbsp;</th><th colspan="2">Property</th><th class="summaryTableOwnerCol">Defined&nbsp;by</th>
 </tr>
 <tr class="">
-<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a class="signatureLink" href="#_buffBar">_buffBar</a> : MovieClip<div class="summaryTableDescription"></div>
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a class="signatureLink" href="#_bufferBar">_bufferBar</a> : MovieClip<div class="summaryTableDescription"></div>
 </td><td class="summaryTableOwnerCol">FLVPlayer</td>
 </tr>
 <tr class="">
@@ -117,7 +127,7 @@ if (!isEclipse() || window.name != ECLIPSE_FRAME_NAME) {titleBar_setSubTitle("Cl
 </td><td class="summaryTableOwnerCol">FLVPlayer</td>
 </tr>
 <tr class="">
-<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a class="signatureLink" href="#_guttBar">_guttBar</a> : MovieClip<div class="summaryTableDescription"></div>
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a class="signatureLink" href="#_gutterBar">_gutterBar</a> : MovieClip<div class="summaryTableDescription"></div>
 </td><td class="summaryTableOwnerCol">FLVPlayer</td>
 </tr>
 <tr class="">
@@ -146,7 +156,7 @@ if (!isEclipse() || window.name != ECLIPSE_FRAME_NAME) {titleBar_setSubTitle("Cl
 </td><td class="summaryTableOwnerCol">FLVPlayer</td>
 </tr>
 <tr class="">
-<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a class="signatureLink" href="#_progBar">_progBar</a> : MovieClip<div class="summaryTableDescription"></div>
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a class="signatureLink" href="#_progressBar">_progressBar</a> : MovieClip<div class="summaryTableDescription"></div>
 </td><td class="summaryTableOwnerCol">FLVPlayer</td>
 </tr>
 <tr class="">
@@ -154,7 +164,7 @@ if (!isEclipse() || window.name != ECLIPSE_FRAME_NAME) {titleBar_setSubTitle("Cl
 </td><td class="summaryTableOwnerCol">FLVPlayer</td>
 </tr>
 <tr class="">
-<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a class="signatureLink" href="#_volBtn">_volBtn</a> : MovieClip<div class="summaryTableDescription"></div>
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a class="signatureLink" href="#_volumeBtn">_volumeBtn</a> : MovieClip<div class="summaryTableDescription"></div>
 </td><td class="summaryTableOwnerCol">FLVPlayer</td>
 </tr>
 <tr class="">
@@ -181,7 +191,7 @@ if (!isEclipse() || window.name != ECLIPSE_FRAME_NAME) {titleBar_setSubTitle("Cl
 <tr class="">
 <td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
 <div class="summarySignature">
-<a class="signatureLink" href="#FLVPlayer()">FLVPlayer</a>()</div>
+<a class="signatureLink" href="#FLVPlayer()">FLVPlayer</a>(playBtn:MovieClip, progressBar:MovieClip, bufferBar:MovieClip, gutterBar:MovieClip, volumeBtn:MovieClip)</div>
 <div class="summaryTableDescription">
    FLVPlayer Constructor
    </div>
@@ -418,14 +428,14 @@ showHideInherited();
 <div class="MainContent">
 <a name="propertyDetail"></a>
 <div class="detailSectionHeader">Property detail</div>
-<a name="_buffBar"></a>
+<a name="_bufferBar"></a>
 <table cellspacing="0" cellpadding="0" class="detailHeader">
 <tr>
-<td class="detailHeaderName">_buffBar</td><td class="detailHeaderType">property</td>
+<td class="detailHeaderName">_bufferBar</td><td class="detailHeaderType">property</td>
 </tr>
 </table>
 <div class="detailBody">
-<code>protected var _buffBar:MovieClip</code>
+<code>protected var _bufferBar:MovieClip</code>
 </div>
 <a name="bufferPaused"></a>
 <table cellspacing="0" cellpadding="0" class="detailHeader">
@@ -461,14 +471,14 @@ showHideInherited();
 <code>&nbsp;&nbsp;&nbsp;&nbsp;public function set currentCuePoint(value:Object):void</code>
 <br>
 </div>
-<a name="_guttBar"></a>
+<a name="_gutterBar"></a>
 <table cellspacing="0" cellpadding="0" class="detailHeader">
 <tr>
-<td class="detailHeaderName">_guttBar</td><td class="detailHeaderType">property</td><td class="detailHeaderRule">&nbsp;</td>
+<td class="detailHeaderName">_gutterBar</td><td class="detailHeaderType">property</td><td class="detailHeaderRule">&nbsp;</td>
 </tr>
 </table>
 <div class="detailBody">
-<code>protected var _guttBar:MovieClip</code>
+<code>protected var _gutterBar:MovieClip</code>
 </div>
 <a name="_isDrag"></a>
 <table cellspacing="0" cellpadding="0" class="detailHeader">
@@ -524,14 +534,14 @@ showHideInherited();
 <div class="detailBody">
 <code>protected var _playBtn:MovieClip</code>
 </div>
-<a name="_progBar"></a>
+<a name="_progressBar"></a>
 <table cellspacing="0" cellpadding="0" class="detailHeader">
 <tr>
-<td class="detailHeaderName">_progBar</td><td class="detailHeaderType">property</td><td class="detailHeaderRule">&nbsp;</td>
+<td class="detailHeaderName">_progressBar</td><td class="detailHeaderType">property</td><td class="detailHeaderRule">&nbsp;</td>
 </tr>
 </table>
 <div class="detailBody">
-<code>protected var _progBar:MovieClip</code>
+<code>protected var _progressBar:MovieClip</code>
 </div>
 <a name="_video"></a>
 <table cellspacing="0" cellpadding="0" class="detailHeader">
@@ -542,14 +552,14 @@ showHideInherited();
 <div class="detailBody">
 <code>protected var _video:Video</code>
 </div>
-<a name="_volBtn"></a>
+<a name="_volumeBtn"></a>
 <table cellspacing="0" cellpadding="0" class="detailHeader">
 <tr>
-<td class="detailHeaderName">_volBtn</td><td class="detailHeaderType">property</td><td class="detailHeaderRule">&nbsp;</td>
+<td class="detailHeaderName">_volumeBtn</td><td class="detailHeaderType">property</td><td class="detailHeaderRule">&nbsp;</td>
 </tr>
 </table>
 <div class="detailBody">
-<code>protected var _volBtn:MovieClip</code>
+<code>protected var _volumeBtn:MovieClip</code>
 </div>
 <a name="_wasPlaying"></a>
 <table cellspacing="0" cellpadding="0" class="detailHeader">
@@ -569,9 +579,39 @@ showHideInherited();
 </tr>
 </table>
 <div class="detailBody">
-<code>public function FLVPlayer()</code><p>
+<code>public function FLVPlayer(playBtn:MovieClip, progressBar:MovieClip, bufferBar:MovieClip, gutterBar:MovieClip, volumeBtn:MovieClip)</code><p>
    FLVPlayer Constructor
-   </p></div>
+   </p><span class="label">Parameters</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20px"></td><td><code><span class="label">playBtn</span>:MovieClip</code></td>
+</tr>
+<tr>
+<td class="paramSpacer">&nbsp;</td>
+</tr>
+<tr>
+<td width="20px"></td><td><code><span class="label">progressBar</span>:MovieClip</code></td>
+</tr>
+<tr>
+<td class="paramSpacer">&nbsp;</td>
+</tr>
+<tr>
+<td width="20px"></td><td><code><span class="label">bufferBar</span>:MovieClip</code></td>
+</tr>
+<tr>
+<td class="paramSpacer">&nbsp;</td>
+</tr>
+<tr>
+<td width="20px"></td><td><code><span class="label">gutterBar</span>:MovieClip</code></td>
+</tr>
+<tr>
+<td class="paramSpacer">&nbsp;</td>
+</tr>
+<tr>
+<td width="20px"></td><td><code><span class="label">volumeBtn</span>:MovieClip</code></td>
+</tr>
+</table>
+</div>
 <a name="methodDetail"></a>
 <div class="detailSectionHeader">Method detail</div>
 <a name="buffBar_onMove()"></a>
