@@ -1,6 +1,10 @@
 ------ SEKATI API CHANGELOG ------
 
 
+API UPDATE/BREAK v3.0.4.8 - "Varan" (please note "*" will be used at the end of a line to denote an API breaks).
+- Updated FLVPlayer to take UI elements as constructor arguments.*
+
+
 API UPDATE v3.0.4.7 - "Varan"
 - Updated Copyright year in App/config.xml/build.properties
 - LoaderQueue progress delayed - .7 becomes intermediary build.
