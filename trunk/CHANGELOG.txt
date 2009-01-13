@@ -2,6 +2,7 @@
 
 
 API UPDATE/BREAK v3.0.4.8 - "Varan" (please note "*" will be used at the end of a line to denote an API breaks).
+- Added DateUtilTest unit test for dateFromDB() fix below.
 - Updated DateUtil.dateFromDB() to accept YYYY-MM-DD format.
 - Updated FLVPlayer to take UI elements as constructor arguments.*
 
