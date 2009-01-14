@@ -2,6 +2,7 @@
 
 
 API UPDATE/BREAK v3.0.4.8 - "Varan" (please note "*" will be used at the end of a line to denote an API breaks).
+- Minor semantics fix to FLVPlayer (needs refactoring).
 - Refactored AlignUtil.scaleRatio()
 - Added AlignUtil.scaleRatioToFit()
 - Added AlignUtil.scaleRatioToStage()
