@@ -4,7 +4,7 @@
 <META http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <link rel="stylesheet" href="../../style.css" type="text/css" media="screen">
 <link rel="stylesheet" href="../../print.css" type="text/css" media="print">
-<meta content="BitmapValidator,sekati.validators.BitmapValidator,MAX_PIXELS,MAX_SIDE_LENGTH,MAX_SIZE,isBitmappable,isBitmappableArea" name="keywords">
+<meta content="BitmapValidator,sekati.validators.BitmapValidator,MAX_PIXELS,MAX_SIDE_LENGTH,MAX_SIZE,MAX_SIZE_SAFE,isBitmappable,isBitmappableArea" name="keywords">
 <title>sekati.validators.BitmapValidator</title>
 </head>
 <body>
@@ -103,7 +103,14 @@ if (!isEclipse() || window.name != ECLIPSE_FRAME_NAME) {titleBar_setSubTitle("Cl
 </tr>
 <tr class="">
 <td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a class="signatureLink" href="#MAX_SIZE">MAX_SIZE</a> : int<div class="summaryTableDescription">[static]
-   The maximum dimension of a squared <code>BitmapData</code> object in the Flash Player.</div>
+   The maximum dimension of a squared <code>BitmapData</code> object in the Flash Player.<ul>
+   <li><= FP9: 2880 pixel maximum per squared.</li>
+   <li>>= FP10: 4095 pixel maximum squared (<i>large bitmap support.</div>
+</td><td class="summaryTableOwnerCol">BitmapValidator</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a class="signatureLink" href="#MAX_SIZE_SAFE">MAX_SIZE_SAFE</a> : int = 2880<div class="summaryTableDescription">[static]
+   The maximum safe dimensions of a <code>BitmapData</code> object in the Flash >=9.</div>
 </td><td class="summaryTableOwnerCol">BitmapValidator</td>
 </tr>
 </table>
@@ -225,13 +232,33 @@ showHideInherited();
 </table>
 <div class="detailBody">
 <code>public static const MAX_SIZE:int</code><p>
-   The maximum dimension of a squared <code>BitmapData</code> object in the Flash Player. Use as a good safe value.<ul>
+   The maximum dimension of a squared <code>BitmapData</code> object in the Flash Player.<ul>
    <li><= FP9: 2880 pixel maximum per squared.</li>
    <li>>= FP10: 4095 pixel maximum squared (<i>large bitmap support. <b>Note</b> that <code>4096x4096</code> exceeds <code>MAX_PIXELS</code></i>).</li></ul>
    </p><p>
 <span class="label">See also</span>
 </p>
 <div class="seeAlso">
+<a href="../validators/BitmapValidator.html#MAX_SIDE_LENGTH" target="">MAX_SIDE_LENGTH</a>
+</div>
+</div>
+<a name="MAX_SIZE_SAFE"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">MAX_SIZE_SAFE</td><td class="detailHeaderType">constant</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public static const MAX_SIZE_SAFE:int = 2880</code><p>
+   The maximum safe dimensions of a <code>BitmapData</code> object in the Flash >=9. Use as a good safe value.<ul>
+   <li><= FP9: 2880 pixel maximum per squared.</li>
+   <li>>= FP10: 4095 pixel maximum squared (<i>large bitmap support. <b>Note</b> that <code>4096x4096</code> exceeds <code>MAX_PIXELS</code></i>).</li></ul>
+   </p><p>
+<span class="label">See also</span>
+</p>
+<div class="seeAlso">
+<a href="../validators/BitmapValidator.html#MAX_SIZE" target="">MAX_SIZE</a>
+<br>
 <a href="../validators/BitmapValidator.html#MAX_SIDE_LENGTH" target="">MAX_SIDE_LENGTH</a>
 </div>
 </div>
