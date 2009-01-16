@@ -2,6 +2,7 @@
 
 
 API UPDATE/BREAK v3.0.4.8 - "Varan" (please note "*" will be used at the end of a line to denote an API breaks).
+- Fixed bug in ArrayUtil.nearestNeighbor(): removed range.sort(Array.NUMERIC) as it disrupts the natural order of the array/returnIndex.
 - Changed ColorUtil.getColor() to use BitmapValidator.MAX_SIZE_SAFE.*
 - Added BitmapValidator.MAX_SIZE_SAFE as MAX_SIZE was causing issues with fp9 swf's.*
 - Minor semantics fix to FLVPlayer (needs refactoring).
