@@ -1,6 +1,10 @@
 ------ SEKATI API CHANGELOG ------
 
 
+API UPDATE v3.0.4.9 - "Varan" (IN-PROGRESS)
+- Fixed minor doc issue in MP3Player
+
+
 API UPDATE/BREAK v3.0.4.8 - "Varan" (please note "*" will be used at the end of a line to denote an API breaks).
 - Added sekati.ui.MP3Player
 - Rewrite sekati.ui.FLVPlayer
