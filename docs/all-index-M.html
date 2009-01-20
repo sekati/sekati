@@ -188,7 +188,7 @@ if (!isEclipse() || window.name != ECLIPSE_FRAME_NAME) {titleBar_setSubTitle("MÂ
   MediaEvent provides a base MediaEvent class for FLV and MP3 loading, streaming & playback.</td>
 </tr>
 <tr>
-<td colspan="2" class="idxrow"><a onclick="javascript:loadClassListFrame('sekati/events/class-list.html');" href="sekati/events/MediaEvent.html#MediaEvent()">MediaEvent</a>(type, statusCode, percentLoaded, percentPlayed, metaData, cuePointData, bubbles, cancelable) &mdash; Constructor in class sekati.events.<a onclick="javascript:loadClassListFrame('sekati/events/class-list.html');" href="sekati/events/MediaEvent.html">MediaEvent</a></td>
+<td colspan="2" class="idxrow"><a onclick="javascript:loadClassListFrame('sekati/events/class-list.html');" href="sekati/events/MediaEvent.html#MediaEvent()">MediaEvent</a>(type, statusCode, percentLoaded, percentPlayed, metaData, cuePointData, id3, bubbles, cancelable) &mdash; Constructor in class sekati.events.<a onclick="javascript:loadClassListFrame('sekati/events/class-list.html');" href="sekati/events/MediaEvent.html">MediaEvent</a></td>
 </tr>
 <tr>
 <td width="20"></td><td>
@@ -284,16 +284,17 @@ if (!isEclipse() || window.name != ECLIPSE_FRAME_NAME) {titleBar_setSubTitle("MÂ
    The <code>MediaEvent</code>'s metadata object.</td>
 </tr>
 <tr>
-<td colspan="2" class="idxrow"><a onclick="javascript:loadClassListFrame('sekati/media/class-list.html');" href="sekati/media/FLV.html#_metadata">_metadata</a> &mdash; Property in class sekati.media.<a onclick="javascript:loadClassListFrame('sekati/media/class-list.html');" href="sekati/media/FLV.html">FLV</a></td>
-</tr>
-<tr>
-<td width="20"></td><td></td>
-</tr>
-<tr>
 <td colspan="2" class="idxrow"><a onclick="javascript:loadClassListFrame('sekati/events/class-list.html');" href="sekati/events/MediaEvent.html#METADATA">METADATA</a> &mdash; Constant static property in class sekati.events.<a onclick="javascript:loadClassListFrame('sekati/events/class-list.html');" href="sekati/events/MediaEvent.html">MediaEvent</a></td>
 </tr>
 <tr>
 <td width="20"></td><td></td>
+</tr>
+<tr>
+<td colspan="2" class="idxrow"><a onclick="javascript:loadClassListFrame('sekati/media/class-list.html');" href="sekati/media/FLV.html#metaDataHandler()">metaDataHandler</a>(metadata) &mdash; Method in class sekati.media.<a onclick="javascript:loadClassListFrame('sekati/media/class-list.html');" href="sekati/media/FLV.html">FLV</a></td>
+</tr>
+<tr>
+<td width="20"></td><td>
+   <code>NetStream</code> metadata handler.</td>
 </tr>
 <tr>
 <td colspan="2" class="idxrow"><a onclick="javascript:loadClassListFrame('sekati/reflect/class-list.html');" href="sekati/reflect/ClassReflector.html#method()">method</a>(name) &mdash; Method in class sekati.reflect.<a onclick="javascript:loadClassListFrame('sekati/reflect/class-list.html');" href="sekati/reflect/ClassReflector.html">ClassReflector</a></td>
@@ -555,14 +556,36 @@ if (!isEclipse() || window.name != ECLIPSE_FRAME_NAME) {titleBar_setSubTitle("MÂ
 <td width="20"></td><td></td>
 </tr>
 <tr>
-<td colspan="2" class="idxrow"><a onclick="javascript:loadClassListFrame('sekati/ui/class-list.html');" href="sekati/ui/FLVPlayer.html#movie_onProgress()">movie_onProgress</a>(e:<a href="sekati/events/MediaEvent.html" onclick="javascript:loadClassListFrame('sekati/events./class-list.html');">sekati.events:MediaEvent</a>) &mdash; Method in class sekati.ui.<a onclick="javascript:loadClassListFrame('sekati/ui/class-list.html');" href="sekati/ui/FLVPlayer.html">FLVPlayer</a></td>
+<td colspan="2" class="idxrow"><a onclick="javascript:loadClassListFrame('sekati/ui/class-list.html');" href="sekati/ui/FLVPlayer.html#movieBufferPause()">movieBufferPause</a>(e) &mdash; Method in class sekati.ui.<a onclick="javascript:loadClassListFrame('sekati/ui/class-list.html');" href="sekati/ui/FLVPlayer.html">FLVPlayer</a></td>
+</tr>
+<tr>
+<td width="20"></td><td>
+   When playhead enters area that needs buffering, pause video if playing.</td>
+</tr>
+<tr>
+<td colspan="2" class="idxrow"><a onclick="javascript:loadClassListFrame('sekati/ui/class-list.html');" href="sekati/ui/FLVPlayer.html#movieBufferResume()">movieBufferResume</a>(e) &mdash; Method in class sekati.ui.<a onclick="javascript:loadClassListFrame('sekati/ui/class-list.html');" href="sekati/ui/FLVPlayer.html">FLVPlayer</a></td>
+</tr>
+<tr>
+<td width="20"></td><td>
+   When movie has finished buffering check to see if movie was paused to allow for buffering
+   if it was restart, if not, do nothing.</td>
+</tr>
+<tr>
+<td colspan="2" class="idxrow"><a onclick="javascript:loadClassListFrame('sekati/ui/class-list.html');" href="sekati/ui/FLVPlayer.html#movieCuePointHandler()">movieCuePointHandler</a>(e:<a href="sekati/events/MediaEvent.html" onclick="javascript:loadClassListFrame('sekati/events./class-list.html');">sekati.events:MediaEvent</a>) &mdash; Method in class sekati.ui.<a onclick="javascript:loadClassListFrame('sekati/ui/class-list.html');" href="sekati/ui/FLVPlayer.html">FLVPlayer</a></td>
+</tr>
+<tr>
+<td width="20"></td><td>
+   Cuepoint Handler.</td>
+</tr>
+<tr>
+<td colspan="2" class="idxrow"><a onclick="javascript:loadClassListFrame('sekati/ui/class-list.html');" href="sekati/ui/FLVPlayer.html#movieProgressHandler()">movieProgressHandler</a>(e:<a href="sekati/events/MediaEvent.html" onclick="javascript:loadClassListFrame('sekati/events./class-list.html');">sekati.events:MediaEvent</a>) &mdash; Method in class sekati.ui.<a onclick="javascript:loadClassListFrame('sekati/ui/class-list.html');" href="sekati/ui/FLVPlayer.html">FLVPlayer</a></td>
 </tr>
 <tr>
 <td width="20"></td><td>
    Handle <code>FLV</code> movie progress events.</td>
 </tr>
 <tr>
-<td colspan="2" class="idxrow"><a onclick="javascript:loadClassListFrame('sekati/ui/class-list.html');" href="sekati/ui/FLVPlayer.html#movie_onStatus()">movie_onStatus</a>(e:<a href="sekati/events/MediaEvent.html" onclick="javascript:loadClassListFrame('sekati/events./class-list.html');">sekati.events:MediaEvent</a>) &mdash; Method in class sekati.ui.<a onclick="javascript:loadClassListFrame('sekati/ui/class-list.html');" href="sekati/ui/FLVPlayer.html">FLVPlayer</a></td>
+<td colspan="2" class="idxrow"><a onclick="javascript:loadClassListFrame('sekati/ui/class-list.html');" href="sekati/ui/FLVPlayer.html#movieStatusHandler()">movieStatusHandler</a>(e:<a href="sekati/events/MediaEvent.html" onclick="javascript:loadClassListFrame('sekati/events./class-list.html');">sekati.events:MediaEvent</a>) &mdash; Method in class sekati.ui.<a onclick="javascript:loadClassListFrame('sekati/ui/class-list.html');" href="sekati/ui/FLVPlayer.html">FLVPlayer</a></td>
 </tr>
 <tr>
 <td width="20"></td><td>
@@ -573,14 +596,29 @@ if (!isEclipse() || window.name != ECLIPSE_FRAME_NAME) {titleBar_setSubTitle("MÂ
 </tr>
 <tr>
 <td width="20"></td><td>
-  MP3 provides a common sound media control object.</td>
+  MP3 provides a common media control object for playing <i>progressive</i> audio content.</td>
 </tr>
 <tr>
-<td colspan="2" class="idxrow"><a onclick="javascript:loadClassListFrame('sekati/media/class-list.html');" href="sekati/media/MP3.html#MP3()">MP3</a>(url, autoPlay, loop, buffer) &mdash; Constructor in class sekati.media.<a onclick="javascript:loadClassListFrame('sekati/media/class-list.html');" href="sekati/media/MP3.html">MP3</a></td>
+<td colspan="2" class="idxrow"><a onclick="javascript:loadClassListFrame('sekati/media/class-list.html');" href="sekati/media/MP3.html#MP3()">MP3</a>() &mdash; Constructor in class sekati.media.<a onclick="javascript:loadClassListFrame('sekati/media/class-list.html');" href="sekati/media/MP3.html">MP3</a></td>
 </tr>
 <tr>
 <td width="20"></td><td>
    MP3 Constructor
+   </td>
+</tr>
+<tr>
+<td colspan="2" class="idxrow"><a onclick="javascript:loadClassListFrame('sekati/ui/class-list.html');" href="sekati/ui/MP3Player.html">MP3Player</a> &mdash; Class in package <a onclick="javascript:loadClassListFrame('sekati/ui/class-list.html');" href="sekati/ui/package-detail.html">sekati.ui</a></td>
+</tr>
+<tr>
+<td width="20"></td><td>
+  MP3Player provides playback control interface logic to be used with sekati.media.MP3.</td>
+</tr>
+<tr>
+<td colspan="2" class="idxrow"><a onclick="javascript:loadClassListFrame('sekati/ui/class-list.html');" href="sekati/ui/MP3Player.html#MP3Player()">MP3Player</a>(playBtn, progressBar, bufferBar, gutterBar, volumeBtn) &mdash; Constructor in class sekati.ui.<a onclick="javascript:loadClassListFrame('sekati/ui/class-list.html');" href="sekati/ui/MP3Player.html">MP3Player</a></td>
+</tr>
+<tr>
+<td width="20"></td><td>
+   MP3Player Constructor
    </td>
 </tr>
 <tr>
