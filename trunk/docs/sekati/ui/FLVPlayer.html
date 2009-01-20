@@ -4,7 +4,7 @@
 <META http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <link rel="stylesheet" href="../../style.css" type="text/css" media="screen">
 <link rel="stylesheet" href="../../print.css" type="text/css" media="print">
-<meta content="FLVPlayer,sekati.ui.FLVPlayer,_bufferBar,_currentCuePoint,_gutterBar,_isDrag,_isKeyEnabled,_isSeeking,_keyListener,_movie,_playBtn,_progressBar,_video,_volumeBtn,_wasPlaying,bufferPaused,currentCuePoint,buffBar_onMove,buffBar_onPress,buffBar_onRelease,destroy,init,movie_onProgress,movie_onStatus,pause,pauseMemory,playBtn_Press,remove,reset,resume,resumeMemory,seek_ui,setVolumeControl,volBtn_onMove,volBtn_onPress,volBtn_onRelease" name="keywords">
+<meta content="FLVPlayer,sekati.ui.FLVPlayer,_bufferBar,_currentCuePoint,_gutterBar,_isDrag,_isSeeking,_movie,_playBtn,_progressBar,_video,_volumeBtn,_wasPlaying,isBufferPaused,currentCuePoint,bufferBarDown,bufferBarMove,bufferBarUp,destroy,init,movieBufferPause,movieBufferResume,movieCuePointHandler,movieProgressHandler,movieStatusHandler,pause,pauseMemory,playBtnClick,remove,reset,resume,resumeMemory,seekUI,setVolumeControl,volumeBtnDown,volumeBtnMove,volumeBtnUp" name="keywords">
 <title>sekati.ui.FLVPlayer</title>
 </head>
 <body>
@@ -42,16 +42,17 @@ if (!isEclipse() || window.name != ECLIPSE_FRAME_NAME) {titleBar_setSubTitle("Cl
 </tr>
 </table>
 <p></p>
-  FLVPlayer provides playback control interface code to be used with sekati.media.FLV.
+  FLVPlayer provides playback control interface logic to be used with sekati.media.FLV.
   
-  <p>Simply create a library asset with the necessary assets, link it to the <code>FLVPlayer</code>
-  class and attach instances as needed.</p>
+  <p>To implement pass references to UI controller instances to the <code>FLVPlayer</code> 
+  constructor, instantiate the FLVPlayer instance & <code>addChild( myFLVPlayerInstance )</code> 
+  to attach the sprite-wrapped <code>Video</code>.</p>
   
   <p></p>
 <br>
 <span class="label">Example</span>
 <br><div class='listing'><pre>
-  var player : FLVPlayer = new FLVPlayer( playBtn, progressBar, bufferBar, gutterBar, volumeBtn );
+  var player : FLVPlayer = new FLVPlayer( player.playBtn, player.progressBar, player.bufferBar, player.gutterBar, player.volumeBtn );
   player.x = player.y = 10;
   addChild( player );
   player.init( 'path/to/my.flv' );
@@ -63,7 +64,9 @@ if (!isEclipse() || window.name != ECLIPSE_FRAME_NAME) {titleBar_setSubTitle("Cl
 </p>
 <div class="seeAlso">
 <a href="../media/FLV.html" target="">sekati.media.FLV</a>
-<br>sekati.events.MediaEvents</div>
+<br>
+<a href="../events/MediaEvent.html" target="">sekati.events.MediaEvent</a>
+</div>
 <br>
 <hr>
 </div>
@@ -83,9 +86,8 @@ if (!isEclipse() || window.name != ECLIPSE_FRAME_NAME) {titleBar_setSubTitle("Cl
 <th>&nbsp;</th><th colspan="2">Property</th><th class="summaryTableOwnerCol">Defined&nbsp;by</th>
 </tr>
 <tr class="">
-<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a class="signatureLink" href="#currentCuePoint">currentCuePoint</a> : Object<div class="summaryTableDescription">
-   Returns reference to current cue point data object
-   </div>
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a class="signatureLink" href="#currentCuePoint">currentCuePoint</a> : Object<div class="summaryTableDescription">[read-only]
+   Returns reference to current cue point data object.</div>
 </td><td class="summaryTableOwnerCol">FLVPlayer</td>
 </tr>
 <tr class="hideInheritedProperty">
@@ -115,11 +117,7 @@ if (!isEclipse() || window.name != ECLIPSE_FRAME_NAME) {titleBar_setSubTitle("Cl
 <th>&nbsp;</th><th colspan="2">Property</th><th class="summaryTableOwnerCol">Defined&nbsp;by</th>
 </tr>
 <tr class="">
-<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a class="signatureLink" href="#_bufferBar">_bufferBar</a> : MovieClip<div class="summaryTableDescription"></div>
-</td><td class="summaryTableOwnerCol">FLVPlayer</td>
-</tr>
-<tr class="">
-<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a class="signatureLink" href="#bufferPaused">bufferPaused</a> : Boolean<div class="summaryTableDescription"></div>
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a class="signatureLink" href="#_bufferBar">_bufferBar</a> : Sprite<div class="summaryTableDescription"></div>
 </td><td class="summaryTableOwnerCol">FLVPlayer</td>
 </tr>
 <tr class="">
@@ -127,7 +125,11 @@ if (!isEclipse() || window.name != ECLIPSE_FRAME_NAME) {titleBar_setSubTitle("Cl
 </td><td class="summaryTableOwnerCol">FLVPlayer</td>
 </tr>
 <tr class="">
-<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a class="signatureLink" href="#_gutterBar">_gutterBar</a> : MovieClip<div class="summaryTableDescription"></div>
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a class="signatureLink" href="#_gutterBar">_gutterBar</a> : Sprite<div class="summaryTableDescription"></div>
+</td><td class="summaryTableOwnerCol">FLVPlayer</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a class="signatureLink" href="#isBufferPaused">isBufferPaused</a> : Boolean<div class="summaryTableDescription"></div>
 </td><td class="summaryTableOwnerCol">FLVPlayer</td>
 </tr>
 <tr class="">
@@ -135,15 +137,7 @@ if (!isEclipse() || window.name != ECLIPSE_FRAME_NAME) {titleBar_setSubTitle("Cl
 </td><td class="summaryTableOwnerCol">FLVPlayer</td>
 </tr>
 <tr class="">
-<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a class="signatureLink" href="#_isKeyEnabled">_isKeyEnabled</a> : Boolean<div class="summaryTableDescription"></div>
-</td><td class="summaryTableOwnerCol">FLVPlayer</td>
-</tr>
-<tr class="">
 <td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a class="signatureLink" href="#_isSeeking">_isSeeking</a> : Boolean<div class="summaryTableDescription"></div>
-</td><td class="summaryTableOwnerCol">FLVPlayer</td>
-</tr>
-<tr class="">
-<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a class="signatureLink" href="#_keyListener">_keyListener</a> : Object<div class="summaryTableDescription"></div>
 </td><td class="summaryTableOwnerCol">FLVPlayer</td>
 </tr>
 <tr class="">
@@ -156,7 +150,7 @@ if (!isEclipse() || window.name != ECLIPSE_FRAME_NAME) {titleBar_setSubTitle("Cl
 </td><td class="summaryTableOwnerCol">FLVPlayer</td>
 </tr>
 <tr class="">
-<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a class="signatureLink" href="#_progressBar">_progressBar</a> : MovieClip<div class="summaryTableDescription"></div>
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a class="signatureLink" href="#_progressBar">_progressBar</a> : Sprite<div class="summaryTableDescription"></div>
 </td><td class="summaryTableOwnerCol">FLVPlayer</td>
 </tr>
 <tr class="">
@@ -164,7 +158,7 @@ if (!isEclipse() || window.name != ECLIPSE_FRAME_NAME) {titleBar_setSubTitle("Cl
 </td><td class="summaryTableOwnerCol">FLVPlayer</td>
 </tr>
 <tr class="">
-<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a class="signatureLink" href="#_volumeBtn">_volumeBtn</a> : MovieClip<div class="summaryTableDescription"></div>
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a class="signatureLink" href="#_volumeBtn">_volumeBtn</a> : Sprite<div class="summaryTableDescription"></div>
 </td><td class="summaryTableOwnerCol">FLVPlayer</td>
 </tr>
 <tr class="">
@@ -191,7 +185,7 @@ if (!isEclipse() || window.name != ECLIPSE_FRAME_NAME) {titleBar_setSubTitle("Cl
 <tr class="">
 <td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
 <div class="summarySignature">
-<a class="signatureLink" href="#FLVPlayer()">FLVPlayer</a>(playBtn:MovieClip, progressBar:MovieClip, bufferBar:MovieClip, gutterBar:MovieClip, volumeBtn:MovieClip)</div>
+<a class="signatureLink" href="#FLVPlayer()">FLVPlayer</a>(playBtn:MovieClip, progressBar:Sprite, bufferBar:Sprite, gutterBar:Sprite, volumeBtn:Sprite)</div>
 <div class="summaryTableDescription">
    FLVPlayer Constructor
    </div>
@@ -219,8 +213,7 @@ if (!isEclipse() || window.name != ECLIPSE_FRAME_NAME) {titleBar_setSubTitle("Cl
 <div class="summarySignature">
 <a class="signatureLink" href="#init()">init</a>(url:String, width:uint = 320, height:uint = 240, smoothing:Boolean = true):void</div>
 <div class="summaryTableDescription">
-   load video and initialize FLVPlayer UI and FLVPlayer Core
-   </div>
+   load video and initialize FLVPlayer UI and FLV core.</div>
 </td><td class="summaryTableOwnerCol">FLVPlayer</td>
 </tr>
 <tr class="">
@@ -293,15 +286,7 @@ if (!isEclipse() || window.name != ECLIPSE_FRAME_NAME) {titleBar_setSubTitle("Cl
 <tr class="">
 <td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
 <div class="summarySignature">
-<a class="signatureLink" href="#buffBar_onMove()">buffBar_onMove</a>(e:MouseEvent):void</div>
-<div class="summaryTableDescription">
-   <code>_buffBar</code> scrubbing: seek.</div>
-</td><td class="summaryTableOwnerCol">FLVPlayer</td>
-</tr>
-<tr class="">
-<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
-<div class="summarySignature">
-<a class="signatureLink" href="#buffBar_onPress()">buffBar_onPress</a>(e:MouseEvent):void</div>
+<a class="signatureLink" href="#bufferBarDown()">bufferBarDown</a>(e:MouseEvent):void</div>
 <div class="summaryTableDescription">
    <code>_buffBar</code> pressed: being seeking.</div>
 </td><td class="summaryTableOwnerCol">FLVPlayer</td>
@@ -309,7 +294,15 @@ if (!isEclipse() || window.name != ECLIPSE_FRAME_NAME) {titleBar_setSubTitle("Cl
 <tr class="">
 <td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
 <div class="summarySignature">
-<a class="signatureLink" href="#buffBar_onRelease()">buffBar_onRelease</a>(e:MouseEvent):void</div>
+<a class="signatureLink" href="#bufferBarMove()">bufferBarMove</a>(e:MouseEvent):void</div>
+<div class="summaryTableDescription">
+   <code>_buffBar</code> scrubbing: seek.</div>
+</td><td class="summaryTableOwnerCol">FLVPlayer</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="#bufferBarUp()">bufferBarUp</a>(e:MouseEvent):void</div>
 <div class="summaryTableDescription">
    <code>_buffBar</code> released: stop seeking.</div>
 </td><td class="summaryTableOwnerCol">FLVPlayer</td>
@@ -325,7 +318,32 @@ if (!isEclipse() || window.name != ECLIPSE_FRAME_NAME) {titleBar_setSubTitle("Cl
 <tr class="">
 <td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
 <div class="summarySignature">
-<a class="signatureLink" href="#movie_onProgress()">movie_onProgress</a>(e:<a href="../events/MediaEvent.html">MediaEvent</a>):void</div>
+<a class="signatureLink" href="#movieBufferPause()">movieBufferPause</a>(e:Event):void</div>
+<div class="summaryTableDescription">
+   When playhead enters area that needs buffering, pause video if playing.</div>
+</td><td class="summaryTableOwnerCol">FLVPlayer</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="#movieBufferResume()">movieBufferResume</a>(e:Event):void</div>
+<div class="summaryTableDescription">
+   When movie has finished buffering check to see if movie was paused to allow for buffering
+   if it was restart, if not, do nothing.</div>
+</td><td class="summaryTableOwnerCol">FLVPlayer</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="#movieCuePointHandler()">movieCuePointHandler</a>(e:<a href="../events/MediaEvent.html">MediaEvent</a>):void</div>
+<div class="summaryTableDescription">
+   Cuepoint Handler.</div>
+</td><td class="summaryTableOwnerCol">FLVPlayer</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="#movieProgressHandler()">movieProgressHandler</a>(e:<a href="../events/MediaEvent.html">MediaEvent</a>):void</div>
 <div class="summaryTableDescription">
    Handle <code>FLV</code> movie progress events.</div>
 </td><td class="summaryTableOwnerCol">FLVPlayer</td>
@@ -333,7 +351,7 @@ if (!isEclipse() || window.name != ECLIPSE_FRAME_NAME) {titleBar_setSubTitle("Cl
 <tr class="">
 <td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
 <div class="summarySignature">
-<a class="signatureLink" href="#movie_onStatus()">movie_onStatus</a>(e:<a href="../events/MediaEvent.html">MediaEvent</a>):void</div>
+<a class="signatureLink" href="#movieStatusHandler()">movieStatusHandler</a>(e:<a href="../events/MediaEvent.html">MediaEvent</a>):void</div>
 <div class="summaryTableDescription">
    Handle <code>FLV</code> movie status events.</div>
 </td><td class="summaryTableOwnerCol">FLVPlayer</td>
@@ -365,7 +383,7 @@ if (!isEclipse() || window.name != ECLIPSE_FRAME_NAME) {titleBar_setSubTitle("Cl
 <tr class="">
 <td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
 <div class="summarySignature">
-<a class="signatureLink" href="#playBtn_Press()">playBtn_Press</a>(e:MouseEvent = null):void</div>
+<a class="signatureLink" href="#playBtnClick()">playBtnClick</a>(e:MouseEvent = null):void</div>
 <div class="summaryTableDescription">
    Toggle the framed <code>_playBtn</code> icon and pause/resume playback.</div>
 </td><td class="summaryTableOwnerCol">FLVPlayer</td>
@@ -381,10 +399,9 @@ if (!isEclipse() || window.name != ECLIPSE_FRAME_NAME) {titleBar_setSubTitle("Cl
 <tr class="">
 <td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
 <div class="summarySignature">
-<a class="signatureLink" href="#seek_ui()">seek_ui</a>():void</div>
+<a class="signatureLink" href="#seekUI()">seekUI</a>():void</div>
 <div class="summaryTableDescription">
-   Use guttBar to prevent seek offset inaccuracy while still buffering
-   </div>
+   Use guttBar to prevent seek offset inaccuracy while still buffering.</div>
 </td><td class="summaryTableOwnerCol">FLVPlayer</td>
 </tr>
 <tr class="">
@@ -398,15 +415,7 @@ if (!isEclipse() || window.name != ECLIPSE_FRAME_NAME) {titleBar_setSubTitle("Cl
 <tr class="">
 <td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
 <div class="summarySignature">
-<a class="signatureLink" href="#volBtn_onMove()">volBtn_onMove</a>(e:MouseEvent):void</div>
-<div class="summaryTableDescription">
-   <code>_volBtn</code> scrubbing: change volume.</div>
-</td><td class="summaryTableOwnerCol">FLVPlayer</td>
-</tr>
-<tr class="">
-<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
-<div class="summarySignature">
-<a class="signatureLink" href="#volBtn_onPress()">volBtn_onPress</a>(e:MouseEvent):void</div>
+<a class="signatureLink" href="#volumeBtnDown()">volumeBtnDown</a>(e:MouseEvent):void</div>
 <div class="summaryTableDescription">
    <code>_volBtn</code> pressed: begin volume control.</div>
 </td><td class="summaryTableOwnerCol">FLVPlayer</td>
@@ -414,7 +423,15 @@ if (!isEclipse() || window.name != ECLIPSE_FRAME_NAME) {titleBar_setSubTitle("Cl
 <tr class="">
 <td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
 <div class="summarySignature">
-<a class="signatureLink" href="#volBtn_onRelease()">volBtn_onRelease</a>(e:MouseEvent):void</div>
+<a class="signatureLink" href="#volumeBtnMove()">volumeBtnMove</a>(e:MouseEvent):void</div>
+<div class="summaryTableDescription">
+   <code>_volBtn</code> scrubbing: change volume.</div>
+</td><td class="summaryTableOwnerCol">FLVPlayer</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="#volumeBtnUp()">volumeBtnUp</a>(e:MouseEvent):void</div>
 <div class="summaryTableDescription">
    <code>_volBtn</code> released: end volume control.</div>
 </td><td class="summaryTableOwnerCol">FLVPlayer</td>
@@ -435,16 +452,7 @@ showHideInherited();
 </tr>
 </table>
 <div class="detailBody">
-<code>protected var _bufferBar:MovieClip</code>
-</div>
-<a name="bufferPaused"></a>
-<table cellspacing="0" cellpadding="0" class="detailHeader">
-<tr>
-<td class="detailHeaderName">bufferPaused</td><td class="detailHeaderType">property</td><td class="detailHeaderRule">&nbsp;</td>
-</tr>
-</table>
-<div class="detailBody">
-<code>protected var bufferPaused:Boolean</code>
+<code>protected var _bufferBar:Sprite</code>
 </div>
 <a name="_currentCuePoint"></a>
 <table cellspacing="0" cellpadding="0" class="detailHeader">
@@ -462,13 +470,11 @@ showHideInherited();
 </tr>
 </table>
 <div class="detailBody">
-<code>currentCuePoint:Object</code>&nbsp;&nbsp;[read-write]<p>
-   Returns reference to current cue point data object
+<code>currentCuePoint:Object</code>&nbsp;&nbsp;[read-only]<p>
+   Returns reference to current cue point data object.
    </p><span class="label">Implementation</span>
 <br>
 <code>&nbsp;&nbsp;&nbsp;&nbsp;public function get currentCuePoint():Object</code>
-<br>
-<code>&nbsp;&nbsp;&nbsp;&nbsp;public function set currentCuePoint(value:Object):void</code>
 <br>
 </div>
 <a name="_gutterBar"></a>
@@ -478,7 +484,16 @@ showHideInherited();
 </tr>
 </table>
 <div class="detailBody">
-<code>protected var _gutterBar:MovieClip</code>
+<code>protected var _gutterBar:Sprite</code>
+</div>
+<a name="isBufferPaused"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">isBufferPaused</td><td class="detailHeaderType">property</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>protected var isBufferPaused:Boolean</code>
 </div>
 <a name="_isDrag"></a>
 <table cellspacing="0" cellpadding="0" class="detailHeader">
@@ -489,15 +504,6 @@ showHideInherited();
 <div class="detailBody">
 <code>protected var _isDrag:Boolean</code>
 </div>
-<a name="_isKeyEnabled"></a>
-<table cellspacing="0" cellpadding="0" class="detailHeader">
-<tr>
-<td class="detailHeaderName">_isKeyEnabled</td><td class="detailHeaderType">property</td><td class="detailHeaderRule">&nbsp;</td>
-</tr>
-</table>
-<div class="detailBody">
-<code>protected var _isKeyEnabled:Boolean</code>
-</div>
 <a name="_isSeeking"></a>
 <table cellspacing="0" cellpadding="0" class="detailHeader">
 <tr>
@@ -506,15 +512,6 @@ showHideInherited();
 </table>
 <div class="detailBody">
 <code>protected var _isSeeking:Boolean</code>
-</div>
-<a name="_keyListener"></a>
-<table cellspacing="0" cellpadding="0" class="detailHeader">
-<tr>
-<td class="detailHeaderName">_keyListener</td><td class="detailHeaderType">property</td><td class="detailHeaderRule">&nbsp;</td>
-</tr>
-</table>
-<div class="detailBody">
-<code>protected var _keyListener:Object</code>
 </div>
 <a name="_movie"></a>
 <table cellspacing="0" cellpadding="0" class="detailHeader">
@@ -541,7 +538,7 @@ showHideInherited();
 </tr>
 </table>
 <div class="detailBody">
-<code>protected var _progressBar:MovieClip</code>
+<code>protected var _progressBar:Sprite</code>
 </div>
 <a name="_video"></a>
 <table cellspacing="0" cellpadding="0" class="detailHeader">
@@ -559,7 +556,7 @@ showHideInherited();
 </tr>
 </table>
 <div class="detailBody">
-<code>protected var _volumeBtn:MovieClip</code>
+<code>protected var _volumeBtn:Sprite</code>
 </div>
 <a name="_wasPlaying"></a>
 <table cellspacing="0" cellpadding="0" class="detailHeader">
@@ -579,7 +576,7 @@ showHideInherited();
 </tr>
 </table>
 <div class="detailBody">
-<code>public function FLVPlayer(playBtn:MovieClip, progressBar:MovieClip, bufferBar:MovieClip, gutterBar:MovieClip, volumeBtn:MovieClip)</code><p>
+<code>public function FLVPlayer(playBtn:MovieClip, progressBar:Sprite, bufferBar:Sprite, gutterBar:Sprite, volumeBtn:Sprite)</code><p>
    FLVPlayer Constructor
    </p><span class="label">Parameters</span>
 <table border="0" cellspacing="0" cellpadding="0">
@@ -590,54 +587,38 @@ showHideInherited();
 <td class="paramSpacer">&nbsp;</td>
 </tr>
 <tr>
-<td width="20px"></td><td><code><span class="label">progressBar</span>:MovieClip</code></td>
+<td width="20px"></td><td><code><span class="label">progressBar</span>:Sprite</code></td>
 </tr>
 <tr>
 <td class="paramSpacer">&nbsp;</td>
 </tr>
 <tr>
-<td width="20px"></td><td><code><span class="label">bufferBar</span>:MovieClip</code></td>
+<td width="20px"></td><td><code><span class="label">bufferBar</span>:Sprite</code></td>
 </tr>
 <tr>
 <td class="paramSpacer">&nbsp;</td>
 </tr>
 <tr>
-<td width="20px"></td><td><code><span class="label">gutterBar</span>:MovieClip</code></td>
+<td width="20px"></td><td><code><span class="label">gutterBar</span>:Sprite</code></td>
 </tr>
 <tr>
 <td class="paramSpacer">&nbsp;</td>
 </tr>
 <tr>
-<td width="20px"></td><td><code><span class="label">volumeBtn</span>:MovieClip</code></td>
+<td width="20px"></td><td><code><span class="label">volumeBtn</span>:Sprite</code></td>
 </tr>
 </table>
 </div>
 <a name="methodDetail"></a>
 <div class="detailSectionHeader">Method detail</div>
-<a name="buffBar_onMove()"></a>
+<a name="bufferBarDown()"></a>
 <table cellspacing="0" cellpadding="0" class="detailHeader">
 <tr>
-<td class="detailHeaderName">buffBar_onMove</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td>
+<td class="detailHeaderName">bufferBarDown</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td>
 </tr>
 </table>
 <div class="detailBody">
-<code>protected function buffBar_onMove(e:MouseEvent):void</code><p>
-   <code>_buffBar</code> scrubbing: seek.
-   </p><span class="label">Parameters</span>
-<table border="0" cellspacing="0" cellpadding="0">
-<tr>
-<td width="20px"></td><td><code><span class="label">e</span>:MouseEvent</code></td>
-</tr>
-</table>
-</div>
-<a name="buffBar_onPress()"></a>
-<table cellspacing="0" cellpadding="0" class="detailHeader">
-<tr>
-<td class="detailHeaderName">buffBar_onPress</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td>
-</tr>
-</table>
-<div class="detailBody">
-<code>protected function buffBar_onPress(e:MouseEvent):void</code><p>
+<code>protected function bufferBarDown(e:MouseEvent):void</code><p>
    <code>_buffBar</code> pressed: being seeking.
    </p><span class="label">Parameters</span>
 <table border="0" cellspacing="0" cellpadding="0">
@@ -646,14 +627,30 @@ showHideInherited();
 </tr>
 </table>
 </div>
-<a name="buffBar_onRelease()"></a>
+<a name="bufferBarMove()"></a>
 <table cellspacing="0" cellpadding="0" class="detailHeader">
 <tr>
-<td class="detailHeaderName">buffBar_onRelease</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td>
+<td class="detailHeaderName">bufferBarMove</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td>
 </tr>
 </table>
 <div class="detailBody">
-<code>protected function buffBar_onRelease(e:MouseEvent):void</code><p>
+<code>protected function bufferBarMove(e:MouseEvent):void</code><p>
+   <code>_buffBar</code> scrubbing: seek.
+   </p><span class="label">Parameters</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20px"></td><td><code><span class="label">e</span>:MouseEvent</code></td>
+</tr>
+</table>
+</div>
+<a name="bufferBarUp()"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">bufferBarUp</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>protected function bufferBarUp(e:MouseEvent):void</code><p>
    <code>_buffBar</code> released: stop seeking.
    </p><span class="label">Parameters</span>
 <table border="0" cellspacing="0" cellpadding="0">
@@ -681,25 +678,25 @@ showHideInherited();
 </table>
 <div class="detailBody">
 <code>public function init(url:String, width:uint = 320, height:uint = 240, smoothing:Boolean = true):void</code><p>
-   load video and initialize FLVPlayer UI and FLVPlayer Core
+   load video and initialize FLVPlayer UI and FLV core.
    </p><span class="label">Parameters</span>
 <table border="0" cellspacing="0" cellpadding="0">
 <tr>
-<td width="20px"></td><td><code><span class="label">url</span>:String</code> &mdash; (String) of flv video.
+<td width="20px"></td><td><code><span class="label">url</span>:String</code> &mdash;   of flv video.
    </td>
 </tr>
 <tr>
 <td class="paramSpacer">&nbsp;</td>
 </tr>
 <tr>
-<td width="20px"></td><td><code><span class="label">width</span>:uint</code> (default = <code>320</code>)<code></code> &mdash; of video.
+<td width="20px"></td><td><code><span class="label">width</span>:uint</code> (default = <code>320</code>)<code></code> &mdash;  of video.
    </td>
 </tr>
 <tr>
 <td class="paramSpacer">&nbsp;</td>
 </tr>
 <tr>
-<td width="20px"></td><td><code><span class="label">height</span>:uint</code> (default = <code>240</code>)<code></code> &mdash; of video.
+<td width="20px"></td><td><code><span class="label">height</span>:uint</code> (default = <code>240</code>)<code></code> &mdash;  of video.
    </td>
 </tr>
 <tr>
@@ -711,14 +708,64 @@ showHideInherited();
 </tr>
 </table>
 </div>
-<a name="movie_onProgress()"></a>
+<a name="movieBufferPause()"></a>
 <table cellspacing="0" cellpadding="0" class="detailHeader">
 <tr>
-<td class="detailHeaderName">movie_onProgress</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td>
+<td class="detailHeaderName">movieBufferPause</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td>
 </tr>
 </table>
 <div class="detailBody">
-<code>protected function movie_onProgress(e:<a href="../events/MediaEvent.html">MediaEvent</a>):void</code><p>
+<code>protected function movieBufferPause(e:Event):void</code><p>
+   When playhead enters area that needs buffering, pause video if playing.
+   </p><span class="label">Parameters</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20px"></td><td><code><span class="label">e</span>:Event</code></td>
+</tr>
+</table>
+</div>
+<a name="movieBufferResume()"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">movieBufferResume</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>protected function movieBufferResume(e:Event):void</code><p>
+   When movie has finished buffering check to see if movie was paused to allow for buffering
+   if it was restart, if not, do nothing. This prevents the video from restarting if it was 
+   user paused, and then playhead dragged into buffering area.
+   </p><span class="label">Parameters</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20px"></td><td><code><span class="label">e</span>:Event</code></td>
+</tr>
+</table>
+</div>
+<a name="movieCuePointHandler()"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">movieCuePointHandler</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>protected function movieCuePointHandler(e:<a href="../events/MediaEvent.html">MediaEvent</a>):void</code><p>
+   Cuepoint Handler.
+   </p><span class="label">Parameters</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20px"></td><td><code><span class="label">e</span>:<a href="../events/MediaEvent.html">MediaEvent</a></code></td>
+</tr>
+</table>
+</div>
+<a name="movieProgressHandler()"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">movieProgressHandler</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>protected function movieProgressHandler(e:<a href="../events/MediaEvent.html">MediaEvent</a>):void</code><p>
    Handle <code>FLV</code> movie progress events. 
    </p><span class="label">Parameters</span>
 <table border="0" cellspacing="0" cellpadding="0">
@@ -727,14 +774,14 @@ showHideInherited();
 </tr>
 </table>
 </div>
-<a name="movie_onStatus()"></a>
+<a name="movieStatusHandler()"></a>
 <table cellspacing="0" cellpadding="0" class="detailHeader">
 <tr>
-<td class="detailHeaderName">movie_onStatus</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td>
+<td class="detailHeaderName">movieStatusHandler</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td>
 </tr>
 </table>
 <div class="detailBody">
-<code>protected function movie_onStatus(e:<a href="../events/MediaEvent.html">MediaEvent</a>):void</code><p>
+<code>protected function movieStatusHandler(e:<a href="../events/MediaEvent.html">MediaEvent</a>):void</code><p>
    Handle <code>FLV</code> movie status events.
    
    </p><p>It is best to extend and override this class method to implement your own switch/case code.</p>
@@ -765,14 +812,14 @@ showHideInherited();
 <code>protected function pauseMemory():void</code><p>
    Pause video in memory and track state.
    </p></div>
-<a name="playBtn_Press()"></a>
+<a name="playBtnClick()"></a>
 <table cellspacing="0" cellpadding="0" class="detailHeader">
 <tr>
-<td class="detailHeaderName">playBtn_Press</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td>
+<td class="detailHeaderName">playBtnClick</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td>
 </tr>
 </table>
 <div class="detailBody">
-<code>protected function playBtn_Press(e:MouseEvent = null):void</code><p>
+<code>protected function playBtnClick(e:MouseEvent = null):void</code><p>
    Toggle the framed <code>_playBtn</code> icon and pause/resume playback.
    </p><span class="label">Parameters</span>
 <table border="0" cellspacing="0" cellpadding="0">
@@ -821,15 +868,15 @@ showHideInherited();
 <code>protected function resumeMemory():void</code><p>
    Resume video from member and release state.
    </p></div>
-<a name="seek_ui()"></a>
+<a name="seekUI()"></a>
 <table cellspacing="0" cellpadding="0" class="detailHeader">
 <tr>
-<td class="detailHeaderName">seek_ui</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td>
+<td class="detailHeaderName">seekUI</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td>
 </tr>
 </table>
 <div class="detailBody">
-<code>protected function seek_ui():void</code><p>
-   Use guttBar to prevent seek offset inaccuracy while still buffering
+<code>protected function seekUI():void</code><p>
+   Use guttBar to prevent seek offset inaccuracy while still buffering.
    </p></div>
 <a name="setVolumeControl()"></a>
 <table cellspacing="0" cellpadding="0" class="detailHeader">
@@ -847,30 +894,14 @@ showHideInherited();
 </tr>
 </table>
 </div>
-<a name="volBtn_onMove()"></a>
+<a name="volumeBtnDown()"></a>
 <table cellspacing="0" cellpadding="0" class="detailHeader">
 <tr>
-<td class="detailHeaderName">volBtn_onMove</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td>
+<td class="detailHeaderName">volumeBtnDown</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td>
 </tr>
 </table>
 <div class="detailBody">
-<code>protected function volBtn_onMove(e:MouseEvent):void</code><p>
-   <code>_volBtn</code> scrubbing: change volume.
-   </p><span class="label">Parameters</span>
-<table border="0" cellspacing="0" cellpadding="0">
-<tr>
-<td width="20px"></td><td><code><span class="label">e</span>:MouseEvent</code></td>
-</tr>
-</table>
-</div>
-<a name="volBtn_onPress()"></a>
-<table cellspacing="0" cellpadding="0" class="detailHeader">
-<tr>
-<td class="detailHeaderName">volBtn_onPress</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td>
-</tr>
-</table>
-<div class="detailBody">
-<code>protected function volBtn_onPress(e:MouseEvent):void</code><p>
+<code>protected function volumeBtnDown(e:MouseEvent):void</code><p>
    <code>_volBtn</code> pressed: begin volume control.
    </p><span class="label">Parameters</span>
 <table border="0" cellspacing="0" cellpadding="0">
@@ -879,14 +910,30 @@ showHideInherited();
 </tr>
 </table>
 </div>
-<a name="volBtn_onRelease()"></a>
+<a name="volumeBtnMove()"></a>
 <table cellspacing="0" cellpadding="0" class="detailHeader">
 <tr>
-<td class="detailHeaderName">volBtn_onRelease</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td>
+<td class="detailHeaderName">volumeBtnMove</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td>
 </tr>
 </table>
 <div class="detailBody">
-<code>protected function volBtn_onRelease(e:MouseEvent):void</code><p>
+<code>protected function volumeBtnMove(e:MouseEvent):void</code><p>
+   <code>_volBtn</code> scrubbing: change volume.
+   </p><span class="label">Parameters</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20px"></td><td><code><span class="label">e</span>:MouseEvent</code></td>
+</tr>
+</table>
+</div>
+<a name="volumeBtnUp()"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">volumeBtnUp</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>protected function volumeBtnUp(e:MouseEvent):void</code><p>
    <code>_volBtn</code> released: end volume control.
    </p><span class="label">Parameters</span>
 <table border="0" cellspacing="0" cellpadding="0">

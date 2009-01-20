@@ -188,12 +188,6 @@ if (!isEclipse() || window.name != ECLIPSE_FRAME_NAME) {titleBar_setSubTitle("SÂ
    </td>
 </tr>
 <tr>
-<td colspan="2" class="idxrow"><a onclick="javascript:loadClassListFrame('sekati/ui/class-list.html');" href="sekati/ui/Scroll.html#_scrollArea">_scrollArea</a> &mdash; Property in class sekati.ui.<a onclick="javascript:loadClassListFrame('sekati/ui/class-list.html');" href="sekati/ui/Scroll.html">Scroll</a></td>
-</tr>
-<tr>
-<td width="20"></td><td></td>
-</tr>
-<tr>
 <td colspan="2" class="idxrow"><a onclick="javascript:loadClassListFrame('sekati/external/class-list.html');" href="sekati/external/ExternalBase.html#scrollWindow()">scrollWindow</a>(xpos, ypos) &mdash; Static method in class sekati.external.<a onclick="javascript:loadClassListFrame('sekati/external/class-list.html');" href="sekati/external/ExternalBase.html">ExternalBase</a></td>
 </tr>
 <tr>
@@ -252,7 +246,21 @@ if (!isEclipse() || window.name != ECLIPSE_FRAME_NAME) {titleBar_setSubTitle("SÂ
 </tr>
 <tr>
 <td width="20"></td><td>
-   seek to a playback time.</td>
+   Seek to a playback time.</td>
+</tr>
+<tr>
+<td colspan="2" class="idxrow"><a onclick="javascript:loadClassListFrame('sekati/media/class-list.html');" href="sekati/media/IProgressiveMedia.html#seek()">seek</a>(time) &mdash; Method in interface sekati.media.<a onclick="javascript:loadClassListFrame('sekati/media/class-list.html');" href="sekati/media/IProgressiveMedia.html">IProgressiveMedia</a></td>
+</tr>
+<tr>
+<td width="20"></td><td>
+   Seek to a playback time.</td>
+</tr>
+<tr>
+<td colspan="2" class="idxrow"><a onclick="javascript:loadClassListFrame('sekati/media/class-list.html');" href="sekati/media/MP3.html#seek()">seek</a>(time) &mdash; Method in class sekati.media.<a onclick="javascript:loadClassListFrame('sekati/media/class-list.html');" href="sekati/media/MP3.html">MP3</a></td>
+</tr>
+<tr>
+<td width="20"></td><td>
+   Seek to a playback time.</td>
 </tr>
 <tr>
 <td colspan="2" class="idxrow"><a onclick="javascript:loadClassListFrame('sekati/events/class-list.html');" href="sekati/events/MediaEvent.html#SEEK_INVALID_TIME">SEEK_INVALID_TIME</a> &mdash; Constant static property in class sekati.events.<a onclick="javascript:loadClassListFrame('sekati/events/class-list.html');" href="sekati/events/MediaEvent.html">MediaEvent</a></td>
@@ -271,15 +279,35 @@ if (!isEclipse() || window.name != ECLIPSE_FRAME_NAME) {titleBar_setSubTitle("SÂ
 </tr>
 <tr>
 <td width="20"></td><td>
-   seek to a playback percent (1 based %).</td>
+   Seek to a playback percent (0 - 1).</td>
 </tr>
 <tr>
-<td colspan="2" class="idxrow"><a onclick="javascript:loadClassListFrame('sekati/ui/class-list.html');" href="sekati/ui/FLVPlayer.html#seek_ui()">seek_ui</a>() &mdash; Method in class sekati.ui.<a onclick="javascript:loadClassListFrame('sekati/ui/class-list.html');" href="sekati/ui/FLVPlayer.html">FLVPlayer</a></td>
+<td colspan="2" class="idxrow"><a onclick="javascript:loadClassListFrame('sekati/media/class-list.html');" href="sekati/media/IProgressiveMedia.html#seekToPercent()">seekToPercent</a>(percent) &mdash; Method in interface sekati.media.<a onclick="javascript:loadClassListFrame('sekati/media/class-list.html');" href="sekati/media/IProgressiveMedia.html">IProgressiveMedia</a></td>
 </tr>
 <tr>
 <td width="20"></td><td>
-   Use guttBar to prevent seek offset inaccuracy while still buffering
-   </td>
+   Seek to a playback percent (0 - 1).</td>
+</tr>
+<tr>
+<td colspan="2" class="idxrow"><a onclick="javascript:loadClassListFrame('sekati/media/class-list.html');" href="sekati/media/MP3.html#seekToPercent()">seekToPercent</a>(percent) &mdash; Method in class sekati.media.<a onclick="javascript:loadClassListFrame('sekati/media/class-list.html');" href="sekati/media/MP3.html">MP3</a></td>
+</tr>
+<tr>
+<td width="20"></td><td>
+   Seek to a playback percent (0 - 1).</td>
+</tr>
+<tr>
+<td colspan="2" class="idxrow"><a onclick="javascript:loadClassListFrame('sekati/ui/class-list.html');" href="sekati/ui/FLVPlayer.html#seekUI()">seekUI</a>() &mdash; Method in class sekati.ui.<a onclick="javascript:loadClassListFrame('sekati/ui/class-list.html');" href="sekati/ui/FLVPlayer.html">FLVPlayer</a></td>
+</tr>
+<tr>
+<td width="20"></td><td>
+   Use guttBar to prevent seek offset inaccuracy while still buffering.</td>
+</tr>
+<tr>
+<td colspan="2" class="idxrow"><a onclick="javascript:loadClassListFrame('sekati/ui/class-list.html');" href="sekati/ui/MP3Player.html#seekUI()">seekUI</a>() &mdash; Method in class sekati.ui.<a onclick="javascript:loadClassListFrame('sekati/ui/class-list.html');" href="sekati/ui/MP3Player.html">MP3Player</a></td>
+</tr>
+<tr>
+<td width="20"></td><td>
+   Use guttBar to prevent seek offset inaccuracy while still buffering.</td>
 </tr>
 <tr>
 <td colspan="2" class="idxrow"><a onclick="javascript:loadClassListFrame('sekati/collections/class-list.html');" href="sekati/collections/package-detail.html">sekati.collections</a> &mdash; Package</td>
@@ -713,19 +741,18 @@ if (!isEclipse() || window.name != ECLIPSE_FRAME_NAME) {titleBar_setSubTitle("SÂ
    Set ColorTransform information for a DisplayObject.</td>
 </tr>
 <tr>
-<td colspan="2" class="idxrow"><a onclick="javascript:loadClassListFrame('sekati/media/class-list.html');" href="sekati/media/FLV.html#setVolume()">setVolume</a>(volume) &mdash; Method in class sekati.media.<a onclick="javascript:loadClassListFrame('sekati/media/class-list.html');" href="sekati/media/FLV.html">FLV</a></td>
-</tr>
-<tr>
-<td width="20"></td><td>
-   Set the video volume
-   </td>
-</tr>
-<tr>
 <td colspan="2" class="idxrow"><a onclick="javascript:loadClassListFrame('sekati/ui/class-list.html');" href="sekati/ui/FLVPlayer.html#setVolumeControl()">setVolumeControl</a>(p) &mdash; Method in class sekati.ui.<a onclick="javascript:loadClassListFrame('sekati/ui/class-list.html');" href="sekati/ui/FLVPlayer.html">FLVPlayer</a></td>
 </tr>
 <tr>
 <td width="20"></td><td>
    Core video volume driver.</td>
+</tr>
+<tr>
+<td colspan="2" class="idxrow"><a onclick="javascript:loadClassListFrame('sekati/ui/class-list.html');" href="sekati/ui/MP3Player.html#setVolumeControl()">setVolumeControl</a>(p) &mdash; Method in class sekati.ui.<a onclick="javascript:loadClassListFrame('sekati/ui/class-list.html');" href="sekati/ui/MP3Player.html">MP3Player</a></td>
+</tr>
+<tr>
+<td width="20"></td><td>
+   Core audio volume driver.</td>
 </tr>
 <tr>
 <td colspan="2" class="idxrow"><a onclick="javascript:loadClassListFrame('sekati/crypt/class-list.html');" href="sekati/crypt/SHA1.html">SHA1</a> &mdash; Final class in package <a onclick="javascript:loadClassListFrame('sekati/crypt/class-list.html');" href="sekati/crypt/package-detail.html">sekati.crypt</a></td>
@@ -923,7 +950,7 @@ if (!isEclipse() || window.name != ECLIPSE_FRAME_NAME) {titleBar_setSubTitle("SÂ
 </tr>
 <tr>
 <td width="20"></td><td>
-   The <code>Sound</code> object for manipulation.</td>
+   The <code>Sound</code>.</td>
 </tr>
 <tr>
 <td colspan="2" class="idxrow"><a onclick="javascript:loadClassListFrame('sekati/load/class-list.html');" href="sekati/load/AbstractLoader.html#soundContext">soundContext</a> &mdash; Property in class sekati.load.<a onclick="javascript:loadClassListFrame('sekati/load/class-list.html');" href="sekati/load/AbstractLoader.html">AbstractLoader</a></td>
@@ -960,12 +987,6 @@ if (!isEclipse() || window.name != ECLIPSE_FRAME_NAME) {titleBar_setSubTitle("SÂ
 <tr>
 <td width="20"></td><td>
    Generate a SPAN tag.</td>
-</tr>
-<tr>
-<td colspan="2" class="idxrow"><a onclick="javascript:loadClassListFrame('sekati/ui/class-list.html');" href="sekati/ui/Scroll.html#_speed">_speed</a> &mdash; Property in class sekati.ui.<a onclick="javascript:loadClassListFrame('sekati/ui/class-list.html');" href="sekati/ui/Scroll.html">Scroll</a></td>
-</tr>
-<tr>
-<td width="20"></td><td></td>
 </tr>
 <tr>
 <td colspan="2" class="idxrow"><a onclick="javascript:loadClassListFrame('sekati/collections/class-list.html');" href="sekati/collections/TypedArray.html#splice()">splice</a>(... rest) &mdash; Method in class sekati.collections.<a onclick="javascript:loadClassListFrame('sekati/collections/class-list.html');" href="sekati/collections/TypedArray.html">TypedArray</a></td>
@@ -1129,12 +1150,6 @@ if (!isEclipse() || window.name != ECLIPSE_FRAME_NAME) {titleBar_setSubTitle("SÂ
 <td width="20"></td><td></td>
 </tr>
 <tr>
-<td colspan="2" class="idxrow"><a onclick="javascript:loadClassListFrame('sekati/media/class-list.html');" href="sekati/media/FLV.html#_started">_started</a> &mdash; Property in class sekati.media.<a onclick="javascript:loadClassListFrame('sekati/media/class-list.html');" href="sekati/media/FLV.html">FLV</a></td>
-</tr>
-<tr>
-<td width="20"></td><td></td>
-</tr>
-<tr>
 <td colspan="2" class="idxrow"><a onclick="javascript:loadClassListFrame('sekati/external/class-list.html');" href="sekati/external/ExternalBase.html#status()">status</a>(msg) &mdash; Static method in class sekati.external.<a onclick="javascript:loadClassListFrame('sekati/external/class-list.html');" href="sekati/external/ExternalBase.html">ExternalBase</a></td>
 </tr>
 <tr>
@@ -1166,7 +1181,21 @@ if (!isEclipse() || window.name != ECLIPSE_FRAME_NAME) {titleBar_setSubTitle("SÂ
 </tr>
 <tr>
 <td width="20"></td><td>
-   stop playback.</td>
+   Stop playback.</td>
+</tr>
+<tr>
+<td colspan="2" class="idxrow"><a onclick="javascript:loadClassListFrame('sekati/media/class-list.html');" href="sekati/media/IProgressiveMedia.html#stop()">stop</a>() &mdash; Method in interface sekati.media.<a onclick="javascript:loadClassListFrame('sekati/media/class-list.html');" href="sekati/media/IProgressiveMedia.html">IProgressiveMedia</a></td>
+</tr>
+<tr>
+<td width="20"></td><td>
+   Stop playback.</td>
+</tr>
+<tr>
+<td colspan="2" class="idxrow"><a onclick="javascript:loadClassListFrame('sekati/media/class-list.html');" href="sekati/media/MP3.html#stop()">stop</a>() &mdash; Method in class sekati.media.<a onclick="javascript:loadClassListFrame('sekati/media/class-list.html');" href="sekati/media/MP3.html">MP3</a></td>
+</tr>
+<tr>
+<td width="20"></td><td>
+   Stop playback.</td>
 </tr>
 <tr>
 <td colspan="2" class="idxrow"><a onclick="javascript:loadClassListFrame('sekati/profiler/class-list.html');" href="sekati/profiler/FPSProfiler.html#stop()">stop</a>() &mdash; Method in class sekati.profiler.<a onclick="javascript:loadClassListFrame('sekati/profiler/class-list.html');" href="sekati/profiler/FPSProfiler.html">FPSProfiler</a></td>
