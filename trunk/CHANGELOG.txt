@@ -2,7 +2,10 @@
 
 
 API UPDATE v3.0.4.9 - "Varan" (IN-PROGRESS)
+- Abstracted smart buffering for MP3 into AbstractMediaPlayer.
+- Added anti-compression htaccess commands to save flv playback buffer.
 - Added fastForward() rewind() to IProgressiveMedia. *
+- Refactored MP3Player to use AbstractMediaPlayer. *
 - Refactored FLVPlayer to use AbstractMediaPlayer. *
 - Added AbstractMediaPlayer. *
 - Converted FLVPlayer & MP3Player scale status indicators to width based indicators to support liquid layouts. *
