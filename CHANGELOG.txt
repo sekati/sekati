@@ -2,9 +2,12 @@
 
 
 API UPDATE v3.0.4.9 - "Varan" (IN-PROGRESS)
+- Refactored FLVPlayer to use AbstractMediaPlayer. *
+- Added AbstractMediaPlayer. *
+- Converted FLVPlayer & MP3Player scale status indicators to width based indicators to support liquid layouts. *
+- Fixed minor doc issue in MP3Player
 - Updated deploy/assets test images.
 - Updated swfObject to 2.1
-- Fixed minor doc issue in MP3Player
 
 
 API UPDATE/BREAK v3.0.4.8 - "Varan" (please note "*" will be used at the end of a line to denote an API breaks).
