@@ -2,6 +2,8 @@
 
 
 API UPDATE v3.0.4.9 - "Varan" (IN-PROGRESS)
+- Updated deploy/assets test images.
+- Updated swfObject to 2.1
 - Fixed minor doc issue in MP3Player
 
 
