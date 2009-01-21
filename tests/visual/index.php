@@ -74,7 +74,7 @@ function template ($swf) {
 	$str .= '	var s = new swfIN("'.$swf.'", "unitTest", "100%", "75%");'.$nl;
 	$str .= '	s.detectShowDiv( [9,0,115], "flash_update" );'.$nl;
 	$str .= '	s.useExpressInstall("../../deploy/playerProductInstall.swf", 300, 300);'.$nl;
-	$str .= '	s.addParam("bgcolor", "#bbbbbb");'.$nl;
+	$str .= '	s.addParam("bgcolor", "#ffffff");'.$nl;
 	$str .= '	s.addParam("menu", "true");'.$nl;
 	$str .= '	s.addParam("quality", "high");'.$nl;
 	$str .= '	s.addParam("scale", "noScale");'.$nl;
