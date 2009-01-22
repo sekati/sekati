@@ -2,37 +2,40 @@
 
 
 API UPDATE v3.0.4.9 - "Varan" (IN-PROGRESS)
+* Replaced MediaEvent.STOP with MediaEvent.COMPLETE.
+* Switched FLVPlayer & MP3Player statusHandler's to use e.type instead of e.code for sanity sake.
+* Added status code to MP3 MediaEvent dispatches to be more in line with FLV.
 - Abstracted smart buffering for MP3 into AbstractMediaPlayer.
 - Added anti-compression htaccess commands to save flv playback buffer.
-- Added fastForward() rewind() to IProgressiveMedia. *
-- Refactored MP3Player to use AbstractMediaPlayer. *
-- Refactored FLVPlayer to use AbstractMediaPlayer. *
-- Added AbstractMediaPlayer. *
-- Converted FLVPlayer & MP3Player scale status indicators to width based indicators to support liquid layouts. *
+* Added fastForward() rewind() to IProgressiveMedia.
+* Refactored MP3Player to use AbstractMediaPlayer.
+* Refactored FLVPlayer to use AbstractMediaPlayer.
+* Added AbstractMediaPlayer.
+* Converted FLVPlayer & MP3Player scale status indicators to width based indicators to support liquid layouts.
 - Fixed minor doc issue in MP3Player
 - Updated deploy/assets test images.
 - Updated swfObject to 2.1
 
 
-API UPDATE/BREAK v3.0.4.8 - "Varan" (please note "*" will be used at the end of a line to denote an API breaks).
+API UPDATE/BREAK v3.0.4.8 - "Varan" (please note "*" will be used to denote changes which cause API breaks).
 - Added sekati.ui.MP3Player
 - Rewrite sekati.ui.FLVPlayer
 - Added EXECUTING_DOMAIN & isLocalhost to NetBase.
-- Refactored getLocation() to 'location' & isOnline() to 'online', getPath() to 'path' in NetBase. *
+* Refactored getLocation() to 'location' & isOnline() to 'online', getPath() to 'path' in NetBase.
 - sekati.ui.Scroll bugfixes & doc updates.
 - Added ScrollTest class.
 - Added sekati.media.IProgressiveMedia interface (implemented on FLV & MP3 classes).
-- sekati.media.MP3 total rewrite. *
-- sekati.events.MediaEvent added ID3 event *
-- Major refactoring of sekati.ui.FLVPlayer *
-- Major refactoring of sekati.media.FLV *
-- Major refactoring of sekati.media.MP3 *
+* sekati.media.MP3 total rewrite.
+* sekati.events.MediaEvent added ID3 event
+* Major refactoring of sekati.ui.FLVPlayer
+* Major refactoring of sekati.media.FLV
+* Major refactoring of sekati.media.MP3
 - FLVTest refactored to class, fla removed.
 - sekati.media.FLV semantics updates
 - sekati.media.MP3 updated: added volume, stop, transform, channel and other getters.
 - Fixed bug in ArrayUtil.nearestNeighbor(): removed range.sort(Array.NUMERIC) as it disrupts the natural order of the array/returnIndex.
-- Changed ColorUtil.getColor() to use BitmapValidator.MAX_SIZE_SAFE.*
-- Added BitmapValidator.MAX_SIZE_SAFE as MAX_SIZE was causing issues with fp9 swf's.*
+* Changed ColorUtil.getColor() to use BitmapValidator.MAX_SIZE_SAFE.
+* Added BitmapValidator.MAX_SIZE_SAFE as MAX_SIZE was causing issues with fp9 swf's.
 - Minor semantics fix to FLVPlayer (needs refactoring).
 - Refactored AlignUtil.scaleRatio()
 - Added AlignUtil.scaleRatioToFit()
@@ -40,7 +43,7 @@ API UPDATE/BREAK v3.0.4.8 - "Varan" (please note "*" will be used at the end of 
 - Cleanup on AlignUtil
 - Added DateUtilTest unit test for dateFromDB() fix below.
 - Updated DateUtil.dateFromDB() to accept YYYY-MM-DD format.
-- Updated FLVPlayer to take UI elements as constructor arguments.*
+* Updated FLVPlayer to take UI elements as constructor arguments.
 
 
 API UPDATE v3.0.4.7 - "Varan"

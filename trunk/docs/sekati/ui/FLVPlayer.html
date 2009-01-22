@@ -539,7 +539,9 @@ if (!isEclipse() || window.name != ECLIPSE_FRAME_NAME) {titleBar_setSubTitle("Cl
 <a class="signatureLink" href="#statusHandler()">statusHandler</a>(e:<a href="../events/MediaEvent.html">MediaEvent</a>):void</div>
 <div class="summaryTableDescription">
    
-   Handle <code>MediaEvent</code> status events (<i>stub</i>).</div>
+   Handle & <b>re-dispatch</b> the <code>MediaEvent</code> status events (<i>since 
+   <code>AbstractMediaPlayer</code> subclasses have the option of being added to 
+   stage and bubbling these events unlike <code>IProgressiveMedia</code> classes</i>).</div>
 </td><td class="summaryTableOwnerCol">FLVPlayer</td>
 </tr>
 <tr class="hideInheritedProtectedMethod">
@@ -789,8 +791,11 @@ showHideInherited();
 <div class="detailBody">
 <code>protected override function statusHandler(e:<a href="../events/MediaEvent.html">MediaEvent</a>):void</code><p>
    
-   Handle <code>MediaEvent</code> status events (<i>stub</i>).
-   </p><p>It is best to implement your own switch/case subclass code.</p>
+   Handle & <b>re-dispatch</b> the <code>MediaEvent</code> status events (<i>since 
+   <code>AbstractMediaPlayer</code> subclasses have the option of being added to 
+   stage and bubbling these events unlike <code>IProgressiveMedia</code> classes</i>).
+   
+   </p><p>It is best to implement your own switch/case subclass code for granular event responses.</p>
    <span class="label">Parameters</span>
 <table border="0" cellspacing="0" cellpadding="0">
 <tr>

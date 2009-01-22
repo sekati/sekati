@@ -266,13 +266,15 @@ if (!isEclipse() || window.name != ECLIPSE_FRAME_NAME) {titleBar_setSubTitle("SÂ
 <td colspan="2" class="idxrow"><a onclick="javascript:loadClassListFrame('sekati/events/class-list.html');" href="sekati/events/MediaEvent.html#SEEK_INVALID_TIME">SEEK_INVALID_TIME</a> &mdash; Constant static property in class sekati.events.<a onclick="javascript:loadClassListFrame('sekati/events/class-list.html');" href="sekati/events/MediaEvent.html">MediaEvent</a></td>
 </tr>
 <tr>
-<td width="20"></td><td></td>
+<td width="20"></td><td>
+   </td>
 </tr>
 <tr>
 <td colspan="2" class="idxrow"><a onclick="javascript:loadClassListFrame('sekati/events/class-list.html');" href="sekati/events/MediaEvent.html#SEEK_NOTIFY">SEEK_NOTIFY</a> &mdash; Constant static property in class sekati.events.<a onclick="javascript:loadClassListFrame('sekati/events/class-list.html');" href="sekati/events/MediaEvent.html">MediaEvent</a></td>
 </tr>
 <tr>
-<td width="20"></td><td></td>
+<td width="20"></td><td>
+   </td>
 </tr>
 <tr>
 <td colspan="2" class="idxrow"><a onclick="javascript:loadClassListFrame('sekati/media/class-list.html');" href="sekati/media/FLV.html#seekToPercent()">seekToPercent</a>(percent) &mdash; Method in class sekati.media.<a onclick="javascript:loadClassListFrame('sekati/media/class-list.html');" href="sekati/media/FLV.html">FLV</a></td>
@@ -1160,7 +1162,8 @@ if (!isEclipse() || window.name != ECLIPSE_FRAME_NAME) {titleBar_setSubTitle("SÂ
 <td colspan="2" class="idxrow"><a onclick="javascript:loadClassListFrame('sekati/events/class-list.html');" href="sekati/events/MediaEvent.html#START">START</a> &mdash; Constant static property in class sekati.events.<a onclick="javascript:loadClassListFrame('sekati/events/class-list.html');" href="sekati/events/MediaEvent.html">MediaEvent</a></td>
 </tr>
 <tr>
-<td width="20"></td><td></td>
+<td width="20"></td><td>
+   </td>
 </tr>
 <tr>
 <td colspan="2" class="idxrow"><a onclick="javascript:loadClassListFrame('sekati/external/class-list.html');" href="sekati/external/ExternalBase.html#status()">status</a>(msg) &mdash; Static method in class sekati.external.<a onclick="javascript:loadClassListFrame('sekati/external/class-list.html');" href="sekati/external/ExternalBase.html">ExternalBase</a></td>
@@ -1194,7 +1197,9 @@ if (!isEclipse() || window.name != ECLIPSE_FRAME_NAME) {titleBar_setSubTitle("SÂ
 </tr>
 <tr>
 <td width="20"></td><td>
-   Handle <code>MediaEvent</code> status events (<i>stub</i>).</td>
+   Handle & <b>re-dispatch</b> the <code>MediaEvent</code> status events (<i>since 
+   <code>AbstractMediaPlayer</code> subclasses have the option of being added to 
+   stage and bubbling these events unlike <code>IProgressiveMedia</code> classes</i>).</td>
 </tr>
 <tr>
 <td colspan="2" class="idxrow"><a onclick="javascript:loadClassListFrame('sekati/ui/class-list.html');" href="sekati/ui/FLVPlayer.html#statusHandler()">statusHandler</a>(e:<a href="sekati/events/MediaEvent.html" onclick="javascript:loadClassListFrame('sekati/events./class-list.html');">sekati.events:MediaEvent</a>) &mdash; Method in class sekati.ui.<a onclick="javascript:loadClassListFrame('sekati/ui/class-list.html');" href="sekati/ui/FLVPlayer.html">FLVPlayer</a></td>
@@ -1202,7 +1207,9 @@ if (!isEclipse() || window.name != ECLIPSE_FRAME_NAME) {titleBar_setSubTitle("SÂ
 <tr>
 <td width="20"></td><td>
    
-   Handle <code>MediaEvent</code> status events (<i>stub</i>).</td>
+   Handle & <b>re-dispatch</b> the <code>MediaEvent</code> status events (<i>since 
+   <code>AbstractMediaPlayer</code> subclasses have the option of being added to 
+   stage and bubbling these events unlike <code>IProgressiveMedia</code> classes</i>).</td>
 </tr>
 <tr>
 <td colspan="2" class="idxrow"><a onclick="javascript:loadClassListFrame('sekati/ui/class-list.html');" href="sekati/ui/MP3Player.html#statusHandler()">statusHandler</a>(e:<a href="sekati/events/MediaEvent.html" onclick="javascript:loadClassListFrame('sekati/events./class-list.html');">sekati.events:MediaEvent</a>) &mdash; Method in class sekati.ui.<a onclick="javascript:loadClassListFrame('sekati/ui/class-list.html');" href="sekati/ui/MP3Player.html">MP3Player</a></td>
@@ -1210,7 +1217,9 @@ if (!isEclipse() || window.name != ECLIPSE_FRAME_NAME) {titleBar_setSubTitle("SÂ
 <tr>
 <td width="20"></td><td>
    
-   Handle <code>MediaEvent</code> status events (<i>stub</i>).</td>
+   Handle & <b>re-dispatch</b> the <code>MediaEvent</code> status events (<i>since 
+   <code>AbstractMediaPlayer</code> subclasses have the option of being added to 
+   stage and bubbling these events unlike <code>IProgressiveMedia</code> classes</i>).</td>
 </tr>
 <tr>
 <td colspan="2" class="idxrow"><a onclick="javascript:loadClassListFrame('sekati/media/class-list.html');" href="sekati/media/FLV.html#stop()">stop</a>() &mdash; Method in class sekati.media.<a onclick="javascript:loadClassListFrame('sekati/media/class-list.html');" href="sekati/media/FLV.html">FLV</a></td>
@@ -1255,12 +1264,6 @@ if (!isEclipse() || window.name != ECLIPSE_FRAME_NAME) {titleBar_setSubTitle("SÂ
 <td width="20"></td><td></td>
 </tr>
 <tr>
-<td colspan="2" class="idxrow"><a onclick="javascript:loadClassListFrame('sekati/events/class-list.html');" href="sekati/events/MediaEvent.html#STOP">STOP</a> &mdash; Constant static property in class sekati.events.<a onclick="javascript:loadClassListFrame('sekati/events/class-list.html');" href="sekati/events/MediaEvent.html">MediaEvent</a></td>
-</tr>
-<tr>
-<td width="20"></td><td></td>
-</tr>
-<tr>
 <td colspan="2" class="idxrow"><a onclick="javascript:loadClassListFrame('sekati/ui/class-list.html');" href="sekati/ui/Scroll.html#stopScroll()">stopScroll</a>() &mdash; Method in class sekati.ui.<a onclick="javascript:loadClassListFrame('sekati/ui/class-list.html');" href="sekati/ui/Scroll.html">Scroll</a></td>
 </tr>
 <tr>
@@ -1287,7 +1290,8 @@ if (!isEclipse() || window.name != ECLIPSE_FRAME_NAME) {titleBar_setSubTitle("SÂ
 <td colspan="2" class="idxrow"><a onclick="javascript:loadClassListFrame('sekati/events/class-list.html');" href="sekati/events/MediaEvent.html#STREAM_NOT_FOUND">STREAM_NOT_FOUND</a> &mdash; Constant static property in class sekati.events.<a onclick="javascript:loadClassListFrame('sekati/events/class-list.html');" href="sekati/events/MediaEvent.html">MediaEvent</a></td>
 </tr>
 <tr>
-<td width="20"></td><td></td>
+<td width="20"></td><td>
+   </td>
 </tr>
 <tr>
 <td colspan="2" class="idxrow"><a onclick="javascript:loadClassListFrame('sekati/validators/class-list.html');" href="sekati/validators/TypeValidator.html#STRING">STRING</a> &mdash; Constant static property in class sekati.validators.<a onclick="javascript:loadClassListFrame('sekati/validators/class-list.html');" href="sekati/validators/TypeValidator.html">TypeValidator</a></td>
