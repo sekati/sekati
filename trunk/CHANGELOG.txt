@@ -2,6 +2,7 @@
 
 
 API UPDATE v3.0.4.9 - "Varan" (IN-PROGRESS)
+- Fixed AbstractMediaPlayer.seekUI() to work in liquid layout players.
 * Replaced MediaEvent.STOP with MediaEvent.COMPLETE.
 * Switched FLVPlayer & MP3Player statusHandler's to use e.type instead of e.code for sanity sake.
 * Added status code to MP3 MediaEvent dispatches to be more in line with FLV.
