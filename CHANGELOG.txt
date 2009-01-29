@@ -1,7 +1,7 @@
 ------ SEKATI API CHANGELOG ------
 
 
-API UPDATE v3.0.4.9 - "Varan" (IN-PROGRESS)
+API UPDATE v3.0.4.9 - "Varan"
 - Note: TextEffect class not yet completed/tested.
 * TextUtil.create() method signature expanded and refactored.
 - Added AlignUtil: stageAlignProportion, stageAlignYProportion, stageAlignXProportion.
