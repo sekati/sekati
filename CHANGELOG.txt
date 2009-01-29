@@ -2,6 +2,11 @@
 
 
 API UPDATE v3.0.4.9 - "Varan" (IN-PROGRESS)
+- Note: TextEffect class not yet completed/tested.
+* TextUtil.create() method signature expanded and refactored.
+- Added AlignUtil: stageAlignProportion, stageAlignYProportion, stageAlignXProportion.
+* Removed sekati.text.TextDisplay: methods refactored in to sekati.utils.TextUtil.
+- Removed TextUtil.focusToggle (empty method sig - see sekati.text).
 - TextEffectTest added
 - RandomTypo effect started.
 - Fixed AbstractMediaPlayer.seekUI() to work in liquid layout players.
