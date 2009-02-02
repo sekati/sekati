@@ -2,7 +2,8 @@
 
 
 API UPDATE v3.0.5.0 (IN-PROGRESS)
-
+- Added fix for nulls passed to BoolConverter.toBoolean()
+- Added BoolConverterTest
 
 
 API UPDATE v3.0.4.9 - "Varan"
