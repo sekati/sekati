@@ -10,7 +10,7 @@ I have tried to make mention in source comments whenever code was derived, adapt
 
 == People of mention ==
 
-  * [http://famouser.com Steven Baughman]
+  * [http://iworkinprogress.com Steven Baughman]
   * [http://code.google.com/u/@WRZRSlBRAhNHWgJ0/ Cory Clarke]
   * [http://lmnopj.com/ PJ Ahlberg]
   * [http://partlyhuman.com/ Roger Braunstein]
