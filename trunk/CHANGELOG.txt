@@ -1,7 +1,12 @@
 ------ SEKATI API CHANGELOG ------
 
 
-API UPDATE v3.0.5.0 (IN-PROGRESS)
+API UPDATE v3.0.5.0 - "Gigan" (IN-PROGRESS)
+- Added sekati_preloader.swf example
+- Added SekatiPreloader example class
+- Added sekati.display.DocumentPreloader [in-progress] for creating API-driven preloader swfs (which can load full API swfs)!
+* Renamed sekati_test.swf to sekati_main.swf
+* Changed SWFLoader.content return type from MovieClip to Sprite.
 - Added Scroll.reset() method.
 - Added fix for nulls passed to BoolConverter.toBoolean()
 - Added BoolConverterTest

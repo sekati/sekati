@@ -4,8 +4,8 @@
 <stringAttribute key="ARGUMENTS" value="-default-size 550 400 -default-frame-rate 31 -default-background-color 0xFFFFFF -source-path {flexSDK}/frameworks/locale/en_US -verbose-stacktraces"/>
 <stringAttribute key="FLASH_VARS" value=""/>
 <stringAttribute key="FLEX_SDK_NAME" value="Flex_3_SDK_0"/>
-<stringAttribute key="MAIN_CLASS" value="src/SekatiMain.as"/>
-<stringAttribute key="OUTPUT" value="deploy/sekati_main.swf"/>
+<stringAttribute key="MAIN_CLASS" value="src/SekatiPreloader.as"/>
+<stringAttribute key="OUTPUT" value="deploy/sekati_preloader.swf"/>
 <booleanAttribute key="PASS_CP" value="true"/>
 <booleanAttribute key="PASS_MAIN_CLASS" value="true"/>
 <booleanAttribute key="PASS_SWCS" value="true"/>
