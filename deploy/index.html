@@ -36,10 +36,11 @@
 <body onload="sekati.external.init();">
 
 <div id="flash_update"><h1>Flash Player Upgrade Required</h1><br />&laquo; <a href="adobe.com/go/flashplayer" target="_blank">Update</a>&nbsp; &nbsp; | &nbsp; &nbsp;<a href="javascript:location.reload(true)">Enter</a> &raquo;</div>
-<div id="flash_seo">Content displayed to googlebot & browsers without javascript.</div>
+<div id="flash_seo">Content displayed to googlebot and browsers without javascript.</div>
 
 <script type="text/javascript">
-	var s = new swfIN( "sekati_test.swf", "sekati_test", "100%", "100%" );
+	var s = new swfIN( "sekati_main.swf", "sekati_test", "100%", "100%" );
+	//var s = new swfIN( "sekati_preloader.swf", "sekati_test", "100%", "100%" );
 	//-------------------------------------------------------------------------------------	
 	// Detect the client flashplayer version: display an update div if not capable.
 	// Use expressInstall if client supported & set automatic scrollbars below defined size.
