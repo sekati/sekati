@@ -82,7 +82,7 @@ if (!isEclipse() || window.name != ECLIPSE_FRAME_NAME) {titleBar_setSubTitle("Cl
 <div class="summarySignature">
 <a class="signatureLink" href="#encrypt()">encrypt</a>(input:String, password:String):String</div>
 <div class="summaryTableDescription">[static]
-   Encrypts a string with the specified key.</div>
+   Encrypts a string with the specified key (linefeeds are stripped but replaced upon decryption).</div>
 </td><td class="summaryTableOwnerCol">XOR</td>
 </tr>
 </table>
@@ -151,7 +151,7 @@ showHideInherited();
 </table>
 <div class="detailBody">
 <code>public static function encrypt(input:String, password:String):String</code><p>
-   Encrypts a string with the specified key.
+   Encrypts a string with the specified key (linefeeds are stripped but replaced upon decryption).
    </p><span class="label">Parameters</span>
 <table border="0" cellspacing="0" cellpadding="0">
 <tr>
