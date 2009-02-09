@@ -81,6 +81,21 @@ if (!isEclipse() || window.name != ECLIPSE_FRAME_NAME) {titleBar_setSubTitle("AÂ
    </td>
 </tr>
 <tr>
+<td colspan="2" class="idxrow"><a onclick="javascript:loadClassListFrame('sekati/collisions/class-list.html');" href="sekati/collisions/AbstractCollisionDetector.html">AbstractCollisionDetector</a> &mdash; Class in package <a onclick="javascript:loadClassListFrame('sekati/collisions/class-list.html');" href="sekati/collisions/package-detail.html">sekati.collisions</a></td>
+</tr>
+<tr>
+<td width="20"></td><td>
+  AbstractCollisionDetector provides the core collision detection logic abstract to its subclasses.</td>
+</tr>
+<tr>
+<td colspan="2" class="idxrow"><a onclick="javascript:loadClassListFrame('sekati/collisions/class-list.html');" href="sekati/collisions/AbstractCollisionDetector.html#AbstractCollisionDetector()">AbstractCollisionDetector</a>() &mdash; Constructor in class sekati.collisions.<a onclick="javascript:loadClassListFrame('sekati/collisions/class-list.html');" href="sekati/collisions/AbstractCollisionDetector.html">AbstractCollisionDetector</a></td>
+</tr>
+<tr>
+<td width="20"></td><td>
+   AbstractCollisionDetector Constructor
+   </td>
+</tr>
+<tr>
 <td colspan="2" class="idxrow"><a onclick="javascript:loadClassListFrame('sekati/utils/class-list.html');" href="sekati/utils/AbstractEmbeddedAsset.html">AbstractEmbeddedAsset</a> &mdash; Class in package <a onclick="javascript:loadClassListFrame('sekati/utils/class-list.html');" href="sekati/utils/package-detail.html">sekati.utils</a></td>
 </tr>
 <tr>
@@ -272,6 +287,13 @@ if (!isEclipse() || window.name != ECLIPSE_FRAME_NAME) {titleBar_setSubTitle("AÂ
    Add a new gradient glow filter.</td>
 </tr>
 <tr>
+<td colspan="2" class="idxrow"><a onclick="javascript:loadClassListFrame('sekati/collisions/class-list.html');" href="sekati/collisions/AbstractCollisionDetector.html#addItem()">addItem</a>(obj) &mdash; Method in class sekati.collisions.<a onclick="javascript:loadClassListFrame('sekati/collisions/class-list.html');" href="sekati/collisions/AbstractCollisionDetector.html">AbstractCollisionDetector</a></td>
+</tr>
+<tr>
+<td width="20"></td><td>
+   Add a <code>DisplayObject</code> to the list of objects to check for collisions.</td>
+</tr>
+<tr>
 <td colspan="2" class="idxrow"><a onclick="javascript:loadClassListFrame('sekati/load/class-list.html');" href="sekati/load/LoaderQueue.html#addItem()">addItem</a>(url) &mdash; Method in class sekati.load.<a onclick="javascript:loadClassListFrame('sekati/load/class-list.html');" href="sekati/load/LoaderQueue.html">LoaderQueue</a></td>
 </tr>
 <tr>
@@ -356,8 +378,7 @@ if (!isEclipse() || window.name != ECLIPSE_FRAME_NAME) {titleBar_setSubTitle("AÂ
 </tr>
 <tr>
 <td width="20"></td><td>
-  Align
-  </td>
+  Align provides <code>DisplayObject</code> alignment constants.</td>
 </tr>
 <tr>
 <td colspan="2" class="idxrow"><a onclick="javascript:loadClassListFrame('sekati/layout/class-list.html');" href="sekati/layout/Align.html#Align()">Align</a>() &mdash; Constructor in class sekati.layout.<a onclick="javascript:loadClassListFrame('sekati/layout/class-list.html');" href="sekati/layout/Align.html">Align</a></td>
@@ -430,7 +451,7 @@ if (!isEclipse() || window.name != ECLIPSE_FRAME_NAME) {titleBar_setSubTitle("AÂ
 </tr>
 <tr>
 <td width="20"></td><td>
-   AlignUtils Static Constructor
+   AlignUtil Static Constructor
    </td>
 </tr>
 <tr>
@@ -516,6 +537,13 @@ if (!isEclipse() || window.name != ECLIPSE_FRAME_NAME) {titleBar_setSubTitle("AÂ
 <td width="20"></td><td></td>
 </tr>
 <tr>
+<td colspan="2" class="idxrow"><a onclick="javascript:loadClassListFrame('sekati/collisions/class-list.html');" href="sekati/collisions/AbstractCollisionDetector.html#alphaThreshold">alphaThreshold</a> &mdash; Property in class sekati.collisions.<a onclick="javascript:loadClassListFrame('sekati/collisions/class-list.html');" href="sekati/collisions/AbstractCollisionDetector.html">AbstractCollisionDetector</a></td>
+</tr>
+<tr>
+<td width="20"></td><td>
+   A floating point value from <code>0 - 1</code> that determines the minimum alpha value to check for collisions.</td>
+</tr>
+<tr>
 <td colspan="2" class="idxrow"><a onclick="javascript:loadClassListFrame('sekati/utils/class-list.html');" href="sekati/utils/KeyCode.html#ALTERNATE">ALTERNATE</a> &mdash; Constant static property in class sekati.utils.<a onclick="javascript:loadClassListFrame('sekati/utils/class-list.html');" href="sekati/utils/KeyCode.html">KeyCode</a></td>
 </tr>
 <tr>
@@ -528,6 +556,14 @@ if (!isEclipse() || window.name != ECLIPSE_FRAME_NAME) {titleBar_setSubTitle("AÂ
 <td width="20"></td><td>
    Returns value of the _anchor
    </td>
+</tr>
+<tr>
+<td colspan="2" class="idxrow"><a onclick="javascript:loadClassListFrame('sekati/collisions/class-list.html');" href="sekati/collisions/Collision.html#angle">angle</a> &mdash; Property in class sekati.collisions.<a onclick="javascript:loadClassListFrame('sekati/collisions/class-list.html');" href="sekati/collisions/Collision.html">Collision</a></td>
+</tr>
+<tr>
+<td width="20"></td><td>
+   The angle of the collision as <i>radian</i> or <i>degree</i> (only if <code>returnAngle</code> 
+   is set <code>true</code>, else <code>-1</code> will be returned).</td>
 </tr>
 <tr>
 <td colspan="2" class="idxrow"><a onclick="javascript:loadClassListFrame('sekati/geom/class-list.html');" href="sekati/geom/TrigBase.html#angle2radian()">angle2radian</a>(a) &mdash; Static method in class sekati.geom.<a onclick="javascript:loadClassListFrame('sekati/geom/class-list.html');" href="sekati/geom/TrigBase.html">TrigBase</a></td>
@@ -730,7 +766,7 @@ if (!isEclipse() || window.name != ECLIPSE_FRAME_NAME) {titleBar_setSubTitle("AÂ
 </tr>
 <tr>
 <td width="20"></td><td>
-  Arrangement Commands.</td>
+  Arrangement provides <code>DisplayObject</code> arrangement constants.</td>
 </tr>
 <tr>
 <td colspan="2" class="idxrow"><a onclick="javascript:loadClassListFrame('sekati/layout/class-list.html');" href="sekati/layout/Arrange.html#Arrange()">Arrange</a>() &mdash; Constructor in class sekati.layout.<a onclick="javascript:loadClassListFrame('sekati/layout/class-list.html');" href="sekati/layout/Arrange.html">Arrange</a></td>
@@ -906,7 +942,7 @@ if (!isEclipse() || window.name != ECLIPSE_FRAME_NAME) {titleBar_setSubTitle("AÂ
 </tr>
 <tr>
 <td width="20"></td><td>
-   ArrayUtils Static Constructor
+   ArrayUtil Static Constructor
    </td>
 </tr>
 <tr>

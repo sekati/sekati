@@ -263,6 +263,30 @@ if (!isEclipse() || window.name != ECLIPSE_FRAME_NAME) {titleBar_setSubTitle("CÂ
    Handle buffer externally to <code>ns.bufferTime</code> so we can achieve proper cuePoint timing.</td>
 </tr>
 <tr>
+<td colspan="2" class="idxrow"><a onclick="javascript:loadClassListFrame('sekati/collisions/class-list.html');" href="sekati/collisions/AbstractCollisionDetector.html#checkCollisions()">checkCollisions</a>() &mdash; Method in class sekati.collisions.<a onclick="javascript:loadClassListFrame('sekati/collisions/class-list.html');" href="sekati/collisions/AbstractCollisionDetector.html">AbstractCollisionDetector</a></td>
+</tr>
+<tr>
+<td width="20"></td><td>
+   Stub function for subclasses which checks for collisions and returns a <code>Collision TypedArray</code> 
+   containing all <code>Collision</code>'s.</td>
+</tr>
+<tr>
+<td colspan="2" class="idxrow"><a onclick="javascript:loadClassListFrame('sekati/collisions/class-list.html');" href="sekati/collisions/CollisionDetector.html#checkCollisions()">checkCollisions</a>() &mdash; Method in class sekati.collisions.<a onclick="javascript:loadClassListFrame('sekati/collisions/class-list.html');" href="sekati/collisions/CollisionDetector.html">CollisionDetector</a></td>
+</tr>
+<tr>
+<td width="20"></td><td>
+   Check for collisions with the <code>target</code>, if an object collided it is recorded and returned by 
+   <code>checkCollisions()</code> as an TypedArray of <code>Collision</code> objects.</td>
+</tr>
+<tr>
+<td colspan="2" class="idxrow"><a onclick="javascript:loadClassListFrame('sekati/collisions/class-list.html');" href="sekati/collisions/GroupCollisionDetector.html#checkCollisions()">checkCollisions</a>() &mdash; Method in class sekati.collisions.<a onclick="javascript:loadClassListFrame('sekati/collisions/class-list.html');" href="sekati/collisions/GroupCollisionDetector.html">GroupCollisionDetector</a></td>
+</tr>
+<tr>
+<td width="20"></td><td>
+   Check for collisions between the <code>DisplayObjects</code>, if an object collided with another it is recorded 
+   and returned by <code>checkCollisions()</code> as an TypedArray of <code>Collision</code> objects.</td>
+</tr>
+<tr>
 <td colspan="2" class="idxrow"><a onclick="javascript:loadClassListFrame('sekati/external/class-list.html');" href="sekati/external/ExternalMouseWheel.html#checkJavaScriptReady()">checkJavaScriptReady</a>() &mdash; Method in class sekati.external.<a onclick="javascript:loadClassListFrame('sekati/external/class-list.html');" href="sekati/external/ExternalMouseWheel.html">ExternalMouseWheel</a></td>
 </tr>
 <tr>
@@ -452,6 +476,13 @@ if (!isEclipse() || window.name != ECLIPSE_FRAME_NAME) {titleBar_setSubTitle("CÂ
    Clear a <code>TextField</code>'s contents.</td>
 </tr>
 <tr>
+<td colspan="2" class="idxrow"><a onclick="javascript:loadClassListFrame('sekati/collisions/class-list.html');" href="sekati/collisions/AbstractCollisionDetector.html#clearArrays()">clearArrays</a>() &mdash; Method in class sekati.collisions.<a onclick="javascript:loadClassListFrame('sekati/collisions/class-list.html');" href="sekati/collisions/AbstractCollisionDetector.html">AbstractCollisionDetector</a></td>
+</tr>
+<tr>
+<td width="20"></td><td>
+   Clear the <code>objectCheckArray</code> and <code>objectCollisionArray</code>.</td>
+</tr>
+<tr>
 <td colspan="2" class="idxrow"><a onclick="javascript:loadClassListFrame('sekati/draw/class-list.html');" href="sekati/draw/AbstractShape.html#clearChanged()">clearChanged</a>() &mdash; Method in class sekati.draw.<a onclick="javascript:loadClassListFrame('sekati/draw/class-list.html');" href="sekati/draw/AbstractShape.html">AbstractShape</a></td>
 </tr>
 <tr>
@@ -516,6 +547,13 @@ if (!isEclipse() || window.name != ECLIPSE_FRAME_NAME) {titleBar_setSubTitle("CÂ
 </tr>
 <tr>
 <td colspan="2" class="idxrow"><a onclick="javascript:loadClassListFrame('sekati/events/class-list.html');" href="sekati/events/BootstrapEvent.html#clone()">clone</a>() &mdash; Method in class sekati.events.<a onclick="javascript:loadClassListFrame('sekati/events/class-list.html');" href="sekati/events/BootstrapEvent.html">BootstrapEvent</a></td>
+</tr>
+<tr>
+<td width="20"></td><td>
+   </td>
+</tr>
+<tr>
+<td colspan="2" class="idxrow"><a onclick="javascript:loadClassListFrame('sekati/events/class-list.html');" href="sekati/events/CollisionEvent.html#clone()">clone</a>() &mdash; Method in class sekati.events.<a onclick="javascript:loadClassListFrame('sekati/events/class-list.html');" href="sekati/events/CollisionEvent.html">CollisionEvent</a></td>
 </tr>
 <tr>
 <td width="20"></td><td>
@@ -646,6 +684,82 @@ if (!isEclipse() || window.name != ECLIPSE_FRAME_NAME) {titleBar_setSubTitle("CÂ
    The <code>MediaEvent</code>'s status code string.</td>
 </tr>
 <tr>
+<td colspan="2" class="idxrow"><a onclick="javascript:loadClassListFrame('sekati/collisions/class-list.html');" href="sekati/collisions/Collision.html">Collision</a> &mdash; Class in package <a onclick="javascript:loadClassListFrame('sekati/collisions/class-list.html');" href="sekati/collisions/package-detail.html">sekati.collisions</a></td>
+</tr>
+<tr>
+<td width="20"></td><td>
+  Collision provides the data associated with a <code>DisplayObject</code> collision.</td>
+</tr>
+<tr>
+<td colspan="2" class="idxrow"><a onclick="javascript:loadClassListFrame('sekati/collisions/class-list.html');" href="sekati/collisions/Collision.html#Collision()">Collision</a>(object1, object2, angle, overlap) &mdash; Constructor in class sekati.collisions.<a onclick="javascript:loadClassListFrame('sekati/collisions/class-list.html');" href="sekati/collisions/Collision.html">Collision</a></td>
+</tr>
+<tr>
+<td width="20"></td><td>
+   Collision Constructor
+   </td>
+</tr>
+<tr>
+<td colspan="2" class="idxrow"><a onclick="javascript:loadClassListFrame('sekati/events/class-list.html');" href="sekati/events/CollisionEvent.html#COLLISION">COLLISION</a> &mdash; Constant static property in class sekati.events.<a onclick="javascript:loadClassListFrame('sekati/events/class-list.html');" href="sekati/events/CollisionEvent.html">CollisionEvent</a></td>
+</tr>
+<tr>
+<td width="20"></td><td>
+   </td>
+</tr>
+<tr>
+<td colspan="2" class="idxrow"><a onclick="javascript:loadClassListFrame('sekati/collisions/class-list.html');" href="sekati/collisions/CollisionAngle.html">CollisionAngle</a> &mdash; Class in package <a onclick="javascript:loadClassListFrame('sekati/collisions/class-list.html');" href="sekati/collisions/package-detail.html">sekati.collisions</a></td>
+</tr>
+<tr>
+<td width="20"></td><td>
+  CollisionAngle provides <i>return</i> angle types for <code>Collision</code> detectors.</td>
+</tr>
+<tr>
+<td colspan="2" class="idxrow"><a onclick="javascript:loadClassListFrame('sekati/collisions/class-list.html');" href="sekati/collisions/CollisionAngle.html#CollisionAngle()">CollisionAngle</a>() &mdash; Constructor in class sekati.collisions.<a onclick="javascript:loadClassListFrame('sekati/collisions/class-list.html');" href="sekati/collisions/CollisionAngle.html">CollisionAngle</a></td>
+</tr>
+<tr>
+<td width="20"></td><td>
+   CollisionAngle Static Constructor
+   </td>
+</tr>
+<tr>
+<td colspan="2" class="idxrow"><a onclick="javascript:loadClassListFrame('sekati/collisions/class-list.html');" href="sekati/collisions/CollisionDetector.html">CollisionDetector</a> &mdash; Class in package <a onclick="javascript:loadClassListFrame('sekati/collisions/class-list.html');" href="sekati/collisions/package-detail.html">sekati.collisions</a></td>
+</tr>
+<tr>
+<td width="20"></td><td>
+  CollisionDetector provides collision detection to <i>a single target display 
+  object</i> against all other display objects registered with the detector (<b>one to many</b>).</td>
+</tr>
+<tr>
+<td colspan="2" class="idxrow"><a onclick="javascript:loadClassListFrame('sekati/collisions/class-list.html');" href="sekati/collisions/CollisionDetector.html#CollisionDetector()">CollisionDetector</a>(target, ... rest) &mdash; Constructor in class sekati.collisions.<a onclick="javascript:loadClassListFrame('sekati/collisions/class-list.html');" href="sekati/collisions/CollisionDetector.html">CollisionDetector</a></td>
+</tr>
+<tr>
+<td width="20"></td><td>
+   CollisionDetector Constructor
+   </td>
+</tr>
+<tr>
+<td colspan="2" class="idxrow"><a onclick="javascript:loadClassListFrame('sekati/events/class-list.html');" href="sekati/events/CollisionEvent.html">CollisionEvent</a> &mdash; Class in package <a onclick="javascript:loadClassListFrame('sekati/events/class-list.html');" href="sekati/events/package-detail.html">sekati.events</a></td>
+</tr>
+<tr>
+<td width="20"></td><td>
+  CollisionEvent
+  </td>
+</tr>
+<tr>
+<td colspan="2" class="idxrow"><a onclick="javascript:loadClassListFrame('sekati/events/class-list.html');" href="sekati/events/CollisionEvent.html#CollisionEvent()">CollisionEvent</a>(type, collisions:<a href="sekati/collections/TypedArray.html" onclick="javascript:loadClassListFrame('sekati/collections./class-list.html');">sekati.collections:TypedArray</a>, bubbles, cancelable) &mdash; Constructor in class sekati.events.<a onclick="javascript:loadClassListFrame('sekati/events/class-list.html');" href="sekati/events/CollisionEvent.html">CollisionEvent</a></td>
+</tr>
+<tr>
+<td width="20"></td><td>
+   CollisionEvent Constructor
+   </td>
+</tr>
+<tr>
+<td colspan="2" class="idxrow"><a onclick="javascript:loadClassListFrame('sekati/events/class-list.html');" href="sekati/events/CollisionEvent.html#collisions">collisions</a> &mdash; Property in class sekati.events.<a onclick="javascript:loadClassListFrame('sekati/events/class-list.html');" href="sekati/events/CollisionEvent.html">CollisionEvent</a></td>
+</tr>
+<tr>
+<td width="20"></td><td>
+   A <code>TypedArray</code> containing one or more <code>Collision</code> objects.</td>
+</tr>
+<tr>
 <td colspan="2" class="idxrow"><a onclick="javascript:loadClassListFrame('sekati/draw/class-list.html');" href="sekati/draw/Bezier.html#_color">_color</a> &mdash; Property in class sekati.draw.<a onclick="javascript:loadClassListFrame('sekati/draw/class-list.html');" href="sekati/draw/Bezier.html">Bezier</a></td>
 </tr>
 <tr>
@@ -762,7 +876,7 @@ if (!isEclipse() || window.name != ECLIPSE_FRAME_NAME) {titleBar_setSubTitle("CÂ
 </tr>
 <tr>
 <td width="20"></td><td>
-   ColorUtils Static Constructor
+   ColorUtil Static Constructor
    </td>
 </tr>
 <tr>

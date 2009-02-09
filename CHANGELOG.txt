@@ -2,8 +2,20 @@
 
 
 API UPDATE v3.0.5.0 - "Gigan" (IN-PROGRESS)
-- Added sekati_preloader.swf example
-- Added SekatiPreloader example class
+- Converted all static class constructors to implement TypeEnforcer.enforceStatic.
+- Added tests/build directory to store test launch profiles.
+- Added sekati.events.CollisionEvent
+- Added sekati.collision package:
+- 	ICollisionDetector.
+- 	AbstractCollisionDetector.
+- 	MonoCollisionDetector.
+- 	StereoCollisionDetector.
+- Enforced abstraction of sekati.draw.AbstractShape
+- Refined docs for sekati.layout.Align and sekati.layout.Arrange.
+- Added index_preloader.html example.
+- Added sekati_preloader.swf example.
+- Added SekatiPreloader example class.
+- Added SEKATI_API-Preloader launch profile.
 - Added sekati.display.DocumentPreloader [in-progress] for creating API-driven preloader swfs (which can load full API swfs)!
 * Renamed sekati_test.swf to sekati_main.swf
 * Changed SWFLoader.content return type from MovieClip to Sprite.

@@ -1,6 +1,6 @@
 /**
  * sekati.utils.ArrayPeer
- * @version 1.0.5
+ * @version 1.0.6
  * @author jason m horwitz | sekati.com
  * Copyright (C) 2008  jason m horwitz, Sekat LLC. All Rights Reserved.
  * Released under the MIT License: http://www.opensource.org/licenses/mit-license.php
@@ -8,7 +8,7 @@
  * Adopted from di-as3 as dependency only.
  */
 package sekati.utils {
-	/**
+	import sekati.utils.TypeEnforcer;	/**
 	 * Helper for shortcutting searching in arrays
 	 */
 	public class ArrayPeer {
@@ -166,8 +166,7 @@ package sekati.utils {
 						}
 						return false;
 					}
-				}
-				else {
+				} else {
 					// check property exists
 					if( !item.hasOwnProperty( property ) ) return false;		
 					actualValue = item[ property ];
@@ -218,7 +217,7 @@ package sekati.utils {
 		 * ArrayPeer Static Constructor
 		 */
 		public function ArrayPeer() {
-			throw new Error( "ArrayPeer is a static class and cannot be instantiated." );
+			TypeEnforcer.enforceStatic( ArrayPeer );
 		}
 	}
 }
