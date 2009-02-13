@@ -507,10 +507,10 @@ if (!isEclipse() || window.name != ECLIPSE_FRAME_NAME) {titleBar_setSubTitle("FÂ
 </tr>
 <tr>
 <td width="20"></td><td>
-  ForceSprite provides a <code>Sprite</code> which may have physics forces applied to it.</td>
+  ForceSprite provides an <code>InteractiveSprite</code> which have quasi-physics forces applied to it.</td>
 </tr>
 <tr>
-<td colspan="2" class="idxrow"><a onclick="javascript:loadClassListFrame('sekati/display/class-list.html');" href="sekati/display/ForceSprite.html#ForceSprite()">ForceSprite</a>(bounds, friction, gravity, speed, hasForce) &mdash; Constructor in class sekati.display.<a onclick="javascript:loadClassListFrame('sekati/display/class-list.html');" href="sekati/display/ForceSprite.html">ForceSprite</a></td>
+<td colspan="2" class="idxrow"><a onclick="javascript:loadClassListFrame('sekati/display/class-list.html');" href="sekati/display/ForceSprite.html#ForceSprite()">ForceSprite</a>(vx, vy, mass, friction, gravityY, gravityX, bounds, isDraggable, hasForce) &mdash; Constructor in class sekati.display.<a onclick="javascript:loadClassListFrame('sekati/display/class-list.html');" href="sekati/display/ForceSprite.html">ForceSprite</a></td>
 </tr>
 <tr>
 <td width="20"></td><td>
@@ -552,6 +552,13 @@ if (!isEclipse() || window.name != ECLIPSE_FRAME_NAME) {titleBar_setSubTitle("FÂ
    Handle throw logic.</td>
 </tr>
 <tr>
+<td colspan="2" class="idxrow"><a onclick="javascript:loadClassListFrame('sekati/display/class-list.html');" href="sekati/display/ForceSprite.html#frameHandler()">frameHandler</a>(e) &mdash; Method in class sekati.display.<a onclick="javascript:loadClassListFrame('sekati/display/class-list.html');" href="sekati/display/ForceSprite.html">ForceSprite</a></td>
+</tr>
+<tr>
+<td width="20"></td><td>
+   Handle force logic.</td>
+</tr>
+<tr>
 <td colspan="2" class="idxrow"><a onclick="javascript:loadClassListFrame('sekati/events/class-list.html');" href="sekati/events/FramePulse.html">FramePulse</a> &mdash; Final class in package <a onclick="javascript:loadClassListFrame('sekati/events/class-list.html');" href="sekati/events/package-detail.html">sekati.events</a></td>
 </tr>
 <tr>
@@ -586,6 +593,20 @@ if (!isEclipse() || window.name != ECLIPSE_FRAME_NAME) {titleBar_setSubTitle("FÂ
 </tr>
 <tr>
 <td width="20"></td><td></td>
+</tr>
+<tr>
+<td colspan="2" class="idxrow"><a onclick="javascript:loadClassListFrame('sekati/display/class-list.html');" href="sekati/display/ForceSprite.html#friction">friction</a> &mdash; Property in class sekati.display.<a onclick="javascript:loadClassListFrame('sekati/display/class-list.html');" href="sekati/display/ForceSprite.html">ForceSprite</a></td>
+</tr>
+<tr>
+<td width="20"></td><td>
+   Frictional force being applied.</td>
+</tr>
+<tr>
+<td colspan="2" class="idxrow"><a onclick="javascript:loadClassListFrame('sekati/display/class-list.html');" href="sekati/display/ForceSprite.html#FRICTION">FRICTION</a> &mdash; Static property in class sekati.display.<a onclick="javascript:loadClassListFrame('sekati/display/class-list.html');" href="sekati/display/ForceSprite.html">ForceSprite</a></td>
+</tr>
+<tr>
+<td width="20"></td><td>
+   The "natural" gravity of all <code>ForceSprite</code>'s.</td>
 </tr>
 <tr>
 <td colspan="2" class="idxrow"><a onclick="javascript:loadClassListFrame('sekati/filters/class-list.html');" href="sekati/filters/FilterType.html#FULL">FULL</a> &mdash; Constant static property in class sekati.filters.<a onclick="javascript:loadClassListFrame('sekati/filters/class-list.html');" href="sekati/filters/FilterType.html">FilterType</a></td>
