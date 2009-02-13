@@ -2,7 +2,7 @@
 
 
 API UPDATE v3.0.5.0 - "Gigan" (IN-PROGRESS)
-- Plans to implement sekati.display.ForceContainer which provides physics "world" properties.
+- Added mass to ForceSprite (plans to implement gravity/friction constants)
 - Added sekati.display.ForceSprite to provide a basic physics based display object to the API (in-progress).
 - Added sekati.media.Cam to provide a basic user camera display object to the API (in-progress).
 - Converted all static class constructors to implement TypeEnforcer.enforceStatic.

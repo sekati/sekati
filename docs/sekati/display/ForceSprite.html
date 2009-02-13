@@ -4,7 +4,7 @@
 <META http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <link rel="stylesheet" href="../../style.css" type="text/css" media="screen">
 <link rel="stylesheet" href="../../print.css" type="text/css" media="print">
-<meta content="ForceSprite,sekati.display.ForceSprite,_accellerationX,_accellerationY,_boundRect,_friction,_gravity,_hasForce,_speedX,_speedY,boundBottom,boundLeft,boundRight,boundTop,bounds,hasForce" name="keywords">
+<meta content="ForceSprite,sekati.display.ForceSprite,FRICTION,GRAVITY_X,GRAVITY_Y,MASS,_ax,_ay,_boundRect,_cx,_cy,_dx,_dy,_friction,_gravityX,_gravityY,_hasForce,_isDrag,_isDraggable,_mass,_vx,_vy,ax,ay,boundBottom,boundLeft,boundRight,boundTop,bounds,friction,gravityX,gravityY,hasForce,isDraggable,mass,collide,frameHandler,press,release,releaseOutside" name="keywords">
 <title>sekati.display.ForceSprite</title>
 </head>
 <body>
@@ -42,7 +42,7 @@ if (!isEclipse() || window.name != ECLIPSE_FRAME_NAME) {titleBar_setSubTitle("Cl
 </tr>
 </table>
 <p></p>
-  ForceSprite provides a <code>Sprite</code> which may have physics forces applied to it.
+  ForceSprite provides an <code>InteractiveSprite</code> which have quasi-physics forces applied to it.
   <p></p>
 <br>
 <hr>
@@ -63,8 +63,18 @@ if (!isEclipse() || window.name != ECLIPSE_FRAME_NAME) {titleBar_setSubTitle("Cl
 <th>&nbsp;</th><th colspan="2">Property</th><th class="summaryTableOwnerCol">Defined&nbsp;by</th>
 </tr>
 <tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a class="signatureLink" href="#ax">ax</a> : Number<div class="summaryTableDescription">
+   X-axis acceleration.</div>
+</td><td class="summaryTableOwnerCol">ForceSprite</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a class="signatureLink" href="#ay">ay</a> : Number<div class="summaryTableDescription">
+   Y-axis acceleration.</div>
+</td><td class="summaryTableOwnerCol">ForceSprite</td>
+</tr>
+<tr class="">
 <td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a class="signatureLink" href="#boundBottom">boundBottom</a> : Number<div class="summaryTableDescription">[read-only]
-   Bottom bounds (<code>DisplayObject</code> registration <code>0,0</code>).</div>
+   Bottom bounds (<code>DisplayObject</code> registration <code>0, 0</code>).</div>
 </td><td class="summaryTableOwnerCol">ForceSprite</td>
 </tr>
 <tr class="">
@@ -93,8 +103,38 @@ if (!isEclipse() || window.name != ECLIPSE_FRAME_NAME) {titleBar_setSubTitle("Cl
 </td><td class="summaryTableOwnerCol"><a href="InteractiveSprite.html">InteractiveSprite</a></td>
 </tr>
 <tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a class="signatureLink" href="#friction">friction</a> : Number<div class="summaryTableDescription">
+   Frictional force being applied.</div>
+</td><td class="summaryTableOwnerCol">ForceSprite</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a class="signatureLink" href="#FRICTION">FRICTION</a> : Number = 2<div class="summaryTableDescription">[static]
+   The "natural" gravity of all <code>ForceSprite</code>'s.</div>
+</td><td class="summaryTableOwnerCol">ForceSprite</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a class="signatureLink" href="#gravityX">gravityX</a> : Number<div class="summaryTableDescription">
+   X-axis gravitational force being applied.</div>
+</td><td class="summaryTableOwnerCol">ForceSprite</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a class="signatureLink" href="#GRAVITY_X">GRAVITY_X</a> : Number = 0<div class="summaryTableDescription">[static]
+   The "natural" x-axis gravity of all <code>ForceSprite</code>'s.</div>
+</td><td class="summaryTableOwnerCol">ForceSprite</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a class="signatureLink" href="#gravityY">gravityY</a> : Number<div class="summaryTableDescription">
+   X-axis gravitational force being applied.</div>
+</td><td class="summaryTableOwnerCol">ForceSprite</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a class="signatureLink" href="#GRAVITY_Y">GRAVITY_Y</a> : Number = 20<div class="summaryTableDescription">[static]
+   The "natural" y-axis gravity of all <code>ForceSprite</code>'s.</div>
+</td><td class="summaryTableOwnerCol">ForceSprite</td>
+</tr>
+<tr class="">
 <td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a class="signatureLink" href="#hasForce">hasForce</a> : Boolean<div class="summaryTableDescription">
-   <code>Boolean</code> value which determines whether the force is currently being applied.</div>
+   <code>Boolean</code> value which determines whether the force (<code>frameHandler</code>) is currently being applied.</div>
 </td><td class="summaryTableOwnerCol">ForceSprite</td>
 </tr>
 <tr class="hideInheritedProperty">
@@ -102,6 +142,21 @@ if (!isEclipse() || window.name != ECLIPSE_FRAME_NAME) {titleBar_setSubTitle("Cl
    Specifies the <i>mouse cursors modal state</i> in the object as an interactive 
    target via: <code>buttonMode, mouseChildren & tabChildren</code>.</div>
 </td><td class="summaryTableOwnerCol"><a href="CoreSprite.html">CoreSprite</a></td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a class="signatureLink" href="#isDraggable">isDraggable</a> : Boolean<div class="summaryTableDescription">
+   <code>Boolean</code> value which determines whether the object is able to be dragged/thrown.</div>
+</td><td class="summaryTableOwnerCol">ForceSprite</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a class="signatureLink" href="#mass">mass</a> : Number<div class="summaryTableDescription">
+   The general mass of the object (decreases acceleration, increases friction).</div>
+</td><td class="summaryTableOwnerCol">ForceSprite</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a class="signatureLink" href="#MASS">MASS</a> : Number = 0.2<div class="summaryTableDescription">[static]
+   The "natural" mass of all <code>ForceSprite</code>'s.</div>
+</td><td class="summaryTableOwnerCol">ForceSprite</td>
 </tr>
 <tr class="hideInheritedProperty">
 <td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img class="inheritedSummaryImage" title="Inherited" alt="Inherited" src="../../images/inheritedSummary.gif"></td><td class="summaryTableSignatureCol"><a class="signatureLink" href="CoreSprite.html#scale">scale</a> : Number<div class="summaryTableDescription">
@@ -118,11 +173,11 @@ if (!isEclipse() || window.name != ECLIPSE_FRAME_NAME) {titleBar_setSubTitle("Cl
 <th>&nbsp;</th><th colspan="2">Property</th><th class="summaryTableOwnerCol">Defined&nbsp;by</th>
 </tr>
 <tr class="">
-<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a class="signatureLink" href="#_accellerationX">_accellerationX</a> : Number<div class="summaryTableDescription"></div>
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a class="signatureLink" href="#_ax">_ax</a> : Number<div class="summaryTableDescription"></div>
 </td><td class="summaryTableOwnerCol">ForceSprite</td>
 </tr>
 <tr class="">
-<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a class="signatureLink" href="#_accellerationY">_accellerationY</a> : Number<div class="summaryTableDescription"></div>
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a class="signatureLink" href="#_ay">_ay</a> : Number<div class="summaryTableDescription"></div>
 </td><td class="summaryTableOwnerCol">ForceSprite</td>
 </tr>
 <tr class="">
@@ -130,11 +185,31 @@ if (!isEclipse() || window.name != ECLIPSE_FRAME_NAME) {titleBar_setSubTitle("Cl
 </td><td class="summaryTableOwnerCol">ForceSprite</td>
 </tr>
 <tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a class="signatureLink" href="#_cx">_cx</a> : Number<div class="summaryTableDescription"></div>
+</td><td class="summaryTableOwnerCol">ForceSprite</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a class="signatureLink" href="#_cy">_cy</a> : Number<div class="summaryTableDescription"></div>
+</td><td class="summaryTableOwnerCol">ForceSprite</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a class="signatureLink" href="#_dx">_dx</a> : Number<div class="summaryTableDescription"></div>
+</td><td class="summaryTableOwnerCol">ForceSprite</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a class="signatureLink" href="#_dy">_dy</a> : Number<div class="summaryTableDescription"></div>
+</td><td class="summaryTableOwnerCol">ForceSprite</td>
+</tr>
+<tr class="">
 <td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a class="signatureLink" href="#_friction">_friction</a> : Number<div class="summaryTableDescription"></div>
 </td><td class="summaryTableOwnerCol">ForceSprite</td>
 </tr>
 <tr class="">
-<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a class="signatureLink" href="#_gravity">_gravity</a> : Number<div class="summaryTableDescription"></div>
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a class="signatureLink" href="#_gravityX">_gravityX</a> : Number<div class="summaryTableDescription"></div>
+</td><td class="summaryTableOwnerCol">ForceSprite</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a class="signatureLink" href="#_gravityY">_gravityY</a> : Number<div class="summaryTableDescription"></div>
 </td><td class="summaryTableOwnerCol">ForceSprite</td>
 </tr>
 <tr class="">
@@ -142,11 +217,23 @@ if (!isEclipse() || window.name != ECLIPSE_FRAME_NAME) {titleBar_setSubTitle("Cl
 </td><td class="summaryTableOwnerCol">ForceSprite</td>
 </tr>
 <tr class="">
-<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a class="signatureLink" href="#_speedX">_speedX</a> : Number<div class="summaryTableDescription"></div>
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a class="signatureLink" href="#_isDrag">_isDrag</a> : Boolean<div class="summaryTableDescription"></div>
 </td><td class="summaryTableOwnerCol">ForceSprite</td>
 </tr>
 <tr class="">
-<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a class="signatureLink" href="#_speedY">_speedY</a> : Number<div class="summaryTableDescription"></div>
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a class="signatureLink" href="#_isDraggable">_isDraggable</a> : Boolean<div class="summaryTableDescription"></div>
+</td><td class="summaryTableOwnerCol">ForceSprite</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a class="signatureLink" href="#_mass">_mass</a> : Number<div class="summaryTableDescription"></div>
+</td><td class="summaryTableOwnerCol">ForceSprite</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a class="signatureLink" href="#_vx">_vx</a> : Number<div class="summaryTableDescription"></div>
+</td><td class="summaryTableOwnerCol">ForceSprite</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a class="signatureLink" href="#_vy">_vy</a> : Number<div class="summaryTableDescription"></div>
 </td><td class="summaryTableOwnerCol">ForceSprite</td>
 </tr>
 </table>
@@ -169,7 +256,7 @@ if (!isEclipse() || window.name != ECLIPSE_FRAME_NAME) {titleBar_setSubTitle("Cl
 <tr class="">
 <td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
 <div class="summarySignature">
-<a class="signatureLink" href="#ForceSprite()">ForceSprite</a>(bounds:Rectangle = null, friction:Number = 0.99, gravity:Number = 0.5, speed:Number = 30, hasForce:Boolean = true)</div>
+<a class="signatureLink" href="#ForceSprite()">ForceSprite</a>(vx:Number = 0, vy:Number = 0, mass:Number = 0.5, friction:Number = 0.8, gravityY:Number = 20, gravityX:Number = 0, bounds:Rectangle = null, isDraggable:Boolean = true, hasForce:Boolean = true)</div>
 <div class="summaryTableDescription">
    ForceSprite Constructor
    </div>
@@ -182,6 +269,15 @@ if (!isEclipse() || window.name != ECLIPSE_FRAME_NAME) {titleBar_setSubTitle("Cl
 <div class="summaryTableDescription">
    Add multiple child <code>DisplayObject</code>'s.</div>
 </td><td class="summaryTableOwnerCol"><a href="CoreSprite.html">CoreSprite</a></td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="#collide()">collide</a>():void</div>
+<div class="summaryTableDescription">
+   Handle a collision
+   </div>
+</td><td class="summaryTableOwnerCol">ForceSprite</td>
 </tr>
 <tr class="hideInheritedMethod">
 <td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img class="inheritedSummaryImage" title="Inherited" alt="Inherited" src="../../images/inheritedSummary.gif"></td><td class="summaryTableSignatureCol">
@@ -221,7 +317,7 @@ if (!isEclipse() || window.name != ECLIPSE_FRAME_NAME) {titleBar_setSubTitle("Cl
 <a onclick="javascript:setInheritedVisible(true,'ProtectedMethod');" href="#protectedMethodSummary" class="showHideLink"><img src="../../images/collapsed.gif" class="showHideLinkImage"> Show Inherited Protected Methods</a>
 </div>
 </div>
-<table id="summaryTableProtectedMethod" class="summaryTable hideInheritedProtectedMethod" cellpadding="3" cellspacing="0">
+<table id="summaryTableProtectedMethod" class="summaryTable " cellpadding="3" cellspacing="0">
 <tr>
 <th>&nbsp;</th><th colspan="2">Method</th><th class="summaryTableOwnerCol">Defined&nbsp;by</th>
 </tr>
@@ -240,6 +336,14 @@ if (!isEclipse() || window.name != ECLIPSE_FRAME_NAME) {titleBar_setSubTitle("Cl
 <div class="summaryTableDescription">
    Event listener management.</div>
 </td><td class="summaryTableOwnerCol"><a href="InteractiveSprite.html">InteractiveSprite</a></td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="#frameHandler()">frameHandler</a>(e:Event):void</div>
+<div class="summaryTableDescription">
+   Handle force logic.</div>
+</td><td class="summaryTableOwnerCol">ForceSprite</td>
 </tr>
 <tr class="hideInheritedProtectedMethod">
 <td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img class="inheritedSummaryImage" title="Inherited" alt="Inherited" src="../../images/inheritedSummary.gif"></td><td class="summaryTableSignatureCol">
@@ -281,29 +385,32 @@ if (!isEclipse() || window.name != ECLIPSE_FRAME_NAME) {titleBar_setSubTitle("Cl
    Stub: mouse over event handler.</div>
 </td><td class="summaryTableOwnerCol"><a href="InteractiveSprite.html">InteractiveSprite</a></td>
 </tr>
-<tr class="hideInheritedProtectedMethod">
-<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img class="inheritedSummaryImage" title="Inherited" alt="Inherited" src="../../images/inheritedSummary.gif"></td><td class="summaryTableSignatureCol">
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
 <div class="summarySignature">
-<a class="signatureLink" href="InteractiveSprite.html#press()">press</a>(e:MouseEvent = null):void</div>
+<a class="signatureLink" href="#press()">press</a>(e:MouseEvent = null):void</div>
 <div class="summaryTableDescription">
+   
    Stub: press event handler.</div>
-</td><td class="summaryTableOwnerCol"><a href="InteractiveSprite.html">InteractiveSprite</a></td>
+</td><td class="summaryTableOwnerCol">ForceSprite</td>
 </tr>
-<tr class="hideInheritedProtectedMethod">
-<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img class="inheritedSummaryImage" title="Inherited" alt="Inherited" src="../../images/inheritedSummary.gif"></td><td class="summaryTableSignatureCol">
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
 <div class="summarySignature">
-<a class="signatureLink" href="InteractiveSprite.html#release()">release</a>(e:MouseEvent = null):void</div>
+<a class="signatureLink" href="#release()">release</a>(e:MouseEvent = null):void</div>
 <div class="summaryTableDescription">
+   
    Stub: release event handler.</div>
-</td><td class="summaryTableOwnerCol"><a href="InteractiveSprite.html">InteractiveSprite</a></td>
+</td><td class="summaryTableOwnerCol">ForceSprite</td>
 </tr>
-<tr class="hideInheritedProtectedMethod">
-<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img class="inheritedSummaryImage" title="Inherited" alt="Inherited" src="../../images/inheritedSummary.gif"></td><td class="summaryTableSignatureCol">
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
 <div class="summarySignature">
-<a class="signatureLink" href="InteractiveSprite.html#releaseOutside()">releaseOutside</a>(e:Event = null):void</div>
+<a class="signatureLink" href="#releaseOutside()">releaseOutside</a>(e:Event = null):void</div>
 <div class="summaryTableDescription">
+   
    Stub: release outside event handler.</div>
-</td><td class="summaryTableOwnerCol"><a href="InteractiveSprite.html">InteractiveSprite</a></td>
+</td><td class="summaryTableOwnerCol">ForceSprite</td>
 </tr>
 </table>
 </div>
@@ -314,23 +421,55 @@ showHideInherited();
 <div class="MainContent">
 <a name="propertyDetail"></a>
 <div class="detailSectionHeader">Property detail</div>
-<a name="_accellerationX"></a>
+<a name="_ax"></a>
 <table cellspacing="0" cellpadding="0" class="detailHeader">
 <tr>
-<td class="detailHeaderName">_accellerationX</td><td class="detailHeaderType">property</td>
+<td class="detailHeaderName">_ax</td><td class="detailHeaderType">property</td>
 </tr>
 </table>
 <div class="detailBody">
-<code>protected var _accellerationX:Number</code>
+<code>protected var _ax:Number</code>
 </div>
-<a name="_accellerationY"></a>
+<a name="ax"></a>
 <table cellspacing="0" cellpadding="0" class="detailHeader">
 <tr>
-<td class="detailHeaderName">_accellerationY</td><td class="detailHeaderType">property</td><td class="detailHeaderRule">&nbsp;</td>
+<td class="detailHeaderName">ax</td><td class="detailHeaderType">property</td><td class="detailHeaderRule">&nbsp;</td>
 </tr>
 </table>
 <div class="detailBody">
-<code>protected var _accellerationY:Number</code>
+<code>ax:Number</code>&nbsp;&nbsp;[read-write]<p>
+   X-axis acceleration.
+   </p><span class="label">Implementation</span>
+<br>
+<code>&nbsp;&nbsp;&nbsp;&nbsp;public function get ax():Number</code>
+<br>
+<code>&nbsp;&nbsp;&nbsp;&nbsp;public function set ax(value:Number):void</code>
+<br>
+</div>
+<a name="_ay"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">_ay</td><td class="detailHeaderType">property</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>protected var _ay:Number</code>
+</div>
+<a name="ay"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">ay</td><td class="detailHeaderType">property</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>ay:Number</code>&nbsp;&nbsp;[read-write]<p>
+   Y-axis acceleration.
+   </p><span class="label">Implementation</span>
+<br>
+<code>&nbsp;&nbsp;&nbsp;&nbsp;public function get ay():Number</code>
+<br>
+<code>&nbsp;&nbsp;&nbsp;&nbsp;public function set ay(value:Number):void</code>
+<br>
 </div>
 <a name="boundBottom"></a>
 <table cellspacing="0" cellpadding="0" class="detailHeader">
@@ -340,7 +479,7 @@ showHideInherited();
 </table>
 <div class="detailBody">
 <code>boundBottom:Number</code>&nbsp;&nbsp;[read-only]<p>
-   Bottom bounds (<code>DisplayObject</code> registration <code>0,0</code>).
+   Bottom bounds (<code>DisplayObject</code> registration <code>0, 0</code>).
    </p><span class="label">Implementation</span>
 <br>
 <code>&nbsp;&nbsp;&nbsp;&nbsp;public function get boundBottom():Number</code>
@@ -414,6 +553,42 @@ showHideInherited();
 <code>&nbsp;&nbsp;&nbsp;&nbsp;public function get boundTop():Number</code>
 <br>
 </div>
+<a name="_cx"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">_cx</td><td class="detailHeaderType">property</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>protected var _cx:Number</code>
+</div>
+<a name="_cy"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">_cy</td><td class="detailHeaderType">property</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>protected var _cy:Number</code>
+</div>
+<a name="_dx"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">_dx</td><td class="detailHeaderType">property</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>protected var _dx:Number</code>
+</div>
+<a name="_dy"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">_dy</td><td class="detailHeaderType">property</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>protected var _dy:Number</code>
+</div>
 <a name="_friction"></a>
 <table cellspacing="0" cellpadding="0" class="detailHeader">
 <tr>
@@ -423,15 +598,102 @@ showHideInherited();
 <div class="detailBody">
 <code>protected var _friction:Number</code>
 </div>
-<a name="_gravity"></a>
+<a name="friction"></a>
 <table cellspacing="0" cellpadding="0" class="detailHeader">
 <tr>
-<td class="detailHeaderName">_gravity</td><td class="detailHeaderType">property</td><td class="detailHeaderRule">&nbsp;</td>
+<td class="detailHeaderName">friction</td><td class="detailHeaderType">property</td><td class="detailHeaderRule">&nbsp;</td>
 </tr>
 </table>
 <div class="detailBody">
-<code>protected var _gravity:Number</code>
+<code>friction:Number</code>&nbsp;&nbsp;[read-write]<p>
+   Frictional force being applied.
+   </p><span class="label">Implementation</span>
+<br>
+<code>&nbsp;&nbsp;&nbsp;&nbsp;public function get friction():Number</code>
+<br>
+<code>&nbsp;&nbsp;&nbsp;&nbsp;public function set friction(value:Number):void</code>
+<br>
 </div>
+<a name="FRICTION"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">FRICTION</td><td class="detailHeaderType">property</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public static var FRICTION:Number = 2</code><p>
+   The "natural" gravity of all <code>ForceSprite</code>'s.
+   </p></div>
+<a name="_gravityX"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">_gravityX</td><td class="detailHeaderType">property</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>protected var _gravityX:Number</code>
+</div>
+<a name="gravityX"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">gravityX</td><td class="detailHeaderType">property</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>gravityX:Number</code>&nbsp;&nbsp;[read-write]<p>
+   X-axis gravitational force being applied.
+   </p><span class="label">Implementation</span>
+<br>
+<code>&nbsp;&nbsp;&nbsp;&nbsp;public function get gravityX():Number</code>
+<br>
+<code>&nbsp;&nbsp;&nbsp;&nbsp;public function set gravityX(value:Number):void</code>
+<br>
+</div>
+<a name="GRAVITY_X"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">GRAVITY_X</td><td class="detailHeaderType">property</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public static var GRAVITY_X:Number = 0</code><p>
+   The "natural" x-axis gravity of all <code>ForceSprite</code>'s.
+   </p></div>
+<a name="_gravityY"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">_gravityY</td><td class="detailHeaderType">property</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>protected var _gravityY:Number</code>
+</div>
+<a name="gravityY"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">gravityY</td><td class="detailHeaderType">property</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>gravityY:Number</code>&nbsp;&nbsp;[read-write]<p>
+   X-axis gravitational force being applied.
+   </p><span class="label">Implementation</span>
+<br>
+<code>&nbsp;&nbsp;&nbsp;&nbsp;public function get gravityY():Number</code>
+<br>
+<code>&nbsp;&nbsp;&nbsp;&nbsp;public function set gravityY(value:Number):void</code>
+<br>
+</div>
+<a name="GRAVITY_Y"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">GRAVITY_Y</td><td class="detailHeaderType">property</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public static var GRAVITY_Y:Number = 20</code><p>
+   The "natural" y-axis gravity of all <code>ForceSprite</code>'s.
+   </p></div>
 <a name="_hasForce"></a>
 <table cellspacing="0" cellpadding="0" class="detailHeader">
 <tr>
@@ -449,7 +711,7 @@ showHideInherited();
 </table>
 <div class="detailBody">
 <code>hasForce:Boolean</code>&nbsp;&nbsp;[read-write]<p>
-   <code>Boolean</code> value which determines whether the force is currently being applied. 
+   <code>Boolean</code> value which determines whether the force (<code>frameHandler</code>) is currently being applied. 
    </p><span class="label">Implementation</span>
 <br>
 <code>&nbsp;&nbsp;&nbsp;&nbsp;public function get hasForce():Boolean</code>
@@ -457,23 +719,92 @@ showHideInherited();
 <code>&nbsp;&nbsp;&nbsp;&nbsp;public function set hasForce(value:Boolean):void</code>
 <br>
 </div>
-<a name="_speedX"></a>
+<a name="_isDrag"></a>
 <table cellspacing="0" cellpadding="0" class="detailHeader">
 <tr>
-<td class="detailHeaderName">_speedX</td><td class="detailHeaderType">property</td><td class="detailHeaderRule">&nbsp;</td>
+<td class="detailHeaderName">_isDrag</td><td class="detailHeaderType">property</td><td class="detailHeaderRule">&nbsp;</td>
 </tr>
 </table>
 <div class="detailBody">
-<code>protected var _speedX:Number</code>
+<code>protected var _isDrag:Boolean</code>
 </div>
-<a name="_speedY"></a>
+<a name="_isDraggable"></a>
 <table cellspacing="0" cellpadding="0" class="detailHeader">
 <tr>
-<td class="detailHeaderName">_speedY</td><td class="detailHeaderType">property</td><td class="detailHeaderRule">&nbsp;</td>
+<td class="detailHeaderName">_isDraggable</td><td class="detailHeaderType">property</td><td class="detailHeaderRule">&nbsp;</td>
 </tr>
 </table>
 <div class="detailBody">
-<code>protected var _speedY:Number</code>
+<code>protected var _isDraggable:Boolean</code>
+</div>
+<a name="isDraggable"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">isDraggable</td><td class="detailHeaderType">property</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>isDraggable:Boolean</code>&nbsp;&nbsp;[read-write]<p>
+   <code>Boolean</code> value which determines whether the object is able to be dragged/thrown.
+   </p><span class="label">Implementation</span>
+<br>
+<code>&nbsp;&nbsp;&nbsp;&nbsp;public function get isDraggable():Boolean</code>
+<br>
+<code>&nbsp;&nbsp;&nbsp;&nbsp;public function set isDraggable(value:Boolean):void</code>
+<br>
+</div>
+<a name="_mass"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">_mass</td><td class="detailHeaderType">property</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>protected var _mass:Number</code>
+</div>
+<a name="mass"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">mass</td><td class="detailHeaderType">property</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>mass:Number</code>&nbsp;&nbsp;[read-write]<p>
+   The general mass of the object (decreases acceleration, increases friction).
+   </p><span class="label">Implementation</span>
+<br>
+<code>&nbsp;&nbsp;&nbsp;&nbsp;public function get mass():Number</code>
+<br>
+<code>&nbsp;&nbsp;&nbsp;&nbsp;public function set mass(value:Number):void</code>
+<br>
+</div>
+<a name="MASS"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">MASS</td><td class="detailHeaderType">property</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public static var MASS:Number = 0.2</code><p>
+   The "natural" mass of all <code>ForceSprite</code>'s.
+   </p></div>
+<a name="_vx"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">_vx</td><td class="detailHeaderType">property</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>protected var _vx:Number</code>
+</div>
+<a name="_vy"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">_vy</td><td class="detailHeaderType">property</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>protected var _vy:Number</code>
 </div>
 <a name="constructorDetail"></a>
 <div class="detailSectionHeader">Constructor detail</div>
@@ -484,40 +815,149 @@ showHideInherited();
 </tr>
 </table>
 <div class="detailBody">
-<code>public function ForceSprite(bounds:Rectangle = null, friction:Number = 0.99, gravity:Number = 0.5, speed:Number = 30, hasForce:Boolean = true)</code><p>
+<code>public function ForceSprite(vx:Number = 0, vy:Number = 0, mass:Number = 0.5, friction:Number = 0.8, gravityY:Number = 20, gravityX:Number = 0, bounds:Rectangle = null, isDraggable:Boolean = true, hasForce:Boolean = true)</code><p>
    ForceSprite Constructor
    </p><span class="label">Parameters</span>
 <table border="0" cellspacing="0" cellpadding="0">
 <tr>
-<td width="20px"></td><td><code><span class="label">bounds</span>:Rectangle</code> (default = <code>null</code>)<code></code> &mdash;  The bounds of movement for the object.
+<td width="20px"></td><td><code><span class="label">vx</span>:Number</code> (default = <code>0</code>)<code></code> &mdash;    the starting <b>velocity</b> (<i>speed</i>) of the object on the <b>x-axis</b>.
    </td>
 </tr>
 <tr>
 <td class="paramSpacer">&nbsp;</td>
 </tr>
 <tr>
-<td width="20px"></td><td><code><span class="label">friction</span>:Number</code> (default = <code>0.99</code>)<code></code> &mdash;  applied to the object.
+<td width="20px"></td><td><code><span class="label">vy</span>:Number</code> (default = <code>0</code>)<code></code> &mdash;    the starting <b>velocity</b> (<i>speed</i>) of the object on the <b>y-axis</b>.
    </td>
 </tr>
 <tr>
 <td class="paramSpacer">&nbsp;</td>
 </tr>
 <tr>
-<td width="20px"></td><td><code><span class="label">gravity</span>:Number</code> (default = <code>0.5</code>)<code></code> &mdash;  applied to the object.
+<td width="20px"></td><td><code><span class="label">mass</span>:Number</code> (default = <code>0.5</code>)<code></code> &mdash;    the <b>mass</b> (<i>density</i>) of the object; this value is clamped between <code>0.1 - 0.9</code> however a safer relational range is <code>0.2 - 0.8</code> (Default: <code>0.5</code>).
    </td>
 </tr>
 <tr>
 <td class="paramSpacer">&nbsp;</td>
 </tr>
 <tr>
-<td width="20px"></td><td><code><span class="label">speed</span>:Number</code> (default = <code>30</code>)<code></code> &mdash;  whether the force is currently being applied.
+<td width="20px"></td><td><code><span class="label">friction</span>:Number</code> (default = <code>0.8</code>)<code></code> &mdash;   the <b>friction</b> (<i>resistance</i>) the object experiences when touching a <code>bounds</code> surface (Default: <code>0.8</code>).
    </td>
 </tr>
 <tr>
 <td class="paramSpacer">&nbsp;</td>
 </tr>
 <tr>
-<td width="20px"></td><td><code><span class="label">hasForce</span>:Boolean</code> (default = <code>true</code>)<code></code></td>
+<td width="20px"></td><td><code><span class="label">gravityY</span>:Number</code> (default = <code>20</code>)<code></code> &mdash;   the <code>X</code> <b>gravity</b> (<i>constant horizontal</i>) the object experiences (Default: <code>0</code>).
+   </td>
+</tr>
+<tr>
+<td class="paramSpacer">&nbsp;</td>
+</tr>
+<tr>
+<td width="20px"></td><td><code><span class="label">gravityX</span>:Number</code> (default = <code>0</code>)<code></code> &mdash;   the <code>Y</code> <b>gravity</b> (<i>constant vertical force</i>) the object experiences (Default: <code>20</code>). 
+   </td>
+</tr>
+<tr>
+<td class="paramSpacer">&nbsp;</td>
+</tr>
+<tr>
+<td width="20px"></td><td><code><span class="label">bounds</span>:Rectangle</code> (default = <code>null</code>)<code></code> &mdash;   the <b>bounds</b> (<i>confines</i>) of movement for the object (Default: <code>Canvas.stage</code>).
+   </td>
+</tr>
+<tr>
+<td class="paramSpacer">&nbsp;</td>
+</tr>
+<tr>
+<td width="20px"></td><td><code><span class="label">isDraggable</span>:Boolean</code> (default = <code>true</code>)<code></code> &mdash;  determines whether the object is <b>draggable</b> or not (Default: <code>true</code>).
+   </td>
+</tr>
+<tr>
+<td class="paramSpacer">&nbsp;</td>
+</tr>
+<tr>
+<td width="20px"></td><td><code><span class="label">hasForce</span>:Boolean</code> (default = <code>true</code>)<code></code> &mdash;   whether <b>force</b> (<i>acceleration, mass, gravity</i>) are currently being applied to the object or not (Default: <code>true</code>).
+   </td>
+</tr>
+</table>
+</div>
+<a name="methodDetail"></a>
+<div class="detailSectionHeader">Method detail</div>
+<a name="collide()"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">collide</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public function collide():void</code><p>
+   Handle a collision
+   </p></div>
+<a name="frameHandler()"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">frameHandler</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>protected function frameHandler(e:Event):void</code><p>
+   Handle force logic.
+   </p><span class="label">Parameters</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20px"></td><td><code><span class="label">e</span>:Event</code></td>
+</tr>
+</table>
+</div>
+<a name="press()"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">press</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>protected override function press(e:MouseEvent = null):void</code><p>
+   
+   Stub: press event handler. Starts release-outside simulation via 
+   <code>stage.MOUSE_UP</code> & <code>StageEvent.LEAVE</code>.
+   </p><span class="label">Parameters</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20px"></td><td><code><span class="label">e</span>:MouseEvent</code> (default = <code>null</code>)<code></code></td>
+</tr>
+</table>
+</div>
+<a name="release()"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">release</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>protected override function release(e:MouseEvent = null):void</code><p>
+   
+   Stub: release event handler.
+   </p><span class="label">Parameters</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20px"></td><td><code><span class="label">e</span>:MouseEvent</code> (default = <code>null</code>)<code></code></td>
+</tr>
+</table>
+</div>
+<a name="releaseOutside()"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">releaseOutside</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>protected override function releaseOutside(e:Event = null):void</code><p>
+   
+   Stub: release outside event handler.
+   </p><span class="label">Parameters</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20px"></td><td><code><span class="label">e</span>:Event</code> (default = <code>null</code>)<code></code></td>
 </tr>
 </table>
 </div>
