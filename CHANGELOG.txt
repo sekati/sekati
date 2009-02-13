@@ -1,5 +1,5 @@
 ------ SEKATI API CHANGELOG ------
-can i commit?
+
 
 API UPDATE v3.0.5.0 - "Gigan" (IN-PROGRESS)
 - Added mass to ForceSprite (plans to implement gravity/friction constants)
