@@ -4,7 +4,7 @@
 
 = Versions =
 
-*SEKATI API* adheres to a loose version schema: _Release.Major.Minor.Revision_ - _"Code Name"_ (the code name generally being specific to the minor version) which is more memorable & useful in recalling which version a specific project should be compiled against. 
+*SEKATI API* adheres to a loose version schema: _Release.Major.Minor.Maintenance_ - _"Code Name"_ (the code name generally being specific to the minor version) which is more memorable & useful in recalling which version a specific project should be compiled against. 
 
 API constants may be located in the [http://code.google.com/p/sekati/source/browse/trunk/src/sekati/core/App.as sekati.core.App] class and will be display in the context menu of API application (if configured via `<menu verbose="true">true</menu>`) to assist you in locating the proper version to compile against.
 
