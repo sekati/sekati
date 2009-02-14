@@ -12,8 +12,8 @@ API constants may be located in the [http://code.google.com/p/sekati/source/brow
 = Current Releases =
 
 || *Version* || _Codename_ || _Monster_ ||
-|| *[http://code.google.com/p/sekati/source/browse/#svn/trunk 3.0.5.x]* || _"Gigan"_ || [http://api.sekati.com/v/305x-gigan.jpg] ||
-|| *[http://code.google.com/p/sekati/source/browse/#svn/tags/3.0.4.1-Varan 3.0.4.x]* || _"Varan"_ || [http://api.sekati.com/v/304x-varan.jpg] ||
-|| *[http://code.google.com/p/sekati/source/browse/#svn/tags/3.0.3.10-Mothra 3.0.3.x]* || _"Mothra"_ || [http://api.sekati.com/v/303x-mothra.jpg] ||
-|| *[http://code.google.com/p/sekati/source/browse/#svn/tags/3.0.2.9-Rodan 3.0.2.x]* || _"Rodan"_ || [http://api.sekati.com/v/302x-rodan.jpg] ||
-|| *[http://code.google.com/p/sekati/source/browse/#svn/tags/3.0.1.0-Ghidorah 3.0.1.x]* || _"Ghidorah"_ || [http://api.sekati.com/v/301x-ghidorah.jpg] ||
+|| *[http://code.google.com/p/sekati/source/browse/#svn/trunk 3.0.5.x]* || _"Gigan"_ || [http://cdn.sekati.com/code/versions/305x-gigan.jpg] ||
+|| *[http://code.google.com/p/sekati/source/browse/#svn/tags/3.0.4.1-Varan 3.0.4.x]* || _"Varan"_ || [http://cdn.sekati.com/code/versions/304x-varan.jpg] ||
+|| *[http://code.google.com/p/sekati/source/browse/#svn/tags/3.0.3.10-Mothra 3.0.3.x]* || _"Mothra"_ || [http://cdn.sekati.com/code/versions/303x-mothra.jpg] ||
+|| *[http://code.google.com/p/sekati/source/browse/#svn/tags/3.0.2.9-Rodan 3.0.2.x]* || _"Rodan"_ || [http://cdn.sekati.com/code/versions/302x-rodan.jpg] ||
+|| *[http://code.google.com/p/sekati/source/browse/#svn/tags/3.0.1.0-Ghidorah 3.0.1.x]* || _"Ghidorah"_ || [http://cdn.sekati.com/code/versions/301x-ghidorah.jpg] ||
