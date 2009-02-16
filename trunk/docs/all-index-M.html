@@ -355,11 +355,11 @@ if (!isEclipse() || window.name != ECLIPSE_FRAME_NAME) {titleBar_setSubTitle("MÂ
    </td>
 </tr>
 <tr>
-<td colspan="2" class="idxrow"><a onclick="javascript:loadClassListFrame('sekati/events/class-list.html');" href="sekati/events/DeviceEvent.html#MICROPHONE_ACTIVITY">MICROPHONE_ACTIVITY</a> &mdash; Constant static property in class sekati.events.<a onclick="javascript:loadClassListFrame('sekati/events/class-list.html');" href="sekati/events/DeviceEvent.html">DeviceEvent</a></td>
+<td colspan="2" class="idxrow"><a onclick="javascript:loadClassListFrame('sekati/media/class-list.html');" href="sekati/media/MicrophoneDevice.html#microphone">microphone</a> &mdash; Property in class sekati.media.<a onclick="javascript:loadClassListFrame('sekati/media/class-list.html');" href="sekati/media/MicrophoneDevice.html">MicrophoneDevice</a></td>
 </tr>
 <tr>
 <td width="20"></td><td>
-   </td>
+   The attached microphone driver's <code>Microphone</code> instance.</td>
 </tr>
 <tr>
 <td colspan="2" class="idxrow"><a onclick="javascript:loadClassListFrame('sekati/media/class-list.html');" href="sekati/media/MicrophoneDevice.html">MicrophoneDevice</a> &mdash; Class in package <a onclick="javascript:loadClassListFrame('sekati/media/class-list.html');" href="sekati/media/package-detail.html">sekati.media</a></td>
@@ -369,25 +369,11 @@ if (!isEclipse() || window.name != ECLIPSE_FRAME_NAME) {titleBar_setSubTitle("MÂ
   MicrophoneDevice provides a <code>Microphone</code> control to the API.</td>
 </tr>
 <tr>
-<td colspan="2" class="idxrow"><a onclick="javascript:loadClassListFrame('sekati/media/class-list.html');" href="sekati/media/MicrophoneDevice.html#MicrophoneDevice()">MicrophoneDevice</a>() &mdash; Constructor in class sekati.media.<a onclick="javascript:loadClassListFrame('sekati/media/class-list.html');" href="sekati/media/MicrophoneDevice.html">MicrophoneDevice</a></td>
+<td colspan="2" class="idxrow"><a onclick="javascript:loadClassListFrame('sekati/media/class-list.html');" href="sekati/media/MicrophoneDevice.html#MicrophoneDevice()">MicrophoneDevice</a>(silenceLevel, rate, gain, timeout, loopback, useEchoSuppression) &mdash; Constructor in class sekati.media.<a onclick="javascript:loadClassListFrame('sekati/media/class-list.html');" href="sekati/media/MicrophoneDevice.html">MicrophoneDevice</a></td>
 </tr>
 <tr>
 <td width="20"></td><td>
    MicrophoneDevice Constructor
-   </td>
-</tr>
-<tr>
-<td colspan="2" class="idxrow"><a onclick="javascript:loadClassListFrame('sekati/events/class-list.html');" href="sekati/events/DeviceEvent.html#MICROPHONE_MUTE">MICROPHONE_MUTE</a> &mdash; Constant static property in class sekati.events.<a onclick="javascript:loadClassListFrame('sekati/events/class-list.html');" href="sekati/events/DeviceEvent.html">DeviceEvent</a></td>
-</tr>
-<tr>
-<td width="20"></td><td>
-   </td>
-</tr>
-<tr>
-<td colspan="2" class="idxrow"><a onclick="javascript:loadClassListFrame('sekati/events/class-list.html');" href="sekati/events/DeviceEvent.html#MICROPHONE_UNMUTE">MICROPHONE_UNMUTE</a> &mdash; Constant static property in class sekati.events.<a onclick="javascript:loadClassListFrame('sekati/events/class-list.html');" href="sekati/events/DeviceEvent.html">DeviceEvent</a></td>
-</tr>
-<tr>
-<td width="20"></td><td>
    </td>
 </tr>
 <tr>
@@ -545,10 +531,11 @@ if (!isEclipse() || window.name != ECLIPSE_FRAME_NAME) {titleBar_setSubTitle("MÂ
    </td>
 </tr>
 <tr>
-<td colspan="2" class="idxrow"><a onclick="javascript:loadClassListFrame('sekati/media/class-list.html');" href="sekati/media/CameraDevice.html#_motionLevel">_motionLevel</a> &mdash; Property in class sekati.media.<a onclick="javascript:loadClassListFrame('sekati/media/class-list.html');" href="sekati/media/CameraDevice.html">CameraDevice</a></td>
+<td colspan="2" class="idxrow"><a onclick="javascript:loadClassListFrame('sekati/media/class-list.html');" href="sekati/media/CameraDevice.html#motionLevel">motionLevel</a> &mdash; Property in class sekati.media.<a onclick="javascript:loadClassListFrame('sekati/media/class-list.html');" href="sekati/media/CameraDevice.html">CameraDevice</a></td>
 </tr>
 <tr>
-<td width="20"></td><td></td>
+<td width="20"></td><td>
+   The amount of motion required to invoke the <code>activity</code> event.</td>
 </tr>
 <tr>
 <td colspan="2" class="idxrow"><a onclick="javascript:loadClassListFrame('sekati/events/class-list.html');" href="sekati/events/StageEvent.html#MOUSE_IDLE">MOUSE_IDLE</a> &mdash; Constant static property in class sekati.events.<a onclick="javascript:loadClassListFrame('sekati/events/class-list.html');" href="sekati/events/StageEvent.html">StageEvent</a></td>
@@ -730,6 +717,29 @@ if (!isEclipse() || window.name != ECLIPSE_FRAME_NAME) {titleBar_setSubTitle("MÂ
 </tr>
 <tr>
 <td width="20"></td><td></td>
+</tr>
+<tr>
+<td colspan="2" class="idxrow"><a onclick="javascript:loadClassListFrame('sekati/media/class-list.html');" href="sekati/media/CameraDevice.html#muted">muted</a> &mdash; Property in class sekati.media.<a onclick="javascript:loadClassListFrame('sekati/media/class-list.html');" href="sekati/media/CameraDevice.html">CameraDevice</a></td>
+</tr>
+<tr>
+<td width="20"></td><td>
+   Indicates whether the user has denied access to the device (<code>true</code>) or allowed 
+   access (<code>false</code>) in the Flash Player Privacy dialog box.</td>
+</tr>
+<tr>
+<td colspan="2" class="idxrow"><a onclick="javascript:loadClassListFrame('sekati/media/class-list.html');" href="sekati/media/IDevice.html#muted">muted</a> &mdash; Property in interface sekati.media.<a onclick="javascript:loadClassListFrame('sekati/media/class-list.html');" href="sekati/media/IDevice.html">IDevice</a></td>
+</tr>
+<tr>
+<td width="20"></td><td>
+   Indicates whether the user has denied access to the device (<code>true</code>) or allowed access (<code>false</code>) in the Flash Player Privacy dialog box.</td>
+</tr>
+<tr>
+<td colspan="2" class="idxrow"><a onclick="javascript:loadClassListFrame('sekati/media/class-list.html');" href="sekati/media/MicrophoneDevice.html#muted">muted</a> &mdash; Property in class sekati.media.<a onclick="javascript:loadClassListFrame('sekati/media/class-list.html');" href="sekati/media/MicrophoneDevice.html">MicrophoneDevice</a></td>
+</tr>
+<tr>
+<td width="20"></td><td>
+   Indicates whether the user has denied access to the device (<code>true</code>) or allowed 
+   access (<code>false</code>) in the Flash Player Privacy dialog box.</td>
 </tr>
 <tr>
 <td colspan="2" class="idxrow"><a onclick="javascript:loadClassListFrame('sekati/crypt/class-list.html');" href="sekati/crypt/RC4.html#mykey">mykey</a> &mdash; Static property in class sekati.crypt.<a onclick="javascript:loadClassListFrame('sekati/crypt/class-list.html');" href="sekati/crypt/RC4.html">RC4</a></td>
