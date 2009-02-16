@@ -105,24 +105,11 @@ if (!isEclipse() || window.name != ECLIPSE_FRAME_NAME) {titleBar_setSubTitle("CÂ
    </td>
 </tr>
 <tr>
-<td colspan="2" class="idxrow"><a onclick="javascript:loadClassListFrame('sekati/media/class-list.html');" href="sekati/media/CameraDevice.html#_camera">_camera</a> &mdash; Property in class sekati.media.<a onclick="javascript:loadClassListFrame('sekati/media/class-list.html');" href="sekati/media/CameraDevice.html">CameraDevice</a></td>
-</tr>
-<tr>
-<td width="20"></td><td></td>
-</tr>
-<tr>
 <td colspan="2" class="idxrow"><a onclick="javascript:loadClassListFrame('sekati/media/class-list.html');" href="sekati/media/CameraDevice.html#camera">camera</a> &mdash; Property in class sekati.media.<a onclick="javascript:loadClassListFrame('sekati/media/class-list.html');" href="sekati/media/CameraDevice.html">CameraDevice</a></td>
 </tr>
 <tr>
 <td width="20"></td><td>
    The attached camera driver instance.</td>
-</tr>
-<tr>
-<td colspan="2" class="idxrow"><a onclick="javascript:loadClassListFrame('sekati/events/class-list.html');" href="sekati/events/DeviceEvent.html#CAMERA_ACTIVITY">CAMERA_ACTIVITY</a> &mdash; Constant static property in class sekati.events.<a onclick="javascript:loadClassListFrame('sekati/events/class-list.html');" href="sekati/events/DeviceEvent.html">DeviceEvent</a></td>
-</tr>
-<tr>
-<td width="20"></td><td>
-   </td>
 </tr>
 <tr>
 <td colspan="2" class="idxrow"><a onclick="javascript:loadClassListFrame('sekati/media/class-list.html');" href="sekati/media/CameraDevice.html">CameraDevice</a> &mdash; Class in package <a onclick="javascript:loadClassListFrame('sekati/media/class-list.html');" href="sekati/media/package-detail.html">sekati.media</a></td>
@@ -132,25 +119,11 @@ if (!isEclipse() || window.name != ECLIPSE_FRAME_NAME) {titleBar_setSubTitle("CÂ
   CameraDevice provides a <code>Camera</code> control <code>DisplayObject</code> to the API.</td>
 </tr>
 <tr>
-<td colspan="2" class="idxrow"><a onclick="javascript:loadClassListFrame('sekati/media/class-list.html');" href="sekati/media/CameraDevice.html#CameraDevice()">CameraDevice</a>(width, height, fps, motionLevel, timeout) &mdash; Constructor in class sekati.media.<a onclick="javascript:loadClassListFrame('sekati/media/class-list.html');" href="sekati/media/CameraDevice.html">CameraDevice</a></td>
+<td colspan="2" class="idxrow"><a onclick="javascript:loadClassListFrame('sekati/media/class-list.html');" href="sekati/media/CameraDevice.html#CameraDevice()">CameraDevice</a>(width, height, motionLevel, fps, timeout, bandwidth, quality) &mdash; Constructor in class sekati.media.<a onclick="javascript:loadClassListFrame('sekati/media/class-list.html');" href="sekati/media/CameraDevice.html">CameraDevice</a></td>
 </tr>
 <tr>
 <td width="20"></td><td>
    CameraDevice Constructor
-   </td>
-</tr>
-<tr>
-<td colspan="2" class="idxrow"><a onclick="javascript:loadClassListFrame('sekati/events/class-list.html');" href="sekati/events/DeviceEvent.html#CAMERA_MUTE">CAMERA_MUTE</a> &mdash; Constant static property in class sekati.events.<a onclick="javascript:loadClassListFrame('sekati/events/class-list.html');" href="sekati/events/DeviceEvent.html">DeviceEvent</a></td>
-</tr>
-<tr>
-<td width="20"></td><td>
-   </td>
-</tr>
-<tr>
-<td colspan="2" class="idxrow"><a onclick="javascript:loadClassListFrame('sekati/events/class-list.html');" href="sekati/events/DeviceEvent.html#CAMERA_UNMUTE">CAMERA_UNMUTE</a> &mdash; Constant static property in class sekati.events.<a onclick="javascript:loadClassListFrame('sekati/events/class-list.html');" href="sekati/events/DeviceEvent.html">DeviceEvent</a></td>
-</tr>
-<tr>
-<td width="20"></td><td>
    </td>
 </tr>
 <tr>
@@ -1088,11 +1061,18 @@ if (!isEclipse() || window.name != ECLIPSE_FRAME_NAME) {titleBar_setSubTitle("CÂ
    Location of the <code>config.xml</code> file.</td>
 </tr>
 <tr>
-<td colspan="2" class="idxrow"><a onclick="javascript:loadClassListFrame('sekati/media/class-list.html');" href="sekati/media/CameraDevice.html#connectCamera()">connectCamera</a>() &mdash; Method in class sekati.media.<a onclick="javascript:loadClassListFrame('sekati/media/class-list.html');" href="sekati/media/CameraDevice.html">CameraDevice</a></td>
+<td colspan="2" class="idxrow"><a onclick="javascript:loadClassListFrame('sekati/media/class-list.html');" href="sekati/media/CameraDevice.html#connectDevice()">connectDevice</a>() &mdash; Method in class sekati.media.<a onclick="javascript:loadClassListFrame('sekati/media/class-list.html');" href="sekati/media/CameraDevice.html">CameraDevice</a></td>
 </tr>
 <tr>
 <td width="20"></td><td>
    Connect the <code>Camera</code> to a <code>Video</code> stream.</td>
+</tr>
+<tr>
+<td colspan="2" class="idxrow"><a onclick="javascript:loadClassListFrame('sekati/media/class-list.html');" href="sekati/media/MicrophoneDevice.html#connectDevice()">connectDevice</a>() &mdash; Method in class sekati.media.<a onclick="javascript:loadClassListFrame('sekati/media/class-list.html');" href="sekati/media/MicrophoneDevice.html">MicrophoneDevice</a></td>
+</tr>
+<tr>
+<td width="20"></td><td>
+   Connect to the <code>Microphone</code> to a <code>Video</code> stream.</td>
 </tr>
 <tr>
 <td colspan="2" class="idxrow"><a onclick="javascript:loadClassListFrame('sekati/math/class-list.html');" href="sekati/math/MathBase.html#constrain()">constrain</a>(val, min, max) &mdash; Static method in class sekati.math.<a onclick="javascript:loadClassListFrame('sekati/math/class-list.html');" href="sekati/math/MathBase.html">MathBase</a></td>
@@ -1581,6 +1561,13 @@ if (!isEclipse() || window.name != ECLIPSE_FRAME_NAME) {titleBar_setSubTitle("CÂ
 </tr>
 <tr>
 <td width="20"></td><td></td>
+</tr>
+<tr>
+<td colspan="2" class="idxrow"><a onclick="javascript:loadClassListFrame('sekati/media/class-list.html');" href="sekati/media/CameraDevice.html#currentFPS">currentFPS</a> &mdash; Property in class sekati.media.<a onclick="javascript:loadClassListFrame('sekati/media/class-list.html');" href="sekati/media/CameraDevice.html">CameraDevice</a></td>
+</tr>
+<tr>
+<td width="20"></td><td>
+   The rate at which the camera is capturing data, in frames per second.</td>
 </tr>
 <tr>
 <td colspan="2" class="idxrow"><a onclick="javascript:loadClassListFrame('sekati/profiler/class-list.html');" href="sekati/profiler/FPSProfiler.html#currentFPS">currentFPS</a> &mdash; Property in class sekati.profiler.<a onclick="javascript:loadClassListFrame('sekati/profiler/class-list.html');" href="sekati/profiler/FPSProfiler.html">FPSProfiler</a></td>
