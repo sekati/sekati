@@ -2,7 +2,9 @@
 
 
 API UPDATE v3.0.5.0 - "Gigan" (IN-PROGRESS)
-- Added StringUtil.getBytes().
+- Added sekati.formats.qrcode for Quick Recognition Code format encoder/decoders!
+- Added sekati.formats package to contain both common and specialized file formats.
+- Removed KeyManagerTest.fla (added launch profile instead)
 - Added sekati.media.IDevice
 - Added sekati.media.MicrophoneDevice & MicrophoneDeviceTest.
 - Added sekati.media.CameraDevice & CameraDeviceTest.
