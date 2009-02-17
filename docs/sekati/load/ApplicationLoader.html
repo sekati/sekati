@@ -46,11 +46,18 @@ if (!isEclipse() || window.name != ECLIPSE_FRAME_NAME) {titleBar_setSubTitle("Cl
   The loader insures that the SWF has been fully loaded by the client browser before initialization.
   Once loading is complete <code>BootstrapEvent.APP_LOAD</code> is dispatched.
   
-  <p><b>Note:</b> This is not a visual preloader and should not be treated as such as it would suffer 
+  <p><b>Note:</b> This is <i>not a visual preloader</i> and should not be treated as such as it would suffer 
   from the traditional visual preloader chicken-egg issue. Rather, it is a preventative code executation
   measure. If a visual preloader is necessary for your API based application consider a wrapper visual 
-  preloader SWF.</p>
+  preloader SWF based on the <code>DocumentPreloader</code>.</p>
+  
   <p></p>
+<p>
+<span class="classHeaderTableLabel">See also</span>
+</p>
+<div class="seeAlso">
+<a href="../display/DocumentPreloader.html" target="">sekati.display.DocumentPreloader</a>
+</div>
 <br>
 <hr>
 </div>

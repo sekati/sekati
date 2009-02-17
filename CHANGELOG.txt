@@ -2,6 +2,11 @@
 
 
 API UPDATE v3.0.5.0 - "Gigan" (IN-PROGRESS)
+* Bumped version to 3.0.5.0 Gigan preemptively for release.
+* Completed functional DocumentPreloader and SekatiPreloader example class.
+* Adjusted sekati.display.Canvas to remap references when being loaded by a DocumentPreloader Class.
+* Added <application> node to config.xml to suppport external preloader APILoader.
+* Removed Logger messages from CoreSprite.onStage & CoreSprite.offStage (overly verbose)
 * Removed bug workaround in DocumentPreloader related to KeyManager (no longer needed).
 * ContextMenuManager changed to implement Keyboard for keycodes.
 * Added sekati.ui.Keyboard to provide a complete set of keycodes (versus flash.ui.Keyboard which is largely incomplete).

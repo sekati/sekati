@@ -15,12 +15,14 @@
 <config persist="false">
 	<app>
 		<name>Sekati API</name>
-		<version>3.0.4.9</version>
+		<version>3.0.5.0</version>
 	</app>
 	<uri>
 		<crossdomain load="true">crossdomain.xml</crossdomain>
 		<data load="true">xml/data.xml</data>
 		<css load="true">css/app_style.css</css>
+		<!-- Used only by the APILoader swf to load the main API application (which shares the config.xml) -->
+		<application load="true">sekati_main.swf</application>
 	</uri>
 	<option>
 		<!-- Targets: ide, firebug, all, none -->
