@@ -307,6 +307,11 @@ showHideInherited();
    
    </p><p>This is externalized from the constructor so we may update the references
    when being loaded as an API application.</p>
+   
+   <p>A check is made to see if the parent is an <code>APILoader</code> instance: 
+   if <code>true</code> then the main API application is being loaded by a preloader
+   and the references are remapped to secure the top-level <code>stage, root, 
+   loaderInfo, flashVars</code>.</p>
    </div>
 <br>
 <br>
