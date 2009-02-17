@@ -4,7 +4,7 @@
 <META http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <link rel="stylesheet" href="../../style.css" type="text/css" media="screen">
 <link rel="stylesheet" href="../../print.css" type="text/css" media="print">
-<meta content="KeyManager,sekati.managers.KeyManager,$,enabled,addKeyListener,callProperty,clearKeys,destroy,getInstance,getProperty,isDown,keyCheck,keyPressHandler,keyReleaseHandler,removeKeyListener,reset" name="keywords">
+<meta content="KeyManager,sekati.managers.KeyManager,$,enabled,addKeyListener,clearKeys,destroy,getInstance,isDown,keyCheck,keyPressHandler,keyReleaseHandler,removeKeyListener,reset" name="keywords">
 <title>sekati.managers.KeyManager</title>
 </head>
 <body>
@@ -37,35 +37,31 @@ if (!isEclipse() || window.name != ECLIPSE_FRAME_NAME) {titleBar_setSubTitle("Cl
 <tr>
 <td class="classHeaderTableLabel">Class</td><td class="classSignature">public final  class KeyManager</td>
 </tr>
-<tr>
-<td class="classHeaderTableLabel">Inheritance</td><td class="inheritanceList">KeyManager <img class="inheritArrow" alt="Inheritance" title="Inheritance" src="../../images/inherit-arrow.gif"> flash.utils.Proxy</td>
-</tr>
 </table>
 <p></p>
   KeyManager provides an interface for the centralized registering and handling of 
   KeyboardEvents via the direct coupling of Keyboard events to actions. Registered
   Key or Key-Combo's may be added in a repeatable or non-repeatable fashion.
-  
-  <p>The KeyManger class also proxies the <code>flash.ui.Keyboard</code> and 
-  <code>sekati.data.KeyCode</code> classes to provide a single location for KeyCode 
-  constants.</p>
-  
   <p></p>
 <br>
 <span class="label">Example</span>
 <br><div class='listing'><pre>
+  import sekati.ui.Keyboard
+  
   // create a response relationship between a key and method (non-repeatable):
-  KeyManager.$.addKeyListener( handler, false, KeyManager.$['UP'] );
+  KeyManager.$.addKeyListener( handler, false, Keyboard.UP );
   
   // create a response between a key combo and a method (repeatable):
-  KeyManager.$.addKeyListener( handler, true, KeyManager.$['CONTROL'], KeyManager.$['LEFT'] );
+  KeyManager.$.addKeyListener( handler, true, Keyboard.CONTROL, Keyboard.LEFT );
   </pre></div>
   
   <p></p>
 <p>
 <span class="classHeaderTableLabel">See also</span>
 </p>
-<div class="seeAlso">sekati.data.KeyCode<br>flash.ui.Keyboard<br>
+<div class="seeAlso">
+<a href="../ui/Keyboard.html" target="">sekati.ui.Keyboard</a>
+<br>flash.ui.Keyboard<br>
 <a href="http://livedocs.adobe.com/flex/3/langref/flash/ui/Keyboard.html" target="mm_external">http://livedocs.adobe.com/flex/3/langref/flash/ui/Keyboard.html</a>
 </div>
 <br>
@@ -172,25 +168,9 @@ if (!isEclipse() || window.name != ECLIPSE_FRAME_NAME) {titleBar_setSubTitle("Cl
 <tr class="">
 <td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
 <div class="summarySignature">
-<a class="signatureLink" href="#callProperty()">callProperty</a>(name:*, ... args):*</div>
-<div class="summaryTableDescription">
-   </div>
-</td><td class="summaryTableOwnerCol">KeyManager</td>
-</tr>
-<tr class="">
-<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
-<div class="summarySignature">
 <a class="signatureLink" href="#clearKeys()">clearKeys</a>(e:Event = null):void</div>
 <div class="summaryTableDescription">
    Clear the keyMap.</div>
-</td><td class="summaryTableOwnerCol">KeyManager</td>
-</tr>
-<tr class="">
-<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
-<div class="summarySignature">
-<a class="signatureLink" href="#getProperty()">getProperty</a>(name:*):*</div>
-<div class="summaryTableDescription">
-   Proxy <code>Keyboard</code> and <code>KeyCode</code> constants for easy reference.</div>
 </td><td class="summaryTableOwnerCol">KeyManager</td>
 </tr>
 <tr class="">
@@ -315,34 +295,6 @@ showHideInherited();
    </pre></div>
    <p></p>
 </div>
-<a name="callProperty()"></a>
-<table cellspacing="0" cellpadding="0" class="detailHeader">
-<tr>
-<td class="detailHeaderName">callProperty</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td>
-</tr>
-</table>
-<div class="detailBody">
-<code>flash_proxy override function callProperty(name:*, ... args):*</code><p>
-   </p><span class="label">Parameters</span>
-<table border="0" cellspacing="0" cellpadding="0">
-<tr>
-<td width="20px"></td><td><code><span class="label">name</span>:*</code></td>
-</tr>
-<tr>
-<td class="paramSpacer">&nbsp;</td>
-</tr>
-<tr>
-<td width="20px"></td><td><code>... <span class="label">args</span></code></td>
-</tr>
-</table>
-<p></p>
-<span class="label">Returns</span>
-<table border="0" cellspacing="0" cellpadding="0">
-<tr>
-<td width="20"></td><td><code>*</code></td>
-</tr>
-</table>
-</div>
 <a name="clearKeys()"></a>
 <table cellspacing="0" cellpadding="0" class="detailHeader">
 <tr>
@@ -387,29 +339,6 @@ showHideInherited();
    
                         
                      </td>
-</tr>
-</table>
-</div>
-<a name="getProperty()"></a>
-<table cellspacing="0" cellpadding="0" class="detailHeader">
-<tr>
-<td class="detailHeaderName">getProperty</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td>
-</tr>
-</table>
-<div class="detailBody">
-<code>flash_proxy override function getProperty(name:*):*</code><p>
-   Proxy <code>Keyboard</code> and <code>KeyCode</code> constants for easy reference.
-   </p><span class="label">Parameters</span>
-<table border="0" cellspacing="0" cellpadding="0">
-<tr>
-<td width="20px"></td><td><code><span class="label">name</span>:*</code></td>
-</tr>
-</table>
-<p></p>
-<span class="label">Returns</span>
-<table border="0" cellspacing="0" cellpadding="0">
-<tr>
-<td width="20"></td><td><code>*</code></td>
 </tr>
 </table>
 </div>
