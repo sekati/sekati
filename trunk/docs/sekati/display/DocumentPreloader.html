@@ -4,7 +4,7 @@
 <META http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <link rel="stylesheet" href="../../style.css" type="text/css" media="screen">
 <link rel="stylesheet" href="../../print.css" type="text/css" media="print">
-<meta content="DocumentPreloader,sekati.display.DocumentPreloader,_loader,_percent,_xmlLoader,percent,initApplication,initMovieProperties,initPreloader,loadApplication,loadConfig,onStage,progress,resize" name="keywords">
+<meta content="DocumentPreloader,sekati.display.DocumentPreloader,_loader,_percent,_xmlLoader,percent,configUI,initApplication,initMovieProperties,loadApplication,loadConfig,onStage,progress,resize" name="keywords">
 <title>sekati.display.DocumentPreloader</title>
 </head>
 <body>
@@ -130,6 +130,14 @@ if (!isEclipse() || window.name != ECLIPSE_FRAME_NAME) {titleBar_setSubTitle("Cl
 <tr class="">
 <td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
 <div class="summarySignature">
+<a class="signatureLink" href="#configUI()">configUI</a>():void</div>
+<div class="summaryTableDescription">
+   Stub <code>Function</code> invoked when the stage becomes available & the <code>config.xml</code> has begun loading.</div>
+</td><td class="summaryTableOwnerCol">DocumentPreloader</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
 <a class="signatureLink" href="#initApplication()">initApplication</a>(e:Event = null):void</div>
 <div class="summaryTableDescription">
    Initialize the loaded API Application SWF.</div>
@@ -141,14 +149,6 @@ if (!isEclipse() || window.name != ECLIPSE_FRAME_NAME) {titleBar_setSubTitle("Cl
 <a class="signatureLink" href="#initMovieProperties()">initMovieProperties</a>():void</div>
 <div class="summaryTableDescription">
    Initializes the preloader movie properties.</div>
-</td><td class="summaryTableOwnerCol">DocumentPreloader</td>
-</tr>
-<tr class="">
-<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
-<div class="summarySignature">
-<a class="signatureLink" href="#initPreloader()">initPreloader</a>():void</div>
-<div class="summaryTableDescription">
-   Stub invoked when the stage becomes available & the <code>config.xml</code> has begun loading.</div>
 </td><td class="summaryTableOwnerCol">DocumentPreloader</td>
 </tr>
 <tr class="">
@@ -258,10 +258,22 @@ showHideInherited();
    </p></div>
 <a name="methodDetail"></a>
 <div class="detailSectionHeader">Method detail</div>
+<a name="configUI()"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">configUI</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>protected function configUI():void</code><p>
+   Stub <code>Function</code> invoked when the stage becomes available & the <code>config.xml</code> has begun loading.
+   
+   </p><p><b>Customization:</b> Override this method to execute any custom code, such as creating the visual preloader.</p>
+   </div>
 <a name="initApplication()"></a>
 <table cellspacing="0" cellpadding="0" class="detailHeader">
 <tr>
-<td class="detailHeaderName">initApplication</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td>
+<td class="detailHeaderName">initApplication</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td>
 </tr>
 </table>
 <div class="detailBody">
@@ -289,18 +301,6 @@ showHideInherited();
    Initializes the preloader movie properties.
    
    </p><p><b>Customization:</b> Override this method & adjust to fit your preloader specification.</p>
-   </div>
-<a name="initPreloader()"></a>
-<table cellspacing="0" cellpadding="0" class="detailHeader">
-<tr>
-<td class="detailHeaderName">initPreloader</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td>
-</tr>
-</table>
-<div class="detailBody">
-<code>protected function initPreloader():void</code><p>
-   Stub invoked when the stage becomes available & the <code>config.xml</code> has begun loading.
-   
-   </p><p><b>Customization:</b> Override this method to execute any custom code, such as creating the visual preloader.</p>
    </div>
 <a name="loadApplication()"></a>
 <table cellspacing="0" cellpadding="0" class="detailHeader">
