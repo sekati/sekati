@@ -5,7 +5,7 @@
 
 *SEKATI API* is developed and maintained by  [http://sekati.com Jason M Horwitz // Sekati], thanks largely to the direct and indirect contributions via knowledge and code sharing of several friends, colleagues and other open source projects.
 
-I have tried to make mention in source comments whenever code was derived, adapted or adopted from others work. However, since I tend to keep wretched track of these things in the heat of the moment (or the middle of the night), I would like to use this space to direct your attention to this excellent, though not at all comprehensive list of individuals who's work deserves attention:
+Ever effort has been made to make mention in source comments when code was derived, adapted or adopted from others work. However, since it can be tricky to track the origin of these things, this space is dedicated to directing your attention to this excellent, though not at all comprehensive list of individuals who's work deserves attention:
 
 
 == People of mention ==
@@ -23,6 +23,8 @@ I have tried to make mention in source comments whenever code was derived, adapt
 
   * [http://tendercreative.com TENDER]
   * [http://www.sarkissianmason.com Sarkissian Mason]
+
+
 
 == Projects of mention ==
 
