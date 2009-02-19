@@ -2,6 +2,8 @@
 
 
 API UPDATE v3.0.5.0 - "Gigan" (IN-PROGRESS)
+* Modified AlignUtil.scaleRatioToStage() to use width/height properties to address issue #61: http://code.google.com/p/sekati/issues/detail?id=61
+- Added example docs to the metaData handler for sekati.media.FLV in response to issue #60: http://code.google.com/p/sekati/issues/detail?id=60
 * Managed resize issues in DocumentPreloader associated with FlashPlayer bug: http://bugs.adobe.com/jira/browse/FP-434
 * Bumped version to 3.0.5.0 Gigan preemptively for release.
 * Completed functional DocumentPreloader and SekatiPreloader example class.
