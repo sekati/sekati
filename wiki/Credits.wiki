@@ -28,6 +28,7 @@ Ever effort has been made to make mention in source comments when code was deriv
 
 == Projects of mention ==
   * [http://code.google.com/p/inde/ INDE Interactive Development Environment]
+  * [http://code.google.com/p/fdtkit/ FDTKit]
   * [http://code.google.com/p/tweener/ Tweener]
   * [http://code.google.com/p/papervision3d/ Papervision 3d]
   * [http://code.google.com/p/swfobject/ SWFObject]
