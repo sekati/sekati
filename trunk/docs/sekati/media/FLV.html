@@ -671,6 +671,21 @@ showHideInherited();
 <td width="20px"></td><td><code><span class="label">metadata</span>:Object</code></td>
 </tr>
 </table>
+<br>
+<span class="label">Example</span>
+<br><div class='listing'><pre>
+   //use the embedded metadata height/width to resize video to correct proportions
+   if( Number( metadata['height'] ) > 0) {
+     //resize based on width/height
+     var newH:Number = Number(metadata['height']);
+     var newW:Number = Number(metadata['width']);
+     var prop:Number = newW / _initWidth;
+     
+     _video.height = newH prop;
+     _video.width = newW prop;
+    }
+   </pre></div>
+   <p></p>
 </div>
 <a name="netStatusHandler()"></a>
 <table cellspacing="0" cellpadding="0" class="detailHeader">
