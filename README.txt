@@ -41,14 +41,21 @@ II. Documentation
 	the API and generating useful Unit Tests to allow the framework to be easily tapped
 	and referenced as needed.
 	
-	Documentation:	http://docs.sekati.com/sekati/
-	Unit Tests:		http://api.sekati.com/sekati/tests/
+	Documentation:		http://docs.sekati.com/sekati/
+	Changelog:			http://code.google.com/p/sekati/source/browse/trunk/CHANGELOG.txt
+	Unit Tests:			http://api.sekati.com/sekati/tests/
+	Visual Tests:		http://api.sekati.com/sekati/tests/visual/
 
 
 III. Feedback
 
 	I am interested in feedback of every kind, be it a bug, feature request or question.
 
-	Bug Report / Feature Request:	http://code.google.com/p/sekati/issues/list
-	Project Wiki:					http://code.google.com/p/sekati/w/list
-
+	Issue Tracker:		http://code.google.com/p/sekati/issues/list
+	Project Wiki:		http://code.google.com/p/sekati/w/list
+	Project Feeds:		http://code.google.com/p/sekati/feeds
+	Discussion List:	http://groups.google.com/group/sekati-api
+	
+IV. License & Credits
+	License:			http://code.google.com/p/sekati/wiki/License
+	Credits:			http://code.google.com/p/sekati/wiki/Credits
