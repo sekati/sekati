@@ -2,6 +2,7 @@
 
 
 API UPDATE v3.0.5.0 - "Gigan" (IN-PROGRESS)
+- Adjusted README.txt with new project links
 * Removed sekati.formats.qrcode (externalized into a seperate project for later development: not appropriate for official API).
 * Added TypeValidator.strictIs() & cleaned up class docs.
 * Modified AlignUtil.scaleRatioToStage() to use width/height properties to address issue #61: http://code.google.com/p/sekati/issues/detail?id=61
