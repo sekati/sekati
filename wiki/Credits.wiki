@@ -21,7 +21,8 @@ I have tried to make mention in source comments whenever code was derived, adapt
 
 == Places of mention ==
 
-  * [http://tendercreative.com TENDER] - who has dedicated billable hours to this Open Source project (whenever we can find them ;-).
+  * [http://tendercreative.com TENDER]
+  * [http://www.sarkissianmason.com Sarkissian Mason]
 
 == Projects of mention ==
 
