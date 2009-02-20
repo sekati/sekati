@@ -13,33 +13,57 @@
  	Copyright (c) 2008-2009 Jason M Horwitz | Sekati LLC | sekati.com. All Rights Reserved.
 -->
 <config persist="false">
+
+	<!--
+		APP is implemented to report the API Application SWF name and version
+		number.
+	-->
 	<app>
 		<name>Sekati API</name>
 		<version>3.0.5.0</version>
 	</app>
+
+	<!--
+		PRELOAD is used by the (optional) DocumentPreloader SWF (though the
+		same config.xml is shared with API Application SWF).
+	-->
+	<preload>
+		<application>sekati_main.swf</application>
+	</preload>
+
+	<!--
+		URI is used by the API Application SWF to define the loading of
+		supported externals during the bootstrap process.
+	-->
 	<uri>
-		<crossdomain load="true">crossdomain.xml</crossdomain>
+		<crossdomain load="true">crossdomain.xml
+		</crossdomain>
 		<data load="true">xml/data.xml</data>
 		<css load="true">css/app_style.css</css>
-		<!-- Used only by the APILoader swf to load the main API application (which shares the config.xml) -->
-		<application load="true">sekati_main.swf</application>
 	</uri>
+
+	<!--
+		OPTION is used by the API Application SWF to configure manager
+		settings during bootstrap process.
+	-->
 	<option>
-		<!-- Targets: ide, firebug, all, none -->
-		<log target="all">true</log>
+		<!--
+			The API Logger has 4 output modes: IDE, FIREBUG, ALL, NONE.
+		-->
+		<log target="ALL">true</log>
 		<menu verbose="true">true</menu>
 		<fullscreen>true</fullscreen>
 		<track>true</track>
 		<deeplink>false</deeplink>
 		<performance_monitor>true</performance_monitor>
 	</option>
+
+	<!--
+		CUSTOM is used by the API Application SWF to persist custom
+		configuration data as an alternative to the "extern.data" load
+		options. To make the custom node data accessible (via
+		"App.db.config.custom") you most set <config persist="true">.
+	-->
 	<custom>
-		<!-- 
-			If you have a small amount of application data you wish to persist but do not 
-			want to load a 2nd (data) XML you may use the "custom" node for your data.
-			
-			In order to access custom node data via the API you must set: 
-			<config persist="true"> to make App.db.config.custom available.
-		-->
 	</custom>
 </config>
