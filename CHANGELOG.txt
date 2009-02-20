@@ -2,6 +2,12 @@
 
 
 API UPDATE v3.0.5.0 - "Gigan" (IN-PROGRESS)
+- Bootstrap logger messaging added.
+* config.xml additions: <preload> node added for the DocumentPreloader specificity / comments added.
+* Modified Logger to support simplified class reflection earlier in the loading process by eliminating reliance on ClassReflector (adds support for ApplicationLoader/DocumentPreloader).
+* Moved SEKATI_API-TestRunner.launch from build/ to tests/build/
+* Overhaul of ApplicationLoader to serve both Document and DocumentPreloader.
+* Added Canvas.hasParent boolean property to define whether the API Application SWF has been loaded by another SWF or not.
 - Adjusted README.txt with new project links
 * Removed sekati.formats.qrcode (externalized into a seperate project for later development: not appropriate for official API).
 * Added TypeValidator.strictIs() & cleaned up class docs.
