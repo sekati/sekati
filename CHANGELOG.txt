@@ -1,7 +1,11 @@
 ------ SEKATI API CHANGELOG ------
 
 
-API UPDATE v3.0.5.0 - "Gigan" (IN-PROGRESS)
+API UPDATE v3.0.5.0 - "Gigan"
+- Refined SekatiPreloader example implementation of DocumentPreloader.
+- Clarified DocumentPreloader documentation
+* Added initUIIntro() initUIOutro() to DocumentPreloader to support sequenced intro/outro's for preloader SWF's.
+- Implemented ignoreWhitespace, ignoreComments on XML in Bootstrap.
 - Bootstrap logger messaging added.
 * config.xml additions: <preload> node added for the DocumentPreloader specificity / comments added.
 * Modified Logger to support simplified class reflection earlier in the loading process by eliminating reliance on ClassReflector (adds support for ApplicationLoader/DocumentPreloader).
