@@ -1,0 +1,21 @@
+#summary Who's using?
+#labels Featured
+
+= Projects =
+A few of the projects built on *Sekati API*
+
+  * [http://www.maccosmetics.com/ MAC Cosmetics]
+  * [http://www.maccosmetics.com/flash/color_play/index.tmpl MAC Colour Play]
+  * [http://www.fontainebleau.com Fontainebleau Resorts]
+  * [http://www.marchmade.com March]
+  * [http://www.avraverde.com Avra Verde]
+
+= Companies =
+A few of the groups, creative shops & agencies who implement & _contribute_ to *Sekati API*
+
+  * [http://www.tendercreative.com Tender Creative]
+  * [http://www.sarkissianmason.com Sarkissian Mason]
+  * [http://www.sekati.com Sekati]
+
+= Open Source =
+  * [http://tweener.googlecode.com Tweener] - implements portions of the Buildfile for automated SWC compiling.
