@@ -42,24 +42,19 @@ if (!isEclipse() || window.name != ECLIPSE_FRAME_NAME) {titleBar_setSubTitle("Cl
 </tr>
 </table>
 <p></p>
-  FramePulse proxies an <code>ENTER_FRAME</code> event to any non-
-  <code>DisplayObject</code> classes which need to execute code on each frame tick.<br><br>
+  FramePulse proxies an <code>ENTER_FRAME</code> event to any non-<code>DisplayObject</code> 
+  classes which need to execute code on each frame tick.
+  
   <p></p>
 <br>
 <span class="label">Example</span>
 <br><div class='listing'><pre>
-  FramePulse.$.addFrameListener( enterFrame );
-  protected function enterFrame( e:Event ):void {
-   trace( "pulse" );
-  }
+   FramePulse.$.addFrameListener( enterFrame );
+   protected function enterFrame( e:Event ):void {
+    trace( "pulse" );
+   }
   </pre></div>
   <p></p>
-<p>
-<span class="classHeaderTableLabel">See also</span>
-</p>
-<div class="seeAlso">
-<a href="http://www.onflex.org/code/2006/09/as3-singleton-example-by-andrew-trice.html" target="mm_external">http://www.onflex.org/code/2006/09/as3-singleton-example-by-andrew-trice.html</a>
-</div>
 <br>
 <hr>
 </div>
