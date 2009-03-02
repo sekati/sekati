@@ -2,6 +2,7 @@
 
 
 API UPDATE v3.0.5.1 - "Gigan" (IN-PROGRESS)
+- Added build/SEKATI_API-ASDoc.launch alternative to Ant buildfile.
 - Added sekati.ui.RotationPlane (refactored from PJ Ahlberg branch work): should be refactored to add material swapping.
 - Added sekati.utils.BitmapTransform (refactored from PJ Ahlberg branch work): should be refactored to extend BitmapData or CoreBitmapData.
 - Major Test refactoring: Unit tests added where logical, fla's removed in trade for AbstractTestApplication based launch profiles.
