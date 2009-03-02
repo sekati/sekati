@@ -297,11 +297,11 @@ package sekati.ui {
 				material1.visible = true;
 				
 				
-				trace( "frontXFacing = " + frontXFacing );
+				/*trace( "frontXFacing = " + frontXFacing );
 				trace( "frontYFacing = " + frontYFacing );
 				trace( "backXFacing = " + backXFacing );
 				trace( "backYFacing = " + backYFacing );
-				trace( "------------------------------------------------" );
+				trace( "------------------------------------------------" );*/
 			} else {
 				_side0.visible = true;
 				_side1.visible = true;
