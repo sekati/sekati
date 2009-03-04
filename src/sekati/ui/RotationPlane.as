@@ -10,7 +10,7 @@ package sekati.ui {
 	import sekati.display.InteractiveSprite;
 	import sekati.log.Logger;
 	import sekati.utils.BitmapTransform;
-	
+
 	import flash.display.BitmapData;
 	import flash.display.DisplayObject;
 	import flash.display.Sprite;
@@ -91,19 +91,14 @@ package sekati.ui {
 			_wSegments = wsegments;
 			_hSegments = hsegments;
 			
+			_material0 = null;			_material1 = null;
+			
 			_smooth = smooth;
 			
 			this.material0 = material0;
 			this.material1 = material1;
 			
-			addChild( this.material0 );
-			addChild( this.material1 );
 			
-			this.material0.visible = false;
-			this.material1.visible = false;
-			
-			//this.material0.alpha = 0.3;
-			//this.material1.alpha = 0.3;
 			
 			
 			_focalLength = focalLength;
@@ -311,7 +306,7 @@ package sekati.ui {
 
 			
 			//front facing Y rotation
-			if(frontXFacing == true && frontYFacing == true && backXFacing == false && backYFacing == false){
+			if(frontXFacing == true && frontYFacing == true && backXFacing == false && backYFacing == false) {
 				_side0.visible = false;
 				_side1.visible = false;
 				material0.visible = true;
@@ -319,7 +314,7 @@ package sekati.ui {
 			}
 			
 			//front facing X rotation
-			if(frontXFacing == false && frontYFacing == false && backXFacing == true && backYFacing == true){
+			if(frontXFacing == false && frontYFacing == false && backXFacing == true && backYFacing == true) {
 				_side0.visible = false;
 				_side1.visible = false;
 				material0.visible = false;
@@ -327,7 +322,7 @@ package sekati.ui {
 			}
 			
 			//back facing Y rotation
-			if(frontXFacing == true && frontYFacing == false && backXFacing == false && backYFacing == true){
+			if(frontXFacing == true && frontYFacing == false && backXFacing == false && backYFacing == true) {
 				_side0.visible = false;
 				_side1.visible = false;
 				material0.visible = false;
@@ -335,13 +330,12 @@ package sekati.ui {
 			}
 			
 			//back facing X rotation
-			if(frontXFacing == false && frontYFacing == true && backXFacing == true && backYFacing == false){
+			if(frontXFacing == false && frontYFacing == true && backXFacing == true && backYFacing == false) {
 				_side0.visible = false;
 				_side1.visible = false;
 				material0.visible = false;
 				material1.visible = true;
 			}
-			
 		}
 
 		/**
@@ -364,7 +358,12 @@ package sekati.ui {
 
 		/*** @private */
 		public function set material0(value : DisplayObject) : void {
+			if(_material0 != null) {
+				removeChild( _material0 );
+				_material0 = null;
+			}
 			_material0 = value;
+			addChild( _material0 );
 			_bmpd0 = new CoreBitmapData( _material0, 0, 0, NaN, NaN, 1, true );
 			if(!_renderReady) {
 				return;
@@ -382,7 +381,12 @@ package sekati.ui {
 
 		/*** @private */
 		public function set material1(value : DisplayObject) : void {
+			if(_material1 != null) {
+				removeChild( _material1 );
+				_material1 = null;
+			}
 			_material1 = value;
+			addChild( _material1 );
 			_bmpd1 = new CoreBitmapData( _material1, 0, 0, NaN, NaN, 1, true );
 			if(!_renderReady) {
 				return;
