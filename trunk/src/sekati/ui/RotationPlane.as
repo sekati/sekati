@@ -87,7 +87,9 @@ package sekati.ui {
 			_renderReady = false;
 			reversePlaneAlwaysOn = false;
 			this.orientation = orientation;
-			
+			this._enabled = false;			this.mouseEnabled = false;
+			this.mouseChildren = false;
+			this.mouseEnabled = false;
 			_wSegments = wsegments;
 			_hSegments = hsegments;
 			
@@ -99,7 +101,8 @@ package sekati.ui {
 			this.material1 = material1;
 			
 			
-			
+			this.material0.visible = false;
+			this.material1.visible = false;
 			
 			_focalLength = focalLength;
 			
