@@ -2,6 +2,8 @@
 
 
 API UPDATE v3.0.5.1 - "Gigan" (IN-PROGRESS)
+- AlignUtil.flip() bug fix.
+- RotationPlane bugfixes
 - Added build/SEKATI_API-ASDoc.launch alternative to Ant buildfile.
 - Added sekati.ui.RotationPlane (refactored from PJ Ahlberg branch work): should be refactored to add material swapping.
 - Added sekati.utils.BitmapTransform (refactored from PJ Ahlberg branch work): should be refactored to extend BitmapData or CoreBitmapData.
