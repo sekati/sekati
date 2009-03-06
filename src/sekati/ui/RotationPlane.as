@@ -7,7 +7,7 @@
  */
 package sekati.ui {
 	import sekati.display.CoreBitmapData;
-	import sekati.display.InteractiveSprite;
+	import sekati.display.CoreSprite;
 	import sekati.log.Logger;
 	import sekati.utils.BitmapTransform;
 
@@ -20,7 +20,7 @@ package sekati.ui {
 	 * RotationPlane provides a two dimensional plane containing two <i>"material"</i> <code>DisplayObject</code>'s 
 	 * which can be manipulated via <code>rotationX, rotationY</code>.
 	 */
-	public class RotationPlane extends InteractiveSprite {
+	public class RotationPlane extends CoreSprite {
 
 		/**
 		 * Orient the materials on the X-axis.
@@ -87,11 +87,11 @@ package sekati.ui {
 			_renderReady = false;
 			reversePlaneAlwaysOn = false;
 			this.orientation = orientation;
-			this._enabled = false;			this.mouseEnabled = false;
-			this.mouseChildren = false;
-			this.mouseEnabled = false;
+			mouseEnabled = false;
+			mouseChildren = false;
 			_wSegments = wsegments;
 			_hSegments = hsegments;
+			interactiveMode = false;
 			
 			_material0 = null;			_material1 = null;
 			
@@ -196,6 +196,9 @@ package sekati.ui {
 			
 				_facesArray[1] = [ 7, 6, 5, 4, _bmpd1, _backBitmapTransform ];
 			}
+			
+			_material1.visible = false;			_side1.visible = false;
+			renderView(_rotationX, _rotationY);
 		}
 
 		/**
@@ -261,7 +264,10 @@ package sekati.ui {
 				_spCube.setChildIndex( this["_side" + String( curFace )], _spCube.numChildren - 1 );
 				_facesArray[curFace][5].mapBitmapData( curImg, new Point( curv0[0], curv0[1] ), new Point( curv1[0], curv1[1] ), new Point( curv2[0], curv2[1] ), new Point( curv3[0], curv3[1] ), this["_side" + String( curFace )] );
 			}
-			swapDisplayObjects( );
+			//swapDisplayObjects( );
+			_side0.visible = true;
+			_side1.visible = true;
+			material0.visible = false;			material1.visible = false;
 		}
 
 		/**
@@ -292,7 +298,7 @@ package sekati.ui {
 				_side0.visible = false;
 				_side1.visible = false;
 				material0.visible = true;
-				material1.visible = true;
+				if(reversePlaneAlwaysOn) material1.visible = true;
 				
 				
 				/*trace( "frontXFacing = " + frontXFacing );
