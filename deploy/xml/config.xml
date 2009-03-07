@@ -47,7 +47,7 @@
 	-->
 	<option>
 		<!--
-			The API Logger has 4 output modes: IDE, FIREBUG, ALL, NONE.
+			Logger has 4 output modes: IDE, FIREBUG, ALL, NONE.
 		-->
 		<log target="ALL">true</log>
 		<menu verbose="true">true</menu>
@@ -59,7 +59,7 @@
 
 	<!--
 		CUSTOM is used by the API Application SWF to persist custom
-		configuration data as an alternative to the "extern.data" load
+		configuration data as an alternative to the "uri.data" load
 		options. To make the custom node data accessible (via
 		"App.db.config.custom") you most set <config persist="true">.
 	-->

@@ -2,6 +2,7 @@
 
 
 API UPDATE v3.0.5.1 - "Gigan" (IN-PROGRESS)
+- config.xml comment changes for clarity
 - AlignUtil.flip() bug fix.
 - RotationPlane bugfixes
 - Added build/SEKATI_API-ASDoc.launch alternative to Ant buildfile.
