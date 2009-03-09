@@ -1,6 +1,6 @@
 /**
  * sekati.ui.RotationPlane
- * @version 1.0.1
+ * @version 1.1.0
  * @author pj ahlberg, jason m horwitz | sekati.com
  * Copyright (C) 2009  jason m horwitz, Sekat LLC. All Rights Reserved.
  * Released under the MIT License: http://www.opensource.org/licenses/mit-license.php
@@ -18,20 +18,22 @@ package sekati.ui {
 
 	/**
 	 * RotationPlane provides a two dimensional plane containing two <i>"material"</i> <code>DisplayObject</code>'s 
-	 * which can be manipulated via <code>rotationX, rotationY</code>.
+	 * which can be manipulated via <code>rotateX, rotateY</code>.
 	 */
 	public class RotationPlane extends CoreSprite {
-
+		
 		/**
 		 * Orient the materials on the X-axis.
 		 * @see #orientation
 		 */
 		public static const X_ORIENTED : String = "x";
+		
 		/**
 		 * Orient the materials on the Y-axis.
 		 * @see #orientation
 		 */
 		public static const Y_ORIENTED : String = "y";
+		
 		protected var _orientation : String;
 		protected var _renderReady : Boolean;
 		protected var _bmpd0 : CoreBitmapData;
@@ -74,11 +76,11 @@ package sekati.ui {
 		 * addChild( plane );
 		 * 	
 		 * private function rotationBack(e : MouseEvent) : void {
-		 * 		Tweener.addTween( plane, { rotationY:180, time:0.7 } );
+		 * 		Tweener.addTween( plane, { rotateX:180, time:0.7 } );
 		 * }
 		 * 		
 		 * private function rotationFront(e : MouseEvent) : void {
-		 * 		Tweener.addTween( plane, { rotationY:0, time:0.7 } );
+		 * 		Tweener.addTween( plane, { rotateY:0, time:0.7 } );
 		 * }
 		 * </listing>
 		 * @see sekati.utils.BitmapTransform
@@ -406,26 +408,32 @@ package sekati.ui {
 
 		/**
 		 * Rotation of the plane <b>on</b> the X-axis (vertical movement).
+		 * 
+		 * <p><b>Note</b>: <code>rotateX</code> is used instead of <code>rotationX</code> for compatability 
+		 * purposes between <i>FP9</i> and <i>FP10</i>'s inherited <code>rotationX</code></p>
 		 */
-		public function get rotationX() : Number {
+		public function get rotateX() : Number {
 			return _rotationX;
 		}
 
 		/*** @private */
-		public function set rotationX(value : Number) : void {
+		public function set rotateX(value : Number) : void {
 			_rotationX = value;
 			renderView( _rotationY, _rotationX );
 		}
 
 		/**
 		 * Rotation of the plane <b>on</b> the Y-axis (horizontal movement).
+		 * 
+		 * <p><b>Note</b>: <code>rotateY</code> is used instead of <code>rotationY</code> for compatability 
+		 * purposes between <i>FP9</i> and <i>FP10</i>'s inherited <code>rotationY</code></p>
 		 */
-		public function get rotationY() : Number {
+		public function get rotateY() : Number {
 			return _rotationY;
 		}
 
 		/*** @private */
-		public function set rotationY(value : Number) : void {
+		public function set rotateY(value : Number) : void {
 			_rotationY = value;
 			renderView( _rotationY, _rotationX );
 		}

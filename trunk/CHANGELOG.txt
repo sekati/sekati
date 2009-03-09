@@ -2,6 +2,8 @@
 
 
 API UPDATE v3.0.5.1 - "Gigan" (IN-PROGRESS)
+- Refactored RotationPlane.rotationX & rotationY to rotateX & rotateY to prevent name collision with FP10 DisplayObject (and avoid complex namespace configuration)
+- altered sekati.core.sekati namespace for future use
 - config.xml comment changes for clarity
 - AlignUtil.flip() bug fix.
 - RotationPlane bugfixes
