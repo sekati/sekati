@@ -8,32 +8,28 @@
 package sekati.ui {
 	import sekati.display.CoreBitmapData;
 	import sekati.display.CoreSprite;
-	import sekati.log.Logger;
 	import sekati.utils.BitmapTransform;
-
+	
 	import flash.display.BitmapData;
 	import flash.display.DisplayObject;
 	import flash.display.Sprite;
-	import flash.geom.Point;		
+	import flash.geom.Point;	
 
 	/**
 	 * RotationPlane provides a two dimensional plane containing two <i>"material"</i> <code>DisplayObject</code>'s 
 	 * which can be manipulated via <code>rotateX, rotateY</code>.
 	 */
 	public class RotationPlane extends CoreSprite {
-		
-		/**
+		/**
 		 * Orient the materials on the X-axis.
 		 * @see #orientation
 		 */
 		public static const X_ORIENTED : String = "x";
-		
 		/**
 		 * Orient the materials on the Y-axis.
 		 * @see #orientation
 		 */
 		public static const Y_ORIENTED : String = "y";
-		
 		protected var _orientation : String;
 		protected var _renderReady : Boolean;
 		protected var _bmpd0 : CoreBitmapData;
@@ -59,8 +55,7 @@ package sekati.ui {
 		protected var _focalLength : Number;
 		protected var _masterWidth : Number;
 		protected var _masterHeight : Number;
-
-		/**
+		/**
 		 * RotationPlane Constructor
 		 * @param material0 	the first (front) <code>DisplayObject</code>.
 		 * @param material1 	the second (reverse) <code>DisplayObject</code>.
@@ -123,8 +118,7 @@ package sekati.ui {
 			
 			init3D( );
 		}
-
-		/**
+		/**
 		 * Determine <code>width : height</code> relationships.
 		 */
 		protected function determineMasterDimensions() : void {
@@ -132,8 +126,7 @@ package sekati.ui {
 			_masterHeight = (_material0.height >= _material1.height) ? _material0.height : _material1.height;
 			alignDisplayObjects( );
 		}
-
-		/**
+		/**
 		 * Align the materials.
 		 */
 		protected function alignDisplayObjects() : void {
@@ -144,8 +137,7 @@ package sekati.ui {
 			_spCube.x = _masterWidth * 0.5;
 			_spCube.y = _masterHeight * 0.5;
 		}
-
-		/**
+		/**
 		 * Initialize 3D logic.
 		 */
 		protected function init3D() : void {
@@ -162,8 +154,7 @@ package sekati.ui {
 			_renderReady = true;
 			renderView( _rotationY, _rotationX );
 		}
-
-		/**
+		/**
 		 * Configure the front plane (<code>material0</code>).
 		 */
 		protected function setFrontPlane() : void {
@@ -176,8 +167,7 @@ package sekati.ui {
 			
 			_facesArray[0] = [ 0, 1, 2, 3, _bmpd0, _frontBitmapTransform ];
 		}
-
-		/**
+		/**
 		 * Configure the back plane (<code>material1</code>).
 		 */
 		protected function setBackPlane() : void {
@@ -200,10 +190,9 @@ package sekati.ui {
 			}
 			
 			_material1.visible = false;			_side1.visible = false;
-			renderView(_rotationX, _rotationY);
+			renderView( _rotationX, _rotationY );
 		}
-
-		/**
+		/**
 		 * Render the view.
 		 */
 		protected function renderView(t : Number, p : Number) : void {
@@ -271,8 +260,7 @@ package sekati.ui {
 			_side1.visible = true;
 			material0.visible = false;			material1.visible = false;
 		}
-
-		/**
+		/**
 		 * Swap display objects.
 		 */
 		protected function swapDisplayObjects() : void {
@@ -348,8 +336,7 @@ package sekati.ui {
 				material1.visible = true;
 			}
 		}
-
-		/**
+		/**
 		 * Aquire the new view coordinates.
 		 */
 		protected function pointNewView(v : Array, theta : Number, phi : Number) : Array {
@@ -359,21 +346,18 @@ package sekati.ui {
 			newCoords[2] = -v[0] * Math.cos( theta ) * Math.cos( phi ) - v[1] * Math.sin( theta ) * Math.cos( phi ) + v[2] * Math.sin( phi );
 			return newCoords;
 		}
-
-		/**
+		/**
 		 * The <code>DisplayObject</code> <i>"material"</i> used on the first (front) side of the plane.
 		 */
 		public function get material0() : DisplayObject {
 			return _material0;
 		}
-
-		/*** @private */
+		/*** @private */
 		public function set material0(value : DisplayObject) : void {
-			Logger.$.info(this, "SET MATERIAL0");
+			//Logger.$.info(this, "SET MATERIAL0");
 			if(_material0 != null) {
 				removeChild( _material0 );
 				_material0 = null;
-				
 			}
 			_material0 = value;
 			addChild( _material0 );
@@ -384,21 +368,18 @@ package sekati.ui {
 			setFrontPlane( );
 			renderView( _rotationY, _rotationX );
 		}
-
-		/**
+		/**
 		 * The <code>DisplayObject</code> <i>"material"</i> used on the second (reverse) side of the plane.
 		 */
 		public function get material1() : DisplayObject {
 			return _material1;
 		}
-
-		/*** @private */
+		/*** @private */
 		public function set material1(value : DisplayObject) : void {
-			Logger.$.info(this, "SET MATERIAL1");
+			//Logger.$.info(this, "SET MATERIAL1");
 			if(_material1 != null) {
 				removeChild( _material1 );
 				_material1 = null;
-				
 			}
 			_material1 = value;
 			addChild( _material1 );
@@ -409,8 +390,7 @@ package sekati.ui {
 			setBackPlane( );
 			renderView( _rotationY, _rotationX );
 		}
-
-		/**
+		/**
 		 * Rotation of the plane <b>on</b> the X-axis (vertical movement).
 		 * 
 		 * <p><b>Note</b>: <code>rotateX</code> is used instead of <code>rotationX</code> for compatability 
@@ -419,14 +399,12 @@ package sekati.ui {
 		public function get rotateX() : Number {
 			return _rotationX;
 		}
-
-		/*** @private */
+		/*** @private */
 		public function set rotateX(value : Number) : void {
 			_rotationX = value;
 			renderView( _rotationY, _rotationX );
 		}
-
-		/**
+		/**
 		 * Rotation of the plane <b>on</b> the Y-axis (horizontal movement).
 		 * 
 		 * <p><b>Note</b>: <code>rotateY</code> is used instead of <code>rotationY</code> for compatability 
@@ -435,21 +413,18 @@ package sekati.ui {
 		public function get rotateY() : Number {
 			return _rotationY;
 		}
-
-		/*** @private */
+		/*** @private */
 		public function set rotateY(value : Number) : void {
 			_rotationY = value;
 			renderView( _rotationY, _rotationX );
 		}
-
-		/**
+		/**
 		 * Determines whether the <code>BitmapData</code> smoothing is applied to the plane rotations or not.
 		 */
 		public function get smooth() : Boolean {
 			return _smooth;
 		}
-
-		/*** @private */
+		/*** @private */
 		public function set smooth(value : Boolean) : void {
 			_smooth = value;
 			for (var i : int = 0; i < _btArray.length ; i++) {
@@ -457,8 +432,7 @@ package sekati.ui {
 			}
 			renderView( _rotationY, _rotationX );
 		}
-
-		/**
+		/**
 		 * Determines the orientation of the reverse material (<code>material1</code>) to the front material (<code>material0</code>) 
 		 * based on your choosen axis of rotation; this can be set manually.
 		 * 
@@ -468,13 +442,12 @@ package sekati.ui {
 		public function get orientation() : String {
 			return _orientation;
 		}
-
-		/*** @private */
+		/*** @private */
 		public function set orientation(value : String) : void {
 			if(_orientation == value) {
 				return;
-			}else if (value != X_ORIENTED && value != Y_ORIENTED) {
-				Logger.$.error( this, String( value ) + " is not a valid orientation type. The orientation will not be changed." );
+			} else if (value != X_ORIENTED && value != Y_ORIENTED) {
+				//Logger.$.error( this, String( value ) + " is not a valid orientation type. The orientation will not be changed." );
 				return;
 			}
 			
@@ -485,8 +458,7 @@ package sekati.ui {
 			}
 			setBackPlane( );
 		}
-
-		/**
+		/**
 		 * Determines whether the reverse plane material will always be visible (<code>true</code>) or not (<code>false</code>).
 		 */
 		public function get reversePlaneAlwaysOn() : Boolean {
@@ -496,8 +468,7 @@ package sekati.ui {
 				return false;
 			}
 		}
-
-		/*** @private */
+		/*** @private */
 		public function set reversePlaneAlwaysOn(value : Boolean) : void {
 			if(value == true) {
 				_reversePlaneAlwaysOn = 0;
@@ -505,15 +476,13 @@ package sekati.ui {
 				_reversePlaneAlwaysOn = 1;
 			}
 		}
-
-		/**
+		/**
 		 * Determines the amount of focal distortion: the higher the value the less distortion. (Recommended value: <code>1000-2000</code>). 
 		 */
 		public function get focalLength() : Number {
 			return _focalLength;
 		}
-
-		/*** @private */
+		/*** @private */
 		public function set focalLength(focalLength : Number) : void {
 			_focalLength = focalLength;
 		}
