@@ -256,9 +256,9 @@ package sekati.ui {
 				_facesArray[curFace][5].mapBitmapData( curImg, new Point( curv0[0], curv0[1] ), new Point( curv1[0], curv1[1] ), new Point( curv2[0], curv2[1] ), new Point( curv3[0], curv3[1] ), this["_side" + String( curFace )] );
 			}
 			swapDisplayObjects( );
-			_side0.visible = true;
+			/*_side0.visible = true;
 			_side1.visible = true;
-			material0.visible = false;			material1.visible = false;
+			material0.visible = false;			material1.visible = false;*/
 		}
 		/**
 		 * Swap display objects.
@@ -354,7 +354,6 @@ package sekati.ui {
 		}
 		/*** @private */
 		public function set material0(value : DisplayObject) : void {
-			//Logger.$.info(this, "SET MATERIAL0");
 			if(_material0 != null) {
 				removeChild( _material0 );
 				_material0 = null;
@@ -376,7 +375,6 @@ package sekati.ui {
 		}
 		/*** @private */
 		public function set material1(value : DisplayObject) : void {
-			//Logger.$.info(this, "SET MATERIAL1");
 			if(_material1 != null) {
 				removeChild( _material1 );
 				_material1 = null;
