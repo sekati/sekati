@@ -2,6 +2,10 @@
 
 
 API UPDATE v3.0.5.1 - "Gigan" (IN-PROGRESS)
+- Added PreloaderTest
+- Added sekati.ui.CirclePreloader
+- Added sekati.ui.AbstractPreloader
+- Refactored sekati.ui.controls.AbstractCalendar to sekati.ui.AbstractCalendar (eliminating the controls sub-package).
 - Refactored RotationPlane.rotationX & rotationY to rotateX & rotateY to prevent name collision with FP10 DisplayObject (and avoid complex namespace configuration)
 - altered sekati.core.sekati namespace for future use
 - config.xml comment changes for clarity
