@@ -9,6 +9,7 @@ A few of the projects built on *Sekati API*
   * [http://www.akamai.com/html/technology/visualizing_akamai.html Akamai]
   * [http://www.fontainebleau.com Fontainebleau Resorts]
   * [http://www.marchmade.com March]
+  * [http://www.kssarchitects.com KSS Architects]
   * [http://www.avraverde.com Avra Verde]
 
 = Companies =
