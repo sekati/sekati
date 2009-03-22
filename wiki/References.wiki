@@ -23,6 +23,7 @@ A few of the groups, creative shops & agencies who implement & _contribute_ to *
 
 = Open Source =
   * [http://tweener.googlecode.com Tweener] - implements portions of the Buildfile for automated SWC compiling.
+  * [http://code.google.com/p/flapik/ Flapik Library]
 
 = Other = 
 If you, your company or project are implementing the API we'd love to [http://groups.google.com/group/sekati-api hear from you] and drop a link to your work on this page!
