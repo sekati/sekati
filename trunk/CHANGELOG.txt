@@ -2,7 +2,8 @@
 
 
 API UPDATE v3.0.5.2 - "Gigan" (IN-PROGRESS)
-- 
+- Refactored CoreBitmapTest to CoreBitmapDataTest
+- Added deploy/api-logo.png for tests.
 
 
 API UPDATE v3.0.5.1 - "Gigan"
