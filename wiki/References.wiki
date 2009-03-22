@@ -2,7 +2,7 @@
 #labels Featured
 
 = Projects =
-A few of the projects built on *Sekati API*
+A few of the projects built on *Sekati API*:
 
   * [http://www.akamai.com/html/technology/visualizing_akamai.html Akamai]
   * [http://www.avraverde.com Avra Verde]
@@ -15,13 +15,15 @@ A few of the projects built on *Sekati API*
   * [http://www.moma.org/explore/multimedia MoMA]
 
 = Companies =
-A few of the groups, creative shops & agencies who implement & _contribute_ to *Sekati API*
+A few of the groups, creative shops & agencies who implement & _contribute_ to *Sekati API*:
 
   * [http://www.tendercreative.com Tender Creative]
   * [http://www.sarkissianmason.com Sarkissian Mason]
   * [http://www.sekati.com Sekati]
 
 = Open Source =
+A few of the libraries and frameworks which leverage portions of *Sekati API*:
+
   * [http://tweener.googlecode.com Tweener] - implements portions of the Buildfile for automated SWC compiling.
   * [http://code.google.com/p/flapik/ Flapik Library]
   * [http://code.google.com/p/matthijskamstra/ Matthijskamstra Framework]
