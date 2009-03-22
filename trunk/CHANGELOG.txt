@@ -1,6 +1,10 @@
 ------ SEKATI API CHANGELOG ------
 
 
+API UPDATE v3.0.5.2 - "Gigan" (IN-PROGRESS)
+- 
+
+
 API UPDATE v3.0.5.1 - "Gigan"
 - Added SEKATI_API-Air.launch profile
 - Added SekatiAirMain example implementation.
