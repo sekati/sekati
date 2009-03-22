@@ -13,6 +13,7 @@ Ever effort has been made to make mention in source comments when code was deriv
   * [http://iworkinprogress.com Steven Baughman]
   * [http://code.google.com/u/@WRZRSlBRAhNHWgJ0/ Cory Clarke]
   * [http://lmnopj.com/ PJ Ahlberg]
+  * [http://code.google.com/u/ddahlstrm/ David Dahlström]
   * [http://partlyhuman.com/ Roger Braunstein]
   * [http://nectere.ca/ Francis Turmel]
   * [http://www.mosessupposes.com/ Moses Gunesch]
