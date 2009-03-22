@@ -38,6 +38,6 @@ Ever effort has been made to make mention in source comments when code was deriv
 
 
 
-=== Notes to Project Members ===
+=== Note to Project Members ===
 
 Upon contributing work to the project you may [http://fdt.powerflasher.com/index.php?page=os apply to PowerFlashers for an FDT3 OS License] as a project member.
