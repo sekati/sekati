@@ -1,7 +1,10 @@
 ------ SEKATI API CHANGELOG ------
 
 
-API UPDATE v3.0.5.1 - "Gigan" (IN-PROGRESS)
+API UPDATE v3.0.5.1 - "Gigan"
+- Added SEKATI_API-Air.launch profile
+- Added SekatiAirMain example implementation.
+- Added DocumentAir (Air compatible API Document)
 - Added PreloaderTest
 - Added sekati.ui.CirclePreloader
 - Added sekati.ui.AbstractPreloader
@@ -17,6 +20,7 @@ API UPDATE v3.0.5.1 - "Gigan" (IN-PROGRESS)
 - Major Test refactoring: Unit tests added where logical, fla's removed in trade for AbstractTestApplication based launch profiles.
 - Fixed line break in config.xml.
 - Fixed Bootstrap weak reference / gc bug which effected multiple API swf's on a page: issue #67 (http://code.google.com/p/sekati/issues/detail?id=67) 
+
 
 API UPDATE v3.0.5.0 - "Gigan"
 - Refined SekatiPreloader example implementation of DocumentPreloader.
