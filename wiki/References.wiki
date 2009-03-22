@@ -3,7 +3,8 @@
 
 = Projects =
 A few of the projects built on *Sekati API*
-
+  
+  * [Boeing javascript:alert('Link coming soon ...')];
   * [http://www.moma.org/explore/multimedia MoMA]
   * [http://www.maccosmetics.com/ MAC Cosmetics] / [http://www.maccosmetics.com/flash/color_play/index.tmpl MAC Colour Play]
   * [http://www.fontainebleau.com Fontainebleau Resorts]
