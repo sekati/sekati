@@ -6,10 +6,11 @@ A few of the projects built on *Sekati API*
 
   * [http://www.maccosmetics.com/ MAC Cosmetics]
   * [http://www.maccosmetics.com/flash/color_play/index.tmpl MAC Colour Play]
-  * [http://www.akamai.com/html/technology/visualizing_akamai.html Akamai]
   * [http://www.fontainebleau.com Fontainebleau Resorts]
   * [http://www.marchmade.com March]
+  * [http://www.ewingcole.com/ EwingCole]
   * [http://www.kssarchitects.com KSS Architects]
+  * [http://www.akamai.com/html/technology/visualizing_akamai.html Akamai]
   * [http://www.avraverde.com Avra Verde]
 
 = Companies =
