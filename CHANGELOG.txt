@@ -2,6 +2,7 @@
 
 
 API UPDATE v3.0.5.2 - "Gigan" (IN-PROGRESS)
+- BoolConverter bugfix: "undefined" (String) now returns false.
 - Refactored CoreBitmapTest to CoreBitmapDataTest
 - Added deploy/api-logo.png for tests.
 
