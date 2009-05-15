@@ -31,7 +31,7 @@ package sekati.ui {
 		 */
 		public static const Y_ORIENTED : String = "y";
 		protected var _orientation : String;
-		protected var _renderReady : Boolean;
+		protected var _renderReady : Boolean;		protected var _flipBackPlane : Boolean;
 		protected var _bmpd0 : CoreBitmapData;
 		protected var _bmpd1 : CoreBitmapData;
 		protected var _frontBitmapTransform : BitmapTransform;
@@ -80,10 +80,11 @@ package sekati.ui {
 		 * </listing>
 		 * @see sekati.utils.BitmapTransform
 		 */
-		public function RotationPlane(material0 : DisplayObject, material1 : DisplayObject, orientation : String = Y_ORIENTED, focalLength : uint = 1500, wsegments : int = 5, hsegments : int = 5, smooth : Boolean = false) {
+		public function RotationPlane(material0 : DisplayObject, material1 : DisplayObject, focalLength : uint = 1500, wsegments : int = 5, hsegments : int = 5, smooth : Boolean = false) {
 			_renderReady = false;
 			reversePlaneAlwaysOn = false;
-			this.orientation = orientation;
+			_orientation = Y_ORIENTED;
+			_flipBackPlane = false;
 			mouseEnabled = false;
 			mouseChildren = false;
 			_wSegments = wsegments;
@@ -437,19 +438,25 @@ package sekati.ui {
 		 * <p><b>Note</b>: At this time it is assumed that this will be set once during initialization; though switching in-line may
 		 * be supported in future versions.</p>
 		 */
-		public function get orientation() : String {
-			return _orientation;
+		public function get flipBackPlane() : Boolean {
+			return _flipBackPlane;
 		}
 		/*** @private */
-		public function set orientation(value : String) : void {
-			if(_orientation == value) {
+		public function set flipBackPlane(value : Boolean) : void {
+			if(_flipBackPlane == value) {
 				return;
-			} else if (value != X_ORIENTED && value != Y_ORIENTED) {
-				//Logger.$.error( this, String( value ) + " is not a valid orientation type. The orientation will not be changed." );
-				return;
-			}
+			} 
 			
-			_orientation = value;
+			
+			_flipBackPlane = value;
+			
+			if(_flipBackPlane){
+				_orientation = X_ORIENTED;
+				material1.scaleX = material1.scaleY = -1;				material1.x = material1.width;				material1.y = material1.height;
+			}else{
+				_orientation = Y_ORIENTED;
+				material1.scaleX = material1.scaleY = 1;				material1.x = material1.y = 0;
+			}
 			
 			if(!_renderReady) {
 				return;
