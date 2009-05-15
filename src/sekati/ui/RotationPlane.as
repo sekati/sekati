@@ -20,16 +20,9 @@ package sekati.ui {
 	 * which can be manipulated via <code>rotateX, rotateY</code>.
 	 */
 	public class RotationPlane extends CoreSprite {
-		/**
-		 * Orient the materials on the X-axis.
-		 * @see #orientation
-		 */
-		public static const X_ORIENTED : String = "x";
-		/**
-		 * Orient the materials on the Y-axis.
-		 * @see #orientation
-		 */
-		public static const Y_ORIENTED : String = "y";
+	
+		private static const X_ORIENTED : String = "x";
+		private static const Y_ORIENTED : String = "y";
 		protected var _orientation : String;
 		protected var _renderReady : Boolean;		protected var _flipBackPlane : Boolean;
 		protected var _bmpd0 : CoreBitmapData;
@@ -433,10 +426,9 @@ package sekati.ui {
 		}
 		/**
 		 * Determines the orientation of the reverse material (<code>material1</code>) to the front material (<code>material0</code>) 
-		 * based on your choosen axis of rotation; this can be set manually.
+		 * must be set manually after initialization.
 		 * 
-		 * <p><b>Note</b>: At this time it is assumed that this will be set once during initialization; though switching in-line may
-		 * be supported in future versions.</p>
+		 * <p><b>Note</b>: this is a totally new usage that will break existing implementations of rotationplane.</p>
 		 */
 		public function get flipBackPlane() : Boolean {
 			return _flipBackPlane;
