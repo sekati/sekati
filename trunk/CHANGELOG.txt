@@ -2,6 +2,12 @@
 
 
 API UPDATE v3.0.5.2 - "Gigan" (IN-PROGRESS)
+* RotationPlane refactored: http://code.google.com/p/sekati/issues/detail?id=70 & http://code.google.com/p/sekati/issues/detail?id=73
+- Added TextUtilTest visual test & build file, removed TextUtilTest.fla.
+// NOT DONE - Fixed Issue #72 in TextUtil.ellipseLine - http://code.google.com/p/sekati/issues/detail?id=72
+- Fixed Doc Issue #71 in IStack - http://code.google.com/p/sekati/issues/detail?id=71 
+- Fixed Issue #66 in TypedArray - http://code.google.com/p/sekati/issues/detail?id=66
+- Modified TypedArrayTest
 - BoolConverter bugfix: "undefined" (String) now returns false.
 - Refactored CoreBitmapTest to CoreBitmapDataTest
 - Added deploy/api-logo.png for tests.
