@@ -39,15 +39,22 @@ if (!isEclipse() || window.name != ECLIPSE_FRAME_NAME) {titleBar_setSubTitle("Cl
 </tr>
 </table>
 <p></p>
-  BrowserAddress provides basic deeplinking through URL anchor getters and setters.
+  BrowserAddress provides <i>basic</i> deeplinking through URL anchor getters and setters.
   
-  <p>While not as powerful or full-featured as <code>SWFAddress</code> it is far easier
-  to implement and support as there is no need to write back/forward code-jumps from all points in the
-  site but only during initialization. The model:<ol>
+  <p>While not as powerful or full-featured as <code>BrowserManager</code> or <code>SWFAddress</code> it is far easier
+  to implement and support as there is no need to write back/forward code-jumps from all points in the site but only 
+  during initialization. The model:<ol>
   <li>Check for anchor links during App initialization & respond with jump code when appropriate.</li>
   <li>Set links as the user drills down to key points in the site or application experience</li>
   </ol></p> 
+  
   <p></p>
+<p>
+<span class="classHeaderTableLabel">See also</span>
+</p>
+<div class="seeAlso">
+<a href="../managers/BrowserManager.html" target="">sekati.managers.BrowserManager</a>
+</div>
 <br>
 <hr>
 </div>

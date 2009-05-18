@@ -1,6 +1,6 @@
 /**
  * SWFMouse - Mac MouseWheel Support for Flash & Ajax.
- * @version 1.1.1
+ * @version 1.1.2
  * @author jason m horwitz | sekati.com
  * Copyright (C) 2008  jason m horwitz, Sekat LLC. All Rights Reserved.
  * Released under the MIT License: http://www.opensource.org/licenses/mit-license.php
@@ -50,11 +50,13 @@ SWFMouse.prototype = {
 	 * mousewheel event handler
 	 */
 	handle: function( delta ){
-		if (this.isSWFIN == true) {
-			document[ this.so.getSWFID() ].externalMouseEvent( delta );
-		} else if (this.isSWFObject == true) {
-			document[ this.so.getObjectById( "id" ) ].externalMouseEvent( delta );
-		}
+		//try {
+			if (this.isSWFIN == true) {
+				document[ this.so.getSWFID() ].externalMouseEvent( delta );
+			} else if (this.isSWFObject == true) {
+				document[ this.so.getObjectById( "id" ) ].externalMouseEvent( delta );
+			}
+		//} catch(err) { }
 	},
 	
 	/**
