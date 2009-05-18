@@ -1,15 +1,15 @@
 /**
  * sekati.ui.RotationPlane
- * @version 1.2.1
+ * @version 1.2.2
  * @author pj ahlberg, jason m horwitz | sekati.com
  * Copyright (C) 2009  jason m horwitz, Sekat LLC. All Rights Reserved.
  * Released under the MIT License: http://www.opensource.org/licenses/mit-license.php
  */
 package sekati.ui {
 	import sekati.display.CoreBitmapData;
-	import sekati.display.CoreSprite;
+	import sekati.display.InteractiveSprite;
 	import sekati.utils.BitmapTransform;
-	
+
 	import flash.display.BitmapData;
 	import flash.display.DisplayObject;
 	import flash.display.Sprite;
@@ -19,13 +19,13 @@ package sekati.ui {
 	 * RotationPlane provides a two dimensional plane containing two <i>"material"</i> <code>DisplayObject</code>'s 
 	 * which can be manipulated via <code>rotateX, rotateY</code>.
 	 */
-	public class RotationPlane extends CoreSprite {
+	public class RotationPlane extends InteractiveSprite {
 
 		protected static const X_ORIENTED : String = "x";
 		protected static const Y_ORIENTED : String = "y";
 		protected var _orientation : String;
 		protected var _renderReady : Boolean;
-		protected var _flipBackPlane : Boolean;
+		protected var _isInvertBackPlane : Boolean;
 		protected var _bmpd0 : CoreBitmapData;
 		protected var _bmpd1 : CoreBitmapData;
 		protected var _frontBitmapTransform : BitmapTransform;
@@ -40,12 +40,12 @@ package sekati.ui {
 		protected var _rotationY : Number;
 		protected var _wSegments : int;
 		protected var _hSegments : int;
-		protected var _smooth : Boolean;
+		protected var _smoothing : Boolean;
 		protected var _side0 : Sprite;
 		protected var _side1 : Sprite;
 		protected var _material0 : DisplayObject;
 		protected var _material1 : DisplayObject;
-		protected var _reversePlaneAlwaysOn : Number;
+		protected var _isReversePlaneVisible : Number;
 		protected var _focalLength : Number;
 		protected var _masterWidth : Number;
 		protected var _masterHeight : Number;
@@ -53,11 +53,11 @@ package sekati.ui {
 		/**
 		 * RotationPlane Constructor
 		 * @param material0 	the first (front) <code>DisplayObject</code>.
-		 * @param material1 	the second (reverse) <code>DisplayObject</code>.
+		 * @param material1 	the second (back) <code>DisplayObject</code>.
 		 * @param focalLength 	the amount of focal distortion: the higher the value the less distortion. (Recommended value: <code>1000-2000</code>). 
 		 * @param wsegments 	the number of horizontal segments (divisons) to slice the materials (effects distortion).
 		 * @param hsegments 	the number of vertical segments (divisons) to slice the materials (effects distortion).
-		 * @param smooth 		determines whether the rotational transformation <code>BitmapData</code> is smoothed or not (effects performance).
+		 * @param smoothing 	determines whether the rotational transformation <code>BitmapData</code> is smoothed or not (effects performance).
 		 * @example <listing version="3.0">
 		 * var plane : RotationPlane = new RotationPlane( loader0.content, loader1.content, RotationPlane.X_ORIENTED );
 		 * plane.addEventListener( MouseEvent.MOUSE_OVER, rotationBack );
@@ -74,21 +74,17 @@ package sekati.ui {
 		 * </listing>
 		 * @see sekati.utils.BitmapTransform
 		 */
-		public function RotationPlane(material0 : DisplayObject, material1 : DisplayObject, focalLength : uint = 1500, wsegments : int = 5, hsegments : int = 5, smooth : Boolean = false) {
+		public function RotationPlane(material0 : DisplayObject, material1 : DisplayObject, focalLength : uint = 1500, wsegments : int = 5, hsegments : int = 5, smoothing : Boolean = false) {
+			isReversePlaneVisible = false;
 			_renderReady = false;
-			reversePlaneAlwaysOn = false;
+			_isInvertBackPlane = false;
 			_orientation = Y_ORIENTED;
-			_flipBackPlane = false;
-			//mouseEnabled = false;
-			//mouseChildren = false;
-			//interactiveMode = false;
 			_wSegments = wsegments;
 			_hSegments = hsegments;
 			
 			_material0 = null;
 			_material1 = null;
-			
-			_smooth = smooth;
+			_smoothing = smoothing;
 			
 			this.material0 = material0;
 			this.material1 = material1;
@@ -106,7 +102,7 @@ package sekati.ui {
 			_side1 = new Sprite( );
 			_spCube.addChild( _side1 );
 			
-			determineMasterDimensions( );
+			calculateMasterDimensions( );
 			
 			_rotationX = 0;
 			_rotationY = 0;
@@ -117,16 +113,16 @@ package sekati.ui {
 		/**
 		 * Determine <code>width : height</code> relationships.
 		 */
-		protected function determineMasterDimensions() : void {
+		protected function calculateMasterDimensions() : void {
 			_masterWidth = (_material0.width >= _material1.width) ? _material0.width : _material1.width;
 			_masterHeight = (_material0.height >= _material1.height) ? _material0.height : _material1.height;
-			alignDisplayObjects( );
+			alignMaterials( );
 		}
 
 		/**
 		 * Align the materials.
 		 */
-		protected function alignDisplayObjects() : void {
+		protected function alignMaterials() : void {
 			material0.x = (_masterWidth * 0.5) - (material0.width * 0.5);
 			material1.x = (_masterWidth * 0.5) - (material1.width * 0.5);
 			material0.y = (_masterHeight * 0.5) - (material0.height * 0.5);
@@ -146,8 +142,8 @@ package sekati.ui {
 			_numVertices = 8;
 			_numFaces = 2;
 
-			setFrontPlane( );
-			setBackPlane( );
+			configFrontPlane( );
+			configBackPlane( );
 			
 			_renderReady = true;
 			renderView( _rotationY, _rotationX );
@@ -156,8 +152,8 @@ package sekati.ui {
 		/**
 		 * Configure the front plane (<code>material0</code>).
 		 */
-		protected function setFrontPlane() : void {
-			_frontBitmapTransform = new BitmapTransform( _material0.width, _material0.height, _wSegments, _hSegments, _smooth );
+		protected function configFrontPlane() : void {
+			_frontBitmapTransform = new BitmapTransform( _material0.width, _material0.height, _wSegments, _hSegments, _smoothing );
 			
 			_vertsArray[0] = [ 0,-_material0.width * 0.5, _material0.height * 0.5 ];
 			_vertsArray[1] = [ 0,_material0.width * 0.5, _material0.height * 0.5 ];
@@ -170,8 +166,8 @@ package sekati.ui {
 		/**
 		 * Configure the back plane (<code>material1</code>).
 		 */
-		protected function setBackPlane() : void {
-			_backBitmapTransform = new BitmapTransform( _material1.width, _material1.height, _wSegments, _hSegments, _smooth );
+		protected function configBackPlane() : void {
+			_backBitmapTransform = new BitmapTransform( _material1.width, _material1.height, _wSegments, _hSegments, _smoothing );
 			
 			if(_orientation == Y_ORIENTED) {
 				_vertsArray[4] = [ -1,_material1.width * 0.5, _material1.height * 0.5 ];
@@ -198,9 +194,8 @@ package sekati.ui {
 		 * Render the view.
 		 */
 		protected function renderView(t : Number, p : Number) : void {
-			if(!_renderReady) {
-				return;
-			}
+			if(!_renderReady) return;
+			
 			var i : int;
 			var distArray : Array = [];
 			var dispArray : Array = [];
@@ -247,7 +242,7 @@ package sekati.ui {
 			for(i = 0; i < _numVertices ;i++) {
 				dispArray[i] = [ _focalLength / (_focalLength - vertsNewArray[i][0]) * vertsNewArray[i][1],-_focalLength / (_focalLength - vertsNewArray[i][0]) * vertsNewArray[i][2] ];
 			}
-			for(i = _reversePlaneAlwaysOn; i < _numFaces ;i++) {
+			for(i = _isReversePlaneVisible; i < _numFaces ;i++) {
 				curFace = distArray[i][1];
 				curv0 = [ dispArray[_facesArray[curFace][0]][0],dispArray[_facesArray[curFace][0]][1] ];
 				curv1 = [ dispArray[_facesArray[curFace][1]][0],dispArray[_facesArray[curFace][1]][1] ];
@@ -258,22 +253,16 @@ package sekati.ui {
 				_facesArray[curFace][5].mapBitmapData( curImg, new Point( curv0[0], curv0[1] ), new Point( curv1[0], curv1[1] ), new Point( curv2[0], curv2[1] ), new Point( curv3[0], curv3[1] ), this["_side" + String( curFace )] );
 			}
 			swapDisplayObjects( );
-			/*_side0.visible = true;
-			_side1.visible = true;
-			material0.visible = false;
-			material1.visible = false;*/
 		}
 
 		/**
 		 * Swap display objects.
 		 */
 		protected function swapDisplayObjects() : void {
-			
 			var frontXFacing : Boolean = false;
 			var frontYFacing : Boolean = false;
 			var backXFacing : Boolean = false;
 			var backYFacing : Boolean = false;
-			
 			
 			if(_rotationX % 180 == 0 && _rotationY % 180 == 0) {
 				if(_rotationX % 360 == 0) {
@@ -288,25 +277,16 @@ package sekati.ui {
 					backYFacing = true;
 				}
 				
-				
 				_side0.visible = false;
 				_side1.visible = false;
 				material0.visible = true;
-				if(reversePlaneAlwaysOn) material1.visible = true;
-				
-				
-				/*trace( "frontXFacing = " + frontXFacing );
-				trace( "frontYFacing = " + frontYFacing );
-				trace( "backXFacing = " + backXFacing );
-				trace( "backYFacing = " + backYFacing );
-				trace( "------------------------------------------------" );*/
+				if(isReversePlaneVisible) material1.visible = true;		
 			} else {
 				_side0.visible = true;
 				_side1.visible = true;
 				material0.visible = false;
 				material1.visible = false;
 			}
-
 			
 			//front facing Y rotation
 			if(frontXFacing == true && frontYFacing == true && backXFacing == false && backYFacing == false) {
@@ -360,18 +340,18 @@ package sekati.ui {
 		}
 
 		/*** @private */
-		public function set material0(value : DisplayObject) : void {
+		public function set material0(obj : DisplayObject) : void {
 			if(_material0 != null) {
 				removeChild( _material0 );
 				_material0 = null;
 			}
-			_material0 = value;
+			_material0 = obj;
 			addChild( _material0 );
 			_bmpd0 = new CoreBitmapData( _material0, 0, 0, NaN, NaN, 1, true );
 			if(!_renderReady) {
 				return;
 			}
-			setFrontPlane( );
+			configFrontPlane( );
 			renderView( _rotationY, _rotationX );
 		}
 
@@ -383,18 +363,18 @@ package sekati.ui {
 		}
 
 		/*** @private */
-		public function set material1(value : DisplayObject) : void {
+		public function set material1(obj : DisplayObject) : void {
 			if(_material1 != null) {
 				removeChild( _material1 );
 				_material1 = null;
 			}
-			_material1 = value;
+			_material1 = obj;
 			addChild( _material1 );
 			_bmpd1 = new CoreBitmapData( _material1, 0, 0, NaN, NaN, 1, true );
 			if(!_renderReady) {
 				return;
 			}
-			setBackPlane( );
+			configBackPlane( );
 			renderView( _rotationY, _rotationX );
 		}
 
@@ -409,8 +389,8 @@ package sekati.ui {
 		}
 
 		/*** @private */
-		public function set rotateX(value : Number) : void {
-			_rotationX = value;
+		public function set rotateX(n : Number) : void {
+			_rotationX = n;
 			renderView( _rotationY, _rotationX );
 		}
 
@@ -425,52 +405,49 @@ package sekati.ui {
 		}
 
 		/*** @private */
-		public function set rotateY(value : Number) : void {
-			_rotationY = value;
+		public function set rotateY(n : Number) : void {
+			_rotationY = n;
 			renderView( _rotationY, _rotationX );
 		}
 
 		/**
 		 * Determines whether the <code>BitmapData</code> smoothing is applied to the plane rotations or not.
 		 */
-		public function get smooth() : Boolean {
-			return _smooth;
+		public function get smoothing() : Boolean {
+			return _smoothing;
 		}
 
 		/*** @private */
-		public function set smooth(value : Boolean) : void {
-			_smooth = value;
+		public function set smoothing(b : Boolean) : void {
+			_smoothing = b;
 			for (var i : int = 0; i < _btArray.length ; i++) {
-				_btArray[i]._smooth = _smooth;
+				_btArray[i]._smooth = _smoothing;
 			}
 			renderView( _rotationY, _rotationX );
 		}
 
 		/**
-		 * Determines the orientation of the reverse material (<code>material1</code>) to the front material (<code>material0</code>) 
+		 * Determines the orientation of the back material (<code>material1</code>) to the front material (<code>material0</code>) 
 		 * must be set manually after initialization.
 		 * 
 		 * <p><b>Note</b>: this is a totally new usage that will break existing implementations of rotationplane.</p>
 		 */
-		public function get flipBackPlane() : Boolean {
-			return _flipBackPlane;
+		public function get isInvertBackPlane() : Boolean {
+			return _isInvertBackPlane;
 		}
 
 		/*** @private */
-		public function set flipBackPlane(value : Boolean) : void {
-			if(_flipBackPlane == value) {
-				return;
-			} 
+		public function set isInvertBackPlane(b : Boolean) : void {
+			if(_isInvertBackPlane == b) return;
+						
+			_isInvertBackPlane = b;
 			
-			
-			_flipBackPlane = value;
-			
-			if(_flipBackPlane){
+			if(_isInvertBackPlane) {
 				_orientation = X_ORIENTED;
 				material1.scaleX = material1.scaleY = -1;
 				material1.x = material1.width;
 				material1.y = material1.height;
-			}else{
+			} else {
 				_orientation = Y_ORIENTED;
 				material1.scaleX = material1.scaleY = 1;
 				material1.x = material1.y = 0;
@@ -479,27 +456,19 @@ package sekati.ui {
 			if(!_renderReady) {
 				return;
 			}
-			setBackPlane( );
+			configBackPlane( );
 		}
 
 		/**
 		 * Determines whether the reverse plane material will always be visible (<code>true</code>) or not (<code>false</code>).
 		 */
-		public function get reversePlaneAlwaysOn() : Boolean {
-			if(_reversePlaneAlwaysOn == 0) {
-				return true;
-			} else {
-				return false;
-			}
+		public function get isReversePlaneVisible() : Boolean {
+			return (_isReversePlaneVisible == 0) ? true : false;
 		}
 
 		/*** @private */
-		public function set reversePlaneAlwaysOn(value : Boolean) : void {
-			if(value == true) {
-				_reversePlaneAlwaysOn = 0;
-			}else if(value == false) {
-				_reversePlaneAlwaysOn = 1;
-			}
+		public function set isReversePlaneVisible(b : Boolean) : void {
+			_isReversePlaneVisible = (b) ? 0 : 1;
 		}
 
 		/**

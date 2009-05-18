@@ -53,7 +53,7 @@
 		<menu verbose="true">true</menu>
 		<fullscreen>true</fullscreen>
 		<track>true</track>
-		<deeplink>false</deeplink>
+		<deeplink>true</deeplink>
 		<performance_monitor>true</performance_monitor>
 	</option>
 
