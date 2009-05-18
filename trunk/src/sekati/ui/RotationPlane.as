@@ -1,6 +1,6 @@
 /**
  * sekati.ui.RotationPlane
- * @version 1.2.0
+ * @version 1.2.1
  * @author pj ahlberg, jason m horwitz | sekati.com
  * Copyright (C) 2009  jason m horwitz, Sekat LLC. All Rights Reserved.
  * Released under the MIT License: http://www.opensource.org/licenses/mit-license.php
@@ -8,7 +8,6 @@
 package sekati.ui {
 	import sekati.display.CoreBitmapData;
 	import sekati.display.CoreSprite;
-	import sekati.display.InteractiveSprite;
 	import sekati.utils.BitmapTransform;
 	
 	import flash.display.BitmapData;
@@ -20,7 +19,7 @@ package sekati.ui {
 	 * RotationPlane provides a two dimensional plane containing two <i>"material"</i> <code>DisplayObject</code>'s 
 	 * which can be manipulated via <code>rotateX, rotateY</code>.
 	 */
-	public class RotationPlane extends InteractiveSprite {
+	public class RotationPlane extends CoreSprite {
 
 		protected static const X_ORIENTED : String = "x";
 		protected static const Y_ORIENTED : String = "y";
@@ -93,7 +92,6 @@ package sekati.ui {
 			
 			this.material0 = material0;
 			this.material1 = material1;
-			
 			
 			this.material0.visible = false;
 			this.material1.visible = false;
