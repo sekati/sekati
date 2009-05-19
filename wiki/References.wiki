@@ -6,7 +6,7 @@ A few of the projects built on *Sekati API*:
 
   * [http://www.akamai.com/html/technology/visualizing_akamai.html Akamai]
   * [http://www.avraverde.com Avra Verde]
-  * Boeing (Link forthcoming)
+  * [http://www.newairplane.com/787/ Boeing: New Airplane]
   * [http://www.ewingcole.com/ EwingCole]
   * [http://www.fontainebleau.com Fontainebleau Resorts]
   * [http://www.kssarchitects.com KSS Architects]
