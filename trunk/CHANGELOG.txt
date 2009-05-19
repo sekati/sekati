@@ -2,9 +2,10 @@
 
 
 API UPDATE v3.0.5.2 - "Gigan" (IN-PROGRESS)
-- TODO: TextButtonTest
 - TODO: BrowserManagerTest
 - TODO: Redoc / refactor / redefined BrowserManager (back/forward/go/etc - see SWFAddress for cues on easy functional additions).
+- Added path & previousPath to BrowserEvent.
+- BrowserAddress: added back() forward() & go(delta).
 - Updated comments in sekati.external.BrowserAddress.
 * Deprecated BrowserAddress for the full in-line solution provided by BrowserManager.
 * Refactored sekati.core.Bootstrap to enable the BrowserManager when <deeplink>true</code>.
