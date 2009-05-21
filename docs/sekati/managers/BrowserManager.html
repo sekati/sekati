@@ -4,7 +4,7 @@
 <META http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <link rel="stylesheet" href="../../style.css" type="text/css" media="screen">
 <link rel="stylesheet" href="../../print.css" type="text/css" media="print">
-<meta content="BrowserManager,sekati.managers.BrowserManager,MONITOR_MS,$,anchor,isMonitoring,title,getInstance,startMonitor,stopMonitor,updateMonitor" name="keywords">
+<meta content="BrowserManager,sekati.managers.BrowserManager,MONITOR_MS,$,isMonitoring,path,pathArray,title,back,forward,getInstance,pop,push,startMonitor,stopMonitor,updateMonitor" name="keywords">
 <title>sekati.managers.BrowserManager</title>
 </head>
 <body>
@@ -47,10 +47,13 @@ if (!isEclipse() || window.name != ECLIPSE_FRAME_NAME) {titleBar_setSubTitle("Cl
   more complex <code>HTML/JavaScript</code> centric solutions such as SWFAddress in exchange for a very small performance trade off. In other words: 
   this is a pure ActionScript solution to the browser "back button" question.</p>
   
-  <p><b>Note</b>: In general, BrowserManager only dispatches <code>BrowserEvent</code> events when the <i>user</i> changes the browser 
-  anchor (thru the back/forward button or manually). The manager <i>intentionally</i> does not dispatch these events when the application itself changes 
-  the anchor via the BrowserManager facility; <i>however</i> if changed via javascript or actionscript wrappers such as <code>BrowserAddress</code> the
-  <code>BrowserEvent</code> will fire.</p>
+  <p><b>Note</b>: It is important to understand the relationship between <code>BrowserManager</code> & <code>BrowserAddress</code>; baseline anchor
+  management logic can be controlled thru either class but advanced management & notification is best done via the manager.</p>
+  
+  <p>In general, BrowserManager only dispatches <code>BrowserEvent</code> events when the <i>user</i> changes the browser 
+  anchor (thru the back/forward button, manually or via <code>BrowserAddress</code>). The manager <i>intentionally</i> does not dispatch 
+  these events when the application itself changes the anchor via the BrowserManager facility; <i>however</i> if changed via javascript 
+  or actionscript wrappers such as <code>BrowserAddress</code> the <code>BrowserEvent</code> will fire.</p>
   
   <p></p>
 <br>
@@ -59,7 +62,7 @@ if (!isEclipse() || window.name != ECLIPSE_FRAME_NAME) {titleBar_setSubTitle("Cl
   BrowserManager.$.addEventListener( BrowserEvent.ADDRESS_CHANGE, browserAddressChangeHandler );
   
   function browserAddressChangeHandler(e : BrowserEvent ) : void {
-    trace( " the browser address changed " );
+    trace( " the browser address changed to: " + e.path + " from: " + e.previousPath );
   }
   </pre></div>
   
@@ -92,20 +95,23 @@ if (!isEclipse() || window.name != ECLIPSE_FRAME_NAME) {titleBar_setSubTitle("Cl
 </td><td class="summaryTableOwnerCol">BrowserManager</td>
 </tr>
 <tr class="">
-<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a class="signatureLink" href="#anchor">anchor</a> : String<div class="summaryTableDescription">
-   Returns value of the _anchor
-   </div>
-</td><td class="summaryTableOwnerCol">BrowserManager</td>
-</tr>
-<tr class="">
 <td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a class="signatureLink" href="#isMonitoring">isMonitoring</a> : Boolean<div class="summaryTableDescription">[read-only]
    Whether the manager is currently monitoring the browser for address changes or not.</div>
 </td><td class="summaryTableOwnerCol">BrowserManager</td>
 </tr>
 <tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a class="signatureLink" href="#path">path</a> : String<div class="summaryTableDescription">
+   The browser anchor path.</div>
+</td><td class="summaryTableOwnerCol">BrowserManager</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a class="signatureLink" href="#pathArray">pathArray</a> : Array<div class="summaryTableDescription">
+   The browser anchor path as an array of paths.</div>
+</td><td class="summaryTableOwnerCol">BrowserManager</td>
+</tr>
+<tr class="">
 <td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a class="signatureLink" href="#title">title</a> : String<div class="summaryTableDescription">
-   Returns value of property
-   </div>
+   The browser page title.</div>
 </td><td class="summaryTableOwnerCol">BrowserManager</td>
 </tr>
 </table>
@@ -129,11 +135,43 @@ if (!isEclipse() || window.name != ECLIPSE_FRAME_NAME) {titleBar_setSubTitle("Cl
 <tr class="">
 <td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
 <div class="summarySignature">
+<a class="signatureLink" href="#back()">back</a>():void</div>
+<div class="summaryTableDescription">
+   Move back in the browser history.</div>
+</td><td class="summaryTableOwnerCol">BrowserManager</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="#forward()">forward</a>():void</div>
+<div class="summaryTableDescription">
+   Move forward in the browser history.</div>
+</td><td class="summaryTableOwnerCol">BrowserManager</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
 <a class="signatureLink" href="#getInstance()">getInstance</a>():<a href="../managers/BrowserManager.html">BrowserManager</a>
 </div>
 <div class="summaryTableDescription">[static]
    Singleton Accessor
    </div>
+</td><td class="summaryTableOwnerCol">BrowserManager</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="#pop()">pop</a>():void</div>
+<div class="summaryTableDescription">
+   Remove the last item from the pathArray.</div>
+</td><td class="summaryTableOwnerCol">BrowserManager</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="#push()">push</a>(val:String):void</div>
+<div class="summaryTableDescription">
+   Push an item on to the pathArray.</div>
 </td><td class="summaryTableOwnerCol">BrowserManager</td>
 </tr>
 <tr class="">
@@ -157,9 +195,8 @@ if (!isEclipse() || window.name != ECLIPSE_FRAME_NAME) {titleBar_setSubTitle("Cl
 <div class="summarySignature">
 <a class="signatureLink" href="#updateMonitor()">updateMonitor</a>():void</div>
 <div class="summaryTableDescription">
-   This method is used by <code>BrowserAddress</code> to signal a code-driven anchor 
-   change which <i>should not</i> trigger a <code>BrowserEvent</code> to be fired:
-   only Browser back/forward buttons or manual URL changes should trigger the event.</div>
+   Update the current (tracking) path to the current browser anchor (this prevents the 
+   BrowserManager from dispatching a <code>BrowserEvent</code> due to a address change).</div>
 </td><td class="summaryTableOwnerCol">BrowserManager</td>
 </tr>
 </table>
@@ -199,22 +236,6 @@ showHideInherited();
 <code>&nbsp;&nbsp;&nbsp;&nbsp;public static function get $():<a href="../managers/BrowserManager.html">BrowserManager</a></code>
 <br>
 </div>
-<a name="anchor"></a>
-<table cellspacing="0" cellpadding="0" class="detailHeader">
-<tr>
-<td class="detailHeaderName">anchor</td><td class="detailHeaderType">property</td><td class="detailHeaderRule">&nbsp;</td>
-</tr>
-</table>
-<div class="detailBody">
-<code>anchor:String</code>&nbsp;&nbsp;[read-write]<p>
-   Returns value of the _anchor
-   </p><span class="label">Implementation</span>
-<br>
-<code>&nbsp;&nbsp;&nbsp;&nbsp;public function get anchor():String</code>
-<br>
-<code>&nbsp;&nbsp;&nbsp;&nbsp;public function set anchor(value:String):void</code>
-<br>
-</div>
 <a name="isMonitoring"></a>
 <table cellspacing="0" cellpadding="0" class="detailHeader">
 <tr>
@@ -229,6 +250,38 @@ showHideInherited();
 <code>&nbsp;&nbsp;&nbsp;&nbsp;public function get isMonitoring():Boolean</code>
 <br>
 </div>
+<a name="path"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">path</td><td class="detailHeaderType">property</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>path:String</code>&nbsp;&nbsp;[read-write]<p>
+   The browser anchor path.
+   </p><span class="label">Implementation</span>
+<br>
+<code>&nbsp;&nbsp;&nbsp;&nbsp;public function get path():String</code>
+<br>
+<code>&nbsp;&nbsp;&nbsp;&nbsp;public function set path(value:String):void</code>
+<br>
+</div>
+<a name="pathArray"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">pathArray</td><td class="detailHeaderType">property</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>pathArray:Array</code>&nbsp;&nbsp;[read-write]<p>
+   The browser anchor path as an array of paths.
+   </p><span class="label">Implementation</span>
+<br>
+<code>&nbsp;&nbsp;&nbsp;&nbsp;public function get pathArray():Array</code>
+<br>
+<code>&nbsp;&nbsp;&nbsp;&nbsp;public function set pathArray(value:Array):void</code>
+<br>
+</div>
 <a name="title"></a>
 <table cellspacing="0" cellpadding="0" class="detailHeader">
 <tr>
@@ -237,7 +290,7 @@ showHideInherited();
 </table>
 <div class="detailBody">
 <code>title:String</code>&nbsp;&nbsp;[read-write]<p>
-   Returns value of property
+   The browser page title.
    </p><span class="label">Implementation</span>
 <br>
 <code>&nbsp;&nbsp;&nbsp;&nbsp;public function get title():String</code>
@@ -266,10 +319,30 @@ showHideInherited();
 </div>
 <a name="methodDetail"></a>
 <div class="detailSectionHeader">Method detail</div>
+<a name="back()"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">back</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public function back():void</code><p>
+   Move back in the browser history.
+   </p></div>
+<a name="forward()"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">forward</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public function forward():void</code><p>
+   Move forward in the browser history.
+   </p></div>
 <a name="getInstance()"></a>
 <table cellspacing="0" cellpadding="0" class="detailHeader">
 <tr>
-<td class="detailHeaderName">getInstance</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td>
+<td class="detailHeaderName">getInstance</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td>
 </tr>
 </table>
 <div class="detailBody">
@@ -284,6 +357,32 @@ showHideInherited();
    
                         
                      </td>
+</tr>
+</table>
+</div>
+<a name="pop()"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">pop</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public function pop():void</code><p>
+   Remove the last item from the pathArray.
+   </p></div>
+<a name="push()"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">push</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public function push(val:String):void</code><p>
+   Push an item on to the pathArray.
+   </p><span class="label">Parameters</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20px"></td><td><code><span class="label">val</span>:String</code></td>
 </tr>
 </table>
 </div>
@@ -315,9 +414,8 @@ showHideInherited();
 </table>
 <div class="detailBody">
 <code>public function updateMonitor():void</code><p>
-   This method is used by <code>BrowserAddress</code> to signal a code-driven anchor 
-   change which <i>should not</i> trigger a <code>BrowserEvent</code> to be fired:
-   only Browser back/forward buttons or manual URL changes should trigger the event. 
+   Update the current (tracking) path to the current browser anchor (this prevents the 
+   BrowserManager from dispatching a <code>BrowserEvent</code> due to a address change).
    </p></div>
 <a name="constantDetail"></a>
 <div class="detailSectionHeader">Constant detail</div>
