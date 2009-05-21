@@ -2,6 +2,7 @@
 
 
 API UPDATE v3.0.5.2 - "Gigan" (IN-PROGRESS)
+- Updated deploy/index.html copyright meta tag.
 - Refactored BrowserManager properties: path, pathArray.
 - Removed BrowserManager.$.go() & BrowserAddress.go();
 - Added BrowserManagerTest
