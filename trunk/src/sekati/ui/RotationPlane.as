@@ -1,6 +1,6 @@
 /**
  * sekati.ui.RotationPlane
- * @version 1.2.2
+ * @version 1.2.3
  * @author pj ahlberg, jason m horwitz | sekati.com
  * Copyright (C) 2009  jason m horwitz, Sekat LLC. All Rights Reserved.
  * Released under the MIT License: http://www.opensource.org/licenses/mit-license.php
@@ -330,6 +330,27 @@ package sekati.ui {
 			newCoords[1] = -v[0] * Math.sin( theta ) + v[1] * Math.cos( theta );
 			newCoords[2] = -v[0] * Math.cos( theta ) * Math.cos( phi ) - v[1] * Math.sin( theta ) * Math.cos( phi ) + v[2] * Math.sin( phi );
 			return newCoords;
+		}
+
+		/**
+		 * Update the <code>BitmapData</code> for both materials on the plane.
+		 */		public function redraw() : void {
+			updateMaterial0( );
+			updateMaterial1( );
+		}
+		
+		/**
+		 * Update the <code>BitmapData</code> for <code>material0</code>.
+		 */
+		public function updateMaterial0() : void {
+			material0 = _material0;
+		}
+
+		/**
+		 * Update the <code>BitmapData</code> for <code>material1</code>.
+		 */
+		public function updateMaterial1() : void {
+			material1 = _material1;
 		}
 
 		/**

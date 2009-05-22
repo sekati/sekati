@@ -1,7 +1,13 @@
 ------ SEKATI API CHANGELOG ------
 
 
-API UPDATE v3.0.5.2 - "Gigan" (IN-PROGRESS)
+API UPDATE v3.0.5.3 - "Gigan" (IN-PROGRESS)
+-
+
+
+API UPDATE v3.0.5.2 - "Gigan"
+- Added updateMaterials() updateMaterial0() & updateMaterial1() to RotationPlane.
+- Increased BrowserManager polling time to 1500ms.
 - Updated deploy/index.html copyright meta tag.
 - Refactored BrowserManager properties: path, pathArray.
 - Removed BrowserManager.$.go() & BrowserAddress.go();

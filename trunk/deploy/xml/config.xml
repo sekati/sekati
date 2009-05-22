@@ -20,7 +20,7 @@
 	-->
 	<app>
 		<name>Sekati API</name>
-		<version>3.0.5.1</version>
+		<version>3.0.5.2</version>
 	</app>
 
 	<!--
@@ -52,8 +52,8 @@
 		<log target="ALL">true</log>
 		<menu verbose="true">true</menu>
 		<fullscreen>true</fullscreen>
-		<track>true</track>
-		<deeplink>true</deeplink>
+		<track>false</track>
+		<deeplink>false</deeplink>
 		<performance_monitor>true</performance_monitor>
 	</option>
 
