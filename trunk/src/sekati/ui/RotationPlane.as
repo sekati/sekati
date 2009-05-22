@@ -1,6 +1,6 @@
 /**
  * sekati.ui.RotationPlane
- * @version 1.2.3
+ * @version 1.2.4
  * @author pj ahlberg, jason m horwitz | sekati.com
  * Copyright (C) 2009  jason m horwitz, Sekat LLC. All Rights Reserved.
  * Released under the MIT License: http://www.opensource.org/licenses/mit-license.php
@@ -334,7 +334,7 @@ package sekati.ui {
 
 		/**
 		 * Update the <code>BitmapData</code> for both materials on the plane.
-		 */		public function redraw() : void {
+		 */		public function updateMaterials() : void {
 			updateMaterial0( );
 			updateMaterial1( );
 		}
