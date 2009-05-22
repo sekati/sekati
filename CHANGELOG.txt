@@ -2,7 +2,7 @@
 
 
 API UPDATE v3.0.5.3 - "Gigan" (IN-PROGRESS)
--
+* Fixed typo in RotationPlane.updateMaterials() - was redraw()
 
 
 API UPDATE v3.0.5.2 - "Gigan"
