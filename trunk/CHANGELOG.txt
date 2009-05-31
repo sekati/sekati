@@ -2,7 +2,24 @@
 
 
 API UPDATE v3.0.5.3 - "Gigan" (IN-PROGRESS)
-* Added Document logger message noting API build info.
+* Removed TextUtil.ellipseLine().
+- Added TextUtil.truncateText().
+- Added TextUtil.truncateMultilineText().
+- Added TextUtil.getUsableFonts();
+- Added TextUtil.setTextFont().
+- Added TextUtil.setTextColor().
+- Added TextUtil.setTextLetterSpacing().
+* Refactored TextUtil.setSpacesWidth() -> setTextSpaceWidth().
+* Refactored TextUtil.setLeading() -> setTextLeading().
+* Refactored TextUtil.create() -> createField().
+* Refactored TextUtil.reveal() -> revealFields().
+* Refactored TextUtil.hide() -> hideFields().
+- Added CSS1 explanation to asdoc in App.css.
+- Added TextUtil.formatFields()
+* Removed TextUtil.style() -> @see styleFields().
+* Removed TextUtil.clear() -> @see clearFields().
+* Refactored TextUtil.show() to TextUtil.setStyledText()
+- Added Document logger message noting API build info.
 * Fixed typo in RotationPlane.updateMaterials() - was redraw()
 
 
