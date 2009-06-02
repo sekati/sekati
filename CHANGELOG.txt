@@ -1,6 +1,28 @@
 ------ SEKATI API CHANGELOG ------
 
 
+3.1.x.x PRE-ALPHA BRANCH (JASON-CHANGES):
+* Moved all Application classes to core package.
+* Refactored App -> Configuration.
+* Refactored DocumentPreloader -> ApplicationPreloader.
+* Refactored DocumentAir -> ApplicationAir.
+* Refactored Document -> Application.
+* Refactored KeyFactory to utils package.
+* Refactored TextUtil, ContextMenuManager, Urchin, Document to use new Configuration refactoring.
+* Refactored sekati.display.StageDisplay -> sekati.managers.StageManager
+- Fixed ContextMenuManager, Document, DocumentAir, InteractiveSprite, LiquidSprite, Viewport classes to use the new StageManager.
+- Added sekati.transitions.EquationType class for Tweener easing equation constants.
+* Removed Constants from sekati.transitions.Motion.
+* sekati.geom.Point no longer extends sekati.core.CoreObject. 
+* sekati.draw.CoreShape moved to sekati.display.CoreShape.
+* Removed sekati.core.ICoreInterface
+* Refactored StopWatch and AbstractTextField interfaces.
+* Removed sekati.geom.Point3D.
+* Removed sekati.geom.IPoint.
+* Refactored sekati.geom.Point to sekati.geom.CorePoint which now extends flash.geom.Point.
+* Removed TrigBase.getZDistance().
+
+
 API UPDATE v3.0.5.3 - "Gigan" (IN-PROGRESS)
 - Added sekati.draw.CoreShape.
 * Removed TextUtil.ellipseLine().
