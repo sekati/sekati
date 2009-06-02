@@ -1,8 +1,8 @@
 ------ SEKATI API CHANGELOG ------
 
 
-API UPDATE v3.0.5.3 - "Gigan" (IN-PROGRESS)
-- Added sekati.draw.CoreShape.
+API UPDATE v3.0.5.3 - "Gigan"
+- Added sekati.display.CoreShape.
 * Removed TextUtil.ellipseLine().
 - Added TextUtil.truncateText().
 - Added TextUtil.truncateMultilineText().
