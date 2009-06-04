@@ -54,5 +54,8 @@
 		you most set <config persist="true">.
 	-->
 	<custom>
+		<!-- 
+		<test />
+		 -->
 	</custom>
 </config>
