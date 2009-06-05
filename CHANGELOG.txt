@@ -2,6 +2,11 @@
 
 
 3.1.x.x PRE-ALPHA BRANCH (JASON-CHANGES):
+- Implemented FontManager in Bootstrap.loadFontLibrary.
+- Added CoordTool.local3DToLocal3D.
+* Refactored ApplicationEvent to CentralEvent so as not to confuse it as a core class. 
+* Refactored ApplicationEventDispatcher to CentralEventDispatcher so as not to confuse it as a core class. 
+- Fixed Bootstrap log messaging of boot stage numbers.
 - Fixed Bootstrap death logger messaging bug in retry() which failed to report the offending method name that caused the death.
 - Added Bootstrap.loadFontLibrary().
 - Fixed Bootstrap.
