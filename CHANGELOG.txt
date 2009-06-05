@@ -2,6 +2,10 @@
 
 
 API UPDATE v3.0.5.3 - "Gigan"
+- Changed CoreBitmapData default fill color to transparent white: 0xffff00 to better support RotationPlane.
+
+
+API UPDATE v3.0.5.3 - "Gigan"
 - Added sekati.display.CoreShape.
 * Removed TextUtil.ellipseLine().
 - Added TextUtil.truncateText().
