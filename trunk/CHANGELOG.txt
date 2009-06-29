@@ -1,7 +1,9 @@
 ------ SEKATI API CHANGELOG ------
 
 
-API UPDATE v3.0.5.3 - "Gigan"
+API UPDATE v3.0.5.4 - "Gigan"
+- Added DateUtil.toOrdinal() - http://code.google.com/p/sekati/issues/detail?id=77
+- Fixed bug in DateUtil.padTime() - http://code.google.com/p/sekati/issues/detail?id=76
 - Changed CoreBitmapData default fill color to transparent white: 0xffff00 to better support RotationPlane.
 
 
