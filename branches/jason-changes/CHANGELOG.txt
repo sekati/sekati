@@ -2,6 +2,7 @@
 
 
 3.1.x.x PRE-ALPHA BRANCH (JASON-CHANGES):
+- Changed CoreBitmapData default fill color to transparent white: 0xffff00 to better support RotationPlane.
 - Added DateUtil.toOrdinal() - http://code.google.com/p/sekati/issues/detail?id=77
 - Fixed bug in DateUtil.padTime() - http://code.google.com/p/sekati/issues/detail?id=76
 * Added Tweener version to log message in Application init sequence.
