@@ -1,9 +1,9 @@
 /* Sekati Framework Page Styles */
 
-body, html, td {
-	margin-top: 0;
+body, html {
+	margin: 0;
 	/*margin-left: 10px;*/
-	height: 100%;	
+	/*height: 100%;*/	
 	background: #FFF;
 	color: #999;
 	font-family: Verdana, Arial, Helvetica, Geneva;
