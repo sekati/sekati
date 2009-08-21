@@ -2,6 +2,18 @@
 
 
 3.1.x.x PRE-ALPHA BRANCH (JASON-CHANGES):
+* Added 'allowFuzzyMatch' optional argument to ContextualMenu.getItemId() - default: false for backwards compatibility.
+* Removed FPSProfiler.
+* Removed MemoryProfiler.
+- Added PerformanceGraphUI.
+* Replaced PerformanceMonitor with a graphing UI and Singleton class for better tracking & ContextMenuManager integration.
+* Refactored AbstractTestApplication to function with new monitor and other API functionality.
+- Revised PerformanceMonitorTest.
+- Fixed ContextMenuManager to function with the new PerformanceMonitor class.
+- Fixed Bootstrap to function with the new PerformanceMonitor class.
+- Fixed minor issue with ContextMenuManager to allow "dumb" or headless API apps to utilize the ContextMenuManager.
+- Removed 'td' from body, html CSS tag, and 100% height, margin:0, in css/style.css to remove default bordering and scrollbar.
+- Updated tweener.swc to latest: 1_33_74
 - Changed CoreBitmapData default fill color to transparent white: 0xffff00 to better support RotationPlane.
 - Added DateUtil.toOrdinal() - http://code.google.com/p/sekati/issues/detail?id=77
 - Fixed bug in DateUtil.padTime() - http://code.google.com/p/sekati/issues/detail?id=76
