@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- *************************************************************************************
+		Sekati API Framework Buildfile v3.1.0.1
+		
+		Jun 5, 2009 - jason m horwitz | SEKATI, LLC | sekati.com
+		
+		Released under the MIT License: http://www.opensource.org/licenses/mit-license.php
+		
+		@see	http://sekati.googlecode.com/		
+		
+		@note	This buildfile can be used in any standard Eclipse environment with FlexSDK.
+		
+		@info	You *must* run this Buildfile in the same JRE as the workspace. To configure
+		        this: Run -> External Tools -> JRE -> Run in the same JRE as the workspace
+		        
+     ************************************************************************************* -->
+
+<project name="Sekati API Buildfile" default="build" basedir="../">
+
+
+	<!-- DEFINITIONS -->
+	<property file="${basedir}/build/sekati.build.properties" />
+
+
+	<!-- RESOURCE -->
+	<taskdef resource="flexTasks.tasks" classpath="${FLEX_HOME}/ant/lib/flexTasks.jar" />
+
+
+	<!-- **************************************************************** 
+		 CUSTOMIZE BEGINS 
+		 **************************************************************** -->
+
+
+	<target name="build" description="Default Project Build" depends="verify-properties">
+		<echo>@@@ SEKATI Buildfile | jason m horwitz | sekati.com @@@</echo>
+		<antcall target="compile-swc" />
+	</target>
+
+
+	<!-- **************************************************************** 
+		 CUSTOMIZE ENDS
+		 **************************************************************** -->
+
+
+
+	<!-- *************************************************************************************
+		 							INTERNAL TARGETS BELOW			        
+	     ************************************************************************************* -->
+
+
+	<!-- BUILD AUTOMATION -->
+
+	
+	<target name="compile-swc" description="Compile project.swc.source in to an SWC library file">
+		<echo>SWC Compiler -> ${project.swc.source}: ${project.swc}</echo>
+		<compc output="${project.swc}">
+			<source-path path-element="${src.dir}" />
+			<include-sources dir="${project.swc.source}">
+				<include name="*" />
+				<exclude name="**/.svn" />
+			</include-sources>
+			<metadata title="${project.meta.title}" description="${project.meta.description}" date="${project.meta.date}">
+				<contributor name="${project.meta.contributor}" />
+				<creator name="${project.meta.creator}" />
+				<publisher name="${project.meta.publisher}" />
+			</metadata>
+		</compc>
+	</target>
+
+
+	<!-- SANITY CHECK -->
+
+
+	<target name="verify-properties">
+		<fail unless="FLEX_HOME">The "FLEX_HOME" property must be set in build/build.properties.</fail>
+	</target>
+
+
+</project>

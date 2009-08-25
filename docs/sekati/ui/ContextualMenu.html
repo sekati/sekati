@@ -156,7 +156,7 @@ if (!isEclipse() || window.name != ECLIPSE_FRAME_NAME) {titleBar_setSubTitle("Cl
 <tr class="">
 <td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
 <div class="summarySignature">
-<a class="signatureLink" href="#getItemId()">getItemId</a>(caption:String, allowFuzzyMatch:Boolean = false):Number</div>
+<a class="signatureLink" href="#getItemId()">getItemId</a>(caption:String):Number</div>
 <div class="summaryTableDescription">
    Returns the <code>ContextualMenu</code> item id that matches the <code>caption</code> arguments caption.</div>
 </td><td class="summaryTableOwnerCol">ContextualMenu</td>
@@ -489,19 +489,12 @@ showHideInherited();
 </tr>
 </table>
 <div class="detailBody">
-<code>public function getItemId(caption:String, allowFuzzyMatch:Boolean = false):Number</code><p>
+<code>public function getItemId(caption:String):Number</code><p>
    Returns the <code>ContextualMenu</code> item id that matches the <code>caption</code> arguments caption.
    </p><span class="label">Parameters</span>
 <table border="0" cellspacing="0" cellpadding="0">
 <tr>
-<td width="20px"></td><td><code><span class="label">caption</span>:String</code> &mdash;    the <code>ContextualMenu</code> item's <code>caption</code>.
-   </td>
-</tr>
-<tr>
-<td class="paramSpacer">&nbsp;</td>
-</tr>
-<tr>
-<td width="20px"></td><td><code><span class="label">allowFuzzyMatch</span>:Boolean</code> (default = <code>false</code>)<code></code> &mdash; if <code>true</code> the 1st <i>fuzzy match (e.g. the 1st item which contains the <code>caption</code> argument<i> will be returned), if <code>false</code> an absolute match will be sought out.
+<td width="20px"></td><td><code><span class="label">caption</span>:String</code> &mdash;  the <code>ContextualMenu</code> item's <code>caption</code>.
    </td>
 </tr>
 </table>
@@ -509,7 +502,7 @@ showHideInherited();
 <span class="label">Returns</span>
 <table border="0" cellspacing="0" cellpadding="0">
 <tr>
-<td width="20"></td><td><code>Number</code> &mdash; Number   the <code>ContextualMenu</code> item id or <code>NaN</code> if no match was found.
+<td width="20"></td><td><code>Number</code> &mdash; Number the <code>ContextualMenu</code> item id or <code>NaN</code> if no match was found.
    </td>
 </tr>
 </table>
