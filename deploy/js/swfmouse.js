@@ -72,8 +72,8 @@ SWFMouse.prototype = {
 			// mozilla
 			delta = -event.detail / 3;
 		}		
-		// safari
-       	if(/AppleWebKit/.test( navigator.userAgent )) delta /= 3;
+		// safari - since v4.x this seems not to be necessary!
+       	//if(/AppleWebKit/.test( navigator.userAgent )) delta /= 3;
 		// normalize the delta
 		delta = SWFMouse.instance.clamp( delta );
 		// pass to handler		
