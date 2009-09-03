@@ -1,6 +1,12 @@
 ------ SEKATI API CHANGELOG ------
 
 
+API UPDATE v3.0.5.6 - "Gigan" (IN-PROGRESS)
+- Fixed swfmouse.js to function with Safari 4.x
+- Updated swfIN to v2.3.1
+- Updated playerProductInstall.swf ExpressInstaller.
+
+
 API UPDATE v3.0.5.5 - "Gigan"
 - Updated visual test with PerformanceMonitor
 * Added 'allowFuzzyMatch' optional argument to ContextualMenu.getItemId() - default: false for backwards compatibility.
