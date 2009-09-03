@@ -2,6 +2,8 @@
 
 
 3.1.x.x PRE-ALPHA BRANCH (JASON-CHANGES):
+- Updated swfIN to v2.3.1
+- Updated playerProductInstall.swf ExpressInstaller.
 * Added 'allowFuzzyMatch' optional argument to ContextualMenu.getItemId() - default: false for backwards compatibility.
 * Removed FPSProfiler.
 * Removed MemoryProfiler.
