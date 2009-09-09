@@ -14,7 +14,7 @@ A few of the projects built on *Sekati API*:
   * [http://www.maccosmetics.com/ MAC Cosmetics] / [http://www.maccosmetics.com/flash/color_play/index.tmpl MAC Colour Play]
   * [http://www.marchmade.com March]
   * [http://www.moma.org/explore/multimedia MoMA: Media Player]
-  * [http://www.infamousthegame.com Sony: PS3, The Infamous Game]
+  * [http://www.infamousthegame.com Sony / PS3: The Infamous Game]
 
 = Companies =
 A few of the groups, creative shops & agencies who implement & _contribute_ to *Sekati API*:
