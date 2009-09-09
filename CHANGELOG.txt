@@ -2,6 +2,8 @@
 
 
 3.1.x.x PRE-ALPHA BRANCH (JASON-CHANGES):
+- Added MP3.context access to SoundLoaderContext @see http://code.google.com/p/sekati/issues/detail?id=80
+- Fixed swfmouse.js to function with Safari 4.x
 - Updated swfIN to v2.3.1
 - Updated playerProductInstall.swf ExpressInstaller.
 * Added 'allowFuzzyMatch' optional argument to ContextualMenu.getItemId() - default: false for backwards compatibility.
