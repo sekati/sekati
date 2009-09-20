@@ -13,7 +13,7 @@ A few of the projects built on *Sekati API*:
   * [http://www.fontainebleau.com Fontainebleau Resorts]
   * [http://www.kssarchitects.com KSS Architects]
   * [http://www.hd-generation.com LVMH: Make Up For Ever]
-  * [http://www.maccosmetics.com/ MAC Cosmetics] / [http://www.maccosmetics.com/flash/color_play/index.tmpl MAC Colour Play]
+  * [http://www.maccosmetics.com/ MAC Cosmetics] / [http://www.maccosmetics.com/flash/color_play/index.tmpl MAC Colour Play] / [http://www.maccosmetics.com/flash/brush_finder/index.tmpl MAC Brush Finder]
   * [http://www.marchmade.com March]
   * [http://www.moma.org/explore/multimedia MoMA: Media Player]
   * [http://www.infamousthegame.com Sony / PS3: The Infamous Game]
