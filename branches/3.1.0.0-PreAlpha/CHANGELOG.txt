@@ -2,6 +2,14 @@
 
 
 3.1.x.x PRE-ALPHA BRANCH (JASON-CHANGES):
+* Changed MP3 & FLV classes so isPlaying returns false if the media is paused.
+- Fixed TypeEnforcer.enforceAbstract issue encounted in loaded swf's due to applicationDomain & the TypeEnforcers getDefinitionByName.
+- Fixed incorrect example in XMLLoader
+- Added sekati.draw.GradientRect and updated DrawTest.
+- Added "Player Info..." item to ContextMenuManager @see http://code.google.com/p/sekati/issues/detail?id=79
+- Added TypeValidator.isPassedByValue & TypeValidator.isPassedByReference
+- Fixed TypeValidator.isPrimative ommission: now checks int, uint.
+- Fixed TypeValidator.strictIs bug: was not a static method.
 - Fixed minor documentation bug in Bootstrap.
 - Fixed non-critical bug in core.Bootstrap which reports incorrect bootstage fatal error name.
 - Added MP3.context access to SoundLoaderContext @see http://code.google.com/p/sekati/issues/detail?id=80
