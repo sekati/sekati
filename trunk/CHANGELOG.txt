@@ -1,7 +1,16 @@
 ------ SEKATI API CHANGELOG ------
 
 
-API UPDATE v3.0.5.7 - "Gigan" (IN-PROGRESS)
+API UPDATE v3.0.5.7 - "Gigan"
+* Changed MP3 & FLV classes so isPlaying returns false if the media is paused.
+- Fixed TypeEnforcer.enforceAbstract issue encounted in loaded swf's due to applicationDomain & the TypeEnforcers getDefinitionByName.
+- Fixed incorrect example in XMLLoader
+- Added sekati.draw.GradientRect and updated DrawTest.
+- Added sekati.views package (AbstractView, AbstractLiquidView, AbstractInteractiveView) with a configUI() helper methods to encourage JIT performance gains for view controllers.
+- Added "Player Info..." item to ContextMenuManager @see http://code.google.com/p/sekati/issues/detail?id=79
+- Added TypeValidator.isPassedByValue & TypeValidator.isPassedByReference
+- Fixed TypeValidator.isPrimative ommission: now checks int, uint.
+- Fixed TypeValidator.strictIs bug: was not a static method.
 - Fixed minor documentation bug in Bootstrap.
 - Added tests/build/XMLLoaderText.launch profile to test bug report: http://groups.google.com/group/sekati-api/browse_thread/thread/34e2261edd581f28
 
