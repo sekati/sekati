@@ -57,7 +57,7 @@ if (!isEclipse() || window.name != ECLIPSE_FRAME_NAME) {titleBar_setSubTitle("Cl
   
   private function addContent(e : Event) : void {
     loader.removeEventListener( Event.INIT, addContent );
-    addChild( loader.content );
+    trace( loader.content );
   }
   </pre></div>
   <p></p>
