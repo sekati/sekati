@@ -2,6 +2,8 @@
 
 
 3.1.x.x PRE-ALPHA BRANCH (JASON-CHANGES):
+- Added SortTest.as / launch & removed SortTest.fla.
+- Fixed tests/visual/index.php & removed deprecated function calls.
 * Changed MP3 & FLV classes so isPlaying returns false if the media is paused.
 - Fixed TypeEnforcer.enforceAbstract issue encounted in loaded swf's due to applicationDomain & the TypeEnforcers getDefinitionByName.
 - Fixed incorrect example in XMLLoader
