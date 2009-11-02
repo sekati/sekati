@@ -1,7 +1,7 @@
 <?php
 /**
  * Unit Test Runner - Created on Sep 2, 2007, Last Updated on Nov 20, 2008
- * @version 1.1.6
+ * @version 1.1.7
  * @author jason m horwitz | sekati.com
  * Copyright (C) 2007  jason m horwitz, Sekat LLC. All Rights Reserved.
  * Released under the MIT License: http://www.opensource.org/licenses/mit-license.php
@@ -51,9 +51,11 @@ function indexTests() {
 	$str = "<ol>";
 	if ($dir = @opendir($path)) {
 		while (false !== ($item = readdir($dir))) {  
-			if (eregi(".html", $item)) {
+			//if (eregi(".html", $item)) {
+			if (preg_match("/.html/", $item)) {
 				$str .= "<li><a href=\"?html=$item\"><strong>$item</strong></a></li>";
-			} else if (eregi(".swf", $item)) {
+			//} else if (eregi(".swf", $item)) {
+			} else if (preg_match("/.swf/", $item)) {
 				$str .= "<li><a href=\"?swf=$item\">$item</a></li>";
 			}
 		}
@@ -89,7 +91,7 @@ function template ($swf) {
 
 if($swf) {
 	//die($header.template($swf).$footer);
-	$swfURL = split(".swf", $swf);	
+	$swfURL = preg_split("/.swf/", $swf);	
 	die($header.template($swfURL[0].'.swf').'<hr />'.indexTests().'<hr /><br />'.$footer);
 }
 if($html) die ($header."Loading Test: $html ...<meta HTTP-EQUIV='Refresh' CONTENT='1;URL=$html'>.$footer");
