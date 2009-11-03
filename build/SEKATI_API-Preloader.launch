@@ -1,7 +1,7 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <launchConfiguration type="com.powerflasher.fdt.ui.MxmlcGroup">
 <stringAttribute key="APP_ARGUMENTS" value=""/>
-<stringAttribute key="ARGUMENTS" value="-default-size 550 400 -default-frame-rate 31 -default-background-color 0xFFFFFF -source-path {flexSDK}/frameworks/locale/en_US -verbose-stacktraces"/>
+<stringAttribute key="ARGUMENTS" value="-default-size 550 400 -default-frame-rate 31 -default-background-color 0xFFFFFF -source-path {flexSDK}/frameworks/locale/en_US -verbose-stacktraces -target-player=9.0.115"/>
 <stringAttribute key="FLASH_VARS" value=""/>
 <stringAttribute key="FLEX_SDK_NAME" value="Flex_3_SDK_0"/>
 <stringAttribute key="MAIN_CLASS" value="src/SekatiPreloader.as"/>
