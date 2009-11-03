@@ -2,6 +2,25 @@
 
 
 3.1.x.x PRE-ALPHA BRANCH (JASON-CHANGES):
+* Added proper air launch profile and cleaned up deploy.
+* Added icons/air descriptor to lib/air.
+* Removed deploy/sekati_air-app.xml (moved to lib/air).
+* Updated Application.initMovieProperties() with safety try,catch to allow Application to be used directly for Air applications.
+* Removed ApplicationAir: no longer required: document may be used directly for Air applications!
+* Updated SekatiPreloader example.
+* Removed sekati.js references from all HTML & PHP templates: no longer required for isReady status: now a pure utility library.
+* Updated BrowserAddress to use ExternalBase safe calls.
+* Updated Urchin to use ExternalBase safe calls.
+* Updated LogTarget to use ExternalBase safe calls.
+* Refactored ExternalMouseWheel to use ExternalBase safe calls.
+- Added ExternalTest launch profile.
+* Added target-player compiler arguments to main launch profiles.
+* Refactored ExternalBase to be more user-friendly in errors produced when out-of-browser.
+* Refactored ExternalBase.anonymousCall to safeWrappedCall
+* Rewrapped all ExternalInterface calls as safeCalls.
+- Added ExternalBase.safeCall & safeCallAsFunction.
+* Added error catching/handling in ExternalBase for flexibility in Air framework implementation.
+- Updated README.txt
 - Added SortTest.as / launch & removed SortTest.fla.
 - Fixed tests/visual/index.php & removed deprecated function calls.
 * Changed MP3 & FLV classes so isPlaying returns false if the media is paused.

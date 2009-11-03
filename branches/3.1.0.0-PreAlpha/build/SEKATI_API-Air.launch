@@ -1,28 +1,26 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<launchConfiguration type="com.powerflasher.fdt.ui.MxmlcGroup">
-<stringAttribute key="APP_ARGUMENTS" value=""/>
-<stringAttribute key="ARGUMENTS" value="-default-size 550 400 -default-frame-rate 31 -default-background-color 0xFFFFFF -library-path {flexSDK}/frameworks/locale/en_US"/>
-<stringAttribute key="FLEX_SDK_NAME" value="Flex_3_SDK_0_with_AIR"/>
-<stringAttribute key="MAIN_CLASS" value="src/SekatiAirMain.as"/>
-<stringAttribute key="OUTPUT" value="deploy/sekati_air.swf"/>
-<booleanAttribute key="PASS_CP" value="true"/>
-<booleanAttribute key="PASS_MAIN_CLASS" value="true"/>
-<booleanAttribute key="PASS_SWCS" value="true"/>
-<intAttribute key="PLAYER_HEIGHT" value="400"/>
-<intAttribute key="PLAYER_WIDTH" value="550"/>
-<stringAttribute key="POST_COMPILE_ANT" value=""/>
-<stringAttribute key="PRE_COMPILE_ANT" value=""/>
-<stringAttribute key="PROJECT_NAME" value="sekati-jason-changes"/>
-<stringAttribute key="PUBLISHER_ID" value=""/>
-<booleanAttribute key="START_SWF_ENABLED" value="true"/>
-<stringAttribute key="START_SWF_LOCATION" value="deploy/sekati_air.swf"/>
-<stringAttribute key="START_SWF_WITH" value="AIR Debug Launcher"/>
-<booleanAttribute key="USE_GLOBAL_FCSH_LOCATION" value="true"/>
-<listAttribute key="org.eclipse.debug.core.MAPPED_RESOURCE_PATHS">
-<listEntry value="/sekati-jason-changes"/>
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<launchConfiguration type="com.powerflasher.fdt.ui.AirReleaseGroup">
+<listAttribute key="ASSET_DIRECTORY_LIST">
+<listEntry value="deploy/xml"/>
+<listEntry value="lib/air/icons"/>
+<listEntry value="deploy/css"/>
 </listAttribute>
-<listAttribute key="org.eclipse.debug.core.MAPPED_RESOURCE_TYPES">
-<listEntry value="4"/>
+<listAttribute key="ASSET_FILE_LIST">
+<listEntry value="deploy/sekati_main.swf &gt; sekati_main.swf"/>
+<listEntry value="deploy/assets/api-logo.png &gt; assets/api-logo.png"/>
 </listAttribute>
+<stringAttribute key="CERTIFICATE_CHOOSEN" value="1"/>
+<stringAttribute key="CERTIFICATE_COUNTRY" value="US"/>
+<booleanAttribute key="CERTIFICATE_DISABLE_TIMESTAMP" value="false"/>
+<stringAttribute key="CERTIFICATE_KEY_TYPE" value="0"/>
+<stringAttribute key="CERTIFICATE_NAME" value="Sekati Air Example"/>
+<stringAttribute key="CERTIFICATE_O_NAME" value="Sekati LLC"/>
+<stringAttribute key="CERTIFICATE_O_UNIT" value="Sekati API"/>
+<stringAttribute key="CERTIFICATE_PASSWORD" value="demo"/>
+<stringAttribute key="CERTIFICATE_PATH" value="lib/air/Sekati Air Example.p12"/>
+<stringAttribute key="CERTIFICATE_STORE_PASSWORD" value="demo"/>
+<stringAttribute key="DESCRIPTOR_PATH" value="lib/air/sekati-air-descriptor.xml"/>
+<stringAttribute key="OUTPUT" value="deploy/sekati_main.air"/>
+<stringAttribute key="PROJECT_NAME" value="sekati"/>
 <stringAttribute key="process_factory_id" value="com.powerflasher.fdt.ui.launch.fcsh.ProcessFactory"/>
 </launchConfiguration>
