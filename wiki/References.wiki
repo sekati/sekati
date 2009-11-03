@@ -11,12 +11,14 @@ A few of the projects built on *Sekati API*:
   * [http://www.newairplane.com/787/ Boeing: New Airplane]
   * [http://www.ewingcole.com/ EwingCole]
   * [http://www.fontainebleau.com Fontainebleau Resorts]
+  * [http://www.goldeneyedevelopment.com/ GoldenEye Development]
   * [http://www.kssarchitects.com KSS Architects]
   * [http://www.hd-generation.com LVMH: Make Up For Ever]
   * [http://www.maccosmetics.com/ MAC Cosmetics] / [http://www.maccosmetics.com/flash/color_play/index.tmpl MAC Colour Play] / [http://www.maccosmetics.com/flash/brush_finder/index.tmpl MAC Brush Finder]
   * [http://www.marchmade.com March]
   * [http://www.moma.org/explore/multimedia MoMA: Media Player]
   * [http://www.infamousthegame.com Sony / PS3: The Infamous Game]
+  * [http://shoparc.com/ SHoP Architects]
   * [http://www.thenewhope.us/ The New Hope]
 
 = Companies =
