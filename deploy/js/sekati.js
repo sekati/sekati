@@ -1,6 +1,6 @@
 /**
  * sekati.js - Flash : Javascript Companion Library
- * @version 1.1.2
+ * @version 1.1.3
  * @author jason m horwitz | sekati.com
  * Copyright (C) 2007  jason m horwitz, Sekat LLC. All Rights Reserved.
  * Released under the MIT License: http://www.opensource.org/licenses/mit-license.php
@@ -13,6 +13,13 @@ if (typeof sekati == "undefined") var sekati = new Object();
 
 sekati.external = {
 		
+	/*
+	 * This may be used as an alternative to ExternalInterface.call 
+	 * tests for javascript availability in the body tag but is no
+	 * longer required by the framework.
+	 * 
+	 * @usage <body onload="sekati.external.init();"> 
+	 */
 	ready: false,
 	
 	isReady: function() {

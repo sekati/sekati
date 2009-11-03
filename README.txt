@@ -59,3 +59,17 @@ III. Feedback
 IV. License & Credits
 	License:			http://code.google.com/p/sekati/wiki/License
 	Credits:			http://code.google.com/p/sekati/wiki/Credits
+
+
+V. Notes
+	
+	If you are just getting started with the framework you should take a look at the 
+	core classes: App, Bootstrap & Document as well as the example implementations:
+	SekatiMain, SekatiPreloader. Additionally if you are using INDE or Eclipse & FDT 
+	there are a number of launch profiles you may use to compile these examples.
+	
+	A note on launch profiles: most mxmlc swf building profiles are best run from 
+	the "Run->Debug Configuration" FDT menu, however the ASDoc profile should be
+	launched from "Run->External Tools->External Tools Configuration..." menu and
+	similarly the Air launch profile needs to be run from the 
+	"Run->Run Configurations" menu.
