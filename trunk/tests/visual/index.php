@@ -1,7 +1,7 @@
 <?php
 /**
  * Unit Test Runner - Created on Sep 2, 2007, Last Updated on Nov 20, 2008
- * @version 1.1.6
+ * @version 1.1.7
  * @author jason m horwitz | sekati.com
  * Copyright (C) 2007  jason m horwitz, Sekat LLC. All Rights Reserved.
  * Released under the MIT License: http://www.opensource.org/licenses/mit-license.php
@@ -16,10 +16,9 @@ $nl = "\n";
 $appName = 'SEKATI API | Visual Test Runner | jason m horwitz | sekati.com';
 $header = '<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />'.$nl;
 $header .= '<script language="javascript" src="../../deploy/js/swfIN.js" type="text/javascript"></script>'.$nl;
-$header .= '<script language="javascript" src="../../deploy/js/sekati.js" type="text/javascript"></script>'.$nl;
 $header .= '<script language="javascript" src="../../deploy/js/swfmouse.js" type="text/javascript"></script>'.$nl;
 $header .= '<link rel="stylesheet" type="text/css" href="../../deploy/css/style.css" />'.$nl;
-$header .= "<title>".$appName.'</title></head><body onload="sekati.external.init();">'.$nl;
+$header .= "<title>".$appName.'</title></head><body>'.$nl;
 $header .= '<br /><div><div style="float:left;"><a href="http://sekati.googlecode.com" target="_blank">SEKATI API</a> :: VISUAL TEST RUNNER</div><div style="float:right;"><a href="../index.html" target="_self">UNIT TESTS</a> | <a href="../docs/" target="_blank">DOCUMENTATION</a></div></div><br /><hr />'.$nl;
 //$header .= '<br/>&nbsp; <a href="?" target="_self"><strong>Test Runner &raquo;</strong></a><hr/><br/>'.$nl;
 $footer = '<br/><hr/></body></html>';
@@ -51,9 +50,11 @@ function indexTests() {
 	$str = "<ol>";
 	if ($dir = @opendir($path)) {
 		while (false !== ($item = readdir($dir))) {  
-			if (eregi(".html", $item)) {
+			//if (eregi(".html", $item)) {
+			if (preg_match("/.html/", $item)) {
 				$str .= "<li><a href=\"?html=$item\"><strong>$item</strong></a></li>";
-			} else if (eregi(".swf", $item)) {
+			//} else if (eregi(".swf", $item)) {
+			} else if (preg_match("/.swf/", $item)) {
 				$str .= "<li><a href=\"?swf=$item\">$item</a></li>";
 			}
 		}
@@ -89,7 +90,7 @@ function template ($swf) {
 
 if($swf) {
 	//die($header.template($swf).$footer);
-	$swfURL = split(".swf", $swf);	
+	$swfURL = preg_split("/.swf/", $swf);	
 	die($header.template($swfURL[0].'.swf').'<hr />'.indexTests().'<hr /><br />'.$footer);
 }
 if($html) die ($header."Loading Test: $html ...<meta HTTP-EQUIV='Refresh' CONTENT='1;URL=$html'>.$footer");

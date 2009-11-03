@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<people>
+<stuff>
+	<logo src="assets/api-logo.png" />
 	<person name="Jason M Horwitz" prefix="Mr.">
 		<age>31</age>
 		<aka>n0kati</aka>
@@ -11,4 +12,4 @@
 		<aka>Doogster</aka>
 		<bio><![CDATA[Prodigial Doctor.]]></bio>
 	</person>
-</people>
+</stuff>
