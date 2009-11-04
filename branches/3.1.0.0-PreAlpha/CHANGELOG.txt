@@ -2,6 +2,7 @@
 
 
 3.1.x.x PRE-ALPHA BRANCH (JASON-CHANGES):
+- Fixed GradientRect documentation example.
 * Added proper air launch profile and cleaned up deploy.
 * Added icons/air descriptor to lib/air.
 * Removed deploy/sekati_air-app.xml (moved to lib/air).
