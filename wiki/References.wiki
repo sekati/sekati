@@ -24,9 +24,10 @@ A few of the projects built on *Sekati API*:
 = Companies =
 A few of the groups, creative shops & agencies who implement & _contribute_ to *Sekati API*:
 
-  * [http://www.tendercreative.com Tender Creative]
-  * [http://www.sarkissianmason.com Sarkissian Mason]
   * [http://www.sekati.com Sekati]
+  * [http://www.sarkissianmason.com Sarkissian Mason]
+  * [http://www.tendercreative.com Tender Creative]
+
 
 = Open Source =
 A few of the libraries and frameworks which leverage portions of *Sekati API*:
