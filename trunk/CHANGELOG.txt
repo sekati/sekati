@@ -1,6 +1,10 @@
 ------ SEKATI API CHANGELOG ------
 
 
+API UPDATE v3.0.5.9 - "Gigan" (IN-PROGRESS)
+- Fixed GradientRect documentation example.
+
+
 API UPDATE v3.0.5.8 - "Gigan"
 * Added proper air launch profile and cleaned up deploy.
 * Added icons/air descriptor to lib/air.

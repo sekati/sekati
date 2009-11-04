@@ -546,12 +546,8 @@ showHideInherited();
 <br>
 <span class="label">Example</span>
 <br><div class='listing'><pre>
-   var rect:Rect = new Rect(300, 100, 50,50, 1, 0xffff00);
-   addChild(rect);
-   Tweener.addTween(rect, {sx:750, sy:0, w:300, h:30, color:0xffccee, alpha:0.25, thickness:5, transition:"easeOutQuad", time:5, onUpdate:renderRect});
-   function renderRect():void {
-    rect.redraw();
-   }
+   var rect : GradientRect = new GradientRect( 320, 240, [ 0xffcc00, 0xff00ff ], [ 1, 0.75 ], [ 0, 255 ] );
+   addChild( rect );
    </pre></div>
    <p></p>
 </div>
