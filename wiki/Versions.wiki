@@ -1,4 +1,4 @@
-#summary what's with the monster names?
+#summary What's with the monster names?
 #labels Featured,Phase-Design,Phase-Implementation
 
 
