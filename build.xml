@@ -31,7 +31,7 @@
 		        
      ************************************************************************************* -->
 
-<project name="Sekati API" default="build" basedir=".">
+<project name="Sekati API Pre-Alpha" default="build" basedir=".">
 
 
 	<!-- DEFINITIONS -->
