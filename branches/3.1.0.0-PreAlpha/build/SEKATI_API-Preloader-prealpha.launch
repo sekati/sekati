@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <launchConfiguration type="com.powerflasher.fdt.ui.MxmlcGroup">
 <stringAttribute key="APP_ARGUMENTS" value=""/>
 <stringAttribute key="ARGUMENTS" value="-default-size 550 400 -default-frame-rate 31 -default-background-color 0xFFFFFF -source-path {flexSDK}/frameworks/locale/en_US -verbose-stacktraces"/>
@@ -13,15 +13,15 @@
 <intAttribute key="PLAYER_WIDTH" value="550"/>
 <stringAttribute key="POST_COMPILE_ANT" value=""/>
 <stringAttribute key="PRE_COMPILE_ANT" value=""/>
-<stringAttribute key="PROJECT_NAME" value="sekati-jason-changes"/>
+<stringAttribute key="PROJECT_NAME" value="sekati-pre-alpha"/>
 <stringAttribute key="PUBLISHER_ID" value=""/>
 <booleanAttribute key="START_SWF_ENABLED" value="true"/>
-<stringAttribute key="START_SWF_LOCATION" value="http://localhost/sekati-jason-changes/deploy/index_preloader.html"/>
+<stringAttribute key="START_SWF_LOCATION" value="http://localhost/sekati-pre-alpha/deploy/index_preloader.html"/>
 <stringAttribute key="START_SWF_WITH" value="Browser"/>
 <booleanAttribute key="USE_GLOBAL_FCSH_LOCATION" value="true"/>
 <stringAttribute key="bad_container_name" value="build/SEKATI_API"/>
 <listAttribute key="org.eclipse.debug.core.MAPPED_RESOURCE_PATHS">
-<listEntry value="/sekati-jason-changes"/>
+<listEntry value="/sekati-pre-alpha"/>
 </listAttribute>
 <listAttribute key="org.eclipse.debug.core.MAPPED_RESOURCE_TYPES">
 <listEntry value="4"/>

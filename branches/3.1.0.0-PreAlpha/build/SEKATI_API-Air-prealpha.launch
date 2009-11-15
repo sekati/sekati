@@ -21,6 +21,6 @@
 <stringAttribute key="CERTIFICATE_STORE_PASSWORD" value="demo"/>
 <stringAttribute key="DESCRIPTOR_PATH" value="lib/air/sekati-air-descriptor.xml"/>
 <stringAttribute key="OUTPUT" value="deploy/sekati_main.air"/>
-<stringAttribute key="PROJECT_NAME" value="sekati"/>
+<stringAttribute key="PROJECT_NAME" value="sekati-pre-alpha"/>
 <stringAttribute key="process_factory_id" value="com.powerflasher.fdt.ui.launch.fcsh.ProcessFactory"/>
 </launchConfiguration>

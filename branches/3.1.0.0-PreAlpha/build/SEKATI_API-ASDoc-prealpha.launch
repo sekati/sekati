@@ -1,7 +1,7 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <launchConfiguration type="org.eclipse.ui.externaltools.ProgramLaunchConfigurationType">
 <stringAttribute key="org.eclipse.ui.externaltools.ATTR_LAUNCH_CONFIGURATION_BUILD_SCOPE" value="${none}"/>
 <stringAttribute key="org.eclipse.ui.externaltools.ATTR_LOCATION" value="/Applications/inde/workspace/fdtkit/lib/F3/bin/asdoc"/>
 <stringAttribute key="org.eclipse.ui.externaltools.ATTR_TOOL_ARGUMENTS" value="-source-path ./src/&#13;-doc-sources ./src/sekati/.&#13;-external-library-path &quot;./lib/tweener.swc&quot;&#13;-output ./doc&#13;-window-title &quot;Sekati API Documentation&quot; &#13;-main-title &quot;Sekati API Documentation&quot;&#13;-footer &quot;Copyright &amp;#169; 2008-2009 jason m horwitz, Sekati LLC. All Rights Reserved.&quot;"/>
-<stringAttribute key="org.eclipse.ui.externaltools.ATTR_WORKING_DIRECTORY" value="${workspace_loc:/sekati}"/>
+<stringAttribute key="org.eclipse.ui.externaltools.ATTR_WORKING_DIRECTORY" value="${workspace_loc:/sekati-pre-alpha}"/>
 </launchConfiguration>
