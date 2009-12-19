@@ -2,7 +2,11 @@
 
 
 3.1.x.x PRE-ALPHA BRANCH (JASON-CHANGES):
-
+- Added deblocking constants to FLV class.
+- Added getter/setters for smoothing, deblocking, videoWidth, videoHeight in FLV class.
+* Changed default smoothing to false in FLV class.
+- Added new MediaEvent support to FLV and FLVPlayer classes.
+- Added new MediaEvents: FILE_STRUCTURE_INVALID & NO_SUPPORTED_TRACK_FOUND
 * Updated buildfiles to pre-alpha proper path.
 * Removed configUI overrides from AbstractPreloader & TextButton.
 * Added sekati.views pkg from trunk
