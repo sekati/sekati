@@ -4,7 +4,7 @@
 <META http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <link rel="stylesheet" href="../../style.css" type="text/css" media="screen">
 <link rel="stylesheet" href="../../print.css" type="text/css" media="print">
-<meta content="FLV,sekati.media.FLV,bufferLength,duration,isBuffering,isPaused,isPlaying,isStopped,ns,pan,percentLoaded,percentPlayed,percentPlayedWithBuffer,position,url,video,volume,checkBuffer,cuePointHandler,destroy,fastForward,load,metaDataHandler,netStatusHandler,pause,play,progressHandler,resolveTime,resume,rewind,seek,seekToPercent,stop,togglePause" name="keywords">
+<meta content="FLV,sekati.media.FLV,DEBLOCK_AUTO,DEBLOCK_NONE,DEBLOCK_ON2,DEBLOCK_ON2_DERINGER,DEBLOCK_ON2_DERINGER_HIGH,DEBLOCK_SORENSON,bufferLength,deblocking,duration,isBuffering,isPaused,isPlaying,isStopped,ns,pan,percentLoaded,percentPlayed,percentPlayedWithBuffer,position,smoothing,url,video,videoHeight,videoWidth,volume,checkBuffer,cuePointHandler,destroy,fastForward,load,metaDataHandler,netStatusHandler,pause,play,progressHandler,resolveTime,resume,rewind,seek,seekToPercent,stop,togglePause" name="keywords">
 <title>sekati.media.FLV</title>
 </head>
 <body>
@@ -19,7 +19,7 @@
 <td align="left" class="titleTableTitle">Sekati API Documentation</td><td align="right" class="titleTableTopNav"><a onclick="loadClassListFrame('../../all-classes.html')" href="../../package-summary.html">All&nbsp;Packages</a>&nbsp;|&nbsp;<a onclick="loadClassListFrame('../../all-classes.html')" href="../../class-summary.html">All&nbsp;Classes</a>&nbsp;|&nbsp;<a onclick="loadClassListFrame('../../index-list.html')" href="../../all-index-A.html">Index</a>&nbsp;|&nbsp;<a href="../../index.html?sekati/media/FLV.html&amp;sekati/media/class-list.html" id="framesLink1">Frames</a><a onclick="parent.location=document.location" href="" style="display:none" id="noFramesLink1">No&nbsp;Frames</a></td><td rowspan="3" align="right" class="titleTableLogo"><img alt="Adobe Logo" title="Adobe Logo" class="logoImage" src="../../images/logo.jpg"></td>
 </tr>
 <tr class="titleTableRow2">
-<td align="left" id="subTitle" class="titleTableSubTitle">Class&nbsp;FLV</td><td align="right" id="subNav" class="titleTableSubNav"><a href="#propertySummary">Properties</a>&nbsp;| <a href="#methodSummary">Methods</a></td>
+<td align="left" id="subTitle" class="titleTableSubTitle">Class&nbsp;FLV</td><td align="right" id="subNav" class="titleTableSubNav"><a href="#propertySummary">Properties</a>&nbsp;| <a href="#methodSummary">Methods</a>&nbsp;| <a href="#constantSummary">Constants</a></td>
 </tr>
 <tr class="titleTableRow3">
 <td colspan="2">&nbsp;</td>
@@ -27,7 +27,7 @@
 </table>
 <script type="text/javascript" language="javascript">
 <!--
-if (!isEclipse() || window.name != ECLIPSE_FRAME_NAME) {titleBar_setSubTitle("Class FLV"); titleBar_setSubNav(false,true,false,false,false,false,true,false,false,false,false,false,false,false);}
+if (!isEclipse() || window.name != ECLIPSE_FRAME_NAME) {titleBar_setSubTitle("Class FLV"); titleBar_setSubNav(true,true,false,false,false,false,true,false,false,false,false,false,false,false);}
 --></script>
 <div class="MainContent">
 <table cellspacing="0" cellpadding="0" class="classHeaderTable">
@@ -77,6 +77,10 @@ if (!isEclipse() || window.name != ECLIPSE_FRAME_NAME) {titleBar_setSubTitle("Cl
 <tr class="">
 <td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a class="signatureLink" href="#bufferLength">bufferLength</a> : Number<div class="summaryTableDescription">[read-only]
    Amount of play-ahead buffer, in seconds.</div>
+</td><td class="summaryTableOwnerCol">FLV</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a class="signatureLink" href="#deblocking">deblocking</a> : int<div class="summaryTableDescription">   Indicates the type of filter applied to decoded video as part of post-processing.</div>
 </td><td class="summaryTableOwnerCol">FLV</td>
 </tr>
 <tr class="">
@@ -135,12 +139,24 @@ if (!isEclipse() || window.name != ECLIPSE_FRAME_NAME) {titleBar_setSubTitle("Cl
 </td><td class="summaryTableOwnerCol">FLV</td>
 </tr>
 <tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a class="signatureLink" href="#smoothing">smoothing</a> : Boolean<div class="summaryTableDescription">   Whether the <code>Video</code> should be smoothed (interpolated) when it is scaled.</div>
+</td><td class="summaryTableOwnerCol">FLV</td>
+</tr>
+<tr class="">
 <td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a class="signatureLink" href="#url">url</a> : String<div class="summaryTableDescription">[read-only]   The video url.</div>
 </td><td class="summaryTableOwnerCol">FLV</td>
 </tr>
 <tr class="">
 <td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a class="signatureLink" href="#video">video</a> : Video<div class="summaryTableDescription">[read-only]
    The <code>Video</code> instance to be added to the <code>DisplayList</code>.</div>
+</td><td class="summaryTableOwnerCol">FLV</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a class="signatureLink" href="#videoHeight">videoHeight</a> : int<div class="summaryTableDescription">[read-only]   The native integer height that the video file was encoded/exported at.</div>
+</td><td class="summaryTableOwnerCol">FLV</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a class="signatureLink" href="#videoWidth">videoWidth</a> : int<div class="summaryTableDescription">[read-only]   The native integer width that the video file was encoded/exported at.</div>
 </td><td class="summaryTableOwnerCol">FLV</td>
 </tr>
 <tr class="">
@@ -160,7 +176,7 @@ if (!isEclipse() || window.name != ECLIPSE_FRAME_NAME) {titleBar_setSubTitle("Cl
 <tr class="">
 <td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
 <div class="summarySignature">
-<a class="signatureLink" href="#FLV()">FLV</a>(width:int = 320, height:int = 240, smoothing:Boolean = true)</div>
+<a class="signatureLink" href="#FLV()">FLV</a>(width:int = 320, height:int = 240, smoothing:Boolean = false, deblocking:int)</div>
 <div class="summaryTableDescription">
    FLV Constructor
    </div>
@@ -313,6 +329,45 @@ if (!isEclipse() || window.name != ECLIPSE_FRAME_NAME) {titleBar_setSubTitle("Cl
 </tr>
 </table>
 </div>
+<a name="constantSummary"></a>
+<div class="summarySection">
+<div class="summaryTableTitle">Public Constants</div>
+<table id="summaryTableConstant" class="summaryTable " cellpadding="3" cellspacing="0">
+<tr>
+<th>&nbsp;</th><th colspan="2">Constant</th><th class="summaryTableOwnerCol">Defined&nbsp;by</th>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a class="signatureLink" href="#DEBLOCK_AUTO">DEBLOCK_AUTO</a> : int = 0<div class="summaryTableDescription">[static]
+   Let the video compressor apply the deblocking filter as needed.</div>
+</td><td class="summaryTableOwnerCol">FLV</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a class="signatureLink" href="#DEBLOCK_NONE">DEBLOCK_NONE</a> : int = 1<div class="summaryTableDescription">[static]
+   Do not use a deblocking filter.</div>
+</td><td class="summaryTableOwnerCol">FLV</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a class="signatureLink" href="#DEBLOCK_ON2">DEBLOCK_ON2</a> : int = 3<div class="summaryTableDescription">[static]
+   For On2 video only, uses the On2 deblocking filter but no deringing filter.</div>
+</td><td class="summaryTableOwnerCol">FLV</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a class="signatureLink" href="#DEBLOCK_ON2_DERINGER">DEBLOCK_ON2_DERINGER</a> : int = 4<div class="summaryTableDescription">[static]
+   For On2 video only, uses the On2 deblocking and deringing filter.</div>
+</td><td class="summaryTableOwnerCol">FLV</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a class="signatureLink" href="#DEBLOCK_ON2_DERINGER_HIGH">DEBLOCK_ON2_DERINGER_HIGH</a> : int = 5<div class="summaryTableDescription">[static]
+   For On2 video only, uses the On2 deblocking and a higher-performance On2 deringing filter.</div>
+</td><td class="summaryTableOwnerCol">FLV</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a class="signatureLink" href="#DEBLOCK_SORENSON">DEBLOCK_SORENSON</a> : int = 2<div class="summaryTableDescription">[static]
+   Uses the Sorenson deblocking filter.</div>
+</td><td class="summaryTableOwnerCol">FLV</td>
+</tr>
+</table>
+</div>
 <script type="text/javascript" language="javascript">
 <!--
 showHideInherited();
@@ -333,6 +388,54 @@ showHideInherited();
 <br>
 <code>&nbsp;&nbsp;&nbsp;&nbsp;public function get bufferLength():Number</code>
 <br>
+</div>
+<a name="deblocking"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">deblocking</td><td class="detailHeaderType">property</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>deblocking:int</code>&nbsp;&nbsp;[read-write]<p>   Indicates the type of filter applied to decoded video as part of post-processing. The default value is 0, which lets 
+   the video compressor apply a deblocking filter as needed.
+   
+   </p><p>Compression of video can result in undesired artifacts. You can use the deblocking property to set filters that 
+   reduce blocking and, for video compressed using the On2 codec, ringing.</p>
+   
+   <p><i>Blocking</i> refers to visible imperfections between the boundaries of the blocks that compose each video frame. 
+   Ringing refers to distorted edges around elements within a video image.</p>
+   
+   <p>Two deblocking filters are available: one in the Sorenson codec and one in the On2 VP6 codec. In addition, a deringing 
+   filter is available when you use the On2 VP6 codec. To set a filter use one of the <code>DEBLOCK</code> constants.
+   
+   <p>If a value greater than 2 is selected for video when you are using the Sorenson codec, the Sorenson decoder defaults to 2.</p>
+   
+   <p>Using a deblocking filter has an effect on overall playback performance, and it is usually not necessary for high-bandwidth 
+   video. If a user's system is not powerful enough, the user may experience difficulties playing back video with a deblocking 
+   filter enabled.</p>
+   
+   <span class="label">Implementation</span>
+<br>
+<code>&nbsp;&nbsp;&nbsp;&nbsp;public function get deblocking():int</code>
+<br>
+<code>&nbsp;&nbsp;&nbsp;&nbsp;public function set deblocking(value:int):void</code>
+<br>
+<p>
+<span class="label">See also</span>
+</p>
+<div class="seeAlso">
+<a href="../media/FLV.html#DEBLOCK_AUTO" target="">DEBLOCK_AUTO</a>
+<br>
+<a href="../media/FLV.html#DEBLOCK_NONE" target="">DEBLOCK_NONE</a>
+<br>
+<a href="../media/FLV.html#DEBLOCK_SORENSON" target="">DEBLOCK_SORENSON</a>
+<br>
+<a href="../media/FLV.html#DEBLOCK_ON2" target="">DEBLOCK_ON2</a>
+<br>
+<a href="../media/FLV.html#DEBLOCK_ON2_DERINGER" target="">DEBLOCK_ON2_DERINGER</a>
+<br>
+<a href="../media/FLV.html#DEBLOCK_ON_DERINGER_HIGH" target="">DEBLOCK_ON_DERINGER_HIGH</a>
+</div>
 </div>
 <a name="duration"></a>
 <table cellspacing="0" cellpadding="0" class="detailHeader">
@@ -496,6 +599,25 @@ showHideInherited();
 <code>&nbsp;&nbsp;&nbsp;&nbsp;public function get position():Number</code>
 <br>
 </div>
+<a name="smoothing"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">smoothing</td><td class="detailHeaderType">property</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>smoothing:Boolean</code>&nbsp;&nbsp;[read-write]<p>   Whether the <code>Video</code> should be smoothed (interpolated) when it is scaled. For smoothing to work, 
+   the player must be in high-quality mode. The default value is <code>false</code> (no smoothing).
+   
+   </p><p>For video playback using <i>Flash Player 9.0.115.0</i> and later versions, set this property to true to take 
+   advantage of mipmapping image optimization.</p>
+   <span class="label">Implementation</span>
+<br>
+<code>&nbsp;&nbsp;&nbsp;&nbsp;public function get smoothing():Boolean</code>
+<br>
+<code>&nbsp;&nbsp;&nbsp;&nbsp;public function set smoothing(value:Boolean):void</code>
+<br>
+</div>
 <a name="url"></a>
 <table cellspacing="0" cellpadding="0" class="detailHeader">
 <tr>
@@ -523,6 +645,40 @@ showHideInherited();
 <code>&nbsp;&nbsp;&nbsp;&nbsp;public function get video():Video</code>
 <br>
 </div>
+<a name="videoHeight"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">videoHeight</td><td class="detailHeaderType">property</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>videoHeight:int</code>&nbsp;&nbsp;[read-only]<p>   The native integer height that the video file was encoded/exported at.
+   
+   </p><p>This property may be used to ensure that the user is seeing the video 
+   at the same size at which it was captured, regardless of the actual size 
+   of the Video object on the Stage.</p>
+   <span class="label">Implementation</span>
+<br>
+<code>&nbsp;&nbsp;&nbsp;&nbsp;public function get videoHeight():int</code>
+<br>
+</div>
+<a name="videoWidth"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">videoWidth</td><td class="detailHeaderType">property</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>videoWidth:int</code>&nbsp;&nbsp;[read-only]<p>   The native integer width that the video file was encoded/exported at.
+   
+   </p><p>This property may be used to ensure that the user is seeing the video 
+   at the same size at which it was captured, regardless of the actual size 
+   of the Video object on the Stage.</p>
+   <span class="label">Implementation</span>
+<br>
+<code>&nbsp;&nbsp;&nbsp;&nbsp;public function get videoWidth():int</code>
+<br>
+</div>
 <a name="volume"></a>
 <table cellspacing="0" cellpadding="0" class="detailHeader">
 <tr>
@@ -548,7 +704,7 @@ showHideInherited();
 </tr>
 </table>
 <div class="detailBody">
-<code>public function FLV(width:int = 320, height:int = 240, smoothing:Boolean = true)</code><p>
+<code>public function FLV(width:int = 320, height:int = 240, smoothing:Boolean = false, deblocking:int)</code><p>
    FLV Constructor
    </p><span class="label">Parameters</span>
 <table border="0" cellspacing="0" cellpadding="0">
@@ -565,7 +721,13 @@ showHideInherited();
 <td class="paramSpacer">&nbsp;</td>
 </tr>
 <tr>
-<td width="20px"></td><td><code><span class="label">smoothing</span>:Boolean</code> (default = <code>true</code>)<code></code></td>
+<td width="20px"></td><td><code><span class="label">smoothing</span>:Boolean</code> (default = <code>false</code>)<code></code></td>
+</tr>
+<tr>
+<td class="paramSpacer">&nbsp;</td>
+</tr>
+<tr>
+<td width="20px"></td><td><code><span class="label">deblocking</span>:int</code></td>
 </tr>
 </table>
 </div>
@@ -842,6 +1004,68 @@ showHideInherited();
 <div class="detailBody">
 <code>public function togglePause():void</code><p>
    Pause/Resume playback toggle.
+   </p></div>
+<a name="constantDetail"></a>
+<div class="detailSectionHeader">Constant detail</div>
+<a name="DEBLOCK_AUTO"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">DEBLOCK_AUTO</td><td class="detailHeaderType">constant</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public static const DEBLOCK_AUTO:int = 0</code><p>
+   Let the video compressor apply the deblocking filter as needed.
+   </p></div>
+<a name="DEBLOCK_NONE"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">DEBLOCK_NONE</td><td class="detailHeaderType">constant</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public static const DEBLOCK_NONE:int = 1</code><p>
+   Do not use a deblocking filter.
+   </p></div>
+<a name="DEBLOCK_ON2"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">DEBLOCK_ON2</td><td class="detailHeaderType">constant</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public static const DEBLOCK_ON2:int = 3</code><p>
+   For On2 video only, uses the On2 deblocking filter but no deringing filter.
+   </p></div>
+<a name="DEBLOCK_ON2_DERINGER"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">DEBLOCK_ON2_DERINGER</td><td class="detailHeaderType">constant</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public static const DEBLOCK_ON2_DERINGER:int = 4</code><p>
+   For On2 video only, uses the On2 deblocking and deringing filter.
+   </p></div>
+<a name="DEBLOCK_ON2_DERINGER_HIGH"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">DEBLOCK_ON2_DERINGER_HIGH</td><td class="detailHeaderType">constant</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public static const DEBLOCK_ON2_DERINGER_HIGH:int = 5</code><p>
+   For On2 video only, uses the On2 deblocking and a higher-performance On2 deringing filter.
+   </p></div>
+<a name="DEBLOCK_SORENSON"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">DEBLOCK_SORENSON</td><td class="detailHeaderType">constant</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public static const DEBLOCK_SORENSON:int = 2</code><p>
+   Uses the Sorenson deblocking filter.
    </p></div>
 <br>
 <br>
