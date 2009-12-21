@@ -4,7 +4,7 @@
 <META http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <link rel="stylesheet" href="../../style.css" type="text/css" media="screen">
 <link rel="stylesheet" href="../../print.css" type="text/css" media="print">
-<meta content="MediaEvent,sekati.events.MediaEvent,BUFFER_EMPTY,BUFFER_FLUSH,BUFFER_FULL,COMPLETE,CUE_POINT,CUE_POINT_DISPLAY,ID3,METADATA,PROGRESS,REBUFFER,REBUFFER_COMPLETE,SEEK_INVALID_TIME,SEEK_NOTIFY,START,STREAM_NOT_FOUND,UNRECOGNIZED,_code,_cuePointData,_id3,_loaded,_metadata,_played,code,cuePointData,id3,loaded,metadata,played,clone" name="keywords">
+<meta content="MediaEvent,sekati.events.MediaEvent,BUFFER_EMPTY,BUFFER_FLUSH,BUFFER_FULL,COMPLETE,CUE_POINT,CUE_POINT_DISPLAY,FILE_STRUCTURE_INVALID,ID3,METADATA,NO_SUPPORTED_TRACK_FOUND,PROGRESS,REBUFFER,REBUFFER_COMPLETE,SEEK_INVALID_TIME,SEEK_NOTIFY,START,STREAM_NOT_FOUND,UNRECOGNIZED,_code,_cuePointData,_id3,_loaded,_metadata,_played,code,cuePointData,id3,loaded,metadata,played,clone" name="keywords">
 <title>sekati.events.MediaEvent</title>
 </head>
 <body>
@@ -213,7 +213,17 @@ if (!isEclipse() || window.name != ECLIPSE_FRAME_NAME) {titleBar_setSubTitle("Cl
 </td><td class="summaryTableOwnerCol">MediaEvent</td>
 </tr>
 <tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a class="signatureLink" href="#FILE_STRUCTURE_INVALID">FILE_STRUCTURE_INVALID</a> : String = "fileStructureInvalid"<div class="summaryTableDescription">[static]
+   </div>
+</td><td class="summaryTableOwnerCol">MediaEvent</td>
+</tr>
+<tr class="">
 <td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a class="signatureLink" href="#METADATA">METADATA</a> : String = "metaData"<div class="summaryTableDescription">[static]
+   </div>
+</td><td class="summaryTableOwnerCol">MediaEvent</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a class="signatureLink" href="#NO_SUPPORTED_TRACK_FOUND">NO_SUPPORTED_TRACK_FOUND</a> : String = "noSupportedTrackFound"<div class="summaryTableDescription">[static]
    </div>
 </td><td class="summaryTableOwnerCol">MediaEvent</td>
 </tr>
@@ -580,6 +590,15 @@ showHideInherited();
 <div class="detailBody">
 <code>public static const COMPLETE:String = "complete"</code><p>
    </p></div>
+<a name="FILE_STRUCTURE_INVALID"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">FILE_STRUCTURE_INVALID</td><td class="detailHeaderType">constant</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public static const FILE_STRUCTURE_INVALID:String = "fileStructureInvalid"</code><p>
+   </p></div>
 <a name="METADATA"></a>
 <table cellspacing="0" cellpadding="0" class="detailHeader">
 <tr>
@@ -588,6 +607,15 @@ showHideInherited();
 </table>
 <div class="detailBody">
 <code>public static const METADATA:String = "metaData"</code><p>
+   </p></div>
+<a name="NO_SUPPORTED_TRACK_FOUND"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">NO_SUPPORTED_TRACK_FOUND</td><td class="detailHeaderType">constant</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public static const NO_SUPPORTED_TRACK_FOUND:String = "noSupportedTrackFound"</code><p>
    </p></div>
 <a name="PROGRESS"></a>
 <table cellspacing="0" cellpadding="0" class="detailHeader">

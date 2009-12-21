@@ -4,7 +4,7 @@
 <META http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <link rel="stylesheet" href="../../style.css" type="text/css" media="screen">
 <link rel="stylesheet" href="../../print.css" type="text/css" media="print">
-<meta content="AlignUtil,sekati.utils.AlignUtil,alignCenter,alignLeft,alignRight,flip,scale,scaleRatio,scaleRatioToFit,scaleRatioToStage,scaleToFit,stageAlignBottom,stageAlignCenter,stageAlignProportion,stageAlignRight,stageAlignXCenter,stageAlignXProportion,stageAlignYCenter,stageAlignYProportion,xAlignCenter,xAlignLeft,xAlignRight,yAlignCenter,yAlignLeft,yAlignRight" name="keywords">
+<meta content="AlignUtil,sekati.utils.AlignUtil,alignCenter,alignLeft,alignRight,flip,scale,scaleProportion,scaleRatio,scaleRatioToFit,scaleRatioToStage,scaleToFit,stageAlignBottom,stageAlignCenter,stageAlignProportion,stageAlignRight,stageAlignXCenter,stageAlignXProportion,stageAlignYCenter,stageAlignYProportion,xAlignCenter,xAlignLeft,xAlignRight,yAlignCenter,yAlignLeft,yAlignRight" name="keywords">
 <title>sekati.utils.AlignUtil</title>
 </head>
 <body>
@@ -98,6 +98,14 @@ if (!isEclipse() || window.name != ECLIPSE_FRAME_NAME) {titleBar_setSubTitle("Cl
 <a class="signatureLink" href="#scale()">scale</a>(item:DisplayObject, scale:Number):void</div>
 <div class="summaryTableDescription">[static]
    Set scale wrapper.</div>
+</td><td class="summaryTableOwnerCol">AlignUtil</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="#scaleProportion()">scaleProportion</a>(item:DisplayObject, target:Boolean, center:* = true):void</div>
+<div class="summaryTableDescription">[static]
+   Scale an item to proportionally fit the target object (based on the smallest side).</div>
 </td><td class="summaryTableOwnerCol">AlignUtil</td>
 </tr>
 <tr class="">
@@ -386,6 +394,44 @@ showHideInherited();
    </td>
 </tr>
 </table>
+</div>
+<a name="scaleProportion()"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">scaleProportion</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public static function scaleProportion(item:DisplayObject, target:Boolean, center:* = true):void</code><p>
+   Scale an item to proportionally fit the target object (based on the smallest side). <b>Note:</b> this method doesn't use the
+   <code>scaleX, scaleY</code> properties but uses <code>width, height</code> instead.
+   </p><span class="label">Parameters</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20px"></td><td><code><span class="label">item</span>:DisplayObject</code> &mdash;   to be scaled.
+   </td>
+</tr>
+<tr>
+<td class="paramSpacer">&nbsp;</td>
+</tr>
+<tr>
+<td width="20px"></td><td><code><span class="label">target</span>:Boolean</code> &mdash;  to be proportionally scaled to. <i>Note:</i> this may be a <code>DisplayObject</code> or <code>Stage</code>.
+   </td>
+</tr>
+<tr>
+<td class="paramSpacer">&nbsp;</td>
+</tr>
+<tr>
+<td width="20px"></td><td><code><span class="label">center</span>:*</code> (default = <code>true</code>)<code></code> &mdash;  whether to center the <code>item</code> to the <code>target</code> or not.
+   </td>
+</tr>
+</table>
+<br>
+<span class="label">Example</span>
+<br><div class='listing'><pre>
+     AlignUtil.scaleProportion( myBox, Canvas.stage, true ); // proportionally resize the item to fit the stage and center it.
+   </pre></div>
+   <p></p>
 </div>
 <a name="scaleRatio()"></a>
 <table cellspacing="0" cellpadding="0" class="detailHeader">
