@@ -2,6 +2,7 @@
 
 
 3.1.x.x PRE-ALPHA BRANCH (JASON-CHANGES):
+* FLV deblocking is now "auto" by default.
 - Added sekati.net.PersistentXMLSocket
 - Added sekati.converters.NumberConverter
 - Added AlignUtil.scaleProportion method.
