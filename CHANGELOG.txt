@@ -2,6 +2,8 @@
 
 
 3.1.x.x PRE-ALPHA BRANCH (JASON-CHANGES):
+- Added sekati.net.PersistentXMLSocket
+- Added sekati.converters.NumberConverter
 - Added AlignUtil.scaleProportion method.
 - Added deblocking constants to FLV class.
 - Added getter/setters for smoothing, deblocking, videoWidth, videoHeight in FLV class.
