@@ -1,7 +1,13 @@
 ------ SEKATI API CHANGELOG ------
 
 
-API UPDATE v3.0.5.9 - "Gigan" (IN-PROGRESS)
+API UPDATE v3.0.5.9 - "Gigan"
+- Redesigned more compact PerformanceMonitorGraph.
+- Added NumberConverterTest unit test.
+- Updated copyright dates on core API classes.
+* FLV deblocking is now "auto" by default.
+- Added sekati.net.PersistentXMLSocket
+- Added sekati.converters.NumberConverter
 - Added AlignUtil.scaleProportion method.
 - Added deblocking constants to FLV class.
 - Added getter/setters for smoothing, deblocking, videoWidth, videoHeight in FLV class.
