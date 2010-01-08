@@ -2,6 +2,7 @@
 
 
 3.1.x.x PRE-ALPHA BRANCH (JASON-CHANGES):
+- Redesigned more compact PerformanceMonitorGraph.
 - Added NumberConverterTest unit test.
 * FLV deblocking is now "auto" by default.
 - Added sekati.net.PersistentXMLSocket
