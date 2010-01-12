@@ -1,6 +1,10 @@
 ------ SEKATI API CHANGELOG ------
 
 
+API UPDATE v3.0.5.10 - "Gigan" (IN-PROGRESS)
+* added "swf" to deploy/.htaccess anti-gzip compression as this can cause problems in the lastest flashplayer!
+
+
 API UPDATE v3.0.5.9 - "Gigan"
 - Redesigned more compact PerformanceMonitorGraph.
 - Added NumberConverterTest unit test.
