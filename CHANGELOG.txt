@@ -2,6 +2,9 @@
 
 
 API UPDATE v3.0.5.10 - "Gigan" (IN-PROGRESS)
+- added counter to text effects
+* removed superflous "ands" from NumberConverter.toWord
+* added option for uppercase to RandomTypo string and shuffle charsets (upper, lower, uppper+special)
 * Removed force toUpperCase in RandomTypo
 * added "swf" to deploy/.htaccess anti-gzip compression as this can cause problems in the lastest flashplayer!
 
