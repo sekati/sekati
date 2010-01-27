@@ -2,6 +2,7 @@
 
 
 API UPDATE v3.0.5.10 - "Gigan" (IN-PROGRESS)
+- GradientRect: removed default constructor class references due to 2+ year old ridiculous MXMLC bug: http://bugs.adobe.com/jira/browse/ASC-2231
 - added Scroll fix.
 - added counter to text effects
 * removed superflous "ands" from NumberConverter.toWord
