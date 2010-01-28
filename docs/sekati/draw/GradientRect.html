@@ -171,7 +171,7 @@ if (!isEclipse() || window.name != ECLIPSE_FRAME_NAME) {titleBar_setSubTitle("Cl
 <tr class="">
 <td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
 <div class="summarySignature">
-<a class="signatureLink" href="#GradientRect()">GradientRect</a>(width:Number, height:Number, colors:Array, alphas:Array, ratios:Array, isVerticalGradient:Boolean = true, type:String, spread:String, interpolation:String, focalPointRatio:Number = 0)</div>
+<a class="signatureLink" href="#GradientRect()">GradientRect</a>(width:Number, height:Number, colors:Array, alphas:Array, ratios:Array, isVerticalGradient:Boolean = true, type:String = "linear", spread:String = "pad", interpolation:String = "rgb", focalPointRatio:Number = 0)</div>
 <div class="summaryTableDescription">
    GradientRect Constructor
    </div>
@@ -481,7 +481,7 @@ showHideInherited();
 </tr>
 </table>
 <div class="detailBody">
-<code>public function GradientRect(width:Number, height:Number, colors:Array, alphas:Array, ratios:Array, isVerticalGradient:Boolean = true, type:String, spread:String, interpolation:String, focalPointRatio:Number = 0)</code><p>
+<code>public function GradientRect(width:Number, height:Number, colors:Array, alphas:Array, ratios:Array, isVerticalGradient:Boolean = true, type:String = "linear", spread:String = "pad", interpolation:String = "rgb", focalPointRatio:Number = 0)</code><p>
    GradientRect Constructor
    </p><span class="label">Parameters</span>
 <table border="0" cellspacing="0" cellpadding="0">
@@ -522,19 +522,19 @@ showHideInherited();
 <td class="paramSpacer">&nbsp;</td>
 </tr>
 <tr>
-<td width="20px"></td><td><code><span class="label">type</span>:String</code></td>
+<td width="20px"></td><td><code><span class="label">type</span>:String</code> (default = "<code>linear</code>")<code></code></td>
 </tr>
 <tr>
 <td class="paramSpacer">&nbsp;</td>
 </tr>
 <tr>
-<td width="20px"></td><td><code><span class="label">spread</span>:String</code></td>
+<td width="20px"></td><td><code><span class="label">spread</span>:String</code> (default = "<code>pad</code>")<code></code></td>
 </tr>
 <tr>
 <td class="paramSpacer">&nbsp;</td>
 </tr>
 <tr>
-<td width="20px"></td><td><code><span class="label">interpolation</span>:String</code></td>
+<td width="20px"></td><td><code><span class="label">interpolation</span>:String</code> (default = "<code>rgb</code>")<code></code></td>
 </tr>
 <tr>
 <td class="paramSpacer">&nbsp;</td>

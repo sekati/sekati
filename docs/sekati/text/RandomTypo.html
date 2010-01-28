@@ -63,9 +63,9 @@ if (!isEclipse() || window.name != ECLIPSE_FRAME_NAME) {titleBar_setSubTitle("Cl
 <tr class="">
 <td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
 <div class="summarySignature">
-<a class="signatureLink" href="#setText()">setText</a>(instance:TextField, str:String, wChar:String = "-", cSpeed:uint = 2, mFix:uint = 10, mRange:uint = 15, mTrigger:uint = 12):void</div>
+<a class="signatureLink" href="#setText()">setText</a>(instance:TextField, str:String, wChar:String = "-", toUpperCase:Boolean = false, mixLower:Boolean = true, mixUpper:Boolean = false, mixUpperSpecial:Boolean = false, cSpeed:uint = 2, mFix:uint = 10, mRange:uint = 15, mTrigger:uint = 12):void</div>
 <div class="summaryTableDescription">
-   
+   Animate the shuffled text
    </div>
 </td><td class="summaryTableOwnerCol">RandomTypo</td>
 </tr>
@@ -104,24 +104,55 @@ showHideInherited();
 </tr>
 </table>
 <div class="detailBody">
-<code>public function setText(instance:TextField, str:String, wChar:String = "-", cSpeed:uint = 2, mFix:uint = 10, mRange:uint = 15, mTrigger:uint = 12):void</code><p>
-   
+<code>public function setText(instance:TextField, str:String, wChar:String = "-", toUpperCase:Boolean = false, mixLower:Boolean = true, mixUpper:Boolean = false, mixUpperSpecial:Boolean = false, cSpeed:uint = 2, mFix:uint = 10, mRange:uint = 15, mTrigger:uint = 12):void</code><p>
+   Animate the shuffled text
    </p><span class="label">Parameters</span>
 <table border="0" cellspacing="0" cellpadding="0">
 <tr>
-<td width="20px"></td><td><code><span class="label">instance</span>:TextField</code></td>
+<td width="20px"></td><td><code><span class="label">instance</span>:TextField</code> &mdash; the textfield to animate text in
+   </td>
 </tr>
 <tr>
 <td class="paramSpacer">&nbsp;</td>
 </tr>
 <tr>
-<td width="20px"></td><td><code><span class="label">str</span>:String</code></td>
+<td width="20px"></td><td><code><span class="label">str</span>:String</code> &mdash; the string to use
+   </td>
 </tr>
 <tr>
 <td class="paramSpacer">&nbsp;</td>
 </tr>
 <tr>
-<td width="20px"></td><td><code><span class="label">wChar</span>:String</code> (default = "<code>-</code>")<code></code></td>
+<td width="20px"></td><td><code><span class="label">wChar</span>:String</code> (default = "<code>-</code>")<code></code> &mdash; the seperator character to use
+   </td>
+</tr>
+<tr>
+<td class="paramSpacer">&nbsp;</td>
+</tr>
+<tr>
+<td width="20px"></td><td><code><span class="label">toUpperCase</span>:Boolean</code> (default = <code>false</code>)<code></code> &mdash; whether to uppercase all final text or not
+   </td>
+</tr>
+<tr>
+<td class="paramSpacer">&nbsp;</td>
+</tr>
+<tr>
+<td width="20px"></td><td><code><span class="label">mixLower</span>:Boolean</code> (default = <code>true</code>)<code></code> &mdash; whether to use only lowercase chars in the shuffle (default)
+   </td>
+</tr>
+<tr>
+<td class="paramSpacer">&nbsp;</td>
+</tr>
+<tr>
+<td width="20px"></td><td><code><span class="label">mixUpper</span>:Boolean</code> (default = <code>false</code>)<code></code> &mdash; whether to use only lowercase chars in the shuffle
+   </td>
+</tr>
+<tr>
+<td class="paramSpacer">&nbsp;</td>
+</tr>
+<tr>
+<td width="20px"></td><td><code><span class="label">mixUpperSpecial</span>:Boolean</code> (default = <code>false</code>)<code></code> &mdash; whether to use uppercase and special chars in the shuffle (overrides other mix args)
+   </td>
 </tr>
 <tr>
 <td class="paramSpacer">&nbsp;</td>
