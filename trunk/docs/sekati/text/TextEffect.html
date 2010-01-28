@@ -4,7 +4,7 @@
 <META http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <link rel="stylesheet" href="../../style.css" type="text/css" media="screen">
 <link rel="stylesheet" href="../../print.css" type="text/css" media="print">
-<meta content="TextEffect,sekati.text.TextEffect,atype,hasEffect,mixer" name="keywords">
+<meta content="TextEffect,sekati.text.TextEffect,atype,counter,hasEffect,mixer" name="keywords">
 <title>sekati.text.TextEffect</title>
 </head>
 <body>
@@ -66,6 +66,15 @@ if (!isEclipse() || window.name != ECLIPSE_FRAME_NAME) {titleBar_setSubTitle("Cl
 <a class="signatureLink" href="#atype()">atype</a>(tf:TextField, str:String, cb:Function):void</div>
 <div class="summaryTableDescription">[static]
    Easing alpha type in text animation
+   </div>
+</td><td class="summaryTableOwnerCol">TextEffect</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="#counter()">counter</a>(tf:TextField, startValue:Number, endValue:Number, floatPrecision:int = 2, stepDivisor:int = 20):void</div>
+<div class="summaryTableDescription">[static]
+   Count up any positive numeric value in a text field
    </div>
 </td><td class="summaryTableOwnerCol">TextEffect</td>
 </tr>
@@ -135,6 +144,46 @@ showHideInherited();
 <tr>
 <td width="20px"></td><td><code><span class="label">cb</span>:Function</code> &mdash;    callback
    </td>
+</tr>
+</table>
+</div>
+<a name="counter()"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">counter</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public static function counter(tf:TextField, startValue:Number, endValue:Number, floatPrecision:int = 2, stepDivisor:int = 20):void</code><p>
+   Count up any positive numeric value in a text field
+   </p><span class="label">Parameters</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20px"></td><td><code><span class="label">tf</span>:TextField</code></td>
+</tr>
+<tr>
+<td class="paramSpacer">&nbsp;</td>
+</tr>
+<tr>
+<td width="20px"></td><td><code><span class="label">startValue</span>:Number</code></td>
+</tr>
+<tr>
+<td class="paramSpacer">&nbsp;</td>
+</tr>
+<tr>
+<td width="20px"></td><td><code><span class="label">endValue</span>:Number</code></td>
+</tr>
+<tr>
+<td class="paramSpacer">&nbsp;</td>
+</tr>
+<tr>
+<td width="20px"></td><td><code><span class="label">floatPrecision</span>:int</code> (default = <code>2</code>)<code></code></td>
+</tr>
+<tr>
+<td class="paramSpacer">&nbsp;</td>
+</tr>
+<tr>
+<td width="20px"></td><td><code><span class="label">stepDivisor</span>:int</code> (default = <code>20</code>)<code></code></td>
 </tr>
 </table>
 </div>
