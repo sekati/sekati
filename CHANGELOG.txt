@@ -2,6 +2,7 @@
 
 
 3.1.x.x PRE-ALPHA BRANCH (JASON-CHANGES):
+- NumberConverter.toWord: added fix for "Zero" and Unit Test
 - GradientRect: removed default constructor class references due to 2+ year old ridiculous MXMLC bug: http://bugs.adobe.com/jira/browse/ASC-2231
 - added Scroll fix.
 - added counter to text effects
