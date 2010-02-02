@@ -2,6 +2,7 @@
 
 
 API UPDATE v3.0.5.10 - "Gigan" (IN-PROGRESS)
+- Added Billions support to NumberConverter.toWord()
 - Added SWFLoader.contentLoaderInfo property
 - NumberConverter.toWord - "and" is now lowercase.
 - Fixed typo in PersistentXMLSocket
