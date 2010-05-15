@@ -2,6 +2,7 @@
 
 
 API UPDATE v3.0.5.10 - "Gigan" (IN-PROGRESS)
+- Fixed index.html template typo http://
 - Fixed typos and copyright in config.xml
 - Added Billions support to NumberConverter.toWord()
 - Added SWFLoader.contentLoaderInfo property
