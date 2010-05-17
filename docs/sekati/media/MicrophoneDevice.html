@@ -143,7 +143,7 @@ if (!isEclipse() || window.name != ECLIPSE_FRAME_NAME) {titleBar_setSubTitle("Cl
 <tr class="">
 <td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
 <div class="summarySignature">
-<a class="signatureLink" href="#MicrophoneDevice()">MicrophoneDevice</a>(silenceLevel:int = 50, rate:int = 8, gain:int = 50, timeout:int = 2000, loopback:Boolean = true, useEchoSuppression:Boolean = true)</div>
+<a class="signatureLink" href="#MicrophoneDevice()">MicrophoneDevice</a>(silenceLevel:int = 50, rate:int = 8, gain:int = 50, timeout:int = 2000, loopback:Boolean = true, useEchoSuppression:Boolean = true, autoPoll:Boolean = true)</div>
 <div class="summaryTableDescription">
    MicrophoneDevice Constructor
    </div>
@@ -155,6 +155,14 @@ if (!isEclipse() || window.name != ECLIPSE_FRAME_NAME) {titleBar_setSubTitle("Cl
 <a class="signatureLink" href="#destroy()">destroy</a>():void</div>
 <div class="summaryTableDescription">
    </div>
+</td><td class="summaryTableOwnerCol">MicrophoneDevice</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="#pollDevice()">pollDevice</a>():void</div>
+<div class="summaryTableDescription">
+   Poll the <code>Microphone</code> device for a connection.</div>
 </td><td class="summaryTableOwnerCol">MicrophoneDevice</td>
 </tr>
 </table>
@@ -180,14 +188,6 @@ if (!isEclipse() || window.name != ECLIPSE_FRAME_NAME) {titleBar_setSubTitle("Cl
 <a class="signatureLink" href="#connectDevice()">connectDevice</a>():void</div>
 <div class="summaryTableDescription">
    Connect to the <code>Microphone</code> to a <code>Video</code> stream.</div>
-</td><td class="summaryTableOwnerCol">MicrophoneDevice</td>
-</tr>
-<tr class="">
-<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
-<div class="summarySignature">
-<a class="signatureLink" href="#pollDevice()">pollDevice</a>():void</div>
-<div class="summaryTableDescription">
-   Poll the <code>Microphone</code> device for a connection.</div>
 </td><td class="summaryTableOwnerCol">MicrophoneDevice</td>
 </tr>
 <tr class="">
@@ -425,7 +425,7 @@ showHideInherited();
 </tr>
 </table>
 <div class="detailBody">
-<code>public function MicrophoneDevice(silenceLevel:int = 50, rate:int = 8, gain:int = 50, timeout:int = 2000, loopback:Boolean = true, useEchoSuppression:Boolean = true)</code><p>
+<code>public function MicrophoneDevice(silenceLevel:int = 50, rate:int = 8, gain:int = 50, timeout:int = 2000, loopback:Boolean = true, useEchoSuppression:Boolean = true, autoPoll:Boolean = true)</code><p>
    MicrophoneDevice Constructor
    </p><span class="label">Parameters</span>
 <table border="0" cellspacing="0" cellpadding="0">
@@ -466,6 +466,13 @@ showHideInherited();
 </tr>
 <tr>
 <td width="20px"></td><td><code><span class="label">useEchoSuppression</span>:Boolean</code> (default = <code>true</code>)<code></code> &mdash;  Whether to use the echo suppression feature of the audio codec (<code>true</code>) or not (<code>false</code>).
+   </td>
+</tr>
+<tr>
+<td class="paramSpacer">&nbsp;</td>
+</tr>
+<tr>
+<td width="20px"></td><td><code><span class="label">autoPoll</span>:Boolean</code> (default = <code>true</code>)<code></code> &mdash;     Determines whether the device is auto-polled for (<code>true</code>) or not (<code>false</code>).
    </td>
 </tr>
 </table>
@@ -514,7 +521,7 @@ showHideInherited();
 </tr>
 </table>
 <div class="detailBody">
-<code>protected function pollDevice():void</code><p>
+<code>public function pollDevice():void</code><p>
    Poll the <code>Microphone</code> device for a connection.
    </p></div>
 <a name="promptDevice()"></a>

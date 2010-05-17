@@ -2,6 +2,9 @@
 
 
 API UPDATE v3.0.5.10 - "Gigan" (IN-PROGRESS)
+* added pollDevice method to IDevice interface.
+* Added constructor argument to auto-poll CameraDevice & MicrophoneDevice, and made pollDevices public.
+- Removed annoying activityHandler Logger message from CameraDevice & MicrophoneDevice
 - Fixed index.html template typo http://
 - Fixed typos and copyright in config.xml
 - Added Billions support to NumberConverter.toWord()
