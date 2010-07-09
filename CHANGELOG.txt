@@ -1,7 +1,10 @@
 ------ SEKATI API CHANGELOG ------
 
 
-API UPDATE v3.0.5.10 - "Gigan" (IN-PROGRESS)
+API UPDATE v3.0.6.0 - "Gamera"
+* Fixed FP10 Fullscreen Key handler bug: http://code.google.com/p/sekati/issues/detail?id=83 in ContextMenuManager & KeyManager.
+- Updated swfobject v2.2
+- Removed verbose event Logger messages from StageDisplay
 * added pollDevice method to IDevice interface.
 * Added constructor argument to auto-poll CameraDevice & MicrophoneDevice, and made pollDevices public.
 - Removed annoying activityHandler Logger message from CameraDevice & MicrophoneDevice
