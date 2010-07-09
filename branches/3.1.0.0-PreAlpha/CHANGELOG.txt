@@ -2,6 +2,7 @@
 
 
 3.1.x.x PRE-ALPHA BRANCH (JASON-CHANGES):
+* Fixed FP10 Fullscreen Key handler bug: http://code.google.com/p/sekati/issues/detail?id=83 in ContextMenuManager & KeyManager.
 - Updated swfobject v2.2
 - Removed verbose event Logger messages from StageManager
 * added pollDevice method to IDevice interface.
