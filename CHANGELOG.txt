@@ -1,6 +1,10 @@
 ------ SEKATI API CHANGELOG ------
 
 
+API UPDATE v3.0.6.1 - "Gamera" (IN-PROGRESS)
+- Added m4v support to FileTypeValidator.isVideo.
+
+
 API UPDATE v3.0.6.0 - "Gamera"
 * Fixed FP10 Fullscreen Key handler bug: http://code.google.com/p/sekati/issues/detail?id=83 in ContextMenuManager & KeyManager.
 - Updated swfobject v2.2
