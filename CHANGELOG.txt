@@ -2,6 +2,7 @@
 
 
 API UPDATE v3.0.6.1 - "Gamera" (IN-PROGRESS)
+- Insured KeyManager is initialized via ContextMenuManager (bug!)
 - Added m4v support to FileTypeValidator.isVideo.
 
 
