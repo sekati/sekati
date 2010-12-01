@@ -4,7 +4,7 @@
 <META http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <link rel="stylesheet" href="../../style.css" type="text/css" media="screen">
 <link rel="stylesheet" href="../../print.css" type="text/css" media="print">
-<meta content="DateUtil,sekati.utils.DateUtil,DAYS_IN_APRIL,DAYS_IN_AUGUST,DAYS_IN_DECEMBER,DAYS_IN_FEBRUARY,DAYS_IN_FEBRUARY_LEAP_YEAR,DAYS_IN_JANUARY,DAYS_IN_JULY,DAYS_IN_JUNE,DAYS_IN_LEAP_YEAR,DAYS_IN_MARCH,DAYS_IN_MAY,DAYS_IN_MONTHS,DAYS_IN_NOVEMBER,DAYS_IN_OCTOBER,DAYS_IN_SEPTEMBER,DAYS_IN_YEAR,MONTHS,WEEKDAYS,MONTHS_SHORT,WEEKDAYS_INITIALS,WEEKDAYS_SHORT,countDays,dateCeil,dateDiff,dateFloor,dateFromDB,getHoursAmPm,getMonthName,getShortMonthName,getTotalDaysInMonth,getTotalDaysInYear,isLeapYear,isSameDay,isValidAge,isValidDate,isValidGregorian,padTime,secToFormattedTime,toOrdinal" name="keywords">
+<meta content="DateUtil,sekati.utils.DateUtil,DAYS_IN_APRIL,DAYS_IN_AUGUST,DAYS_IN_DECEMBER,DAYS_IN_FEBRUARY,DAYS_IN_FEBRUARY_LEAP_YEAR,DAYS_IN_JANUARY,DAYS_IN_JULY,DAYS_IN_JUNE,DAYS_IN_LEAP_YEAR,DAYS_IN_MARCH,DAYS_IN_MAY,DAYS_IN_MONTHS,DAYS_IN_NOVEMBER,DAYS_IN_OCTOBER,DAYS_IN_SEPTEMBER,DAYS_IN_YEAR,MONTHS,WEEKDAYS,MONTHS_SHORT,WEEKDAYS_INITIALS,WEEKDAYS_SHORT,countDays,dateCeil,dateDiff,dateDiffDays,dateDiffMinutes,dateDiffSeconds,dateFloor,dateFromDB,getHoursAmPm,getMonthName,getShortMonthName,getTotalDaysInMonth,getTotalDaysInYear,isLeapYear,isSameDay,isValidAge,isValidDate,isValidGregorian,padTime,secToFormattedTime,toOrdinal,toRelative" name="keywords">
 <title>sekati.utils.DateUtil</title>
 </head>
 <body>
@@ -106,6 +106,30 @@ if (!isEclipse() || window.name != ECLIPSE_FRAME_NAME) {titleBar_setSubTitle("Cl
 <a class="signatureLink" href="#dateDiff()">dateDiff</a>(d1:Date, d2:Date = null):Number</div>
 <div class="summaryTableDescription">[static]
    Get the differences between two Dates in milliseconds.</div>
+</td><td class="summaryTableOwnerCol">DateUtil</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="#dateDiffDays()">dateDiffDays</a>(d1:Date, d2:Date):Number</div>
+<div class="summaryTableDescription">[static]
+   Get the difference between two Dates in days.</div>
+</td><td class="summaryTableOwnerCol">DateUtil</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="#dateDiffMinutes()">dateDiffMinutes</a>(d1:Date, d2:Date):Number</div>
+<div class="summaryTableDescription">[static]
+   Get the difference between two Dates in minutes.</div>
+</td><td class="summaryTableOwnerCol">DateUtil</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="#dateDiffSeconds()">dateDiffSeconds</a>(d1:Date, d2:Date):Number</div>
+<div class="summaryTableDescription">[static]
+   Get the difference between two Dates in seconds.</div>
 </td><td class="summaryTableOwnerCol">DateUtil</td>
 </tr>
 <tr class="">
@@ -228,6 +252,14 @@ if (!isEclipse() || window.name != ECLIPSE_FRAME_NAME) {titleBar_setSubTitle("Cl
 <a class="signatureLink" href="#toOrdinal()">toOrdinal</a>(n:int):String</div>
 <div class="summaryTableDescription">[static]
    Reformat an integer to an ordinal number (1st, 2nd, 3rd, 4th, etc).</div>
+</td><td class="summaryTableOwnerCol">DateUtil</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="#toRelative()">toRelative</a>(pastDate:Date):String</div>
+<div class="summaryTableDescription">
+   Return a human-readable relative string (yesterday, 10 minutes ago, etc) for a Date object.</div>
 </td><td class="summaryTableOwnerCol">DateUtil</td>
 </tr>
 </table>
@@ -467,6 +499,96 @@ showHideInherited();
 <table border="0" cellspacing="0" cellpadding="0">
 <tr>
 <td width="20"></td><td><code>Number</code> &mdash;  difference between two dates in ms
+   </td>
+</tr>
+</table>
+</div>
+<a name="dateDiffDays()"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">dateDiffDays</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public static function dateDiffDays(d1:Date, d2:Date):Number</code><p>
+   Get the difference between two Dates in days.
+   </p><span class="label">Parameters</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20px"></td><td><code><span class="label">d1</span>:Date</code></td>
+</tr>
+<tr>
+<td class="paramSpacer">&nbsp;</td>
+</tr>
+<tr>
+<td width="20px"></td><td><code><span class="label">d2</span>:Date</code></td>
+</tr>
+</table>
+<p></p>
+<span class="label">Returns</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20"></td><td><code>Number</code> &mdash; difference between two dates in d
+   </td>
+</tr>
+</table>
+</div>
+<a name="dateDiffMinutes()"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">dateDiffMinutes</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public static function dateDiffMinutes(d1:Date, d2:Date):Number</code><p>
+   Get the difference between two Dates in minutes.
+   </p><span class="label">Parameters</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20px"></td><td><code><span class="label">d1</span>:Date</code></td>
+</tr>
+<tr>
+<td class="paramSpacer">&nbsp;</td>
+</tr>
+<tr>
+<td width="20px"></td><td><code><span class="label">d2</span>:Date</code></td>
+</tr>
+</table>
+<p></p>
+<span class="label">Returns</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20"></td><td><code>Number</code> &mdash; difference between two dates in m
+   </td>
+</tr>
+</table>
+</div>
+<a name="dateDiffSeconds()"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">dateDiffSeconds</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public static function dateDiffSeconds(d1:Date, d2:Date):Number</code><p>
+   Get the difference between two Dates in seconds.
+   </p><span class="label">Parameters</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20px"></td><td><code><span class="label">d1</span>:Date</code></td>
+</tr>
+<tr>
+<td class="paramSpacer">&nbsp;</td>
+</tr>
+<tr>
+<td width="20px"></td><td><code><span class="label">d2</span>:Date</code></td>
+</tr>
+</table>
+<p></p>
+<span class="label">Returns</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20"></td><td><code>Number</code> &mdash; difference between two dates in s
    </td>
 </tr>
 </table>
@@ -883,6 +1005,31 @@ showHideInherited();
 <table border="0" cellspacing="0" cellpadding="0">
 <tr>
 <td width="20"></td><td><code>String</code></td>
+</tr>
+</table>
+</div>
+<a name="toRelative()"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">toRelative</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public function toRelative(pastDate:Date):String</code><p>
+   Return a human-readable relative string (yesterday, 10 minutes ago, etc) for a Date object.
+   </p><span class="label">Parameters</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20px"></td><td><code><span class="label">pastDate</span>:Date</code> &mdash; a Date object older that the current Date.
+   </td>
+</tr>
+</table>
+<p></p>
+<span class="label">Returns</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20"></td><td><code>String</code> &mdash; human readable descriptive string relative to the current date.
+   </td>
 </tr>
 </table>
 </div>
