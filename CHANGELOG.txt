@@ -1,7 +1,18 @@
 ------ SEKATI API CHANGELOG ------
 
 
-API UPDATE v3.0.6.1 - "Gamera" (IN-PROGRESS)
+API UPDATE v3.0.6.1 - "Gamera"
+* Updated Sekati swfmouse.js to v2.2.0 to support swfobject 2.2 (maintins swfIN and older swfobject compatability!)
+* Updated sekati.js support
+* Integrated SWFFit JS library for browser scroll size support
+* Deprecated the use of swfIN in trade of SWFObject v2.2 (now exclusively)
+* Upated SEKATI API APPLICATION TEMPLATE // v2.0.0
+- AlignUtil.scaleToFit code rewrite to support resize better: http://code.google.com/p/sekati/issues/detail?id=86
+- Added DateUtil: toRelative, dateDiffSeconds, dateDiffMinutes, dateDiffDays
+- Added DisplayUtil.reparentDisplayObject
+- Added StringValidator.isUSState & StringValidator.isValidDate
+* Refactored StringValidator.validatePhone to StringValidator.isValidatePhone
+- Fixed AbstractMediaPlayer bug: http://code.google.com/p/sekati/issues/detail?id=89
 - Insured KeyManager is initialized via ContextMenuManager (bug!)
 - Added m4v support to FileTypeValidator.isVideo.
 

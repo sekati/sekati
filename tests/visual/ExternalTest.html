@@ -2,9 +2,66 @@
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
-<script language="javascript" src="../../deploy/js/swfIN.js" type="text/javascript"></script>
 <script language="javascript" src="../../deploy/js/sekati.js" type="text/javascript"></script>
+<script language="javascript" src="../../deploy/js/swfobject.js" type="text/javascript"></script>
 <script language="javascript" src="../../deploy/js/swfmouse.js" type="text/javascript"></script>
+<script language="javascript" src="../../deploy/js/swffit.js" type="text/javascript"></script>	
+<script type="text/javascript">
+	//-------------------------------------------------------------------------------------
+	// Configuration
+	var application = 'ExternalTest.swf'; 		// the swf application
+	var objId = 'external_test'; 				// the swf object id
+	var divId = 'flash_update'; 				// the swf div to be overwrite
+	var version = '9.0.115'; 					// the min fp version required by framework
+	var width = '950'; 							// the application embed width
+	var height = '650'; 						// the application embed height	
+	var expressInstall = '../../deploy/expressInstall.swf'; 	// set to false (no quotes) to disable.
+	//-------------------------------------------------------------------------------------		
+	// FlashVars: defines the location of the "config.xml" [default: "xml/config.xml"]
+	// WARNING: query string will override the default flashvar which overrides the default location.
+	var flashvars = {};
+	//flashvars.config = "xml/config.xml";
+	//flashvars.config = (sekati.util.getQueryParam("conf_uri") || 'xml/config.xml' );
+	//-------------------------------------------------------------------------------------
+	// Parameters
+	var params = {};
+	params.menu = "true";
+	params.quality = "high";
+	params.scale = "noscale";
+	params.wmode = "opaque"; // "window", "transparent", "direct", "gpu"
+	params.bgcolor = "#292929";
+	params.seamlesstabbing = "true";
+	params.swliveconnect = "true";
+	params.allowfullscreen = "true";
+	params.allowscriptaccess = "always";
+	params.allownetworking = "all";
+	//-------------------------------------------------------------------------------------
+	// Attributes
+	var attributes = {};
+	attributes.id = objId;
+	attributes.name = objId;
+	//-------------------------------------------------------------------------------------
+	// Attempt Embed
+	if(!sekati.util.isAppleiOS()) {
+		//---------------------------------------------------------------------------------
+		// Embed the swf			
+		swfobject.embedSWF(application, divId, width, height, version, expressInstall, flashvars, params, attributes);
+		//---------------------------------------------------------------------------------
+		// Include sekati mac mouse wheel support.
+		var mousewheel = new SWFMouse();
+		mousewheel.registerObject( attributes.id );
+		//---------------------------------------------------------------------------------
+		// Add browser scrollbar min-size.
+		swffit.fit( attributes.id, 950, 650 );
+		//---------------------------------------------------------------------------------	
+	} else {
+		//---------------------------------------------------------------------------------	
+		// Embed Alternate
+		//
+		//---------------------------------------------------------------------------------	
+	}
+	//-------------------------------------------------------------------------------------	
+</script>
 <link rel="stylesheet" type="text/css" href="../../deploy/css/style.css" />
 <title>Sekati Unit Test Runner | jason m horwitz | sekati.com</title>
 </head>
@@ -14,21 +71,6 @@
 <h1>Flash Player Upgrade Required</h1><br/>
 <a href="adobe.com/go/flashplayer" target="_blank">&raquo; Download Flash plugin to view this site</a>&nbsp; &nbsp; &nbsp; &nbsp;<a href="javascript:location.reload(true)">&raquo; Enter Site</a>
 </div>
-
-<script type="text/javascript">
-	var s = new swfIN("ExternalTest.swf", "unitTest", "950", "650");
-	s.detectShowDiv( [9,0,28], "flash_update" );
-	//s.useExpressInstall("../deploy/js/xi.swf", 300, 300);
-	s.addParam("bgcolor", "#292929");
-	s.addParam("menu", "true");
-	s.addParam("quality", "high");
-	s.addParam("scale", "noScale");
-	s.addParam("allowScriptAccess", "always");
-	s.addParam("swLiveConnect", "true");
-	s.addParam("allowFullScreen", "true");
-	s.write();
-	var mousewheel = new SWFMouse( s );
-</script>
 <br/>
 <hr/>
 </body>

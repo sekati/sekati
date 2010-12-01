@@ -1,6 +1,6 @@
 /**
  * sekati.js - Flash : Javascript Companion Library
- * @version 1.1.3
+ * @version 1.2.0
  * @author jason m horwitz | sekati.com
  * Copyright (C) 2007  jason m horwitz, Sekat LLC. All Rights Reserved.
  * Released under the MIT License: http://www.opensource.org/licenses/mit-license.php
@@ -116,7 +116,11 @@ sekati.ui = {
 // tools
 
 sekati.util = {
-
+	
+	isAppleiOS: function(){
+		return (navigator.userAgent.match(/iPhone/i)) || (navigator.userAgent.match(/iPod/i)) || (navigator.userAgent.match(/iPad/i));
+	},
+		
 	browserSize: function(){
 		if ( self.innerWidth ){
 			return { w:self.innerWidth, h:self.innerHeight };
@@ -147,5 +151,22 @@ sekati.util = {
 		if( val < min ) return min;
 		if( val > max ) return max;
 		return val;
-	}
+	},
+	
+	// get a query string value by key
+	getQueryParam: function( key ) {
+		var val = sekati.util.getAllQueryParams()[key];
+		return (val != undefined && val != "") ? val : null ;
+	},
+	
+	// Get full querystring
+	getAllQueryParams: function(){
+		var qs={};
+		var params = window.location.search.substring(1).split("&");
+		for (var i=0; i<params.length; i++) {
+			var keyVal = params[i].split("=");
+			qs[ keyVal[0] ] = keyVal[1];
+		}
+		return qs;
+	}	
 };
