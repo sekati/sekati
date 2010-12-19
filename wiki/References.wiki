@@ -10,6 +10,7 @@ A few of the projects built on *Sekati API*:
   * [http://www.dinoto.com Dinoto]
   * [http://www.newairplane.com/787/ Boeing: New Airplane]
   * [http://www.ewingcole.com/ EwingCole]
+  * [http://wlist.ferragamo.com/ Ferragamo Wlist]
   * [http://www.fontainebleau.com Fontainebleau Resorts]
   * [http://www.goldeneyedevelopment.com/ GoldenEye Development]
   * [http://www.kssarchitects.com KSS Architects]
