@@ -1,6 +1,11 @@
 ------ SEKATI API CHANGELOG ------
 
 
+API UPDATE v3.0.6.2 - "Gamera"
+* Fixed sekati.ui.Image event type mismatch bug @ http://code.google.com/p/sekati/issues/detail?id=91
+* Fixed sekati.ui.Keyboard key uint duplicate Keyboard.LEFT @ http://code.google.com/p/sekati/issues/detail?id=92
+
+
 API UPDATE v3.0.6.1 - "Gamera"
 * Updated Sekati swfmouse.js to v2.2.0 to support swfobject 2.2 (maintins swfIN and older swfobject compatability!)
 * Updated sekati.js support
