@@ -1,5 +1,8 @@
 ------ SEKATI API CHANGELOG ------
 
+IN-PROGRESS
+- Added CoreSpriteTest to address incorrect bug report http://code.google.com/p/sekati/issues/detail?id=93
+
 
 API UPDATE v3.0.6.2 - "Gamera"
 * Fixed sekati.ui.Image event type mismatch bug @ http://code.google.com/p/sekati/issues/detail?id=91
