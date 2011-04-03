@@ -41,10 +41,10 @@ II. Documentation
 	the API and generating useful Unit Tests to allow the framework to be easily tapped
 	and referenced as needed.
 	
-	Documentation:		http://docs.sekati.com/sekati/
+	Documentation:		http://code.sekati.com/docs/sekati/
 	Changelog:			http://code.google.com/p/sekati/source/browse/trunk/CHANGELOG.txt
-	Unit Tests:			http://api.sekati.com/sekati/tests/
-	Visual Tests:		http://api.sekati.com/sekati/tests/visual/
+	Unit Tests:			http://code.sekati.com/api/sekati/tests/
+	Visual Tests:		http://code.sekati.com/api/sekati/tests/visual/
 
 
 III. Feedback
