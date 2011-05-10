@@ -1,6 +1,6 @@
 /**
  * sekati.js - Flash : Javascript Companion Library
- * @version 1.3.0
+ * @version 1.3.1
  * @author jason m horwitz | sekati.com
  * Copyright (C) 2007-2011  jason m horwitz, Sekat LLC. All Rights Reserved.
  * Released under the MIT License: http://www.opensource.org/licenses/mit-license.php
@@ -196,10 +196,10 @@ sekati.util = {
 		return (hp.length>=index) ? hp[index] : undefined;
 	},
 	
-	// Get full hash params as array (or undefined)
+	// Get full hash params as array
 	getAllHashParams: function(){
 		var path = window.location.href.split('#')[1];
-		return (path.length > 0) ? sekati.util.cleanArray( path.split('/') ) : undefined;
+		return (path && path.length > 0) ? sekati.util.cleanArray( path.split('/') ) : [];
 	},
 	
 	// Remove empty elements from an array (returning a clean array).
