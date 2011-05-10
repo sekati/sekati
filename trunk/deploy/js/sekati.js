@@ -1,8 +1,8 @@
 /**
  * sekati.js - Flash : Javascript Companion Library
- * @version 1.2.0
+ * @version 1.3.0
  * @author jason m horwitz | sekati.com
- * Copyright (C) 2007  jason m horwitz, Sekat LLC. All Rights Reserved.
+ * Copyright (C) 2007-2011  jason m horwitz, Sekat LLC. All Rights Reserved.
  * Released under the MIT License: http://www.opensource.org/licenses/mit-license.php
  */
 
@@ -146,6 +146,26 @@ sekati.util = {
 		return document.location.href;
 	},
 	
+	baseRef: function() {
+		return document.location.href.split('#/')[0];
+	},
+	
+	getTitle: function() {
+		return document.title;
+	},
+	
+	setTitle: function( title ) {
+		return document.title = title;
+	},	
+	
+	forward: function() {
+		return window.history.forward();
+	},
+	
+	back: function() {
+		return window.history.back();
+	},
+	
 	// clamp a value to its constrains
 	clamp: function( val, min, max ) {
 		if( val < min ) return min;
@@ -153,7 +173,7 @@ sekati.util = {
 		return val;
 	},
 	
-	// get a query string value by key
+	// Get a query string value by key
 	getQueryParam: function( key ) {
 		var val = sekati.util.getAllQueryParams()[key];
 		return (val != undefined && val != "") ? val : null ;
@@ -168,5 +188,27 @@ sekati.util = {
 			qs[ keyVal[0] ] = keyVal[1];
 		}
 		return qs;
-	}	
+	},
+	
+	// Get a hash param value by index (0 based array index)
+	getHashParam: function( index ){
+		var hp = sekati.util.getAllHashParams();
+		return (hp.length>=index) ? hp[index] : undefined;
+	},
+	
+	// Get full hash params as array (or undefined)
+	getAllHashParams: function(){
+		var path = window.location.href.split('#')[1];
+		return (path.length > 0) ? sekati.util.cleanArray( path.split('/') ) : undefined;
+	},
+	
+	// Remove empty elements from an array (returning a clean array).
+	cleanArray: function(arr){
+		var clean=[];
+		for(var i = 0; i<arr.length; i++){
+			if (arr[i]) clean.push(arr[i]);
+		}
+		return clean;
+	}
+	
 };

@@ -1,6 +1,15 @@
 ------ SEKATI API CHANGELOG ------
 
 IN-PROGRESS
+- Added new functions to sekati.js JavaScript companion Library:
+	- sekati.util.baseRef()
+	- sekati.util.getTitle()
+	- sekati.util.setTitle()
+	- sekati.util.forward()
+	- sekati.util.back()
+	- sekati.util.getHashParam()
+	- sekati.util.getHashAllParams()
+	- sekati.util.cleanArray();
 - Added CoreSpriteTest to address incorrect bug report http://code.google.com/p/sekati/issues/detail?id=93
 
 
