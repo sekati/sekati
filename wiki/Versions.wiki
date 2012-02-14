@@ -12,6 +12,7 @@ API constants may be located in the [http://code.google.com/p/sekati/source/brow
 = Current Releases =
 
 || *Version Line* || _Codename_ || _Kaiju_ ||
+|| *[http://code.google.com/p/sekati/source/browse/#svn/trunk 3.0.7.x]* || _"Hedorah"_ || [http://cdn.sekati.com/code/versions/307x-hedorah.jpg] ||
 || *[http://code.google.com/p/sekati/source/browse/#svn/trunk 3.0.6.x]* || _"Gamera"_ || [http://cdn.sekati.com/code/versions/306x-gamera.jpg] ||
 || *[http://code.google.com/p/sekati/source/browse/#svn/tags/3.0.5.9-Gigan 3.0.5.x]* || _"Gigan"_ || [http://cdn.sekati.com/code/versions/305x-gigan.jpg] ||
 || *[http://code.google.com/p/sekati/source/browse/#svn/tags/3.0.4.1-Varan 3.0.4.x]* || _"Varan"_ || [http://cdn.sekati.com/code/versions/304x-varan.jpg] ||
