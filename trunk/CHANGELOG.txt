@@ -1,6 +1,18 @@
 ------ SEKATI API CHANGELOG ------
 
-IN-PROGRESS
+
+API UPDATE v3.0.7.0 - "Hedorah"
+* Now Flashplayer 11 compatible.
+* Resolved CoreSprite.removeChildren conflict with FlexSDK >=4.5.1 (where 
+  Adobe added its own removeChildren method to Sprite): http://code.google.com/p/sekati/issues/detail?id=95
+- Resolved comment issue: http://code.google.com/p/sekati/issues/detail?id=94
+- Cleaned up bad imports:
+	- StageDisplay
+	- ApplicationLoader
+	- MathBase
+	- NetBase
+	- FLVPlayer
+	- MP3Player
 - Added new functions to sekati.js JavaScript companion Library:
 	- sekati.util.baseRef()
 	- sekati.util.getTitle()
