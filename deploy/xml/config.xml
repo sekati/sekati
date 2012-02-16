@@ -54,7 +54,7 @@
 		<fullscreen>true</fullscreen>
 		<track>false</track>
 		<deeplink>false</deeplink>
-		<performance_monitor>true</performance_monitor>
+		<performance_monitor>false</performance_monitor>
 	</option>
 
 	<!--
