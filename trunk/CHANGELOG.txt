@@ -2,6 +2,7 @@
 
 
 IN-PROGRESS
+* Updated Unit Tests (100% pass on FlexSDK 4.5.1)
 * Something is broken with FlexSDK 4.5.1 & last release changes: reverted import cleanup (which helps but doesnt resolve).
 
 
