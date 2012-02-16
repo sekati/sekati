@@ -1,6 +1,10 @@
 ------ SEKATI API CHANGELOG ------
 
 
+IN-PROGRESS
+* Something is broken with FlexSDK 4.5.1 & last release changes: reverted import cleanup (which helps but doesnt resolve).
+
+
 API UPDATE v3.0.7.0 - "Hedorah"
 * Now Flashplayer 11 compatible.
 * Resolved CoreSprite.removeChildren conflict with FlexSDK >=4.5.1 (where 
