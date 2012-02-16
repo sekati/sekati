@@ -2,6 +2,7 @@
 
 
 IN-PROGRESS
+* Updated sekati.log.LogTarget to fix critical Logger issue: now works in Firebug, Chrome, Safari Javascript Browser consoles!
 * Updated Unit Tests (100% pass on FlexSDK 4.5.1)
 * Something is broken with FlexSDK 4.5.1 & last release changes: reverted import cleanup (which helps but doesnt resolve).
 
