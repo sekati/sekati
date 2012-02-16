@@ -1,8 +1,9 @@
 ------ SEKATI API CHANGELOG ------
 
 
-IN-PROGRESS
-* Updated sekati.log.LogTarget to fix critical Logger issue: now works in Firebug, Chrome, Safari Javascript Browser consoles!
+API UPDATE v3.0.7.1 - "Hedorah"
+* Updated LogTarget to fix critical Logger issue: now works in Firebug, Chrome, Safari Javascript Browser Consoles!
+* Removed critical crash issue in sekati.profiler.PerformanceMonitorGraph which lead to player crashes.
 * Updated Unit Tests (100% pass on FlexSDK 4.5.1)
 * Something is broken with FlexSDK 4.5.1 & last release changes: reverted import cleanup (which helps but doesnt resolve).
 
