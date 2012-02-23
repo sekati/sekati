@@ -44,7 +44,7 @@ if (!isEclipse() || window.name != ECLIPSE_FRAME_NAME) {titleBar_setSubTitle("Cl
   <p>While not as powerful or full-featured as <code>BrowserManager</code> or <code>SWFAddress</code> it is far easier
   to implement and support as there is no need to write back/forward code-jumps from all points in the site but only 
   during initialization. The model:<ol>
-  <li>Check for anchor links during App initialization & respond with jump code when appropriate.</li>
+  <li>Check for hashbang anchor links during App initialization & respond with jump code when appropriate.</li>
   <li>Set links as the user drills down to key points in the site or application experience</li>
   </ol></p> 
   
@@ -67,7 +67,7 @@ if (!isEclipse() || window.name != ECLIPSE_FRAME_NAME) {titleBar_setSubTitle("Cl
 </tr>
 <tr class="">
 <td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a class="signatureLink" href="#anchor">anchor</a> : String<div class="summaryTableDescription">[static]
-   Returns value of the _anchor
+   Returns value of the hashbang _anchor
    </div>
 </td><td class="summaryTableOwnerCol">BrowserAddress</td>
 </tr>
@@ -151,7 +151,7 @@ showHideInherited();
 </table>
 <div class="detailBody">
 <code>anchor:String</code>&nbsp;&nbsp;[read-write]<p>
-   Returns value of the _anchor
+   Returns value of the hashbang _anchor
    </p><span class="label">Implementation</span>
 <br>
 <code>&nbsp;&nbsp;&nbsp;&nbsp;public static function get anchor():String</code>
