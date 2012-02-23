@@ -1,6 +1,14 @@
 ------ SEKATI API CHANGELOG ------
 
 
+IN-PROGRESS
+* Updated sekati.js companion lib:
+	- added isAndroid()
+	- added isBlackBerry()
+	- added isMobile()
+	- added optional hashbang (#!) support to getAllHashParams() 
+
+
 API UPDATE v3.0.7.1 - "Hedorah"
 * Updated LogTarget to fix critical Logger issue: now works in Firebug, Chrome, Safari Javascript Browser Consoles!
 * Removed critical crash issue in sekati.profiler.PerformanceMonitorGraph which lead to player crashes.

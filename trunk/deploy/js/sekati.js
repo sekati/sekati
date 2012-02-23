@@ -1,8 +1,8 @@
 /**
  * sekati.js - Flash : Javascript Companion Library
- * @version 1.3.1
+ * @version 1.3.2
  * @author jason m horwitz | sekati.com
- * Copyright (C) 2007-2011  jason m horwitz, Sekat LLC. All Rights Reserved.
+ * Copyright (C) 2007-2012  jason m horwitz, Sekat LLC. All Rights Reserved.
  * Released under the MIT License: http://www.opensource.org/licenses/mit-license.php
  */
 
@@ -118,7 +118,22 @@ sekati.ui = {
 sekati.util = {
 	
 	isAppleiOS: function(){
-		return (navigator.userAgent.match(/iPhone/i)) || (navigator.userAgent.match(/iPod/i)) || (navigator.userAgent.match(/iPad/i));
+		var ua = navigator.userAgent;
+		return (ua.match(/iPhone/i)) || (ua.match(/iPod/i)) || (ua.match(/iPad/i));
+	},
+	
+	isAndroid: function(){
+		var ua = navigator.userAgent;
+		return (ua.match(/Android/i));
+	},
+	
+	isBlackBerry: function(){
+		var ua = navigator.userAgent;
+		return(ua.match(/^BlackBerry[0-9]*/));
+	},
+	
+	isMobile: function(){
+		return (sekati.util.isAppleiOS || sekati.util.isAndroid || sekati.util.isBlackBerry);
 	},
 		
 	browserSize: function(){
@@ -199,7 +214,10 @@ sekati.util = {
 	// Get full hash params as array
 	getAllHashParams: function(){
 		var path = window.location.href.split('#')[1];
-		return (path && path.length > 0) ? sekati.util.cleanArray( path.split('/') ) : [];
+		var parr = (path && path.length > 0) ? sekati.util.cleanArray( path.split('/') ) : [];		
+		// remove bang to support hashbang'd urls:
+		if(parr[0].indexOf('!') > -1) parr.splice(0,1);
+		return parr;
 	},
 	
 	// Remove empty elements from an array (returning a clean array).
