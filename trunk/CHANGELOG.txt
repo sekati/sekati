@@ -1,6 +1,10 @@
 ------ SEKATI API CHANGELOG ------
 
 
+IN-PROGRESS
+- Fixed sekati.js isMobile() bug.
+
+
 API UPDATE v3.0.7.2 - "Hedorah"
 * BrowserAddress now uses hashbangs (#!) by default (Warning: not backwards compatible)
 - Updated sekati.js companion lib:

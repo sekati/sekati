@@ -1,6 +1,6 @@
 /**
  * sekati.js - Flash : Javascript Companion Library
- * @version 1.3.5
+ * @version 1.3.6
  * @author jason m horwitz | sekati.com
  * Copyright (C) 2007-2012  jason m horwitz, Sekat LLC. All Rights Reserved.
  * Released under the MIT License: http://www.opensource.org/licenses/mit-license.php
@@ -133,7 +133,7 @@ sekati.util = {
 	},
 	
 	isMobile: function(){
-		return (sekati.util.isAppleiOS || sekati.util.isAndroid || sekati.util.isBlackBerry);
+		return (sekati.util.isAppleiOS() || sekati.util.isAndroid() || sekati.util.isBlackBerry());
 	},
 		
 	browserSize: function(){
